@@ -5,6 +5,7 @@ import type { Project } from "@/content/repository";
 import { projects, revision } from "@/content/repository";
 import { usePreferences } from "./preferences";
 import { Arrow } from "./icons";
+import { OriginalFiles } from "./original-files";
 export function Reader({ project: p }: { project: Project }) {
   const { lang } = usePreferences();
   const [readerLang, setReaderLang] = useState<"en" | "ko">("ko");
@@ -55,9 +56,7 @@ export function Reader({ project: p }: { project: Project }) {
               EN
             </button>
           </div>
-          <span className="mono">
-            {lang === "ko" ? "원본 PDF 미제공" : "ORIGINAL PDF NOT SUPPLIED"}
-          </span>
+          <OriginalFiles project={p.slug} />
         </div>
       </header>
       <div className="section-shell reader-layout">

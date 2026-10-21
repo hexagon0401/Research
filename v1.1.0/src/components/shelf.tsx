@@ -194,7 +194,6 @@ export function Shelf({ compact = false }: { compact?: boolean }) {
             key={project.slug}
             href={`/archive/${project.slug}`}
             onClick={(event) => open(event, i)}
-            aria-label={`${project.number} · ${lang === "ko" ? project.titleKo : project.title}`}
             onMouseEnter={() => {
               if (
                 document.activeElement?.closest(".shelf-track") == null &&

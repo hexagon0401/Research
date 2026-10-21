@@ -4,7 +4,7 @@
 
 ## 실행
 
-Node.js 22.9 이상과 npm을 사용합니다. 외부 서비스나 API 키가 필요하지 않습니다.
+Node.js 24.x와 npm을 사용합니다. 기본 읽기 기능은 외부 서비스나 API 키 없이 실행됩니다. 원본 파일 연결에는 Supabase 설정이 필요합니다.
 
 ```sh
 cd v1.1.0
@@ -42,10 +42,16 @@ E2E는 Playwright 관리 Chromium을 기본 사용합니다. 필요하면 `npx p
 
 `src/content/research.json`과 `map.json`은 v1.0.0과 동일합니다. `P-001`–`P-006`, `CLAIM-01`–`CLAIM-06`, 출처 위치와 URL을 보존합니다. EN은 UI 언어이며, 검수 연구 번역이 없어 문서에서는 한국어와 Translation pending 안내를 유지합니다.
 
-실제 원문·수치 데이터·코드·번역·공개 권한을 새로 확보하거나 연구 결과를 검증한 버전이 아닙니다. noindex와 기존 공개 범위를 유지합니다. Supabase·Oracle·Foundry 연동, 풀 3D 카메라 전환, 실제 서비스 배포는 포함하지 않습니다.
+실제 원문·수치 데이터·코드·번역·공개 권한을 새로 확보하거나 연구 결과를 검증한 버전이 아닙니다. noindex와 기존 공개 범위를 유지합니다. Supabase 원본 접수·비공개 보관·공개 승인 파일 열람 기능을 추가했습니다. 실제 연구 원본 업로드와 외부 배포 검증은 계정 설정·파일 제공 후 완료해야 합니다. Oracle·Foundry 연동과 풀 3D 카메라 전환은 포함하지 않습니다.
 
 - [디자인 결정](docs/DECISIONS.md)
 - [변경 기록](docs/CHANGELOG.md)
 - [검증 기록](docs/VALIDATION.md)
 - [기존 콘텐츠 감사](docs/CONTENT_AUDIT.md)
 - [구현 범위](docs/IMPLEMENTATION_STATUS.md)
+
+## 무료 배포·원본 접수
+
+[무료 운영 시작 안내](docs/FREE_LAUNCH.md)에 Vercel Root Directory, Supabase SQL·환경 변수, 채팅 원본 접수와 남은 계정 연결 단계를 정리했습니다. 비용 한도는 0원이며 유료 전환은 수행하지 않습니다.
+
+추가 검사: `python3 -m unittest discover -s tests -p "test_intake.py" -v`. 로컬 Docker가 있으면 `python3 scripts/test-storage-policies.py`로 운영 데이터에 접근하지 않고 PostgreSQL 권한을 검증합니다.

@@ -2515,3 +2515,37 @@ html[data-motion="reduced"] .folder-cover {
     text-decoration: underline;
   }
 }
+.original-files {
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.original-files > .text-button {
+  min-height: 44px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.original-files-panel {
+  padding: 18px 0;
+  font-size: 13px;
+  max-width: 760px;
+}
+.original-file-link {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.original-file-link strong {
+  font-weight: 500;
+  font-size: 15px;
+}
+.original-file-link > span {
+  font-size: 11px;
+}
+.original-file-link > span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

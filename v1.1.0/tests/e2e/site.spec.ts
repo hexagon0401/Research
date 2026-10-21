@@ -198,7 +198,9 @@ test("folder opening can be canceled and a selected folder survives a reader rou
   await page.keyboard.press("End");
   await expect(page.locator(".folder").last()).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(page.getByRole("status")).toContainText("Opening excerpt");
+  await expect(
+    page.getByRole("status").filter({ hasText: "Opening excerpt" }),
+  ).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page).toHaveURL(/\/archive$/);
   await expect(page.locator(".folder").last()).toBeFocused();
@@ -244,4 +246,53 @@ test("both interface languages fit the release viewport matrix", async ({
         ).toBeTruthy();
     }
   }
+});
+test("original files load on demand and unavailable storage preserves reading", async ({
+  page,
+  request,
+}) => {
+  await page.route(
+    "**/api/public/assets?project=corporate-resilience",
+    (route) => route.fulfill({ json: { status: "available", assets: [] } }),
+  );
+  let assetRequests = 0;
+  page.on("request", (r) => {
+    if (r.url().includes("/api/public/assets")) assetRequests++;
+  });
+  await page.goto("/archive/corporate-resilience");
+  expect(assetRequests).toBe(0);
+  await page.getByRole("button", { name: "View original files" }).click();
+  await expect(
+    page.getByRole("region", { name: "Original files" }),
+  ).toContainText(/No approved original|storage is unavailable/i);
+  await expect(page.locator("#P-001")).toContainText("대리 지표");
+  const response = await request.get(
+    "/api/public/assets?project=corporate-resilience",
+  );
+  expect(response.headers()["cache-control"]).toContain("no-store");
+  expect(
+    (await request.get("/api/public/assets?project=unknown")).status(),
+  ).toBe(400);
+  const original = await request.get(
+    `/api/public/assets/test-missing-${Date.now()}/open`,
+    {
+      maxRedirects: 0,
+    },
+  );
+  expect([404, 503]).toContain(original.status());
+  expect(original.headers()["cache-control"]).toContain("no-store");
+});
+test("plain original file index works without JavaScript", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto(`${baseURL}/archive/corporate-resilience`);
+  await page.getByRole("link", { name: /Original files \/ 원본/ }).click();
+  await expect(page).toHaveURL(/originals\/corporate-resilience/);
+  await expect(
+    page.getByText("Published source files / 공개 승인된 원본 파일"),
+  ).toBeVisible();
+  await context.close();
 });
