@@ -1,0 +1,261 @@
+{
+  "revision": "2026-10-21.draft-1",
+  "status": "planning-prototype",
+  "projects": [
+    {
+      "slug": "corporate-resilience",
+      "number": "01",
+      "category": "Corporate power",
+      "year": "2026",
+      "title": "What makes a company endure?",
+      "titleKo": "기업은 어떻게 오래 살아남는가?",
+      "short": "Corporate resilience",
+      "description": "Begin with the firm. Separate financial resilience from social sustainability, and a competitive advantage from market dominance.",
+      "descriptionKo": "기업의 장기 생존에서 출발합니다. 재무적 복원력과 사회적 지속가능성을, 기술 경쟁우위와 시장 지배력을 구분합니다.",
+      "question": "How should corporate resilience be defined and measured?",
+      "status": "hypothesis",
+      "source": "HANDOFF-01",
+      "section": "§3 · Phase I",
+      "lines": "61–62",
+      "relatedSources": ["S06"],
+      "paragraphs": [
+        {
+          "id": "P-001",
+          "ko": "핵심 문답: ‘기업의 지속가능성’을 ESG의 환경·사회적 성과가 아니라 기업 자체의 장기 생존·복원력·재투자 능력으로 조작적으로 정의. Thiel식 ‘좋은 독점’을 설명 변수 후보로 설정. 단, 독점 시장점유율·기술경쟁우위·브랜드·시장지배적 지위·과독점은 분리. 직접 측정한 ROIC/FCF/Rule of 40은 생존 확률 자체가 아니라 대리 지표.",
+          "en": null,
+          "translationStatus": "untranslated",
+          "summaryKo": "재무적 복원력은 ESG의 사회적 성과와 구분하며, 재무 지표는 생존 확률의 대리 지표로 다룹니다."
+        }
+      ],
+      "limitation": "The financial dataset and original seminar report have not been supplied. No numeric result is presented.",
+      "claim": "CLAIM-01"
+    },
+    {
+      "slug": "technology-and-advantage",
+      "number": "02",
+      "category": "Corporate power",
+      "year": "2025–2026",
+      "title": "From technology to advantage.",
+      "titleKo": "독자 기술과 경제적 복원력",
+      "short": "Technology & advantage",
+      "description": "Examine the proposed links between distinctive technology, switching costs and the capacity to reinvest. Association is not causation.",
+      "descriptionKo": "독자 기술, 전환비용, 재투자 능력의 관계를 검토합니다. 상관관계를 인과관계로 단정하지 않습니다.",
+      "question": "Through which mechanisms might technology support resilience?",
+      "status": "hypothesis",
+      "source": "HANDOFF-01",
+      "section": "§3 · Phase II",
+      "lines": "64–65",
+      "relatedSources": ["S04", "S06"],
+      "paragraphs": [
+        {
+          "id": "P-002",
+          "ko": "S06 세미나 정량 비교를 핵심에 배치. S04의 팔란티어 2020~25 IR 비교를 사례 분석에 배치. 기술 우위가 가격결정력·지속 고객·전환비용·R&D 여력과 연관될 수 있다는 메커니즘을 검증할 가설로 제시. 시계열·대조집단·교란변수를 충분히 통제하기 전까지 인과적 확정 주장은 피한다.",
+          "en": null,
+          "translationStatus": "untranslated",
+          "summaryKo": "기술 우위와 기업 복원력의 연결은 검증할 가설이며, 통제 없는 인과적 해석은 피합니다."
+        }
+      ],
+      "limitation": "The proposed financial and IR analyses have not been reproduced in this website project.",
+      "claim": "CLAIM-02"
+    },
+    {
+      "slug": "mission-and-responsibility",
+      "number": "03",
+      "category": "Ethics & governance",
+      "year": "2025–2026",
+      "title": "An advantage needs a purpose.",
+      "titleKo": "철학적 정체성과 책임",
+      "short": "Mission & responsibility",
+      "description": "Place public purpose beside responsibility. An explicit mission does not remove legal, ethical or democratic limits.",
+      "descriptionKo": "공적 사명과 책임을 함께 살핍니다. 명시적 사명은 법·윤리·민주적 통제의 경계를 대체하지 않습니다.",
+      "question": "What obligations accompany a firm's public mission?",
+      "status": "interpreted",
+      "source": "HANDOFF-01",
+      "section": "§3 · Phase III",
+      "lines": "67–68",
+      "relatedSources": ["S04", "S09"],
+      "paragraphs": [
+        {
+          "id": "P-003",
+          "ko": "S04 Sinek의 Why, Karp의 국가안보 지향, S09 Arendt/Anthropic의 레드라인을 함께 사용. 국가 정체성은 비판 없는 충성이 아니라 명시적 공적 사명 + 계약상 책임 + 규범적 제약이어야 함. 국가 안보에 도움이 된다는 이유만으로 모든 기술·수출·감시·자율살상을 정당화하지 않는다.",
+          "en": null,
+          "translationStatus": "untranslated",
+          "summaryKo": "공적 사명에는 계약상 책임과 규범적 제약이 함께 필요하다는 연구자의 관점을 제시합니다."
+        }
+      ],
+      "limitation": "This is a normative interpretation in the handoff, not an empirically established outcome.",
+      "claim": "CLAIM-03"
+    },
+    {
+      "slug": "strategic-capability",
+      "number": "04",
+      "category": "State & security",
+      "year": "2025–2026",
+      "title": "When the firm becomes strategic.",
+      "titleKo": "전쟁과 국가 능력의 정보화",
+      "short": "Strategic capability",
+      "description": "Explore how data, communications, standards and procurement could connect corporate capabilities to a state's range of choices.",
+      "descriptionKo": "데이터·통신·표준·조달을 통해 기업 역량이 국가의 선택지와 연결될 수 있는 경로를 탐구합니다.",
+      "question": "How might private capabilities enter public security systems?",
+      "status": "hypothesis",
+      "source": "HANDOFF-01",
+      "section": "§3 · Phase IV",
+      "lines": "70–71",
+      "relatedSources": ["S01", "S02", "S03", "S05", "S11"],
+      "paragraphs": [
+        {
+          "id": "P-004",
+          "ko": "S01 NCW/MDO·온톨로지, S02 경제-안보 복합체, S03 Golden Dome (계획·제안 단계), S05 달러/USDT 금융네트워크, S11 NATO/DIANA를 통해 기업 기술이 단순 무기 공급자를 넘어 데이터·통신·표준·금융·조달 생태계의 일부가 됨을 보여준다. 기업의 무기화와 기업의 패권화를 구별: 전자는 국방·경제압박의 도구로 활용, 후자는 기업이 보유한 기술·공급망·플랫폼·표준 등의 구조적 영향력이 국가의 행동 선택지에 영향을 주는 현상.",
+          "en": null,
+          "translationStatus": "untranslated",
+          "summaryKo": "기업의 기술을 데이터·통신·표준·조달 생태계와 연결해 살펴보는 분석 계획입니다."
+        }
+      ],
+      "limitation": "Case relationships are research proposals. Contracts, deployment and institutional effects require primary-source checks.",
+      "claim": "CLAIM-04"
+    },
+    {
+      "slug": "state-firm-models",
+      "number": "05",
+      "category": "State & security",
+      "year": "2026",
+      "title": "Different systems. Shared questions.",
+      "titleKo": "미국·중국의 국가–기업 모델",
+      "short": "Comparative systems",
+      "description": "Compare the United States and China through institutions and mechanisms. Use South Korea as the policy lens, rather than assuming a binary answer.",
+      "descriptionKo": "미국과 중국을 제도와 메커니즘으로 비교하고, 한국을 정책적 검토의 관점으로 삼습니다. 이분법을 결론으로 가정하지 않습니다.",
+      "question": "Under which institutions do state–firm partnerships operate?",
+      "status": "hypothesis",
+      "source": "HANDOFF-01",
+      "section": "§3 · Phase V",
+      "lines": "73–74",
+      "relatedSources": ["S07", "S08"],
+      "paragraphs": [
+        {
+          "id": "P-005",
+          "ko": "S07 Herod/Jessop와 S08 OSINT/Foundry 사례를 방법론적 기준으로 삼아 분석 단위 글로벌-국가-기업-로컬-네트워크와 시간축을 교차. 중국: 기업지분·인프라·자원·공급망과 국가 정책 사이의 연계 가능성 및 통제·영향력의 정도. 미국: 정부조달·산업보조·기업의 안보 임무·동맹 표준·기술수출통제. 중국 전체가 국가통제, 미국 전체가 자발적 충성이라는 이분법은 비교 가설이지 이미 입증된 결론이 아님. 정부 개입의 종류, 대상, 시기, 결과를 코딩할 것.",
+          "en": null,
+          "translationStatus": "untranslated",
+          "summaryKo": "국가–기업 관계는 통제·조달·인센티브 등 구체적인 제도와 시간·스케일을 기준으로 비교합니다."
+        }
+      ],
+      "limitation": "The map shows countries within the proposed comparative scope. It does not show verified transactions or alliances.",
+      "claim": "CLAIM-05"
+    },
+    {
+      "slug": "conditional-partnership",
+      "number": "06",
+      "category": "Ethics & governance",
+      "year": "2026",
+      "title": "Partnership, with conditions.",
+      "titleKo": "조건부 국가–기업 안보 파트너십",
+      "short": "A conditional partnership",
+      "description": "Consider a policy proposal that pairs public support with measurable contribution, competition safeguards and democratic accountability.",
+      "descriptionKo": "공적 지원을 기술적 기여, 경쟁 보호, 민주적 책임과 연결하는 정책 제안을 검토합니다.",
+      "question": "What would a responsible partnership require of both sides?",
+      "status": "interpreted",
+      "source": "HANDOFF-01",
+      "section": "§3 · Phase VI",
+      "lines": "76–77",
+      "relatedSources": ["S00", "S05", "S08", "S10", "S11"],
+      "paragraphs": [
+        {
+          "id": "P-006",
+          "ko": "S05 자본/금융, S10 타다·뉴욕 정책효과, S08 다중스케일, S11 동맹·산업생태계, S00 한국 사례를 종합. 구호 ‘무조건 특혜’ 대신 ‘공공적 안보 기여에 대한 상호조건부 산업 지원’을 연구자의 정책 제안으로 명명해 볼 것. 지원 요건: (1) 기술/R&D·상호운용성·공급망 성과, (2) 안보와 민간의 실익, (3) 독점남용·소비자 피해 억제, (4) 인권·AI 안전·수출통제·민주적 감독, (5) 공개 평가·종료조건(sunset)·회수(clawback)·책임성. 이는 새 분석/정책 설계안이지 원문에서 시행/실증된 제도로 표시하지 않음.",
+          "en": null,
+          "translationStatus": "untranslated",
+          "summaryKo": "산업 지원에 성과·경쟁 보호·윤리·감독·종료조건을 결합하는 정책 설계 제안입니다."
+        }
+      ],
+      "limitation": "A proposed policy framework, not an implemented or validated policy. Benefits and risks still need evaluation.",
+      "claim": "CLAIM-06"
+    }
+  ],
+  "sources": [
+    {
+      "slug": "integration-handoff",
+      "id": "HANDOFF-01",
+      "title": "Integrated Independent Research — Codex Handoff",
+      "provider": "User-supplied planning document",
+      "kind": "Planning document",
+      "year": "2026",
+      "status": "Available excerpt",
+      "description": "The supplied research integration plan. Six phase excerpts are available in the reader; underlying reports and datasets are not included.",
+      "url": null,
+      "project": "corporate-resilience"
+    },
+    {
+      "slug": "website-specification",
+      "id": "WEB-SPEC-01",
+      "title": "Interactive Research Atlas & Archive",
+      "provider": "User-supplied website specification",
+      "kind": "Planning document",
+      "year": "2026",
+      "status": "Design reference",
+      "description": "The functional and visual brief for this prototype. A product specification, not evidence for a research finding.",
+      "url": null,
+      "project": null
+    },
+    {
+      "slug": "zero-to-one",
+      "id": "REF-01",
+      "title": "Zero to One",
+      "provider": "Peter Thiel with Blake Masters",
+      "kind": "Book · reference lead",
+      "year": "2014",
+      "status": "Not supplied",
+      "description": "Named in the handoff's S06 inventory. Edition, page references and original quotations remain to be checked.",
+      "url": null,
+      "project": "corporate-resilience"
+    },
+    {
+      "slug": "scale",
+      "id": "REF-02",
+      "title": "Scale",
+      "provider": "Andrew Herod",
+      "kind": "Book · reference lead",
+      "year": "2010",
+      "status": "Not supplied",
+      "description": "Named in the handoff's S07 inventory. Theoretical summaries must be checked against the primary text.",
+      "url": null,
+      "project": "state-firm-models"
+    }
+  ],
+  "evidenceNeeds": [
+    {
+      "id": "S06",
+      "title": "Financial resilience comparison",
+      "needed": "Original report, company sample, raw data, metric definitions and reproducible analysis code.",
+      "type": "Dataset & code",
+      "priority": "P0"
+    },
+    {
+      "id": "S04",
+      "title": "Palantir financial case study",
+      "needed": "Original report, SEC / IR filings, source tables and calculation definitions.",
+      "type": "Primary filings",
+      "priority": "P0"
+    },
+    {
+      "id": "S08",
+      "title": "Multiscale OSINT / ontology",
+      "needed": "Original report, export schemas, primary-source URLs, relationship evidence and execution logs.",
+      "type": "Source & provenance",
+      "priority": "P0"
+    },
+    {
+      "id": "S10",
+      "title": "Policy counterfactuals",
+      "needed": "Observed data separated from assumptions, model code, test split and leakage audit.",
+      "type": "Model audit",
+      "priority": "P0"
+    },
+    {
+      "id": "S11",
+      "title": "UN / NATO analysis",
+      "needed": "Original report, selection rules, label definitions, manual checks and observation dates.",
+      "type": "Sampling audit",
+      "priority": "P0"
+    }
+  ]
+}

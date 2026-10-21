@@ -1,0 +1,16 @@
+source_id,priority,availability,needed,related_claim
+S00,P0,NOT_SUPPLIED,"Original synthesis report; source-level verification and publication review",CLAIM-06
+S01,P0,NOT_SUPPLIED,"Original information-warfare report; primary sources for technical and historical claims",CLAIM-04
+S02,P0,NOT_SUPPLIED,"Original security-economic report; definitions and dated statistics",CLAIM-04
+S03,P0,NOT_SUPPLIED,"Original Golden Dome report; proposal/contract/deployment stage evidence",CLAIM-04
+S04,P0,NOT_SUPPLIED,"Original IR comparison; primary filings and calculation tables",CLAIM-02
+S05,P0,NOT_SUPPLIED,"Original financial networks report; law chronology and collaboration attribution",CLAIM-06
+S06,P0,NOT_SUPPLIED,"Original seminar report; company sample; raw data; code; metric definitions",CLAIM-01
+S07,P1,NOT_SUPPLIED,"Original multiscale report and primary theoretical references",CLAIM-05
+S08,P0,NOT_SUPPLIED,"Original OSINT report; schemas; source URLs; evidence grades; execution logs",CLAIM-05
+S09,P0,NOT_SUPPLIED,"Original ethics report and dated primary evidence for corporate red lines",CLAIM-03
+S10,P0,NOT_SUPPLIED,"Original policy report; observed/assumed data split; model and leakage audit",CLAIM-06
+S11,P0,NOT_SUPPLIED,"Original UN/NATO report; sample selection; labeling definitions and manual audit",CLAIM-04
+S12,P0,NOT_SUPPLIED,"HWP original or accessible export; no equivalence with S11 assumed",UNASSIGNED
+TRANSLATION,P1,NOT_SUPPLIED,"Reviewed paragraph-aligned English translation with reviewer and revision metadata",ALL
+PUBLICATION,P0,NOT_REVIEWED,"Approval and redistribution rights for originals; personal information review",ALL
