@@ -1,0 +1,26 @@
+/* Open Design handoff: stable semantic tokens; see docs/DESIGN_HANDOFF.md. */
+:root {
+  --paper: #e6e8e6;
+  --ink: #0e131f;
+  --signal: #0efb2e;
+  --muted: #565c66;
+  --line: rgba(14, 19, 31, 0.18);
+  --link-hover: #3d4652;
+  --font-display: var(--font-geist), Arial, sans-serif;
+  --font-body:
+    "IBM Plex Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --gutter: clamp(24px, 5vw, 84px);
+  --duration: 260ms;
+}
+
+html:lang(ko) {
+  --font-display: var(--font-geist), "IBM Plex Sans KR", Arial, sans-serif;
+  --font-body:
+    "IBM Plex Sans", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
+}
+[lang="ko"] {
+  font-family:
+    "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}

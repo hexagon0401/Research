@@ -1,0 +1,78 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Localized as L } from "@/components/preferences";
+export const metadata: Metadata = { title: "About the inquiry" };
+export default function About() {
+  return (
+    <main id="main" className="editorial">
+      <div className="page-intro">
+        <span className="eyebrow">ABOUT / INTEGRATED INDEPENDENT RESEARCH</span>
+        <h1>
+          <L
+            en={
+              <>
+                A question that
+                <br />
+                kept evolving.
+              </>
+            }
+            ko={
+              <>
+                계속해서
+                <br />
+                진화하는 질문.
+              </>
+            }
+          />
+        </h1>
+        <p>
+          <L
+            en="What allows a company to endure—and what happens when its capabilities become part of a nation's security?"
+            ko="기업은 어떻게 오래 살아남는가? 그리고 기업의 역량이 국가 안보의 일부가 될 때, 무엇이 달라지는가?"
+          />
+        </p>
+      </div>
+      <article className="prose page-content">
+        <h2>
+          <L en="The inquiry" ko="탐구의 방향" />
+        </h2>
+        <p>
+          <L
+            en="IIR connects questions of technology management, corporate resilience, philosophy and economic security. The integration plan proposes a synthesis of topic-specific school research, followed by additional verification and comparative analysis."
+            ko="IIR은 기술경영, 기업의 복원력, 철학, 경제안보에 관한 질문을 연결합니다. 통합 작업계획은 개별 교과 탐구를 바탕으로 추가 검증과 비교 분석을 수행하는 종합 연구를 제안합니다."
+          />
+        </p>
+        <h2>
+          <L en="An honest account of the work" ko="실제 수행 범위의 기록" />
+        </h2>
+        <p>
+          <L
+            en="The earlier school projects are the proposed research's starting materials. They are not reclassified as a single independent experiment. Independent contributions, dates and collaboration credits require their own records; this prototype does not invent activity hours, interviews or completed analyses."
+            ko="기존 교과 탐구는 통합 연구의 출발 자료입니다. 이를 처음부터 하나의 독립 실험으로 수행한 것으로 재분류하지 않습니다. 개인 기여, 날짜, 협업 귀속은 별도의 기록이 필요하며, 이 초안은 활동 시간·인터뷰·완료된 분석을 만들어내지 않습니다."
+          />
+        </p>
+        <h2>
+          <L en="2025 → 2026" ko="2025 → 2026" />
+        </h2>
+        <p>
+          <L
+            en="According to the handoff, 2025 topics included data-driven warfare, the security–economic complex, corporate mission and financial networks. The 2026 plan expands toward financial comparisons, multiscale analysis, AI ethics, policy counterfactuals and responsible state–firm partnerships. Original reports have not yet been supplied here."
+            ko="작업계획에 따르면 2025년에는 전쟁의 정보화, 경제–안보 복합체, 기업의 사명, 금융 네트워크를 다뤘습니다. 2026년의 계획은 재무 비교, 다중스케일 분석, AI 윤리, 정책 반사실 분석, 책임 있는 국가–기업 협력으로 확장됩니다. 해당 연구 원문은 아직 이 프로젝트에 제공되지 않았습니다."
+          />
+        </p>
+        <h2>
+          <L en="This edition" ko="현재 버전" />
+        </h2>
+        <p>
+          <L
+            en="A functional design draft, prepared on 21 October 2026. The site uses a file-based public content adapter; no database credentials or private research files are exposed. Visual tokens and component contracts are documented for a later Open Design handoff."
+            ko="2026년 10월 21일 기준의 기능 구현 초안입니다. 파일 기반 공개 콘텐츠 어댑터를 사용하며 데이터베이스 인증정보나 비공개 연구 원문을 노출하지 않습니다. 이후 Open Design 이관을 위해 시각 토큰과 컴포넌트 계약을 문서화했습니다."
+          />
+        </p>
+        <Link className="inline-link" href="/methods">
+          <L en="Read the methods & limitations" ko="방법론과 한계 읽기" /> ↗
+        </Link>
+      </article>
+    </main>
+  );
+}

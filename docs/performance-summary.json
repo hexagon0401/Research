@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-21T05:11:54.824Z",
+  "profile": "Lighthouse mobile / simulated throttling",
+  "version": "13.5.0",
+  "scores": {
+    "performance": 86,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 1676.16365,
+      "display": "1.7 s"
+    },
+    "largest-contentful-paint": {
+      "value": 3325.3273,
+      "display": "3.3 s"
+    },
+    "total-blocking-time": {
+      "value": 267,
+      "display": "270 ms"
+    },
+    "cumulative-layout-shift": {
+      "value": 0.0002999037323747117,
+      "display": "0"
+    },
+    "speed-index": {
+      "value": 2606.666417994335,
+      "display": "2.6 s"
+    },
+    "total-byte-weight": {
+      "value": 388391,
+      "display": "Total size was 379 KiB"
+    }
+  }
+}
