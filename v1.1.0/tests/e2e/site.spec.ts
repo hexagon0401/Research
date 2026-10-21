@@ -1,5 +1,38 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+test("synthesis decoration stays within its column and never covers the proposal", async ({
+  page,
+}) => {
+  await page.goto("/?scene=synthesis");
+  await expect(page.locator(".synthesis-layout h2")).toBeVisible();
+  const geometry = await page.evaluate(() => {
+    const mark = document.querySelector<SVGElement>(".synthesis-mark")!;
+    const copy = document.querySelector<HTMLElement>(
+      ".synthesis-layout > div",
+    )!;
+    const icon = mark.getBoundingClientRect();
+    const text = copy.getBoundingClientRect();
+    return {
+      hidden: getComputedStyle(mark).display === "none",
+      width: icon.width,
+      height: icon.height,
+      right: icon.right,
+      textLeft: text.left,
+      overflow: document.documentElement.scrollWidth > innerWidth + 1,
+    };
+  });
+  if (!geometry.hidden) {
+    expect(geometry.width).toBeGreaterThan(0);
+    expect(geometry.width).toBeLessThanOrEqual(144);
+    expect(Math.abs(geometry.width - geometry.height)).toBeLessThan(1);
+    expect(geometry.right).toBeLessThan(geometry.textLeft);
+  }
+  expect(geometry.overflow).toBe(false);
+  const link = page.locator("#synthesis .inline-link");
+  await link.click();
+  await expect(page).toHaveURL(/\/research\/conditional-partnership$/);
+  await expect(page.locator("#P-006")).toBeVisible();
+});
 test("narrative and comparative atlas expose the framework", async ({
   page,
 }) => {

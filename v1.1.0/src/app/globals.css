@@ -990,12 +990,15 @@ svg {
 }
 .synthesis-layout {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 5fr);
   gap: 48px;
   padding-top: 80px;
 }
 .synthesis-mark {
-  font: 300 clamp(80px, 10vw, 144px)/1 var(--font-display);
+  width: min(100%, 144px);
+  height: auto;
+  align-self: start;
+  pointer-events: none;
 }
 .synthesis-layout h2 {
   margin-top: 24px;

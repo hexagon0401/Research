@@ -349,6 +349,8 @@ export default function Home() {
         <div className="synthesis-layout">
           <svg
             className="synthesis-mark"
+            width="120"
+            height="120"
             viewBox="0 0 120 120"
             fill="none"
             stroke="currentColor"
