@@ -4,6 +4,17 @@ const config: NextConfig = {
   async headers() {
     return [
       {
+        source: "/report-pdfs/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=604800, immutable" },
+          { key: "Content-Disposition", value: "inline" },
+        ],
+      },
+      {
+        source: "/report-media/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800" }],
+      },
+      {
         source: "/:path*",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },

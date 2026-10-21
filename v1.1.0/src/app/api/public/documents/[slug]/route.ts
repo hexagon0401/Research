@@ -1,4 +1,5 @@
 import { getProject, projects, revision } from "@/content/repository";
+import { reportsForProject } from "@/content/report-catalog";
 export const dynamic = "force-static";
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -22,5 +23,10 @@ export async function GET(
       en: paragraph.translationStatus === "reviewed" ? paragraph.en : null,
     })),
     originalAsset: null,
+    reportTranscripts: reportsForProject(p.slug).map((r) => ({
+      id: r.id,
+      title: r.title,
+      url: `/reports/${r.id}`,
+    })),
   });
 }

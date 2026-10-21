@@ -1,10 +1,10 @@
-# IIR — Interactive Research Atlas · v1.1.0
+# IIR — Interactive Research Atlas · v1.1.2
 
 지정된 Paper / Ink / Signal과 로컬 Geist·IBM Plex 폰트를 유지한 디자인 개선본입니다. 기존 Next.js·React·TypeScript·SVG·CSS 구조와 연구 콘텐츠를 보존합니다.
 
 ## 실행
 
-Node.js 24.x와 npm을 사용합니다. 기본 읽기 기능은 외부 서비스나 API 키 없이 실행됩니다. 원본 파일 연결에는 Supabase 설정이 필요합니다.
+Node.js 24.x와 npm을 사용합니다. 기본 읽기 기능은 외부 서비스나 API 키 없이 실행됩니다. 공개용 PDF와 전사본은 키 없이 읽을 수 있으며, 비공개 보존 원본은 Supabase에 따로 저장합니다.
 
 ```sh
 cd v1.1.0
@@ -40,9 +40,9 @@ E2E는 Playwright 관리 Chromium을 기본 사용합니다. 필요하면 `npx p
 
 ## 콘텐츠와 공개 범위
 
-`src/content/research.json`과 `map.json`은 v1.0.0과 동일합니다. `P-001`–`P-006`, `CLAIM-01`–`CLAIM-06`, 출처 위치와 URL을 보존합니다. EN은 UI 언어이며, 검수 연구 번역이 없어 문서에서는 한국어와 Translation pending 안내를 유지합니다.
+`map.json`과 연구 발췌 P-001–P-006은 보존합니다. 자료 확보 상태 설명은 실제 원문 접수에 맞춰 갱신합니다. `P-001`–`P-006`, `CLAIM-01`–`CLAIM-06`, 출처 위치와 URL을 보존합니다. EN은 UI 언어이며, 검수 연구 번역이 없어 문서에서는 한국어와 Translation pending 안내를 유지합니다.
 
-실제 원문·수치 데이터·코드·번역·공개 권한을 새로 확보하거나 연구 결과를 검증한 버전이 아닙니다. noindex와 기존 공개 범위를 유지합니다. Supabase 원본 접수·비공개 보관·공개 승인 파일 열람 기능을 추가했습니다. 실제 연구 원본 업로드와 외부 배포 검증은 계정 설정·파일 제공 후 완료해야 합니다. Oracle·Foundry 연동과 풀 3D 카메라 전환은 포함하지 않습니다.
+원문 13개를 개인정보 제거 전사본과 PDF로 제공하는 `/reports` 자료실을 추가했습니다. 도표의 보고 수치와 연구 주장은 독립적으로 검증되지 않았습니다. 원본 파일은 비공개 보존하며 공개용 사본만 배포합니다. [자료실 처리 기록](docs/REPORT_ARCHIVE.md), [연속 스크롤 개편 계획](docs/CONTINUOUS_SCROLL_PLAN.md)을 참고하세요.
 
 - [디자인 결정](docs/DECISIONS.md)
 - [변경 기록](docs/CHANGELOG.md)

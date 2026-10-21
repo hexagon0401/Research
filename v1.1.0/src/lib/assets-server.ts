@@ -1,5 +1,6 @@
 import "server-only";
 import { createClient } from "@supabase/supabase-js";
+import { staticReportAssets, staticReportPath } from "./report-assets";
 import {
   isPublicAsset,
   publicAsset,
@@ -32,8 +33,15 @@ function connection() {
   };
 }
 export async function listAssets(project: string) {
+  const local = staticReportAssets(project);
   const c = connection();
-  if (!c) return { status: "not-configured" as const, assets: [] };
+  if (!c)
+    return {
+      status: local.length
+        ? ("available" as const)
+        : ("not-configured" as const),
+      assets: local,
+    };
   const { data, error } = await c.client
     .from("research_assets")
     .select(COLUMNS)
@@ -43,15 +51,24 @@ export async function listAssets(project: string) {
     .contains("project_slugs", [project])
     .order("document_id")
     .limit(40);
-  if (error) throw new Error("ASSETS_UNAVAILABLE");
+  if (error) {
+    if (local.length) return { status: "available" as const, assets: local };
+    throw new Error("ASSETS_UNAVAILABLE");
+  }
+  const remote = (data ?? []).filter(isPublicAsset).map(publicAsset);
   return {
     status: "available" as const,
-    assets: (data ?? []).filter(isPublicAsset).map(publicAsset),
+    assets: [
+      ...local,
+      ...remote.filter((a) => !local.some((b) => b.id === a.id)),
+    ],
   };
 }
 export async function signedAsset(id: string) {
+  const local = staticReportPath(id);
+  if (local) return { status: "available" as const, url: local };
   const c = connection();
-  if (!c) return { status: "not-configured" as const };
+  if (!c) return { status: "not-found" as const };
   const { data, error } = await c.client
     .from("research_assets")
     .select(COLUMNS)

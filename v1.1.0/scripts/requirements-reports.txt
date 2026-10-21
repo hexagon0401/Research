@@ -1,0 +1,2 @@
+# Offline report preparation only; not needed by the Next.js application.
+PyMuPDF==1.26.6

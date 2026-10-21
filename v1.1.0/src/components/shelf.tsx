@@ -121,8 +121,8 @@ export function Shelf({ compact = false }: { compact?: boolean }) {
           </span>
           <span>
             {lang === "ko"
-              ? "작업계획 발췌 · 원문 자료 미제공"
-              : "Planning excerpt · underlying report pending"}
+              ? "작업계획 발췌 · 연구 주장 미검증"
+              : "Planning excerpt · research claims unverified"}
           </span>
           <Link
             href={`/archive/${p.slug}`}

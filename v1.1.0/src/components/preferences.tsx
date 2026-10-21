@@ -64,6 +64,7 @@ export function PreferencesProvider({
       {(lang === "ko" ||
         pathname.startsWith("/research/") ||
         pathname.startsWith("/archive/") ||
+        pathname.startsWith("/reports") ||
         pathname === "/methods") && <KoreanFonts />}
       {children}
     </Context.Provider>

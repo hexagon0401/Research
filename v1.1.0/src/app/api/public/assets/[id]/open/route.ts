@@ -15,11 +15,6 @@ export async function GET(
     return Response.json({ error: "File not found" }, { status: 404, headers });
   try {
     const result = await signedAsset(id);
-    if (result.status === "not-configured")
-      return Response.json(
-        { error: "Original file storage is not connected yet" },
-        { status: 503, headers },
-      );
     if (result.status === "not-found")
       return Response.json(
         { error: "File not found" },

@@ -6,3 +6,11 @@
 - Added a browser regression check for the arrow bounds, text separation, document overflow and proposal link.
 - The deployed application's directory remains `v1.1.0`; release versions are recorded in its package and Git tags so Vercel's configured Root Directory stays valid.
 - Validation: optimized production build and TypeScript passed; 9 unit checks passed; the new regression passed at 1440, 768, 375 and 390px. A separate 1760px screenshot confirms a 144×144px arrow separated from the text. Safari hardware was not available for direct verification.
+
+## 1.1.2 — 2026-10-22
+
+- Added 13 de-identified source transcripts, stable page/paragraph locators, figure previews and reviewed PDF reading copies. Original binaries and private intake records remain outside Git.
+- Kept two different Golden Dome PDFs distinct; newly supplied subjects use S13–S17 without overwriting absent S04/S07/S09/S10/S12.
+- Added reusable document preparation, privacy checks, XML memo/footnote parsing and a private Supabase uploader with checksum and signed-download verification.
+- Added the continuous-scroll and interaction specification for the next implementation.
+- Validation: optimized build and TypeScript; 12 unit checks; 7 Python checks; browser suite 73 passed / 3 intentionally skipped. Reading PDFs are available without a Supabase connection.

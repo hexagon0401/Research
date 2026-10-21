@@ -39,9 +39,14 @@ export default function Methods() {
         </h2>
         <p>
           <L
-            en="The website specification and the Integrated Independent Research handoff were read. The handoff lists thirteen underlying source items (S00–S12), but those files are not attached to this project. Descriptions of them remain secondhand inventory entries."
-            ko="사이트 명세와 Integrated Independent Research 작업계획을 읽었습니다. 작업계획에는 원자료 13개(S00–S12)가 기재되어 있지만, 이번 프로젝트에 해당 파일은 첨부되지 않았습니다. 해당 자료에 대한 설명은 작업계획의 간접적 기록입니다."
+            en="Two planning documents and thirteen distinct report files were inspected. S00, S01, S02, S03, S05, S06, S08 and S11 match the plan's subjects. Additional or different documents use S13–S17. S04, S07, S09, S10 and S12 have not been supplied; similarly named files are not assumed identical. The report archive preserves page or paragraph locators, source checksums and de-identification notices. Raw datasets and execution logs remain unverified."
+            ko="계획 문서 2개와 서로 다른 보고서 파일 13개를 확인했습니다. S00·S01·S02·S03·S05·S06·S08·S11은 계획의 해당 주제와 연결되며, 추가 자료와 다른 내용의 문서는 S13–S17로 구분했습니다. S04·S07·S09·S10·S12는 아직 미제공이며 비슷한 파일명을 동일한 원문으로 간주하지 않습니다. 원문 자료실에는 쪽·문단 위치, 출처 해시, 개인정보 처리 설명을 남겼습니다. 원시 데이터와 실행 기록의 재현 검증은 완료되지 않았습니다."
           />
+        </p>
+        <p>
+          <Link className="inline-link" href="/reports">
+            <L en="Read the source transcripts" ko="원문 전사본 읽기" /> ↗
+          </Link>
         </p>
         <h2>
           <L

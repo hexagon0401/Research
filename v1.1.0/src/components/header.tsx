@@ -29,9 +29,13 @@ export function Header() {
         </Link>
         <Link
           href="/library"
-          aria-current={path.startsWith("/library") ? "page" : undefined}
+          aria-current={
+            path.startsWith("/library") || path.startsWith("/reports")
+              ? "page"
+              : undefined
+          }
         >
-          {lang === "ko" ? "참고문헌" : "Library"}
+          {lang === "ko" ? "자료실" : "Library"}
         </Link>
         <Link
           href="/about"

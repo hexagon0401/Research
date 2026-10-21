@@ -1,4 +1,5 @@
 import { projects, revision } from "@/content/repository";
+import { reports } from "@/content/report-catalog";
 export const dynamic = "force-static";
 export function GET() {
   return Response.json({
@@ -13,6 +14,8 @@ export function GET() {
       status: p.status,
     })),
     sourcePolicy:
-      "Planning excerpts only. Underlying reports and reviewed translations are not available.",
+      "Planning excerpts and de-identified source report transcripts are separate. Research claims and translations remain unverified.",
+    reportCount: reports.length,
+    reportIndex: "/reports",
   });
 }

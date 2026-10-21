@@ -277,8 +277,8 @@ export default function Home() {
             </strong>
             <p>
               <L
-                en="The supplied files are plans. Original reports, source tables and execution records are still required."
-                ko="제공된 파일은 계획 문서입니다. 연구 원문, 원자료 표, 분석 실행 기록이 추가로 필요합니다."
+                en="Source report transcripts are available in the library. Raw data tables and reproducible execution records are still required."
+                ko="자료실에서 연구 원문 전사본을 열람할 수 있습니다. 원시 데이터 표와 재현 가능한 분석 실행 기록은 추가로 필요합니다."
               />
             </p>
           </div>

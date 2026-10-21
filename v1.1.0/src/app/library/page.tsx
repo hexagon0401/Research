@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Localized as L } from "@/components/preferences";
 import { Collection } from "@/components/collection";
+import Link from "next/link";
+import { reports } from "@/content/report-catalog";
 export const metadata: Metadata = { title: "Reference library" };
 export default function Library() {
   return (
@@ -33,9 +35,18 @@ export default function Library() {
         </p>
         <div className="callout">
           <L
-            en="Original reports, licensed PDFs and reviewed translations have not been supplied. Unavailable items are described as reference leads; no full text is reproduced."
-            ko="연구 원문, 이용 허가된 PDF, 검수 번역은 아직 제공되지 않았습니다. 미확보 자료는 참고자료 후보로 표시하며 전문을 복제하지 않습니다."
+            en={`${reports.length} supplied research reports are available as de-identified Korean transcripts. External publications below remain reference leads; reviewed translations and raw analysis datasets are still unavailable.`}
+            ko={`제공된 연구 보고서 ${reports.length}개를 개인정보 제거 한국어 전사본으로 열람할 수 있습니다. 아래 외부 문헌은 참고자료 후보이며 검수 번역과 분석 원시 데이터는 아직 미확보 상태입니다.`}
           />
+          <p>
+            <Link className="inline-link" href="/reports">
+              <L
+                en="Read original report transcripts"
+                ko="연구 원문 전사본 열기"
+              />{" "}
+              ↗
+            </Link>
+          </p>
         </div>
       </div>
       <section className="collection" aria-label="Reference search">

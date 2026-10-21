@@ -27,7 +27,7 @@
           "summaryKo": "재무적 복원력은 ESG의 사회적 성과와 구분하며, 재무 지표는 생존 확률의 대리 지표로 다룹니다."
         }
       ],
-      "limitation": "The financial dataset and original seminar report have not been supplied. No numeric result is presented.",
+      "limitation": "The seminar report is transcribed separately. Its raw financial dataset and code remain unavailable; no numerical analysis has been reproduced here.",
       "claim": "CLAIM-01"
     },
     {
@@ -180,7 +180,7 @@
       "kind": "Planning document",
       "year": "2026",
       "status": "Available excerpt",
-      "description": "The supplied research integration plan. Six phase excerpts are available in the reader; underlying reports and datasets are not included.",
+      "description": "The supplied research integration plan. Six phase excerpts remain separate from the subsequently supplied report transcripts; raw analysis datasets are not available.",
       "url": null,
       "project": "corporate-resilience"
     },

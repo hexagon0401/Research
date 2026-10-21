@@ -56,8 +56,8 @@ export default function About() {
         </h2>
         <p>
           <L
-            en="According to the handoff, 2025 topics included data-driven warfare, the security–economic complex, corporate mission and financial networks. The 2026 plan expands toward financial comparisons, multiscale analysis, AI ethics, policy counterfactuals and responsible state–firm partnerships. Original reports have not yet been supplied here."
-            ko="작업계획에 따르면 2025년에는 전쟁의 정보화, 경제–안보 복합체, 기업의 사명, 금융 네트워크를 다뤘습니다. 2026년의 계획은 재무 비교, 다중스케일 분석, AI 윤리, 정책 반사실 분석, 책임 있는 국가–기업 협력으로 확장됩니다. 해당 연구 원문은 아직 이 프로젝트에 제공되지 않았습니다."
+            en="The supplied school reports address data-driven warfare, the security–economic complex, financial networks, multiscale analysis, philosophy and corporate strategy. Thirteen distinct files are preserved and transcribed separately from the proposed integrated framework. Their presence does not establish the reported statistical or causal claims."
+            ko="제공된 교과 보고서는 전쟁의 정보화, 경제–안보 복합체, 금융 네트워크, 다중스케일 분석, 철학, 기업 전략을 다룹니다. 서로 다른 원본 파일 13개를 보존하고 통합 연구 프레임워크와 구분해 전사했습니다. 원문 확보가 보고된 통계·인과 주장의 입증을 뜻하지는 않습니다."
           />
         </p>
         <h2>

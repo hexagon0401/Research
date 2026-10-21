@@ -6,12 +6,14 @@ import { projects, revision } from "@/content/repository";
 import { usePreferences } from "./preferences";
 import { Arrow } from "./icons";
 import { OriginalFiles } from "./original-files";
+import { reportsForProject } from "@/content/report-catalog";
 export function Reader({ project: p }: { project: Project }) {
   const { lang } = usePreferences();
   const [readerLang, setReaderLang] = useState<"en" | "ko">("ko");
   const rail = useRef<HTMLElement>(null);
   const index = projects.findIndex((project) => project.slug === p.slug);
   const next = projects[(index + 1) % projects.length];
+  const availableReports = reportsForProject(p.slug);
   return (
     <>
       <header className="reader-header section-shell">
@@ -120,6 +122,31 @@ export function Reader({ project: p }: { project: Project }) {
             </span>
             <p lang="en">{p.limitation}</p>
           </div>
+          <section
+            className="report-related"
+            aria-label={
+              lang === "ko" ? "관련 원문 전사본" : "Related source transcripts"
+            }
+          >
+            <h2>
+              {lang === "ko"
+                ? "관련 원문을 직접 읽기"
+                : "Read related source reports"}
+            </h2>
+            <ul>
+              {availableReports.map((r) => (
+                <li key={r.id}>
+                  <Link
+                    className="inline-link"
+                    href={`/reports/${r.id}`}
+                    lang="ko"
+                  >
+                    {r.id} / {r.title} ↗
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
           <div className="reader-next">
             <Link href="/archive">
               ← {lang === "ko" ? "전체 목차" : "Full index"}
@@ -175,7 +202,9 @@ export function Reader({ project: p }: { project: Project }) {
             <dd>
               {p.relatedSources.join(" · ")}
               <br />
-              Listed in the plan; original reports not supplied.
+              {lang === "ko"
+                ? `관련 전사본 ${availableReports.length}개 열람 가능. 자료 확보는 연구 주장의 검증을 뜻하지 않습니다.`
+                : `${availableReports.length} related transcripts available. Availability is distinct from verification.`}
             </dd>
             <dt>TRANSLATION</dt>
             <dd>untranslated · reviewed_at: —</dd>
