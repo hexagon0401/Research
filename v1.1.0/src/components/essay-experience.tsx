@@ -8,12 +8,10 @@ import {
   useState,
 } from "react";
 import Link from "next/link";
-import type { EssayBeat } from "@/content/essay";
+import { essay, type EssayBeat } from "@/content/essay";
 import atlas from "@/visuals/atlas.json";
 import { chapterFor, storyChapters, storyVisuals } from "@/visuals/story";
-import { reports } from "@/content/report-catalog";
 import { usePreferences } from "./preferences";
-import { SceneDiagram, GeographicLegend } from "./scene-diagram";
 export { SceneDiagram } from "./scene-diagram";
 export type SceneMeta = Pick<
   EssayBeat,
@@ -33,22 +31,114 @@ export function EssayExperience({
   const { lang, reduced } = usePreferences();
   const lastLang = useRef(lang);
   const read = useRef({ id: scenes[0].id, fraction: 0, started: false });
+  const passage = useRef<{ id: string; offset: number } | null>(null);
   useLayoutEffect(() => {
     if (lastLang.current !== lang && read.current.started) {
+      const point = passage.current;
       const rect = document
-        .getElementById(read.current.id)
+        .getElementById(point?.id ?? read.current.id)
         ?.getBoundingClientRect();
       if (rect)
         window.scrollTo({
           top:
             rect.top +
             scrollY +
-            rect.height * read.current.fraction -
-            innerHeight * 0.35,
+            (point
+              ? -point.offset
+              : rect.height * read.current.fraction - innerHeight * 0.35),
           behavior: "instant",
         });
     }
+    if (lastLang.current !== lang && passage.current) {
+      const point = passage.current;
+      const initialY = scrollY;
+      let alive = true;
+      const restore = () => {
+        if (!alive || Math.abs(scrollY - initialY) > 16) return;
+        const el = document.getElementById(point.id);
+        if (el)
+          window.scrollBy({
+            top: el.getBoundingClientRect().top - point.offset,
+            behavior: "instant",
+          });
+      };
+      document.fonts.ready.then(restore);
+      document.fonts.addEventListener("loadingdone", restore, { once: true });
+      lastLang.current = lang;
+      return () => {
+        alive = false;
+        document.fonts.removeEventListener("loadingdone", restore);
+      };
+    }
     lastLang.current = lang;
+  }, [lang]);
+  useEffect(() => {
+    let alive = true;
+    const save = (event: MouseEvent) => {
+      const link = (event.target as Element).closest?.(
+        "a[href]",
+      ) as HTMLAnchorElement | null;
+      if (!link || !new URL(link.href).pathname.startsWith("/reports/")) return;
+      const candidates = Array.from(
+        root.current?.querySelectorAll<HTMLElement>(
+          "[data-reading-passage], [data-essay-beat]",
+        ) ?? [],
+      );
+      const current =
+        candidates
+          .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
+          .at(-1) ?? candidates[0];
+      if (current)
+        try {
+          sessionStorage.setItem(
+            "iir-essay-return",
+            JSON.stringify({
+              anchor: current.id,
+              offset: current.getBoundingClientRect().top,
+              beat: current.closest("[data-essay-beat]")?.id ?? current.id,
+              lang,
+            }),
+          );
+          sessionStorage.setItem("iir-essay-resume", "true");
+        } catch {}
+    };
+    const restore = () => {
+      try {
+        if (sessionStorage.getItem("iir-essay-resume") !== "true") return;
+        const saved = JSON.parse(
+          sessionStorage.getItem("iir-essay-return") ?? "null",
+        );
+        if (
+          !saved ||
+          (location.hash &&
+            decodeURIComponent(location.hash.slice(1)) !== saved.beat)
+        )
+          return;
+        const target = document.getElementById(saved.anchor);
+        if (target) {
+          window.scrollBy({
+            top: target.getBoundingClientRect().top - saved.offset,
+            behavior: "instant",
+          });
+          sessionStorage.removeItem("iir-essay-resume");
+        }
+      } catch {}
+    };
+    const afterFonts = () => {
+      if (alive)
+        requestAnimationFrame(() => {
+          if (alive) restore();
+        });
+    };
+    document.fonts.ready.then(afterFonts);
+    window.addEventListener("pageshow", afterFonts);
+    root.current?.addEventListener("click", save);
+    const el = root.current;
+    return () => {
+      alive = false;
+      el?.removeEventListener("click", save);
+      window.removeEventListener("pageshow", afterFonts);
+    };
   }, [lang]);
   useEffect(() => {
     const element = root.current;
@@ -99,6 +189,25 @@ export function EssayExperience({
       const fraction = clamp((axis - pos.top) / Math.max(1, pos.height));
       const current = scenes[index];
       const currentType = storyVisuals[current.id].type;
+      const activeBeat = beats[index];
+      const passages = Array.from(
+        activeBeat.querySelectorAll<HTMLElement>("[data-reading-passage]"),
+      );
+      const closest = passages
+        .filter((el) => el.getBoundingClientRect().top <= viewport * 0.35)
+        .at(-1);
+      passage.current = closest
+        ? { id: closest.id, offset: closest.getBoundingClientRect().top }
+        : null;
+      const emphases = Array.from(
+        element!.querySelectorAll<HTMLElement>(".is-emphasis"),
+      );
+      const emphasisProgress = emphases.map((el) => ({
+        el,
+        progress: clamp(
+          (viewport * 0.8 - el.getBoundingClientRect().top) / viewport,
+        ),
+      }));
       read.current =
         integrationPosition && axis >= integrationPosition.top
           ? {
@@ -110,6 +219,12 @@ export function EssayExperience({
               started: true,
             }
           : { id: current.id, fraction, started: axis >= positions[0].top };
+      emphasisProgress.forEach(({ el, progress }) =>
+        el.style.setProperty(
+          "--emphasis-progress",
+          String(reduced ? 1 : progress),
+        ),
+      );
       // Native scroll only; all geometry reads happen before writes. No pointer or idle animation loop.
       element!.style.setProperty(
         "--reading-progress",
@@ -209,7 +324,9 @@ export function StoryNavigation() {
         </a>
         <span className="story-current od-row">
           <span className="mono">{chapter.number} / 06</span>
-          <span>{chapter.short[lang]}</span>
+          <span>
+            {scene ? storyVisuals[scene.id].heading[lang] : chapter.short[lang]}
+          </span>
         </span>
         <details
           ref={menu}
@@ -227,15 +344,31 @@ export function StoryNavigation() {
           </summary>
           <div className="story-menu-panel">
             {storyChapters.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.anchor}`}
-                aria-current={chapter.id === item.id ? "location" : undefined}
-                onClick={() => menu.current?.removeAttribute("open")}
-              >
-                <span className="mono">{item.number}</span>
-                <span>{item.title[lang]}</span>
-              </a>
+              <div key={item.id} className="story-menu-chapter">
+                <a
+                  href={`#${item.anchor}`}
+                  aria-current={chapter.id === item.id ? "location" : undefined}
+                  onClick={() => menu.current?.removeAttribute("open")}
+                >
+                  <span className="mono">{item.number}</span>
+                  <span>{item.title[lang]}</span>
+                </a>
+                {essay
+                  .filter((beat) => item.beats.includes(beat.id))
+                  .map((beat) => (
+                    <a
+                      className="story-menu-case"
+                      key={beat.id}
+                      href={`#${beat.id}`}
+                      aria-current={
+                        scene?.id === beat.id ? "location" : undefined
+                      }
+                      onClick={() => menu.current?.removeAttribute("open")}
+                    >
+                      {storyVisuals[beat.id].heading[lang]}
+                    </a>
+                  ))}
+              </div>
             ))}
             <Link href="/archive">
               {lang === "ko" ? "연구 아카이브" : "Research archive"} ↗
@@ -299,74 +432,5 @@ export function HeroAtlas() {
         </text>
       </svg>
     </figure>
-  );
-}
-export function InlineVisual({ scene }: { scene: SceneMeta }) {
-  const { lang } = usePreferences();
-  return (
-    <figure className="essay-mobile-diagram">
-      <SceneDiagram key={scene.id} scene={scene} compact />
-      <GeographicLegend scene={scene} />
-      <div className="inline-mechanism">
-        {storyVisuals[scene.id].steps.map((step, index) => (
-          <span key={index}>{step[lang]}</span>
-        ))}
-      </div>
-      <figcaption>{storyVisuals[scene.id].note[lang]}</figcaption>
-    </figure>
-  );
-}
-export function EssayVisual() {
-  const { scene } = useContext(Context);
-  const { lang } = usePreferences();
-  if (!scene) return null;
-  const visual = storyVisuals[scene.id],
-    chapter = chapterFor(scene.id);
-  return (
-    <aside
-      className="essay-visual"
-      aria-label={
-        lang === "ko"
-          ? "논지를 따라가는 시각 설명"
-          : "Visual guide to the argument"
-      }
-    >
-      <div className="visual-folio mono">
-        <span>{chapter.number} / 06</span>
-        <span>{chapter.title[lang]}</span>
-      </div>
-      <figure className="essay-visual-geometry">
-        <SceneDiagram key={scene.id} scene={scene} />
-        <GeographicLegend scene={scene} />
-        <figcaption className="visual-heading">
-          {visual.heading[lang]}
-        </figcaption>
-      </figure>
-      <div className="visual-mechanism">
-        {visual.steps.map((step, i) => (
-          <div className="od-field" key={i}>
-            <span className="mono">0{i + 1}</span>
-            <span>{step[lang]}</span>
-          </div>
-        ))}
-      </div>
-      <p className="visual-evidence-note">{visual.note[lang]}</p>
-      <div className="visual-source-links">
-        <span className="mono">
-          {lang === "ko" ? "이 논지의 원문" : "READ IN CONTEXT"}
-        </span>
-        <div>
-          {scene.related.map((id) => (
-            <Link
-              key={id}
-              prefetch={false}
-              href={scene.targets?.[id] ?? `/reports/${id}`}
-            >
-              {id} ↗
-            </Link>
-          ))}
-        </div>
-      </div>
-    </aside>
   );
 }

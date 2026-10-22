@@ -1,0 +1,47 @@
+name: Research v2.3 browser and preservation checks
+on:
+  push:
+    branches: [v2.3.0-candidate]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: v1.1.0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: v1.1.0/package-lock.json
+      - run: npm ci
+      - run: npm run audit:preservation && npm test && npm run format:check && npm run build && npm run typecheck
+      - run: npx playwright install --with-deps chromium
+      - name: Start production server
+        run: |
+          mkdir -p .local/validation
+          npm run start > .local/validation/server.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:3000/ > /dev/null && break; sleep 1; done
+      - name: Browser matrix, interaction, source, PDF and accessibility regression
+        run: npm run test:e2e -- --reporter=list,json > .local/validation/e2e.log 2>&1
+      - name: Three mobile Lighthouse runs
+        if: always()
+        run: |
+          export CHROME_PATH=$(node --input-type=module -e 'import {chromium} from "playwright"; console.log(chromium.executablePath())')
+          npm run audit:performance
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-v23-validation
+          path: |
+            v1.1.0/.local/validation/
+            v1.1.0/.local/audits/
+            v1.1.0/test-results/
+          retention-days: 7

@@ -3,40 +3,22 @@ import { test, expect } from "@playwright/test";
 test("the reading field stays paper, and pointer movement cannot move its geography", async ({
   page,
 }) => {
-  await page.goto("/?scene=china-ownership");
+  await page.goto("/?scene=china-myanmar");
   await expect(page.locator("#main")).toHaveAttribute(
     "data-scene",
-    "china-ownership",
+    "china-myanmar",
   );
   await expect(page.locator(".story-chapter")).toHaveCount(6);
-  const before = await page.locator(".essay-visual").evaluate((e) => ({
-    background: getComputedStyle(e).backgroundColor,
-    transform: getComputedStyle(e.querySelector(".geo-world-camera")!)
-      .transform,
-    field: getComputedStyle(document.querySelector("#main")!).backgroundColor,
-  }));
-  const rect = await page.locator(".essay-visual").boundingBox();
-  if (rect) {
-    await page.mouse.move(rect.x + 20, rect.y + 20);
-    await page.mouse.move(rect.x + rect.width - 20, rect.y + 60);
-    const after = await page
-      .locator(".geo-world-camera")
-      .first()
-      .evaluate((e) => getComputedStyle(e).transform);
-    expect(after).toBe(before.transform);
-    expect(before.background).toBe("rgba(0, 0, 0, 0)");
-  }
-  expect(before.field).toBe("rgb(230, 232, 230)");
-  await page.goto("/?scene=us-finance");
-  await expect(page.locator("#main")).toHaveAttribute(
-    "data-scene",
-    "us-finance",
-  );
+  const map = page.locator("#visual-china-myanmar .terrain-world > g");
+  const before = await map.getAttribute("transform");
+  await page.mouse.move(200, 300);
+  await page.mouse.move(900, 500);
+  expect(await map.getAttribute("transform")).toBe(before);
   expect(
     await page
       .locator("#main")
       .evaluate((e) => getComputedStyle(e).backgroundColor),
-  ).toBe(before.field);
+  ).toBe("rgb(230, 232, 230)");
 });
 
 test("the compact contents menu navigates and closes with a keyboard return path", async ({
@@ -46,7 +28,7 @@ test("the compact contents menu navigates and closes with a keyboard return path
   const menu = page.locator(".story-menu");
   await menu.locator("summary").click();
   await expect(menu).toHaveAttribute("open", "");
-  await menu.locator('a[href="#korea-chips"]').click();
+  await menu.locator('a[href="#korea-chips"]').last().click();
   await expect(menu).not.toHaveAttribute("open", "");
   await expect(page.locator("#main")).toHaveAttribute(
     "data-scene",

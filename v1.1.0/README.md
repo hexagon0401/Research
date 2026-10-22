@@ -1,4 +1,4 @@
-# IIR — Integrated Independent Research · v2.2.0
+# IIR — Integrated Independent Research · v2.3.0
 
 S00의 논지를 여섯 흐름으로 읽고, Paper 바탕의 지도·개념 설명과 실제 자료 폴더를 탐색하는 연구 에세이입니다. 13개 연구와 한·영 병렬 자료실을 보존합니다. 선 중심 SVG, 로컬 폰트, Next.js·React·TypeScript·CSS를 사용합니다.
 
@@ -49,3 +49,9 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 `CHROME_PATH`를 생략하면 Playwright 관리 브라우저를 사용합니다. 필요하면 `npx playwright install chromium`을 실행합니다. 문서 전처리 전용 Python 의존성은 `scripts/requirements-reports.txt`에 있으며 웹 실행에는 필요하지 않습니다.
 
 [무료 운영](docs/FREE_LAUNCH.md) · [Open Design 이관](docs/DESIGN_HANDOFF.md) · [변경 기록](docs/CHANGELOG.md) · [이전 v2.0.0 검증](docs/V2_RELEASE.md)
+
+## v2.3.0 읽기와 그래픽
+
+본문 순서와 원문을 유지하며 18개 사례별 그림·제목·범례·출처를 한 단위로 제공합니다. Pretext 1.0.0으로 HTML 지명과 연결문을 측정합니다. 세 강조 장면, 클릭·키보드 설명, 전문용어 풀이, 원문 문단 왕복, 국가별 비교를 추가했습니다.
+
+`npm run audit:preservation`은 v2.2.0 기준 원문·번역·API·백엔드와 PDF 해시를 검사합니다. `npm run test:e2e`는 Chromium에서 반응형·조작 회귀를, `npm run audit:performance`는 운영 빌드의 모바일 Lighthouse 3회 중앙값을 측정합니다. 실제 결과와 미완료 범위는 [v2.3.0 기록](docs/V2_3_RELEASE.md)을 따릅니다.

@@ -16,9 +16,9 @@ const names: Record<string, { ko: string; en: string }> = {
   kr: { ko: "한국", en: "Korea" },
   mm: { ko: "미얀마", en: "Myanmar" },
   kh: { ko: "캄보디아", en: "Cambodia" },
-  Nuuk: { ko: "누크", en: "Nuuk" },
-  Ilulissat: { ko: "일루리사트", en: "Ilulissat" },
-  Qaqortoq: { ko: "카코르톡", en: "Qaqortoq" },
+  nuuk: { ko: "누크", en: "Nuuk" },
+  ilulissat: { ko: "일루리사트", en: "Ilulissat" },
+  qaqortoq: { ko: "카코르톡", en: "Qaqortoq" },
 };
 export function worldPins(scene: SceneMeta) {
   if (scene.id === "china-myanmar") return ["cn", "mm"];
