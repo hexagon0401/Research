@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Localized as L } from "@/components/preferences";
-import { Collection } from "@/components/collection";
+import { ResearchShelf } from "@/components/material-shelf";
 import Link from "next/link";
 import { reports } from "@/content/report-catalog";
 export const metadata: Metadata = { title: "Reference library" };
@@ -50,7 +50,7 @@ export default function Library() {
         </div>
       </div>
       <section className="collection" aria-label="Reference search">
-        <Collection kind="library" />
+        <ResearchShelf kind="library" />
       </section>
     </main>
   );

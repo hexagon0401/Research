@@ -6,24 +6,36 @@ import {
   useLayoutEffect,
   useRef,
   useState,
+  useId,
 } from "react";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { EssayBeat } from "@/content/essay";
-import points from "@/content/essay-map-points.json";
-import { researchConnections } from "@/content/research-connections";
+import atlas from "@/visuals/atlas.json";
+import { chapterFor, storyChapters, storyVisuals } from "@/visuals/story";
+import { reports } from "@/content/report-catalog";
 import { usePreferences } from "./preferences";
 export type SceneMeta = Pick<
   EssayBeat,
   "id" | "title" | "mode" | "country" | "tint" | "related"
 > & { targets?: Record<string, string> };
 const Context = createContext<{ scene: SceneMeta | null }>({ scene: null });
-const clamp = (value: number) => Math.max(0, Math.min(1, value));
-const countries = [
-  { id: "us", target: "us-mission", name: "United States", ko: "미국" },
-  { id: "cn", target: "china-ownership", name: "China", ko: "중국" },
-  { id: "kr", target: "korea-chips", name: "South Korea", ko: "한국" },
-];
-
+const clamp = (v: number) => Math.max(0, Math.min(1, v));
+const smooth = (v: number) => v * v * (3 - 2 * v);
+function camera(scene: SceneMeta) {
+  const scale =
+    scene.id === "china-myanmar" || scene.id === "china-cambodia"
+      ? 1.5
+      : scene.country
+        ? 1.2
+        : 1;
+  const pin = scene.country ? atlas.world.pins[scene.country] : [360, 250];
+  return {
+    scale,
+    x: 360 - pin[0] * scale,
+    y: 250 - pin[1] * scale,
+  };
+}
 export function EssayExperience({
   scenes,
   children,
@@ -35,16 +47,13 @@ export function EssayExperience({
   const [active, setActive] = useState(0);
   const { lang, reduced } = usePreferences();
   const lastLang = useRef(lang);
-  const read = useRef<{ id: string; fraction: number; started: boolean }>({
-    id: scenes[0].id,
-    fraction: 0,
-    started: false,
-  });
+  const read = useRef({ id: scenes[0].id, fraction: 0, started: false });
   useLayoutEffect(() => {
     if (lastLang.current !== lang && read.current.started) {
-      const element = document.getElementById(read.current.id);
-      if (element) {
-        const rect = element.getBoundingClientRect();
+      const rect = document
+        .getElementById(read.current.id)
+        ?.getBoundingClientRect();
+      if (rect)
         window.scrollTo({
           top:
             rect.top +
@@ -53,26 +62,27 @@ export function EssayExperience({
             innerHeight * 0.35,
           behavior: "instant",
         });
-      }
     }
     lastLang.current = lang;
   }, [lang]);
   useEffect(() => {
     const element = root.current;
     if (!element) return;
-    const beats = [
-      ...element.querySelectorAll<HTMLElement>("[data-essay-beat]"),
-    ];
+    const beats = Array.from(
+      element.querySelectorAll<HTMLElement>("[data-essay-beat]"),
+    );
+    const progressBar = element.querySelector<HTMLProgressElement>(
+      ".story-reading-progress",
+    );
     let frame = 0,
       alive = true,
       dirty = true,
       previous = -1;
     let positions: { top: number; height: number }[] = [];
+    const integration = element.querySelector<HTMLElement>("#integration");
+    let integrationPosition: { top: number; height: number } | null = null;
     let maximum = 1,
       viewport = innerHeight;
-    let pointer: { x: number; y: number } | null = null;
-    const stage = element.querySelector<HTMLElement>(".essay-visual");
-    const fine = matchMedia("(hover: hover) and (pointer: fine)");
     element.dataset.enhanced = "true";
     function paint() {
       frame = 0;
@@ -81,9 +91,13 @@ export function EssayExperience({
       if (dirty) {
         viewport = innerHeight;
         positions = beats.map((beat) => {
-          const rect = beat.getBoundingClientRect();
-          return { top: rect.top + y, height: rect.height };
+          const r = beat.getBoundingClientRect();
+          return { top: r.top + y, height: r.height };
         });
+        if (integration) {
+          const r = integration.getBoundingClientRect();
+          integrationPosition = { top: r.top + y, height: r.height };
+        }
         maximum = Math.max(
           1,
           element!.offsetTop + element!.offsetHeight - viewport,
@@ -98,57 +112,76 @@ export function EssayExperience({
       const pos = positions[index];
       if (!pos) return;
       const fraction = clamp((axis - pos.top) / Math.max(1, pos.height));
-      const progress = clamp(y / maximum);
-      const blend = clamp(
-        (axis - pos.top) / Math.max(1, Math.min(pos.height, viewport * 0.8)),
-      );
+      const blend = reduced
+        ? 1
+        : smooth(
+            clamp(
+              (axis - pos.top) /
+                Math.max(1, Math.min(pos.height, viewport * 0.8)),
+            ),
+          );
       const current = scenes[index],
         preceding = scenes[Math.max(0, index - 1)];
-      const rgb = reduced
-        ? [230, 232, 230]
-        : current.tint.map((value, i) =>
-            Math.round(preceding.tint[i] + (value - preceding.tint[i]) * blend),
-          );
-      const box = pointer && stage ? stage.getBoundingClientRect() : null;
-      read.current = {
-        id: current.id,
-        fraction,
-        started: axis >= positions[0].top,
-      };
-      // All layout reads precede style writes. No idle requestAnimationFrame loop.
-      element!.style.setProperty("--essay-rgb", rgb.join(" "));
-      element!.style.setProperty("--reading-progress", String(progress));
+      const now = camera(current),
+        before = camera(preceding);
+      const currentType = storyVisuals[current.id].type,
+        previousType = storyVisuals[preceding.id].type;
+      read.current =
+        integrationPosition && axis >= integrationPosition.top
+          ? {
+              id: "integration",
+              fraction: clamp(
+                (axis - integrationPosition.top) /
+                  Math.max(1, integrationPosition.height),
+              ),
+              started: true,
+            }
+          : { id: current.id, fraction, started: axis >= positions[0].top };
+      // Native scroll only; all geometry reads happen before writes. No pointer or idle animation loop.
+      element!.style.setProperty(
+        "--reading-progress",
+        String(clamp(y / maximum)),
+      );
       element!.style.setProperty(
         "--beat-progress",
         String(reduced ? 1 : fraction),
       );
-      for (const mode of ["concept", "world", "arctic", "integration"]) {
+      element!.style.setProperty(
+        "--atlas-scale",
+        String(before.scale + (now.scale - before.scale) * blend),
+      );
+      element!.style.setProperty(
+        "--atlas-x",
+        `${before.x + (now.x - before.x) * blend}px`,
+      );
+      element!.style.setProperty(
+        "--atlas-y",
+        `${before.y + (now.y - before.y) * blend}px`,
+      );
+      element!.style.setProperty(
+        "--hero-travel",
+        `${reduced ? 0 : Math.min(y * 0.08, 40)}px`,
+      );
+      for (const type of [
+        "concept",
+        "world",
+        "globe",
+        "arctic",
+        "integration",
+      ]) {
         const weight =
-          current.mode === preceding.mode
-            ? Number(mode === current.mode)
-            : mode === current.mode
-              ? reduced
-                ? 1
-                : blend
-              : mode === preceding.mode
-                ? reduced
-                  ? 0
-                  : 1 - blend
+          currentType === previousType
+            ? Number(type === currentType)
+            : type === currentType
+              ? blend
+              : type === previousType
+                ? 1 - blend
                 : 0;
-        element!.style.setProperty(`--mode-${mode}`, String(weight));
+        element!.style.setProperty(`--mode-${type}`, String(weight));
       }
       element!.dataset.scene = current.id;
       element!.dataset.motion = reduced ? "reduced" : "full";
-      if (box && pointer && stage && !reduced && fine.matches) {
-        stage.style.setProperty(
-          "--pointer-x",
-          `${(clamp((pointer.x - box.left) / box.width) - 0.5) * 10}px`,
-        );
-        stage.style.setProperty(
-          "--pointer-y",
-          `${(clamp((pointer.y - box.top) / box.height) - 0.5) * 10}px`,
-        );
-      }
+      if (progressBar) progressBar.value = clamp(y / maximum);
       if (previous !== index) {
         previous = index;
         setActive(index);
@@ -162,15 +195,6 @@ export function EssayExperience({
       dirty = true;
       schedule();
     }
-    function move(event: PointerEvent) {
-      pointer = { x: event.clientX, y: event.clientY };
-      schedule();
-    }
-    function leave() {
-      pointer = null;
-      stage?.style.setProperty("--pointer-x", "0px");
-      stage?.style.setProperty("--pointer-y", "0px");
-    }
     const observer = new ResizeObserver(invalidate);
     observer.observe(element);
     beats.forEach((beat) => observer.observe(beat));
@@ -178,8 +202,6 @@ export function EssayExperience({
     window.addEventListener("resize", invalidate, { passive: true });
     window.addEventListener("pageshow", invalidate);
     document.addEventListener("visibilitychange", schedule);
-    stage?.addEventListener("pointermove", move, { passive: true });
-    stage?.addEventListener("pointerleave", leave);
     document.fonts.ready.then(() => {
       if (alive) invalidate();
     });
@@ -192,9 +214,6 @@ export function EssayExperience({
       window.removeEventListener("resize", invalidate);
       window.removeEventListener("pageshow", invalidate);
       document.removeEventListener("visibilitychange", schedule);
-      stage?.removeEventListener("pointermove", move);
-      stage?.removeEventListener("pointerleave", leave);
-      leave();
     };
   }, [scenes, lang, reduced]);
   useEffect(() => {
@@ -205,273 +224,448 @@ export function EssayExperience({
   return (
     <Context.Provider value={{ scene: scenes[active] }}>
       <main id="main" className="research-essay" ref={root}>
-        <div className="essay-progress" aria-hidden="true" />
         {children}
       </main>
     </Context.Provider>
   );
 }
-function Concept({ integration = false }: { integration?: boolean }) {
-  const ids = Object.keys(researchConnections).filter((id) => id !== "S00");
+export function StoryNavigation() {
+  const { scene } = useContext(Context);
+  const { lang, setLang } = usePreferences();
+  const menu = useRef<HTMLDetailsElement>(null);
+  const chapter = chapterFor(scene?.id ?? "survival");
+  useEffect(() => {
+    const close = (event: PointerEvent) => {
+      if (!menu.current?.contains(event.target as Node))
+        menu.current?.removeAttribute("open");
+    };
+    window.addEventListener("pointerdown", close);
+    return () => window.removeEventListener("pointerdown", close);
+  }, []);
   return (
-    <g
-      className="essay-concept"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
+    <nav
+      className="story-navigation"
+      aria-label={
+        lang === "ko" ? "연구 읽기 탐색" : "Research reading navigation"
+      }
     >
-      <path
-        className="essay-drawn-line"
-        pathLength="1"
-        d="M50 200H145C210 200 210 95 280 95S350 200 415 200H550"
-      />
-      <circle cx="145" cy="200" r="35" />
-      <circle cx="280" cy="95" r="35" />
-      <circle cx="415" cy="200" r="35" />
-      <path d="M145 235V285H415V235M280 130V285" strokeDasharray="3 6" />
-      <g stroke="none" fill="#e6e8e6" fontSize="12" textAnchor="middle">
-        <text x="145" y="204">
-          FIRM
-        </text>
-        <text x="280" y="99">
-          IDENTITY
-        </text>
-        <text x="415" y="204">
-          STATE
-        </text>
-        <text x="280" y="315">
-          TECHNOLOGY → CAPABILITY
-        </text>
-      </g>
-      {integration && (
-        <g className="essay-tree">
-          {ids.map((id, i) => (
-            <g key={id}>
-              <path
-                d={`M145 200C250 200 260 ${28 + i * 28} 430 ${28 + i * 28}`}
-                strokeWidth=".8"
-              />
-              <circle cx="430" cy={28 + i * 28} r="3" />
-              <text
-                x="445"
-                y={32 + i * 28}
-                fill="#e6e8e6"
-                stroke="none"
-                fontSize="11"
+      <div className="story-navigation-inner section-shell">
+        <a href="#question" className="story-nav-mark mono">
+          IIR / S00
+        </a>
+        <span className="story-current od-row">
+          <span className="mono">{chapter.number} / 06</span>
+          <span>{chapter.short[lang]}</span>
+        </span>
+        <details
+          ref={menu}
+          className="story-menu"
+          onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              menu.current?.removeAttribute("open");
+              menu.current?.querySelector("summary")?.focus();
+            }
+          }}
+        >
+          <summary>
+            {lang === "ko" ? "목차" : "Contents"}
+            <span aria-hidden="true">＋</span>
+          </summary>
+          <div className="story-menu-panel">
+            {storyChapters.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.anchor}`}
+                aria-current={chapter.id === item.id ? "location" : undefined}
+                onClick={() => menu.current?.removeAttribute("open")}
               >
-                {id}
-              </text>
-            </g>
-          ))}
-          <circle cx="145" cy="200" r="45" fill="#0e131f" />
-          <text
-            x="145"
-            y="205"
-            textAnchor="middle"
-            fill="#0efb2e"
-            stroke="none"
-            fontSize="20"
-          >
-            S00
-          </text>
-        </g>
-      )}
-    </g>
+                <span className="mono">{item.number}</span>
+                <span>{item.title[lang]}</span>
+              </a>
+            ))}
+            <Link href="/archive">
+              {lang === "ko" ? "연구 아카이브" : "Research archive"} ↗
+            </Link>
+            <div
+              className="story-menu-language language-switch"
+              aria-label="Reading interface language"
+            >
+              {(["en", "ko"] as const).map((language) => (
+                <button
+                  key={language}
+                  lang={language}
+                  aria-pressed={lang === language}
+                  onClick={() => {
+                    setLang(language);
+                    menu.current?.removeAttribute("open");
+                    menu.current
+                      ?.querySelector("summary")
+                      ?.focus({ preventScroll: true });
+                  }}
+                >
+                  {language === "en" ? "English" : "한국어"}
+                </button>
+              ))}
+            </div>
+          </div>
+        </details>
+        <progress
+          className="story-reading-progress"
+          max="1"
+          value="0"
+          aria-label={
+            lang === "ko" ? "연구 읽기 진행률" : "Research reading progress"
+          }
+        />
+      </div>
+    </nav>
   );
 }
+export function HeroAtlas() {
+  return (
+    <figure className="hero-atlas" aria-hidden="true">
+      <svg viewBox="0 0 720 520" width="720" height="520" fill="none">
+        <g className="hero-atlas-globe">
+          <circle cx="360" cy="258" r="202" className="geo-sphere" />
+          <path d={atlas.globe.grid} className="geo-grid" />
+          <path d={atlas.globe.land} className="geo-land" />
+        </g>
+        <path
+          d="M48 258h100M572 258h100M360 24v24M360 468v28"
+          className="geo-registration"
+        />
+        <path
+          d="M102 444h146"
+          className="hero-connection-line"
+          pathLength="1"
+        />
+        <rect x="94" y="436" width="16" height="16" className="geo-signal" />
+        <text x="124" y="476" className="diagram-footnote">
+          ONE QUESTION / DIFFERENT SCALES
+        </text>
+      </svg>
+    </figure>
+  );
+}
+function worldPins(scene: SceneMeta) {
+  if (scene.id === "china-myanmar") return ["cn", "mm"];
+  if (scene.id === "china-cambodia") return ["cn", "kh"];
+  if (scene.country) return [scene.country];
+  return ["us", "cn", "kr"];
+}
+const names: Record<string, { ko: string; en: string }> = {
+  us: { ko: "미국", en: "UNITED STATES" },
+  cn: { ko: "중국", en: "CHINA" },
+  kr: { ko: "한국", en: "KOREA" },
+  mm: { ko: "미얀마", en: "MYANMAR" },
+  kh: { ko: "캄보디아", en: "CAMBODIA" },
+};
 export function SceneDiagram({
   scene,
   compact = false,
-  preview,
 }: {
   scene: SceneMeta;
   compact?: boolean;
-  preview?: string | null;
 }) {
   const { lang } = usePreferences();
-  const country = preview ?? scene.country;
-  const isArctic = scene.mode === "arctic";
-  const labels: Record<string, string> = {
-    "us-mission": "PALANTIR / ANDURIL · MISSION & PROCUREMENT",
-    "us-dome": "GOLDEN DOME · SENSING / DATA / INTERCEPTION",
-    "us-finance": "TETHER / USDT · DOLLAR RESERVES",
-    "us-ships": "JONES ACT · COASTWISE TRADE & CAPACITY",
-    "china-ownership": "GEELY / MERCEDES-BENZ / TENCENT",
-    "china-governance": "OWNERSHIP / ORGANIZATION / DECISIONS",
-    "china-myanmar": "AVIC / NORINCO · REPORTED SUPPLY RELATIONSHIP",
-    "china-cambodia": "CANOPY SANDS / REAM · SPATIAL RELATIONSHIP",
-    "korea-chips": "SAMSUNG / SK HYNIX · EXPORT CONTROLS",
-    "korea-platforms": "NAVER / LINE · OWNERSHIP & JURISDICTION",
-    "korea-regulation": "TADA / COUPANG / KAKAO · REGULATORY EFFECTS",
-    "korea-defense": "HANWHA / LIG NEX1 · STRATEGY & PERFORMANCE",
-    "spatial-method": "SATELLITE / AIS / ONTOLOGY · OBSERVATION & INFERENCE",
-  };
+  const visual = storyVisuals[scene.id];
+  const focusId = useId();
+  const highlighted = worldPins(scene);
+  const local = compact
+    ? ({
+        "--mode-world": Number(visual.type === "world"),
+        "--mode-globe": Number(visual.type === "globe"),
+        "--mode-arctic": Number(visual.type === "arctic"),
+        "--mode-concept": Number(visual.type === "concept"),
+        "--mode-integration": Number(visual.type === "integration"),
+        "--atlas-scale": 1,
+        "--atlas-x": "0px",
+        "--atlas-y": "0px",
+      } as CSSProperties)
+    : undefined;
+  const visible = (type: string) => !compact || visual.type === type;
   return (
     <svg
       className={`essay-scene-diagram ${compact ? "compact" : ""}`}
-      viewBox={isArctic ? "0 0 600 600" : "0 0 600 400"}
-      width="600"
-      height={isArctic ? 600 : 400}
+      style={local}
+      viewBox="0 0 720 520"
+      width="720"
+      height="520"
       role="img"
-      aria-label={lang === "ko" ? scene.title.ko : scene.title.en}
+      aria-label={visual.heading[lang]}
     >
-      {scene.mode === "concept" || scene.mode === "integration" ? (
-        <Concept integration={scene.mode === "integration"} />
-      ) : isArctic ? (
-        <>
-          <image href="/essay-maps/arctic.svg" width="600" height="600" />
-          {Object.entries(points.arcticPins)
-            .filter(([id]) => id !== "kvanefjeld")
-            .map(([id, p], i) => (
-              <g key={id} transform={`translate(${p[0]} ${p[1]})`}>
-                <circle r="5" stroke="currentColor" fill="#0e131f" />
-                <path d={`M-7 0H${-45 - i * 20}`} stroke="currentColor" />
-                <text
-                  x={-50 - i * 20}
-                  y="4"
-                  textAnchor="end"
-                  fill="#e6e8e6"
-                  fontSize="12"
-                >
-                  {id.toUpperCase()}
-                </text>
-              </g>
+      <defs>
+        <radialGradient id={focusId}>
+          <stop stopColor="var(--signal)" stopOpacity=".18" />
+          <stop offset="1" stopColor="var(--signal)" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <title>{visual.heading[lang]}</title>
+      <desc>{visual.note[lang]}</desc>
+      {visible("world") && (
+        <g className="geo-layer layer-world">
+          <g className="geo-world-camera">
+            {!compact && <path d={atlas.world.grid} className="geo-grid" />}
+            {scene.country && !compact && (
+              <circle
+                cx={atlas.world.pins[scene.country][0]}
+                cy={atlas.world.pins[scene.country][1]}
+                r="88"
+                fill={`url(#${focusId})`}
+              />
+            )}
+            <path d={atlas.world.land} className="geo-land" />
+            {Object.entries(atlas.world.countries).map(([key, path]) => (
+              <path
+                key={key}
+                d={path}
+                className={
+                  highlighted.includes(key)
+                    ? "geo-country selected"
+                    : "geo-country"
+                }
+              />
             ))}
+            {Object.entries(atlas.world.pins)
+              .filter(
+                ([key]) =>
+                  ["us", "cn", "kr"].includes(key) || highlighted.includes(key),
+              )
+              .map(([key, point]) => (
+                <g
+                  key={key}
+                  transform={`translate(${point[0]} ${point[1]})`}
+                  className={
+                    highlighted.includes(key) ? "geo-pin selected" : "geo-pin"
+                  }
+                >
+                  <circle r={highlighted.includes(key) ? 7 : 3} />
+                  {highlighted.includes(key) && (
+                    <>
+                      <path d="M-16 0h6m20 0h6M0-16v6m0 20v6" />
+                      <text
+                        x={key === "us" ? -16 : 16}
+                        y={key === "kh" ? 32 : -16}
+                        textAnchor={key === "us" ? "end" : "start"}
+                      >
+                        {names[key][lang]}
+                      </text>
+                    </>
+                  )}
+                </g>
+              ))}
+          </g>
+          <text x="32" y="496" className="diagram-footnote">
+            {lang === "ko"
+              ? "지리적 비교 범위 / NATURAL EARTH"
+              : "GEOGRAPHIC SCOPE / NATURAL EARTH"}
+          </text>
+        </g>
+      )}
+      {visible("globe") && (
+        <g className="geo-layer layer-globe">
+          <circle cx="360" cy="258" r="202" className="geo-sphere" />
+          <path d={atlas.globe.grid} className="geo-grid" />
+          <path d={atlas.globe.land} className="geo-land" />
+          <path d="M84 258h72m408 0h72" className="geo-registration" />
           <text
-            x="300"
-            y="285"
+            x="360"
+            y="504"
             textAnchor="middle"
-            fill="#e6e8e6"
-            fontSize="11"
+            className="diagram-footnote"
           >
-            NORTH POLE
+            {lang === "ko"
+              ? "기업의 역량 / 국가적 스케일"
+              : "CORPORATE CAPABILITY / NATIONAL SCALE"}
           </text>
-          <text x="375" y="90" fill="#aebdae" fontSize="10">
-            ILLUSTRATIVE SEA ROUTE
-          </text>
-        </>
-      ) : (
-        <>
-          <image href="/essay-maps/world.svg" y="15" width="600" height="340" />
-          {Object.entries(points.pins).map(([id, p]) => (
+        </g>
+      )}
+      {visible("arctic") && (
+        <g className="geo-layer layer-arctic">
+          <path d={atlas.arctic.grid} className="geo-grid" />
+          <circle cx="360" cy="250" r="220" className="geo-sphere" />
+          <path d={atlas.arctic.land} className="geo-land" />
+          {Object.entries(atlas.arctic.pins).map(([key, point], index) => (
             <g
-              key={id}
-              transform={`translate(${p[0]} ${p[1] + 15})`}
-              className={
-                country === id ? "essay-map-pin active" : "essay-map-pin"
-              }
+              key={key}
+              transform={`translate(${point[0]} ${point[1]})`}
+              className="geo-pin selected"
             >
-              <circle r={country === id ? 12 : 5} />
-              <path d="M-19 0h8m22 0h8M0-19v8m0 22v8" />
+              <circle r="5" />
+              <path
+                d={`M-8 0H${-28 - index * 32}v${index === 0 ? -32 : index === 1 ? -64 : 24}`}
+              />
               <text
-                x={id === "kr" ? 18 : -18}
-                y="-16"
-                textAnchor={id === "kr" ? "start" : "end"}
+                x={-36 - index * 32}
+                y={index === 0 ? -28 : index === 1 ? -60 : 28}
+                textAnchor="end"
               >
-                {id.toUpperCase()}
+                {key.toUpperCase()}
               </text>
             </g>
           ))}
-          {(scene.id === "china-myanmar" || scene.id === "china-cambodia") && (
-            <path
-              d={`M${points.pins.cn[0]} ${points.pins.cn[1] + 15}L${points.pins[scene.id === "china-myanmar" ? "mm" : "kh"][0]} ${points.pins[scene.id === "china-myanmar" ? "mm" : "kh"][1] + 15}`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeDasharray="4 6"
-            />
-          )}
-          {labels[scene.id] && (
-            <text x="30" y="352" fill="#0efb2e" fontSize="10">
-              {labels[scene.id]}
-            </text>
-          )}
-          <text x="30" y="382" fill="#aebdae" fontSize="10">
-            COUNTRY REFERENCES · NOT OBSERVED SHIPMENT TRACKS
+          <text
+            x="360"
+            y="244"
+            textAnchor="middle"
+            className="diagram-footnote"
+          >
+            90° N
           </text>
-        </>
+          <text
+            x="360"
+            y="504"
+            textAnchor="middle"
+            className="diagram-footnote"
+          >
+            {lang === "ko"
+              ? "북극권 참고 위치 / 관측 항적 아님"
+              : "ARCTIC REFERENCE LOCATIONS / NOT VESSEL TRACKS"}
+          </text>
+        </g>
+      )}
+      {visible("concept") && (
+        <g className="geo-layer layer-concept">
+          <path d="M144 270H576" className="concept-thread" pathLength="1" />
+          {visual.steps.map((step, index) => (
+            <g key={index} transform={`translate(${64 + index * 216} 172)`}>
+              <rect
+                width="160"
+                height="160"
+                className={
+                  index === 1 ? "concept-block focal" : "concept-block"
+                }
+              />
+              <text x="16" y="32" className="diagram-index">
+                0{index + 1}
+              </text>
+              <text x="80" y="98" textAnchor="middle" className="diagram-label">
+                {step[lang]}
+              </text>
+            </g>
+          ))}
+          <path d="M144 356v40h432v-40" className="concept-boundary" />
+          <text
+            x="360"
+            y="432"
+            textAnchor="middle"
+            className="diagram-footnote"
+          >
+            {lang === "ko"
+              ? "개념적 연결 / 검증 대상 메커니즘"
+              : "CONCEPTUAL CONNECTION / A MECHANISM TO EXAMINE"}
+          </text>
+        </g>
+      )}
+      {visible("integration") && (
+        <g className="geo-layer layer-integration">
+          <path d="M148 260h112M260 60v400" className="concept-thread" />
+          <rect
+            x="52"
+            y="212"
+            width="112"
+            height="96"
+            className="concept-block focal"
+          />
+          <text x="108" y="269" textAnchor="middle" className="diagram-label">
+            S00
+          </text>
+          {reports
+            .filter((report) => report.id !== "S00")
+            .map((report, index) => (
+              <g key={report.id}>
+                <path
+                  d={`M260 ${72 + index * 32}H${index % 2 === 0 ? 440 : 520}`}
+                  className="concept-boundary"
+                />
+                <circle
+                  cx={index % 2 === 0 ? 440 : 520}
+                  cy={72 + index * 32}
+                  r="4"
+                  className="geo-signal"
+                />
+                <text
+                  x={index % 2 === 0 ? 456 : 536}
+                  y={78 + index * 32}
+                  className="diagram-index"
+                >
+                  {report.id}
+                </text>
+              </g>
+            ))}
+          <text x="52" y="496" className="diagram-footnote">
+            {lang === "ko"
+              ? "13개의 연구 / 공유하는 질문과 분석 역할"
+              : "13 STUDIES / SHARED QUESTIONS AND ANALYTICAL ROLES"}
+          </text>
+        </g>
       )}
     </svg>
+  );
+}
+export function InlineVisual({ scene }: { scene: SceneMeta }) {
+  const { lang } = usePreferences();
+  return (
+    <figure className="essay-mobile-diagram">
+      <SceneDiagram scene={scene} compact />
+      <div className="inline-mechanism">
+        {storyVisuals[scene.id].steps.map((step, index) => (
+          <span key={index}>{step[lang]}</span>
+        ))}
+      </div>
+      <figcaption>{storyVisuals[scene.id].note[lang]}</figcaption>
+    </figure>
   );
 }
 export function EssayVisual() {
   const { scene } = useContext(Context);
   const { lang } = usePreferences();
-  const [preview, setPreview] = useState<string | null>(null);
-  const [focused, setFocused] = useState<string | null>(null);
   if (!scene) return null;
-  const displayed = focused ? researchConnections[focused] : null;
+  const visual = storyVisuals[scene.id],
+    chapter = chapterFor(scene.id);
   return (
     <aside
       className="essay-visual"
       aria-label={
-        lang === "ko" ? "연결된 연구 지도" : "Connected research diagram"
+        lang === "ko"
+          ? "논지를 따라가는 시각 설명"
+          : "Visual guide to the argument"
       }
     >
-      <div className="essay-visual-kicker">
-        <span className="signal-square" /> ONE CONNECTED INQUIRY
+      <div className="visual-folio mono">
+        <span>{chapter.number} / 06</span>
+        <span>{chapter.title[lang]}</span>
       </div>
-      <div
-        className="essay-visual-geometry"
-        role="img"
-        aria-label={lang === "ko" ? scene.title.ko : scene.title.en}
-      >
-        {(["concept", "world", "arctic", "integration"] as const).map(
-          (mode) => (
-            <div
-              key={mode}
-              className={`essay-visual-layer mode-${mode}`}
-              aria-hidden="true"
-            >
-              <SceneDiagram scene={{ ...scene, mode }} preview={preview} />
-            </div>
-          ),
-        )}
-      </div>
-      <p className="essay-visual-title">
-        {lang === "ko" ? scene.title.ko : scene.title.en}
-      </p>
-      <nav className="essay-country-nav" aria-label="Country comparisons">
-        {countries.map((c) => (
-          <a
-            key={c.id}
-            href={`#${c.target}`}
-            aria-current={scene.country === c.id ? "location" : undefined}
-            onPointerEnter={() => setPreview(c.id)}
-            onPointerLeave={() => setPreview(null)}
-            onFocus={() => setPreview(c.id)}
-            onBlur={() => setPreview(null)}
-          >
-            {lang === "ko" ? c.ko : c.name}
-          </a>
+      <figure className="essay-visual-geometry">
+        <SceneDiagram scene={scene} />
+        <figcaption className="visual-heading">
+          {visual.heading[lang]}
+        </figcaption>
+      </figure>
+      <div className="visual-mechanism">
+        {visual.steps.map((step, i) => (
+          <div className="od-field" key={i}>
+            <span className="mono">0{i + 1}</span>
+            <span>{step[lang]}</span>
+          </div>
         ))}
-      </nav>
-      <div className="essay-visual-sources">
-        <span>{lang === "ko" ? "연결되는 원문" : "READ THE CONNECTION"}</span>
+      </div>
+      <p className="visual-evidence-note">{visual.note[lang]}</p>
+      <div className="visual-source-links">
+        <span className="mono">
+          {lang === "ko" ? "이 논지의 원문" : "READ IN CONTEXT"}
+        </span>
         <div>
           {scene.related.map((id) => (
             <Link
               key={id}
               prefetch={false}
               href={scene.targets?.[id] ?? `/reports/${id}`}
-              onFocus={() => setFocused(id)}
-              onBlur={() => setFocused(null)}
-              onPointerEnter={() => setFocused(id)}
-              onPointerLeave={() => setFocused(null)}
             >
               {id} ↗
             </Link>
           ))}
         </div>
-        <p>
-          {displayed
-            ? lang === "ko"
-              ? displayed.ko
-              : displayed.en
-            : lang === "ko"
-              ? "연구를 선택하면 사이트 안에서 한·영 전문과 PDF를 읽을 수 있습니다."
-              : "Open a study to read its Korean and English full text and PDF here."}
-        </p>
       </div>
     </aside>
   );

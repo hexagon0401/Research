@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
-import { ReportList } from "@/components/report-list";
+import { ResearchShelf } from "@/components/material-shelf";
 export const metadata: Metadata = {
   title: "Research archive",
   description:
@@ -44,7 +44,7 @@ export default function Archive() {
         </Link>
       </header>
       <section className="page-content" aria-label="Full research reports">
-        <ReportList />
+        <ResearchShelf kind="archive" />
       </section>
     </main>
   );

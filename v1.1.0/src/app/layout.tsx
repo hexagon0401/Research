@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@fontsource/ibm-plex-sans/latin-400.css";
 import "@fontsource/ibm-plex-sans/latin-500.css";
 import "./globals.css";
+import "./story.css";
 import { PreferencesProvider } from "@/components/preferences";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";

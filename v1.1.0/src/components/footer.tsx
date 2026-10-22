@@ -27,7 +27,7 @@ export function Footer() {
         <MotionControl />
       </div>
       <div className="footer-note">
-        <span className="mono">IIR 2.1.0 · RESEARCH IN PROGRESS · 2026</span>
+        <span className="mono">IIR 2.2.0 · RESEARCH IN PROGRESS · 2026</span>
         <p>
           <Localized
             en="A working framework, open to scrutiny."

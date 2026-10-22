@@ -34,7 +34,7 @@ test("home and document navigation survive without JavaScript", async ({
   await expect(p.locator("h1")).toContainText("national power");
   await expect(p.locator("[data-research-node]")).toHaveCount(13);
   await p.goto(`${baseURL}/archive`);
-  await p.locator(".report-list h2 a").first().click();
+  await p.locator(".material-folder").first().click();
   await expect(p.locator("#transcript")).toContainText("corporate");
   await context.close();
 });

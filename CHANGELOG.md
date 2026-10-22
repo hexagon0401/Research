@@ -1,5 +1,14 @@
 # Releases
 
+## 2.2.0 — 2026-10-22
+
+- Rebuilt the visual presentation on one Paper surface; removed the dark sidebar panel, scroll-driven background color changes and pointer-following geometry.
+- Retained all 18 essay arguments inside six connected reading threads; added a geographic globe and a shared concept/world/Arctic/synthesis SVG stage driven by native scroll.
+- Added context-specific mechanism labels and source links. Geographic emphasis uses a bounded focal gradient, without idle animation or invented routes and metrics.
+- Added actual-report and reference shelves with folders/book spines, search, filters, sorting, keyboard selection, cancellable opening and selection restoration.
+- Reduced reading chrome to the current thread, a thin progress line and an expandable contents menu. Kept the deployed Root Directory `v1.1.0` and existing report, PDF and backend contracts.
+- Execution results and browser-environment limitations: `v1.1.0/docs/V2_2_RELEASE.md`.
+
 ## 2.1.0 — 2026-10-22
 
 - Replaced the seven-part homepage presentation with a bilingual S00-led long-form essay, 18 connected arguments, concrete US/China/Korea cases and specific links to supporting source passages.

@@ -10,7 +10,9 @@ test("archive defaults to thirteen full studies with useful search and topic fil
   await page.getByRole("searchbox").fill("satellite");
   await expect(page.locator(".report-list>li")).toHaveCount(1);
   await page.getByRole("button", { name: "Clear filters" }).click();
-  await page.getByRole("combobox").selectOption("strategic-capability");
+  await page
+    .getByRole("combobox", { name: "CATEGORY", exact: true })
+    .selectOption("strategic-capability");
   expect(await page.locator(".report-list>li").count()).toBeGreaterThan(0);
   await page.getByRole("searchbox").fill("nothing-matches");
   await expect(page.getByText("No matching reports.")).toBeVisible();
