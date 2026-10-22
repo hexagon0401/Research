@@ -1,0 +1,1097 @@
+{
+  "reportId": "S14",
+  "revision": "reading-002",
+  "editing": "layout-only",
+  "translationStatus": "pending",
+  "paragraphs": [
+    {
+      "id": "S14-R001-P001",
+      "sectionId": "S14-L001",
+      "sourceBlockIds": [
+        "S14-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "현대사회와 철학 제목",
+      "sourceTextSha256": "920a0c3586f8d506853e6a9b12df06fff6d3f4e4bf2a146bc23ed4a88c0ca6c6"
+    },
+    {
+      "id": "S14-R001-P002",
+      "sectionId": "S14-L001",
+      "sourceBlockIds": [
+        "S14-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "< 요약 > 최근 급격한 AI와 기술의 발전은 군사 기술과 시스템에도 급격한 변화를 가져왔다. 이로 인해 급격하게 단축된 작전 시간과 실행은 분명한 성과를 가져왔지만 반대로 미납 사건과 같이 오폭으로 인한 민간인 피해 또한 가져왔다. 이러한 일이 일어난 것을 알기 위해서는 Palantir사의 시스템과 현실 세계와 컴퓨터 시스템 사이를 이어주는 온톨로지 시스템에 대한 이해와 문제점 발견이 필수적이다. 대표적으로 온톨로지 객체로 선언되지 않는 객체는 현실에는 존재하지만 시스템 상에 존재하지 않는 존재, 즉 존재 공백이 발생하며 시스템은 정상 작동하였으나 이러한 시스템의 완벽성이 현실세계의 도덕성을 보장해주지 않기에 발생하는 도덕적 정합성 문제, 그리고 인간에게는 예외적 상황이 알고리즘에게는 상시화되어버리는 예외의 상시화와 같은 문제가 있다. 이를 해결하기 위해 필자는 온톨로지 과정중 철학적 개입과 절차의 필요성을 느껴 파이프라인 환류 알고리즘을 통해 해결하기를 제안하며 동시에 온톨로지 설계자를 존재론적 입법자로 규정하여 책임 또한 명확히 할것을 제안한다. 또한 TPL과 같은 인간이 개입된 루프를 통해 인간 생명에 대한 문제에 대한 확실한 책임과 도덕적 해이나 악의 평범성 문제를 해결해야한다고 주장한다.",
+      "sourceTextSha256": "ea3605575b233e14624d6908cb7dc23d980196c563be6349a08916e9739ccccf"
+    },
+    {
+      "id": "S14-R001-P003",
+      "sectionId": "S14-L001",
+      "sourceBlockIds": [
+        "S14-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "1. 서론 빈 라덴 사살 작전으로도 불리는 넵튠의 창 작전의 설계, 계획, 실행 총 3단계에는 총 10년이 걸렸다. 이에는 첩보와 정보 수집, 기밀 유지등의 다양한 과정이 있었으며 그 과정에서 첩보원이 배신을 하여 수명의 요원들이 사살되기 도 하는등 다양한 시행착오를 포함하였다. 하지만 2026년 미국이 실행한 두가지의 작전인 마두로 송환작전(Absolute resolve)으로도 불리는 확고한 결의작전, 그리고 미국의 이란 전쟁 개전과 동시에 진행된 이란 하메네이 사살(폭살) 작전은 각각 4시간, 개전 24시간 만에 발생했으며 두가지의 고가치 타깃이자 국가 원수급의 사살 작전은 하루 이내 로 진행되었다. 이 변화는 단순한 속도의 문제가 아니다. 전쟁 수행의 구조 자체의 변화로 인지해야하며 인간이 며 칠씩 숙고하며 내리던 결정과 실행, 그리고 수십명의 특수요원과 장병들이 연습하던 시간들을 이제는 알고리즘이 밀 리초 단위로 처리하게되면서 전장과 전쟁의 판도와 시간은 완전히 바뀌었다. 그리고 그 알고리즘의 핵심 기반은 데 이터 온톨로지 시스템이라고 해도 과언이 아니다.",
+      "sourceTextSha256": "3f097875200c48456394d227d0bd58e11c7db3b16f606519e16f54a31933d6e0"
+    },
+    {
+      "id": "S14-R001-P004",
+      "sectionId": "S14-L001",
+      "sourceBlockIds": [
+        "S14-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "이러한 기술의 발전이 만들어낸 압도적인 작전 실행 능력과 시간 단축은 크게 두가지 방향의 반응이 나온다.하나는 기술의 효율에 주목하며 적극적인 도입을 지지하는 축, 다른 하나는 인간 통제의 약화에 주목하며 우려를 표한는 축이다. 그리고 실제로 전장은 이 두반응이 이미 충돌하고 있는 현장을 보여준다. 미국-이란 전쟁으로도 표현되는 미 국의 작전인 장대한 분노 작전(Epic Fury)은 후에 밝혀지기로 Palantir사의 Maven시스템을 중심으로 타깃 선정과 타 격을 진행했다. 이때 문제가 된 것은 이러한 팔란티어 AI 데이터 프로세싱 시스템의 처리 과정에서 이란 남부 미납 (Minab)소재 교육 시설이 타격되었으며 미국 측에서는 해당 건물이 군사 시설로 활용된 이력이 있기에 군사시설을 타격하는 과정에서 발생한 사고라고 반박하였다. 이 사실 프레이밍에 있어서 주목해야하는 점은 양측의 주장에서 어 느쪽이 맞는가가 아닌 시스템 내부에서는 아무런 수학적 오류가 없었다라는 사실이다. 시스템의 오류가 아닌 규칙대",
+      "sourceTextSha256": "46d7bed751cfde91db6d7e57e3d67559ae1b79cba17e07d316aba592a167da4f"
+    },
+    {
+      "id": "S14-R002-P001",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "현대사회와 철학 로 작동했고 결과적으로는 민간이 수십명이 사망하는 사고가 발생했다.",
+      "sourceTextSha256": "6124029f8c2ebbbef61285e25860b2b592c2381a6bb58000535a92fe0dfa507d"
+    },
+    {
+      "id": "S14-R002-P002",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "과연 이러한 문제는 기술 자체인가? 아니면 기술이 세계를 인식하는 방식인가?",
+      "sourceTextSha256": "71238d6e05adce54e52e0b48012db5537ccac7e87da132b979c1dade6fbc7135"
+    },
+    {
+      "id": "S14-R002-P003",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "이 질문에 대해 기술 자체가 문제라며 거부하고 막아야한다는 답변은 표면적으로 도덕적인 동기에 의해 인간으로 서 마땅한 행동으로 보이지만 실제로 문제는 해결되지 않는다. 왈저의 저서, “ 정당한 전쟁과 부당한 전쟁”에 따르면 민주주의 공동체가 존망의 위협 앞에서 기술 역량을 포기하는 것에 대해서 분석했다. 기술 역량의 포기는 더 깨끗한 손이 아닌 윤리적 제약이 전무한 세력에게 그 기술의 권력을 넘겨주는 것이며 요나스의 언어로 표현하자면 공포의 원천을 제거하는 것이 아닌 공포를 적에게 이전하는 것이라고 볼 수 있다. 위와 같은 사고오 도덕적 문제로 인해 데 이터 AI 기술을 포기한다면 그 자리는 비어있는 것이 아닌 다른 주체, 특히나 통제할 수 없는 주체에게 넘어가는 오 히려 더 큰 도덕적 공백이 발생할 수 있다.",
+      "sourceTextSha256": "0151c8ad7f6ce2c3553bc7312722102bdf4d7dca994a948a141d44e04ba810e6"
+    },
+    {
+      "id": "S14-R002-P004",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "결국 답은 기술의 수용 여부가 아닌, 기술이 세계를 어떻게 인식하는가를 봐야하며 즉 시스템의 기본으로 들어가 봐야한다. 현재 AI와 데이터가 세상을 이해하는 방식을 알기 위해서는 팔란티어가 가진 온톨로지 시스템에 대한 파 악은 필연적이고 전장의 존재를 어떻게 정의하고 어떤것을 실재로 인정하고 소거하는지 설계 단계의 결정이 만들어 내는 전장의 결과를 철학적 의사결정 과정으로서 바라봐야한다. 왈저의 정의 전쟁론을 기준 삼아 그 도덕적 공백을 진단하며 결과적으로 롤즈의 반성적 평형을 통해 공학과 철학, 그리고 전장에 영향을 끼침으로서 그 사이의 공백을 철학으로 채워야한다라는 핵심 주장과 함께 개선 경로를 수립한다.",
+      "sourceTextSha256": "03fc8d6570318db1a84e02218b0d2b1b299af95d1e3ca2ffd55a1189e1626730"
+    },
+    {
+      "id": "S14-R002-P005",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "1-2. 연구 방법 본 연구는 존 롤즈의 반성적 평형 방법론을 바탕으로 삼는다. 한쪽이 다른 쪽을 일방적으로 제언과 교정을 하는 방식이 아닌 둘이 동시에 바뀌면서 새로운 균형에 도달한다는 점에서 기술과 도덕에 있어서 어 느 한쪽에 치우쳐지지 않는 결과를 기대할 수 있다. 특히나 이 방법론을 이용한다면 정의 전쟁론이라는 도덕 원칙과 AI 타겟팅 시스템이라는 신생 기술이 충 돌중인 현 상황에서 원칙이 사례에 일방적으로 적용된다면 기존 도덕 원칙이 기술의 현실을 담지 못하는 문제가 발생하며 반대로 기술 현실만을 귀납한다면 도덕 기준을 잃기 때문에 반성적 평형이라는 방식을 택했다.",
+      "sourceTextSha256": "1f2ee3a3ae9a7b965b23b2ff145ad4a0a6f1557ba8348b5820a41669c2b0066f"
+    },
+    {
+      "id": "S14-R002-P006",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "추가적으로 본 연구는 반성적 평형을 추상적인 사유로서 끝내는 것이 아닌 데이터 파이프라인 환류(Data pipeline Feedback loop)라는 공학적 구조로 구현함으로서 기술이 보는 세계에 철학적 사고를 대입하는 것을 목표로 삼는다. 구체적 전개는 다음과 같이 총 4개의 단계로 나누었다. 1단계- 도덕 원칙 수립: 콰인의 존재론적 헌신 개념을 Palantir Foundry의 온톨로지 매핑과 결합하여, 데이 터 분류 행위 이면에 작동하는 철학적 권력의 성격을 분석한다.",
+      "sourceTextSha256": "0f8e10b71eaf305796cfb71ca4726fb77b8d4bceee102bb6fb8e02075d7eaab2"
+    },
+    {
+      "id": "S14-R002-P007",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "2단계- 구체적 직관의 거부 반응: 정합성의 함정과 왈저 이론의 알고리즘적 상시화 역설을 통해, 기술적 정합성이 도덕적 정당성을 배반하는 균열 지점을 짚는다.",
+      "sourceTextSha256": "1563850b66f7677fb7b23044a007923cf19e0a0211d3e5e84cebe5eba03585db"
+    },
+    {
+      "id": "S14-R002-P008",
+      "sectionId": "S14-L002",
+      "sourceBlockIds": [
+        "S14-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "3단계- 쌍방향 조정: 오폭이라는 참사를 파이프라인 상단 온톨로지 구조의 역방향 디버깅으로 연결하는 환류를 제안한다. 이 과정에서 원칙도 함께 수정된다 — 왈저의 구별 원칙이 ‘전투원/비전투원 이분법’에 서 ‘실시간 컨텍스트 가중치 기반 다차원 분류’로 정교화되어야 한다는 식으로.",
+      "sourceTextSha256": "15a0a76d3fa5fceaa7ff15aa10102d0c574661115f3836720b8278e24a3d284c"
+    },
+    {
+      "id": "S14-R003-P001",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "현대사회와 철학",
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a"
+    },
+    {
+      "id": "S14-R003-P002",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "4단계- 새로운 균형 도달: 아렌트의 판단력과 요나스의 공포의 발견술을 통해 설계자의 책임을 귀속시키 고, 기술과 철학이 공존하는 균형 상태에 도달한다.",
+      "sourceTextSha256": "10007108f1b2f8d493edb08dd6c5adf94e5572e70ee48c9e8872bbef40d93726"
+    },
+    {
+      "id": "S14-R003-P003",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "2. 본론 2-1. 완벽한 시스템 설계가 만든 윤리적 공백: 미정의된 존재의 존재 공백 콰인의 저서, ‘있는것에 관하여’에서는 존재한다는 것은 구속 변수의 값이 되는 것이다라고 말했다. 어떤 논리 체계 속 변수를 구속하는 규칙을 만드는 행위 자체가 그 시스템 안에서 무엇을 실재(Reality)로 받아들일 것인지를 결정하는 권력행위가 될 수 있다라고도 볼 수 있다. 콰인은 이를 존재론적 헌신이라 불렀다.",
+      "sourceTextSha256": "92a6590897dae4ff90a68aee288ddb7bd6dd7c07d7eb3ca391236c383963f54f"
+    },
+    {
+      "id": "S14-R003-P004",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "그런데 이 논증에서 더 날카로운 함의는 이에 대한 역명제에 있다. 구속 변수의 값이 되지 못하는 것은 그 시스템 안에 존재하지 않는 것과 같다. 이 역명제를 팔란티어 시스템의 기본인 Foundry의 군사 온톨로지에 적용하게 된다 면 전장 AI 윤리 문제의 철학적 핵심이자 윤리적 공백을 찾을 수 있다.",
+      "sourceTextSha256": "938e2113cb6f51fe4cea787a824aa0152f207fdfc83711d66f83a0dff8fdb806"
+    },
+    {
+      "id": "S14-R003-P005",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "팔란티어 파운드리의 온톨로지 매니저 시스템을 보게 된다면 데이터 엔지니어의 역할은 다음과 같다. 전장의 센서 데이터, GPS 트래킹, 통신 로그 같은 로우 데이터를 특정 오브젝트 타입(객체 타입)으로 선언을 해야하며 이들 관계를 LInk 그래프로 이어줄 때 시스템 내부에서 로우 데이터(정의 되지 않은 데이터)를 객체이자 관계로 인식하게된다. 중요한 것은, 이러한 공학적, 데이터적 매핑 작업이 수행하는 권력의 성격인데 전장이라는 실존적인 공간이자 고나 계 속에서 무엇을 인간(비전투원)으로 존재하게 할 것인가를 결정하는 존재론적 입법이 바로 이 매핑 단계에서 이루 어진다는 것이다.",
+      "sourceTextSha256": "e54f9f779d809a163274f9bfcf0a817cd536e8dd8192fbc32076dd51a12ee151"
+    },
+    {
+      "id": "S14-R003-P006",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "윤리적 공백은 이 과정에서 발생하는데 군사 온톨로지 스키마가 비전투원을 독립적인 오브젝트 타입(객체 타입)으 로 명시적으로 선언하지 않고 단순히 위협도 임계값 미달 개체로만 처리할때 아까 언급한 콰인의 역명제에 따르면 시스템의 형식이 만들어낸 공간 안에서 비전투원이라는 존재 범주가 처음부터 존재하지 않게 되는 문제가 발생한다. 선언되지 않은 오브젝트는 실제 전장에는 존재하지만 역설적으로 시스템이 온톨로지를 통해 읽는 세계에는 존재하 지 않는 문제가 발생하게 된다. 이것이 체계적 민간인 피해의 철학적 뿌리이다.",
+      "sourceTextSha256": "b53debea260e11d6eeab1b97806d0b6fca94e3ff5eeb3c764e2da39ca15b5fb4"
+    },
+    {
+      "id": "S14-R003-P007",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "이를 군사 이동 관제 스키마의 개념적 모사로 구체화하면 다음과 같다.(CEF 방식으로 구현)",
+      "sourceTextSha256": "681d8a9dbd4765c626bad737a398002a905c6b4db18428b878887d26d93d98aa"
+    },
+    {
+      "id": "S14-R003-P008",
+      "sectionId": "S14-L003",
+      "sourceBlockIds": [
+        "S14-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "User_ID Location_Type Night_Access_ Network_Logins True_Identity System_Object Count _Mapping USR_001 Zone_A (외곽) 5 72 실제 적대 침입 High_Risk_Obj 자 ect USR_002 Office (행정) 0 12 일반 행정 직원 Standard_User _Object USR_003 School_Zone 4 55 야간 당직 교사 High_Risk_Obj A ect",
+      "sourceTextSha256": "c04db5154ea672ea0d8baa77eca72035b865c68fae48878d072bdd5cb437759f"
+    },
+    {
+      "id": "S14-R004-P001",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "현대사회와 철학",
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a"
+    },
+    {
+      "id": "S14-R004-P002",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "USR_004 School_Zone 3 61 야간 당직 교사 High_Risk_Obj B ect INF_001 School_Zone — — 교육 시설 건물 Unclassified_Str (인프라) ucture",
+      "sourceTextSha256": "3af203093ea0a80777859180dcf3a31a4a210cdf13f4aed8e30f922bdcdbbea9"
+    },
+    {
+      "id": "S14-R004-P003",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "구속 규칙은 [야간 접근 ≥ 3회] AND [네트워크 로그인 ≥ 50회] 시 High_Risk_Object로 자동 구속된다. INF_001이 ‘현재 민간 보호구역’이라는 시계열 컨텍스트 없이 단순 Unclassified_Structure로만 존재할 때, 학교를 지키기 위해 야간에 비상 전산망을 가동한 교사(USR_003, USR_004)는 수학적으로 침입자(USR_001)와 완전히 동일한 위험 변수값으로 매핑된다.",
+      "sourceTextSha256": "d7fc92214cef05247dfce4e9cacc3f13f58ae6e6e871a2482064421878dae8ab"
+    },
+    {
+      "id": "S14-R004-P004",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "이 분석에서 철학적으로 중요한 것은 테이블의 숫자가 아닌 인프라 개체 INF_001에서 ‘지금 현재 민간인이 있다’는 메타데이터가 빠져있다는 것이, 곧 그 건물 안의 사람들이 시스템의 존재론 내에서 처음부터 존재하지 않았음을 의 미한다는 점이다. 과거의 정합성이 현재의 비전투원을 온톨로지 세계에서 지워버린 것이다. 그러므로 온톨로지 설계 자는 단순한 기술자가 아닌 전장 안에서 ‘무엇이 전투원으로 존재하고, 무엇이 민간인으로 존재하는가’를 결정하는 일종의 존재론적 입법자라고 볼 수 있다.",
+      "sourceTextSha256": "28ca3ececd7b787498f2d5e9a71c9cc528b6376b77cfa4442c81e4dd46eb7f49"
+    },
+    {
+      "id": "S14-R004-P005",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "2-2. 정합성의 함정과 예외 논리의 상시화 온톨로지 매핑을 통과한 데이터는 파이프라인 하단의 의사결정 애플리케이션으로 들어간다. 도출된 출력물은 시스 템 내부 규칙들과 일관되므로 시스템 관점에서는 모순 없는 정합적인 상태라고도 볼 수 있다. 그런데 인식론적 정합 주의에 대한 오래된 비판이 여기서 적용되는데 체계 내부의 논리적 무결함이 체계 바깥의 현실의 도덕적 정당성을 보장하지 않는다는 점이다. 이 두층위 사이에서 인과적 단절이 있다. 본 연구는 이처럼 시스템의 기술적 정합성이 현실 세계의 도덕적 오폭 위험을 가리는 현상을 정합성의 함정이라고 부른다.",
+      "sourceTextSha256": "a71ca189be93a40329d0eca0faeb5dd9e9947e1dc79aecb238b256a1abee06cb"
+    },
+    {
+      "id": "S14-R004-P006",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "이 함정에는 두 층위가 있다.",
+      "sourceTextSha256": "8de4fe28d138de139602f63cd0901cf5f3211204ff961724401d18ce4e1c97a3"
+    },
+    {
+      "id": "S14-R004-P007",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "첫 번째 층위는 미납 사건이 드러내는 컨텍스트(맥락) 소거 문제다. 이는 알고리즘이 사람과 같이 양적/질적을 동시에 처리해내지 못함으로서 발생하는데, 수학적인 에러와 프로세싱 과정에서의 문제는 없었지만 결과적으로는 현실세 계의 민간인이 죽었다. 이것은 왈저의 구별의 원칙과의 심각한 문제를 드러낸다. 왈저의 원칙에 따르면 개별 전투원과 비전투원을 실존적으로, 개인화하여 식별할 것을 요구한다. 그런데 알고리즘은 본질적으로 통계적인 확률 모델이 므로 개별 인간의 비전투원 지위라는 일종의 질적인 명령이 위협도 수치라는 양적인 추상값으로 환원되는 과정에서 개별성이 사라진다. 즉, 정합성의 함정이 왈저의 구별원칙을 위반한다고 볼 수 있다.",
+      "sourceTextSha256": "e98de26593ce3918dff65451520b392180e8e4bd495105626d36dead046b16ed"
+    },
+    {
+      "id": "S14-R004-P008",
+      "sectionId": "S14-L004",
+      "sourceBlockIds": [
+        "S14-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "두번째 층위는 왈저가 가정한 극단적 상황과 역설적인 충돌이다. 왈저의 저서에 따르면 민주주의 체제가 전체주의 적 침략으로 존망의 위기를 맞는 극한의 상황에서 전통적인 JIB 기준의 일시적 완화를 허용하는 극단적인 상황을 제 시했다. 흥미로운 점은 예외라는 상황을 가정했다는 것인데 도덕적으로 긴박한 특수 상황에서만 적용되는 일종의 임 시 면책이다.",
+      "sourceTextSha256": "6094f7ee9f2988fce935df34f0565d45bcbe9de390ea6e39844dabc579fed443"
+    },
+    {
+      "id": "S14-R005-P001",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "현대사회와 철학 그런데 AI 기반 타겟팅 알고리즘은 이 예외 논리를 일상 조건으로 내면화한다. 알고리즘의 처리 속도는 의사결정의 항시적 긴박성을 만들어낸다. 결과적으로 왈저가 극한의 예외로만 허용한 도덕적 완화가 알고리즘에 의해 일상적 운 용조건이 될 수 있는데 예외 상태가 상시 상태가 되므로써 예외 논리 자체가 소멸할 수 있다. 기술적 속도가 도덕적 예외를 일상화하게 되면서 정합성의 함정에 빠질 수 있다. 이러한 문제는 그동안 인간인 지휘관과 군인에게 적용되 던 철학적 구조가 이제는 인간과는 처리 속도가 다른 온톨로지화된 기계로서의 규칙이 필요함을 요구한다.",
+      "sourceTextSha256": "83a3d1fc6d611d8a8f5c1e2bd164091892eaadc45009fa08fb361cd019c70344"
+    },
+    {
+      "id": "S14-R005-P002",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "현재 모두 실전 배치된 이스라엘의 Lavender 시스템과 Palantir의 Gotham 시스템을 대조하면 이 두 층위가 구체화된다. 비교 항목 IDF Lavender (2023) Palantir Gotham 표적 생성 방식 통계적 특징 기반 37,000명 대량 객체-관계 기반 CEF 임계값 산출 생성 오탐 허용률 약 10% 민간인 오탐 기계적 승인 CEF 비례성 규칙 통한 오탐 최소 화 지향 구별 원칙 구현 통계적 군집으로 개별성 소멸 CEF 수치화를 통한 조건부 구현 (불완전) Supreme Emergency 상시화 완전 상시화 — 예외가 일상으로 인간 승인 루프(TPL)로 부분 제동 고착 도덕적 위치 예외 논리 전면 상시화의 반면교 필연적 시스템이나 공백 보완 요 사 구",
+      "sourceTextSha256": "67112e988097979023b84130cc1df309b96a5037efdbc986f99756e50c490d65"
+    },
+    {
+      "id": "S14-R005-P003",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "이스라엘의 Lavender 시스템은 Supreme Emergency의 예외 논리가 완전히 상시화된 사례다. 10%의 민간인 오탐률을 기계적으로 허용하며 인간 판단을 고무도장으로 전락시킨 이 시스템은, 예외가 일상이 될 때 도덕 원칙 자체가 증발한다는 사실을 보여주는 반면교사다. Gotham 시스템은 CEF(정규화)와 TPL(인간 승인 루프)을 통해 이 위험을 부 분적으로 막지만, CEF가 통계적 추정값인 한 왈저의 질적 구별 원칙을 완전히 충족할 수는 없다.",
+      "sourceTextSha256": "4a98a45bafed58c6ca0c5f98a02af9c8284e0d97fcde85a8293c60e498d73c14"
+    },
+    {
+      "id": "S14-R005-P004",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "이 불완전성이 방향을 가리킨다. 정합성의 함정은 기술을 버릴 근거가 아니라, 온톨로지 스키마의 다차원적 재설계를 통해 구별 원칙을 더 정교하게 공학화(온톨로지화 - 기계가 인간 세상을 이해 가능하게)해야 한다는 당위성의 철 학적 근거다.",
+      "sourceTextSha256": "421162070cf1c1a5c38437d4c778f754ff393aee24bb89578c8c8ab688af8a0a"
+    },
+    {
+      "id": "S14-R005-P005",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "2-3. 파이프라인 환류 정합성의 함정이 드러낸 도덕적 공백을 메우기 위해, 본 연구는 롤즈의 반성적 평형을 데이터 파이프라인 환류 (Pipeline Feedback Loop)로 구현할 것을 제안한다. 쌍방향 조정의 구체적 아키텍처는 다음과 같다.",
+      "sourceTextSha256": "83c3177a2f112321486adcc56f6c2f43e6725232bb549ccb83c25002be11df54"
+    },
+    {
+      "id": "S14-R005-P006",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "반성적 평형 단계 파이프라인 환류 구조 원칙 수정의 내용",
+      "sourceTextSha256": "bfb8c627d616cf04eef84bbcbbb190f22a0dceba768c665ac33adcbc4e1bc848"
+    },
+    {
+      "id": "S14-R005-P007",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "1. 도덕 직관의 거부 반응 미납 사건 현장 데이터 식별 구별 원칙 이분법적 적용의 한계 인지",
+      "sourceTextSha256": "b32441719e274f19bbefcce3d4d90bf75d66cc60210837720d07b68795b2c57d"
+    },
+    {
+      "id": "S14-R005-P008",
+      "sectionId": "S14-L005",
+      "sourceBlockIds": [
+        "S14-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "2. 상위 원칙 디버깅 파이프라인 역추적 -> 컨텍스트 구별 원칙을 &실시간 다차원 가중",
+      "sourceTextSha256": "c8b7a46bd31002ade5145de24204fa2790f3627b9fcd3e5c5b95349619beb6eb"
+    },
+    {
+      "id": "S14-R006-P001",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "현대사회와 철학",
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a"
+    },
+    {
+      "id": "S14-R006-P002",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "공백 진단 치 기반&으로 재해석",
+      "sourceTextSha256": "9cf71cb33886758fa94f1a954a5c3a62d10d2cd3801110d9c68559db5747e98a"
+    },
+    {
+      "id": "S14-R006-P003",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "3. 온톨로지 재설계 Civilian_Infrastructure 필수 가중 재해석된 원칙이 공학 설계로 구 치 조건 신설 현됨",
+      "sourceTextSha256": "8713111957b5d9bc469b464f2e9cb96e16ba5656442dfabc2db4f68665dccff3"
+    },
+    {
+      "id": "S14-R006-P004",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "4. 새로운 균형 도달 수정 스키마 가동 → 방어력·윤리 반성적 평형의 능동적 달성 성 동시 확보",
+      "sourceTextSha256": "cafa1297f06aff27a8e5cb67a9aca83bb06fc84b4befced2740e99303302ad32"
+    },
+    {
+      "id": "S14-R006-P005",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "이 환류 프로세스가 반성적 평형의 진정한 의미를 실현하는 이유는 일정한 원칙과 규칙이 실질적인 공학설계에 적 용되는 것이 아닌 공학적 한계에 의해 원칙 자체를 피드백하면서 더 정교하게 수정되는 쌍방향 조정이 일어나기 때 문이다. 왈저의 구별 원칙은 이 환류를 통해 전투원/비전투원이라는 이분법에서 현재 다차원의 존재론적 분류로 확 장시킬 수 있다.",
+      "sourceTextSha256": "edd7967ba84874917a4df8472e1298046cb51fac463601be50588f3cdf6f7420"
+    },
+    {
+      "id": "S14-R006-P006",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "이 환류의 추진력에는 한스 요나스의 공포의 발견술을 통해 볼 수 있다. 요나스의 입장에 의하면 기술이 초래할 수 있는 최악의 파멸적 결과를 의도적으로 대면함으로써, 책임의 윤리적 방향을 발견해야한다고 주장했다. 미납 사건의 참혹함을 예외 처리하거나 허용 오탐률 안에 두는 것이 아닌 오히려 기존 파이프라인에 피드백하는 재설계의 동력으로 전환하는 방식을 이용했다.",
+      "sourceTextSha256": "9b48bb9d785478ccb018c13756cb74c27be312684d97435295d574ad6cdf0bae"
+    },
+    {
+      "id": "S14-R006-P007",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "여기서 기술 거부의 문제가 재등장하는데 기술 개발의 포기는 공포의 원천을 제거하지 않는다. 공포로부터 시선을 돌리면서 공포의 원천을 윤리적 제약이 없는 상대나 특히나 우리 사회를 위협할 적에게 이전할 수 있다. 요나스의 책임 원칙은 결과에 대해서 책임을 지라고 요구한다. 기술 거부 역시 그 결과, 즉 기술 공백이 낳는 적대 세력의 기 술 독점으로 발생하는 책임을 피하기 어렵다.",
+      "sourceTextSha256": "da43e26e3a48d9966a8d405e86af5436b3f2f8620657a7d4ca823700db1ed066"
+    },
+    {
+      "id": "S14-R006-P008",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "환류 구조의 철학적 정당성을 완성하려면 마지막으로 한 가지가 남는다. 이 환류를 실제로 설계하고 작동시킬 주체에게 어떤 책임을 귀속시킬 것인지에 대한 문제이다. 여기서 한나 아렌트(Hannah Arendt)의 판단력(Urteilen) 개념이 들어온다.",
+      "sourceTextSha256": "1d780e3c4b44902f5cc623398be7dff19bf28d0e7af5a6398e9bb7c4db4413bb"
+    },
+    {
+      "id": "S14-R006-P009",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "아렌트가 아이히만 재판에서 발견한 것은 잔인한 의도가 아니었다. 판단력(Urteilen)의 소멸이었다. 아렌트는 “칸트 정치철학 강의”에서 판단력을 “개별 사례를 기계적 규칙에 대입하지 않고, 특수성 속에서 보편적 의미를 감각하는 능력”으로 정의했다. 단순히 규칙을 따르는 것과 판단력 사이의 차이는, 개별 사례가 규칙의 적용 대상이 아닌 실존 적 개별성을 가진다는 것을 인식하느냐에 있다라는 것이다.",
+      "sourceTextSha256": "c6bcf7b1331e537171517069be119251b2470f088456773a71b36676f89b6937"
+    },
+    {
+      "id": "S14-R006-P010",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "왈저의 구별 원칙이 요구하는 것이 정확히 이 판단력이다. 개별 전투원과 비전투원이 수치적 추상값이 아닌 실존하는 개별 인간임을 인식하면서 표적을 결정하는 능력. 온톨로지 설계자가 객체타입과 링크 규칙(관계 규칙)을 정의하 면서, 그것이 실존 인간의 생사를 규정하는 행위라는 판단적 감각을 잃는 순간 아렌트가 경고한 악의 평범성이 코드 레벨에서 재현된다. 시스템이 특정 건물을 군사 표적으로 분류하게 된다면 그 안에 있는 개개인들은 시스템의 온톨 로지의 세계에서는 소거된다. 이는 아이히만이 이송 명령서에 서명한 것과 구조적으로는 같다고 볼 수 있다.",
+      "sourceTextSha256": "f68f2001b7510bd3c86bfed04467969bbdfa1ed236c791c2695062b87af5e30d"
+    },
+    {
+      "id": "S14-R006-P011",
+      "sectionId": "S14-L006",
+      "sourceBlockIds": [
+        "S14-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "온톨로지 설계자에게는 명확한 책임이 귀속되어야한다. 자신이 선언하는 객체 타입이 실제 전장에 영향을 미치는 존",
+      "sourceTextSha256": "e409b7d1aca9d1e0c76cfc9cfe296d09ac36e00a0565e3fb07370185ba6236fc"
+    },
+    {
+      "id": "S14-R007-P001",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "현대사회와 철학 재론적인 입법 행위라는 것, 자신이 부여하는 링크(관계) 규칙이 생명과 지성이 있는 개개인의 지위를 시스템 안에서 실재와 소거를 할 수 있는 살상부라는 것을 직시해야한다. 파이프라인 환류는 이 판단력을 알고리즘화 한 형태로 오 폭 사건을 통계적 허용 오탐률로 치부하는 것이 아닌 온톨로지 재설계의 동력으로 삼는 환류 체계이자 아렌트의 판 단력이 데이터 공학으로 내재시켰다고 볼 수 있다.",
+      "sourceTextSha256": "44ff4eb0934ce08b452968a8f697dfec365cfd23c723317722193e612333ea49"
+    },
+    {
+      "id": "S14-R007-P002",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "3. 결론 3-1. 본론 요약 밑 제언 본 연구는 세 단계의 분석을 통해 현대 전장 AI 시스템의 도덕적 공백이 어디서 발생하고, 어떻게 극복되어야 하는 지를 논증하였다. 본론 1번 에서는 콰인의 존재론적 헌신 개념을 통해 온톨로지 매핑이 단순한 데이터 분류가 아닌 철학적 입법 행위임을 밝혔다. 시스템 안에 코드되지 않은 것은 존재하지 않는 것과 같으며, 비전투원이 독립적 객 체타입으로 선언되지 않을 때 민간인 피해는 기술적 오류가 아닌 설계의 구조적 귀결이 된다. 본론 2번에서는 정합 성의 함정을 두 층위로 규명하였다. 시스템 내부의 논리적 무결함이 현실의 도덕적 정당성을 보장하지 않으며, 나아가 왈저의 극단적 상황 예외 논리가 알고리즘에 의해 상시화됨으로써 도덕 기준 완화가 일상으로 고착된다는 점을 비판하였다. 본론 3번에서는 롤즈의 반성적 평형을 파이프라인 환류로 구현하고, 요나스의 공포의 발견술과 아렌트의 판단력 개념을 통해 설계자의 책임 귀속을 정당화하였다.",
+      "sourceTextSha256": "e471f45c88518d22b3ba8673ed95ba6bdc5d9b29ed461ba2d04311d29f3339d2"
+    },
+    {
+      "id": "S14-R007-P003",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "이상의 분석을 바탕으로 본 연구는 다음과 같은 방향을 제시한다.",
+      "sourceTextSha256": "9dcea08972629a35011d6ef13f8857dbb562ddf27e0564945907e2843bf9892b"
+    },
+    {
+      "id": "S14-R007-P004",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "첫째, 온톨로지 설계 단계에서 비전투원(Non-Combatant)을 독립적 객체 타입으로 명시적으로 선언하고, 현재 시점의 민간 컨텍스트를 실시간 가중치로 반영하는 다차원 스키마를 의무화해야 한다. 코드에 없는 것은 존재하지 않는다는 콰인의 역명제는, 비전투원 보호가 설계의 출발점에서부터 구현되어야 함을 요청한다.",
+      "sourceTextSha256": "967485894b5d44d6c57259f8031551a6128f3a02213a64aac70b41001608db06"
+    },
+    {
+      "id": "S14-R007-P005",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "둘째, 알고리즘의 처리 속도가 생성하는 항시적 긴박성으로부터 인간 판단 개입 구조를 제도적으로 보호해야 한다. 극단적 상황은 예외일 때만 도덕적 의미를 가지며, 이를 일상으로 고착시키는 자율화 크리프에 제동을 걸 수 있는 인간 승인 루프의 강화가 필요하다.",
+      "sourceTextSha256": "a622d58966620e0616f55c099694615f454979e13bcf8bfb498de1f607938d61"
+    },
+    {
+      "id": "S14-R007-P006",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "셋째, 오폭 사건을 통계적 허용 오탐률로 기각하지 않고 온톨로지 재설계의 직접적 동력으로 삼는 파이프라인 환류를 제도화해야 하며, 이 환류를 설계하고 실행하는 주체에게 법적·윤리적 책임을 명시적으로 귀속시켜야 한다. 설계 자는 자신이 전장의 존재론적 입법자임을 판단력으로 자각해야 한다.",
+      "sourceTextSha256": "57e87d582bc697795e18fd12c0302d7c8277529c480eb02f9cd0d9f7bac26cbc"
+    },
+    {
+      "id": "S14-R007-P007",
+      "sectionId": "S14-L007",
+      "sourceBlockIds": [
+        "S14-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "3-2. 정의로운 데이터를 향해서",
+      "sourceTextSha256": "06c74f8fe2f90c885c0942476bbf90d87c20dbe68f15f6f77ab8b9a82a2fc1e1"
+    },
+    {
+      "id": "S14-R008-P001",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "현대사회와 철학 정의로운 전쟁은 정의로운 데이터를 전제하는가? 이 질문에 대한 본 연구의 답변은 조건부 긍정이다. 현대 전장에 서 정의로운 전쟁의 가능성은 기술 역량의 포기가 아니라, 기술이 세계를 인식하는 방식, 즉 온톨로지의 설계가 얼 마나 도덕적으로 정교하게 설계되는가에 달려 있다.",
+      "sourceTextSha256": "311349e65e9db8ae347259da3e3fd384687e145b8c7fa58a5da5f904da051aa7"
+    },
+    {
+      "id": "S14-R008-P002",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "콰인의 역명제가 보여준 것은 단순하지만 무겁다. 온톨로지에 전사되지 않은 것은 시스템안에서 존재하지 않게되면 서 현실에 영향을 줄 수 있는 무기와 판단을 하는 시스템이 현실에 존재하지만 존재하지 않는 것으로 인식해버리게 된다는 것이다. 만약 비전투원이 객체 타입으로 선언되지 않는다면 비전투원의 보호라는 것은 애초에 온톨로지가 인 식한 세계 속에는 존재하지 않게된다는 것이다. 정합성의 함정은 이 설계 공백이 시스템 내적 무결함이라는 안일함으로 이어질때 발생한다.",
+      "sourceTextSha256": "b50d725ee2293ad0c8eb54708ae18cc919d5c30464bfaaa22a224fdb543841af"
+    },
+    {
+      "id": "S14-R008-P003",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "왈저가 극단적 상황에 대해 말한 것 또한 기술 포기가 도덕적으로 더 위험한 선택임을 뒷받침한다. 우리 사회와 민 주주의 체제의 존망이 위협받는 현실에서 기술 역량의 포기라는 것은 윤리적인 결벽이 아닌 방임이 될 수 있다. 그 러나 동시에 이러한 예외라는 논리가 컴퓨터와 시스템이 이해하는 알고리즘에 의해 상시화되는 역설, 정합성의 함정의 문제점 중 하나를 만들어낸다. 이 역설을 극복하는 길은 기술 개발 중지나 기술 폐기가 아닌 알고리즘의 속도 논 리로 부터 인간 판단 개입 구조를 체계적으로 보호하는 설계 원칙을 강화라고 생각한다.",
+      "sourceTextSha256": "5be4b37ff7afde57f7ddfe4cafb09060855d7f3ea0ba9d73183d9ad7abc90054"
+    },
+    {
+      "id": "S14-R008-P004",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "롤즈의 반성적 평형을 파이프라인 환류로 구현하고, 요나스의 공포의 발견술을 통해 참사를 재설계의 동력으로 전 환하며, 아렌트의 판단력을 온톨로지 설계, 즉 시스템과 알고리즘이 이해하고 보는 세상에 도덕과 철학이라는 인간 만의 것을 개입할때 비로소 ’정의로운 데이터(Just Data)’라는 것의 첫단계가 이루어진다고 생각한다. 이는 데이터 품 질의 문제가 아닌 시스템의 세계 안에서 비전투원과 다양한 객체들의 개별성이 보장되는 올바른 온톨로지 설계 원 칙이다.",
+      "sourceTextSha256": "a9fc506a8b3a3aa70e221741e2a82dedc76fc4d709e76f112b26b9da9ff3756b"
+    },
+    {
+      "id": "S14-R008-P005",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "팔란티어CEO 알렉스카프는 그의 저서인 기술공화국 선언에서 기술 기업이 서방 민주주의의 능동적 안보 파트너가 되어야 한다고 주장했다. 그러나 그 파트너십은 표적 처리 속도를 높이는 것만으로 완성되지 않는다. 민주주의가 수 호하고자 하는 그 본질인 인간 그자체으 생명의 가치를 코드 레벨에서 보장하는 두 책임이 동시에 이행될 때만 기 술과 민주주의의 파트너십은 진정한 의미를 가진다. 이것은 시스템을 설계하는 엔지니어의 과제인 동시에, 어떤 시 스템을 도입하고 어떤 기준으로 운용할지를 결정하는 자리에 있는 모든 사람의 과제다.",
+      "sourceTextSha256": "0136c29c7c74d87f94a74c174d0287a9f10ad7fcafa9e5cea97b00ce5bc37ab5"
+    },
+    {
+      "id": "S14-R008-P006",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "설계자는 코드 뒤에 숨을 수 없다. 온톨로지 안에서 무엇이 존재하고 무엇이 지워지는가를 결정하는 존재론적 입법 자로서, 자신의 객체 타입 선언이 실존 인간의 생사를 결정하는 행위임을 판단력으로 직시해야 한다. 그 직시와 자 각, 그리고 파이프라인 환류의 제도화가 명확한 도덕적 판단 속에 이루어질때 이것이 정의로운 전쟁이 정의로운 데 이터를 전제하는 방식이라고 생각한다.",
+      "sourceTextSha256": "793f87a96bce309f5e99cf84ed34812ac43df966ed8083d2464ae7b9b8521d6f"
+    },
+    {
+      "id": "S14-R008-P007",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "[참고문헌] 왈저, M. (2019). 『정의전쟁론』 (조기숙 역). 한길사. (원전: Walzer, M. (2006). Just and unjust wars, 4th ed.)",
+      "sourceTextSha256": "be344f31e9811d676578d414e9a7e13e6905d55e0e27875be8b4289104ee3f56"
+    },
+    {
+      "id": "S14-R008-P008",
+      "sectionId": "S14-L008",
+      "sourceBlockIds": [
+        "S14-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "롤즈, J. (2003). 『정의론』 (황경식 역). 이학사. (원전: Rawls, J. (1971). A theory of justice.)",
+      "sourceTextSha256": "6155cbbdb8ee48e2b2b53dea9b44f320207e5abafa521d25b67782bd6cb65b08"
+    },
+    {
+      "id": "S14-R009-P001",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "현대사회와 철학",
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a"
+    },
+    {
+      "id": "S14-R009-P002",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "아렌트, H. (2006). 『예루살렘의 아이히만』 (최홍 역). 한길사. (원전: Arendt, H. (1963). Eichmann in Jerusalem.)",
+      "sourceTextSha256": "422a13d3ec80b01cad2c155605bdf3899de183edea478074d0e37e68a8ba83e6"
+    },
+    {
+      "id": "S14-R009-P003",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "아렌트, H. (2000). 『칸트 정치철학 강의』 (김선욱 역). 푸른숲. (원전: Arendt, H. (1982). Lectures on Kant’s political philosophy.)",
+      "sourceTextSha256": "2b2aad400048a83cdd7e444a4b96d598dc6c945f61fcd1fff8eaf1917bf946f2"
+    },
+    {
+      "id": "S14-R009-P004",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "요나스, H. (2010). 『책임의 원칙』 (이진우 역). 문학과지성사. (원전: Jonas, H. (1979). Das Prinzip Verantwortung.)",
+      "sourceTextSha256": "1b82086a790cef2e18db7eaf1ff2dcc40a7fa5bdd8a43496d68da12e9f74550d"
+    },
+    {
+      "id": "S14-R009-P005",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Quine, W. V. O. (1948). On what there is. Review of Metaphysics, 2(1), 21– 38.",
+      "sourceTextSha256": "b1a185826b20d11af9dd8c7783d152fe4bb69ef7aded617c5e35ed9f959d0a96"
+    },
+    {
+      "id": "S14-R009-P006",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Quine, W. V. O. (1961). From a logical point of view (2nd ed.). Harvard University Press.",
+      "sourceTextSha256": "e6f7b417b3a4546c45ca9e21f2f2daea1cbbee0611d8bfb1fc4eb25b5705e4ff"
+    },
+    {
+      "id": "S14-R009-P007",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Rawls, J. (1971). A theory of justice. Harvard University Press.",
+      "sourceTextSha256": "ea758d221eb410fd4412bd6fcb17ca5817a7acb48e1c6a13ce2ed99e840206fe"
+    },
+    {
+      "id": "S14-R009-P008",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Walzer, M. (2006). Just and unjust wars: A moral argument with historical illustrations (4th ed.). Basic Books.",
+      "sourceTextSha256": "5c6868dd8a3eadbf0a3f89687f485b6d81d947f95ba65ceac1e45563b5e54322"
+    },
+    {
+      "id": "S14-R009-P009",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Walzer, M. (2004). Arguing about war. Yale University Press.",
+      "sourceTextSha256": "11aa9a4e56d861ecace31792e9501051ab07f05824f1d0a07ca26ee4f22bbfb4"
+    },
+    {
+      "id": "S14-R009-P010",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Arendt, H. (1982). Lectures on Kant’s political philosophy (R. Beiner, Ed.). University of Chicago Press.",
+      "sourceTextSha256": "65749f1c39e969667f8b46c65b159bb7254b8bb41f4b71f3e1ad17cd72087695"
+    },
+    {
+      "id": "S14-R009-P011",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Jonas, H. (1984). The imperative of responsibility: In search of an ethics for the technological age. University of Chicago Press.",
+      "sourceTextSha256": "0e3db4eeae68fcb2e598b1a643a2105246f2de8bb5c89f3bbd1e2f2c8df6ff8d"
+    },
+    {
+      "id": "S14-R009-P012",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Karp, A. (2025). The technological republic: Hard power, soft belief, and the future of the West. Crown.",
+      "sourceTextSha256": "c416d28079fa483aff2ab7d9fcf335e36b3b0fd717700a408a64241983c4b86f"
+    },
+    {
+      "id": "S14-R009-P013",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "철학 사전 및 학술 자료",
+      "sourceTextSha256": "57e2a6f231fd6f1e09819314d85108be85f49ea8ce5b5b6b30ef91f462bfb3d6"
+    },
+    {
+      "id": "S14-R009-P014",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Stanford Encyclopedia of Philosophy. (2023). Ontological commitment. https://plato.stanford.edu/entries/ontological-commitment/",
+      "sourceTextSha256": "3ad6b076534bbcea98354033b31440431aba1cc6386061cf8862bddb6ae98788"
+    },
+    {
+      "id": "S14-R009-P015",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Stanford Encyclopedia of Philosophy. (2023). Reflective equilibrium. https://plato.stanford.edu/entries/reflective-equilibrium/",
+      "sourceTextSha256": "5af9776a357b6dda7b96d02764c718691eb74438f885f39ef04d520d0e06dd31"
+    },
+    {
+      "id": "S14-R009-P016",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Stanford Encyclopedia of Philosophy. (2016). War. https://plato.stanford.edu/entries/war/",
+      "sourceTextSha256": "baaf6dedd789bd83db1f8126b1c9f10d3ce6054f448cf3708887868baf57bdbe"
+    },
+    {
+      "id": "S14-R009-P017",
+      "sectionId": "S14-L009",
+      "sourceBlockIds": [
+        "S14-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "Lazar, S. (2017). Evaluating the revisionist critique of just war theory. Daedalus, 146(1), 113– 124. https://doi.org/10.1162/DAED_a_00426",
+      "sourceTextSha256": "4a36d581621a83c8e2158b49ed0e6d0ea0b9296d460944601b20e7cca3fd8f1c"
+    },
+    {
+      "id": "S14-R010-P001",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "현대사회와 철학",
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a"
+    },
+    {
+      "id": "S14-R010-P002",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Primoratz, I. (2002). Michael Walzer’s just war theory: Some issues of responsibility. Ethical Theory and Moral Practice, 5(3), 221– 243.",
+      "sourceTextSha256": "6fdf522da05aa1d7b6c19e6ee14246dd408847b1c58bdbe32a243ee850b7350c"
+    },
+    {
+      "id": "S14-R010-P003",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Boogaard, J. van den. (2023). Human/machine(-learning) interactions, human agency and the IHL proportionality standard. Journal of Conflict and Security Law, 28(1), 100– 121.",
+      "sourceTextSha256": "c76aafed1cc02fb096249a2dee73c4ec9d7d1b99b271a51773839587ff720979"
+    },
+    {
+      "id": "S14-R010-P004",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Asaro, P. (2012). On banning autonomous weapon systems: Human rights, automation, and the dehumanization of lethal decision-making. International Review of the Red Cross, 94(886), 687– 709.",
+      "sourceTextSha256": "127960ead9f5f183361dca86c2ede720b1a6b13fae4b8f60018a74720ebc1486"
+    },
+    {
+      "id": "S14-R010-P005",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "기술 문서 및 기업 자료",
+      "sourceTextSha256": "84ed7844d64acdc82a4a07c4b644d533ce49bf0dce088bfa9fcdb6515d1d7ae5"
+    },
+    {
+      "id": "S14-R010-P006",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Palantir Technologies UK Ltd. (2024). Palantir platform: Gotham service definition document [Government Digital Marketplace]. https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/92736/801146272055049-service-definition-document-2024-11-26-1253.pdf",
+      "sourceTextSha256": "57dbba2b73601c987dfcdd7bc51b8c90b61ec670c0440d8d7f716cd73b04972a"
+    },
+    {
+      "id": "S14-R010-P007",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Wang, Y., Li, X., & Liu, K. (2024). A brief analysis of Palantir Gotham. In 2024 10th International Conference on BigDIA (pp. 770– 776). IEEE.",
+      "sourceTextSha256": "71b818893490fdde1960bf8a40698ec7cacd71ccc1b6adc3bd2cb7aced8250eb"
+    },
+    {
+      "id": "S14-R010-P008",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "언론 및 싱크탱크",
+      "sourceTextSha256": "5cd2abfdc42c0acdc20a2ba4d9e8f552e5b50e1fd143bcac5eab5e2a8c91e660"
+    },
+    {
+      "id": "S14-R010-P009",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Breaking Defense. (2026, May 12). ‘Insatiable appetite’ for AI: Maven usage surged for strikes on Iran. https://breakingdefense.com/2026/05/insatiable-appetite-for-ai-maven-usage-surged-for-strikes-on-iran-pentagon-ai-chief-says/",
+      "sourceTextSha256": "357240817109cfab2b739c80c4ebf8b8b909e06dacf6e09befdaccb110b3061f"
+    },
+    {
+      "id": "S14-R010-P010",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Arms Control Association. (2026, May). AI plays major role in the war on Iran. https://www.armscontrol.org/act/2026-05/news/ai-plays-major-role-war-iran",
+      "sourceTextSha256": "dd107e0d5e65fc73655b1ca442b04661884dd77e3a72ca38b034d25c9f40a145"
+    },
+    {
+      "id": "S14-R010-P011",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Geo.tv. (2026, April 5). Operation Epic Fury uses AI battlefield management to hit hundreds of targets in hours. https://www.geo.tv/latest/658582",
+      "sourceTextSha256": "2d5feff395fa865cbf277e71caf5762b91c96e78be113324a68f4145bf3d5544"
+    },
+    {
+      "id": "S14-R010-P012",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "Military Times. (2026, March 24). Deadly Iran school strike casts shadow over Pentagon’s AI targeting push. https://www.militarytimes.com/news/your-military/2026/03/24/deadly-iran-school-strike-casts-shadow-over-pentagons-ai-targeting-push/",
+      "sourceTextSha256": "5956ef3abd6ec7b7a4ba5e4acc1233abb5cadc2b09bd24784146561a0bf0b5d9"
+    },
+    {
+      "id": "S14-R010-P013",
+      "sectionId": "S14-L010",
+      "sourceBlockIds": [
+        "S14-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "+972 Magazine. (2024, April). ‘Lavender’: The AI machine directing Israel’s bombing spree in Gaza.",
+      "sourceTextSha256": "c6fdc10021af65a88231a23a0586a687b287ce2a6bc29275ee56815fb1609dda"
+    },
+    {
+      "id": "S14-R011-P001",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "현대사회와 철학 https://www.972mag.com/lavender-ai-israeli-army-gaza/",
+      "sourceTextSha256": "79ba596268de8d3f6352657ce706e39931124f765ecdb49905955768e77d14c2"
+    },
+    {
+      "id": "S14-R011-P002",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "Business & Human Rights Resource Centre. (2024). Palantir allegedly enables Israel’s AI targeting in Gaza. https://www.business-humanrights.org/en/latest-news/palantir-allegedly-enables-israels-ai-targeting-amid-israels-war-in-gaza-raising-concerns-over-war-crimes/",
+      "sourceTextSha256": "21a87ce372b41e3740b37e48ba04fcea0bdb5cee983d47195354c141a3f2b7f4"
+    },
+    {
+      "id": "S14-R011-P003",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "IDSA. (2026, April 17). The first AI war: The dilemma of military autonomy. https://idsa.in/publisher/comments/the-first-ai-war-the-dilemma-of-military-autonomy",
+      "sourceTextSha256": "3237c6062202a244aa6d3d50ca538587248bcaa3b85355a8c617a468dd15aa12"
+    },
+    {
+      "id": "S14-R011-P004",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "Lieber Institute West Point. (2025, August 18). Artificial intelligence in armed conflict: The current state of international law. https://lieber.westpoint.edu/artificial-intelligence-armed-conflict-current-state-international-law/",
+      "sourceTextSha256": "d6fd73079ed30ebf477b96b6aec3366c7f2aa5920f22e023535fae14530cad72"
+    },
+    {
+      "id": "S14-R011-P005",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "국제기구",
+      "sourceTextSha256": "c181d38ca005c67bf99e736ce2b0c6c5aca60061e1f67098d950158fa79b964f"
+    },
+    {
+      "id": "S14-R011-P006",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "UN General Assembly. (2024). Resolution 79/239: Artificial intelligence in the military domain [A/RES/79/239]. United Nations.",
+      "sourceTextSha256": "12149680f582f3a20eb75d8a3435f93bc711b4a1d088f939f6e4cea8c9621e64"
+    },
+    {
+      "id": "S14-R011-P007",
+      "sectionId": "S14-L011",
+      "sourceBlockIds": [
+        "S14-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "ICRC Humanitarian Law & Policy Blog. (2024, April 25). The road less travelled: Ethics in the international regulatory debate on autonomous weapon systems. https://blogs.icrc.org/law-and-policy/2024/04/25/",
+      "sourceTextSha256": "66eb7023e094b6b8bb89cd11aec1cff03234d4233499f0c8cd8277b582eb243b"
+    }
+  ]
+}

@@ -1,0 +1,1086 @@
+{
+  "reportId": "S05",
+  "revision": "reading-002",
+  "editing": "layout-only",
+  "translationStatus": "pending",
+  "paragraphs": [
+    {
+      "id": "S05-R001-P001",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P001"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "세계시민교육",
+      "sourceTextSha256": "76762363dc01001226dfa2b9437618112e222fd6827e67e76c363e7e1506211a"
+    },
+    {
+      "id": "S05-R001-P002",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P002"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "2025학년도 개별 보고서",
+      "sourceTextSha256": "d1a63c9024a31d8d6d35ec08a931a94cf50cc880b092ea89de7f044a1fda5ada"
+    },
+    {
+      "id": "S05-R001-P003",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P003"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[학급 정보 비공개], [비공개] (글로벌이슈부)",
+      "sourceTextSha256": "f68964c016cded404a590520cceae9d802912bcfb6b7c765efd08f0c07b131ea"
+    },
+    {
+      "id": "S05-R001-P004",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "기술, 화폐, 그리고 불평등: 한국 경제 신뢰도 위기와 스테이블 코인의 정책의 함의",
+      "sourceTextSha256": "d857faa9498eb0280cc75710b8e07d439baceee55d097fcadddf9bc75eeb839d"
+    },
+    {
+      "id": "S05-R001-P005",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P005"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[부장]",
+      "sourceTextSha256": "cb0a5f6a3b4c06d48239fffadc6731047688e481a1c4562125c6c3cbe68008b1"
+    },
+    {
+      "id": "S05-R001-P006",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P006"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개] [비공개]",
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765"
+    },
+    {
+      "id": "S05-R001-P007",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P007"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개] [비공개]",
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765"
+    },
+    {
+      "id": "S05-R001-P008",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P008"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개] [비공개]",
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765"
+    },
+    {
+      "id": "S05-R001-P009",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개] [비공개]",
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765"
+    },
+    {
+      "id": "S05-R001-P010",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P010"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개]",
+      "sourceTextSha256": "0ed1487ff11237a0db4fa3a8518ccf150f6abedc53273e05e337b3b7d2087641"
+    },
+    {
+      "id": "S05-R001-P011",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P011"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개]",
+      "sourceTextSha256": "0ed1487ff11237a0db4fa3a8518ccf150f6abedc53273e05e337b3b7d2087641"
+    },
+    {
+      "id": "S05-R001-P012",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P012"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "[비공개]",
+      "sourceTextSha256": "0ed1487ff11237a0db4fa3a8518ccf150f6abedc53273e05e337b3b7d2087641"
+    },
+    {
+      "id": "S05-R001-P013",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P013"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Embrace the World",
+      "sourceTextSha256": "e3dd0ab1b0d075a100c4727e1251960a7a6cf47de2351102ca577b7b0391c397"
+    },
+    {
+      "id": "S05-R001-P014",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P014"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Expand Your Dream",
+      "sourceTextSha256": "85c606b133a0b7eb57ded2183e75d204eb7a02d35e606abadac1534a1fc58e1a"
+    },
+    {
+      "id": "S05-R001-P015",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P015"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "2025학년도 2학년 세계시민교육 활동 보고서 개요",
+      "sourceTextSha256": "9fd9c1e96cf61754db2001eb2691d8ba7d62775271cf8a2bc65aa7f11f722137"
+    },
+    {
+      "id": "S05-R001-P016",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P016"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "해결하고자 하는 사회 문제",
+      "sourceTextSha256": "c7724ec3d52a6370e2d4094a07685a477fd8cc4031c09cc29ae46b322051af85"
+    },
+    {
+      "id": "S05-R001-P017",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P017"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "기술, 화폐, 그리고 불평등: 한국 경제 신뢰도 위기와 스테이블 코인의 정책의 함의",
+      "sourceTextSha256": "d857faa9498eb0280cc75710b8e07d439baceee55d097fcadddf9bc75eeb839d"
+    },
+    {
+      "id": "S05-R001-P018",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P018"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "선정 이유",
+      "sourceTextSha256": "34595f65bcae55c3590a8ec8ea5717aefcc5a455b50c4704e28a65c273d875d6"
+    },
+    {
+      "id": "S05-R001-P019",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P019"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "(탐구 동기)",
+      "sourceTextSha256": "31d237bdbed67785d3cdffb5fe2278ce181332b77f95374aa7ff076e71f1b2f4"
+    },
+    {
+      "id": "S05-R001-P020",
+      "sectionId": "S05-L001",
+      "sourceBlockIds": [
+        "S05-L001-P020"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "-최근 대한민국의 경제적 위기를 체감함 -달러 지수와 가치의 하락에도 상승하는 환율과 부자 유출 통계를 본것은 대한민국에서 위기를 느껴야한다고 생각을 하였고 이를 필자의 진로인 기술경영과 연관지어 서술함.",
+      "sourceTextSha256": "c9695d37c8c845015ff6696228481a1ad23cf551ed456b40d15e4bc7aa8332ad"
+    },
+    {
+      "id": "S05-R002-P001",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P001"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "문제 해결과 관련한 지속가능 발전 목표 및 세부목표",
+      "sourceTextSha256": "ebc2efe0e47a86f8d5744f325888bb86faaf62858203de79ab0fcc596ea21cbe"
+    },
+    {
+      "id": "S05-R002-P002",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P002"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "10. 불평등 감소 - 국가 내 및 국가 간 불평등 해소",
+      "sourceTextSha256": "df7bc06af8bbd8897c0b0100908d2cb2e58b238277746d694fa2de711c14f21b"
+    },
+    {
+      "id": "S05-R002-P003",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P003"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "10.5. 금융 불평등",
+      "sourceTextSha256": "d064c507eaa4d7194be28dda7f09fd3101853658e3681905344bcbc159b0c326"
+    },
+    {
+      "id": "S05-R002-P004",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "운영 방향 및 효과",
+      "sourceTextSha256": "c0d018c2ac8dfe6fe8534dcfa5ab1c114dfc6f68636d225e914ae113e6581fe4"
+    },
+    {
+      "id": "S05-R002-P005",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P005"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "뒷받침 이론/개념",
+      "sourceTextSha256": "084565ed9968dd546ff3bc978ecd6ad439167d1fa9d6c8330b975f602cea9ca6"
+    },
+    {
+      "id": "S05-R002-P006",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P006"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "대리인 이론 (Agency Theory) (Jensen & Meckling, 1976)",
+      "sourceTextSha256": "0c27dd88e3a852782d17ae27a0c7009812f5a96e351d858ca4f918490f10f154"
+    },
+    {
+      "id": "S05-R002-P007",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P007"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "주인(국가 및 국민)과 대리인(기업 경영자 또는 기술기업) 간의 이익 충돌과 위험을 설명하며, 금융 시스템에서 기업과 정부 간 신뢰 문제를 이해하는 데 활용됨.",
+      "sourceTextSha256": "617a338d7adfc848e1084afd628414118d5e9b64a75e87295b0c61f0c45010a2"
+    },
+    {
+      "id": "S05-R002-P008",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P008"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "세시교 준비 과정에서 자신이 학습한 내용이 있다면 서술할 것",
+      "sourceTextSha256": "46cbbb7be6386b9f63f86f22da2999b0a8a7f1c9703661d79f94567d8e31602f"
+    },
+    {
+      "id": "S05-R002-P009",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "(없을 경우, 공란)",
+      "sourceTextSha256": "467e4308bd6abcd637d11b2d1981a527c8fbd9a160e13ffc56bbd65c657eed87"
+    },
+    {
+      "id": "S05-R002-P010",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P010"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "활동 과정에서 성장시킨 개인의 역량 혹은 느낀점",
+      "sourceTextSha256": "b5125c8b986500dc52764c382f0312072c953d46c1fb872342070f68ccd96555"
+    },
+    {
+      "id": "S05-R002-P011",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P011"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "(공동체 역량, 자기주도성 역량, 정보 역량, 문제 해결 역량 등이 드러나게끔 구체적인 노력이나 행동을 기술할 것)",
+      "sourceTextSha256": "c6bd2c392ef83385f8fa40034ac1dac486e7af23139ee7253d187a9341ba0447"
+    },
+    {
+      "id": "S05-R002-P012",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P012"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "세시교 활동 결과에 대한 평가",
+      "sourceTextSha256": "58e1401ca310fc4e4c54bfc8c6cf4125958253831b2921b4c55dc10ebdc5264c"
+    },
+    {
+      "id": "S05-R002-P013",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P013"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "(활동 결과 등에 대해 덧붙이고 싶은 의견이나 평가를 서술할 것)",
+      "sourceTextSha256": "296473e250c81f4076460b3292c26af37b5ab35eaab005c5f20bd822dbd250e2"
+    },
+    {
+      "id": "S05-R002-P014",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P014"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "그 외, 적고 싶은 점이 있다면 서술",
+      "sourceTextSha256": "cc6b2c0f0358288205b14fd4129a9357cb3855f914652f8b467f58a6bb3a3260"
+    },
+    {
+      "id": "S05-R002-P015",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P015"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "(없을 경우, 공란)",
+      "sourceTextSha256": "467e4308bd6abcd637d11b2d1981a527c8fbd9a160e13ffc56bbd65c657eed87"
+    },
+    {
+      "id": "S05-R002-P016",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P016"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "경제와 경영을 최대한 엮어보았습니다. 또한 잘 사용하지 않던 우리나라와의 연관성, 그리고 각광 받고 있는 원화 스테이블 코인에 대한 강한 비판을 넣은 만큼 비판적인 시각과 기술 경영을 넘어 거시적으로 바라보는 부분을 중점으로 봐주세요.",
+      "sourceTextSha256": "860d0c5d56c4c3190c2da489c4f09401e7b55e088603595591cd0f9d38cab3ee"
+    },
+    {
+      "id": "S05-R002-P017",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P017"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "보고서 초록",
+      "sourceTextSha256": "99ff28a571c98e486d470404311ab2343743b9d5b06c2b022bdc80d613c29382"
+    },
+    {
+      "id": "S05-R002-P018",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P018"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "(키워드 중심으로 보고서 내용 요약)",
+      "sourceTextSha256": "fe0aefd363ccd31ac51b2acb0f1c9a71e83e508aec25fb104cfcd1b3b12c7272"
+    },
+    {
+      "id": "S05-R002-P019",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P019"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "본 보고서는 2022년부터 2025년까지 한국에서 급증하는 부자유출과 원화 가치 하락, 코스피 버블 현상이 국가 금융 신뢰도의 붕괴와 어떻게 연결되었는지 분석한다. 이러한 경제 위기가 심화시키는 불평등의 메커니즘을 주요 계층별 자산 및 소득 격차와 연결하여 규명하며, 미국의 테더(USDT)와 팔란티어(Foundry) 사례를 통해 민간 기술 기업이 국가 통화 시스템을 대체하는 과정을 살펴본다. 또한, 국내 원화 스테이블 코인의 구조적 한계와 위험성을 진단하며, 기업과 정부가 협력하여 국가 신뢰도를 회복하고, 경제 불평등 문제를 해결하는 방안을 제언한다. 본 연구는 기술경영과 금융정책의 융합 분석을 통해 한국 경제가 당면한 복합적 위기와 해결책을 다각적으로 조명하는 데 기여한다.",
+      "sourceTextSha256": "33b39ae2359ff465fe1551b6d42ebaadb7e951dd10b3269d91c026dcc9c783fd"
+    },
+    {
+      "id": "S05-R002-P020",
+      "sectionId": "S05-L002",
+      "sourceBlockIds": [
+        "S05-L002-P020"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "< 기술, 화폐, 그리고 불평등: 한국 경제 신뢰도 위기와 스테이블 코인의 정책의 함의>",
+      "sourceTextSha256": "4c8d6d58206108183250a2fce7adb951cb461ff920e6c138a6a9d2bc41855d1c"
+    },
+    {
+      "id": "S05-R003-P001",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P001"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Ⅰ. 서론",
+      "sourceTextSha256": "d168b8fb848bdd0cb16806b7ab3a7a19c255a81499d449c94f5053d223b1d9b2"
+    },
+    {
+      "id": "S05-R003-P002",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P002"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "1. 연구의 배경과 필요성",
+      "sourceTextSha256": "86ea6d01d978bda876a254aa46bd39ffd434c758bd2d71a9a9d0b26c29747d43"
+    },
+    {
+      "id": "S05-R003-P003",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P003"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "최근 투자 이민 컨설팅 회사인 Henley & Partners에서는 The Henley Private Wealth Migration Report 2025라는 보고서를 통해 각국의 부자들과 그 재산이 어떻게 이동했는지를 보여주었다. 2013년 부터 2025년 까지 약 10년 넘게 꾸준히 이어진 보고서는 코로나 바이러스의 영향이 있던 2020~2021년을 제외하고는 투자이민이 꾸준히 증가하는 모습을 보였다. 그리고 현재 2025년 백만장자, 약 14억원 이상의 재산을 보유한 부자 이민자 수는 2400명으로 그들이 빠져나가면서 가지고 나간 돈은 15.2 B$로 약 21조원에 육박한다. 이러한 부의 유출은 전세계 4위로 영국, 중국, 인도 다음으로 가장 많은 부자와 돈이 유출되었다.",
+      "sourceTextSha256": "26accc09b6e6acd8c5a2ca38157dd21fc1db03f69b5e9c4e2b669dc1a6e9d26a"
+    },
+    {
+      "id": "S05-R003-P004",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "환율은 나날히 증가하고 있다. 이러한 우상향 그래프는 12.3 비상 계엄 사태에서 1470원을 찍은 후 탄핵정국 동안 1370까지 하락했다 이재명 정부 출범 이후 약 6개월 가까이 흐른 지금 다시 1470원을 돌파했다. 여기서 보아야할 점은 달러 지수 또한 꾸준한 하락 그래프를 그렸다는 점이다. 그 뜻은 현재 원화의 가치가 달러의 가치보다 낮다는 것으로 이해할 수 있다. 하락중인 달러지수와 동시에 더욱 떨어진 원화의 가치 속 코스피 지수의 급성장은 자칫하면 버블로 이어질 수 있다. 그런 상황 속 이재명 정부의 불평등 해소 정책으로 인한 빚 탕감, 민생 지원금 지원은 추경과 국가 부채의 상승으로 이어졌다.",
+      "sourceTextSha256": "44aea8011c6041ac9ce8717298ee18a333059e198a5f782d1db1eabe2e1beb33"
+    },
+    {
+      "id": "S05-R003-P005",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "현재 대한민국은 화폐로 인한 불평등의 시대에 돌입하고 있다. 자산 접근성, 소득 격차, 생활 수준 차이등 이러한 불평등과 원화 가치의 하락 지속중이다. 이재명 정부의 당선에 가장 큰 역할을 한 공약중 하나로 꼽히는 바로 원화 스테이블 코인은 이 문제를 해결해줄 핵심 정책이 될 것인가? 국가의 신뢰도는 붕괴하고있다, 이 상황 속 원화 스테이블 코인은 과연 대한민국의 경제를 안정 시킬 핵심 정책이 될 것인가? 대한민국은 어떻게 이 상황을 극복해야하는가?",
+      "sourceTextSha256": "2f8fda14c440b0d273efc40d681b22ae4a74a506f7992fc04db59a3733a2e6b7"
+    },
+    {
+      "id": "S05-R003-P006",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P005"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "2. 연구 목적",
+      "sourceTextSha256": "e09f1064365e6679bb85df2e1c985ccb2a1eb741442dd3d4a7506b9e48fde4d0"
+    },
+    {
+      "id": "S05-R003-P007",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P006"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "본 연구는 이와 같은 문제 의식을 바탕으로 다음과 같은 연구 목표를 가진다. 첫째, 부자유출과 환율 위기는 왜 발생했으며, 이것이 국가의 금융 주권 약화로 어떻게 연결되는지 파악한다. 부자유출, 환율 위기, 코스피 거품이 단순한 개별 경제 현상이 아니라 국가의 금융 신뢰도 붕괴를 드러내는 구조적 신호임을 분석한다. 이러한 신호들이 어떻게 계층 간 불평등을 심화시키는지 메커니즘을 규명한다.",
+      "sourceTextSha256": "87415caedb87b0c0d1768ea90e05c802309f7dd2d52983ddbc1c3e8c4b77d529"
+    },
+    {
+      "id": "S05-R003-P008",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P007"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "둘째, 미국은 테더와 팔란티어와 같은 기업을 이용하여 어떻게 대처하였고 기술기업의 금융 시스템 주도가 어떻게 불평등을 심화 시켰는지 파악한다. 미국이 어떻게 팔란티어와 테더 같은 기업을 이용해 국가 신뢰도를 회복하고 반면 이런 기술기업의 금융 시스템 주도가 어떤 불평등을 만들고 심화시켰는지 파악한다.",
+      "sourceTextSha256": "5e3260f5b1c6e1365419ba6a4195fe7257001c564971129eb7ceb37f7fba6dfc"
+    },
+    {
+      "id": "S05-R003-P009",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P007"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "셋째, 이를 통해 원화 스테이블 코인의 문제점을 지적하고 국가 신뢰도 회복에 대해 제언한다. 기업 중심의 신뢰 회복과 정부의 정책적 지원이 어떻게 통합되어야하는지, 그리고 이를 통해 어떻게 불평등을 완화할 수 있는지 제언 한다.",
+      "sourceTextSha256": "32e5c4bd16406083a343e1628406109656b4a9cf1781fd79117003308f67650c"
+    },
+    {
+      "id": "S05-R003-P010",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P008"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Ⅱ. 본론",
+      "sourceTextSha256": "e9d44e58e198ab24fa57e7d556f09deeb1ed9dbdbe41a0c1d166825397886144"
+    },
+    {
+      "id": "S05-R003-P011",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "1. 국가 금융 신뢰도의 붕괴가 만드는 불평등",
+      "sourceTextSha256": "3ec0a09ea241945ebe78c5adb6d8c01839ddd7f10b0380c88402462e82e782c9"
+    },
+    {
+      "id": "S05-R003-P012",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P010"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "한국의 부자 유출은 경제적 신뢰도 붕괴의 신호다. Henley & Partners 보고서에 따르면 2022년 400명에서 2025년 2,400명으로 6배 증가했으며, 약 21조 원의 자산이 유출되었다. 이는 상속세 50% (OECD 2위), 정치 불안정성, 부자 혐오 정서라는 세 가지 요인에 의해 추동된다.",
+      "sourceTextSha256": "142c0cfd3ef1d87689d4d709900f1d5b1ff08cae471cbbd64019f4f1d7f3eaa8"
+    },
+    {
+      "id": "S05-R003-P013",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P011"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "동시에 환율이 1,470원을 돌파했다. 주목할 점은 달러 지수가 동시에 하락 중인데도 원화가 약세라는 것이다. 이는 원화의 절대적 신뢰도 하락을 의미한다. 부자유출 → 원화 수요 감소 → 환율 상승 → 수입물가 상승 → 정부 재정 지출 증가 → 신뢰도 추가 하락의 악순환이 진행 중이다. 동시에 코스피는 4,000선을 돌파했으나, 이는 거품이다. 경제성장률 1.8%에 비해 주가는 +20% 상승했으며, 가계부채는 GDP 대비 89.4%에 달한다. 이는 자산가(상위 10%)만 이득을 보는 불평등 심화 구조다. 부자유출, 환율 폭등, 코스피 거품 의심은 모두 국가 신뢰도 붕괴의 서로 다른 신호다.",
+      "sourceTextSha256": "be1fc3f3ea19fc6cdc8ab284d4f2c6da4c76116199f4bff18f73c91e11c55372"
+    },
+    {
+      "id": "S05-R003-P014",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P012"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 국가 경제의 신뢰도 하락은 나아가 불평등을 야기한다. 부자유출, 환율 폭등, 코스피 거품은 한국 경제의 신뢰도 붕괴를 드러내는 신호일 뿐만 아니라, 동시에 계층 간 자산 격차를 극대화하는 메커니즘으로 작동한다. 이는 크게 세가지로 분류할 수 있다.",
+      "sourceTextSha256": "934286d732a07b3373e5fee09a432b4bba76b87a901b9b5f71cd6771f5308db2"
+    },
+    {
+      "id": "S05-R003-P015",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P013"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "첫째, 환율 상승은 계층별로 다르게 작용한다. 고액자산가는 달러나 USDT 같은 외화 자산을 보유하여 환율 상승 시 환차익을 얻는다. 반면 일반인과 저소득층은 원화로만 자산을 보유하기 때문에, 환율이 상승할수록 실질 구매력이 하락한다. 2025년 현재 상위 10%의 가계자산은 1.62억 원인 반면, 하위 10%는 128만 원에 불과하다. 환율 1,470원은 이 격차를 더욱 벌린다.",
+      "sourceTextSha256": "0f0db66465e63f996477ff67be338702f99ffd3770312024acc1060df935f22c"
+    },
+    {
+      "id": "S05-R003-P016",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P014"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "둘째, 코스피 급성장은 자산 소유 여부를 기준으로 불평등을 고착화시킨다. 주식 보유 비율은 상위 20%에게만 집중되어 있으며, 하위 50%의 대다수는 거의 주식을 소유하지 않는다. 코스피가 +20% 상승했을 때, 이 이득은 오직 자산가에게만 돌아간다. 동시에 환율 상승으로 수입물가가 오르면서 서민의 생활비는 증가한다.",
+      "sourceTextSha256": "8a77e5b18dfbeeb35c8241a282008564c6f0d994ef47a59af13f207891725c18"
+    },
+    {
+      "id": "S05-R003-P017",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P015"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "셋째, 정부의 대규모 부채 증가는 화폐의 신뢰도를 약화시켜 저소득층을 더욱 취약하게 만든다. 이재명 정부의 민생 지원과 부채 탕감 정책이 단기적으로는 도움이 될 수 있지만, 장기적으로 원화의 신뢰도를 하락시킴으로써 다시 환율을 상승시킨다. 결과적으로 저소득층은 정부 지원으로 받은 혜택을 환율 상승으로 인한 생활비 증가로 상쇄하게 된다.",
+      "sourceTextSha256": "4fdab36223ab63d0825643849204f1b0e87c59df6166e014f00547ffb2902433"
+    },
+    {
+      "id": "S05-R003-P018",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P016"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "통계가 이를 명확히 보여준다. 2024년 기준 상위 10%의 연평균 소득은 210.51억 원이고, 하위 10%는 13.04억 원이다. 소득 격차가 200억 원을 넘어섰다. 더 심각한 것은 자산 격차인데, 상위 10%의 자산은 1.62억 원, 하위 10%는 128만 원으로, 약 125배의 격차가 있다. 이러한 격차는 환율과 주가의 변동 속에서 계속 벌어진다.",
+      "sourceTextSha256": "92afa239f7ec8016ed13138916b237b0153cdd4b2093a833efd0be017d6e904b"
+    },
+    {
+      "id": "S05-R003-P019",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P017"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "2. 미국의 사례: 기업으로 만들어낸 신뢰성 회복",
+      "sourceTextSha256": "f29a54e3bea8d36407da4cb166dfd06215b5db6e9226f350e70a27add1ff2db0"
+    },
+    {
+      "id": "S05-R003-P020",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P018"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "테더(USDT)는 현재 1,830억 달러의 시가총액으로 사실상의 민간 중앙은행으로 기능하고 있다. 일 거래량 1,280억 달러는 세계 주요 통화의 외환 거래량을 능가한다. 2025년 한 해 동안만 89조 원 규모의 테더가 온체인으로 결제되었으며, 매달 평균 4억 달러의 순 유입이 계속되고 있다. 테더의 수익성은 극도로 높다. 2024년 130억 달러의 순이익을 기록했으며, 2025년에는 150억 달러에 달할 것으로 예상된다.",
+      "sourceTextSha256": "f219571091e13b29f2ba0624a5a354b97f42f82b88a6be71ccae5de5f280bf73"
+    },
+    {
+      "id": "S05-R003-P021",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P019"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 테더의 발전 배경에는 강력한 보안과 중앙은행이 없음으로써 환전의 불편함, 국가 신뢰도로 인한 화폐가치의 하락과 같은 문제를 겪지 않으면서 비트코인의 고질적 문제인 안정성을 기축통화인 달러와 페그하여 가치를 동기화 시켰다. 그리고 국가 신뢰도가 낮아 화폐 가치가 유동적인 경우나 특히 동남아 지역에 멀리 떨어진 가족을 부양하기 위해 일하는 외국인 노동자의 경우 불편하고 오래걸리며, 수수료나 화폐를 가짐으로서 화폐의 불안정성을 스테이블 코인은 해결해줄 수 있다. 특히나 온라인 비트코인 지갑으로 송금이 쉬운 현재, 이러한 방안은 외국인 노동자들부터 국가 신뢰도가 낮아 화폐가치가 낮은 국가들에서 자주사용된다.",
+      "sourceTextSha256": "3c25bd1f4af7abb7a7de8840d1a5bab11899e080a0c793416c5b4add78582870"
+    },
+    {
+      "id": "S05-R003-P022",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P019"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "하지만 이러한 USDT의 핵심에는 미국의 국채가 있다. 테더는 미국 달러라는 기축통화화 페그 하되 1$를 받으면 그 1$로 미국의 국채를 구매한다. 즉 USDT는 전세계에 있는 수많은 국가의 화폐를 흡수함과 동시에 미국의 국채를 갚는 두개의 역할을 동반한다. 테더의 CEO의 \"USDT는 더 이상 암호화폐가 아니라 준 정부 통화\"라는 선언도 이러한 배경에서 이해할 수 있다.",
+      "sourceTextSha256": "b72df1cbf34c0d2df46c1081211a0ea1ff54e2b39b1ba915ac37bc9aeb580c98"
+    },
+    {
+      "id": "S05-R003-P023",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P019"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 미국의 스테이블 코인은 상승하는 국가 부채와 달러지수의 하락을 효과적으로 방어해냈다. 추가적으로 미국의 빅데이터 프로세싱 기업인 팔란티어의 경우 기존 기업 의사결정과 기업 관리에 이용하던 시스템인 Foundry를 AML(자금 세탁 방지)과 Crypto(가상화폐) 두가지 분야로 나누어 개발하면서 AML과 KYC를 가상 화폐에서도 추적하고 잡아낼 수 있게 되었다. 이는 신원확인 시간을 10일에서 10시간으로 획기적으로 단축하였고 거짓 양성을 85% 감소시키는 결과를 보여주었다. 또한 팔란티어의 AI는 25개 주요 지표를 자동으로 분석해 위험도 점수를 부여하며 기업의 기술을 통해 자국의 화폐 안보를 강화하였다.",
+      "sourceTextSha256": "84aa84b6dbd8f70ec12cfc56e4b1146d049abc3c298cdc4fc546596dc0c3a33d"
+    },
+    {
+      "id": "S05-R003-P024",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P020"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "트럼프 2기 행정부 또한 이러한 발걸음에 맞추어 ‘Genius Act’ 법안을 발의하였다. 표면적으로는 스테이블 코인에 대한 규제였지만 실상 내용을 들추어보면 CEO의 형사 책임, 월 1회 감시, 100% 준비금 의무화라는 강한 조건을 통해 자본력이 큰 테더(USDT)나 USDC만이 살아남도록 만들었다. 따라서 분산되는 스테이블 코인을 막고 두개의 거대 스테이블 코인에 집중시켰으며 비미국 스테이블 코인을 3년 내 전면 금지 시키며 자국의 화폐 헤게모니를 강화시켰다.",
+      "sourceTextSha256": "f41d3bd020197be8ff942a9f4df18ee67e8522d6d26a99f1e39cfb3c15fb2920"
+    },
+    {
+      "id": "S05-R003-P025",
+      "sectionId": "S05-L003",
+      "sourceBlockIds": [
+        "S05-L003-P020"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 기업을 이용한 미국의 화폐 헤게모니 강화와 나아가 국가, 화폐의 신뢰성 회복은 성공적으로 진행되었고 현재 테더의 성장과 달러지수의 재상승은 이러한 영향이 있다고 볼 수 있다.",
+      "sourceTextSha256": "312d5554e5a52510f31441c51a9ac5e00a8d7b12b6bc08c07a11d06834187cc5"
+    },
+    {
+      "id": "S05-R004-P001",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P001"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "3. 원화 스테이블 코인 비판 및 기업 중심의 국가 화폐 신뢰 회복",
+      "sourceTextSha256": "07b6b5efa04b21063ba997a1b54a569c7a89053d17c3ad56baf7966910e2d0a7"
+    },
+    {
+      "id": "S05-R004-P002",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P002"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 성공적인 사례가 있음에도 원화 스테이블 코인의 현실적 한계는 명확하다. 첫째는 글로벌 신뢰도의 부재이다. 테더가 달러라는 기축통화에 페그되어 전세계적 신뢰를 획득하는 것과 달리, 원화 스테이블 코인의 경우 원화 자체의 신뢰도와 국민들의 애국심에 대한 호소로 이어지는 일이 벌어진다. 현재 환율은 1470원을 돌파하고 부자들은 끊임없이 유출되고 있는 현 상황에서 원화의 신뢰도는 좋지 않다. 원화 스테이블 코인은 신뢰도의 악순환에서 벗어나기는 굉장히 어렵다.",
+      "sourceTextSha256": "a235400b4a493896154a57a8ac7779854da4dc6ea6739032ca85064e09a171b3"
+    },
+    {
+      "id": "S05-R004-P003",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P003"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "둘째는 구조적 한계이다. 원화 스테이블 코인은 부자유출을 억제할 수 없다. 부자들이 한국을 떠나는 이유는 이러한 코인의 존재 뿐만이 아닌 정치적 불안정성, 높은 상속세, 투자 환경 약화와 같은 문제다. 부자들이 원하는 안정성을 가져다주기 위해서는 기축통화나 금같은 보증된 가치가 있어야하지만 현 상황에서 원화 스테이블 코인은 근본적인 문제를 해결해내지 못할 가능성이 크다. 또한 무분별한 민간 발행은 디페깅 위험이나 코인런 같은 문제의 발생은 물론 한국은행의 우려와 같이 스테이블 코인의 안정성이 무너지며 금융 시스템의 붕괴까지 이어질 수 있다.",
+      "sourceTextSha256": "792a4e45c4173119dbb65c0deb1588ed78dbde482b2deafa04049b840e80bba3"
+    },
+    {
+      "id": "S05-R004-P004",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "셋째는 가상 화폐 기업에 대한 준비 부족이다. 현재 대한민국은 미국과 같이 기축통화나 또는 신뢰성을 줄 요소가 부족한 상태에서 스테이블 코인을 발행하고 이를 대한민국의 국가 신뢰성 강화로 이끌어낼 기업도, 이를 지원할 정책도, 그리고 이를 통한 다양한 기업의 기술과 역할을 통한 혁신도 어렵다.",
+      "sourceTextSha256": "7fab7bf10add2c70fd2e3391fcdf67f012f4224bb5a932e067a8fa93f671a2ab"
+    },
+    {
+      "id": "S05-R004-P005",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 한계로 인해 한국에서의 원화 스테이블 코인을 통한 국가 화폐 신뢰 회복은 사실상 어렵다고 판단된다. 이러한 상황에서 한국은 기업과 그 기술을 이용한 신뢰회복을 고려해보아야한다.",
+      "sourceTextSha256": "eca8b46167dc8171c39eb22dadc065d9d185382498da18f12e2e6cbf14643fd4"
+    },
+    {
+      "id": "S05-R004-P006",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P005"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "미국의 팔란티어, 테더와 같은 기업을 성장 시켜 투자환경을 조성하고 부자 유치와 해외 자본 유치를 통해 신뢰회복을 도모해야한다. 또한 여기에 정부의 지원 또한 필수적이다. 외국 투자 기업을 위한 세제 혜택을 강화하고 R&D 투자 지원, 핀테크 기업의 글로벌 경쟁력 강화 등이 필요하다. 이러한 노력을 통해 유출되는 부자를 막고 국내로 흡수할 것이며 기업의 발전과 일자리 창출, 소득 증가는 글로벌 신뢰성의 회복이라는 선순환으로 형성될 것이다.",
+      "sourceTextSha256": "f0b9c317ad8afa7d9f4a6f30e780887e12011abb6fbbba3f447fbd50cb2725f3"
+    },
+    {
+      "id": "S05-R004-P007",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P006"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Ⅲ. 결론",
+      "sourceTextSha256": "54b81ce0aceb1b66573d316047ba562de1ad0dc9ddbf559429e0444ec8282637"
+    },
+    {
+      "id": "S05-R004-P008",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P007"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "현재 대한민국은 경제적으로 악화되고 있다는 점은 어느정도 사실이라고 판단할 수 있다. 원화 가치 하락과 부자들의 꾸준한 유출은 대한민국 경제에 악영향을 끼친다. 이를 해결할 방안으로 원화 스테이블 코인이라는 개념을 제시하기도 하지만 이는 현실적으로 어렵다고 보아야한다. 이는 글로벌 신뢰도의 부재와, 스테이블 코인이 가지는 구조적 한계, 그리고 현재 한국의 인프라와 제도가 가지는 한계로 미국과 같은 방법으로 신뢰도를 회복하는 것은 어려울 수 있다.",
+      "sourceTextSha256": "16972ef6957c238601793d71d0575beeac74bee5e9ff3d1e27ebbea56b95c83e"
+    },
+    {
+      "id": "S05-R004-P009",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P008"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이러한 상황 속 국가 화폐와 신뢰도 회복에 대한 제언은 다음과 같은 결론에 도달한다.",
+      "sourceTextSha256": "698350d3a41030503ac643a8d4adeb5f4e7b683db59100744423109bc6c91411"
+    },
+    {
+      "id": "S05-R004-P010",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "첫째, 원화 스테이블 코인의 한계에 대한 명확한 인지가 필요하다. 원화 스테이블 코인은 기술적으로는 혁신적일 수 있고 실제로 미국과 같이 정부가 밀어주는 상황에서 거대 기업들이 모여 성공적인 사례가 될 수 있지만 현재 원화 자체의 글로벌 신뢰도 부족과 구조적 문제, 그리고 한국에 있는 인프라와 정책의 부족은 한계가 존재한다. 원화 스테이블 코인이 하나의 방법일지는 몰라도 경제위기를 극복할 중요한 핵심 정책이라 볼 수 없다는 점을 명확히 인식함이 중요하다.",
+      "sourceTextSha256": "3de52d21a64b0d78ab2d0ee2f21b3495d06aac9a4825fef92ffcf23f09bb02dd"
+    },
+    {
+      "id": "S05-R004-P011",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "둘째, 기업을 통한 국가 신뢰성 회복은 필수적이다. 미국은 테더와 팔란티어 같은 기술 기업을 이용하여 자국의 화폐 헤게모니를 재확립했다. 한국 또한 기업의 공공성을 강화하고 기술을 활용하여 국가의 금융 신뢰도를 회복하는데 기업이 적극 참여해야한다. 이러한 적극 적인 투자와 기술의 이용은 해외 투자의 유치를 이끌어내고 나아가 부자의 유입과 외화, 자본의 유입으로 이어져 국가의 신뢰도 회복에 도움을 줄 것이며 기업 또한 단순 이윤 추구자에서 국가의 신뢰도 회복의 행위자로 역할 할 것이다.",
+      "sourceTextSha256": "997d31a9d987bc2bdbca82989c2bfc20d55f3a6158ed7ea9081069f26de0e5b5"
+    },
+    {
+      "id": "S05-R004-P012",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "셋째, 중부의 적극적 법안과 정책적 지원을 통한 신뢰성 회복이 이루어져야한다. 단순 기업의 기술이용, 기업의 노력만으로는 부족한다. 상속세 개선을 통해 부자유출 억제와 투자환경을 개선해야하며, 혹여나 원화 스테이블 코인을 발행하더라도 강한 규제 체계를 통해 자본을 분산 시키지 않아야한다. 또한 IMF, BIS등 국제 기구와의 협력으로 글로벌 표준을 준수해야한다. 이러한 정책이 실행될 때 기업의 기술 혁신과의 상호 작용은 진정한 신뢰 회복의 첫걸음이 될 것이다.",
+      "sourceTextSha256": "57d87f9a8bc467cd583c6e5e7bb6ced84b8501996874f76b140ff640ebd8b04b"
+    },
+    {
+      "id": "S05-R004-P013",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P010"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "결국, 화폐의 탈출을 막는 것은 기술이 아니라 신뢰다. 그리고 그 신뢰는 정부 정책과 기업의 투명성과 책임감이 합쳐질 때만 회복될 수 있다. 한국 경제가 \"화폐로 인한 불평등의 시대\"에서 벗어나려면, 정책과 기업 전략이 상호 보완하며 국민 모두에게 혜택이 돌아가는 선순환 체계를 구축해야 한다.",
+      "sourceTextSha256": "95ab483745161032fde53aec589ca5f2ba1351f7d31cfcb2ef27347d70b68e2b"
+    },
+    {
+      "id": "S05-R004-P014",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P011"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "이를 통해서만 부자유출을 억제하고, 원화의 신뢰도를 회복하며, 계층 간 불평등을 완화할 수 있을 것이다. 기업과 정부가 함께하는 신뢰 회복의 노력이 바로 한국 경제의 미래를 결정할 것이다.",
+      "sourceTextSha256": "db65f4867a2d710d109a0f6b4624f3f5461db4374ad43862337b7ef7ef5293ca"
+    },
+    {
+      "id": "S05-R004-P015",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P012"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Ⅳ. 참고문헌 (APA 양식 변환에 생성형 AI 이용)",
+      "sourceTextSha256": "bdfa64374cdb45cdc232bed204e6aaf951f00ed02efcd4c53e1cc2af03a28fb7"
+    },
+    {
+      "id": "S05-R004-P016",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P013"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Arner, D. W., Barberis, J., & Buckley, R. P. (2015). The evolution of fintech: A new post-crisis paradigm? Georgetown Journal of International Law, 47, 1271–1315.",
+      "sourceTextSha256": "0b72b4fdd5f6926202a214d960a46d3d8d305b838f0b9ea427d5d5c2a61796bc"
+    },
+    {
+      "id": "S05-R004-P017",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P014"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Bank of Korea. (2025). Financial stability report. Seoul: Bank of Korea.",
+      "sourceTextSha256": "27d66841ce8a2f806e5bc1dbee8b657cb8145743fa36ad65c4e3541219c6393d"
+    },
+    {
+      "id": "S05-R004-P018",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P015"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Čihák, M., & Sahay, R. (2020). Finance and inequality. IMF Working Paper, WP/20/108.",
+      "sourceTextSha256": "3f2ccbb2fc8a2eb5a78e584012c5089d727aae374a2309e60a4a4fe2ad15de7d"
+    },
+    {
+      "id": "S05-R004-P019",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P016"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Henley & Partners. (2025). The Henley Private Wealth Migration Report 2025. London: Henley & Partners.",
+      "sourceTextSha256": "3351fc42382ec84dcf4bb3a4196fc7dd06839b5057823c1c1b1c4c628d406978"
+    },
+    {
+      "id": "S05-R004-P020",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P017"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "International Monetary Fund. (2025). Republic of Korea: 2025 Article IV Consultation—Press Release. Washington, DC: IMF Publications.",
+      "sourceTextSha256": "cba6f53fb39788de81b5a755b5a354fa84ef538971f00937a4c3c371df261a87"
+    },
+    {
+      "id": "S05-R004-P021",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P018"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Kim, J., Lee, S., & Park, M. (2024). Income inequality and currency stability in emerging markets. Journal of International Economics, 152, 103-118.",
+      "sourceTextSha256": "4fc308f2175b1ba3e0f290bc406f78409661d22733ae2f9997c916fff80c0b29"
+    },
+    {
+      "id": "S05-R004-P022",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P019"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Koziuk, V., & Hayda, Y. (2024). Digitalization and the CBDC trilemma. Journal of Eastern European Studies, 8(2), 45–72.",
+      "sourceTextSha256": "0b6c1491b25082c38c27341749b468106126844093f7f674b9cb106aa65ac637"
+    },
+    {
+      "id": "S05-R004-P023",
+      "sectionId": "S05-L004",
+      "sourceBlockIds": [
+        "S05-L004-P020"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Korea Statistics. (2024). Household income and asset distribution survey 2024. Daejeon: Statistics Korea.",
+      "sourceTextSha256": "c6ee13a3806d7c4d6272dd9a2dfed3ada23a44d8aa777a26c6b48f3e82c062e5"
+    },
+    {
+      "id": "S05-R005-P001",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P001"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Najaf, K., Cotel, C., & Gupta, A. (2021). Corporate governance issues of fintech companies. In The Fourth Industrial Revolution: Implementation of Artificial Intelligence for Growing Business Success (pp. 187–197). Springer.",
+      "sourceTextSha256": "3b22d91469f4a10c68b596712e37c219838ea2ab1330c8d20ad124a6c5bea932"
+    },
+    {
+      "id": "S05-R005-P002",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P002"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Palantir Technologies. (2024). Foundry for AML: Enterprise compliance solutions. Retrieved from https://www.palantir.com/industries/compliance",
+      "sourceTextSha256": "5bdccbe16ade7c73e97db732f5e87ed669454cf4a7e156047306e5f94bef1be2"
+    },
+    {
+      "id": "S05-R005-P003",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P003"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Randombage, S. (2023). Impact of corporate governance mechanisms on total, systematic, market and insolvency risk of fintech companies. International Journal of Financial Studies, 11(4), 98–115.",
+      "sourceTextSha256": "64ffddea0574fb90fffe4bdf12149d1aa24fc50b093287eb4769cd0f1f55a0ec"
+    },
+    {
+      "id": "S05-R005-P004",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P004"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Science Po. (2024). Monetary sovereignty in a digital world: Policy brief. Paris: Institute for the Study of Diplomacy.",
+      "sourceTextSha256": "ee6a30e1c2c0690fc0c114ed2bcb7dbb80221e7dc9790fd5f4ecaada929320e9"
+    },
+    {
+      "id": "S05-R005-P005",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P005"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Sheikh, M. A. (2018). Corporate social responsibility in fintech and income inequality. Journal of Sustainable Finance & Investment, 8(3), 201–216.",
+      "sourceTextSha256": "195f3798c6659afe81ef21aa61a456bdc71774be370cbd8f5f34ca9507813694"
+    },
+    {
+      "id": "S05-R005-P006",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P006"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Tether Operations Limited. (2025). Tether financial statements and operational metrics. Hong Kong: Tether Operations Limited.",
+      "sourceTextSha256": "d5f0ed25261f7d706b9760d774241d05ac0b83e45fbc0bd40bd29ca104f98099"
+    },
+    {
+      "id": "S05-R005-P007",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P007"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Trump Administration. (2024). Genuine, Oversight of Nuanced and Issued Stablecoins (GENIUS) Act. Washington, DC: U.S. Congress.",
+      "sourceTextSha256": "094eb8b76574cb17e677b989319a63375a559ee0cdb7f63f65ebb9480d22d666"
+    },
+    {
+      "id": "S05-R005-P008",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P008"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "UNESCO. (2024). Global citizenship education: Building peaceful and sustainable worlds. Paris: UNESCO Publishing.",
+      "sourceTextSha256": "1965e1b2eac35bcf739b2f212247b762ba660e1189d27b8cb45d7368a6354748"
+    },
+    {
+      "id": "S05-R005-P009",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P009"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Xiao, A., Kumar, P., & Li, Y. (2024). The impact of technological innovation on income inequality: A comprehensive analysis. Nature Communications, 15, 7823.",
+      "sourceTextSha256": "ffee69c3c41e1d54f8124ed03212032d0ae468fe0de893de2d8630613f885cea"
+    },
+    {
+      "id": "S05-R005-P010",
+      "sectionId": "S05-L005",
+      "sourceBlockIds": [
+        "S05-L005-P010"
+      ],
+      "sourcePage": null,
+      "kind": "body",
+      "ko": "Yoon, M. (2025, May). The innovative potential of stablecoins: Policy proposals for Korea's fintech ecosystem. National Assembly Policy Forum, Seoul, South Korea.",
+      "sourceTextSha256": "e34a26bd4e6e4246b32595f40f498f35dc454bd9efc9d0a825dd3d39156bd119"
+    }
+  ]
+}

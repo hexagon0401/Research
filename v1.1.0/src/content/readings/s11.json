@@ -1,0 +1,954 @@
+{
+  "reportId": "S11",
+  "revision": "reading-002",
+  "editing": "layout-only",
+  "translationStatus": "pending",
+  "paragraphs": [
+    {
+      "id": "S11-R001-P001",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "국제관계와 국제기구 -",
+      "sourceTextSha256": "0e12dc5e5fc5a31d5c73979d52274d544ee8ef07e6df6f33dfaa2373411f66fb"
+    },
+    {
+      "id": "S11-R001-P002",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "21세기 ‘파라벨룸(Para Bellum)’의 재정의: 자유주의 질서의",
+      "sourceTextSha256": "472358b8afa81c2a1c4d04595ae296e6998919dab63675caf34f21bd3e90938f"
+    },
+    {
+      "id": "S11-R001-P003",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "위기와 기술군사동맹의 부상",
+      "sourceTextSha256": "e885d9b1c90a2eb9c8fd1175c61b6435efbbe1f2d28a8f803d34de6f79c430fb"
+    },
+    {
+      "id": "S11-R001-P004",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "서론",
+      "sourceTextSha256": "3f3ba3d9e6515fc8d657c0c9037a375ce76b400a72784088fff53ba4d24cf47c"
+    },
+    {
+      "id": "S11-R001-P005",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "평화를 원한다면 전쟁을 대비하라",
+      "sourceTextSha256": "865b85a985ebdadd752941b3bb837623f6d401833d1666b230441e59b2eb6e5f"
+    },
+    {
+      "id": "S11-R001-P006",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "우리가 흔하게 권총하면 떠올리는 대부분의 권총은 9 X 19mm(이하 9mm로 표기) NATO 규격을 사용한다. 9 X 19mm 파 라벨룸(Para Bellum)은 UZI, Glock 시리즈는 물론 다양한 총에 사용하는 권총 규격으로 규격 뒤에 붙은 파라벨룸은 플라비 우스 베게티우스 레나투스의 병법서인 군사학 논고에 나오는 문장으로 \"평화를 원한다면 전쟁을 준비해라(Si vis pacem, para bellum)\"라는 뜻을 가진 것으로 유명하다. 고대 로마의 경구가 현대 NATO 표준 총기 규격에 새겨진 것은 단순한 우연이 아니다. 이 문장은 국가와 동맹이 오늘날에도 여전히 같은 논리 위에 서 있다는 사실을 보여준다.",
+      "sourceTextSha256": "92aaadd05c0f16018b8da05925d3753b01c0eefcee3c97145811dca7c1279138"
+    },
+    {
+      "id": "S11-R001-P007",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "평화의 붕괴와 해결능력의 퇴보",
+      "sourceTextSha256": "1e417949981a4b9b50675a50a7c51f5e1bdbe60eeea55341c5f16225e4c2f403"
+    },
+    {
+      "id": "S11-R001-P008",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "최근 수많은 국가들은 물론이오 한때 냉전의 주축이었던 미국과 러시아는 전시상태에 돌입했다. 이러한 움직임은 미국이 이 란-미국 전쟁의 개전전이었던 2024년 GPI 평화 보고서을 보아도 볼 수 있다. 국가 간 분쟁은 59건이며 2차 대전 이후 최대 수준을 보여주고 있다. 무엇보다 주목해봐야할 부분은 평화협정으로 종결되는 분쟁의 비율은 1970년대 23%에서 2010년 대 4%로 급감했다. 즉, 분쟁이 늘어남과 동시에 해결 능력 또한 퇴보중이며 이러한 모습은 전쟁의 종결이 명확하지 않으며 무 엇보다 전쟁이후에도 계속된 작은 분쟁과 보복성 공격이 발생한다는 것을 뜻한다.",
+      "sourceTextSha256": "e6333c3068ce011cf6db8cf0d4c82a64fb48fadeeba61fbb27f77e767bc16ded"
+    },
+    {
+      "id": "S11-R001-P009",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "지속적 유엔에 대한 무력감과 자유주의의 퇴보",
+      "sourceTextSha256": "f05ddfc5b86198b58005724c1c884074843e161a36f8e6616b8aacdfd3f3703b"
+    },
+    {
+      "id": "S11-R001-P010",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "이러한 평화의 붕괴와 해결 능력의 퇴보는 자연스럽게 유엔의 중재와 해결에 대한 기대로 넘어가게되었다. 하지만 유엔 또한 여전한 한계를 보인다.",
+      "sourceTextSha256": "e572beafe1d1c22e3d9f26aed504f147d284a2aa59ea1875f5dfcc9eb7bb2bfd"
+    },
+    {
+      "id": "S11-R001-P011",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "2025-2026년에 발생한 이란 반정부 시위는 현대에서 보기 힘든 규모의 정부의 지시를 통한 발포와 학살, 그리고 인터넷 차 단과 무차별 총격이 일어났음에도 유엔은 긴급 특별회의 소집의 결의안으로 팩트파인딩 임무단을 보냈을 뿐 유의미한 조치를 전혀 취하지 못했다.",
+      "sourceTextSha256": "7a7728969b7c79e4222b5ed9e43633f5f98df01a5a56c57e80e89cf8662c8f9d"
+    },
+    {
+      "id": "S11-R001-P012",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "또한 이스라엘과 가자 분쟁 또한 유엔에 회부되었으나 미국은 8회 안보리 거부권을 행사하였고 이는 1986년 최다이다. 결과 적으로 171일이 지난 이후에야 가자 휴전 결의 통과를 허용했다.",
+      "sourceTextSha256": "ee1813eba3c37fa672dcde382ac4b8984768142fa08b11b992f70ac39aa0a60b"
+    },
+    {
+      "id": "S11-R001-P013",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "이와 더불어 미국/이스라엘-이란 전쟁과 러시아/우크라이나 전쟁 또한 안보리 회원인 강대국의 선전포고와 선제타격이기에 유엔은 유감조차 표하기 어려워하는 모습을 보였다. 실질적 대처는 당연히 없었으며 미국-이란 전쟁의 경우 방위국 포함 29개 국으로 번지며 중동의 큰 위기를 가져왔으나 아무런 대처를 하지 못했다.",
+      "sourceTextSha256": "df7684fe54566014df1287d0548c532afddc65612a5b35842254644ef365cc60"
+    },
+    {
+      "id": "S11-R001-P014",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "한스 모겐소는 국가의 본질이 권력 추구에 있으며, 이상주의적 규범 체계는 이 현실을 은폐할 뿐이라고 주장했다. 한스 모겐소의 저서, [국가 간의 정치(Politics Among Nations)]에서 그는 국제법과 국제기구에 대한 낭만적 신뢰를 경계했다. 즉, 국제 법과 국제기구가 이상적으로 바라는, 자발적 참여로 만들어지는 질서의 붕괴에 대한 경계가 필요하다는 것이다. 언제나 자유 주의 체제에 대한 한계로 손꼽히던 자발적 참여와 실효성의 부족, 그리고 권고적 성격은 현재 그의 경고는 오늘날 현실이 되고 있다.",
+      "sourceTextSha256": "af4d62f3c1256d7d73d11d283c24f69722311f8662c4a5c37284e68d34b92f97"
+    },
+    {
+      "id": "S11-R001-P015",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "집단 방위의 실증",
+      "sourceTextSha256": "8a21e93cd737ea5285bb9671178b2cac0f06c78139fe244d25e957a74b70cf1c"
+    },
+    {
+      "id": "S11-R001-P016",
+      "sectionId": "S11-L001",
+      "sourceBlockIds": [
+        "S11-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "현재 UN은 거대한 구조적 딜레마에 빠져있다. 한계점으로 꼽히는 강제력과 실효성을 가지기 위해서는 물리적인 힘이 필요한 반면, 그 힘을 위해 안전보장이사회(안보리)가 중심이 되어 개입을 하게 되면 이는 1국가 1투표라는 주권 평등의 원칙을 무너 뜨리는 구조적 불평등으로 이어지게 된다. 이러한 자유주의 국제기구의 근본적 한계점으로 인해 서방과 유럽의 국가들은 당위 적인 규범 공백을 조율하기보다 실효적인 물리력을 공유하는 '기술 군사 동맹'에 다시금 집중하는 결과로 이어졌다.",
+      "sourceTextSha256": "2b91b76fa94cf3346209b0400a4104dc20bc26acb4580acdd30427672025a63f"
+    },
+    {
+      "id": "S11-R002-P001",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "이에 대한 대표적 사례는 단연코 북대서양 조약기구, NATO라고 할 수 있다. 나토의 경우 제2차 세계대전 이후 소련과 미국 사 이에서 발생한 냉전을 집단 대응하기 위해 결성되었으며, 군사 조약인 만큼 조약 제5조에 의거하여 회원국 중 하나가 공격당 할 시 별도의 정치적 조율 없이도 동맹체 전체에 대한 공격으로 간주하여 즉각적인 군사적 개입이 가능하다는 전략적 장점을 가지고 있다.",
+      "sourceTextSha256": "da7ec9e54851d525dc26639d3712f38defa628ac0aa7995799a2835e08f3085d"
+    },
+    {
+      "id": "S11-R002-P002",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "혹자는 냉전 종식과 데탕트의 도래와 함께 나토의 역사적 수명이 다했다고 평했으나, 최근 발발한 2026년 미국-이스라엘-이 란 전쟁 및 우크라이나 전쟁의 양상은 다극화된 국제사회에서 집단 방위 체제가 여전히 가장 강력한 실질적 억제력임을 실증하고 있다. 단일 국가의 방공망에 의존하는 것이 아니라 동맹국 간의 유기적인 방어 시스템 공유가 실전에서 미사일 상당수를 성공적으로 요격해 내는 성과를 거두며, 나토는 규범적 자유주의의 한계를 극복하는 핵심 대안으로 부상했다.",
+      "sourceTextSha256": "69df4988916c28e99783b597a60eabdc519c9475eb17130b80e5829cbc340d82"
+    },
+    {
+      "id": "S11-R002-P003",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "본론",
+      "sourceTextSha256": "33bab4548eeabf4c4be740a9c25ae4348776a53bf2a35c39038777ef5e8299b1"
+    },
+    {
+      "id": "S11-R002-P004",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "우리는 다시 현실주의로 가고 있는가?",
+      "sourceTextSha256": "cf44ded5824081c98af747203c36f71788b5114a01092f41be9b46488d7c8f93"
+    },
+    {
+      "id": "S11-R002-P005",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "유엔 체제의 구조적 실패: 거부권 정치와 규범 공백",
+      "sourceTextSha256": "944e363d311c0a4819478346de14f51174adf87973f503a8feefe3c26aacf403"
+    },
+    {
+      "id": "S11-R002-P006",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "자유주의의 등장과 보편화는 UN의 등장이라고 말해도 과언이 아닐정도로 UN의 영향력은 컸다고 볼 수 있다. 상임이사국을 포함한 안전보장이사회를 주축으로 구성된 의회와 개별 부서, 부처들은 냉전시기에도 각 국가의 분쟁을 조정하고 해결하는 등 다양한 역할을 통해 자유주의의 대명사이자 폭력과 분쟁이 아닌 대화와 협상으로 해결하는 평화의 장이라는 이미지 또한 형성 되었다.",
+      "sourceTextSha256": "1e2046c5e9f18f9368daec79bbaa8f34dd9f01009da98414ed3159ae661f9317"
+    },
+    {
+      "id": "S11-R002-P007",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "하지만 최근 UN이 보이는 양상은 달라졌다. 앞선 GPI 지수의 붕괴에서 볼 수 있듯 2차대전 이후 최대의 분쟁을 보여주고 있으며 무엇보다 두드러지는 것은 평화적 해결로 끝나는 분쟁 또한 급격히 줄어들었다는 것이다. 오히려 보복성으로 다른 분쟁과 갈등을 파생시키는 역효과 또한 계속 관측된다는 점에서 현재 협상과 대화라는 UN의 역할은 더욱더 중요해진 시기이다.",
+      "sourceTextSha256": "abc2b3f56d4c9a3cd77d6c738fedbcf9f3ff57f32878897118907519fd468070"
+    },
+    {
+      "id": "S11-R002-P008",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "하지만 데이터는 이와 전혀 반대의 상황을 보여준다. 이를 확인하기 위해 현재 전세계에서 발생하고 있는 분쟁과 이에 대한 UN에 개입에 대한 정량적 데이터 수집과 분석, 그리고 대조를 진행하였다.",
+      "sourceTextSha256": "b34de33081b4077f23aea1d8b1e17e28a876fae226212949b88fcfc71d79cbab"
+    },
+    {
+      "id": "S11-R002-P009",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "데이터 분석",
+      "sourceTextSha256": "0025119d53f91af7849ea8fd18d09329d3ce0f36cb4549c88fc020a502d12a9a"
+    },
+    {
+      "id": "S11-R002-P010",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "데이터 분석은 다음과 같은 방법으로 진행되었다. 첫째, UDCP(우프살라 분쟁 데이터베이스)에 문의를 통해 API 키를 발급 후 API키를 통해 데이터 베이스에 접근한다. 둘째, 시계열 분석을 위해 원하는 년도의 범위를 지정하여 분쟁 목록을 추출한다. 셋 째, NIM API를 이용해 70B 파라미터의 LLM 모델을 이용해 각 분쟁을 검색어로 변환한다. 넷째, UN 디지털 라이브러리에 각 분쟁을 검색해 결의문을 확인하고 결과를 확인한다. 다섯째, 위 결과를 해결/해결중/미해결 세가지 상태와 UN 개입(결의문, 또는 이에 비견한 문서 존재), UN 개입 없음 두가지 상태로 나누어 분석하였고 이 통계를 터미널로 도출한다.",
+      "sourceTextSha256": "dea340c11e22f2b1a0e52daa8da7b41d94495e2c7762b23a5006ced2d45a6fc1"
+    },
+    {
+      "id": "S11-R002-P011",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "이에 사용한 코드와 500건 이상의 분쟁 데이터를 동시에 멀티스레딩 병렬처리하였고 스레딩 방식을 이용해 프로그램을 최적 화 시켰다. 프로그램에 대한 자세한 정보는 깃허브에 오픈소스화 하였으며 개인 API키와 UDCP 키는 비공개되어 기입하지 않는 경우 사용불가하다.",
+      "sourceTextSha256": "ebe3486698b6c0f142307c4511f143daf663605a621384e600b6fcd59d0c176a"
+    },
+    {
+      "id": "S11-R002-P012",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "총 데이터는 5개년마다 200건에서 300건 사이의 데이터로, 총 35개년 데이터를 분석하였으며 이는 총 1250건의 분쟁데이 터이나 컴퓨터 성능과 컴퓨팅 시간의 한계로 인해 각 년도마다 LLM을 통해 50건 이내로 선정하여 비율을 나타냈다.",
+      "sourceTextSha256": "6b2ba2e3faa5c22ae6d45415d5e52e57724e412833cb943781ca1598b4827714"
+    },
+    {
+      "id": "S11-R002-P013",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "UN의 개입을 확인하고 정리한 툴이나 API가 없다는 점에서 직접 개발한 것이기에 신뢰도는 여전히 큰 한계점이지만 이러한 대조를 통해 충분히 의미있는 결과를 얻을 수 있다는 점에서 유의미하다고 볼 수 있다.",
+      "sourceTextSha256": "cbe05e4d00464edcfa45cc7b0ff5fa679eeaaa54f68e2d9ec7a7f2c1d5beabb5"
+    },
+    {
+      "id": "S11-R002-P014",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "시각화와 해석",
+      "sourceTextSha256": "202c1f570e1dde60f0bc4a880deba323d74957b34a734b48b2b5161f5384335c"
+    },
+    {
+      "id": "S11-R002-P015",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "데이터 분석은 크게 두가지로 나누어 진행했다. 흔히 데탕트 시기라고 일컬어지는 1990년도 부터 현재와 가까운 2025년까 지 5개년씩 나누어 분석하였다. UN 개입률과 이에 대한 결과로 분쟁 해결율 두가지를 비율로 나타내었으며 이를 그래프로 시 각화하였다.",
+      "sourceTextSha256": "13b4502f84b5d33e9c3b089dd61929731a33f27ac34a31fb130429232973f501"
+    },
+    {
+      "id": "S11-R002-P016",
+      "sectionId": "S11-L002",
+      "sourceBlockIds": [
+        "S11-L002-P001"
+      ],
+      "sourcePage": 2,
+      "kind": "body",
+      "ko": "데이터 추출 후 결과는 다음과 같다.",
+      "sourceTextSha256": "f94b947e0618f14ae43b57eb8d669562c99c3665aa8732ed68bd37d55a51c1a6"
+    },
+    {
+      "id": "S11-R003-P001",
+      "sectionId": "S11-L003",
+      "sourceBlockIds": [
+        "S11-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "총 357건의 데이터로 357건의 데이터는 알고리즘을 통해 아래와 같은 형식으로 출력되었다.",
+      "sourceTextSha256": "ef4741435e102679ec3737ce07916aeb96612734ba8ad0e8659889dd554740c6"
+    },
+    {
+      "id": "S11-R003-P002",
+      "sectionId": "S11-L003",
+      "sourceBlockIds": [
+        "S11-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "분쟁 지역과 연도, 그리고 UN의 개입방식과 해결 현황을 나태내었다. 이는 UN 디지털 라이브러리의 결의안과 그 내용에 의거 했다. 위 데이터들을 비율화하여 나타내면 아래와 같은 결과를 볼 수 있다.",
+      "sourceTextSha256": "2724b146cd5685b1f4b78b91d8503512b5133dda6028040934f1d1201e56f177"
+    },
+    {
+      "id": "S11-R004-P001",
+      "sectionId": "S11-L004",
+      "sourceBlockIds": [
+        "S11-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "위 결과에서 볼 수 있듯 1990년대에 분쟁 해결 비율은 54%에 육박했던 것에 반해 2020-2025년의 데이터는 18%라는 3 배 가까이 줄어든 모습을 볼 수 있다. 무엇보다 집중해야할 점은 Ongoing으로 표기된 진행중인 분쟁이 계속해서 늘어나고 있다는 점이다. 2001년 9.11테러로 인해 잠깐의 소강상태가 발생했으나 다시 급격하게 증가하는 모습을 보이며 이는 2020년, 즉 현재 40라는 최고점을 보이고 있다. 이러한 현상은 아래 그래프를 통해 더욱 강화하여 볼 수 있다.",
+      "sourceTextSha256": "7b8a0eca8869c5c974a81e141c0379d2b8127ba4a0392fb2cc0b2ef58e57657c"
+    },
+    {
+      "id": "S11-R004-P002",
+      "sectionId": "S11-L004",
+      "sourceBlockIds": [
+        "S11-L004-P001"
+      ],
+      "sourcePage": 4,
+      "kind": "body",
+      "ko": "위 그래프는 해결되지 않은 분쟁의 증가세는 R^2 값이 0.367로 확연한 모습을 보여주지 않지만 이와 반대로 해결되는 분쟁이 급격하게 줄어드는 모습을 볼 수 있다.",
+      "sourceTextSha256": "18f0d271283062d12046c0cd7587f825f97114b3efb19799fb838773b2143a71"
+    },
+    {
+      "id": "S11-R005-P001",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "이는 위 그래프에서 명확한 현상을 보여준다. 두 추세선 모두 0.7이상의 명확한 상관관계를 보여주는데, 해결되는 분쟁은 줄 어들고 진행되는 분쟁이 증가한다는 점에서 분쟁의 장기화, 그리고 해결이 안되고 누적되는 모습을 보여주고 있다. (한계점: 수량적인 분석에서의 한계, 컴퓨터 성능 한계, 모든 분쟁을 분석해내기엔 시간이 부족)",
+      "sourceTextSha256": "4485aa55218a60b15acd7f637211ad42bf86e1c1c2b1d51b7ebf6e65f37c8884"
+    },
+    {
+      "id": "S11-R005-P002",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "평화의 붕괴",
+      "sourceTextSha256": "3ac3be6e7bb00716ca285d453c0d7ea703e93d592417fa3e51ae508b92fb62fa"
+    },
+    {
+      "id": "S11-R005-P003",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "이는 GPI 보고서에 봤듯 세계 평화지수의 하락, 그리고 동시에 언급된 평화적 해결로 끝나는 분쟁의 감소와 합치하는 모습을 보여준다. 1990년도 분쟁 해결율이 50%를 넘었을 시절에는 분명 자유주의와 UN의 개입이 충분한 의미와 상관관계를 보여 준다고 볼 수 있었겠지만 반대로 미해결 분쟁 증가는 미미하지만 증가한다는 점은 명확하며 이와 반대로 장기화되고 해결되고 있지 않은 분쟁은 꾸준하게 증가하고 있다라는 점에서 현재 UN이 제 역할을 하지 못한다라는 사실은 명확하다고 볼 수 있다.",
+      "sourceTextSha256": "e67c2e501a986287e0bd732f22f7a4eb47907a74f1b560d86d1a87c9e8cdf340"
+    },
+    {
+      "id": "S11-R005-P004",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "이러한 사실은 다음과 같은 두가지 주장에 대한 답변을 내놓을 수 있다. 첫째, 현재 세계의 분쟁은 급격하게 증가했으며 UN과 같은 국제기구의 통제와 관리 안에 있지 않다. 둘째, UN과 국제기구들은 실질적인 분쟁 해결에 유의미한 영향을 주고 있지 못 하다고 볼 수 있다.",
+      "sourceTextSha256": "97eb194cf92808742d0a5a74ee04b30615772d5d9bf25696135a932acc659c8b"
+    },
+    {
+      "id": "S11-R005-P005",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "나토의 현실주의화",
+      "sourceTextSha256": "a00807a5943227937206dc0791b8892561c2e831e89933ba586f6677067ae3d7"
+    },
+    {
+      "id": "S11-R005-P006",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "앞선 데이터 분석에서 보았듯 분쟁의 미해결율 증가 & 장기화라는 추세에 맞추어 공동 군사대응을 목적으로 만들어진 NATO 의 경우 꾸준한 국방비와 분담금의 증가세를 보였다. 이러한 모습은 다음과 같은 미국의 변화에서 볼 수 있다.",
+      "sourceTextSha256": "fbc8a86c718bccb9a9fb4f4d04dc56c4eee16fc4c521ccd9f46d6beba17ae819"
+    },
+    {
+      "id": "S11-R005-P007",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "1. 2026 트럼프 2기의 국방비 예산 요청액이 2천조를 넘어선 점,",
+      "sourceTextSha256": "d7f5a0d6f9dc4e2666742d0f6ea560d215e31dd50f57b5c48d7896f025d2ffbb"
+    },
+    {
+      "id": "S11-R005-P008",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "2. UN 분담금의 의도적인 체불",
+      "sourceTextSha256": "774b5ea0b563fcbe4726d3426d446319caf596538819c56de76d8b49f140aa8c"
+    },
+    {
+      "id": "S11-R005-P009",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "3. 그리고 NATO 분담금을 증액한 점 이 세가지 점을 보아 미국 또한 이러한 추세에 맞추어 대응하고 있음을 보여준다. 이러 한 모습은 미국만의 대응이 아니며 중국 또한 UN 분담금을 의도적으로 체불하여 필요시에만 필요한 예산을 지불하고 있으며 동시에 국방비를 405조원으로 전년대비 7% 증가한 모습을 보인다.",
+      "sourceTextSha256": "687b9e49a6f6538756decf95d717b1829db5a07d70bd104818e9f653d013cfba"
+    },
+    {
+      "id": "S11-R005-P010",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "이러한 평화 질서의 와해 흐름과 동궤를 차하여 전 세계적인 군사비 지출은 꾸준히 증가해 왔다. 이러한 현실주의적 복귀 움직 임은 특히 자구적 집단 방위와 안보 강화를 목적으로 삼는 NATO 회원국들의 국방비 지출 통계를 통해 노골적으로 증명된다. 2016년부터 2026년까지 총 10개년의 국방비 데이터를 나토 공식 보고서를 기반으로 수집/교차 검증하였다.",
+      "sourceTextSha256": "83b40858ca9366f2124be1e0ef37345cb5de201795abae642cdc7570a18d05bd"
+    },
+    {
+      "id": "S11-R005-P011",
+      "sectionId": "S11-L005",
+      "sourceBlockIds": [
+        "S11-L005-P001"
+      ],
+      "sourcePage": 5,
+      "kind": "body",
+      "ko": "집단 방위의 실증과 나토 국방비 증액",
+      "sourceTextSha256": "cd76c4d7452dabdf71b0c1d99d24217b598fd68bfb9c60f1ee19609cabfce3b3"
+    },
+    {
+      "id": "S11-R006-P001",
+      "sectionId": "S11-L006",
+      "sourceBlockIds": [
+        "S11-L006-P001"
+      ],
+      "sourcePage": 6,
+      "kind": "body",
+      "ko": "NATO 회원국의 총 국방비는 확실한 증가세를 보이고 있다. 첫번째 그래프를 보면 꾸준한 우상향을 보여주고 있으며 이는 R^2 값이 0.82라는 점에서 확실한 상관관계를 가진다. 증감율의 경우 변동의 차이를 두기 위해 추세선을 다항식(차수2)으로 설정하였다. 이 또한 확연한 우상향을 보여주고 있으며 증감율 자체도 2025년에는 20퍼센트가 넘는 확연한 증가를 보인다.",
+      "sourceTextSha256": "d452db57ae06db9ccf71797f7f9882fbcdbe4f393550d4715bf217ff9ca05cc1"
+    },
+    {
+      "id": "S11-R007-P001",
+      "sectionId": "S11-L007",
+      "sourceBlockIds": [
+        "S11-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "무엇보다 2014년 회원국 수에 비해 GDP 대비 2%의 국방비를 가진 회원국은 5개국(10.7%) 또한 안되었지만 2025년인 현 재에는 모든 회원국이 2% 이상을 충족했으며 현재는 NATO 헤이그 공약에 따라 5% 이상의 국방비를 목표로하고 있다.",
+      "sourceTextSha256": "ee46a3a1a1aa2317b3389d2842a4cd328a807c64833469fd804bf05bdb22dce9"
+    },
+    {
+      "id": "S11-R007-P002",
+      "sectionId": "S11-L007",
+      "sourceBlockIds": [
+        "S11-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "또한 NATO 회원국의 평균 국방비 비중으로만 봐도 꾸준히 증가하고 있음을 보여준다. 2025년 기준 모두 2.50% 이상으로 구성되어 있으며 이는 헤이그 합의에서의 5%를 위한 50% 달성율을 보여준다.",
+      "sourceTextSha256": "c95cf9f776c59553d1244be5e44d788abd9775f70e1b762c5f29865dc4709208"
+    },
+    {
+      "id": "S11-R007-P003",
+      "sectionId": "S11-L007",
+      "sourceBlockIds": [
+        "S11-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "나토의 현실주의화",
+      "sourceTextSha256": "a00807a5943227937206dc0791b8892561c2e831e89933ba586f6677067ae3d7"
+    },
+    {
+      "id": "S11-R007-P004",
+      "sectionId": "S11-L007",
+      "sourceBlockIds": [
+        "S11-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "자국 안보 강화와 타격 무기 구매 증가 추세",
+      "sourceTextSha256": "403b18662ed399d7f1d05734136f847d43cf90c2807d9e3a35ebc539f09f0468"
+    },
+    {
+      "id": "S11-R007-P005",
+      "sectionId": "S11-L007",
+      "sourceBlockIds": [
+        "S11-L007-P001"
+      ],
+      "sourcePage": 7,
+      "kind": "body",
+      "ko": "앞선 분쟁 데이터 분석에서 확인했듯 국제기구의 규범적 통제가 와해되는 추세에 맞추어, 서방 동맹국들은 철저한 현실주의적 세력균형 논리에 따라 군사력을 재편하고 있다. 이러한 공식 서사의 이면과 무기 조달 패러다임의 본질을 더 심층적으로 파악 하기 위해, 독자 개발한 AI 프로그램인 NV(Night Vision) 모델을 가동하였다. NV 모델의 하네스 시스템을 통해 ‘프레임 감시",
+      "sourceTextSha256": "974d14dee8e18607476c578c86a6c624ab9e8865ca84e7ebb4a9cd2272a70569"
+    },
+    {
+      "id": "S11-R008-P001",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "(Frame Auditor)’ 및 ‘해체 분석(Deconstruction Analyst)’ 알고리즘을 2회 루프(Loop) 돌려 구조적 인과관계를 추적한 결 과, 매우 도발적인 유레카(Eureka) 인사이트를 도출할 수 있었다.",
+      "sourceTextSha256": "efc5848fbe25a5396a9751dc0d6f2967dcfea4cd40ad2e7048a8b606f180f696"
+    },
+    {
+      "id": "S11-R008-P002",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "나토(NATO)의 공식 수사는 여전히 \"방어적이고 비례적인 집단안보\"를 표방하지만, NV 모델이 포착한 실제 무기 조달 패턴은 공세적 심층타격(DPS, Deep Precision Strike) 역량을 동맹 수준의 필수 임무로 격상시키는 흐름을 보인다. 다만 무게를 두 어 봐야 할 점은 이러한 공세 무기 조달의 진짜 동기다. 흔히 이러한 재무장이 러시아의 위협 때문이라고 생각하지만, NV 모델의 타이밍 분석에 따르면 영-독 2,000km DPS 프로그램이나 영국 국방부의 브레이크스톱(Brakestop) 사거리 600km 탄도 미사일 프로젝트 등의 핵심 조달 공고는 2022년 우크라이나 침공 직후가 아니라, 2025년 미국 트럼프 2기의 나토 공약 회의 론이 불거진 ‘미국 신뢰성 위기’ 국면과 정확히 일치한다. 즉, 러시아 때문이 아니라 미국의 자동 개입(조약 제5조) 보장이 흔 들리자 자구적인 ‘주권적 억제력’을 확보하려는 현실주의적 생존 계산이 작동한 것이다.",
+      "sourceTextSha256": "adfbf6e3a7af6af20264c5ffb0a6afa0bf1f5bc43c9b8f150cb22dcdd36e49d9"
+    },
+    {
+      "id": "S11-R008-P003",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "또한, 나토는 유럽 내부의 평화주의 여론과 정치적 마찰을 우회하기 위해 정교한 ‘제도적 프레이밍’ 메커니즘을 사용하고 있음이 NV 모델을 통해 폭로되었다. 2025년 2월 발효된 나토의 통합 방공 및 미사일 방어(IAMD) 정책 공식 문서를 보면, \"공세 작전(Offensive operations)은 포괄적 방공 구조의 필수 구성요소\"라고 명문화되어 있다. 즉, 타격용 공세 무기를 조달하면 서 외교적으로는 ‘방어’라는 라벨을 붙여 우회하는 구조다.",
+      "sourceTextSha256": "771c2af0347acb71affdc1db7f8965c47d2a1a2e6b5a73ac83e31f03db2fa788"
+    },
+    {
+      "id": "S11-R008-P004",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "현재 이 조달 트랙은 미국의 FMS(대외군사판매)에 의존하여 즉각 배치하되 미국의 거부권 통제 하에 놓이는 ‘위탁 억제력 (JASSM-ER, ATACMS 구매 등)’과, 2030년대를 목표로 독자 노선을 걷는 ‘자율 토착 억제력(ELSA 순항미사일 등)’의 이중 구조로 나뉜다. 여기서 발생하는 역설은, 과거 트럼프 1기가 INF(중거리 핵전력 조약)를 파기하여 지상발사 장거리 미사일의 법적 공간을 열어주었고, 트럼프 2기가 동맹 신뢰성을 훼손함으로써 유럽이 그 공간을 공세 무기로 채우도록 등 떠밀었다는 점이다. 결국 초강대국 스스로가 유럽의 전략적 자율성을 구조적으로 촉진하는 모순적 안보 딜레마가 동맹 제도 수준에서 실 증되고 있다.",
+      "sourceTextSha256": "059da4b7511f3f8a49df20053db91432433dd18de74c26e5d559226c1ba77453"
+    },
+    {
+      "id": "S11-R008-P005",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "기업 개발과 기업의 적극적 개입",
+      "sourceTextSha256": "50e086b095b7cff60341894109f618e4a070c103ea1df08355a16d2ef234fd1a"
+    },
+    {
+      "id": "S11-R008-P006",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "이러한 현실주의적 군비 경쟁과 나토의 체질 전환을 하부에서 지탱하고 있는 핵심 동력은 단연 민간 방산 기업들의 폭발적인 성장과 안보 생태계로의 적극적인 개입이다. 방산 산업기반의 구조적 전환 조짐을 정량적으로 검증하기 위해 주요 글로벌 방 산 데이터 및 가속기 프로그램 현황을 다각도로 대조/분석하였다.",
+      "sourceTextSha256": "fa3270367ef91a120081419d37e313562b7b88cbd3b0a48ae77197b6be4d51a7"
+    },
+    {
+      "id": "S11-R008-P007",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "먼저 전 세계적인 군사 긴장 고조가 기업의 매출로 어떻게 직결되는지 확인하기 위해 대서양 진영의 전반적인 무기 거래 추이를 시각화하였다.",
+      "sourceTextSha256": "34ee9504135f4d2423f6acfc32540a0b8e23612960e4efbb3082c25995cd92e7"
+    },
+    {
+      "id": "S11-R008-P008",
+      "sectionId": "S11-L008",
+      "sourceBlockIds": [
+        "S11-L008-P001"
+      ],
+      "sourcePage": 8,
+      "kind": "body",
+      "ko": "위 그래프를 보면 전 세계 총 무기 매출은 2015년 약 540B 달러 수준에서 대두되기 시작해 매년 꺾이지 않고 가파른 우상향 곡선을 그리고 있다. 특히 추세선의 R^2값이 0.8991이라는 압도적인 수치를 보여주는데, 통계학적으로 0.9에 육박하는 상 관관계를 가진다는 것은 방산 시장의 확장이 일시적인 테마가 아니라 거시적인 국제정치 구조에 완전히 잠겨(Lock-in) 있음",
+      "sourceTextSha256": "6a8564140cdc9c6ae18d2089756517705a3d1a754db9137a613767d2cf552897"
+    },
+    {
+      "id": "S11-R009-P001",
+      "sectionId": "S11-L009",
+      "sourceBlockIds": [
+        "S11-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "을 뜻한다. 2024년 기준 매출은 680B 달러에 육박하며 군비 증강의 흐름이 기업의 생존 및 고정 자본비용 회수 논리와 단단 히 결합되어 있음을 보여준다.",
+      "sourceTextSha256": "28e87f4fefe43c75901f4d834d14f73a611bb866a4c0694dd2f4ec88b5198892"
+    },
+    {
+      "id": "S11-R009-P002",
+      "sectionId": "S11-L009",
+      "sourceBlockIds": [
+        "S11-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "이러한 대 규모 자본의 흐름이 어디로 흘러 들어가는지 더 구체적으로 확인하기 위해, 앞선 NV 모델 분석에서 'FMS 의존성 체인'의 핵심 공급처로 지목된 미국의 초대형 방산 프라임 기업들의 실적을 추적하였다.",
+      "sourceTextSha256": "7ba422e3c60568af1ad7ad6c9ff1d9e31646965314efb930ee60ed05ed0f4ffc"
+    },
+    {
+      "id": "S11-R009-P003",
+      "sectionId": "S11-L009",
+      "sourceBlockIds": [
+        "S11-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "주요 방산기업인 록히드 마틴(Lockheed Martin)과 노스롭 그루먼(Northrop Grumman)의 연매출 추이는 이러한 자본 유 입을 시각적으로 명증한다. 록히드 마틴의 경우 2015년 40B 달러 중반이던 매출이 2024년 70B 달러를 돌파하는 기염을 토 했고, 노스롭 그루먼 역시 20B 달러 초반에서 40B 달러선으로 2배 가까운 우상향 성장을 달성했다. 이는 유럽 국가들이 미국의 신뢰성 공백을 메우기 위해 JASSM-ER이나 ATACMS 같은 검증된 타격 자산을 미국 FMS 메커니즘을 통해 앞다투어 직구 매한 결과이며, 미 방산기업들의 대유럽 수출 수익 구조가 최소 2032년 horizon까지 안정적으로 확보되었음을 실증하는 지",
+      "sourceTextSha256": "b3e3f272c1f3d5606bc7b01961191d9032d88d1ab6595f6c13fb4b7f298c45d6"
+    },
+    {
+      "id": "S11-R010-P001",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "표다. 다만, 현대 기술군사동맹의 변화에서 가장 눈여겨봐야 할 부분은 이러한 전통적인 대형 제조사들의 독과점을 넘어, 첨단 민간 딥테 크 스타트업들이 동맹의 안보 메커니즘 내부로 무서운 속도로 침투하고 있다는 사실이다. 나토가 공세적 기술 혁신 생태계를 구축하기 위해 야심 차게 가동한 DIANA(북대서양 국방 혁신 가속기)의 데이터는 이를 고스란히 반영한다.",
+      "sourceTextSha256": "c47fd4a9ff330be7cf945bdd620e208f8284621f7b865f973f270c87cc76a6ca"
+    },
+    {
+      "id": "S11-R010-P002",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "DIANA 가속기 프로그램의 선발 기업 및 지원 신청 건수의 연도별 추이를 보면 그 확장세가 가히 폭발적이다. 프로그램 도입 초기인 2023년(1기)에는 선발 기업 40여 개사, 지원 신청 약 1,300건에 불과했으나, 패러다임 전환기인 2025년(3기)을 거 쳐 2026년(4기) 현재에 이르러서는 선발 기업 수가 150개 사로 증가했고 지원 신청 건수는 무려 3,800건을 상회하는 수직 상승을 기록했다.",
+      "sourceTextSha256": "3a2553fd02365125e29c3f0fdebcea1509411e8964994a304a43bd5ac791a872"
+    },
+    {
+      "id": "S11-R010-P003",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "이는 자율 드론, 양자 센싱, 사이버 보안, AI 영역의 수많은 민간 스타트업들이 나토의 액셀러레이터 사이트와 테스트 센터로 대거 유입되고 있음을 정량적으로 보여준다. 과거 실리콘밸리 내에 존재하던 군사 기술에 대한 잘못된 반감이나 도덕적 기피 증이 무색해질 만큼, 이제는 첨단 기술 기업들의 민간 혁신 속도가 동맹의 억제력을 결정하는 핵심 변수가 되었다. 결국, 현대의 기술군사동맹은 단순히 국가 간의 조약에 머무는 것이 아니라, 고 고마진의 공세 시스템을 원하는 거대 방산 자본과 민간 딥 테크 생태계가 융합되어 거대한 안보-산업 복합체로 진화하고 있음을 이 세 장의 그래프가 명확히 증명하고 있다.",
+      "sourceTextSha256": "ea4e63bbc72599a6aa5946ad47be166ddfe749741ecbad1d86f5a6ae95987ddc"
+    },
+    {
+      "id": "S11-R010-P004",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "결론",
+      "sourceTextSha256": "ce5da34183dc53ab86fed2e757c4056a6cb81424b0d228defde55c2099d7814b"
+    },
+    {
+      "id": "S11-R010-P005",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "현실주의와 집단 방위",
+      "sourceTextSha256": "4b8b82295883a09fe37c57fe366377203e647ee457aaa4bb701e3e5f108fc95b"
+    },
+    {
+      "id": "S11-R010-P006",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "본 연구의 데이터 분석과 정량적 지표들이 가리키는 결론은 자명하다. 냉전 이후 전 세계를 지배해 오던 보편적 다자주의와 UN 중심의 규범적 자유주의 국제질서는 거부권 정치와 강제력 부재라는 한계에 부딪혀 무력화되었다. 분쟁의 장기화와 장기 미해결 분쟁의 누적이라는 시스템 붕괴 앞에서 국제사회는 급격하게 힘의 논리와 억제이론이 지배하는 현실주의 패러다임으 로 복귀하고 있다.",
+      "sourceTextSha256": "6937c784886a49e372cfeffe599ac0f3b8168d55748bba28f4bfa01df1ea32fa"
+    },
+    {
+      "id": "S11-R010-P007",
+      "sectionId": "S11-L010",
+      "sourceBlockIds": [
+        "S11-L010-P001"
+      ],
+      "sourcePage": 10,
+      "kind": "body",
+      "ko": "이러한 아나키(무정부) 상태의 불안감 속에서 국가들이 찾은 생존 해법은 자발적 협량에 기댄 집단안보 구조가 아닌, 확실한 물리적 격멸력과 조약 구속력을 담보하는 'NATO 식 기술군사동맹'과 집단 방위의 체제화이다. 2026년 중동 전쟁에서 실증 된 연계 방공망의 요격 성과는 시스템 공유가 단순한 이론이 아닌 실전의 억제력임을 증명했다.",
+      "sourceTextSha256": "356c6c4b3be615e5fdbd77071aa114176bf899bcb85d53945f095f007799d6f2"
+    },
+    {
+      "id": "S11-R011-P001",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "NATO의 현재와 한계",
+      "sourceTextSha256": "4fd40ebe2d06ad80b415b134248690a1dc233d19ba2b72568734f4827300e52d"
+    },
+    {
+      "id": "S11-R011-P002",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "그럼에도 불구하고 나토의 이러한 현실주의적 팽창에 대해 크게 두 가지 차원의 강력한 비판적 피드백이 존재할 수 있다. 첫 째, UN 안보리가 강대국의 전유물로 변질되었다고 비판하면서, 결국 NATO 역시 미국 중심의 헤게모니 장치이자 서구 패권주 의를 공고히 하기 위한 군사적 도구에 불과한 것 아니냐는 지적이다. 둘째, 학계 일각의 시각으로, NATO는 순수한 현실주의적 세력균형 장치라기보다는 다자간 의사결정과 제도적 규칙을 기반으로 움직이는 ‘제도화된 안보 공동체’이므로, 이를 현실주 의로의 복귀 사례로 드는 것은 이론적 명명 오류라는 비판이다.",
+      "sourceTextSha256": "418df07a58163606f1be35c9e3c449c3215d638eb0f304a486e39b302c94e418"
+    },
+    {
+      "id": "S11-R011-P003",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "그러나 이러한 비판에 대해 본 연구는 나토가 현실을 은폐하지 않는 철저한 현실주의적 적응체라는 점을 강조하고자 한다. NATO 내에서 미국의 독점적 지위와 패권적 영향력은 부인할 수 없는 사실이나, 나토는 UN처럼 '형식적 주권 평등'이라는 위 선적 수사를 늘어놓지 않는다. 나토의 본질은 \"공격받은 회원국에 대해 전력으로 공동 대응한다\"는 명백한 군사 조약이며, 철 저하게 물리적 힘의 대소 관계와 실리적 분담 공식에 의거해 작동한다.",
+      "sourceTextSha256": "b11c365589bb8e5d42b5b7bba560473c34250e14f0cac7237fe9cc586981fae1"
+    },
+    {
+      "id": "S11-R011-P004",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "또한 다양한 국가들이 모여 제도적 협력을 이룬다 하여 이를 자유주의 모델로 해석하는 것은 피상적인 접근이다. 나토가 결성하고 있는 다자적 협력의 결속력은 규범에 대한 신뢰가 아니라, 외부의 실존적 위협(러시아 및 다극화된 적대 세력)에 대응해 '나의 생존을 위해 너의 힘이 필요하다'는 철저한 현실주의적 계산과 국방비 증액 데이터에서 기인하는 것이기 때문이다.",
+      "sourceTextSha256": "70557d402ce4dab74741ced713a65b67b02c9d199a2ed2f7db85171d6437ee09"
+    },
+    {
+      "id": "S11-R011-P005",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "기술과 기업: 잘못된 반감의 극복",
+      "sourceTextSha256": "cfa25158d1eddaf6f958ada626e1ea9931512ffe35227ce35ef5d01dced28e77"
+    },
+    {
+      "id": "S11-R011-P006",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "방위 역량의 강화 관점에서 향후 우리가 반드시 주시해야 할 지점은 알렉스 카프(Alex Karp)가 저서 [기술공화국 선언(The Technological Republic]에서 역설한 '민간 기술과 국가 안보의 불가분성'이다. 과거 실리콘밸리를 비롯한 첨단 기술 생태계 내에는 민간의 빅테크와 AI 알고리즘이 군사 및 방산 인프라에 도입되는 것에 대한 도덕적 기피증과 반감이 팽배해 있었다. 다 시금 현실주의로의 회귀라는 현 상황은 자유주의의 체계와 UN이 만들어줬다고 믿었던 평화의 붕괴에 대해 도덕적 기피증과 군사적 무력에 대한 맹목적 반감을 나타내는 모습을 쉽게 볼 수 있다. 하지만 군사 기술을 악으로 규정하는 잘못된 반감은 자유 주의적 유토피아의 환상에 기댄 것에 불과하다.",
+      "sourceTextSha256": "de6c88985e9d5beb0865ffc98c5dfcdde770588b7cb949243b128841bfd21010"
+    },
+    {
+      "id": "S11-R011-P007",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "현실주의 국제정치 체제에서 억제력을 상실한 민주주의는 보전될 수 없다. 팔란티어와 안듀릴 같은 서방 안보에 신념 있는 첨 단 기업들이 전장에 AI 기반 상황인식 시스템을 보급하고 방산 기반의 디지털 전환을 주도하는 것은, 전쟁을 조장하는 것이 아 니라 오히려 기술적 압도성을 통해 무모한 선제타격을 억제하는 평화 유지 수단이다. 따라서 한국을 비롯한 자유민주주의 진 영은 민간 딥테크 스타트업과 국방 안보 온톨로지를 유기적으로 결합하는 '기술군사동맹 생태계'를 선제적으로 구축해야 한다.",
+      "sourceTextSha256": "2c992eb52d709e4ec11e85eb9a44841b0bedd9346044022faccb2010b4fca6f7"
+    },
+    {
+      "id": "S11-R011-P008",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "이러한 맥락에서 한국을 비롯한 자유민주주의 진영이 마주한 시급한 과제는 제조업 기반의 기존 방산 패러다임이 가진 구조적 한계를 인식하고, 이를 첨단 소프트웨어 중심으로 전면 재편하는 것이다. 최근 대한민국 방위산업은 하드웨어(Hardware) 위 주의 양적 성장과 단순 조립/제조 분야의 수출에 편중되어 있어, 미래 전장의 핵심 동력인 소프트웨어 자립도가 극히 낮다는 치명적인 한계를 지닌다. 본 연구의 데이터 분석이 실증하듯, 현대 기술군사동맹의 억제력은 팔란티어(Palantir)의 Maven 시 스템이나 안듀릴(Anduril)의 자율 무기 체계와 같이 전장의 판도를 바꾸는 AI 알고리즘 및 초연결 전장 상황인식 시스템의 확 보 여부에 의해서만 결정된다. 그러나 현재 국내 방산 생태계는 폐쇄적인 국방 획득 프로세스와 경직된 제도적 장벽으로 인해 민간의 혁신적인 첨단 기술이 국방으로 유입되는 경로가 사실상 차단되어 있다. 따라서 한국은 단순히 기존 완성형 기동 플랫 폼을 복제/양산하여 수출하는 단계를 벗어나, 나토의 DIANA 모델을 벤치마킹하여 국내의 인공지능, 양자, 자율주행 분야 딥 테크 스타트업들이 국방 조달 시장에 유기적으로 진입할 수 있도록 규제를 과감히 완화하고 국가 주도의 공세적인 기술 가속 기 프로그램을 조속히 제도화해야 한다.",
+      "sourceTextSha256": "f55e3c046dce927ac09f9b1aa3d3292b08ef2e58eff6eb691f22fb4ea6bd6e68"
+    },
+    {
+      "id": "S11-R011-P009",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "더 나아가 대한민국은 하드웨어 제조 역량이라는 독보적인 레버리지를 활용하여 서방 진영의 ‘소프트웨어 중심 기술안보 동 맹’에 핵심 파트너로 적극 참여해야 한다. 미-유럽의 첨단 안보 알고리즘과 한국의 고신뢰성 무기 플랫폼 및 대량 생산 능력을 상호 결합하는 '플랫폼-소프트웨어 융합형 동맹 체계'를 구축할 때, 비로소 진영 전체의 실질적인 세력균형과 다자간 억제력이 완성될 수 있다. 기술이 곧 안보이자 생존 전략이 된 다극화된 아나키(무정부) 국제정치 현실 속에서, 민간의 파괴적 혁신 기술을 국방 온톨로지와 결합하는 유연하고 공세적인 '기술군사동맹 생태계'의 조화로운 구축만이 한국의 주권적 안보와 자유민주 주의 가치를 지속 가능하게 보존하는 유일한 실천적 해법이 될 것이다.",
+      "sourceTextSha256": "0aafd0445ee7dbe636aa30012528fe1dbd290a9c098f27513a14e63866da195f"
+    },
+    {
+      "id": "S11-R011-P010",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "연구의 한계",
+      "sourceTextSha256": "065ab5ccf544207790ce9c7c5cd3c468a4f0e7fd4d0f5a4935a6f525a6f88d25"
+    },
+    {
+      "id": "S11-R011-P011",
+      "sectionId": "S11-L011",
+      "sourceBlockIds": [
+        "S11-L011-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "본 연구는 전 세계 분쟁 데이터와 UN 결의안 매칭을 자동화하기 위해 UCDP 데이터베이스와 LLM(70B 파라미터 모델)을 연 동한 정량적 분석 툴을 직접 개발/시도했다는 점에서 방법론적 유의미성을 가진다. 그러나 개인 연구 차원에서의 컴퓨팅 성능",
+      "sourceTextSha256": "0c3bd317d14030bed6e5d311ed710919aebdb9c6b628ae155d46dd7d090dc0ee"
+    },
+    {
+      "id": "S11-R012-P001",
+      "sectionId": "S11-L012",
+      "sourceBlockIds": [
+        "S11-L012-P001"
+      ],
+      "sourcePage": 12,
+      "kind": "body",
+      "ko": "한계와 시간적 제약으로 인해, 1,250여 건에 달하는 시계열 분쟁 전체 데이터를 전수 가공하지 못하고 각 연도별로 50건 이 내의 표본을 LLM을 통해 추출하여 비율화했다는 점에서 통계적 일반화의 한계를 지닌다. 또한 프롬프트 엔지니어링을 통한 UN 결의문의 '해결/미해결' 판단 알고리즘의 분류 정확도와 신뢰도를 완벽하게 검증하지 못한 점은 본 연구의 뚜렷한 한계점 이며, 이는 향후 고성능 컴퓨팅 자원 확보와 알고리즘 고도화를 통해 보완되어야 할 과제이다.",
+      "sourceTextSha256": "85ed062cd0a4bfbdc9307d334886ecbe32870dee12f2f2b748ee60f2ae750fb8"
+    },
+    {
+      "id": "S11-R012-P002",
+      "sectionId": "S11-L012",
+      "sourceBlockIds": [
+        "S11-L012-P001"
+      ],
+      "sourcePage": 12,
+      "kind": "body",
+      "ko": "Al Jazeera. (2026, March 16). Map Shows How 22 Days of Attacks Have Evolved in US-Israel War on Iran. https://www.aljazeera.com/news/2026/3/16/map-shows-how-16-days-of-attacks-have-evolved-in-us-israel-war-on-iranAlexander C. Karp & Nicholas W. Zamiska. (2025). The Technological Republic. Crown Currency. https://techrepublicbook.com/Amnesty International. (2026, January 12). Iran: Deaths and Injuries Rise amid Authorities' Renewed Cycle of Protest Bloodshed. https://www.amnesty.org/en/latest/news/2026/01/iran-deaths-injuries-authorities-protest-bloodshed/Breaking Defense. (2024, May). Can tech reduce civilian deaths in conflict? Alex Karp at Ash Carter Exchange. https://breakingdefense.com/2024/05/mark-milley-civilian-death-ai-technology-alex-karp-palantir/CBS News. (2025). Palmer Luckey: Why AI-powered, autonomous weapons are the future of warfare. 60 Minutes. https://www.cbsnews.com/news/palmer-luckey-ai-powered-autonomous-weapons-future-of-warfare-60-minutes-transcript/Collins Aerospace / RTX Press Release. (2024). Collins Aerospace Awarded NATO NCIA EWPBM Contract. Council on Foreign Relations (CFR). (2025, August 27). The UN Security Council. https://www.cfr.org/backgrounders/un-security-councilCFR / UN Security Council Tracker. (2024–2025). Gaza Security Council Veto Record. CFR Council of Councils. (2025, September 3). The United Nations at Eighty: Reform for a New Geopolitical Era. https://www.cfr.org/councilofcouncils/global-memo/the-united-nations-at-eighty-reform-for-a-new-geopolitical-eraDefense One / Breaking Defense. (2025). NATO Signs First-Ever AI Contract with Palantir for Maven Smart System. DIANA. (2025). About DIANA. https://www.diana.nato.int/DIANA. (2026). 2026 Challenge Programme — 150 Startups Selected. https://www.diana.nato.int/challengeEncyclopaedia Britannica. (2026, March). 2026 Iran War. https://www.britannica.com/event/2026-Iran-ConflictFortune. (2026, March 6). Palmer Luckey says Silicon Valley has the Pentagon all wrong. https://fortune.com/2026/03/06/palmer-luckey-pentagon-anthropic-debate-dario-amodei-claude-ai/Fortune. (2026, March 13). Palantir CEO Alex Karp says there was 'never a sense' AI products would be used for domestic surveillance. https://fortune.com/2026/03/13/palantir-ceo-alex-karp-interview-anthropic-pentagon-never-a-sense-ai-used-for-domestic-surveillance/Institute for Economics & Peace. (2024, June). Global Peace Index 2024. https://www.economicsandpeace.org/wp-content/uploads/2024/06/GPI-2024-web.pdfInstitute for Economics & Peace. (2025, June). Global Peace Index 2025. https://www.visionofhumanity.org/wp-content/uploads/2025/06/Global-Peace-Index-2025-web.pdfIran International. (2025, December 28). Millions Protest Across 31 Provinces in Iran's Largest Uprising Since 1979. https://www.iranintl.com/en/202512281234Iran International. (2026, January 25). Over 36,500 Killed in Iran's Deadliest Massacre. https://www.iranintl.com/en/202601255198NATO. (2024). Defence Expenditure of NATO Countries (2014–2024). Brussels. https://www.nato.int/cps/en/natohq/news_226465.htm",
+      "sourceTextSha256": "bbb32589e2d4061bd954393e2f58e089d7c7c996ef59d6d4da9a7f42ef3718bf"
+    },
+    {
+      "id": "S11-R013-P001",
+      "sectionId": "S11-L013",
+      "sourceBlockIds": [
+        "S11-L013-P001"
+      ],
+      "sourcePage": 13,
+      "kind": "body",
+      "ko": "NATO. (2025). Defence Expenditure of NATO Countries (2014–2025). Brussels. NATO. (2025, June). The Hague Summit Declaration. https://www.nato.int/cps/en/natohq/offci ial_texts_226462.htm NATO Innovation Fund. (2022–2025). About NIF. https://www.natoinnovationfund.com/NATO NSPA. (2024). NSPA Signs Contract with Airbus for Additional MRTT Aircraft. NATO STO. (2025, April 9). Science & Technology Trends 2025–2045. https://www.nato.int/cps/en/natohq/news_234507.htmNPR. (2026, January 27). At Least 6,126 People Killed in Iran's Crackdown on Nationwide Protests. https://www.npr.org/2026/01/27/nx-s1-5689793OHCHR. (2026, January). Human Rights Council Adopts Resolution on Iran. https://www.ohchr.org/en/media-advisories/2026/01/human-rights-council-adopts-resolution-extending-mandates-fact-fni ding RealClearDefense. (2025, May). (Re)Claiming Our Deterrence. https://www.realcleardefense.com/articles/2025/05/03/reclaiming_our_deterrence_1107926.htmlThe Guardian / Reuters. (2025, January). Trump Signs Executive Order Withdrawing US from 66 UN Bodies. UN General Assembly Press Release. (2025). General Assembly Delegates Demand Overhaul of Security Council Veto. https://press.un.org/en/2025/ga12733.doc.htmUN OCHA. (2025). Funding Cuts Impact on Humanitarian Response. White House Budget Offci e. (2025). FY2026 Budget: UN Peacekeeping Justifci ation. Wilson Center. (2024, June). Global Peace Index 2024: Less Peace, More Conflict. https://www.wilsoncenter.org/video/global-peace-index-2024-less-peace-more-conflict10TV. (2026, March). Inside Arsenal-1 with Anduril founder Palmer Luckey. https://www.10tv.com/article/news/local/boomtown-ohio/arsenal-1-tour-anduril-founder-palmer-luckey-10tv-exclusive/CSIS. (2025). The Future of NATO Defense, Resilience, and Allied Innovation. https://www.csis.org/events/future-nato-defense-resilience-and-allied-innovationCSIS. (2026, January 8). Strengthening NATO Starts with Fixing Its Industrial Base. https://www.csis.org/analysis/strengthening-nato-starts-fxi ing-its-industrial-base",
+      "sourceTextSha256": "d4f66540c79b86dafd7c4f24f58447f8e86de6ef2d2ed83bc58a1a1c745d3cf5"
+    },
+    {
+      "id": "S11-R013-P002",
+      "sectionId": "S11-L013",
+      "sourceBlockIds": [
+        "S11-L013-P001"
+      ],
+      "sourcePage": 13,
+      "kind": "body",
+      "ko": "데이터 분석용 임시 더미 파일 임시파일 임시22",
+      "sourceTextSha256": "4a9608d84b3bcc7d80ff3674a62165bbb2bd11d9cec1e4f405b7ab3924418d97"
+    }
+  ]
+}
