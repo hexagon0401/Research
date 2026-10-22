@@ -19,6 +19,7 @@
     "audit:readings": "node scripts/audit-reading-editions.mjs"
   },
   "dependencies": {
+    "@chenglou/pretext": "1.0.0",
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource/ibm-plex-sans": "^5.2.7",
     "@fontsource/ibm-plex-sans-kr": "^5.3.0",

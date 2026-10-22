@@ -6,36 +6,21 @@ import {
   useLayoutEffect,
   useRef,
   useState,
-  useId,
 } from "react";
-import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { EssayBeat } from "@/content/essay";
 import atlas from "@/visuals/atlas.json";
 import { chapterFor, storyChapters, storyVisuals } from "@/visuals/story";
 import { reports } from "@/content/report-catalog";
 import { usePreferences } from "./preferences";
+import { SceneDiagram, GeographicLegend } from "./scene-diagram";
+export { SceneDiagram } from "./scene-diagram";
 export type SceneMeta = Pick<
   EssayBeat,
   "id" | "title" | "mode" | "country" | "tint" | "related"
 > & { targets?: Record<string, string> };
 const Context = createContext<{ scene: SceneMeta | null }>({ scene: null });
 const clamp = (v: number) => Math.max(0, Math.min(1, v));
-const smooth = (v: number) => v * v * (3 - 2 * v);
-function camera(scene: SceneMeta) {
-  const scale =
-    scene.id === "china-myanmar" || scene.id === "china-cambodia"
-      ? 1.5
-      : scene.country
-        ? 1.2
-        : 1;
-  const pin = scene.country ? atlas.world.pins[scene.country] : [360, 250];
-  return {
-    scale,
-    x: 360 - pin[0] * scale,
-    y: 250 - pin[1] * scale,
-  };
-}
 export function EssayExperience({
   scenes,
   children,
@@ -112,20 +97,8 @@ export function EssayExperience({
       const pos = positions[index];
       if (!pos) return;
       const fraction = clamp((axis - pos.top) / Math.max(1, pos.height));
-      const blend = reduced
-        ? 1
-        : smooth(
-            clamp(
-              (axis - pos.top) /
-                Math.max(1, Math.min(pos.height, viewport * 0.8)),
-            ),
-          );
-      const current = scenes[index],
-        preceding = scenes[Math.max(0, index - 1)];
-      const now = camera(current),
-        before = camera(preceding);
-      const currentType = storyVisuals[current.id].type,
-        previousType = storyVisuals[preceding.id].type;
+      const current = scenes[index];
+      const currentType = storyVisuals[current.id].type;
       read.current =
         integrationPosition && axis >= integrationPosition.top
           ? {
@@ -147,18 +120,6 @@ export function EssayExperience({
         String(reduced ? 1 : fraction),
       );
       element!.style.setProperty(
-        "--atlas-scale",
-        String(before.scale + (now.scale - before.scale) * blend),
-      );
-      element!.style.setProperty(
-        "--atlas-x",
-        `${before.x + (now.x - before.x) * blend}px`,
-      );
-      element!.style.setProperty(
-        "--atlas-y",
-        `${before.y + (now.y - before.y) * blend}px`,
-      );
-      element!.style.setProperty(
         "--hero-travel",
         `${reduced ? 0 : Math.min(y * 0.08, 40)}px`,
       );
@@ -169,14 +130,7 @@ export function EssayExperience({
         "arctic",
         "integration",
       ]) {
-        const weight =
-          currentType === previousType
-            ? Number(type === currentType)
-            : type === currentType
-              ? blend
-              : type === previousType
-                ? 1 - blend
-                : 0;
+        const weight = Number(type === currentType);
         element!.style.setProperty(`--mode-${type}`, String(weight));
       }
       element!.dataset.scene = current.id;
@@ -347,267 +301,12 @@ export function HeroAtlas() {
     </figure>
   );
 }
-function worldPins(scene: SceneMeta) {
-  if (scene.id === "china-myanmar") return ["cn", "mm"];
-  if (scene.id === "china-cambodia") return ["cn", "kh"];
-  if (scene.country) return [scene.country];
-  return ["us", "cn", "kr"];
-}
-const names: Record<string, { ko: string; en: string }> = {
-  us: { ko: "미국", en: "UNITED STATES" },
-  cn: { ko: "중국", en: "CHINA" },
-  kr: { ko: "한국", en: "KOREA" },
-  mm: { ko: "미얀마", en: "MYANMAR" },
-  kh: { ko: "캄보디아", en: "CAMBODIA" },
-};
-export function SceneDiagram({
-  scene,
-  compact = false,
-}: {
-  scene: SceneMeta;
-  compact?: boolean;
-}) {
-  const { lang } = usePreferences();
-  const visual = storyVisuals[scene.id];
-  const focusId = useId();
-  const highlighted = worldPins(scene);
-  const local = compact
-    ? ({
-        "--mode-world": Number(visual.type === "world"),
-        "--mode-globe": Number(visual.type === "globe"),
-        "--mode-arctic": Number(visual.type === "arctic"),
-        "--mode-concept": Number(visual.type === "concept"),
-        "--mode-integration": Number(visual.type === "integration"),
-        "--atlas-scale": 1,
-        "--atlas-x": "0px",
-        "--atlas-y": "0px",
-      } as CSSProperties)
-    : undefined;
-  const visible = (type: string) => !compact || visual.type === type;
-  return (
-    <svg
-      className={`essay-scene-diagram ${compact ? "compact" : ""}`}
-      style={local}
-      viewBox="0 0 720 520"
-      width="720"
-      height="520"
-      role="img"
-      aria-label={visual.heading[lang]}
-    >
-      <defs>
-        <radialGradient id={focusId}>
-          <stop stopColor="var(--signal)" stopOpacity=".18" />
-          <stop offset="1" stopColor="var(--signal)" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <title>{visual.heading[lang]}</title>
-      <desc>{visual.note[lang]}</desc>
-      {visible("world") && (
-        <g className="geo-layer layer-world">
-          <g className="geo-world-camera">
-            {!compact && <path d={atlas.world.grid} className="geo-grid" />}
-            {scene.country && !compact && (
-              <circle
-                cx={atlas.world.pins[scene.country][0]}
-                cy={atlas.world.pins[scene.country][1]}
-                r="88"
-                fill={`url(#${focusId})`}
-              />
-            )}
-            <path d={atlas.world.land} className="geo-land" />
-            {Object.entries(atlas.world.countries).map(([key, path]) => (
-              <path
-                key={key}
-                d={path}
-                className={
-                  highlighted.includes(key)
-                    ? "geo-country selected"
-                    : "geo-country"
-                }
-              />
-            ))}
-            {Object.entries(atlas.world.pins)
-              .filter(
-                ([key]) =>
-                  ["us", "cn", "kr"].includes(key) || highlighted.includes(key),
-              )
-              .map(([key, point]) => (
-                <g
-                  key={key}
-                  transform={`translate(${point[0]} ${point[1]})`}
-                  className={
-                    highlighted.includes(key) ? "geo-pin selected" : "geo-pin"
-                  }
-                >
-                  <circle r={highlighted.includes(key) ? 7 : 3} />
-                  {highlighted.includes(key) && (
-                    <>
-                      <path d="M-16 0h6m20 0h6M0-16v6m0 20v6" />
-                      <text
-                        x={key === "us" ? -16 : 16}
-                        y={key === "kh" ? 32 : -16}
-                        textAnchor={key === "us" ? "end" : "start"}
-                      >
-                        {names[key][lang]}
-                      </text>
-                    </>
-                  )}
-                </g>
-              ))}
-          </g>
-          <text x="32" y="496" className="diagram-footnote">
-            {lang === "ko"
-              ? "지리적 비교 범위 / NATURAL EARTH"
-              : "GEOGRAPHIC SCOPE / NATURAL EARTH"}
-          </text>
-        </g>
-      )}
-      {visible("globe") && (
-        <g className="geo-layer layer-globe">
-          <circle cx="360" cy="258" r="202" className="geo-sphere" />
-          <path d={atlas.globe.grid} className="geo-grid" />
-          <path d={atlas.globe.land} className="geo-land" />
-          <path d="M84 258h72m408 0h72" className="geo-registration" />
-          <text
-            x="360"
-            y="504"
-            textAnchor="middle"
-            className="diagram-footnote"
-          >
-            {lang === "ko"
-              ? "기업의 역량 / 국가적 스케일"
-              : "CORPORATE CAPABILITY / NATIONAL SCALE"}
-          </text>
-        </g>
-      )}
-      {visible("arctic") && (
-        <g className="geo-layer layer-arctic">
-          <path d={atlas.arctic.grid} className="geo-grid" />
-          <circle cx="360" cy="250" r="220" className="geo-sphere" />
-          <path d={atlas.arctic.land} className="geo-land" />
-          {Object.entries(atlas.arctic.pins).map(([key, point], index) => (
-            <g
-              key={key}
-              transform={`translate(${point[0]} ${point[1]})`}
-              className="geo-pin selected"
-            >
-              <circle r="5" />
-              <path
-                d={`M-8 0H${-28 - index * 32}v${index === 0 ? -32 : index === 1 ? -64 : 24}`}
-              />
-              <text
-                x={-36 - index * 32}
-                y={index === 0 ? -28 : index === 1 ? -60 : 28}
-                textAnchor="end"
-              >
-                {key.toUpperCase()}
-              </text>
-            </g>
-          ))}
-          <text
-            x="360"
-            y="244"
-            textAnchor="middle"
-            className="diagram-footnote"
-          >
-            90° N
-          </text>
-          <text
-            x="360"
-            y="504"
-            textAnchor="middle"
-            className="diagram-footnote"
-          >
-            {lang === "ko"
-              ? "북극권 참고 위치 / 관측 항적 아님"
-              : "ARCTIC REFERENCE LOCATIONS / NOT VESSEL TRACKS"}
-          </text>
-        </g>
-      )}
-      {visible("concept") && (
-        <g className="geo-layer layer-concept">
-          <path d="M144 270H576" className="concept-thread" pathLength="1" />
-          {visual.steps.map((step, index) => (
-            <g key={index} transform={`translate(${64 + index * 216} 172)`}>
-              <rect
-                width="160"
-                height="160"
-                className={
-                  index === 1 ? "concept-block focal" : "concept-block"
-                }
-              />
-              <text x="16" y="32" className="diagram-index">
-                0{index + 1}
-              </text>
-              <text x="80" y="98" textAnchor="middle" className="diagram-label">
-                {step[lang]}
-              </text>
-            </g>
-          ))}
-          <path d="M144 356v40h432v-40" className="concept-boundary" />
-          <text
-            x="360"
-            y="432"
-            textAnchor="middle"
-            className="diagram-footnote"
-          >
-            {lang === "ko"
-              ? "개념적 연결 / 검증 대상 메커니즘"
-              : "CONCEPTUAL CONNECTION / A MECHANISM TO EXAMINE"}
-          </text>
-        </g>
-      )}
-      {visible("integration") && (
-        <g className="geo-layer layer-integration">
-          <path d="M148 260h112M260 60v400" className="concept-thread" />
-          <rect
-            x="52"
-            y="212"
-            width="112"
-            height="96"
-            className="concept-block focal"
-          />
-          <text x="108" y="269" textAnchor="middle" className="diagram-label">
-            S00
-          </text>
-          {reports
-            .filter((report) => report.id !== "S00")
-            .map((report, index) => (
-              <g key={report.id}>
-                <path
-                  d={`M260 ${72 + index * 32}H${index % 2 === 0 ? 440 : 520}`}
-                  className="concept-boundary"
-                />
-                <circle
-                  cx={index % 2 === 0 ? 440 : 520}
-                  cy={72 + index * 32}
-                  r="4"
-                  className="geo-signal"
-                />
-                <text
-                  x={index % 2 === 0 ? 456 : 536}
-                  y={78 + index * 32}
-                  className="diagram-index"
-                >
-                  {report.id}
-                </text>
-              </g>
-            ))}
-          <text x="52" y="496" className="diagram-footnote">
-            {lang === "ko"
-              ? "13개의 연구 / 공유하는 질문과 분석 역할"
-              : "13 STUDIES / SHARED QUESTIONS AND ANALYTICAL ROLES"}
-          </text>
-        </g>
-      )}
-    </svg>
-  );
-}
 export function InlineVisual({ scene }: { scene: SceneMeta }) {
   const { lang } = usePreferences();
   return (
     <figure className="essay-mobile-diagram">
-      <SceneDiagram scene={scene} compact />
+      <SceneDiagram key={scene.id} scene={scene} compact />
+      <GeographicLegend scene={scene} />
       <div className="inline-mechanism">
         {storyVisuals[scene.id].steps.map((step, index) => (
           <span key={index}>{step[lang]}</span>
@@ -637,7 +336,8 @@ export function EssayVisual() {
         <span>{chapter.title[lang]}</span>
       </div>
       <figure className="essay-visual-geometry">
-        <SceneDiagram scene={scene} />
+        <SceneDiagram key={scene.id} scene={scene} />
+        <GeographicLegend scene={scene} />
         <figcaption className="visual-heading">
           {visual.heading[lang]}
         </figcaption>

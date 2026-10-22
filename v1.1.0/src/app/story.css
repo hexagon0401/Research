@@ -1506,3 +1506,95 @@ html[data-motion="reduced"] .material-cover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+/* 2.3 — terrain, points, leaders and readable HTML labels are separate layers. */
+.scene-stage {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  font-family: var(--font-body);
+}
+.scene-terrain {
+  animation: terrain-arrive 180ms ease-out both;
+}
+@keyframes terrain-arrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.map-annotation-lines {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+.map-leader {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-opacity: 0.65;
+}
+.map-point {
+  fill: var(--signal);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+.map-label-layer {
+  animation: terrain-arrive 120ms 180ms ease-out both;
+}
+.map-label {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--story-rule);
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 14px/1.5 var(--font-body);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.map-label:disabled {
+  opacity: 1;
+  cursor: default;
+}
+.map-html-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  list-style: none;
+  padding: 8px 0;
+  font: 14px/1.5 var(--font-body);
+}
+.map-html-legend li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.geo-land,
+.geo-country,
+.geo-grid,
+.geo-sphere {
+  vector-effect: non-scaling-stroke;
+}
+.geo-grid {
+  stroke-opacity: 0.08;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene-terrain,
+  .map-label-layer {
+    animation: none;
+  }
+}
+html[data-motion="reduced"] .scene-terrain,
+html[data-motion="reduced"] .map-label-layer {
+  animation: none;
+}
