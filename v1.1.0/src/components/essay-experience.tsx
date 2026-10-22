@@ -419,6 +419,27 @@ export function StoryNavigation() {
             <span aria-hidden="true">＋</span>
           </summary>
           <div className="story-menu-panel">
+            <div
+              className="story-menu-language language-switch"
+              aria-label="Reading interface language"
+            >
+              {(["en", "ko"] as const).map((language) => (
+                <button
+                  key={language}
+                  lang={language}
+                  aria-pressed={lang === language}
+                  onClick={() => {
+                    setLang(language);
+                    menu.current?.removeAttribute("open");
+                    menu.current
+                      ?.querySelector("summary")
+                      ?.focus({ preventScroll: true });
+                  }}
+                >
+                  {language === "en" ? "English" : "한국어"}
+                </button>
+              ))}
+            </div>
             {storyChapters.map((item) => (
               <div key={item.id} className="story-menu-chapter">
                 <a
@@ -449,27 +470,6 @@ export function StoryNavigation() {
             <Link href="/archive">
               {lang === "ko" ? "연구 아카이브" : "Research archive"} ↗
             </Link>
-            <div
-              className="story-menu-language language-switch"
-              aria-label="Reading interface language"
-            >
-              {(["en", "ko"] as const).map((language) => (
-                <button
-                  key={language}
-                  lang={language}
-                  aria-pressed={lang === language}
-                  onClick={() => {
-                    setLang(language);
-                    menu.current?.removeAttribute("open");
-                    menu.current
-                      ?.querySelector("summary")
-                      ?.focus({ preventScroll: true });
-                  }}
-                >
-                  {language === "en" ? "English" : "한국어"}
-                </button>
-              ))}
-            </div>
           </div>
         </details>
         <progress

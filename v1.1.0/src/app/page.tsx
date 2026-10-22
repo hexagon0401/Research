@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Localized as L } from "@/components/preferences";
 import {
   EssayExperience,
   StoryNavigation,
@@ -584,17 +585,5 @@ function ComparativeReading() {
         </Link>
       </p>
     </section>
-  );
-}
-
-/** Bilingual narrative stays server HTML. Locale changes toggle CSS, without rehydrating source paragraphs. */
-function L({ en, ko }: { en: React.ReactNode; ko: React.ReactNode }) {
-  return (
-    <>
-      <span className="essay-copy-en">{en}</span>
-      <span className="essay-copy-ko" lang="ko">
-        {ko}
-      </span>
-    </>
   );
 }
