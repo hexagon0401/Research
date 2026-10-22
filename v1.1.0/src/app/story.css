@@ -1655,7 +1655,7 @@ html[data-motion="reduced"] .map-label-layer {
   background: transparent;
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: var(--signal);
+  text-decoration-color: var(--ink);
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
 }
@@ -2209,9 +2209,6 @@ html[data-motion="reduced"] .capability-expansion .scene-terrain {
 .static-visual-explanation li {
   margin-block: 16px;
 }
-html:not([data-motion]) .essay-beat {
-  display: block;
-}
 @media (max-width: 767px) {
   .story-navigation-inner {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -2235,12 +2232,6 @@ html:not([data-motion]) .essay-beat {
   font-size: 16px;
   line-height: 1.65;
   margin-block: 16px 24px;
-}
-html:not([data-motion]) .beat-reading {
-  max-width: 72ch;
-}
-html:not([data-motion]) .is-emphasis .beat-reading {
-  max-width: none;
 }
 /* Full-frame local SVG images are cached once and lazy-loaded below the fold. */
 .terrain-viewport {

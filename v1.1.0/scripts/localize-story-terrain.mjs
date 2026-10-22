@@ -14,7 +14,7 @@ for (const kind of ["world", "globe", "arctic"]) {
         : "";
   writeFileSync(
     `public/visuals/${kind}.svg`,
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">${style}<title>Natural Earth · ${kind}</title>${sphere}<path class="grid" d="${a.grid}"/><path class="land" d="${a.land}"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520"><g id="terrain">${style}<title>Natural Earth · ${kind}</title>${sphere}<path class="grid" d="${a.grid}"/><path class="land" d="${a.land}"/></g></svg>`,
   );
 }
 writeFileSync(

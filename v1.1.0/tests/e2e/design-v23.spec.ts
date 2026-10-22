@@ -147,13 +147,17 @@ test("source round trips and language changes keep the exact passage", async ({
       ),
     )
     .toBeLessThan(24);
+  await passage.locator(".essay-citation").scrollIntoViewIfNeeded();
+  const beforeBack = await passage.evaluate(
+    (el) => el.getBoundingClientRect().top,
+  );
   await passage.locator(".essay-citation").click();
   await page.goBack();
   await expect
     .poll(() =>
       passage.evaluate(
         (el, offset) => Math.abs(el.getBoundingClientRect().top - offset),
-        before,
+        beforeBack,
       ),
     )
     .toBeLessThan(24);
@@ -239,4 +243,21 @@ test("static modes retain every case, explanation and source without animation",
   await p.locator("#us-mission .essay-citation").first().click();
   await expect(p.locator("#transcript")).toBeVisible();
   await context.close();
+});
+
+test("the first-fold globe reuses visible local vector geometry", async ({
+  page,
+}, info) => {
+  await page.goto("/");
+  const globe = page.locator(".hero-atlas use");
+  await expect(globe).toHaveAttribute("href", "/visuals/globe.svg#terrain");
+  await expect
+    .poll(() =>
+      globe.evaluate((el) => (el as SVGGraphicsElement).getBBox().width),
+    )
+    .toBeGreaterThan(300);
+  if (info.project.name === "desktop")
+    await page
+      .locator(".essay-hero")
+      .screenshot({ path: ".local/validation/hero-desktop.png" });
 });

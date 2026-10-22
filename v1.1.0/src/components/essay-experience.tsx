@@ -34,6 +34,7 @@ export function EssayExperience({
   const lastReduced = useRef(reduced);
   const read = useRef({ id: scenes[0].id, fraction: 0, started: false });
   const passage = useRef<{ id: string; offset: number } | null>(null);
+  const restoredAnchor = useRef<string | null>(null);
   useEffect(() => {
     const capture = () => {
       const candidates = Array.from(
@@ -41,9 +42,13 @@ export function EssayExperience({
           "[data-reading-passage], [data-essay-beat]",
         ) ?? [],
       );
-      const el = candidates
-        .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
-        .at(-1);
+      const el =
+        (restoredAnchor.current
+          ? document.getElementById(restoredAnchor.current)
+          : null) ??
+        candidates
+          .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
+          .at(-1);
       if (el)
         passage.current = { id: el.id, offset: el.getBoundingClientRect().top };
     };
@@ -117,9 +122,11 @@ export function EssayExperience({
         ) ?? [],
       );
       const current =
+        link.closest<HTMLElement>("[data-reading-passage]") ??
         candidates
           .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
-          .at(-1) ?? candidates[0];
+          .at(-1) ??
+        candidates[0];
       if (current)
         try {
           sessionStorage.setItem(
@@ -148,6 +155,8 @@ export function EssayExperience({
           return;
         const target = document.getElementById(saved.anchor);
         if (target) {
+          restoredAnchor.current = saved.anchor;
+          passage.current = { id: saved.anchor, offset: saved.offset };
           window.scrollBy({
             top: target.getBoundingClientRect().top - saved.offset,
             behavior: "instant",
@@ -156,6 +165,26 @@ export function EssayExperience({
         }
       } catch {}
     };
+    const releaseAnchor = () => {
+      restoredAnchor.current = null;
+    };
+    const releaseByKey = (event: KeyboardEvent) => {
+      if (
+        [
+          "ArrowDown",
+          "ArrowUp",
+          "PageDown",
+          "PageUp",
+          "Home",
+          "End",
+          " ",
+        ].includes(event.key)
+      )
+        releaseAnchor();
+    };
+    window.addEventListener("wheel", releaseAnchor, { passive: true });
+    window.addEventListener("touchmove", releaseAnchor, { passive: true });
+    window.addEventListener("keydown", releaseByKey);
     const afterFonts = () => {
       if (alive)
         requestAnimationFrame(() => {
@@ -168,6 +197,9 @@ export function EssayExperience({
     const el = root.current;
     return () => {
       alive = false;
+      window.removeEventListener("wheel", releaseAnchor);
+      window.removeEventListener("touchmove", releaseAnchor);
+      window.removeEventListener("keydown", releaseByKey);
       el?.removeEventListener("click", save);
       window.removeEventListener("pageshow", afterFonts);
     };
@@ -228,7 +260,12 @@ export function EssayExperience({
       const closest = passages
         .filter((el) => el.getBoundingClientRect().top <= viewport * 0.35)
         .at(-1);
-      const anchor = closest ?? activeBeat;
+      const anchor =
+        (restoredAnchor.current
+          ? document.getElementById(restoredAnchor.current)
+          : null) ??
+        closest ??
+        activeBeat;
       passage.current = {
         id: anchor.id,
         offset: anchor.getBoundingClientRect().top,

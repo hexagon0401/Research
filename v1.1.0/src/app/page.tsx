@@ -113,6 +113,9 @@ export default async function Home() {
   );
   return (
     <EssayExperience scenes={scenes}>
+      <noscript>
+        <style>{`.essay-beat{display:block}.beat-reading{max-width:72ch}.is-emphasis .beat-reading{max-width:none}`}</style>
+      </noscript>
       <header id="question" className="essay-hero section-shell">
         <span className="eyebrow">
           <span className="signal-square" /> INTEGRATED INDEPENDENT RESEARCH /
