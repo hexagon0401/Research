@@ -82,9 +82,321 @@
     "S05-R005-P010": {
       "sourceTextSha256": "e34a26bd4e6e4246b32595f40f498f35dc454bd9efc9d0a825dd3d39156bd119",
       "en": "Yoon, M. (2025, May). The innovative potential of stablecoins: Policy proposals for Korea's fintech ecosystem. National Assembly Policy Forum, Seoul, South Korea."
+    },
+    "S05-R003-P010": {
+      "sourceTextSha256": "e9d44e58e198ab24fa57e7d556f09deeb1ed9dbdbe41a0c1d166825397886144",
+      "en": "II. Main discussion"
+    },
+    "S05-R004-P007": {
+      "sourceTextSha256": "54b81ce0aceb1b66573d316047ba562de1ad0dc9ddbf559429e0444ec8282637",
+      "en": "III. Conclusion"
+    },
+    "S05-R001-P001": {
+      "sourceTextSha256": "76762363dc01001226dfa2b9437618112e222fd6827e67e76c363e7e1506211a",
+      "en": "Global Citizenship Education"
+    },
+    "S05-R001-P002": {
+      "sourceTextSha256": "d1a63c9024a31d8d6d35ec08a931a94cf50cc880b092ea89de7f044a1fda5ada",
+      "en": "2025 Individual Report"
+    },
+    "S05-R001-P003": {
+      "sourceTextSha256": "f68964c016cded404a590520cceae9d802912bcfb6b7c765efd08f0c07b131ea",
+      "en": "[Class information withheld], [redacted] (Global Issues Division)"
+    },
+    "S05-R001-P004": {
+      "sourceTextSha256": "d857faa9498eb0280cc75710b8e07d439baceee55d097fcadddf9bc75eeb839d",
+      "en": "Technology, Money and Inequality: Korea's Crisis of Economic Trust and the Policy Implications of Stablecoins"
+    },
+    "S05-R001-P005": {
+      "sourceTextSha256": "cb0a5f6a3b4c06d48239fffadc6731047688e481a1c4562125c6c3cbe68008b1",
+      "en": "[Division head]"
+    },
+    "S05-R001-P006": {
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765",
+      "en": "[redacted] [redacted]"
+    },
+    "S05-R001-P007": {
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765",
+      "en": "[redacted] [redacted]"
+    },
+    "S05-R001-P008": {
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765",
+      "en": "[redacted] [redacted]"
+    },
+    "S05-R001-P009": {
+      "sourceTextSha256": "382d4b7f4e6ddac28447e9bed6786204e0595c3716e5f719fa83accaa99db765",
+      "en": "[redacted] [redacted]"
+    },
+    "S05-R001-P010": {
+      "sourceTextSha256": "0ed1487ff11237a0db4fa3a8518ccf150f6abedc53273e05e337b3b7d2087641",
+      "en": "[redacted]"
+    },
+    "S05-R001-P011": {
+      "sourceTextSha256": "0ed1487ff11237a0db4fa3a8518ccf150f6abedc53273e05e337b3b7d2087641",
+      "en": "[redacted]"
+    },
+    "S05-R001-P012": {
+      "sourceTextSha256": "0ed1487ff11237a0db4fa3a8518ccf150f6abedc53273e05e337b3b7d2087641",
+      "en": "[redacted]"
+    },
+    "S05-R001-P015": {
+      "sourceTextSha256": "9fd9c1e96cf61754db2001eb2691d8ba7d62775271cf8a2bc65aa7f11f722137",
+      "en": "Outline of the second-year Global Citizenship Education activity report, 2025"
+    },
+    "S05-R001-P016": {
+      "sourceTextSha256": "c7724ec3d52a6370e2d4094a07685a477fd8cc4031c09cc29ae46b322051af85",
+      "en": "Social problem to address"
+    },
+    "S05-R001-P017": {
+      "sourceTextSha256": "d857faa9498eb0280cc75710b8e07d439baceee55d097fcadddf9bc75eeb839d",
+      "en": "Technology, Money and Inequality: Korea's Crisis of Economic Trust and the Policy Implications of Stablecoins"
+    },
+    "S05-R001-P018": {
+      "sourceTextSha256": "34595f65bcae55c3590a8ec8ea5717aefcc5a455b50c4704e28a65c273d875d6",
+      "en": "Reason for selection"
+    },
+    "S05-R001-P019": {
+      "sourceTextSha256": "31d237bdbed67785d3cdffb5fe2278ce181332b77f95374aa7ff076e71f1b2f4",
+      "en": "(Motivation for inquiry)"
+    },
+    "S05-R001-P020": {
+      "sourceTextSha256": "c9695d37c8c845015ff6696228481a1ad23cf551ed456b40d15e4bc7aa8332ad",
+      "en": "— I have recently felt Korea's economic crisis. — Seeing exchange rates rise despite a falling dollar index and dollar value, together with statistics on wealthy people's departures, made me believe Korea should recognize a crisis. I discuss this in connection with my intended field, technology management."
+    },
+    "S05-R002-P001": {
+      "sourceTextSha256": "ebc2efe0e47a86f8d5744f325888bb86faaf62858203de79ab0fcc596ea21cbe",
+      "en": "Relevant Sustainable Development Goals and targets"
+    },
+    "S05-R002-P002": {
+      "sourceTextSha256": "df7bc06af8bbd8897c0b0100908d2cb2e58b238277746d694fa2de711c14f21b",
+      "en": "10. Reduced inequalities — reduce inequality within and among countries"
+    },
+    "S05-R002-P003": {
+      "sourceTextSha256": "d064c507eaa4d7194be28dda7f09fd3101853658e3681905344bcbc159b0c326",
+      "en": "10.5. Financial inequality"
+    },
+    "S05-R002-P004": {
+      "sourceTextSha256": "c0d018c2ac8dfe6fe8534dcfa5ab1c114dfc6f68636d225e914ae113e6581fe4",
+      "en": "Operational direction and effects"
+    },
+    "S05-R002-P005": {
+      "sourceTextSha256": "084565ed9968dd546ff3bc978ecd6ad439167d1fa9d6c8330b975f602cea9ca6",
+      "en": "Supporting theory / concept"
+    },
+    "S05-R002-P006": {
+      "sourceTextSha256": "0c27dd88e3a852782d17ae27a0c7009812f5a96e351d858ca4f918490f10f154",
+      "en": "Agency theory (Jensen & Meckling, 1976)"
+    },
+    "S05-R002-P007": {
+      "sourceTextSha256": "617a338d7adfc848e1084afd628414118d5e9b64a75e87295b0c61f0c45010a2",
+      "en": "Explains conflicts of interest and risks between principals (the state and citizens) and agents (corporate managers or technology firms), and helps explain trust between firms and government in financial systems."
+    },
+    "S05-R002-P008": {
+      "sourceTextSha256": "46cbbb7be6386b9f63f86f22da2999b0a8a7f1c9703661d79f94567d8e31602f",
+      "en": "Describe anything you learned while preparing for Global Citizenship Education."
+    },
+    "S05-R002-P009": {
+      "sourceTextSha256": "467e4308bd6abcd637d11b2d1981a527c8fbd9a160e13ffc56bbd65c657eed87",
+      "en": "(Leave blank if none.)"
+    },
+    "S05-R002-P010": {
+      "sourceTextSha256": "b5125c8b986500dc52764c382f0312072c953d46c1fb872342070f68ccd96555",
+      "en": "Personal capabilities developed or reflections from the activity"
+    },
+    "S05-R002-P011": {
+      "sourceTextSha256": "c6bd2c392ef83385f8fa40034ac1dac486e7af23139ee7253d187a9341ba0447",
+      "en": "(Describe specific efforts or actions demonstrating community engagement, self-direction, information literacy or problem-solving.)"
+    },
+    "S05-R002-P012": {
+      "sourceTextSha256": "58e1401ca310fc4e4c54bfc8c6cf4125958253831b2921b4c55dc10ebdc5264c",
+      "en": "Evaluation of the Global Citizenship Education activity results"
+    },
+    "S05-R002-P013": {
+      "sourceTextSha256": "296473e250c81f4076460b3292c26af37b5ab35eaab005c5f20bd822dbd250e2",
+      "en": "(Add any comments or evaluation of the results.)"
+    },
+    "S05-R002-P014": {
+      "sourceTextSha256": "cc6b2c0f0358288205b14fd4129a9357cb3855f914652f8b467f58a6bb3a3260",
+      "en": "Other comments"
+    },
+    "S05-R002-P015": {
+      "sourceTextSha256": "467e4308bd6abcd637d11b2d1981a527c8fbd9a160e13ffc56bbd65c657eed87",
+      "en": "(Leave blank if none.)"
+    },
+    "S05-R002-P016": {
+      "sourceTextSha256": "860d0c5d56c4c3190c2da489c4f09401e7b55e088603595591cd0f9d38cab3ee",
+      "en": "I have tried to connect economics and management as closely as possible. Since I also incorporated connections with Korea, which I had rarely used, and strong criticism of the much-discussed won stablecoin, please focus on my critical perspective and my effort to look macroscopically beyond technology management."
+    },
+    "S05-R002-P017": {
+      "sourceTextSha256": "99ff28a571c98e486d470404311ab2343743b9d5b06c2b022bdc80d613c29382",
+      "en": "Report abstract"
+    },
+    "S05-R002-P018": {
+      "sourceTextSha256": "fe0aefd363ccd31ac51b2acb0f1c9a71e83e508aec25fb104cfcd1b3b12c7272",
+      "en": "(Summarize the report using key terms.)"
+    },
+    "S05-R002-P019": {
+      "sourceTextSha256": "33b39ae2359ff465fe1551b6d42ebaadb7e951dd10b3269d91c026dcc9c783fd",
+      "en": "This report analyzes how Korea's rapidly increasing wealthy-person outflows, won depreciation and KOSPI bubble between 2022 and 2025 connect to a collapse in national financial trust. It identifies mechanisms through which these crises deepen inequality by relating them to asset and income gaps among social groups. Tether (USDT) and Palantir (Foundry) illustrate how private technology firms replace national monetary systems. It also diagnoses structural limitations and risks of domestic won stablecoins and proposes cooperation between firms and government to restore trust and address inequality. Combining technology management and financial policy, the study contributes a multifaceted account of Korea's complex economic crisis and possible solutions."
+    },
+    "S05-R002-P020": {
+      "sourceTextSha256": "4c8d6d58206108183250a2fce7adb951cb461ff920e6c138a6a9d2bc41855d1c",
+      "en": "<Technology, Money and Inequality: Korea's Crisis of Economic Trust and the Policy Implications of Stablecoins>"
+    },
+    "S05-R003-P001": {
+      "sourceTextSha256": "d168b8fb848bdd0cb16806b7ab3a7a19c255a81499d449c94f5053d223b1d9b2",
+      "en": "I. Introduction"
+    },
+    "S05-R003-P002": {
+      "sourceTextSha256": "86ea6d01d978bda876a254aa46bd39ffd434c758bd2d71a9a9d0b26c29747d43",
+      "en": "1. Background and need for research"
+    },
+    "S05-R003-P003": {
+      "sourceTextSha256": "26accc09b6e6acd8c5a2ca38157dd21fc1db03f69b5e9c4e2b669dc1a6e9d26a",
+      "en": "Investment-migration consultancy Henley & Partners recently published The Henley Private Wealth Migration Report 2025, showing how wealthy people and their assets move across countries. Published consistently for more than a decade from 2013 to 2025, the reports show continued growth in investment migration except during the coronavirus-affected years of 2020–2021. In 2025, 2,400 millionaires—people holding more than approximately KRW 1.4 billion—emigrated, taking USD 15.2 billion, nearly KRW 21 trillion, with them. This wealth outflow ranked fourth worldwide, behind Britain, China and India."
+    },
+    "S05-R003-P004": {
+      "sourceTextSha256": "44aea8011c6041ac9ce8717298ee18a333059e198a5f782d1db1eabe2e1beb33",
+      "en": "The exchange rate rises day by day. It reached KRW 1,470 during the December 3 martial-law incident, fell to KRW 1,370 during the impeachment period and, nearly six months after the Lee Jae-myung administration took office, has again exceeded KRW 1,470. The dollar index, meanwhile, has steadily declined. This can be understood as the won's value falling below the dollar's. Rapid KOSPI growth alongside a declining dollar index and an even weaker won may become a bubble. Meanwhile, the Lee administration's inequality policies, including debt forgiveness and livelihood support payments, have increased supplementary budgets and national debt."
+    },
+    "S05-R003-P005": {
+      "sourceTextSha256": "2f8fda14c440b0d273efc40d681b22ae4a74a506f7992fc04db59a3733a2e6b7",
+      "en": "Korea is entering an age of monetary inequality. Unequal access to assets, income gaps and differences in living standards persist alongside won depreciation. Can a won stablecoin, one of the campaign promises considered most important to Lee's election, solve this problem? National trust is collapsing. In these circumstances, can a won stablecoin be the key policy stabilizing Korea's economy? How should Korea overcome the situation?"
+    },
+    "S05-R003-P006": {
+      "sourceTextSha256": "e09f1064365e6679bb85df2e1c985ccb2a1eb741442dd3d4a7506b9e48fde4d0",
+      "en": "2. Research objectives"
+    },
+    "S05-R003-P007": {
+      "sourceTextSha256": "87415caedb87b0c0d1768ea90e05c802309f7dd2d52983ddbc1c3e8c4b77d529",
+      "en": "The study has three objectives. First, identify why wealthy-person outflows and the exchange-rate crisis occurred and how they weaken financial sovereignty. It examines these outflows, currency pressures and the KOSPI bubble not as separate phenomena but as structural signals of collapsing national financial trust, and identifies how those signals deepen inequality among classes."
+    },
+    "S05-R003-P008": {
+      "sourceTextSha256": "5e3260f5b1c6e1365419ba6a4195fe7257001c564971129eb7ceb37f7fba6dfc",
+      "en": "Second, examine how America responded through firms such as Tether and Palantir and how technological leadership of financial systems deepened inequality. It considers how these companies restored national trust while also creating and intensifying inequalities through their dominance of finance."
+    },
+    "S05-R003-P009": {
+      "sourceTextSha256": "32e5c4bd16406083a343e1628406109656b4a9cf1781fd79117003308f67650c",
+      "en": "Third, identify problems with won stablecoins and propose how to restore national trust: how corporate-led trust restoration and government policy support should be integrated, and how this can reduce inequality."
+    },
+    "S05-R003-P011": {
+      "sourceTextSha256": "3ec0a09ea241945ebe78c5adb6d8c01839ddd7f10b0380c88402462e82e782c9",
+      "en": "1. Inequality created by the collapse of national financial trust"
+    },
+    "S05-R003-P012": {
+      "sourceTextSha256": "142c0cfd3ef1d87689d4d709900f1d5b1ff08cae471cbbd64019f4f1d7f3eaa8",
+      "en": "Korea's wealthy-person outflow signals collapsing economic trust. Henley & Partners reports a sixfold increase, from 400 people in 2022 to 2,400 in 2025, with around KRW 21 trillion leaving. Three factors drive this: a 50% inheritance-tax rate, the OECD's second highest; political instability; and hostility toward the wealthy."
+    },
+    "S05-R003-P013": {
+      "sourceTextSha256": "be1fc3f3ea19fc6cdc8ab284d4f2c6da4c76116199f4bff18f73c91e11c55372",
+      "en": "The exchange rate simultaneously exceeded KRW 1,470 despite a falling dollar index, indicating an absolute decline in trust in the won. A vicious cycle is underway: wealthy people leave → won demand falls → exchange rates rise → import prices rise → government spending increases → trust falls further. The KOSPI also surpassed 4,000, but this is a bubble: shares rose 20% against economic growth of 1.8%, while household debt reached 89.4% of GDP. Only asset owners in the top 10% benefit, deepening inequality. Wealthy-person outflows, surging exchange rates and suspicions of a KOSPI bubble are different signals of the same collapse in national trust."
+    },
+    "S05-R003-P014": {
+      "sourceTextSha256": "934286d732a07b3373e5fee09a432b4bba76b87a901b9b5f71cd6771f5308db2",
+      "en": "Declining trust in the national economy also causes inequality. Wealth outflows, exchange-rate surges and the KOSPI bubble not only signal collapse but maximize asset gaps among classes. Three mechanisms can be distinguished."
+    },
+    "S05-R003-P015": {
+      "sourceTextSha256": "0f0db66465e63f996477ff67be338702f99ffd3770312024acc1060df935f22c",
+      "en": "First, currency depreciation affects classes differently. High-net-worth people hold foreign-currency assets such as dollars or USDT and gain from exchange-rate increases. Ordinary and low-income people hold assets only in won, so their real purchasing power falls. In 2025, household assets for the top 10% are KRW 162 million, versus only KRW 1.28 million for the bottom 10%. An exchange rate of KRW 1,470 widens the gap."
+    },
+    "S05-R003-P016": {
+      "sourceTextSha256": "8a77e5b18dfbeeb35c8241a282008564c6f0d994ef47a59af13f207891725c18",
+      "en": "Second, rapid KOSPI growth entrenches inequality according to asset ownership. Share ownership is concentrated among the top 20%, while most of the bottom 50% hold almost no shares. A 20% KOSPI gain therefore accrues only to asset owners. Meanwhile, rising import prices from currency depreciation increase ordinary people's living costs."
+    },
+    "S05-R003-P017": {
+      "sourceTextSha256": "4fdab36223ab63d0825643849204f1b0e87c59df6166e014f00547ffb2902433",
+      "en": "Third, large increases in public debt weaken currency trust and make low-income people more vulnerable. The Lee administration's livelihood support and debt forgiveness may help briefly, but in the long run lower trust in the won and drive exchange rates higher again. The resulting living-cost increases offset benefits received by low-income households."
+    },
+    "S05-R003-P018": {
+      "sourceTextSha256": "92afa239f7ec8016ed13138916b237b0153cdd4b2093a833efd0be017d6e904b",
+      "en": "Statistics make this clear. As of 2024, average annual income for the top 10% was KRW 21.051 billion and for the bottom 10%, KRW 1.304 billion. The income gap exceeded KRW 20 billion. More serious is the asset gap: KRW 162 million for the top 10% versus KRW 1.28 million for the bottom 10%, approximately 125 times. Exchange-rate and share-price fluctuations continue widening these gaps."
+    },
+    "S05-R003-P019": {
+      "sourceTextSha256": "f29a54e3bea8d36407da4cb166dfd06215b5db6e9226f350e70a27add1ff2db0",
+      "en": "2. The American case: rebuilding trust through firms"
+    },
+    "S05-R003-P020": {
+      "sourceTextSha256": "f219571091e13b29f2ba0624a5a354b97f42f82b88a6be71ccae5de5f280bf73",
+      "en": "Tether (USDT), with a market capitalization of USD 183 billion, now functions as a de facto private central bank. Its USD 128 billion daily volume exceeds foreign-exchange turnover in major currencies. In 2025 alone, KRW 89 trillion of Tether was settled on-chain, with average net inflows of USD 400 million each month. Profitability is extremely high: USD 13 billion in net profit in 2024 and an expected USD 15 billion in 2025."
+    },
+    "S05-R003-P021": {
+      "sourceTextSha256": "3c25bd1f4af7abb7a7de8840d1a5bab11899e080a0c793416c5b4add78582870",
+      "en": "Tether's development rests on strong security and an absence of central-bank problems such as inconvenient exchange and depreciation caused by weak national trust. Pegging its value to the reserve-currency dollar addresses Bitcoin's longstanding stability problem. In low-trust countries with unstable currencies, and particularly for migrant workers supporting distant families in Southeast Asia, stablecoins can address slow, inconvenient remittances, fees and the instability of holding local money. With remittances now easy through online Bitcoin wallets, this approach is common among foreign workers and in low-trust countries with weak currencies."
+    },
+    "S05-R003-P022": {
+      "sourceTextSha256": "b72df1cbf34c0d2df46c1081211a0ea1ff54e2b39b1ba915ac37bc9aeb580c98",
+      "en": "Yet U.S. Treasuries underpin USDT. Tether pegs to the dollar and buys Treasuries with each dollar it receives. USDT thus performs two roles simultaneously: absorbing currencies worldwide and paying off American government bonds. The CEO's declaration that USDT is no longer cryptocurrency but quasi-government money can be understood in this context."
+    },
+    "S05-R003-P023": {
+      "sourceTextSha256": "84aa84b6dbd8f70ec12cfc56e4b1146d049abc3c298cdc4fc546596dc0c3a33d",
+      "en": "These American stablecoins effectively defended against rising national debt and a falling dollar index. Palantir also developed Foundry, previously used for corporate decisions and management, into AML and Crypto applications, enabling anti-money-laundering and KYC tracking in cryptocurrency. Identity verification fell from ten days to ten hours, and false positives declined by 85%. Palantir AI automatically analyzes 25 key indicators to assign risk scores, strengthening national monetary security through corporate technology."
+    },
+    "S05-R003-P024": {
+      "sourceTextSha256": "f41d3bd020197be8ff942a9f4df18ee67e8522d6d26a99f1e39cfb3c15fb2920",
+      "en": "The second Trump administration also introduced the GENIUS Act. Ostensibly stablecoin regulation, its strong requirements—criminal liability for CEOs, monthly monitoring and 100% reserves—actually left only highly capitalized issuers such as Tether (USDT) or USDC able to survive. It therefore prevented fragmentation, concentrated activity into two giant stablecoins and strengthened monetary hegemony by completely banning non-American stablecoins within three years."
+    },
+    "S05-R003-P025": {
+      "sourceTextSha256": "312d5554e5a52510f31441c51a9ac5e00a8d7b12b6bc08c07a11d06834187cc5",
+      "en": "American efforts to strengthen monetary hegemony and restore national and currency trust through firms proceeded successfully. Tether's current growth and the dollar index's renewed rise can be viewed as effects of this process."
+    },
+    "S05-R004-P001": {
+      "sourceTextSha256": "07b6b5efa04b21063ba997a1b54a569c7a89053d17c3ad56baf7966910e2d0a7",
+      "en": "3. Criticism of won stablecoins and corporate-led restoration of monetary trust"
+    },
+    "S05-R004-P002": {
+      "sourceTextSha256": "a235400b4a493896154a57a8ac7779854da4dc6ea6739032ca85064e09a171b3",
+      "en": "Despite these successful examples, won stablecoins face clear practical limitations. First is the absence of global trust. Unlike Tether, which gains worldwide trust by pegging to the reserve-currency dollar, a won stablecoin depends on trust in the won itself and appeals to patriotism. With exchange rates exceeding KRW 1,470 and wealthy people continually leaving, confidence in the won is poor. A won stablecoin would struggle to escape this vicious cycle."
+    },
+    "S05-R004-P003": {
+      "sourceTextSha256": "792a4e45c4173119dbb65c0deb1588ed78dbde482b2deafa04049b840e80bba3",
+      "en": "Second are structural limitations. Won stablecoins cannot stop wealthy-person outflows, which reflect political instability, high inheritance taxes and a weakened investment environment, not just the existence of a coin. Wealthy people seek stability backed by established value such as a reserve currency or gold; a won stablecoin is unlikely to solve these fundamental problems. Unrestrained private issuance can also produce depegging or coin runs and, as the Bank of Korea warns, destabilize stablecoins and even the financial system."
+    },
+    "S05-R004-P004": {
+      "sourceTextSha256": "7fab7bf10add2c70fd2e3391fcdf67f012f4224bb5a932e067a8fa93f671a2ab",
+      "en": "Third is insufficient preparation for cryptocurrency firms. Without a reserve currency or other sources of trust comparable to America, Korea lacks firms capable of issuing stablecoins and turning them into stronger national trust, supporting policy, and innovation through diverse corporate technologies and roles."
+    },
+    "S05-R004-P005": {
+      "sourceTextSha256": "eca8b46167dc8171c39eb22dadc065d9d185382498da18f12e2e6cbf14643fd4",
+      "en": "These limitations make restoring monetary trust through a won stablecoin practically difficult. Korea should instead consider using firms and their technologies to rebuild trust."
+    },
+    "S05-R004-P006": {
+      "sourceTextSha256": "f0b9c317ad8afa7d9f4a6f30e780887e12011abb6fbbba3f447fbd50cb2725f3",
+      "en": "Korea should develop firms like Palantir and Tether, create investment conditions and restore trust by attracting wealthy people and foreign capital. Government support is essential: stronger tax incentives for foreign-invested firms, R&D support and improved global fintech competitiveness. These efforts would retain and attract wealthy people, while corporate development, jobs and income growth form a virtuous cycle restoring global trust."
+    },
+    "S05-R004-P008": {
+      "sourceTextSha256": "16972ef6957c238601793d71d0575beeac74bee5e9ff3d1e27ebbea56b95c83e",
+      "en": "Korea's economic deterioration can be regarded as partly factual. Won depreciation and continuing wealthy-person departures harm the economy. A won stablecoin is proposed as a solution, but should be considered difficult in practice. A lack of global trust, stablecoins' structural limits and Korean infrastructure and institutional constraints make trust restoration through the American method difficult."
+    },
+    "S05-R004-P009": {
+      "sourceTextSha256": "698350d3a41030503ac643a8d4adeb5f4e7b683db59100744423109bc6c91411",
+      "en": "Recommendations for restoring national currency and trust lead to the following conclusions."
+    },
+    "S05-R004-P010": {
+      "sourceTextSha256": "3de52d21a64b0d78ab2d0ee2f21b3495d06aac9a4825fef92ffcf23f09bb02dd",
+      "en": "First, recognize won stablecoins' limitations clearly. They may be technologically innovative and can succeed when major companies gather under government support, as in America. Yet the won's weak global trust, structural problems and insufficient domestic infrastructure and policy impose limits. A won stablecoin may be one option, but cannot be regarded as the crucial policy for overcoming the economic crisis."
+    },
+    "S05-R004-P011": {
+      "sourceTextSha256": "997d31a9d987bc2bdbca82989c2bfc20d55f3a6158ed7ea9081069f26de0e5b5",
+      "en": "Second, rebuilding national trust through firms is essential. America reestablished monetary hegemony through Tether and Palantir. Korean firms should likewise strengthen their public role and actively use technology to restore financial trust. Investment and technological use would attract foreign investment, wealthy people, foreign currency and capital. Firms would become actors restoring national trust rather than merely pursuing profits."
+    },
+    "S05-R004-P012": {
+      "sourceTextSha256": "57d87f9a8bc467cd583c6e5e7bb6ced84b8501996874f76b140ff640ebd8b04b",
+      "en": "Third, active government legislation and policy support must restore trust. Corporate technology and effort alone are insufficient. Inheritance-tax reform should curb wealthy-person outflows and improve investment conditions. Even if a won stablecoin is issued, strong regulation should prevent capital fragmentation. Cooperation with international institutions such as the IMF and BIS should ensure global standards. Interaction between such policies and corporate innovation would be the first step toward genuine trust restoration."
+    },
+    "S05-R004-P013": {
+      "sourceTextSha256": "95ab483745161032fde53aec589ca5f2ba1351f7d31cfcb2ef27347d70b68e2b",
+      "en": "Ultimately, trust, not technology, prevents money from escaping. That trust can return only when government policy combines with corporate transparency and responsibility. To leave the age of monetary inequality, Korea must build a virtuous cycle in which policy and corporate strategy complement one another and benefit all citizens."
+    },
+    "S05-R004-P014": {
+      "sourceTextSha256": "db65f4867a2d710d109a0f6b4624f3f5461db4374ad43862337b7ef7ef5293ca",
+      "en": "Only then can Korea curb wealthy-person outflows, restore confidence in the won and reduce inequality. Joint trust-building by government and firms will determine Korea's economic future."
+    },
+    "S05-R004-P015": {
+      "sourceTextSha256": "bdfa64374cdb45cdc232bed204e6aaf951f00ed02efcd4c53e1cc2af03a28fb7",
+      "en": "IV. References (generative AI used to convert to APA format)"
     }
   },
   "sourceCount": 98,
-  "translatedCount": 20,
-  "complete": false
+  "translatedCount": 98,
+  "complete": true
 }

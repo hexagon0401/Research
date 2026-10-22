@@ -2,8 +2,129 @@
   "reportId": "S01",
   "method": "editorial-translation",
   "status": "author-review-pending",
-  "paragraphs": {},
-  "sourceCount": 32,
-  "translatedCount": 0,
-  "complete": false
+  "paragraphs": {
+    "S01-R001-P001": {
+      "sourceTextSha256": "6924dc3a42f2b85f3fa72167a0b08543226a56470f1f353ec9cf7d890bfc5f0f",
+      "en": "[International Politics assignment: report analyzing an international-political issue]"
+    },
+    "S01-R001-P002": {
+      "sourceTextSha256": "ebd0ead10188b9b82a78c4686548d3d3ed7d7d0ebdf25b4fdc6772d9fdfab6ad",
+      "en": "Title: The Fifth Battlespace and Data Warfare: Cybersecurity, NCW and MDO Reshaping International Politics"
+    },
+    "S01-R001-P003": {
+      "sourceTextSha256": "533969a869618d24b87dab4c2919ce31fceaf8fc5b7048c7700b8ab8ffea6e8e",
+      "en": "Intended career field: management / technology management"
+    },
+    "S01-R001-P004": {
+      "sourceTextSha256": "569c93facfc6f33efc02a014d6272b162587e57236f99307e9ad2d24e8df0d1d",
+      "en": "Student number / name: /"
+    },
+    "S01-R001-P005": {
+      "sourceTextSha256": "82113fdd126d691baf79b4b8c1e65317148734659647357ea505bab6df724b9e",
+      "en": "I. Introduction"
+    },
+    "S01-R001-P006": {
+      "sourceTextSha256": "6ee7f1edcccd840255f727ed79996a2996c293c83dce77fb21343b83594a85a9",
+      "en": "Wars and conflicts have recently become frequent around the world. Russia–Ukraine, Myanmar's civil war, Israel–Hamas and the Middle East involve numerous entangled interests. Yet media reports suggest little difference from conventional warfare other than the new threat of drones. Good examples are trench warfare still using rifles, grenades and machine guns; continuing demand for the RPG-7 despite advanced antitank missiles such as Javelin; and uninterrupted demand for conventional assault rifles such as the AK-47 despite developments in SIG and AR-series rifles. Continuing air strikes and urban combat are difficult to distinguish from those of seventy years after World War II."
+    },
+    "S01-R001-P007": {
+      "sourceTextSha256": "0f3d7849a4585757dbd692339ce02416085c184273e62f1da67bb0c91c6b3dfe",
+      "en": "A closer look, however, shows that the battlefield's transformation is taking place where we cannot see it, rather than in visible areas. The U.S. Department of War recently called cyber and network warfare the fifth battlespace, and U.S. Army Cyber Command was established in 2010. Defense development continues preparing for this domain. In recently disclosed aircraft such as the B-21 Raider and F-47, described here as sixth-generation fighters or bombers, improvements focus on electronic warfare and networking—including unmanned formations and data sharing with early-warning aircraft—rather than the stealth advances that preoccupied America in the fifth generation."
+    },
+    "S01-R001-P008": {
+      "sourceTextSha256": "1e3f867fe61b09f2d9fbdb226bb09982be0473d2ab3928b4af34dfb6b8721ba1",
+      "en": "War is inseparable from human history. It is undeniable that humanity has developed, learned and progressed through war. The battlefield is changing again. As shifts from swords to guns and shields to tanks transformed history, we must continue paying attention. While international society concentrates on continuing conventional wars, we should examine the cybersecurity and new warfare paradigms developing behind them."
+    },
+    "S01-R001-P009": {
+      "sourceTextSha256": "428647c9d16e617f4c0f1d7784793e8abc754211299ffccee79ca60d0e52c912",
+      "en": "II. Main discussion. RPG rather than Javelin, AK rather than AR: continuing use of conventional weapons. Conventional weapons remain widespread on recent battlefields. The FGM-148 Javelin uses fire-and-forget autonomous guidance, providing high accuracy and time to move after firing, an essential factor in artillery survival. Its top-attack mode can target vulnerable areas rather than sides protected by composite or thick armor. The U.S. military's recently adopted 6.8 mm SIG M7 likewise strengthens the firepower of 5.56 mm ammunition while improving the M4's longstanding weaknesses in durability and power."
+    },
+    "S01-R001-P010": {
+      "sourceTextSha256": "9cd024173772bb364b43d4a36303172540e38bfcbb9d8d8bbd7da404fbcce1e6",
+      "en": "Despite these technological advances, RPG and AK-series weapons remain very common in Russia–Ukraine, Israel–Hamas and conflicts throughout the Middle East. This is not merely a problem of technological backwardness. In wars involving vast flows of money and supplies, conventional weapons' central advantages—price competitiveness, operational simplicity and strong durability—remain valid on the modern battlefield of 2025. In resource-limited civil wars and regional conflicts in particular, inexpensive, easily maintained weapons such as the AK and RPG increasingly become more practical choices than spending the budget on advanced weapons."
+    },
+    "S01-R002-P001": {
+      "sourceTextSha256": "6924dc3a42f2b85f3fa72167a0b08543226a56470f1f353ec9cf7d890bfc5f0f",
+      "en": "[International Politics assignment: report analyzing an international-political issue]"
+    },
+    "S01-R002-P003": {
+      "sourceTextSha256": "a988ae3e9f22458ad9684d516ecdbee01eb7706834c29f86d4cf99ce16209274",
+      "en": "Why did America turn toward NCW? Conventional weapons remain popular because technological development does not alter their essential purpose: a gun remains a gun and a missile remains a missile. Proven performance, durability and affordability are still preferred to added sophistication. America, considered the strongest military power, appeared preoccupied with stealth in fifth-generation fighters. Unlike that generation's focus on individual aircraft performance, sixth-generation upgrades emphasize electronic warfare and network-centric warfare, NCW."
+    },
+    "S01-R002-P004": {
+      "sourceTextSha256": "e2a8476f30bc3d7c91c47edbd74ed7ee6184e197d581348e8e200b70387d4142",
+      "en": "The U.S. Air Force's Next Generation Air Dominance, NGAD, program illustrates this. It sought capabilities for managing unmanned formations and airborne electronic warfare that could replace the F-15EX, described here as central to current American electronic warfare. Beyond improving individual aircraft, this makes networking and information integration—the core of Multi-Domain Operations, MDO—priorities for new weapons and the defense industry."
+    },
+    "S01-R002-P005": {
+      "sourceTextSha256": "6fec7d5b7c61d0762119bb56879373b3e01b4688cbce7654a89ddfccc48da11b",
+      "en": "America's strategic shift reflects clear recognition of the limitations of conventional forces. It observed that conventional weapons remain irreplaceable and continuously in demand despite time and technological progress. It therefore apparently judged that fundamental preparation for the fifth battlespace, cyber and network warfare, was necessary beyond equipment improvements."
+    },
+    "S01-R002-P006": {
+      "sourceTextSha256": "b5acb219bda096df7c68d082e417f016b106c1b8eeefbdf6e841565b0a8b482d",
+      "en": "Palantir's technology management: new warfare created by data. Data technology is among the most notable changes in contemporary war. Collecting, integrating and assessing data have become central to military strategy. Just as spies, intelligence and covert operations mattered during the Cold War, information is even more important on the 21st-century battlefield. Palantir Technologies' Gotham platform illustrates this transformation. Gotham integrates and analyzes diverse unstructured big data—CCTV, street sensors, ultra-high-resolution satellite images, communications records, bank accounts, social-media data and internet data—on one platform. Integrating AI across extensive nodes, it builds a big-data-based cybersecurity solution."
+    },
+    "S01-R002-P007": {
+      "sourceTextSha256": "1ec8b6a89c424ce9fdcc83b4bb4fac2af955614e6931a105f9d78cb2f226e53e",
+      "en": "Palantir's core technology lies in ontology, extending beyond earlier data collection and analysis. This conceptual structuring technology establishes relationships among data and assigns connections and causal relationships. It is used to trace terrorist funding, detect advance signs of cyberattacks and identify enemy movements from satellite imagery. Gotham's ontology technology in the 2011 Operation Neptune Spear, which located and killed Osama bin Laden, is described as a successful technology-management case."
+    },
+    "S01-R002-P008": {
+      "sourceTextSha256": "ee15d1dca16f3026c8f42642ed56083c7dde2f3364dea80a8e8cd1e33252c728",
+      "en": "Such cybersecurity technology management shows a paradigm shift from hardware-centered military technology toward intelligent security centered on software and data analysis. Gartner defines intelligent security as technology performing context-based analysis through interactions among technologies, and it is also considered a core future security technology."
+    },
+    "S01-R003-P001": {
+      "sourceTextSha256": "6924dc3a42f2b85f3fa72167a0b08543226a56470f1f353ec9cf7d890bfc5f0f",
+      "en": "[International Politics assignment: report analyzing an international-political issue]"
+    },
+    "S01-R003-P003": {
+      "sourceTextSha256": "166fad1a5cfcc3338510459c67d78c6990fb1095388dc542919a57a302046339",
+      "en": "NCW and MDO: responding to cybersecurity. Network-centric warfare and Multi-Domain Operations have become important modern-warfare paradigms. MDO is a new paradigm in which operations organically integrate five domains simultaneously: the traditional land, sea, air and space domains plus cyberspace. Synergies from projecting force between domains are central."
+    },
+    "S01-R003-P004": {
+      "sourceTextSha256": "105bd2e72e80b2712ea20d2441b5d6fbb7fb438c53fcf28612a9abae62f4c8e7",
+      "en": "Palantir's technology plays a key role in implementing MDO. In the Ukraine war, its portable Sky-Kit system enabled access to a central system or IMINT, imagery intelligence, reducing satellite-image analysis time from 45 minutes to only a few minutes."
+    },
+    "S01-R003-P005": {
+      "sourceTextSha256": "1a6a09e620c6a2465ee722d45881e3a7911847d37f1b6af9f10521e9523e7f62",
+      "en": "III. Conclusion"
+    },
+    "S01-R003-P006": {
+      "sourceTextSha256": "3420aa52402795200014d95af98e7c624d3f1609f0b9a62ee4ba749c0e40b58a",
+      "en": "The nature of war is changing. Conventional and advanced weapons are both used, while physical and cyber battlefields are divided and combined in hybrid warfare. These patterns will become increasingly important in future international conflicts. With exponential internet development, more accurate and faster information and judgment, rather than weapon improvements alone, now lead to victory."
+    },
+    "S01-R003-P007": {
+      "sourceTextSha256": "7cf7bc8eccb2c7a3114655bc71803267949e9d71915f2f91959eae7190553be9",
+      "en": "Palantir's success has important implications for both technology management and international politics. As Thiel's Zero to One philosophy urges—‘do not compete; monopolize’—Palantir pioneered and monopolized an AI-enabled defense and security market. By turning data itself into a weapon rather than relying on greater firepower, stealth, engines or added features, it created a new paradigm."
+    },
+    "S01-R003-P008": {
+      "sourceTextSha256": "41dbeed8e15512775839ba0c86f10613af1ec8ce289d1767c8d4fb6389a29d3b",
+      "en": "Modern states therefore face a dual burden: developing traditional military capability and cybersecurity simultaneously. This drives higher defense spending and new arms races. Massive investment and development are particularly needed for cyber personnel and for systems and technologies integrating land, sea, air, space and cyber security."
+    },
+    "S01-R003-P009": {
+      "sourceTextSha256": "4676612e0695989d311ecb680637ab18b376e19fda1bba113d48fc7e37baa9f1",
+      "en": "Future victory will depend not on overwhelming firepower and cutting-edge weapons alone, but on integrating effective conventional-weapons operation with NCW, MDO and cybersecurity. Beyond a technical issue, this is a new technology-management strategy integrating data ownership and analysis, AI and cybersecurity, becoming a core element of national competitiveness in defense and security. I believe the persistence of conventional weapons and battles in the invisible fifth domain will remain important in international politics."
+    },
+    "S01-R003-P010": {
+      "sourceTextSha256": "571cbc0cde44eeefd6cf208bdd132f7eed06caf8eebd92f196d2ae4345c0af08",
+      "en": "IV. References"
+    },
+    "S01-R003-P011": {
+      "sourceTextSha256": "d9e73eaf6c7c0e93c6a4737ff713257dae51e33824f5c348463b198c5f94c515",
+      "en": "U.S. Department of War. (2025). Senior Pentagon official says cyber warfare poses significant threat to joint forces."
+    },
+    "S01-R004-P001": {
+      "sourceTextSha256": "ff6c33a5dd81409c9045e7497558546b3c3ff7148d87a92441a61b02be7475e2",
+      "en": "[International Politics assignment: report analyzing an international-political issue] Official Department of War website. https://www.defense.gov/News/News-Stories/Article/Article/4163237/senior-pentagon-official-says-cyber-warfare-poses-significant-threat-to-joint-f/ Yonhap News. (2024, September 20). [Jang Yong-hun's Korean Peninsula Talk] North Korea also invests in conventional weapons. https://www.yna.co.kr/view/AKR20240920081400504 Chosun Ilbo. (2024, September 3). ‘Silent warrior’ robots change the paradigm of war. http://weekly.chosun.com/news/articleView.html?idxno=36806 Korea Institute of Military Science and Technology. (2024). Multi-domain operations and cyberwarfare. https://www.kacs.ne.kr/uploaddata/kan2bg_img/kan2bg_20240403190018_1.pdf Palantir Technologies Korea. (2024)."
+    },
+    "S01-R004-P002": {
+      "sourceTextSha256": "cce1d8176b3237200a375d78f998cd937e7faba30ed5a705c4d573548daf2b86",
+      "en": "Overview of the Palantir Gotham and Foundry platforms. https://www.palantir.com/kr/home/ Samsung Securities. (2021). Palantir Technologies (PLTR US) company report. Samsung Securities Research. https://www.samsungpop.com/common.do?cmd=down&saveKey=research.pdf&fileName=3010%2F2021072310324300K_01_03.pdf Yonhap News. (2025, September 15). Government: North Korea appears to have confirmed the need for its parallel nuclear and conventional-weapons policy in the Russia–Ukraine war. https://www.yna.co.kr/amp/view/AKR20250915083600504 Digital Forensics Research Institute. (2023). Recent cyberattack cases and responses. https://www.sedaily.com/NewsView/2GVESEOXEH Agency for Defense Development. (2025). America's Multi-Domain Operations concept and application."
+    },
+    "S01-R004-P003": {
+      "sourceTextSha256": "a45f7a5843956cdab28b85bed9801b743aefbdc071186adc52ade334c5058f86",
+      "en": "https://www.kima.re.kr/3.html?Table=ins_kima_newsletter&mode=view&uid=1483&s= Boan News. (2025). Ransomware and cyberthreat trends. http://file.myasset.com/sitemanager/upload/2025/0828/171240/20250828171240767_0_ko.pdf"
+    }
+  },
+  "sourceCount": 30,
+  "translatedCount": 30,
+  "complete": true
 }

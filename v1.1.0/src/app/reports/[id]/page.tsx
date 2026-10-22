@@ -26,13 +26,14 @@ export default async function ReportPage({ params }: { params: Promise<{ id: str
   if (!r) notFound();
   const reading = await getReadingEdition(r.id);
   const connection = researchConnections[r.id];
+  const preferredTerm = connection?.termsKo.find((term) => reading.paragraphs.some((p) => p.ko.length > 90 && p.ko.includes(term)));
   const placed = new Set<string>();
-  let highlighted = false;
+  let highlighted = 0;
   const paired = reading.paragraphs.map((p) => {
     const aliases = p.sourceBlockIds.filter((id) => !placed.has(id));
     aliases.forEach((id) => placed.add(id));
-    const highlightedHere = !highlighted && connection?.termsKo.some((term) => p.ko.includes(term));
-    if (highlightedHere) highlighted = true;
+    const highlightedHere = highlighted < 3 && p.ko.length > 90 && Boolean(preferredTerm && p.ko.includes(preferredTerm));
+    if (highlightedHere) highlighted += 1;
     return { ...p, aliases, highlightedHere };
   });
   return (

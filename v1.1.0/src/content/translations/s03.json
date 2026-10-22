@@ -70,9 +70,117 @@
     "S03-R005-P015": {
       "sourceTextSha256": "78028e80b01329680099da412cb3396766b8b3c828e42864ab614ff4ac5ca28d",
       "en": "• Surfpac.navy.mil. (2025). Carrier Strike Group (COMCARSTRKGRU) 9. https://www.surfpac.navy.mil/Leaders/Article-View/article/2679820/carrier-strike-group-comcarstrkgru-9/"
+    },
+    "S03-R001-P001": {
+      "sourceTextSha256": "7cd830b2663026c518d9312726530c261f6094f8dd7dc7e361dab4d368719bc3",
+      "en": "Planning document for a World Regional Issues inquiry report, second semester 2025"
+    },
+    "S03-R001-P002": {
+      "sourceTextSha256": "11dc964170bf1b095c0629bfe74b977d934b774576bf6ec944ea0be550fc35a8",
+      "en": "Title: Can force create peace? Through America's Golden Dome project"
+    },
+    "S03-R001-P004": {
+      "sourceTextSha256": "d9362362e1dc81648f4fa21c400d6dcde0c272ae13eb63aa6abea424d717b3ab",
+      "en": "1. Introduction (research purpose and direction). (1) Background and purpose. International conflicts have recently reached historically high levels. According to the Uppsala Conflict Data Program, UCDP, there were 61 state-based armed conflicts in 2024, the highest since records began in 1946. Eleven wars involving more than 1,000 battle deaths were recorded, the most since 2016. Notably, violence against civilians increased 31% year on year, causing 13,900 civilian deaths. The Israel–Hamas war spread across Palestine and the Middle East, while some analyses see the Russia–Ukraine war as resembling a world war through its clear proxy confrontation between NATO and Russia, China and North Korea. Intensifying conflicts have brought growing missile and drone attacks. ACLED reports that Russia's attacks and drone attacks on Ukraine in 2024 more than doubled monthly compared with 2023."
+    },
+    "S03-R001-P005": {
+      "sourceTextSha256": "0167ce874818ec16b316fbf5088de988481c5ce6da6e8ae35e38b9b5fbe6bea2",
+      "en": "Attacks grew from 1,269 in December 2024 to 2,436 in May 2025, approximately doubling within six months. Similar patterns appear in Myanmar's civil war rather than interstate war: resistance drone-attack events exceeded 2,100. Drones have thus become deeply integrated into tactics at every scale, from states and resistance forces to individuals. Amid this worldwide turmoil, the second Trump administration unveiled a USD 175 billion Golden Dome project. Israel's Iron Dome achieved considerable success, with a 90% interception rate against Hamas's short-range Qassam rockets, but fundamental limitations emerged against medium- and long-range ballistic missiles, difficult-to-intercept hypersonic weapons seen in Russia–Ukraine, and saturation attacks."
+    },
+    "S03-R001-P006": {
+      "sourceTextSha256": "5c97952e562149e9b15a056b17a36626008edd32df960f9b626ed8ac21ae3de8",
+      "en": "Israel recognized these limitations. David's Sling, using the Stunner missile traveling at Mach 7.5 within a stated 40–300 km altitude range, achieved 100% success against saturation attacks in 2018 development tests, but its maximum altitude became limited to around 60 km. America's THAAD precisely intercepts ballistic missiles, including nuclear weapons, at altitudes above 150 km, yet gaps remain in detecting emerging hypersonic and space-based threats. This research therefore aims, first, to analyze Golden Dome's technical and strategic significance quantitatively and qualitatively amid growing missile and drone threats; second, to identify its core innovation as a space–ground integrated system combining Palantir ontology with SpaceX low-Earth-orbit satellites; and third, to evaluate its political and security effects on international deterrence and conflict prevention."
+    },
+    "S03-R001-P007": {
+      "sourceTextSha256": "b77f9fd672494df57be042f2d460010e6784db845dea272164010a8c0d8fec44",
+      "en": "Fourth, it proposes policy alternatives supplementing existing defenses and ultimately resolving conflict. (2) Methods. I will use ACLED and UCDP databases and APIs to collect and analyze missile and drone threat data. Launch counts, drone-use events and attack patterns from Russia–Ukraine and Myanmar in 2024–2025 will establish the threat environment Golden Dome was designed to address. Official Defense Department announcements, Pentagon slides and major international reporting will be used to summarize its architecture, investment and schedule. The department obtained presidential approval for the final architecture in July this year, with operational tests targeted for 2028 and a total stated cost of USD 17.5 billion, including USD 2.5 billion initially."
+    },
+    "S03-R001-P008": {
+      "sourceTextSha256": "05ac014951cf4734a6fd196fed5615a8935d2a2f617ee900db621ceda9d234ac",
+      "en": "Literature-based quantitative comparisons will cover Iron Dome (4–70 km range; 90% success), David's Sling (40–300 km; 93–97% success; maximum Mach 7.5) and THAAD (40–180 km range; altitudes above 150 km), examining detection range, response time and simultaneous target-processing capability."
+    },
+    "S03-R002-P001": {
+      "sourceTextSha256": "7cd830b2663026c518d9312726530c261f6094f8dd7dc7e361dab4d368719bc3",
+      "en": "Planning document for a World Regional Issues inquiry report, second semester 2025"
+    },
+    "S03-R002-P002": {
+      "sourceTextSha256": "5c12abc3761cf5dad9fdd63933ef373228421c3374682f64b91ab0c73e28a966",
+      "en": "I will consider the historical roles of weapons systems including carrier strike groups, AEGIS and nuclear forces. AEGIS was developed under Admiral Wayne E. Meyer in the 1960s against Soviet antiship missiles and first installed in 1973. Radar innovation and computer integration transformed maritime defense. American carrier groups maintained post-Cold War unipolar hegemony, but Chinese carriers and aging American vessels have weakened their influence. I will review deterrence literature on denial and punishment. Under Glenn Snyder's account, denial blocks territorial gains through defense, while punishment threatens subsequent retaliation, including nuclear retaliation. Historically, Cold War AEGIS and carrier groups provided denial-based deterrence, clearer signals and lower miscalculation risks. Research on space defenses will support technical possibilities for early missile detection and interception using low-orbit satellites."
+    },
+    "S03-R002-P003": {
+      "sourceTextSha256": "844f91a2a9911aee9505f35b658eda797305fcc4a5192bfd9ece72a0c9e73250",
+      "en": "2. Main discussion (core research). (1) Limits of existing air defenses. Israel's Iron Dome intercepted improvised Hamas Qassam rockets and mortar rounds at a high 90% success rate, but cannot stop every rocket when dozens arrive simultaneously in saturation attacks. Such gaps can damage critical facilities and civilians. Its physical reach is also insufficient for medium- and long-range ballistic missiles, hypersonic weapons and space-based threats. America faces similar limitations. David's Sling showed 93–97% cruise-missile interception success with a range up to 300 km and Mach 7.5 speed, but its maximum altitude of 60 km leaves it powerless against high-altitude threats."
+    },
+    "S03-R002-P004": {
+      "sourceTextSha256": "7590fe5b65e62ea9c34363791ca7ad741d288276f6f8f9733156b3fd96cb9337",
+      "en": "THAAD supplements this at altitudes above 150 km, but its 200 km coverage radius is narrow relative to America, making nationwide deployment very expensive. Technical improvements are also needed to detect and intercept hypersonic missiles frequently used by Russia. Above all, the three systems are not integrated, creating information delays, duplicated investment and interception blind spots. Korean Defense Ministry data reportedly show that separately operated THAAD and Patriot 2/3 had long detection–tracking–response times in 2018 integrated peninsula exercises, while networking and altitude differentiation—THAAD at 40–150 km and Patriot at 15–40 km—created three interception opportunities and greatly improved success. Individual ground systems therefore cannot protect the entire North American mainland and cause temporal, tactical, strategic and financial losses. (2)"
+    },
+    "S03-R002-P005": {
+      "sourceTextSha256": "3b12423ea3fa821e17e6c737ba17acc54d5f9a54bdad051ea576b0c835e7abf1",
+      "en": "Understanding and analyzing Golden Dome. America's initiative can be understood through Iron Dome's vulnerability to saturation and the emergence of multidomain, multialtitude threats including drones, ballistic and hypersonic missiles, and space-based weapons such as ICBMs and FOBS. Department of War slides published this August divided the system into four layers. The first is space-based sensing and tracking: 600 SpaceX AMTI satellites track and intercept high-altitude and space threats. The second uses ground radar to detect low-altitude threats. The third consists of interceptors: threats penetrating the first layer are detected by the second and intercepted by the third. If all fail, a fourth ground-laser layer aims to intercept them. Integration of dispersed systems is central, underpinned by Palantir's ontology system."
+    },
+    "S03-R002-P006": {
+      "sourceTextSha256": "eb5e812b256d3764edda50ee5bdf8c67dfd72321daf475f39ef209063426fd26",
+      "en": "Palantir's Gotham and Foundry ontology systems already use a digital-twin structure integrating battlefield and enterprise data into objects, properties and relationships. Applying this to missile defense, the Department of War integrates satellite imagery, radar, drone information and AI predictive models into a single semantic layer, enabling real-time decisions through precise logic. On this basis, Palantir signed a USD 10 billion enterprise-services agreement with the U.S. Army in 2025, consolidating 75 contracts. SpaceX low-orbit satellites connected to this software are central to Golden Dome. SpaceX proposed up to 600 Air Moving Target Indicator, AMTI, satellites and, according to the Wall Street Journal, is expected to receive a USD 2 billion Department of War contract. The constellation would detect launches, track trajectories and monitor mobile targets in real time, overcoming weather and horizon limitations of ground radar. Operating more than 10,000 Starlink satellites already demonstrates technical reliability and deployment capability. Historically, strong defenses created strong deterrence. AEGIS, developed against Soviet antiship missiles in the 1960s and 1970s, enabled simultaneous tracking and interception of multiple targets, giving the U.S. Navy an enduring advantage. American carrier groups symbolized global hegemony and protected allies after the Cold War, but Chinese carriers and American aging and limitations have weakened their absolute superiority. Expanding the battlefield across land, sea, air and space, integrating data layers and creating a unifying Palantir Ontology platform represent America's new hegemonic paradigm."
+    },
+    "S03-R003-P001": {
+      "sourceTextSha256": "7cd830b2663026c518d9312726530c261f6094f8dd7dc7e361dab4d368719bc3",
+      "en": "Planning document for a World Regional Issues inquiry report, second semester 2025"
+    },
+    "S03-R003-P003": {
+      "sourceTextSha256": "cc5cfa7380f1f72fb1b3a44bca8091cc2dece0cfaf8f3df53a44a285fda9a849",
+      "en": "This is more than a defense improvement: it is a step toward Alex Karp's Technological Republic, weaving all space and ground infrastructure into an intelligent nervous system. (3) Golden Dome's ultimate purpose: peace created by power. Integrating Palantir ontology, SpaceX low-orbit clusters and America's overwhelming defense infrastructure—AEGIS, THAAD and nuclear capabilities—seeks to build American power through state-led integration of corporate technologies beyond a simple defense system. It could mark the arrival of Karp's era in which fighters, nuclear submarines and nuclear carriers become accessories to software. Firms' technologies and purposes converge on America as a single focal point within this model. Overwhelming military power through security and technological integration can be viewed as creating conditions for peace amid disorder. (4) Discussion of solutions: the desire for peace. Golden Dome could exert strong deterrent effects in contemporary conflicts."
+    },
+    "S03-R003-P004": {
+      "sourceTextSha256": "3db678a9574d04f2067dfc36ce6458741f715903d5ad6a05f6dde6069e9ce5e7",
+      "en": "Yet weakening carrier-group influence, China's rise, deeper religious and ideological hatred, renewed nuclear threats, returning biological and chemical weapons, and civil wars complicated by many interests make the world unstable again. UDCP data indicate about 3,800 civilian killings by Islamist extremist organizations such as IS, a nonstate threat traditional military force cannot resolve. Policy alternatives follow. First, major powers should stop supporting offensive weapons and strengthen defensive-technology sharing. America and other powers should prioritize defense networks through downgraded THAAD and AEGIS versions for others and direct technology transfer and joint research with allies. THAAD deployment and allied AEGIS sharing exemplify regional stabilization. Second, international space governance and technological regulation should prevent weaponization of space."
+    },
+    "S03-R003-P005": {
+      "sourceTextSha256": "e7af9d62b9ee71300fa3f6663c12469de7efd41a61146e301c6dc4237d9c393d",
+      "en": "In December 2024, the UN General Assembly reaffirmed Outer Space Treaty compliance by an overwhelming 167–4 vote and emphasized restrained development of space weapons. Finally, sharing downgraded defense technologies and expanding financial support for emerging countries should provide defensive systems against asymmetric conflict rather than responding with equivalent attacks."
+    },
+    "S03-R003-P006": {
+      "sourceTextSha256": "b97e80714bf258af7c6dedaa44f3400e4a1471b7c450955a8646b89990e8f5f1",
+      "en": "3. Conclusion (summary and opinions). (1) Findings and solutions. Golden Dome centers on complete integration of systems divided between space and ground. Moving beyond supplementing Iron Dome and existing interceptors or reinforcing ground systems, America seeks a comprehensive defense by dramatically expanding and integrating spatial coverage. SpaceX satellites provide space detection and early interception; ground THAAD, radar and lasers supply multilayer defense if those fail, all integrated through Palantir's ontology. This is a single command center and real-time decision model. Combining Palantir, SpaceX, AEGIS, THAAD and American defense systems creates a new space–ground system and power. More than military superiority, it is a technology–defense–corporate nexus, an implementation of Karp's Technological Republic and a long-term solution for sustaining wavering American hegemony. Policy recommendations are: first, strengthen allied defensive-technology sharing and joint research to build networks; second, create joint management within space treaties and technological regulation to minimize weaponization concerns and restrain arms competition with Russia and China; third, support emerging and conflict-affected states with downgraded defenses to mitigate asymmetric conflict between states and nonstate actors such as terrorists. (2) Significance and implications. Peace such as Europe's Belle Époque (1870–1914) and Britain's Pax Britannica (1815–1914), referred to here in discussing the 21st century, enabled major national progress. Genuine peace remains a question. Trust, institutions and transparency matter beyond an unstable peace imposed by balance or strength. Golden Dome may be seen as recapturing absolute American hegemony, but whether it becomes preemptive, offensive deterrence or defensive stability remains to be seen."
+    },
+    "S03-R004-P001": {
+      "sourceTextSha256": "7cd830b2663026c518d9312726530c261f6094f8dd7dc7e361dab4d368719bc3",
+      "en": "Planning document for a World Regional Issues inquiry report, second semester 2025"
+    },
+    "S03-R004-P003": {
+      "sourceTextSha256": "70ee8ea026abb1aace2804bf8c5739371e951319a097a5694d3356a6c097649b",
+      "en": "New systems can produce hegemony and power, as the research above suggests. They reshape international power structures, as America has shown since the Cold War, and Golden Dome may have similar effects. (3) Limitations and future research. First, the security dilemma and vicious cycle of arms competition were not adequately considered. Golden Dome may stimulate China and Russia, consolidate a new Cold War and create competition over space weapons. Russia and China have already proposed a treaty prohibiting space weaponization. Deployment of Golden Dome's space interceptors could accelerate their ASAT development. Second, its long-term global consequences were not adequately established. Whether it deters like AEGIS and carriers or instead deepens distrust, stimulation, conflict and instability remains unknown."
+    },
+    "S03-R004-P004": {
+      "sourceTextSha256": "51f31c5e8240a7d12b043fc5dacff83a939105244c16864a5363dc7e0a5ed036",
+      "en": "Future work can therefore analyze Chinese and Russian responses and strategies, reconsider allied technology transfer, strengthen international space treaties and develop responses to nonstate threats. Whether a new defense system brings genuine peace or another Cold War and hegemonic contest requires ethical and political examination."
+    },
+    "S03-R004-P005": {
+      "sourceTextSha256": "242bb0e2af805b59259294a371750bc1d5264d0979d76e1a363efed6cf093c22",
+      "en": "4. References"
+    },
+    "S03-R004-P010": {
+      "sourceTextSha256": "47fa96f481714b371ec184cf6361b132e5e6c066a0a63ce8daee322620607769",
+      "en": "• The Korea Economic Daily. (2025, June 9). Detecting and intercepting enemy ICBMs in space: America's Golden Dome as a second Manhattan Project. https://www.hankyung.com/article/2025060934451"
+    },
+    "S03-R004-P011": {
+      "sourceTextSha256": "efc438808c9aaaa284a8ea79702c2ecbc5ac3fe8042b9afee9e554a0c117c19f",
+      "en": "• KBS News. (2025, May 21). Trump announces next-generation Golden Dome defense: ‘interception from space.’ https://news.kbs.co.kr/news/view.do?ncd=8259158"
+    },
+    "S03-R004-P012": {
+      "sourceTextSha256": "a4638acdaca62b8e3ef9b00dc5c4470fea61cfe6091b8ff53b1062212cb47e4e",
+      "en": "• BBC News Korea. (2025, May 21). Trump announces plans to deploy the futuristic Golden Dome air-defense system."
+    },
+    "S03-R005-P001": {
+      "sourceTextSha256": "7cd830b2663026c518d9312726530c261f6094f8dd7dc7e361dab4d368719bc3",
+      "en": "Planning document for a World Regional Issues inquiry report, second semester 2025"
+    },
+    "S03-R005-P003": {
+      "sourceTextSha256": "fbb12dacd352d250af7fd3bbd26837547e0f5a95cf4dbf74f94964360a9804e8",
+      "en": "• Yonhap News. (2025, October 1). [Video] America proposed Golden Dome: is China developing it first? https://www.yna.co.kr/view/MYH20251001019500704"
     }
   },
-  "sourceCount": 47,
-  "translatedCount": 17,
-  "complete": false
+  "sourceCount": 44,
+  "translatedCount": 44,
+  "complete": true
 }

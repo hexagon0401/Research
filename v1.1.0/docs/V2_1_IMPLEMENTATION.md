@@ -39,3 +39,16 @@ translations, including source notes and references. Translation status is
 author-review-pending. Source fingerprints match the current Korean edition.
 The parallel reader, source-location aliases and lazy PDF canvas are implemented;
 functional browser verification is still outstanding. Other reports remain in progress.
+
+## Checkpoint: complete translations 9/13
+
+S00, S01, S02, S03, S05, S06, S08, S13 and S16 are complete editorial
+translations (author review pending). The remaining reports are S11, S14, S15
+and S17. S03/S13 share checked translations where content matches, while the
+documents retain distinct source identities and paragraph maps.
+
+The long-form homepage, actual-report archive, shared polar/world/concept stage
+and contextual evidence notes are implemented. An initial production build
+passed, and Chromium rendered an inline S06 PDF without page errors. Initial
+paired-reader inspection found an inherited width limit; it was removed. Final
+regression, coverage, accessibility and performance checks remain outstanding.

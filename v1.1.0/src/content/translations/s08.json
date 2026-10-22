@@ -2,8 +2,125 @@
   "reportId": "S08",
   "method": "editorial-translation",
   "status": "author-review-pending",
-  "paragraphs": {},
-  "sourceCount": 31,
-  "translatedCount": 0,
-  "complete": false
+  "paragraphs": {
+    "S08-R001-P001": {
+      "sourceTextSha256": "7b03f0ae90ef362e8f498be4f745fe9db8bfd6f74a39eb94b1435dcf834b0ab4",
+      "en": "<Regional Understanding Assignment 2> ‘Multiscale Regional Inquiry Writing’ template"
+    },
+    "S08-R001-P002": {
+      "sourceTextSha256": "46b7def30a3e089282bf8e60458009fd38d3284dcc1b46f00ef0129d2d8061c2",
+      "en": "Student number: ( ) Name: ( )"
+    },
+    "S08-R001-P003": {
+      "sourceTextSha256": "119d9bc707733219f581ee8b3934da83c2baa545fd70c81188a7e6647bfa1e9e",
+      "en": "1. [Introduction]"
+    },
+    "S08-R001-P004": {
+      "sourceTextSha256": "3842bddd1410687b8ab40bd6d71ec3e6bb170f66907d0e33bc5b9a5c02fc3dfb",
+      "en": "The world has recently adopted a realist stance. Russia (the former Soviet Union) and America, the two central Cold War powers just forty years ago, are again at war in 2026. Russia invaded Ukraine with a declaration of war, while America declared war on Iran and began operations. The Global Peace Index has reached a low, conflicts are becoming prolonged and their number is rising rapidly. Conflicts ending in peaceful agreements have also declined sharply. These developments have made the world more complex and renewed the search for something new in 21st-century warfare and the world, alongside the military force that once underpinned hegemony. The answer was not far away. My second-year International Politics and World Issues and Future Society reports addressed the weaponization of firms and contemporary warfare. The International Politics reports, ‘Companies That Became National Power’ and ‘The Fifth Battlespace and Data Warfare,’ examined how firms affect national defense, military force and hegemony."
+    },
+    "S08-R001-P005": {
+      "sourceTextSha256": "02404f9eee082a4e09ae2db8817648a70e7051256cb53c83fa5203b0423c4ba9",
+      "en": "I found that sustained indirect investment and support centered on the U.S. Department of War could turn firms into weapons, leading to stronger electronic warfare, network warfare and conventional forces. The weaponization of firms discussed in World Issues and Future Society—America's Golden Dome project—brought previously dispersed corporate investments and large American firms together in one project, combining investment with defense strengthening. Above all, it could be evaluated as a strategy assigning a clear identity under the single goal of national defense. At some point, firms became both the hard power of military force and national power. This corporate hegemonization differs clearly from the military-industrial complex warned against by Eisenhower, the general who led victory in World War II and later U.S. president: the firm itself becomes power and hegemony."
+    },
+    "S08-R001-P006": {
+      "sourceTextSha256": "f2b6419fcae0b40fe8eb3eb716cd74b4847738a0fe7cdc4e3a9940d0aefb1e18",
+      "en": "Taiwan's TSMC is a representative example. Its monopolistic semiconductor share and production capacity alone create an incentive for America and Western states to defend Taiwan against China, while generating national competitiveness and influence. With the single card of halting semiconductor production, it also acts as hegemony deterring war or conflict with China. China and America, now called the G2, recognized this earlier than others. America, accustomed to a free market, and China, which arrived later but possesses a large population and a controllable political system, use firms particularly actively as national power. This should be viewed not simply as government corporate policy but, from a macro perspective, as interstate hegemonic and ideological struggle and ultimately policy toward other states. This inquiry therefore has the following aims. First, based on the weaponization and hegemonization of firms, it investigates deeply how China has used companies, deriving findings through OSINT tools."
+    },
+    "S08-R001-P007": {
+      "sourceTextSha256": "1d0ab01e5c5f29408afa81d7cc57130cc18590320c53c974a218e17441c51349",
+      "en": "Second, use OSINT tools to investigate and establish how America responded to these Chinese cases. Third, visualize them through Palantir Foundry and analyze their features at multiple scales. Fourth, use insights obtained through these two approaches to identify clearly the direction Korea's corporate policy should take."
+    },
+    "S08-R001-P008": {
+      "sourceTextSha256": "804825e72e0c93cc6a2ce23319bc8936cbca623ed740248d7fabd9b8b94a1712",
+      "en": "2. [Main discussion 1]"
+    },
+    "S08-R001-P009": {
+      "sourceTextSha256": "920fedce9937013974cd0aec841243710dec020d845a58fbc8b7ef9f2980169a",
+      "en": "To examine China's corporate-utilization strategy, I mapped the data loop of my self-developed OSINT tool, NV, into a Palantir Foundry ontology. To prevent AI hallucinations, I selected only authoritative think-tank and media sources—CSIS, USCC, AidData, Lawfare and DIIS—and visualized eight core datasets, from nv_01_facilities to nv_08_track_data."
+    },
+    "S08-R001-P010": {
+      "sourceTextSha256": "b812374f09949e1639729820463ae648b776b7c6423d43e1a9dacc0db4807a86",
+      "en": "The Greenland case began in 2018 when China's state-owned CCCC proposed USD 550 million of investment in airport expansion in Nuuk, Ilulissat and Qaqortoq. Nearly one-fifth of Greenland's approximately USD 3 billion GDP, this was a disproportionate amount and a geopolitical move difficult to regard as mere infrastructure investment. Deputy Assistant Secretary of Defense Katie Wheelbarger issued a direct warning. Following joint American and Danish pressure, the bid was finally withdrawn in June 2019. However, this was the third attempted state-level approach, following General Nice's attempted acquisition of the Grønnedal naval base in 2016 and an attempted satellite ground-station project in 2017. Blocking aviation infrastructure therefore closed only one access route rather than ending China's overall Greenland strategy. CSIS analysis indicates that Chinese capital remains involved in rare-earth mining through entities with other nationalities, including arrangements involving Shenghe Resources, even after the airport projects were stopped."
+    },
+    "S08-R002-P002": {
+      "sourceTextSha256": "5984c653576cdf829f9c86c39b01141075da6bc6c95a17126302d2065ad92f33",
+      "en": "The Cambodia case developed as Prince Group chairman Chen Zhi leased land directly adjacent to Ream Naval Base through the property subsidiary Canopy Sands, ostensibly for a commercial resort. Enlarging the lease boundary in Foundry's zones layer, nv_04_zones, shows the private real-estate contract and military-base expansion overlapping spatially. During the same period, Type-056A corvettes of China's People's Liberation Army Navy, PLAN, conducted at least three resident rotations—from Wenshan and Bazhong through Aba and Tianmen to Panzhihua and Guangyuan—while northern ammunition-storage facilities were completed. This was formalized by the opening of the Joint Logistics and Training Center on April 5, 2025, presided over by Prime Minister Hun Manet. Combined with Cambodia's reliance on China for 93% of its arms imports, worth USD 117 million, from 2018 to 2023, a single real-estate contract can be evaluated as having ultimately transferred access adjacent to a military base as well."
+    },
+    "S08-R002-P003": {
+      "sourceTextSha256": "1500ecdec6304a4f53f6b31740b26756689b549abb5ccd4b18b0934c3e630f5c",
+      "en": "The Iran case shows the flexibility of civilian supply chains in its most extreme form. Engine and avionics components for Shahed-136 attack drones manufactured by Xiamen Victory Technology leave Xiamen, pass through shell-company networks in Hong Kong and Dubai, nv_05_entities, and reach Tehran. They then enter Russian and Iranian drone production lines on a large scale and are used in attacks on American targets. More notably, despite U.S. sanctions in 2024, this local supply chain reappeared under new shell-company names less than a year later, effectively neutralizing the restrictions. An early-March 2026 case permitting an Iranian state vessel to load sodium perchlorate, a solid-rocket-fuel precursor, at Golan Port also demonstrates that local port-level logistical circumvention continues. In contrast, reports of direct transfers of conventional military weapons, such as CM-302 antiship cruise missiles, DF-17 hypersonic missiles and MANPADS, remain at POSSIBLE to SPECULATIVE levels in U.S. intelligence grading. This confirms that China's local strategy remains centered on dual-use components and commercial circumvention networks."
+    },
+    "S08-R003-P001": {
+      "sourceTextSha256": "65c5b983064e6a488a57a5d35cf9441d55ac2b5b288a8c10c392e207f9b9c49b",
+      "en": "The Myanmar case shows a structure combining regime survival and dependence on weapons. Between 2021 and 2022, the junta received approximately USD 260 million of aircraft, tanks and ammunition from Chinese state-owned arms companies AVIC, NORINCO and China South Industries. Six FTC-2000G aircraft were delivered directly from the Anshun factory in Guizhou through Yunnan to Namsang base in Shan State and deployed in combat. American policy maintained strategic patience after the coup, shifting belatedly toward intervention only when the risk of regime collapse became visible in mid-2024. China, by contrast, rapidly switched toward rescuing the regime. Foreign Minister Wang Yi's August 2024 visit marked its assumption of a diplomatic-shield role through heavy weapons and funding. Special envoy Deng Xijun simultaneously coordinated with the United Wa State Army, UWSA, to implement the so-called Four Cuts strategy, blocking food, money and intelligence to the TNLA and MNDAA rebel groups."
+    },
+    "S08-R003-P002": {
+      "sourceTextSha256": "af34a302086d58b68c2580a93f18daa0b08d7ad04190ba6aee779ea559e00ea8",
+      "en": "3. [Main discussion 2]"
+    },
+    "S08-R003-P003": {
+      "sourceTextSha256": "819ad81ac806219072ce255a3d9e3cc93d8f3348ba04b03335fbb53c2c8fee2f",
+      "en": "The central problem running through these four cases is that, viewed at the level of a firm or individual, each appears to be an ordinary commercial transaction or resource-development activity. Changing the observational scale gives the same facts entirely different strategic implications. I call this phenomenon ‘scale illusion.’ A typical example is the small and medium-sized teapot refineries handling Iranian crude. Tracking actual oil movements through Foundry's routes layer, nv_03_routes, and track-data layer, nv_08_track_data, reveals a fixed path from Iran's Bandar Abbas terminal through the Indian Ocean and a ship-to-ship transfer area in the Strait of Malacca, where signals are concealed, to Shandong's refining complexes. For an individual teapot refinery, this is simply a commercial decision to buy inexpensive crude."
+    },
+    "S08-R003-P004": {
+      "sourceTextSha256": "075354db5fdab1af98c0c53be66336825761393ee2a82e1616be11b18acbf8af",
+      "en": "However, when hundreds of refineries simultaneously absorb more than 90% of the volume and falsely declare it to Chinese customs as originating in Malaysia, Oman or the UAE, it is no longer an individual purchasing decision. It becomes national energy-security circumvention infrastructure around a transnational chokepoint, the Strait of Malacca. Considered alongside China's 2021 decision to give Iran full military access to the BeiDou satellite-navigation system, individual refinery purchases emerge as the final implementation units of state-designed logistics infrastructure."
+    },
+    "S08-R003-P005": {
+      "sourceTextSha256": "98dd3d08fc129cfb0292edc7089d8ba8587d70afd4319a86ba33a6bc362d1db8",
+      "en": "Prince Group's resort development follows the same pattern. Seen solely from the perspective of Canopy Sands, it is tourism-infrastructure investment. Overlaying it on the same timeline as PLAN corvette rotations, completion of ammunition storage and Hun Manet's opening of the joint training center, however, makes clear that commercial land leasing provided a buffer for military-base expansion. Greenland's rare-earth equity participation works similarly. Shenghe Resources' stake, apparently an investment in an individual mining company, functions as an alternative route of penetration filling the strategic gap created by the higher-level blockade of airport infrastructure. The common implication is clear: at smaller observational scales, actions appear legal, individual and even harmless. Once the scale expands and timelines, spatial relationships and actor networks are reassembled together, those same actions become elements of national strategy."
+    },
+    "S08-R003-P006": {
+      "sourceTextSha256": "f504aa406118702f1c19da602e25ae66e124a82fa473771e9ebd1d162cd0a247",
+      "en": "The inquiry's central claim is therefore that individual corporate movements should not be evaluated in isolation and treated as the end of the analysis. Their temporal, spatial and relational contexts must be reassembled at higher scales and treated as an alert. This also explains why American responses were structurally bound to remain reactive: they stopped at individually monitoring and sanctioning local contracts after events occurred, without a preventive system capable of reconstructing in real time the higher-level patterns those contracts were completing."
+    },
+    "S08-R004-P002": {
+      "sourceTextSha256": "1ec5e1a1a5b5a3562f4a79b6f899a13cc3ca14f7a752826e663b23a3f4d7b7da",
+      "en": "4. [Main discussion 3]"
+    },
+    "S08-R004-P003": {
+      "sourceTextSha256": "a58bc18a0de92867da1f14db5c4c329bc0288ac7f78bad252a36b85963e15408",
+      "en": "Evaluating America's China strategy separately by scale reveals a paradox: the same policy orientation produces opposite effects at different scales. Globally, American containment appears to work. Semiconductor export controls, the CHIP4 alliance and expansion of the Entity List actually delayed access to advanced technology. Yet that success creates an illusion concealing failures at national and local scales. While America rested on blocking a USD 550 million Greenland airport bid, Chinese capital entered rare-earth ownership structures through Shenghe Resources and others. This confirms an inverse relationship in which stronger blockades instead accelerate the opponent's self-reliance and development of alternative routes. At national scale, state-to-state pressure is effectively neutralized when the target country's regime has already adopted a pro-China orientation."
+    },
+    "S08-R004-P004": {
+      "sourceTextSha256": "ab57b033b91b2f683a370e4afa7f32d3412a7b8b6e93150ebdd7cddc921537ed",
+      "en": "Cambodia's Hun Manet administration publicly presided over the joint training center's opening while relying on China for 93% of arms imports. Myanmar's junta narrowly survived a collapse crisis with support from the Four Cuts strategy designed by Chinese envoy Deng Xijun. In these cases, America's practical options were limited to symbolic actions such as sending a warship to request access. This was a scale mismatch: national diplomatic-pressure logic was applied unchanged to countries already subordinated to desperate local calculations of regime survival. Locally, the mismatch is even clearer. Ream's Joint Logistics and Training Center opened on April 5, 2025; the U.S. Department of Justice filed a lawsuit to seize Prince Group's bitcoin on October 1 that year; and Chen Zhi was extradited to China in January 2026. Throughout these months, American responses remained structurally trapped in punishment following events that had already occurred."
+    },
+    "S08-R004-P005": {
+      "sourceTextSha256": "02526bf2085c9dee7319b880be42d4b1a2f9a521f5428b73d033f69400de211a",
+      "en": "Capital creates new shell companies and alternative routes to evade enforcement and sanctions faster than American judicial procedures can proceed. The delay itself therefore becomes a structural advantage for China's relational strategy. Across the three scales, America's failure does not stem from a policy failure at any single scale. It arises from a structural problem: mistaking success at one scale for overall strategic success without recognizing cross-scale delays and their resulting illusions."
+    },
+    "S08-R004-P006": {
+      "sourceTextSha256": "661848f82262aec1b671415f3a8226b3408ca6857c46ea4160ab54cb938df164",
+      "en": "5. [Conclusion]"
+    },
+    "S08-R004-P007": {
+      "sourceTextSha256": "5f6806de0b6fcb36de16ffa4ee93ca99288d4c758b33b2506c7782ed117c20a5",
+      "en": "This inquiry reaches two conclusions. First, actions appearing insignificant and individual at company level are interpreted as corporate hegemony and interstate hegemonic conflict when reassembled at higher geopolitical scales, and actually operate in that way. Teapot refineries' crude purchases, Prince Group's resort leases and Shenghe Resources' rare-earth stakes are each legal, individual commercial activities when viewed alone. As they accumulate and combine across time and actor networks, however, they become national strategic assets. A firm's local activities should therefore not be the endpoint of judgment but warning signals requiring reinterpretation at higher scales. Second, from a macro perspective, America's China strategy appears to operate successfully: export controls and wider alliances actually delayed access. Yet this macro success simultaneously performs a second function by concealing adverse effects at lower scales."
+    },
+    "S08-R004-P008": {
+      "sourceTextSha256": "b4d57c6d3bf2b2b3e8bc452e73bd545981a47bd93710c3e7283c1ef24e29dfb2",
+      "en": "An inverse relationship was actually identified: stronger blockades led to more sophisticated local circumvention and self-reliance. Policy therefore cannot remain at a single fixed scale. It requires an ‘adaptive scale’ approach that flexibly changes the scale of observation and intervention according to the target and circumstances. Korea's corporate policy must likewise move beyond merely following macro regulatory legislation at the state-to-state level. I hope to contribute professionally by building a practical multilayer ontology system that reconstructs local corporate structures, shell-company networks and movements of dual-use components at higher scales in real time, enabling tracking and prevention."
+    },
+    "S08-R004-P009": {
+      "sourceTextSha256": "23efd024a77d7be3cbedfae0bff87254e9585300eb80e789f6b379da2183be8b",
+      "en": "6. [References]"
+    },
+    "S08-R004-P010": {
+      "sourceTextSha256": "4cb7f73c20b983ef4327aa26158707f9fe96e203bde80c09288ecb3752dc0687",
+      "en": "Greenland case (CCCC airport investment and rare earths). Center for Strategic and International Studies. (2021). China's maritime silk road initiative: Greenland and arctic infrastructure vectors. CSIS. Danish Institute for International Studies. (2020). Greenland's security tech and rare earth investments: A multi-scalar analysis. DIIS Report. Cambodia case (Ream Naval Base and Prince Group). U.S.-China Economic and Security Review Commission. (2024). The dual-use development of Ream naval base and the role of corporate entities. USCC Annual Report to Congress. AidData. (2023)."
+    },
+    "S08-R004-P011": {
+      "sourceTextSha256": "937af91f3f4ee2ddb90ad1d593bb4b5188edab2467f08605c33837c7850f2222",
+      "en": "Tracking Chinese development finance: Cambodia's military-commercial overlaps. William & Mary. Iran case (drone-component supply chains and Shandong teapot refineries). Lawfare Institute. (2025). Sanction evasion networks: Xiamen-to-Tehran dual-use supply chains. Lawfare. Center for Strategic and International Studies. (2026). The teapot network: Illicit oil trade and China's energy resilience infrastructure. CSIS Briefs. Myanmar case (defense support and the Four Cuts strategy). Stimson Center. (2024)."
+    },
+    "S08-R004-P012": {
+      "sourceTextSha256": "605340568bdb61f142fdaf946f67b3770e62048ac254ec64167fd43aab4371fb",
+      "en": "China’s shifting tactics in Myanmar: Envoy Deng Xijun and the ethnic armed organizations. Stimson Analysis. Jane's Defence Weekly. (2024). FTC-2000G deployment and Chinese state-owned enterprise transfers to Myanmar junta. Jane's. OSINT/LLM and visualization tools: NV (Night Vision), model: Anthropic sonnet 5 middle — https://github.com/hexagon0401/Night-Vision-A ; Palantir Foundry Dev tier."
+    }
+  },
+  "sourceCount": 29,
+  "translatedCount": 29,
+  "complete": true
 }

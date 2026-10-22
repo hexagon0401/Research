@@ -23,6 +23,7 @@ for term in ["레드불", "몬스터", "알류미늄", "충진", "조원", "지�
 
 
 def clean(text):
+    text = text.replace("\u200b", "").replace("\ufeff", "")
     text = re.sub(r"[\t\u00a0\u2002-\u200a]+", " ", text)
     text = re.sub(r" {2,}", " ", text)
     text = re.sub(r"\s+([,.;:!?%)\]】])", r"\1", text)
@@ -80,7 +81,7 @@ def physical_lines(page):
 def join_line(previous, current, trailing):
     if not previous:
         return current
-    if re.search(r"https?://\S+$", previous) and re.fullmatch(r"[A-Za-z0-9_/?%&=.#-]+", current) and (re.search(r"[/%_-]$", previous) or re.search(r"[/%_-]", current)):
+    if re.search(r"https?://\S+$", previous) and re.fullmatch(r"[A-Za-z0-9_/?%&=.#-]+", current) and (re.search(r"[/%_-]$", previous) or re.search(r"[/%_.-]", current)):
         return previous + current
     if not trailing and re.search(r"[가-힣]$", previous) and re.match(r"^[가-힣]", current):
         glued = KIWI.glue([previous, current])
@@ -138,23 +139,27 @@ def main():
             else:
                 items = []
                 for block in section["blocks"]:
-                    for t in re.split(r"\n\s*\n", block["text"]):
+                    for t in re.split(r"\n\s*\n|\u2028\s*\u2028|\u2029", block["text"]):
                         if clean(t):
-                            items.append((clean(re.sub(r"\s*\n\s*", " ", t)), [block["id"]], block["kind"]))
+                            items.append((clean(re.sub(r"\s*[\n\u2028]\s*", " ", t)), [block["id"]], block["kind"]))
             items = [(chunk, refs, kind) for text, refs, kind in items for chunk in readable_chunks(text)]
             for number, (text, refs, kind) in enumerate(items, 1):
                 paragraphs.append({"id": f"{rid}-R{section['number']:03d}-P{number:03d}", "sectionId": section["id"], "sourceBlockIds": refs, "sourcePage": section["number"] if pdf else None, "kind": kind, "ko": text, "sourceTextSha256": hashlib.sha256(text.encode()).hexdigest()})
         # Visually checked continuations: neither the author nor the word changes
         # at a page break. Both source anchors continue to resolve to the passage.
         continuations = {
+            "S01": {"S01-R001-P010": "S01-R002-P002", "S01-R002-P008": "S01-R003-P002"},
+            "S03": {"S03-R001-P002": "S03-R001-P003", "S03-R002-P006": "S03-R003-P002", "S03-R003-P006": "S03-R004-P002"},
             "S06": {"S06-R004-P006": "S06-R005-P001", "S06-R006-P005": "S06-R007-P001"},
             "S08": {"S08-R001-P010": "S08-R002-P001", "S08-R003-P006": "S08-R004-P001"},
+            "S13": {"S13-R002-P010": "S13-R003-P001", "S13-R004-P009": "S13-R005-P001"},
+            "S16": {"S16-R002-P007": "S16-R003-P002"},
         }.get(rid, {})
         for first, following in continuations.items():
             a = next((p for p in paragraphs if p["id"] == first), None)
             b = next((p for p in paragraphs if p["id"] == following), None)
             if a and b:
-                a["ko"] = a["ko"] + ("" if rid == "S06" else " ") + b["ko"]
+                a["ko"] = a["ko"] + ("" if rid in {"S01", "S06", "S16"} else " ") + b["ko"]
                 a["sourceBlockIds"] = list(dict.fromkeys(a["sourceBlockIds"] + b["sourceBlockIds"]))
                 a["sourcePageEnd"] = b["sourcePage"]
                 a["sourceTextSha256"] = hashlib.sha256(a["ko"].encode()).hexdigest()

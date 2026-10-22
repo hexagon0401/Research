@@ -46,9 +46,13 @@
     "S11-R013-P004": {
       "sourceTextSha256": "75e0bc13a3bbba3b1621c4b6a8bc36731cf6af5888f421b6edadf024db4d56c2",
       "en": ". Inside Arsenal-1 with Anduril founder Palmer Luckey. https://www.10tv.com/article/news/local/boomtown-ohio/arsenal-1-tour-anduril-founder-palmer-luckey-10tv-exclusive/CSIS. (2025). The Future of NATO Defense, Resilience, and Allied Innovation. https://www.csis.org/events/future-nato-defense-resilience-and-allied-innovationCSIS. (2026, January 8). Strengthening NATO Starts with Fixing Its Industrial Base. https://www.csis.org/analysis/strengthening-nato-starts-fxi ing-its-industrial-base"
+    },
+    "S11-R001-P004": {
+      "sourceTextSha256": "3f3ba3d9e6515fc8d657c0c9037a375ce76b400a72784088fff53ba4d24cf47c",
+      "en": "Introduction"
     }
   },
   "sourceCount": 95,
-  "translatedCount": 11,
+  "translatedCount": 12,
   "complete": false
 }

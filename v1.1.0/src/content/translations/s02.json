@@ -2,8 +2,309 @@
   "reportId": "S02",
   "method": "editorial-translation",
   "status": "author-review-pending",
-  "paragraphs": {},
-  "sourceCount": 69,
-  "translatedCount": 0,
-  "complete": false
+  "paragraphs": {
+    "S02-R001-P001": {
+      "sourceTextSha256": "5de51642b4b0d5788ede7d5ccd66d7e1c3fb7fe76579ed8b56b8f9a2d76f1cc6",
+      "en": "America's True Power from a Realist Perspective: The Economic–Security Complex and Technological Hegemony"
+    },
+    "S02-R001-P002": {
+      "sourceTextSha256": "bd1a820fd86645e9a9a0c7f9f3f15b28097f685303f5fa555e5bd396fc6f1f72",
+      "en": "I. Introduction"
+    },
+    "S02-R001-P003": {
+      "sourceTextSha256": "4d9147db3147860ddbca1d98327ea98410cfeb8104dd2de7114f11296f96d643",
+      "en": "1) Reason for selecting the topic"
+    },
+    "S02-R001-P004": {
+      "sourceTextSha256": "b4cef56391f555eb69a34b7bc71a3f64257f673a0664ec38e616aaa54adf02f8",
+      "en": "On June 22, 2025, Korean time, America conducted precision strikes on Iranian nuclear facilities using the GBU-57, commonly called a bunker buster. It used the B-2 bomber, often described as a crown jewel of American defense assets. Costing more than KRW 2 trillion, with annual maintenance of about KRW 40 billion, the bomber is known as a capability only America can operate. Thirty Tomahawk missiles launched by an American carrier strike group likewise represented a form of strike, unilateral force and intimidation possible only for America. Only America can freely employ these giant stealth bombers and Tomahawks costing approximately KRW 800 million each. American power is commonly discussed through such hard power. But does overwhelming military capability and its supporting budget alone maintain America's position as the world's strongest state and hegemon in 21st-century international politics? What fundamentally underpins this power, and what does America seek? I selected the topic to find an answer."
+    },
+    "S02-R001-P005": {
+      "sourceTextSha256": "2eeb91fddb6b92c8f008ba39a939211f3de54057ae565d589a880d90bef0a166",
+      "en": "America's true power appears as a distinctive power structure combining economic influence and technological advantage. In the global economy, its firms' overwhelming scale, funding and influence also create a new form of power beyond the traditional concept of the state."
+    },
+    "S02-R001-P006": {
+      "sourceTextSha256": "c68552f8be95f6062fed0267b362f8ae8fc66c305488671ba2e63105f5b8e194",
+      "en": "2) Definitions"
+    },
+    "S02-R001-P007": {
+      "sourceTextSha256": "3b6cc2d453573007c71963a7a9eb891ee66d27d6ac61a4834be04af62d08bab6",
+      "en": "I define the economic–security complex as a system through which a state integrates economic resources, security and defense policy to exercise international influence and obtain benefits—that is, achieve international-political objectives. America, for example, organically combines resources such as giant firms with defense policy to form comprehensive national power beyond traditional military capability. As an expanded form of the military-industrial complex, it is a strategic approach pursuing national security and economic benefit simultaneously through economic-security policy."
+    },
+    "S02-R001-P008": {
+      "sourceTextSha256": "a70270a95214d1bbc516e0076d00d83fd9a8e83b9a34e86831ea8594fbe7371e",
+      "en": "I define technological hegemony as the ability to control other countries' access to technology and development paths through overwhelming advantage in core technological fields. It means structural power exercised internationally through technology, not simply a higher technical level. America's ecosystem in advanced fields such as semiconductors, AI and cloud computing operates as systemic power by making other countries dependent on American standards and supply chains. Main discussion. 1) Case analysis. A. Building an integrated system through the defense industry."
+    },
+    "S02-R001-P009": {
+      "sourceTextSha256": "fd6a3094bf5c7c3d4cffcdf275eb42314428ac525f6829ad595189f517877c7e",
+      "en": "America strategically stimulates competition among major defense firms such as Lockheed Martin, RTX and Northrop Grumman. This promotes innovation and uses firms as key instruments of state policy. With enormous financial resources and an annual defense budget of about USD 900 billion, America supports and encourages the acquisition of monopolistic technologies. Such competition continually generates positive effects and development for the country."
+    },
+    "S02-R001-P010": {
+      "sourceTextSha256": "b8c20f6d2c98c388dd842b8c8740d9dd38b6b0618c1ce540e3d70f39041b6473",
+      "en": "Consortia between American big tech and defense firms demonstrate the compounding effects of these strategic partnerships. Defense-technology companies led by Palantir and Anduril are attempting to form a consortium of twelve technology firms, including SpaceX, OpenAI, Saronic and Scale AI, to obtain Defense Department contracts. This competition seeks to break the oligopoly of traditional contractors Lockheed Martin, Raytheon and Boeing and build a new defense ecosystem. Rather than ending with a few large firms, American defense competition enables many firms to participate and compete, creating positive developmental effects."
+    },
+    "S02-R001-P011": {
+      "sourceTextSha256": "5be34fe08f70f6859ac20826266ccb6edcb0cf7d7b825f5472620a81743110d2",
+      "en": "Defense competition in Ukraine provides an example. America used its defense companies during the Russia–Ukraine war. For firms, it was an opportunity to sell and develop weapons; for America, their support became a diplomatic bargaining instrument and a source of pressure on Russia. Defense-industry competition thus produces combined benefits: bargaining leverage and industrial, technological and economic development."
+    },
+    "S02-R001-P012": {
+      "sourceTextSha256": "0ff9a3b079121edafecc5c946b567ae89f1e3c0b23e6dbde5d096ca29f376bf2",
+      "en": "B. Strategic alliances with big tech"
+    },
+    "S02-R001-P013": {
+      "sourceTextSha256": "15e504af1fe78ed041f242adba1f9f6ebda3abe6a03311925abaece954d67e59",
+      "en": "Hello. Through a major contract with OpenAI, the U.S. Department of Defense is attempting to use AI actively in defense. It also integrates civilian industries and advanced technologies into military systems through collaboration such as military versions of Microsoft Office and the use of Google's cloud and databases."
+    },
+    "S02-R001-P014": {
+      "sourceTextSha256": "827915dfbf5bd4eee1e2af9bc9228f300f3197f37f5a8cd36b2ac9987e815138",
+      "en": "These partnerships strategically employ civilian technology in national defense and security. Integrating leading civilian AI and cloud firms such as OpenAI, Microsoft and Google into defense systems also moves beyond the oligopoly of traditional contractors to construct a technological ecosystem."
+    },
+    "S02-R001-P015": {
+      "sourceTextSha256": "5bf6eb3a85925e31cf31bde2e72731dc4a2f07138aff7ae295869f29e984884c",
+      "en": "C. Securing technological advantage through semiconductor supply chains. CHIP4—the United States, Japan, Korea and Taiwan—is a new form of semiconductor chain involving friendly and allied countries rather than domestic firms alone. America's overwhelming financial support forms a chain that pressures and threatens other states. By providing economic incentives to friendly countries' firms, America demonstrates a complex strategy in which those firms naturally exert technological pressure on adversaries."
+    },
+    "S02-R001-P016": {
+      "sourceTextSha256": "19a0a79807b3069b41a694769c1e7821cb8da3926b34eff3a191d729f311df7b",
+      "en": "CHIP4 combines four strengths to pressure China: American leadership in fabless design, Taiwan's foundry strengths, Korean memory competitiveness and Japan's core technologies."
+    },
+    "S02-R001-P017": {
+      "sourceTextSha256": "a4631dd53372e9a8849e67a8c4f356602e1d6ed1a3171e1b08dbddaf1725ee70",
+      "en": "Semiconductors have recently become globally crucial and are used in countless devices. A Chinese semiconductor monopoly would harm America and the world, so America organized CHIP4 around friendly countries to counter China and turn it into an instrument of pressure. Securing technological advantage in this way can be seen as a new invisible form of pressure grounded in American economic power."
+    },
+    "S02-R001-P018": {
+      "sourceTextSha256": "85f866b2c7e4478abf63930d4eebcdc9b0d2e8120baf6f2d6d9e28654c45642d",
+      "en": "D. A pressure network based on multilateral cooperation"
+    },
+    "S02-R001-P019": {
+      "sourceTextSha256": "9ff4bd81a2ac83c6a5cc90c1996d3408ebfba423d785bc1a7d2bec86dfa1dacd",
+      "en": "America uses its own power but also multilateral arrangements such as AUKUS, the Quad and the Indo-Pacific strategy. These extend beyond sharing or supporting defense capability to technological sharing and sanctions cooperation. Some observers argue that America sought these new methods because it yielded to other major powers such as China and Russia."
+    },
+    "S02-R001-P020": {
+      "sourceTextSha256": "2d3fa4e099dfa07179f3f6db1c5f748562de777755841961514aaad54c9ecae3",
+      "en": "However, these American multilateral arrangements are contemporary applications of the realist concept of balancing behavior, creating strong pressure and mutual deterrence even when they are not visible."
+    },
+    "S02-R001-P021": {
+      "sourceTextSha256": "d10b879d4aa02c5511cd29835177e606d1fda7b723ef5443e622f74cf123e101",
+      "en": "2) Analysis applying realist theory"
+    },
+    "S02-R001-P022": {
+      "sourceTextSha256": "7bd849c6999a11d41dbf1b4b16582e2ded9fb23f4bb69068cfa471c07b646f78",
+      "en": "A. The power-politics perspective"
+    },
+    "S02-R001-P023": {
+      "sourceTextSha256": "86ac33bc4982a54f49d195ef2bd3d1fcb034a4d097e20492fd53c16819373eec",
+      "en": "From the perspective of power politics, central to realism, American behavior adheres to the primacy of national interest and the logic of power. While proclaiming liberal values, America in practice pursues international hegemony through a realist approach. Realism assumes an anarchic international society in which states are rational actors seeking power to secure themselves."
+    },
+    "S02-R001-P024": {
+      "sourceTextSha256": "64dc97a31590c1509ae76e2cb40f2bf5cf5888052a3a985fcf74466c17ae227b",
+      "en": "America controls and dominates through competition among defense contractors, strategic partnerships with technology firms and chains with friendly states such as semiconductor supply networks. All these actions ultimately serve the realist objective of maximizing national power. They accord with realism's pursuit of relative rather than absolute gains. America's stance in technological competition with China in particular can be interpreted as a strategy to secure relative advantage through zero-sum thinking."
+    },
+    "S02-R001-P025": {
+      "sourceTextSha256": "c3e04700240c97e4d1a8b401d7201130cea1b0bb2f4e0f204e6e26c36189cbd6",
+      "en": "B. Securitization of economic power"
+    },
+    "S02-R001-P026": {
+      "sourceTextSha256": "71ffb582e3df05b4298294f8bf47d981283c7ebe9f4b31e03d74ad2fb2d1ef53",
+      "en": "Beyond military power, the traditional realist symbol of strength, economic power has become a central component of national security. As the American example shows, giant firms' economic capabilities are no longer merely private but are recognized as strategic assets directly linked to security. America's economic-security strategy is encapsulated by ‘Economic Security is National Security,’ presenting a paradigm that approaches economics through security."
+    },
+    "S02-R002-P001": {
+      "sourceTextSha256": "216b0e036aa8138dd0b36a38f0ee910ea8611330c80d26cd8f12facaeb56375f",
+      "en": "The combined USD 10 trillion market capitalization of Microsoft, Apple, Nvidia and Alphabet, approximately KRW 13,700 trillion, is an economic figure but also a measure of strategic power available to America. Firms' technology and capital underpin its invisible influence over other states. Nvidia's addition of more than USD 2 trillion in market value during 2024, rising to become the world's second-largest company, illustrates technological advantage converting into economic and political power in the AI age."
+    },
+    "S02-R002-P002": {
+      "sourceTextSha256": "d23f12481c4fd49bdcd255c1a6f7f50f1a6d1ff75c5c80b7a212527102e4671f",
+      "en": "America's economic-security policy centers on a 3P strategy—Promotion, Protect and Partnership—maintaining advanced technological advantage, securing supply-chain stability and strengthening restrictions on outward investment in core industries. It is designed as a comprehensive national-security strategy beyond ordinary economic policy. Stronger controls on dual-use technologies such as semiconductors, AI and quantum technology to impede China's technological rise exemplify security objectives achieved through economic instruments."
+    },
+    "S02-R002-P003": {
+      "sourceTextSha256": "29c5e93bd4695dc7415b0ae91c4fdb751ceb4f0d69ebfd9ada5aa205498d83c3",
+      "en": "C. Using structural power"
+    },
+    "S02-R002-P004": {
+      "sourceTextSha256": "3534ec3adf1bba70e0531d23d759c1443adceee9f1bcdff19911c56178298822",
+      "en": "Analyzed through realism's structural-power concept, America does not rely solely on physical coercion but organizes international economic and technological systems to its advantage. CHIP4 supply-chain control and strategic cooperation with big tech create structures compelling other countries to act within America's sphere of influence."
+    },
+    "S02-R002-P005": {
+      "sourceTextSha256": "905fcad8d4e3f5c16493ed4e86c7be70a468db204660a224c520f536cc69651a",
+      "en": "Structural power narrows other countries' choices, induces particular behavior and sometimes compels it. America's technological ecosystem operates as power by requiring other countries to accept American standards and access advanced technology through cooperation with American companies. Microsoft's Windows, Google's Android and Apple's iOS, for example, go beyond products to function as instruments of structural power setting global digital standards."
+    },
+    "S02-R002-P006": {
+      "sourceTextSha256": "23cc1520a4ce19b1d2e45cfd93c60874ba136a63c58b225f92f94f89bb45b144",
+      "en": "Economic structural power becomes stronger when combined with the dollar's reserve-currency system. American firms' global dominance links to dollar payments, making other countries vulnerable to American sanctions and pressure. This alters the realist balance-of-power mechanism to America's advantage."
+    },
+    "S02-R002-P007": {
+      "sourceTextSha256": "0bdf5b2b72c6b39994ca24f8a0dc2f23cbd8242fbe2696b1b930fe15113b8543",
+      "en": "3) Conclusion"
+    },
+    "S02-R002-P008": {
+      "sourceTextSha256": "0a0616c27b3f83c4be39c6fc0ca27614486e13ea5561b8f5519e710c9e6161e3",
+      "en": "Synthesis of findings. America's true power comes from a complex structure integrating economic and technological influence beyond traditional military force. From a realist perspective, it proclaims liberal values while actually adhering to national-interest primacy and the logic of power. This supports realism's central proposition that international politics remains power politics."
+    },
+    "S02-R002-P009": {
+      "sourceTextSha256": "a4cb1729d3ae0dafb2a8f6ebb6612663cc49c4207e0248ad233f4ee7740fbdcb",
+      "en": "American power is particularly notable for being visible and invisible simultaneously. Giant firms' market capitalizations and defense budgets are visible, while the structural advantages they establish in international economic and technological systems enable relatively discreet power. America's technological ecosystem, financial system and supply-chain networks induce other countries to follow its rules and standards."
+    },
+    "S02-R002-P010": {
+      "sourceTextSha256": "1024f3cbf73e15cb7dcaf63a64624f5adc90956f798eae431bc2007fcbd0e814",
+      "en": "America's USD 886 billion defense budget for 2024 and the USD 10 trillion combined market value of Apple, Microsoft, Nvidia and Alphabet demonstrate the scale of its comprehensive national power rather than mere numbers. These firms' innovations and economic value connect closely to government strategic objectives, generating synergies. OpenAI's Defense Department contract and big tech's entry into defense are representative cases of public–private integration."
+    },
+    "S02-R002-P011": {
+      "sourceTextSha256": "6627a2d197f39707d4b89ea9c0daeef11d736194f9857edcea1219cf1c6c66f0",
+      "en": "America shows how technological and economic strength combine with traditional military capability in modern international politics, and how all three continue to be employed from a realist perspective. Its hegemonic strategy seems suited to a liberal international society while remaining faithful to the basic logic of power."
+    },
+    "S02-R002-P012": {
+      "sourceTextSha256": "7b254bf9b4daf644db0f000d70abee9ba1106c2f95a70f07eff1249a1a9b259e",
+      "en": "Competition driven by American economic power continually encourages firms to participate and develop. Large companies work to retain their positions while startups seek adoption with creative ideas. This competition ultimately drives American strength and renewal."
+    },
+    "S02-R002-P013": {
+      "sourceTextSha256": "8862fb1cd2fe4cd81ee3cf880584ef331eba65eece2b31c191505c1f75251869",
+      "en": "Ultimately, America's technological, economic and military capabilities develop continuously through a mechanism. Its strategy extends beyond domestic resources, pressuring other countries through new organizations, treaties and agreements with friendly states. These strategic choices deserve continuing attention as those of the strongest power in 21st-century international society."
+    },
+    "S02-R002-P014": {
+      "sourceTextSha256": "b9a63d61ac006f91bfaac4f168c8317c5e55d48174c2f21470a8828cfbef184e",
+      "en": "References"
+    },
+    "S02-R002-P015": {
+      "sourceTextSha256": "f50aa7cf5b974b1f15726f8a0b91fb4ce59ad46adda14c757549a11c7c89cd03",
+      "en": "1 KBS News. \"Biden signs the National Defense Authorization Act: 2024 U.S. defense budget set at KRW 1,150 trillion.\" 2023-12-24. https://news.kbs.co.kr/news/view.do?ncd=7849662"
+    },
+    "S02-R002-P016": {
+      "sourceTextSha256": "26b6fe79f2b00d1c4a714db7931c03dec375bc7a9958d0d3069197c09af0fe3e",
+      "en": "28 Space Radar. \"America: 2024 defense budget of USD 886 billion, including USD 30.1 billion for the Space Force.\" 2023-12-17. https://www.spaceradar.co.kr/news/articleView.html?idxno=2786"
+    },
+    "S02-R002-P017": {
+      "sourceTextSha256": "8bf41c391c8529c36e2409bd7544f0e0f401fb777f1a06d50967f9ea16cb77a2",
+      "en": "29 Korea Institute for National Unification. \"Understanding the American defense budget.\" 2024-01-01. https://www.kinu.or.kr/egentouch-asset/10150/contents/6768196"
+    },
+    "S02-R002-P018": {
+      "sourceTextSha256": "2896bdc76d751fbb62d8124f7309a65cac677a7142a525ef5154f22f258f5eb8",
+      "en": "30 Heesight. \"Boeing strikes back: defeats Lockheed in the KRW 67 trillion Pentagon fighter competition!\" 2025-03-23. https://heesight.com/entry/보잉의-반격-미-국방부-전투기-67조-수주전에서-록히드를-꺾다"
+    },
+    "S02-R002-P019": {
+      "sourceTextSha256": "bb0963759cab864324992ae5e5dab35ed2670a1cb1f4e7faccd3caff8374f597",
+      "en": "31 MS TODAY. \"OpenAI signs its first official Pentagon contract, worth USD 200 million.\" 2025-06-17. https://www.mstoday.co.kr/news/articleView.html?idxno=98068"
+    },
+    "S02-R002-P020": {
+      "sourceTextSha256": "740c54ef6f1da89ffcef5a5e1a9fa7c8c7d8a5747cbe7d721e02e1459fadbdcd",
+      "en": "8 KBS News. \"Biden signs the National Defense Authorization Act: 2024 U.S. defense budget set at KRW 1,150 trillion.\" 2023-12-24."
+    },
+    "S02-R002-P021": {
+      "sourceTextSha256": "ea844d0304fecf0a49148df95585760617b555bc1b3dd9785349b35355a9ed7e",
+      "en": "9 Space Radar. \"America: 2024 defense budget of USD 886 billion, including USD 30.1 billion for the Space Force.\" 2023-12-17."
+    },
+    "S02-R003-P001": {
+      "sourceTextSha256": "b414e101686f051c22e3b717938add0fc4632373f61164954b19cb8705f82556",
+      "en": "32 Korea Institute for National Unification. \"Understanding the American defense budget.\" 2024-01-01."
+    },
+    "S02-R003-P002": {
+      "sourceTextSha256": "a101f4094d3ac53a0aee48bde0cfcbd35af46a6624e654326eef36e9516a15d8",
+      "en": "17 Heesight. \"Boeing strikes back: defeats Lockheed in the KRW 67 trillion Pentagon fighter competition!\" 2025-03-23."
+    },
+    "S02-R003-P003": {
+      "sourceTextSha256": "82fdc3c0842a0ae79506f69f8b6af80c328d4eb3572a945dfaf61ef9348660e8",
+      "en": "20 MS TODAY. \"OpenAI signs its first official Pentagon contract, worth USD 200 million.\" 2025-06-17."
+    },
+    "S02-R003-P004": {
+      "sourceTextSha256": "f01f15064bdbcda79a6b0b63b4ca733dcc0182667dd4d885fe2567106376b070",
+      "en": "23 Byline Network. \"What is the Chip 4 alliance, and does it benefit us?\" 2022-08-01. https://byline.network/2022/08/01-61/"
+    },
+    "S02-R003-P005": {
+      "sourceTextSha256": "53b4579bcc2ff696478bf37ed4e6a36024c374aed402b9d7c1cbf3484f48d24e",
+      "en": "2 Wikipedia. \"Realism.\" 2017-06-27. https://ko.wikipedia.org/wiki/현실주의"
+    },
+    "S02-R003-P006": {
+      "sourceTextSha256": "3de169167d01865f7b33409859b54c9294de5931b55d6eeb692a4f8aefdf7ee3",
+      "en": "3 Korea University Institute of International Politics. \"The concept, evolution and strategic implications of economic security.\" https://ifg.korea.ac.kr/ifg/policy.do?mode=download&articleNo=339539&attachNo=243628"
+    },
+    "S02-R003-P007": {
+      "sourceTextSha256": "9c210ea321cccf977cad56bfd64daae66b8b94aeb06c5e2f36d5bbf5a66fac54",
+      "en": "10 Cliwant. \"The American government-procurement market versus Korean public tenders: what differs?\" 2025-03-31. https://blog.cliwant.com/usprocurement1/"
+    },
+    "S02-R003-P008": {
+      "sourceTextSha256": "8904049f0a0ed0a51dd0c5e98f87fcf33372290cdf81116720225dae6fc8b5de",
+      "en": "22 News Freezone. \"American technology firms target a KRW 1,200 trillion defense budget.\" 2024-12-23. https://www.newsfreezone.co.kr/news/articleView.html?idxno=602032"
+    },
+    "S02-R003-P009": {
+      "sourceTextSha256": "020edab8d803a0d9b747bfbb8b972b543d6b8c1ed8bb3e9e053030fce5fb38ef",
+      "en": "21 AI Times. \"OpenAI signs a KRW 270 billion contract to provide AI technology to the Pentagon.\" 2025-06-17. https://www.aitimes.com/news/articleView.html?idxno=171411"
+    },
+    "S02-R003-P010": {
+      "sourceTextSha256": "b5ea6706128705f36d620fa4b628523f88f7dfe8e6550436c2b59294ccab1f08",
+      "en": "4 Ministry of National Defense. \"2024 defense budget: KRW 59.6 trillion, up 4.5% year on year.\" 2023-08-29. https://www.mnd.go.kr/user/newsInUserRecord.action"
+    },
+    "S02-R003-P011": {
+      "sourceTextSha256": "d8a0126a0feabd5213fe3f6dfe6e3f9d0b8e367f74ed34634450538a15de604c",
+      "en": "33 KBS News. \"National Assembly passes KRW 656.3 trillion government budget, up 2.8% year on year.\" 2023-12-21. https://news.kbs.co.kr/news/view.do?ncd=7847868"
+    },
+    "S02-R003-P012": {
+      "sourceTextSha256": "1f3fdb277f90491a17b0d60b60c7014ec8f8f0125b921af784b598264971497a",
+      "en": "15 Seoul Economic Daily. \"Polish exports drive Hanwha into the global top twenty defense firms.\" 2024-08-07. https://www.sedaily.com/NewsView/2DCXB6WM8W"
+    },
+    "S02-R003-P013": {
+      "sourceTextSha256": "1ec0d17291aff70c457abfd8f80d42a27893d4433eddf93ba53469ec9a3245fd",
+      "en": "19 KBS News. \"U.S. arms sales in fiscal 2023 rise 16% year on year.\" 2024-01-30. https://news.kbs.co.kr/news/view.do?ncd=7878624"
+    },
+    "S02-R003-P014": {
+      "sourceTextSha256": "21937ebd87c9426e69db7dfb2a2b3d6ccaa9268f67c3049c53f542e00de7eaf3",
+      "en": "5 Yonhap News. \"Apple: January–March revenue up 5%, net income up 4.8%; shares down 2% after hours (roundup).\" 2025-05-01. https://www.yna.co.kr/view/AKR20250502008051091"
+    },
+    "S02-R003-P015": {
+      "sourceTextSha256": "e0636ceb79e444dfd5d3be944cf4a8c2d7f54800b1f332b5f5d3daa99573174e",
+      "en": "6 Apple Economy. \"Nvidia added USD 2 trillion in market capitalization last year.\" 2025-01-02. https://www.apple-economy.com/news/articleView.html?idxno=75022"
+    },
+    "S02-R003-P016": {
+      "sourceTextSha256": "ada1bba8853a3b6d5ae290a37fbc65fb1def8200174c5054f8001df9495e80c5",
+      "en": "7 Forbes Korea. \"Top 100 global and domestic companies by market capitalization.\" 2024-12-26. https://www.forbeskorea.co.kr/news/articleView.html?idxno=340656"
+    },
+    "S02-R003-P017": {
+      "sourceTextSha256": "a8dddb060618e623136e3f308e85ff3d6c5ec83b0c69f8ae837cfc6f35748904",
+      "en": "14 Naver Blog. \"[U.S. company analysis] Raytheon Technologies (RTX).\" 2024-08-30. https://blog.naver.com/starrynight_invest/223287145189"
+    },
+    "S02-R003-P018": {
+      "sourceTextSha256": "55a5b0948d2f8fdd40eac279af01db3a017f060cf933cd3a37686d83b5960171",
+      "en": "18 Maeil Business Newspaper. \"American defense firms quietly benefit from the Ukraine boom: the scale of exports.\" 2023-01-26. https://www.mk.co.kr/news/world/10619790"
+    },
+    "S02-R003-P019": {
+      "sourceTextSha256": "daf5000b1fab4eda0d17e1fcd649ba9ea475ccb012ea452ba3a1a3c88b48b52f",
+      "en": "11 Korea International Trade Association. \"Strengthening American economic-security and core-technology controls: implications.\" 2024-02-27. https://www.kita.net/researchTrade/report/commerceReport/commerceReportDetail.do?no=2553"
+    },
+    "S02-R003-P020": {
+      "sourceTextSha256": "0f1599073042df23eb1b0799901b5641c6c7cf2fadc64c15cf9c00f8b9d98e3e",
+      "en": "27 YES24. \"[E-book] The Politics of Structural Power.\" 2025-03-30. https://m.yes24.com/goods/detail/146031400"
+    },
+    "S02-R004-P001": {
+      "sourceTextSha256": "c3e187c4c5688a0cf81fe3e74ba7c943288122239bb66fd9da7ba2c810523077",
+      "en": "24 Korea Citation Index. \"Analysis of the American balancing strategy toward China.\" 2024-07-27. https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002597287"
+    },
+    "S02-R004-P002": {
+      "sourceTextSha256": "46ccd0fc086cb76f6a01f5f8857aece402000f9d1ca5bb8f1dbaddc3d6eb700f",
+      "en": "34 East Asia Institute. \"Changes in U.S.–China relations and Korea’s future diplomatic tasks.\" http://eai.or.kr/data/bbs/kor_report/201210191222367.pdf"
+    },
+    "S02-R004-P003": {
+      "sourceTextSha256": "ec8c07f610226f121241c26e49e85dc7e41474c9572add528c0d3211214ec7c6",
+      "en": "26 Naver Blog. \"Misunderstandings and realities of core asymmetric strategies in U.S.–China relations.\" 2024-06-25. https://blog.naver.com/heesup1990/223490969955"
+    },
+    "S02-R004-P004": {
+      "sourceTextSha256": "ef0c949a6daa16fa5ec220ed8606ed5a4492edec1712eb099b4332c9d6bedf21",
+      "en": "25 AWS. \"Reexamining theoretical debates on U.S.–China hegemonic competition.\" https://s3.ap-northeast-2.amazonaws.com/house.primeedunet.com/20210802+윤정진+국제정치학+강의자료+기획전/미중+패권경쟁의+이론적+논쟁+재조명_김관옥.pdf"
+    },
+    "S02-R004-P005": {
+      "sourceTextSha256": "b06c85831fe3633e909faafb9805e7dee0227438c20826c061da5d3f839fc1f5",
+      "en": "35 Yonhap News. \"Despite noisy restructuring, Trump’s first 100 days spent KRW 313 trillion more than last year.\" 2025-04-30. https://www.yna.co.kr/view/AKR20250430164000009"
+    },
+    "S02-R004-P006": {
+      "sourceTextSha256": "6e3456e4e2648ae1d4dbb42b5419300ee30f724c52e42c92b3417e87cc09fdbb",
+      "en": "13 Justice Policy Institute. \"Deepening economic conflict, including the U.S.–China trade war: implications and tasks.\" 2019-05-31. http://www.justice-platform.org/home/post_view.php?nd=195"
+    },
+    "S02-R004-P007": {
+      "sourceTextSha256": "d0cf6c09957da5d33ca721db8c3b543a9f4b744bf258baa8a723e457bb5c5120",
+      "en": "12 National Future Institute. \"The realities of global economic security and recommendations for Korea.\" https://nafi.re.kr/new/research.do?mode=download&articleNo=6914&attachNo=6431"
+    },
+    "S02-R004-P008": {
+      "sourceTextSha256": "852ad6ae50a47de41e797fabd6734f94980cbece6e118dd397a80c6be1523d19",
+      "en": "16 Naver Blog. \"RTX: share price, dividends and company analysis of a U.S. defense stock.\" 2024-09-28. https://blog.naver.com/soap77777/223599118938?isInf=true"
+    }
+  },
+  "sourceCount": 75,
+  "translatedCount": 75,
+  "complete": true
 }

@@ -1,0 +1,17 @@
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { geoPath, geoNaturalEarth1, geoAzimuthalEquidistant } from 'd3-geo';
+import { feature } from 'topojson-client';
+const root = new URL('../',import.meta.url);
+const topology=JSON.parse(await readFile(new URL('node_modules/world-atlas/countries-110m.json',root),'utf8'));
+const land=feature(topology,topology.objects.land);
+const world=geoNaturalEarth1().fitExtent([[12,12],[588,328]],land);
+const polar=geoAzimuthalEquidistant().rotate([0,-90]).clipAngle(42).scale(370).translate([300,300]);
+const output=new URL('public/essay-maps/',root); await mkdir(output,{recursive:true});
+const make=(body,viewBox)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" fill="none"><g stroke="#829487" stroke-width=".7">${body}</g></svg>`;
+await writeFile(new URL('world.svg',output),make(`<path d="${geoPath(world)(land)}"/>`,'0 0 600 340'));
+const northPath=geoPath(polar);
+const route={type:'LineString',coordinates:[[145,50],[165,65],[170,71],[130,76],[80,76],[40,73],[15,65],[5,59]]};
+await writeFile(new URL('arctic.svg',output),make(`<circle cx="300" cy="300" r="270"/><circle cx="300" cy="300" r="180" stroke-dasharray="3 6"/><circle cx="300" cy="300" r="90" stroke-dasharray="3 6"/><path d="${northPath(land)}"/><path d="${northPath(route)}" stroke="#0efb2e" stroke-width="2" stroke-dasharray="5 5"/>`,'0 0 600 600'));
+const pins=Object.fromEntries(Object.entries({us:[-99,38],cn:[103,35],kr:[128,36],mm:[96,20],kh:[105,12]}).map(([id,point])=>[id,world(point)]));
+const arcticPins=Object.fromEntries(Object.entries({nuuk:[-51.7,64.18],ilulissat:[-51.1,69.22],qaqortoq:[-46.03,60.72],kvanefjeld:[-46,60.98]}).map(([id,point])=>[id,polar(point)]));
+await writeFile(new URL('src/content/essay-map-points.json',root),JSON.stringify({pins,arcticPins,source:'Natural Earth 1:110m via world-atlas; approximate labels; illustrative Arctic route, not observed vessel tracks.'},null,2)+'\n');

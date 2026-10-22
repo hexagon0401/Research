@@ -17,7 +17,8 @@ export default function PdfCanvas({ url, title }: { url: string; title: string }
     import("pdfjs-dist").then((pdfjs) => {
       if (!alive) return;
       pdfjs.GlobalWorkerOptions.workerSrc = `/vendor/pdfjs/${pdfjs.version}/pdf.worker.min.mjs`;
-      const loading = pdfjs.getDocument({ url, isEvalSupported: false, enableXfa: false });
+      const assetRoot = `/vendor/pdfjs/${pdfjs.version}/`;
+      const loading = pdfjs.getDocument({ url, isEvalSupported: false, enableXfa: false, cMapUrl: `${assetRoot}cmaps/`, cMapPacked: true, standardFontDataUrl: `${assetRoot}standard_fonts/`, wasmUrl: `${assetRoot}wasm/` });
       destroy = () => { void loading.destroy(); };
       loading.promise.then((pdf) => {
         if (alive) setDocument(pdf);

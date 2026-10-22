@@ -2,8 +2,129 @@
   "reportId": "S16",
   "method": "editorial-translation",
   "status": "author-review-pending",
-  "paragraphs": {},
-  "sourceCount": 31,
-  "translatedCount": 0,
-  "complete": false
+  "paragraphs": {
+    "S16-R001-P001": {
+      "sourceTextSha256": "7b7de56307c0f694de1c34aaff83fdd411197feb01d1277669cae48b622e1b4b",
+      "en": "[International Economics assignment: inquiry report]"
+    },
+    "S16-R001-P002": {
+      "sourceTextSha256": "b91dd9f6369b8f3933b69b3da7a69ad89518c3c694978cdb562496f82801f5ce",
+      "en": "After reading this table, delete it in full before submitting."
+    },
+    "S16-R001-P003": {
+      "sourceTextSha256": "0c1acf0cf84262dd9673bc4df21bc740791abe6a9669fdc2ba0e3555d1599195",
+      "en": "<Assessment criteria>"
+    },
+    "S16-R001-P004": {
+      "sourceTextSha256": "ff7c2c45c2f6c2e80265aeded95bbe1981d53ddcfd4518ee6622baab7ee51bd1",
+      "en": "① Is the research topic clearly defined?"
+    },
+    "S16-R001-P005": {
+      "sourceTextSha256": "65146aebf8dc774d9b079872794bf85c5652c6943d88bab72d94d0f72d2806a8",
+      "en": "② Is the relationship between the topic and your career plans or interests explained logically?"
+    },
+    "S16-R001-P006": {
+      "sourceTextSha256": "67a3e009a9700b68f4dd6a2216c47f1266e29fb7658e2fc13374776e0b2d4c6d",
+      "en": "③ Is the research problem explained logically?"
+    },
+    "S16-R001-P007": {
+      "sourceTextSha256": "ad3bf0c4d43ae5259ce7b84ad15c35ab184972e3245c23e208aef14d93780e81",
+      "en": "④ Are curriculum concepts or theories used appropriately?"
+    },
+    "S16-R001-P008": {
+      "sourceTextSha256": "8074c63a3dc91731bab9d4bcab18425ae2b0d5dccb666d659bf92aaaaff00842",
+      "en": "⑤ Does the report develop logically through introduction, main discussion and conclusion?"
+    },
+    "S16-R001-P009": {
+      "sourceTextSha256": "685250af52f9390a314d8d46d52856810c5ed23b803ff9af76c7d38361a45003",
+      "en": "⑥ Are reliable statistical data used?"
+    },
+    "S16-R001-P010": {
+      "sourceTextSha256": "6bc07d90327f707571578d647866f24cedaf0aaa4e7ae3109f5f1465f42813b4",
+      "en": "⑦ Are ethical guidelines for report writing followed?"
+    },
+    "S16-R001-P011": {
+      "sourceTextSha256": "0afee05e58e68f27c009af3f1a89f8f9ab9ee70deaf3c9d3866d3b323e8a6e6a",
+      "en": "★ Do not exceed four pages in total. Do not change the font, font size or margins."
+    },
+    "S16-R001-P012": {
+      "sourceTextSha256": "fc383881d3ee129044967f1d117d82b57cad1ec0a4dc6f95648a434e2a4fa8f7",
+      "en": "Title. Intended career field: technology management (BTM/MOT). Student number / name: /"
+    },
+    "S16-R001-P013": {
+      "sourceTextSha256": "6ac07c89a5821ac14a79d3a648cce35904bed61bd64f7d20b819650fc451627e",
+      "en": "I. Introduction. Semiconductors are essential components across modern industries, including artificial intelligence, smartphones, cars, communications equipment and military technology. The development of AI data centers and advanced weapons systems in particular is increasing the economic and strategic value of high-performance chips. Korea occupies an important global position, especially in memory semiconductors, and semiconductor exports strongly influence the national economy and trade balance. According to statistics from the Ministry of Trade and the Ministry of Science and ICT, Korea's semiconductor ICT exports in 2025 reached a record USD 173.48 billion, up 22.1% from the previous year."
+    },
+    "S16-R001-P014": {
+      "sourceTextSha256": "c2adf8c755bd6928cc1e623b6d45cd70d604a809429c6f46cfd83250e0657068",
+      "en": "However, the semiconductor industry involves an international division of labor that is difficult for any single country to complete alone. Design, equipment and materials supply, production, assembly and final consumption span multiple countries. Against this background, America has implemented export controls restricting China's acquisition and production of advanced chips on national-security and technology-protection grounds. These policies may also affect Korean firms' management decisions, such as operating overseas factories, selecting export markets and investing in technology."
+    },
+    "S16-R001-P015": {
+      "sourceTextSha256": "899dd699e635d47a738b3fc1ecce3b4f252b54cf2bec981f63cd18ef2738829f",
+      "en": "This report therefore asks: ‘What economic opportunities and risks do American export controls on advanced semiconductors to China create for Korea's semiconductor industry, and how should Korea respond?’ Applying comparative advantage, international division of labor and global value chains, it analyzes official government trade statistics and export-control materials to propose a direction for the Korean industry."
+    },
+    "S16-R001-P016": {
+      "sourceTextSha256": "49242b1d79a29f51fecdd72e5ecd3132895a3435c0540be00d7aa78935b24171",
+      "en": "II. Main discussion. In international economics, comparative advantage is the ability of a country to produce a good or service at a relatively lower opportunity cost than another country. By specializing where they have comparative advantage and trading, countries can increase productive efficiency and overall economic benefits. The semiconductor industry similarly forms global value chains based on different countries' technological and production capabilities. This division of labor lowers production costs and improves specialization, but also creates interdependence: one country's export restrictions or supply disruptions can affect firms in others."
+    },
+    "S16-R002-P001": {
+      "sourceTextSha256": "7b7de56307c0f694de1c34aaff83fdd411197feb01d1277669cae48b622e1b4b",
+      "en": "[International Economics assignment: inquiry report]"
+    },
+    "S16-R002-P002": {
+      "sourceTextSha256": "3dc301304772b3e55df526051a49528a44f905acae080e05ed5c3ef3f5ac6030",
+      "en": "American controls on advanced semiconductor exports to China show national security entering this international division of labor. Beginning in 2022, the Bureau of Industry and Security, BIS, introduced restrictions on China's acquisition and production of advanced chips and subsequently continued revising rules on advanced-computing semiconductors and chipmaking equipment. The policy aims to limit military diversion of advanced technology. From an international-economics perspective, however, it also has the character of a nontariff barrier restricting exports and technology transfers to a particular market. Eligibility depends on the products, end users and intended uses, so firms must devote resources not only to technological development but also to legal review and export-control compliance."
+    },
+    "S16-R002-P003": {
+      "sourceTextSha256": "c749f585d15ac3244c30190f34a750d85c3d2141c7ee2febc8baac2ea1f4d2b4",
+      "en": "Actual export statistics show both growth in Korea's semiconductor industry and changes across markets. Semiconductor ICT exports reached a record USD 173.48 billion in 2025; the government cited increasing demand for high-value memory from expanding AI data centers as a major factor. Semiconductor ICT exports to China and Hong Kong were USD 72.3 billion, down 0.5%, while overall ICT exports to that region fell 0.9%. By contrast, ICT exports to Taiwan rose 64.8%, Vietnam 14.5% and America 9.8%. Korea's export markets thus moved differently by country. These figures alone do not establish that export controls caused the decline to China: changing AI demand, chip prices, product mix and national economic conditions could also have contributed."
+    },
+    "S16-R002-P004": {
+      "sourceTextSha256": "27bc8b678a77902d63b4bf9ab1df7114bd4f97e992e723685050c4803e31e2e8",
+      "en": "Export controls create both risks and opportunities for Korean firms. On the risk side, restricted access to China or difficulty importing equipment needed by local factories may affect production plans and investment profitability. Separate reviews and customer checks increase administrative costs. Firms with plants and customers across countries face greater long-term uncertainty because they must adapt to differing rules and policy changes. America's 2023 renewal of Validated End User, VEU, approvals allowing certain supplies to Samsung Electronics' and SK Hynix's semiconductor facilities in China illustrates how American policy and bilateral consultations can directly affect Korean production."
+    },
+    "S16-R002-P005": {
+      "sourceTextSha256": "807d022c0cb7eb4991363c1885e6564f3b37fe3dd800ce9cc49fb8fcc56c648e",
+      "en": "There are also opportunities. As countries prioritize semiconductor supply-chain stability, Korean firms can expand cooperation through competitive products such as memory and high-bandwidth memory, HBM. Efforts to reduce excessive dependence on individual markets also increase the need for export diversification and R&D investment. These opportunities cannot be attributed solely to export controls, however. Expansion of AI data centers and demand for high-value memory contributed importantly to 2025 export growth, so policy effects must be distinguished from market-demand effects."
+    },
+    "S16-R002-P006": {
+      "sourceTextSha256": "eb7fb7b6b80ed63b4475e69720aa78cce730d762c7c6e1f4bd9606637e11546b",
+      "en": "Korea's response has three directions. First, diversify export markets and customers. Rather than unconditionally choosing America or China, expand trade with Taiwan, Vietnam, Europe and other markets to reduce industry-wide shocks from individual markets' regulations or economic changes. Second, strengthen R&D in core materials, components and equipment, next-generation memory and advanced packaging. Building every supply-chain stage domestically may be unrealistic in cost and efficiency, so it is reasonable to select strategically important fields and reduce technological dependence there. Third, government and firms should continuously check export-control information and improve regulatory predictability through bilateral consultations. Firms must systematically review technical specifications, end users and end uses and comply with relevant laws. The government should strengthen cooperation channels so that normal production is not exposed to unnecessary uncertainty."
+    },
+    "S16-R002-P007": {
+      "sourceTextSha256": "4611ec844dc1ec8099c9b1032c215b78976ba72213b70de9ffb07302147bd75c",
+      "en": "III. Conclusion. American export controls on advanced semiconductors to China combine national security and technological competition with the international division of labor and global value chains. Korea's semiconductor industry has growth opportunities in advanced memory and HBM but may face new risks in overseas factory operations, access to major export markets and technological supply-chain stability. The effects should therefore be judged not simply as rising or falling exports, but by considering division-of-labor efficiency, market dependence, technological competitiveness and compliance costs together."
+    },
+    "S16-R003-P001": {
+      "sourceTextSha256": "7b7de56307c0f694de1c34aaff83fdd411197feb01d1277669cae48b622e1b4b",
+      "en": "[International Economics assignment: inquiry report]"
+    },
+    "S16-R003-P003": {
+      "sourceTextSha256": "d23a8e276dd2ff8143df5d76460af01895b1564c6eba44b8741409896d202b52",
+      "en": "The inquiry finds that Korea should simultaneously diversify markets, strengthen core technological competitiveness, pursue international cooperation and comply with regulations, rather than indiscriminately reduce trade with particular countries. This matters for both short-term exports and long-term industrial stability. Technology management in particular requires decisions based not only on technological advantage but also on international conditions, regulation, supply-chain risk and investment costs. As advanced technologies' economic value and national security become closely linked in AI and defense, I need to develop the ability to analyze industries and policy using international-economic evidence."
+    },
+    "S16-R003-P004": {
+      "sourceTextSha256": "ab976cac66a682bdcddf04eec0ba911996b076a5e88ee7141a0bc6c67b6de39e",
+      "en": "However, this report relied on public government statistics and policy materials and did not quantitatively isolate export controls' effects on individual firms' profitability or investment. Future inquiry should compare corporate performance, capital expenditure and export shares by country over longer periods to test the actual effects more specifically."
+    },
+    "S16-R003-P005": {
+      "sourceTextSha256": "83c16fe371395f4cc523aff3124f298c038611668aac7aa497b28efad38aa736",
+      "en": "IV. References. [1] Ministry of Trade and Ministry of Science and ICT. ‘2025 Annual and December ICT Export and Import Trends,’ January 14, 2026. https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/171434/view"
+    },
+    "S16-R003-P006": {
+      "sourceTextSha256": "6a62029b7aeb34e55ca2d48bf440a55ff0f6ad2b79899569c959e822ee4df13e",
+      "en": "[2] U.S. Department of Commerce, Bureau of Industry and Security. ‘Department of Commerce Revises License Review Policy for Semiconductors Exported to China,’ January 13, 2026. https://www.bis.gov/press-release/department-commerce-revises-license-review-policy-semiconductors-exported-china"
+    },
+    "S16-R003-P007": {
+      "sourceTextSha256": "9edc5e596eb31e4201d180d0436b6177dd1b552ffb5cd24521b188dac34d050e",
+      "en": "[3] U.S. Department of Commerce, Bureau of Industry and Security. ‘Commerce Issues Rule to Strengthen National Security Partnership to Secure Semiconductor Supply Chains with Republic of Korea,’ October 13, 2023. https://www.bis.gov/press-release/commerce-issues-rule-strengthen-national-security-partnership-secure-semiconductor-supply-chains-republic"
+    },
+    "S16-R003-P008": {
+      "sourceTextSha256": "2cc82d04fecabfd3d0d3c3cd9c89b38bdda9b3a73b5a54c3afd809853c80c4a8",
+      "en": "[4] World Trade Organization et al. Global Value Chain Development Report 2023: Resilient and Sustainable GVCs in Turbulent Times. 2023. Chapter 4, ‘From Fabless to Fabs Everywhere? Semiconductor Global Value Chains in Transition.’ https://www.wto.org/english/res_e/publications_e/gvc_dev_rep23_e.htm"
+    }
+  },
+  "sourceCount": 30,
+  "translatedCount": 30,
+  "complete": true
 }
