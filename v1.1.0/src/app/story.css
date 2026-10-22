@@ -111,7 +111,7 @@
   letter-spacing: -0.065em;
   text-wrap: balance;
 }
-.essay-hero h1 span {
+.essay-hero h1 span:not(.essay-copy-en, .essay-copy-ko) {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.12em;
@@ -2283,4 +2283,17 @@ html[data-motion="reduced"] .arctic-expansion {
     float: none;
     margin-bottom: 24px;
   }
+}
+html:lang(ko) .essay-copy-en,
+html:not(:lang(ko)) .essay-copy-ko {
+  display: none;
+}
+/* Position restoration owns locale changes; browser anchoring cannot apply a second offset. */
+.research-essay {
+  overflow-anchor: none;
+}
+
+.essay-bridge > :is(.essay-copy-en, .essay-copy-ko) {
+  font-size: inherit;
+  font-weight: inherit;
 }

@@ -5,6 +5,10 @@ test("Arctic leaders never fill and screen-pixel labels remain bounded and separ
 }) => {
   await page.goto("/?scene=china-arctic");
   const figure = page.locator("#visual-china-arctic");
+  await figure
+    .locator(".arctic-expansion > .scene-stage")
+    .last()
+    .scrollIntoViewIfNeeded();
   await expect(figure.locator(".map-label:not(:disabled)")).toHaveCount(3);
   const labels = figure.locator(".map-label:not(:disabled)");
   await expect(labels.first()).toHaveAccessibleName(/Nuuk/);
@@ -157,7 +161,7 @@ test("source round trips and language changes keep the exact passage", async ({
 
 test("study branches and connection explanations work by keyboard and touch", async ({
   page,
-}) => {
+}, info) => {
   await page.goto("/?scene=synthesis");
   const figure = page.locator("#visual-synthesis");
   const branch = figure.locator('[data-study-node="S08"]');
@@ -173,7 +177,9 @@ test("study branches and connection explanations work by keyboard and touch", as
   await page.keyboard.press("Escape");
   await expect(branch).toBeFocused();
   await page.goto("/?scene=us-finance");
-  await page.locator("#visual-us-finance .relation-edge").first().click();
+  const edge = page.locator("#visual-us-finance .relation-edge").first();
+  if (info.project.use.hasTouch) await edge.tap();
+  else await edge.click();
   await expect(
     page.locator("#visual-us-finance .case-selection"),
   ).toContainText("Treasury holdings");

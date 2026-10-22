@@ -157,8 +157,20 @@ function Connector({ scene }: { scene: SceneMeta }) {
   return (
     <div className="editorial-connector" ref={root}>
       <span className="connector-orbit" aria-hidden="true">
-        <span>FIRM</span>
-        <span>STATE</span>
+        <span>
+          {scene.id === "china-arctic"
+            ? "ARCTIC"
+            : scene.id === "synthesis"
+              ? "13 STUDIES"
+              : "FIRM"}
+        </span>
+        <span>
+          {scene.id === "china-arctic"
+            ? "GREENLAND"
+            : scene.id === "synthesis"
+              ? "S00"
+              : "STATE"}
+        </span>
       </span>
       <span className="eyebrow">
         {lang === "ko" ? "편집 연결문" : "EDITORIAL CONNECTION"}

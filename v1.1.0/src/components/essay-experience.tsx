@@ -34,6 +34,22 @@ export function EssayExperience({
   const lastReduced = useRef(reduced);
   const read = useRef({ id: scenes[0].id, fraction: 0, started: false });
   const passage = useRef<{ id: string; offset: number } | null>(null);
+  useEffect(() => {
+    const capture = () => {
+      const candidates = Array.from(
+        root.current?.querySelectorAll<HTMLElement>(
+          "[data-reading-passage], [data-essay-beat]",
+        ) ?? [],
+      );
+      const el = candidates
+        .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
+        .at(-1);
+      if (el)
+        passage.current = { id: el.id, offset: el.getBoundingClientRect().top };
+    };
+    document.addEventListener("iir:before-language", capture);
+    return () => document.removeEventListener("iir:before-language", capture);
+  }, []);
   useLayoutEffect(() => {
     if (
       (lastLang.current !== lang || lastReduced.current !== reduced) &&

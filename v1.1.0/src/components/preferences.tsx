@@ -53,6 +53,7 @@ export function PreferencesProvider({
     document.documentElement.dataset.motion = reduced ? "reduced" : "full";
   }, [lang, reduced]);
   const updateLang = (value: "en" | "ko") => {
+    document.dispatchEvent(new Event("iir:before-language"));
     document.documentElement.lang = value;
     setLang(value);
     try {
