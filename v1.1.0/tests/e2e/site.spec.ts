@@ -209,7 +209,7 @@ test("public endpoints preserve source status and never expose unavailable trans
     ).status(),
   ).toBe(405);
 });
-test("horizontal wheel opens the inline shelf while a vertical wheel keeps native reading", async ({
+test("horizontal and diagonal wheel input preserve native reading", async ({
   page,
 }) => {
   await page.goto("/");
@@ -218,9 +218,9 @@ test("horizontal wheel opens the inline shelf while a vertical wheel keeps nativ
   await expect(page.locator(".folder").first()).not.toBeFocused();
   await page.waitForTimeout(150);
   await page.mouse.wheel(80, 0);
-  await expect(page.locator(".folder").first()).toBeFocused();
-  await page.keyboard.press("Escape");
-  await expect(page.locator("#archive-entry")).toBeFocused();
+  await expect(page.locator(".folder").first()).not.toBeFocused();
+  await page.mouse.wheel(80, 150);
+  await expect(page.locator(".folder").first()).not.toBeFocused();
 });
 
 test("folder opening can be canceled and a selected folder survives a reader round trip", async ({

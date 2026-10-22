@@ -42,8 +42,8 @@ export default function Accessibility() {
         </h2>
         <p>
           <L
-            en="The site follows your system's reduced-motion setting unless you choose an override here. Your preference is stored on this browser. Folder transitions and smooth scrolling stop when reduced motion is on."
-            ko="직접 설정을 변경하기 전까지 시스템의 모션 감소 설정을 따릅니다. 설정은 현재 브라우저에 저장됩니다. 모션 줄이기를 켜면 폴더 전환과 부드러운 스크롤을 생략합니다."
+            en="System reduced motion is always respected. You can also enable reduced motion here; that preference is stored in this browser. When your system requires reduced motion, this control is marked as a system preference."
+            ko="시스템의 모션 감소 요청을 항상 따릅니다. 이 화면에서도 모션 감소를 추가로 켤 수 있으며 선택은 이 브라우저에 저장됩니다. 시스템에서 모션 감소를 요청하면 컨트롤에 시스템 설정으로 표시합니다."
           />
         </p>
         <MotionControl />
@@ -53,8 +53,8 @@ export default function Accessibility() {
         <ul>
           <li>
             <L
-              en="On the narrative, press A or make a deliberate horizontal trackpad gesture to reach the archive. Escape returns to the previous reading position after this shortcut."
-              ko="내러티브에서 A 키 또는 의도적인 트랙패드 수평 제스처로 서가에 접근합니다. 이 단축 탐색 후에는 Escape로 이전 읽기 위치로 돌아갑니다."
+              en="On the narrative, press A while outside a control to reach the archive. Escape returns to the previous reading position after this shortcut. Wheel and touch gestures keep their native browser behavior."
+              ko="내러티브에서 컨트롤 밖에 있을 때 A 키로 서가에 접근합니다. 이 단축 탐색 후 Escape로 이전 읽기 위치로 돌아갑니다. 휠과 터치 제스처는 브라우저 기본 동작을 유지합니다."
             />
           </li>
           <li>

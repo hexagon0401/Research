@@ -14,3 +14,12 @@
 - Added reusable document preparation, privacy checks, XML memo/footnote parsing and a private Supabase uploader with checksum and signed-download verification.
 - Added the continuous-scroll and interaction specification for the next implementation.
 - Validation: optimized build and TypeScript; 12 unit checks; 7 Python checks; browser suite 73 passed / 3 intentionally skipped. Reading PDFs are available without a Supabase connection.
+
+## 2.0.0 — 2026-10-22
+
+- Rebuilt the homepage as one continuous reading flow with full-width chapter backgrounds, an accent thread and shared chapter progress.
+- Added scroll-driven orbit/line/row motion and bounded pointer response; no scroll-hijacking engine or large animation dependency.
+- Added map point exploration and keyboard previews, and separated temporary framework preview from pinned user selection.
+- Removed global horizontal-wheel interception, preserved native scrolling, deep links, motion reduction and reading position.
+- Completed private cloud preservation of 13 originals and 13 reviewed PDFs; verified remote checksums and every signed download. Large PDFs use resumable uploads.
+- See v1.1.0/docs/V2_RELEASE.md for measured validation and platform limits.

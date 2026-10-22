@@ -1,7 +1,7 @@
 /** Decorative conceptual geometry. No plotted values or asserted relationships. */
 export function Orbit() {
   return (
-    <figure className="orbit" aria-hidden="true">
+    <figure className="orbit" data-pointer-reactive aria-hidden="true">
       <svg viewBox="0 0 560 560" width="560" height="560" fill="none">
         <defs>
           <clipPath id="sphere-clip">
@@ -31,6 +31,15 @@ export function Orbit() {
           rx="252"
           ry="96"
           transform="rotate(-34 280 280)"
+        />
+        <ellipse
+          className="orbit-trace"
+          cx="280"
+          cy="280"
+          rx="252"
+          ry="96"
+          transform="rotate(-34 280 280)"
+          pathLength="1000"
         />
         <g className="orbit-nodes">
           <circle cx="468" cy="143" r="6" />

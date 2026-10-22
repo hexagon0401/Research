@@ -55,3 +55,13 @@
 5. `npm run test:e2e`와 성능 계측을 다시 실행합니다.
 
 풀 3D가 필요해지는 경우에만 별도 지연 로딩 계층으로 추가하고 현재 SVG·HTML 경로를 폴백으로 보존합니다. 도입 전에 기기별 성능 예산과 디자인 편익을 확인하세요.
+
+## v2.0.0 runtime contract — 2026-10-22
+
+The homepage is a continuous native-scroll document. Keep one on-demand ScrollNarrative engine, explicit SVG bounds, stable chapter IDs and the source/claim distinction. Pointer decoration is bounded to 6px and never moves reading text or hit areas.
+
+Map/framework preview is temporary; pinned user selection takes precedence over automatic reading flow. Preserve keyboard and touch alternatives. Do not restore global wheel interception, hide content before JavaScript initializes, or override system reduced motion.
+
+The thirteen supplied sources are served separately at /reports with stable locators and reviewed reading copies. Original binaries remain private. Do not redraw reported plots as independently validated results or alter their values for visual effect. Visual token changes must retain contrast, reading order, source IDs and content privacy.
+
+Measured results and untested platforms are recorded in [V2_RELEASE.md](V2_RELEASE.md).

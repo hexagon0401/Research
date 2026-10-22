@@ -1,4 +1,4 @@
-# IIR — Interactive Research Atlas · v1.1.2
+# IIR — Interactive Research Atlas · v2.0.0
 
 지정된 Paper / Ink / Signal과 로컬 Geist·IBM Plex 폰트를 유지한 디자인 개선본입니다. 기존 Next.js·React·TypeScript·SVG·CSS 구조와 연구 콘텐츠를 보존합니다.
 
@@ -14,7 +14,17 @@ npm run dev
 
 브라우저에서 http://localhost:3000 을 엽니다. 프로덕션 실행은 `npm run build` 후 `npm run start`입니다. 다른 포트는 `npm run dev -- --port 3001`로 지정합니다.
 
-## 개선 사항
+## v2.0.0 개선 사항
+
+- 한 문서로 이어지는 전체 폭 구획과 스크롤 진행선.
+- 스크롤에 반응하는 선·궤도·렌즈 행과 포인터 반응.
+- 지도 노드 직접 선택·키보드 미리보기, 선택을 고정할 수 있는 프레임워크.
+- 전역 휠 가로채기 제거, 모션 감소와 읽기 위치 보존.
+- 원문 13개와 개인정보 제거 PDF 13개의 Supabase 업로드·해시·서명 다운로드 검증 완료.
+
+[v2.0.0 실제 구현·검증 기록](docs/V2_RELEASE.md)을 참고하세요.
+
+## 보존한 기능
 
 - 대형 제목과 개념 그래픽을 분리한 편집형 첫 화면.
 - 국가 선택과 설명이 연결되는 선형 아틀라스, 읽기 쉬운 가설·경계 조건 도식.

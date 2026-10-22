@@ -40,13 +40,25 @@ const regions = [
 ];
 export function Atlas() {
   const [active, setActive] = useState("us");
+  const [preview, setPreview] = useState<string | null>(null);
   const { lang } = usePreferences();
-  const region = regions.find((r) => r.id === active)!;
+  const displayed = preview ?? active;
+  const region = regions.find((r) => r.id === displayed)!;
   return (
-    <div className="atlas">
-      <div className="atlas-map">
+    <div
+      className="atlas"
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          setPreview(null);
+          setActive("us");
+        }
+      }}
+    >
+      <div className="atlas-map" data-pointer-reactive>
         <svg
           viewBox="0 0 960 490"
+          width="960"
+          height="490"
           role="img"
           aria-labelledby="atlas-title atlas-desc"
         >
@@ -71,7 +83,7 @@ export function Atlas() {
           {map.pins.map((pin) => (
             <g
               key={pin.id}
-              className={active === pin.id ? "pin selected" : "pin"}
+              className={displayed === pin.id ? "pin selected" : "pin"}
               transform={`translate(${pin.point[0]} ${pin.point[1]})`}
             >
               <circle r="12" />
@@ -87,6 +99,29 @@ export function Atlas() {
             </g>
           ))}
         </svg>
+        <div className="map-hit-targets" onMouseLeave={() => setPreview(null)}>
+          {map.pins.map((pin) => (
+            <button
+              key={pin.id}
+              className={`map-hit-target ${displayed === pin.id ? "active" : ""}`}
+              style={{
+                left: `${(pin.point[0] / 960) * 100}%`,
+                top: `${(pin.point[1] / 490) * 100}%`,
+              }}
+              aria-label={`${lang === "ko" ? regions.find((r) => r.id === pin.id)!.ko : regions.find((r) => r.id === pin.id)!.name} ${lang === "ko" ? "지도에서 선택" : "on map"}`}
+              aria-pressed={active === pin.id}
+              onPointerEnter={() => setPreview(pin.id)}
+              onPointerLeave={() => setPreview(null)}
+              onFocus={() => setPreview(pin.id)}
+              onBlur={() => setPreview(null)}
+              onClick={() => {
+                setActive(pin.id);
+                setPreview(null);
+              }}
+            />
+          ))}
+        </div>
+        <span className="map-crosshair" aria-hidden="true" />
         <span className="map-coordinate mono">
           SCHEMATIC SCOPE · NATURAL EARTH
         </span>
@@ -101,7 +136,14 @@ export function Atlas() {
             <button
               key={r.id}
               aria-pressed={active === r.id}
-              onClick={() => setActive(r.id)}
+              onPointerEnter={() => setPreview(r.id)}
+              onPointerLeave={() => setPreview(null)}
+              onFocus={() => setPreview(r.id)}
+              onBlur={() => setPreview(null)}
+              onClick={() => {
+                setActive(r.id);
+                setPreview(null);
+              }}
             >
               <span className="mono">0{i + 1}</span>
               {lang === "ko" ? r.ko : r.name}

@@ -7,12 +7,14 @@ type Preferences = {
   lang: "en" | "ko";
   setLang: (lang: "en" | "ko") => void;
   reduced: boolean;
+  systemReduced: boolean;
   setReduced: (value: boolean) => void;
 };
 const Context = createContext<Preferences>({
   lang: "en",
   setLang: () => {},
   reduced: false,
+  systemReduced: false,
   setReduced: () => {},
 });
 export function PreferencesProvider({
@@ -23,6 +25,7 @@ export function PreferencesProvider({
   const pathname = usePathname();
   const [lang, setLang] = useState<"en" | "ko">("en");
   const [reduced, setReduced] = useState(false);
+  const [systemReduced, setSystemReduced] = useState(false);
   useEffect(() => {
     try {
       const saved = localStorage.getItem("iir-language");
@@ -30,9 +33,10 @@ export function PreferencesProvider({
     } catch {}
     const media = matchMedia("(prefers-reduced-motion: reduce)");
     const sync = () => {
+      setSystemReduced(media.matches);
       try {
         const setting = localStorage.getItem("iir-reduced-motion");
-        setReduced(setting === null ? media.matches : setting === "true");
+        setReduced(media.matches || setting === "true");
       } catch {
         setReduced(media.matches);
       }
@@ -52,14 +56,20 @@ export function PreferencesProvider({
     } catch {}
   };
   const updateMotion = (value: boolean) => {
-    setReduced(value);
+    setReduced(value || matchMedia("(prefers-reduced-motion: reduce)").matches);
     try {
       localStorage.setItem("iir-reduced-motion", String(value));
     } catch {}
   };
   return (
     <Context.Provider
-      value={{ lang, setLang: updateLang, reduced, setReduced: updateMotion }}
+      value={{
+        lang,
+        setLang: updateLang,
+        reduced,
+        systemReduced,
+        setReduced: updateMotion,
+      }}
     >
       {(lang === "ko" ||
         pathname.startsWith("/research/") ||
@@ -82,14 +92,20 @@ export function Localized({
   return <>{lang === "ko" ? ko : en}</>;
 }
 export function MotionControl() {
-  const { reduced, setReduced, lang } = usePreferences();
+  const { reduced, systemReduced, setReduced, lang } = usePreferences();
   return (
     <button
       className="text-button"
       aria-pressed={reduced}
+      disabled={systemReduced}
       onClick={() => setReduced(!reduced)}
     >
-      {lang === "ko" ? "모션 줄이기" : "Reduce motion"}{" "}
+      {lang === "ko" ? "모션 줄이기" : "Reduce motion"}
+      {systemReduced
+        ? lang === "ko"
+          ? " · 시스템 설정"
+          : " · System preference"
+        : ""}{" "}
       <span className="toggle" data-on={reduced}>
         {reduced ? "ON" : "OFF"}
       </span>

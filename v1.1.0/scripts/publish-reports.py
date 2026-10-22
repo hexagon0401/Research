@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Upload reviewed reports to the configured private project; never logs credentials or signed links."""
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -23,6 +24,25 @@ def main():
     if not re.fullmatch(r'https://[a-z0-9]{10,40}\.supabase\.co', base) or not key:
         raise ValueError('Connect the project URL and server secret securely')
     headers = {'apikey': key, 'Authorization': 'Bearer ' + key}
+
+    def resumable(bucket, object_path, data, content_type):
+        metadata = {'bucketName': bucket, 'objectName': object_path, 'contentType': content_type, 'cacheControl': '3600'}
+        upload_headers = {**headers, 'Tus-Resumable': '1.0.0', 'Upload-Length': str(len(data)), 'Upload-Metadata': ','.join(k + ' ' + base64.b64encode(v.encode()).decode() for k, v in metadata.items()), 'x-upsert': 'false'}
+        req = urllib.request.Request(base + '/storage/v1/upload/resumable', method='POST', data=b'', headers=upload_headers)
+        with urllib.request.urlopen(req, timeout=60) as response:
+            location = urllib.parse.urljoin(base, response.headers['Location'])
+        parsed = urllib.parse.urlparse(location)
+        if parsed.scheme != 'https' or parsed.netloc != urllib.parse.urlparse(base).netloc or not parsed.path.startswith('/storage/v1/upload/resumable/'):
+            raise ValueError('Unexpected resumable destination')
+        offset = 0
+        while offset < len(data):
+            chunk = data[offset:offset + 6 * 1024 * 1024]
+            req = urllib.request.Request(location, method='PATCH', data=chunk, headers={**headers, 'Tus-Resumable': '1.0.0', 'Upload-Offset': str(offset), 'Content-Type': 'application/offset+octet-stream'})
+            with urllib.request.urlopen(req, timeout=60) as response:
+                new_offset = int(response.headers['Upload-Offset'])
+            if new_offset != offset + len(chunk):
+                raise ValueError('Unexpected resumable offset')
+            offset = new_offset
 
     def request(path, method='GET', data=None, content_type='application/json', authenticated=True, extra=None):
         req = urllib.request.Request(base + path, method=method, data=data,
@@ -51,6 +71,14 @@ def main():
         directory = source.parent / 'publication'
         if not (directory / 'verified.json').is_file():
             raise ValueError('Review verification record is missing')
+        previous_path = directory / 'cloud-verification.json'
+        if previous_path.is_file() and hashlib.sha256(source.read_bytes()).hexdigest() == entry['originalSha256']:
+            previous = json.loads(previous_path.read_text())
+            _, stored = request('/rest/v1/research_assets?id=eq.' + report['assetId'] + '&select=sha256,publication_state')
+            if previous.get('signedDownloadVerified') and any(r['sha256'] == report['readerSha256'] and r['publication_state'] == 'published' for r in json.loads(stored)):
+                records.append(previous)
+                print(json.dumps({'id': report['id'], 'resumed': True, 'checksumsPreviouslyVerified': True}), flush=True)
+                continue
         pairs = [
             ('research-originals', f'{entry["id"]}/rev-001/source.{report["format"]}', source, entry['originalSha256'], mime[report['format']]),
             ('research-reader', f'{entry["id"]}/rev-001/reader.pdf', directory / 'reader.pdf', report['readerSha256'], 'application/pdf'),
@@ -69,7 +97,10 @@ def main():
                 if b'not found' not in error_body.lower() and b'not_found' not in error_body.lower() and error.code != 404:
                     raise ValueError('Object lookup failed; upload was not attempted')
                 try:
-                    request(f'/storage/v1/object/{bucket}/{object_path}', 'POST', data, content_type, extra={'x-upsert': 'false'})
+                    if len(data) > 6 * 1024 * 1024:
+                        resumable(bucket, object_path, data, content_type)
+                    else:
+                        request(f'/storage/v1/object/{bucket}/{object_path}', 'POST', data, content_type, extra={'x-upsert': 'false'})
                 except urllib.error.HTTPError as upload_error:
                     # A gateway retry may follow an already accepted upload.
                     # The authenticated read + checksum below remains decisive.

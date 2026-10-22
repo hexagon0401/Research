@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePreferences } from "./preferences";
 const nodes = [
@@ -41,11 +41,31 @@ const nodes = [
   },
 ];
 export function Framework() {
-  const [active, setActive] = useState(0);
+  const [flow, setFlow] = useState(0);
+  const [pinned, setPinned] = useState<number | null>(null);
+  const [preview, setPreview] = useState<number | null>(null);
+  const active = preview ?? pinned ?? flow;
+  useEffect(() => {
+    const update = (event: Event) => {
+      const step = (event as CustomEvent<number>).detail;
+      if (Number.isInteger(step) && step >= 0 && step <= 3) setFlow(step);
+    };
+    window.addEventListener("iir:flow-step", update);
+    return () => window.removeEventListener("iir:flow-step", update);
+  }, []);
   const { lang } = usePreferences();
   const node = nodes[active];
   return (
-    <div className="framework-panel dark-section">
+    <div
+      className="framework-panel dark-section"
+      data-pointer-reactive
+      onKeyDown={(e) => {
+        if (e.key === "Escape") {
+          setPinned(null);
+          setPreview(null);
+        }
+      }}
+    >
       <span className="eyebrow">
         {lang === "ko"
           ? "개념 모델 / 검증 대상 관계"
@@ -57,8 +77,15 @@ export function Framework() {
             <div className="framework-step od-stack" key={n.slug}>
               <button
                 className={`framework-node od-cell ${active === i ? "selected" : ""}`}
-                onClick={() => setActive(i)}
-                aria-pressed={active === i}
+                onPointerEnter={() => setPreview(i)}
+                onPointerLeave={() => setPreview(null)}
+                onFocus={() => setPreview(i)}
+                onBlur={() => setPreview(null)}
+                onClick={() => {
+                  setPinned(i);
+                  setPreview(null);
+                }}
+                aria-pressed={pinned === i}
               >
                 <span className="node-index mono">0{i + 1}</span>
                 <span>{lang === "ko" ? n.ko : n.label}</span>
@@ -78,12 +105,41 @@ export function Framework() {
         </div>
         <button
           className={`framework-node boundary-node od-cell ${active === 3 ? "selected" : ""}`}
-          onClick={() => setActive(3)}
-          aria-pressed={active === 3}
+          onPointerEnter={() => setPreview(3)}
+          onPointerLeave={() => setPreview(null)}
+          onFocus={() => setPreview(3)}
+          onBlur={() => setPreview(null)}
+          onClick={() => {
+            setPinned(3);
+            setPreview(null);
+          }}
+          aria-pressed={pinned === 3}
         >
           <span className="node-index mono">04</span>
           <span>{lang === "ko" ? nodes[3].ko : nodes[3].label}</span>
         </button>
+      </div>
+      <div className="framework-follow">
+        <span className="mono">
+          {pinned === null
+            ? lang === "ko"
+              ? "스크롤에 따라 읽기"
+              : "FOLLOWING THE INQUIRY"
+            : lang === "ko"
+              ? "선택한 관점 유지"
+              : "YOUR SELECTION IS PINNED"}
+        </span>
+        {pinned !== null && (
+          <button
+            className="text-button"
+            onClick={() => {
+              setPinned(null);
+              setPreview(null);
+            }}
+          >
+            {lang === "ko" ? "읽기 흐름 따라가기" : "Follow the reading flow"} ↗
+          </button>
+        )}
       </div>
       <div className="framework-detail" aria-live="polite">
         <span className="mono">

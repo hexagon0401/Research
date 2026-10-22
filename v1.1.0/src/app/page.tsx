@@ -8,6 +8,7 @@ import { Shelf } from "@/components/shelf";
 import { ArchiveGesture } from "@/components/archive-gesture";
 import { Progress } from "@/components/progress";
 import { evidenceNeeds } from "@/content/repository";
+import { ScrollNarrative } from "@/components/scroll-narrative";
 function Chapter({ n, label }: { n: string; label: string }) {
   return (
     <div className="chapter-label">
@@ -19,7 +20,7 @@ function Chapter({ n, label }: { n: string; label: string }) {
 }
 export default function Home() {
   return (
-    <main id="main">
+    <ScrollNarrative>
       <Progress />
       <ArchiveGesture />
       <section id="question" className="hero section-shell">
@@ -57,9 +58,9 @@ export default function Home() {
           <div className="hero-visual">
             <Orbit />
             <span className="hero-edition mono">
-              WORKING ATLAS
+              LIVING ATLAS
               <br />
-              EDITION 002 — 2026
+              EDITION 2.0 — 2026
             </span>
           </div>
         </div>
@@ -215,6 +216,7 @@ export default function Home() {
             <Link
               href={`/research/${item.slug}`}
               className="lens-row"
+              data-scroll-step
               key={item.n}
             >
               <span className="mono">{item.n}</span>
@@ -455,6 +457,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-    </main>
+    </ScrollNarrative>
   );
 }

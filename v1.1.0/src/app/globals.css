@@ -2746,3 +2746,236 @@ html[data-motion="reduced"] .folder-cover {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+/* v2 — a continuous document, with one accent thread and native scrolling. */
+.continuous-narrative {
+  position: relative;
+}
+.continuous-narrative > section {
+  position: relative;
+}
+.continuous-narrative > section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--gutter) / 2);
+  width: 1px;
+  pointer-events: none;
+  background: var(--line);
+}
+.continuous-narrative[data-enhanced="true"] > section::before {
+  background: linear-gradient(
+    to bottom,
+    var(--signal) 0 var(--scene-fill, 0%),
+    var(--line) var(--scene-fill, 0%) 100%
+  );
+}
+.continuous-narrative > .dark-section {
+  max-width: none;
+  padding-inline: max(var(--gutter), calc((100% - 1440px) / 2));
+}
+.continuous-narrative > .dark-section::before {
+  left: max(calc(var(--gutter) / 2), calc((100% - 1520px) / 2));
+}
+.continuous-narrative .chapter-label {
+  padding-top: 48px;
+}
+.continuous-narrative .corporations-section,
+.continuous-narrative .evidence-section,
+.continuous-narrative .framework-section,
+.continuous-narrative .synthesis-section {
+  padding-bottom: clamp(48px, 6vw, 80px);
+}
+.reading-progress-line {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 120;
+  pointer-events: none;
+  transform: scaleX(var(--reading-progress, 0));
+  transform-origin: left;
+  background: var(--signal);
+  box-shadow: 0 0 0 1px var(--ink);
+}
+.orbit-trace {
+  stroke: var(--signal);
+  stroke-width: 2.5;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+.continuous-narrative[data-enhanced="true"] .orbit-trace {
+  stroke-dashoffset: calc(1000px * (1 - var(--scene-progress, 0.5)));
+}
+.continuous-narrative[data-enhanced="true"] .orbit-sphere {
+  transform: rotate(calc(-25deg + var(--scene-progress, 0.5) * 20deg));
+  transform-origin: center;
+  transform-box: view-box;
+}
+.continuous-narrative[data-enhanced="true"] .orbit > svg {
+  transform: translate(var(--pointer-x, 0px), var(--pointer-y, 0px));
+  transition: transform 160ms ease-out;
+}
+.map-hit-targets {
+  position: absolute;
+  inset: 0 0 28px;
+  pointer-events: none;
+}
+.map-hit-target {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+.map-hit-target:hover,
+.map-hit-target:focus-visible {
+  border-color: var(--signal);
+  background: rgb(14 251 46 / 8%);
+}
+.map-crosshair {
+  display: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--signal);
+  border-radius: 50%;
+  left: var(--pointer-left, 50%);
+  top: var(--pointer-top, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+[data-pointing="true"] > .map-crosshair {
+  display: block;
+}
+.framework-follow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 52px;
+  margin-top: 24px;
+  color: var(--muted);
+}
+.framework-follow button {
+  color: var(--paper);
+  border-bottom: 1px solid var(--signal);
+  min-height: 44px;
+}
+.framework-node {
+  transition:
+    background 160ms ease-out,
+    border-color 160ms ease-out,
+    transform 160ms ease-out;
+}
+.framework-node:hover,
+.framework-node:focus-visible {
+  border-color: var(--signal);
+}
+.hypothesis-link {
+  transition: color 180ms;
+}
+.framework-step:has(.selected) .hypothesis-link {
+  color: var(--signal);
+}
+.continuous-narrative .inline-link svg {
+  transition: transform 160ms ease-out;
+}
+.continuous-narrative .inline-link:hover svg,
+.continuous-narrative .inline-link:focus-visible svg {
+  transform: translate(3px, -3px);
+}
+@media (hover: hover) and (pointer: fine) {
+  .region-tabs button:hover {
+    border-color: var(--signal);
+  }
+  .continuous-narrative .lens-item:hover {
+    border-color: var(--ink);
+  }
+}
+@media (max-width: 1199px) {
+  .map-hit-targets {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .continuous-narrative > section::before {
+    left: 12px;
+  }
+  .continuous-narrative > .dark-section::before {
+    left: 12px;
+  }
+  .continuous-narrative .chapter-label {
+    padding-top: 32px;
+  }
+  .framework-follow {
+    align-items: start;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .map-crosshair {
+    display: none !important;
+  }
+}
+html[data-motion="reduced"] .continuous-narrative .orbit > svg,
+html[data-motion="reduced"] .continuous-narrative .orbit-sphere {
+  transform: none;
+}
+html[data-motion="reduced"] .orbit-trace {
+  stroke-dashoffset: 0;
+}
+html[data-motion="reduced"] .map-crosshair {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .continuous-narrative .orbit > svg,
+  .continuous-narrative .orbit-sphere {
+    transform: none !important;
+  }
+  .orbit-trace {
+    stroke-dashoffset: 0 !important;
+  }
+  .map-crosshair {
+    display: none !important;
+  }
+}
+@media print {
+  .reading-progress-line,
+  .continuous-narrative > section::before,
+  .map-hit-targets,
+  .map-crosshair,
+  .framework-follow {
+    display: none;
+  }
+}
+.continuous-narrative .lens-row {
+  position: relative;
+}
+.continuous-narrative .lens-row::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--signal);
+  transform: scaleX(var(--step-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+.continuous-narrative .lens-row:hover::before,
+.continuous-narrative .lens-row:focus-visible::before {
+  transform: scaleX(1);
+}
+.continuous-narrative[data-chapter="world"] .scene-progress,
+.continuous-narrative[data-chapter="index"] .scene-progress {
+  background: var(--ink);
+  color: var(--paper);
+}
