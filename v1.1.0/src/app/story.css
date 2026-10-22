@@ -2278,3 +2278,9 @@ html[data-motion="reduced"] .arctic-expansion {
 .research-essay[data-motion="reduced"] .arctic-expansion {
   grid-template-columns: minmax(0, 1fr);
 }
+@media (max-width: 599px) {
+  .connector-orbit {
+    float: none;
+    margin-bottom: 24px;
+  }
+}

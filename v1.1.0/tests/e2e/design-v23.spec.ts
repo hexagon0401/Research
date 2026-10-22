@@ -225,7 +225,7 @@ test("static modes retain every case, explanation and source without animation",
   await p.goto(`${baseURL}/`);
   await expect(p.locator("[data-visual-for]")).toHaveCount(18);
   await expect(
-    p.locator("#visual-synthesis .static-visual-explanation li"),
+    p.locator("#visual-synthesis .static-visual-explanation > ul > li"),
   ).toHaveCount(13);
   await expect(
     p.locator("#visual-china-arctic .static-visual-explanation"),

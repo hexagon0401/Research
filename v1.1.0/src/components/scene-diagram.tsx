@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { prepare, measureNaturalWidth, setLocale } from "@chenglou/pretext";
+import { usePretext } from "./use-pretext";
 import atlas from "@/visuals/atlas-points.json";
 import { storyVisuals } from "@/visuals/story";
 import {
@@ -46,6 +46,7 @@ export function SceneDiagram({
     labels: PlacedLabel[];
   } | null>(null);
   const geographic = visual.type === "world" || visual.type === "arctic";
+  const engine = usePretext(stage, geographic);
   const raw =
     visual.type === "arctic"
       ? Object.entries(atlas.arctic.pins)
@@ -70,7 +71,8 @@ export function SceneDiagram({
         : { scale: 1, x: 0, y: 0 };
   useEffect(() => {
     const el = stage.current;
-    if (!el || !geographic) return;
+    if (!el || !geographic || !engine) return;
+    const { prepare, measureNaturalWidth, setLocale } = engine;
     let alive = true;
     const measure = () => {
       if (!alive) return;
@@ -105,7 +107,7 @@ export function SceneDiagram({
       document.fonts.removeEventListener("loadingdone", measure);
     };
     // Reprepare on locale, font completion and size changes; never during scroll.
-  }, [scene.id, lang, detail, geographic]);
+  }, [scene.id, lang, detail, geographic, engine]);
   return (
     <div
       className={`scene-stage ${compact ? "compact" : ""}`}

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { prepare, layout } from "@chenglou/pretext";
+import { usePretext } from "./use-pretext";
 import { usePreferences } from "./preferences";
 import { SceneDiagram, GeographicLegend } from "./scene-diagram";
 import type { SceneMeta } from "./essay-experience";
@@ -115,25 +115,28 @@ function Connector({ scene }: { scene: SceneMeta }) {
   const { lang } = usePreferences();
   const root = useRef<HTMLDivElement>(null);
   const copy = editorialConnectors[scene.id];
+  const engine = usePretext(root);
   useEffect(() => {
     const el = root.current;
-    if (!el || !copy) return;
+    if (!el || !copy || !engine) return;
+    const { prepare, layout } = engine;
     let alive = true;
     const measure = () => {
       if (!alive) return;
       const p = el.querySelector("p");
       if (!p) return;
       const s = getComputedStyle(p);
+      const around = p.clientWidth - 168 >= 300;
       const available = Math.max(
         1,
-        p.clientWidth - (el.clientWidth >= 600 ? 160 : 0),
+        around ? p.clientWidth - 168 : p.clientWidth,
       );
       const prepared = prepare(
         copy[lang],
         `${s.fontWeight} ${s.fontSize} ${s.fontFamily}`,
         { wordBreak: lang === "ko" ? "keep-all" : "normal" },
       );
-      el.dataset.flow = available < 300 ? "stack" : "around";
+      el.dataset.flow = around ? "around" : "stack";
       el.style.setProperty(
         "--connector-height",
         `${Math.ceil(layout(prepared, Math.max(300, available), parseFloat(s.lineHeight)).height)}px`,
@@ -149,7 +152,7 @@ function Connector({ scene }: { scene: SceneMeta }) {
       ro.disconnect();
       document.fonts.removeEventListener("loadingdone", measure);
     };
-  }, [copy, lang]);
+  }, [copy, lang, engine]);
   if (!copy) return null;
   return (
     <div className="editorial-connector" ref={root}>

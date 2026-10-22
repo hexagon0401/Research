@@ -56,10 +56,15 @@ export function EssayExperience({
     }
     if (lastLang.current !== lang && passage.current) {
       const point = passage.current;
-      const initialY = scrollY;
       let alive = true;
+      let interrupted = false;
+      const stop = () => {
+        interrupted = true;
+      };
+      for (const type of ["wheel", "pointerdown", "keydown"])
+        window.addEventListener(type, stop, { once: true, passive: true });
       const restore = () => {
-        if (!alive || Math.abs(scrollY - initialY) > 16) return;
+        if (!alive || interrupted) return;
         const el = document.getElementById(point.id);
         if (el)
           window.scrollBy({
@@ -67,13 +72,17 @@ export function EssayExperience({
             behavior: "instant",
           });
       };
-      document.fonts.ready.then(restore);
-      document.fonts.addEventListener("loadingdone", restore, { once: true });
+      const settled = () =>
+        requestAnimationFrame(() => requestAnimationFrame(restore));
+      document.fonts.ready.then(settled);
+      document.fonts.addEventListener("loadingdone", settled);
       lastLang.current = lang;
       lastReduced.current = reduced;
       return () => {
         alive = false;
-        document.fonts.removeEventListener("loadingdone", restore);
+        document.fonts.removeEventListener("loadingdone", settled);
+        for (const type of ["wheel", "pointerdown", "keydown"])
+          window.removeEventListener(type, stop);
       };
     }
     lastLang.current = lang;
@@ -420,19 +429,5 @@ export function StoryNavigation() {
         />
       </div>
     </nav>
-  );
-}
-export function HeroAtlas() {
-  return (
-    <figure className="hero-atlas" aria-hidden="true">
-      <img
-        src="/visuals/globe.svg"
-        width="720"
-        height="520"
-        alt=""
-        fetchPriority="high"
-        decoding="async"
-      />
-    </figure>
   );
 }

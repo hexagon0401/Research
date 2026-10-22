@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
 import {
   EssayExperience,
-  HeroAtlas,
   StoryNavigation,
 } from "@/components/essay-experience";
 import { essay } from "@/content/essay";
@@ -13,6 +12,7 @@ import {
   contributionLabels,
   studySpines,
 } from "@/visuals/story";
+import { HeroAtlas } from "@/components/hero-atlas";
 import { NarrativeVisual } from "@/components/narrative-visual";
 import { ResearchShelf } from "@/components/material-shelf";
 import { reports } from "@/content/report-catalog";
