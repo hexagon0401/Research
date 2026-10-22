@@ -13,7 +13,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "audit:performance": "node scripts/performance.mjs",
-    "intake": "python3 scripts/intake-originals.py"
+    "intake": "python3 scripts/intake-originals.py",
+    "prebuild": "node scripts/copy-pdf-worker.mjs",
+    "postinstall": "node scripts/copy-pdf-worker.mjs"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
@@ -21,6 +23,7 @@
     "@fontsource/ibm-plex-sans-kr": "^5.3.0",
     "@supabase/supabase-js": "^2.118.0",
     "next": "^16.0.0",
+    "pdfjs-dist": "^5.4.624",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "server-only": "^0.0.1"

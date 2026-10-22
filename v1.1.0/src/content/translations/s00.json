@@ -1,0 +1,778 @@
+{
+  "reportId": "S00",
+  "method": "editorial-translation",
+  "status": "author-review-pending",
+  "paragraphs": {
+    "S00-R003-P006": {
+      "sourceTextSha256": "267c23695b6e8fc29bd88b9f5d1962d3d208fa9c2fafd974614e6ab3b84fa55c",
+      "en": "3."
+    },
+    "S00-R004-P011": {
+      "sourceTextSha256": "9c0d3e1947231a97d021a39c21d9b9abd1e319c9a9bd1047b21b979cf2763e3d",
+      "en": "NV: https://github.com/hexagon0401/Night-Vision-A"
+    },
+    "S00-R007-P006": {
+      "sourceTextSha256": "363aa6736d4803b9531a98f4b2ef03a4c615d48bcc4cff09d64da05cec5622b5",
+      "en": "Seligman, L. (2020, October). Cambodia's Ream base changes and concerns about China's military presence. Business Insider. https://www.businessinsider.com/cambodia-ream-base-changes-concerns-about-china-military-presence-2020-10"
+    },
+    "S00-R007-P007": {
+      "sourceTextSha256": "c7dfe85d907f64227cd1a9ebf53b4a522374850827ef72dfc5324f82ba7c458a",
+      "en": "Bradford, J. F. (2022, February 16). Chinese military basing in Cambodia: Why be so up in arms? (IP22008). S. Rajaratnam School of International Studies (RSIS), Nanyang Technological University. https://rsis.edu.sg/rsis-publication/idss/ip22008-chinese-military-basing-in-cambodia-why-be-so-up-in-arms/"
+    },
+    "S00-R007-P008": {
+      "sourceTextSha256": "f44ef67bbf2d9a6165b01bf67a9197ba382d0878e9d640f7e3ec4c6d432c3fc3",
+      "en": "BBC News. (2018, February 26). Germany 'watchful' after Geely buys $9bn stake in Daimler. BBC News. https://www.bbc.com/news/business-43194026"
+    },
+    "S00-R007-P009": {
+      "sourceTextSha256": "6dac064f60120f69c08fd5167e95c7493ca8c93f62c5703955ed53dad992ff28",
+      "en": "Busvine, D., & Nienaber, M. (2018, February 28). Germany could tighten rules after Geely takes Daimler stake. Reuters. https://www.reuters.com/article/business/germany-could-tighten-rules-after-geely-takes-daimler-stake-idUSKCN1GC23O/"
+    },
+    "S00-R007-P010": {
+      "sourceTextSha256": "f7808658a042a092d5433783fa5c22a5c9ef6be01f30b38d4f80e604e4c2cef0",
+      "en": "Palantir, (2026,M arch). AIPCON9 Opening. YouTube. https://youtu.be/sDtltYnbJT8?si=ThPL-hgguCFru9We"
+    },
+    "S00-R007-P014": {
+      "sourceTextSha256": "9264e9550a37f81370e02c5500863a5d141bcc747bc5d8eed70cbd387e68426f",
+      "en": "Face the Nation. (2025.12). Full interview: Bank of America CEO Brian Moynihan. YouTube. https://youtu.be/qA2vUZyGtec?si=hcLXHDPjJxB0xWfJ"
+    },
+    "S00-R007-P015": {
+      "sourceTextSha256": "2a5a69d94059d25689a486dea7e0a2cce75c4076a2247caa010b0d8fb269a9cd",
+      "en": "Bloomberg Television. (2026, June 12). JPMorgan's Dimon on Iran War, Inflation, Credit Cycles [Video]. YouTube. https://www.youtube.com/watch?v=Rkfv_RIwzMg"
+    },
+    "S00-R007-P016": {
+      "sourceTextSha256": "2a22ba0b980034220a38150624ad7f57c411f88cb36c3307c829f9b16577022e",
+      "en": "Glaser, B. S. (2019, February 27). Made in China 2025 and the future of American industry [Congressional Testimony]. Center for Strategic and International Studies (CSIS). https://csis-website-prod.s3.amazonaws.com/s3fs-public/congressional_testimony/190226_Glaser_Testimony.pdf"
+    },
+    "S00-R007-P017": {
+      "sourceTextSha256": "2d3d1d7b8022f7284232388604af65af002aca9ccfb54324e80fb03a76e6e09a",
+      "en": "Scott, M. (2019). Made in China 2025. Center for Strategic and International Studies (CSIS). https://www.csis.org/analysis/made-china-2025"
+    },
+    "S00-R007-P018": {
+      "sourceTextSha256": "6f832179b20afe264f8345cd34f859756dc611be6b76c14ddf6859607d976047",
+      "en": "U.S.-China Economic and Security Review Commission. (2025, November 14). Made in China 2025: Evaluating China's performance."
+    },
+    "S00-R007-P019": {
+      "sourceTextSha256": "76cae2f352cab2aa1fcf5596d5f19056a80c65d3e15af2b18a844c3bf339b144",
+      "en": "https://www.uscc.gov/research/made-china-2025-evaluating-chinas-performance"
+    },
+    "S00-R007-P020": {
+      "sourceTextSha256": "6a6f106f2b02b8ec2712be8af5b35abae8257d490531b30a41653cf40944a5c8",
+      "en": "RAND Corporation. (2021). U.S.-China economic competition: Gains and risks in a complex economic relationship (RR-A1947-1)."
+    },
+    "S00-R007-P021": {
+      "sourceTextSha256": "7cef8bcba2d807cb77a08d625c1b810355839efd5ae9e12423970626c1a8764a",
+      "en": "https://www.rand.org/content/dam/rand/pubs/research_reports/RRA1900/RRA1947-1/RAND_RRA1947-1.pdf"
+    },
+    "S00-R008-P001": {
+      "sourceTextSha256": "3e11f8f84ae9cdc04e1c956ee04fefa92eacdbb90518e82fc72b3a5ab0b4f0a4",
+      "en": "RAND Corporation. (2022). China's quest for global primacy (RR-A447-1)."
+    },
+    "S00-R008-P002": {
+      "sourceTextSha256": "fc8f2e21bf04b9b38a9838d88e93fbb3b82afc0231487e20a7eb74552fa0eb81",
+      "en": "https://www.rand.org/content/dam/rand/pubs/research_reports/RRA400/RRA447-1/RAND_RRA447-1.pdf"
+    },
+    "S00-R008-P003": {
+      "sourceTextSha256": "6e0a923475ccae17eb88b632f2f6bcba178907af0ed8eac2a5a0528157d6a1fa",
+      "en": "Atlantic Council. (2025, April 29). Investigating China's economic coercion: The reach and role of Chinese corporate entities."
+    },
+    "S00-R008-P004": {
+      "sourceTextSha256": "cd8909e2775e88bc33bce65e3936465d365fb0e59f5e1158d1cf50bb425182a2",
+      "en": "https://www.atlanticcouncil.org/in-depth-research-reports/report/investigating-chinas-economic-coercion/"
+    },
+    "S00-R008-P005": {
+      "sourceTextSha256": "52870d3538ca028de3732c6de7a62e0bc007135ae2c7ee494001fc11c665602a",
+      "en": "U.S.-China Economic and Security Review Commission. (2021). Section 3: The Chinese government's evolving control of the nonstate sector [2021 Annual Report, Chapter 2]."
+    },
+    "S00-R008-P006": {
+      "sourceTextSha256": "52332a3599984648fcd6128d6a90f6ff0354c299badb5df1c20b2e1ccfee1ec2",
+      "en": "https://www.uscc.gov/sites/default/files/2021-11/Chapter_2_Section_3--Chinese_Governments_Evolving_Control_of_the_Nonstate_Sector.pdf"
+    },
+    "S00-R008-P007": {
+      "sourceTextSha256": "edde9ddfb4e86063b8f82be315097f55e920679d1720ab84e0508436874fa57c",
+      "en": "Dollar, D. (2020). Seven years into China's Belt and Road. Brookings Institution. https://www.brookings.edu/articles/seven-years-into-chinas-belt-and-road/"
+    },
+    "S00-R008-P008": {
+      "sourceTextSha256": "53ffea6d5083b50a19e9813aa4f5846cc98cb04955c9ca8ced5440fb40cc388d",
+      "en": "Hillman, J., & Sacks, D. (2021). China's Belt and Road: The new geopolitics of global infrastructure development. Brookings Institution."
+    },
+    "S00-R008-P009": {
+      "sourceTextSha256": "a938b2bfec3fb1341f1503263ed6dc0d494ed34bf0ec6b72dc53f37cec7c4cc9",
+      "en": "https://www.brookings.edu/articles/chinas-belt-and-road-the-new-geopolitics-of-global-infrastructure-development/"
+    },
+    "S00-R008-P010": {
+      "sourceTextSha256": "3dafd2df1e8b39f76d2e5133d36a1eadd8823f1e8b8f47c70e71785773a3f88c",
+      "en": "Powers-Riggs, A., & Bresnick, S. (2025, January). Silicon island: Assessing Taiwan's importance to U.S. economic growth and security. Center for Strategic and International Studies (CSIS). https://www.csis.org/analysis/silicon-island-assessing-taiwans-importance-us-economic-growth-and-security"
+    },
+    "S00-R008-P011": {
+      "sourceTextSha256": "c694d9b1485ab3a5000258f652276d15d7a37b034d56e04ebee118a91cdb0997",
+      "en": "Institute for Security and Development Policy (ISDP). (2025, May). The silicon shield erosion: Fortifying Taiwan against geopolitical shocks."
+    },
+    "S00-R008-P012": {
+      "sourceTextSha256": "307350ea2bd17edaebf0d48e2cc34ae70973bc279c347b2802d4914551a5916e",
+      "en": "https://www.isdp.eu/the-silicon-shield-erosion-fortifying-taiwan-against-geopolitical-shocks/"
+    },
+    "S00-R008-P013": {
+      "sourceTextSha256": "6b88c5a2a64edc53e9d2267bcbe669cf8f4a85e55a898e66e387eaf08795a077",
+      "en": "Stimson Center. (2025). Why Taiwan fears 'America First' risks eroding its 'Silicon Shield'. https://www.stimson.org/2025/why-taiwan-fears-america-first-risks-eroding-its-silicon-shield/"
+    },
+    "S00-R008-P014": {
+      "sourceTextSha256": "77579965049d0a97c897b3fc83cdc222f390ae3b035185b4b41e61e5492a5b54",
+      "en": "Anduril Industries & Palantir Technologies. (2024, December). Anduril and Palantir to accelerate AI capabilities for national security [Press Release]. https://www.anduril.com/news/anduril-and-palantir-to-accelerate-ai-capabilities-for-national-security"
+    },
+    "S00-R008-P015": {
+      "sourceTextSha256": "0c1afc4d4b0dab78c66704f4f70507a9ce695ca631fdb843e2a67c387f1a45db",
+      "en": "Inside Government Contracts. (2025, July). One Big Beautiful Bill Act makes $150B investment in defense. https://www.insidegovernmentcontracts.com/2025/07/one-big-beautiful-bill-act-makes-150b-investment-in-defense/"
+    },
+    "S00-R008-P016": {
+      "sourceTextSha256": "f27eb0883a165bb83ad5d923199f264ef380d52d8ae0ab07939937334051e1fc",
+      "en": "Tom's Hardware. (2026, March). Pentagon formalizes Palantir's Maven AI as a core military system with multi-year funding. https://www.tomshardware.com/tech-industry/artificial-intelligence/pentagon-formalizes-palantirs-maven-ai-as-a-core-military-system-with-multi-year-funding-platforms-investment-grows-to-usd13-billion-from-usd480-million-in-2024"
+    },
+    "S00-R008-P017": {
+      "sourceTextSha256": "97a3c0f38575caaa26305204c497aca5b33f8d094067ca594099b9f6f5f1290a",
+      "en": "GIS Reports. (2026, March). Using stablecoins, CBDCs to mask public debt. https://www.gisreportsonline.com/r/stablecoin-cbdc/"
+    },
+    "S00-R008-P018": {
+      "sourceTextSha256": "fa85243ac4a9cfbb8c4a029a03af13b48bbfb5331f3c22fa374090e248eaf0fa",
+      "en": "Rey, H. (2025, September). Stablecoins, tokens, and global dominance. IMF Finance & Development. https://www.imf.org/en/publications/fandd/issues/2025/09/stablecoins-tokens-global-dominance-helene-rey"
+    },
+    "S00-R008-P019": {
+      "sourceTextSha256": "fc4ad4ccf103c0873fc0a5b3a33c2595e65f8ac5903daa389185755bb34766fa",
+      "en": "Oxford Academic / Journal of International Economic Law. (2026, January). Stablecoins and the US Treasury market. https://academic.oup.com/jiel/advance-article/doi/10.1093/jiel/jgaf050/8439773"
+    },
+    "S00-R008-P020": {
+      "sourceTextSha256": "f74a864a4fdd6e0a3aec0fb53fe6c0ce92c4413fc274be69446a2234847ed323",
+      "en": "FXStreet. (2025, May). Tether surpasses Germany's $111B of US Treasury holdings. https://www.fxstreet.com/cryptocurrencies/news/tether-surpasses-germanys-111b-of-us-treasury-holdings-202505191109"
+    },
+    "S00-R009-P001": {
+      "sourceTextSha256": "134d3058f7b1759119a0fc9ebdcfadb053623ec47687133413b876f35ae7f53e",
+      "en": "American Maritime Voices. (2025, July). The impact of the 'One Big Beautiful Bill' on the Jones Act and U.S. maritime growth."
+    },
+    "S00-R009-P002": {
+      "sourceTextSha256": "4a67f010fde0025eac18165a5807c4de3dfd79d43f22c6b5da4cb502d2430c33",
+      "en": "https://americanmaritimevoices.org/the-impact-of-the-one-big-beautiful-bill-on-the-jones-act-and-u-s-maritime-growth/"
+    },
+    "S00-R009-P003": {
+      "sourceTextSha256": "99f8a36d5d656740775a56de6a1db1d9522ec7ef6d09ae71a7a932dca827fb69",
+      "en": "Nossaman LLP. (2025, July). The OBBB Act: Enhancing U.S. national security & defense capabilities. https://www.nossaman.com/newsroom-insights-the-obbb-act-enhancing-u-s-national-security-and-defense-capabilities"
+    },
+    "S00-R009-P004": {
+      "sourceTextSha256": "86762abe5f0a583788807d09cd49a4f8b40688bfbc4d83c9a40137fc281788d9",
+      "en": "Cancian, M. F. (2022). The new U.S. National Defense Strategy for 2022. Center for Strategic and International Studies (CSIS). https://www.csis.org/analysis/new-us-national-defense-strategy-2022"
+    },
+    "S00-R009-P005": {
+      "sourceTextSha256": "ed704c8e7938dbabcee556899efb09e8a0319fb2e3b0cfd55c3c61a2248ac5c2",
+      "en": "Cancian, M. F. (2026). The 2026 National Defense Strategy by the numbers: Radical changes, moderate changes, and some continuities. Center for Strategic and International Studies (CSIS)."
+    },
+    "S00-R009-P006": {
+      "sourceTextSha256": "bedc7e20b55f4dac4d6ebef04fd5be2d1a1de0d0b5751e9f7118ac94e6787b3e",
+      "en": "https://www.csis.org/analysis/2026-national-defense-strategy-numbers-radical-changes-moderate-changes-and-some"
+    },
+    "S00-R009-P007": {
+      "sourceTextSha256": "bba93dafc9fc13b6ee2ef62fce1198050cb20cc96726d11661dd8f49e787100b",
+      "en": "The Korea Times. (2024, April 30). Korea in close talks with Naver over Japan's demand to divest stake in Line messenger. https://koreatimes.co.kr/www/nation/2024/10/120_373794.html"
+    },
+    "S00-R009-P008": {
+      "sourceTextSha256": "660df1bfba95e4d26527f0f3d9910e2c3e01801aa9e575491f6696ff710aaf2d",
+      "en": "VOA News. (2024, May 20). South Korea-Japan ties tested by dispute over Line app. https://www.voanews.com/a/south-korea-japan-ties-tested-by-dispute-over-line-app/7619440.html"
+    },
+    "S00-R009-P009": {
+      "sourceTextSha256": "e9300231ea59495f0fa5e4a6ca764e886987afdd4d8e68b3d483338fffc20d3f",
+      "en": "Real Instituto Elcano. (2025, July). Economic security vs economic coercion and data protection vs data protectionism: Consequences and implications of the LINE issue for Korea and middle powers."
+    },
+    "S00-R009-P010": {
+      "sourceTextSha256": "04ed8177662bc90a6be4927588bc77810f582b5932f2b7776fafe2fc38acc3cf",
+      "en": "https://www.realinstitutoelcano.org/en/analyses/consequences-and-implications-of-the-line-issue-for-korea-and-middle-powers/"
+    },
+    "S00-R009-P012": {
+      "sourceTextSha256": "f2c7509980d37ce0391ba49b470f5c1e17bfe0506fce0f07b756bfa4553196ab",
+      "en": "State Council of the People's Republic of China. (2015, May 8). 中国制造2025 [Made in China 2025]. Central People's Government of the PRC. https://cset.georgetown.edu/wp-content/uploads/t0432_made_in_china_2025_EN.pdf"
+    },
+    "S00-R009-P013": {
+      "sourceTextSha256": "98f258eb25d915b7e4cce5ffdb0258aaeb298d2592f668e45b478f4b2709eccb",
+      "en": "National Development and Reform Commission, Ministry of Foreign Affairs, & Ministry of Commerce of the People's Republic of China. (2015, March 28). Vision and actions on jointly building Silk Road Economic Belt and 21st-Century Maritime Silk Road. Belt and Road Portal. https://eng.yidaiyilu.gov.cn/ztindex.htm"
+    },
+    "S00-R009-P014": {
+      "sourceTextSha256": "7f21ffba6b4c71e26788455d42ceb3c5ede83bce8a3a907208c7a94572675c72",
+      "en": "State Council of the People's Republic of China. (2021, March). Outline of the People's Republic of China 14th Five-Year Plan (2021–2025) for national economic and social development and long-range objectives for 2035. Center for Security and Emerging Technology. https://cset.georgetown.edu/publication/china-14th-five-year-plan/"
+    },
+    "S00-R009-P015": {
+      "sourceTextSha256": "8920115c265054a2dba7252dc80f525c0dedf3039bce61d0b3880b14959162f6",
+      "en": "State Council Information Office of the People's Republic of China. (2018, January 26). China's Arctic policy [White Paper]. English.www.gov.cn. https://english.www.gov.cn/archive/white_paper/2018/01/26/content_281476026660336.htm"
+    },
+    "S00-R009-P016": {
+      "sourceTextSha256": "ba9d0153e8e32404dbdd782d8e549a5e6fbabde1c240959b0338ead4c8ed21be",
+      "en": "State Council Information Office of the People's Republic of China. (2023, October 10). The Belt and Road Initiative: A key pillar of the global community of shared future [White Paper]. China.org.cn. http://www.china.org.cn/chinese/2024-01/04/content_116894836.htm"
+    },
+    "S00-R009-P017": {
+      "sourceTextSha256": "95b407466decc48781c8934fb7ab3305891767b88c7aa4aa207d78f03df33725",
+      "en": "China Securities Regulatory Commission. (2018, September 30). Code of corporate governance for listed companies (2018 Revision) [Announcement No. 29]. Lawinfochina. http://www.lawinfochina.com/display.aspx?id=29351&lib=law"
+    },
+    "S00-R009-P018": {
+      "sourceTextSha256": "2c7f106320c4a81b2d11dd6023e11ca6a8acfd277bdb1907fcab93e6d895fb59",
+      "en": "Central Committee of the Chinese Communist Party. (2025, October 23). Proposal of the Central Committee of the Chinese Communist Party on drawing up the 15th Five-Year Plan for national economic and social development (Translation). Center for Security and Emerging Technology. https://cset.georgetown.edu/publication/china-fourth-plenum-proposal-2026/"
+    },
+    "S00-R009-P019": {
+      "sourceTextSha256": "c43df2bb58c76d1a321e3f6a8139858396d9ff2127003da062500f0b5205bc16",
+      "en": "National People's Congress of the People's Republic of China. (2026, March 12). Outline of the 15th Five-Year Plan (2026 –2030) for national economic and social development of the People's Republic of China. National People's Congress of the PRC."
+    },
+    "S00-R009-P020": {
+      "sourceTextSha256": "54154c3e1ad4f3759c79d5bd25fccf09393709f0d648706c28d6569592b32040",
+      "en": "Biden, J. (2022, October). National security strategy. The White House. https://bidenwhitehouse.archives.gov/wp-content/uploads/2022/10/Biden-Harris-Administrations-National-Security-Strategy-10.2022.pdf"
+    },
+    "S00-R010-P001": {
+      "sourceTextSha256": "a69b17b90d18eabd5defcac5e34081f3ed145a5c7c627f1bc8f2f9a3bc6fc50f",
+      "en": "U.S. Department of Defense. (2022, October 27). 2022 National Defense Strategy of the United States of America. U.S. Department of Defense. https://media.defense.gov/2022/Oct/27/2003103845/-1/-1/1/2022-NATIONAL-DEFENSE-STRATEGY-NPR-MDR.PDF"
+    },
+    "S00-R010-P002": {
+      "sourceTextSha256": "f7317d6d9884ac1b8892a0912cb493439ce0bb5b99e64f14b038b51f0fca0e91",
+      "en": "U.S. Congress. (1920). Merchant Marine Act of 1920 (Jones Act), Pub. L. 66 –261, 41 Stat. 988, 46 U.S.C. § 55102."
+    },
+    "S00-R010-P003": {
+      "sourceTextSha256": "5963efc991bb2e5ddbb80547155e395999e329553358e70a209574788da5319e",
+      "en": "U.S. Congress. (2025, July 4). One Big Beautiful Bill Act, Pub. L. 119 –21."
+    },
+    "S00-R001-P001": {
+      "sourceTextSha256": "db9681d96533d529792bb10ffc9ff0fa643d5b72edd7e3acaed7f02047d9e326",
+      "en": "2026 [redacted] Advanced Career Exploration Report (linked to the reading seminar)"
+    },
+    "S00-R001-P002": {
+      "sourceTextSha256": "963bfbdbc6dcdfcfada3833da30d279f69d9b3a407f51611cec48f2c70f7432e",
+      "en": "[Class information withheld] Name: [redacted]"
+    },
+    "S00-R001-P003": {
+      "sourceTextSha256": "559380a1cea8a17ccb0a314be278474f9a53b2218818407f6ef84391545e63ff",
+      "en": "Personal brand"
+    },
+    "S00-R001-P004": {
+      "sourceTextSha256": "14885026010829b783a79aab7e648a485365c786e69a9fd1075bb46fe6d2926f",
+      "en": "Brand name"
+    },
+    "S00-R001-P005": {
+      "sourceTextSha256": "e1c65422e4ac4f81736599e0573b34fbd625d1c1db58f8ed7fa66357d76ed3a1",
+      "en": "A technology-management specialist who designs defense and security decision-making systems grounded in philosophy and technology"
+    },
+    "S00-R001-P006": {
+      "sourceTextSha256": "14885026010829b783a79aab7e648a485365c786e69a9fd1075bb46fe6d2926f",
+      "en": "Brand name"
+    },
+    "S00-R001-P007": {
+      "sourceTextSha256": "a4129f14bbcd04ef6d31ff63ed09d06a0824c057fdbd0c505927efa40fb79ddf",
+      "en": "Reason for choosing it"
+    },
+    "S00-R001-P008": {
+      "sourceTextSha256": "0891140f7250a7eb1a3caa7584113855383778f047a740b116bb7c778d5c851e",
+      "en": "Technology management is a career direction I have consistently developed since my first year. Along the way, I selected"
+    },
+    "S00-R001-P009": {
+      "sourceTextSha256": "64ac5fd6889d68220ac222ff33848c68a70b789209734553e43a934cc6f39663",
+      "en": "two additional areas: security and defense, and philosophy."
+    },
+    "S00-R001-P010": {
+      "sourceTextSha256": "e68066060db60bf1f21ba73cfdef757f41c05077249b4c28c42417e61bf37514",
+      "en": "This reflected my realization that management can no longer be separated from technology, and that technology is essential to management."
+    },
+    "S00-R001-P011": {
+      "sourceTextSha256": "55a5cbfabebd5522b5c15e5771dd11dbd66290b84abc4be292fbfaa18b5d7228",
+      "en": "In exploring truly sustainable business, I also recognized that wars and conflicts have never ceased throughout human history."
+    },
+    "S00-R001-P012": {
+      "sourceTextSha256": "642fa6f9fe141ae3f4e5deefe5b8e907757b086601205efe602df41cf33b18ab",
+      "en": "I came to understand that technology and philosophical identity in defense and security offer a way both to protect the state and its citizens—that is, to fulfill social responsibility, as discussed in my personal statement—and to pursue private interests and profits, the essence of corporate management. This required three keywords: defense, technology management and philosophy (identity). Since it also involves making decisions from data integrating these three fields (data-analysis capability), I incorporated the central goal of designing decision-making systems."
+    },
+    "S00-R001-P013": {
+      "sourceTextSha256": "96dae434db82119ef5d1c83e2e4e305ccc81bbc4304ae6db0fc5fb2000361274",
+      "en": "Relationship between the brand name and the advanced career-exploration topic"
+    },
+    "S00-R001-P014": {
+      "sourceTextSha256": "bb70d855bad734d64a2bdd1263cfa59920fa07e9e45d068bd853f63871d45098",
+      "en": "Technology management and data have been consistent subjects of my work since the first year. Having already performed most kinds of analysis, including correction and interpolation, data modeling, AI analysis, counterfactual analysis and SHAP, I felt that simply reusing these topics would no longer be meaningful. When planning the reports for my final inquiry at [redacted], I therefore tried to integrate data, philosophy (philosophical identity), defense and security, and technology and management. I designed the assignments with the aim of ultimately connecting the individual studies in a linear progression through this advanced career-exploration report."
+    },
+    "S00-R001-P015": {
+      "sourceTextSha256": "08566c0b9b0c72c6071dd2fa150c3b4e5d857283f43845994aedc5dbed6e3398",
+      "en": "I then selected corporate hegemony as the theme through which to organize these assignments in this report. Having planned the second- and third-year topics accordingly, I use the overall themes as supporting material for this report, as indicated in the notes below. The report aims to conclude the inquiry developed throughout the third year. Through three years of inquiry, I formulated the following three questions in response to the question of genuine sustainability raised in my admission personal statement."
+    },
+    "S00-R001-P016": {
+      "sourceTextSha256": "f147f0993a7183ee09e4946ab1548996c6fcf214b4ec0011f3c621398e02103a",
+      "en": "First, what business will not ‘run away’ ten or a hundred years from now? Second, as rapid technological development encroaches on human domains, in which areas will humans still be needed in the future?"
+    },
+    "S00-R001-P017": {
+      "sourceTextSha256": "fe32c3ae628f7012e67e1067fe5c1ba70fdda1c8feb926d3e77b2eb31363e5af",
+      "en": "Third, what does a company need in order not to fail?"
+    },
+    "S00-R001-P018": {
+      "sourceTextSha256": "8bce3655a47be97de3c2af159cd52ff0b7e11f8935b0008be06b31e086411bfb",
+      "en": "Through inquiry in the first and second years, I found the respective answers to be defense, philosophy, and technology and identity. My third-year branding therefore incorporated the following three elements."
+    },
+    "S00-R001-P019": {
+      "sourceTextSha256": "2aaecf0526b61e0af7a956912300b916406cd85fff920407f265a7710b0f226e",
+      "en": "The core of the third-year brand is the harmony of three fields: technology management, defense and security, and philosophy and identity. To bring together these three dimensions of genuine corporate sustainability, which can also be regarded as central to the firm, I proposed the term corporate hegemony. I discussed the proper direction for the defense and security industry on the basis of technology and a clear philosophical identity. In particular, by directly criticizing current Korean examples and arguing that firms have become indispensable to state–firm relations, I emphasized the importance of philosophy and technology in management and, beyond that, of firms in national security."
+    },
+    "S00-R001-P020": {
+      "sourceTextSha256": "2be7b9f2ec637d166029f554660ac60310610ce57ffc3af51440022feef35c2b",
+      "en": "Connection with the reading seminar"
+    },
+    "S00-R002-P001": {
+      "sourceTextSha256": "342a501eae263102b3cc7689ea4b285b0d78056350bc5e2fec6c0702eb039538",
+      "en": "Explain the overall research progression, focusing on the reading seminar's key arguments, feedback and motivation for further inquiry."
+    },
+    "S00-R002-P002": {
+      "sourceTextSha256": "507e4c460dc418a4a25d813fd224a4255bad486a6ef35c0b532b414d2c9aab4b",
+      "en": "Connecting progression"
+    },
+    "S00-R002-P003": {
+      "sourceTextSha256": "9ad99683ba5c8578a0f7985257dab87c83011d0968dd18bc13126b30f2faff33",
+      "en": "In the reading seminar, I presented on genuine corporate sustainability. While recent discussions of firms' social roles, including social contributions and ESG, have claimed to create social sustainability, I believed they did not enable firms to adapt to the rapid changes in industrial structures and technological development seen recently. I also believed that even if social sustainability was addressed, corporate sustainability itself was not. Connecting this to Peter Thiel's monopoly theory, I compared technological-monopoly companies with ESG/CSR companies. I found substantially higher corporate sustainability in technological-monopoly companies, using measures such as ROIC, Ro40 and FCF. I also found almost no correlation between ESG scores and those measures, obtaining a result that ESG has no substantive influence."
+    },
+    "S00-R002-P004": {
+      "sourceTextSha256": "67cd752543d9e1910fd7baf306691dfbae68b54797e4308f320183ff19e80744",
+      "en": "The presentation established two hypotheses. First, firms using technological-monopoly strategies have higher corporate sustainability than firms using ESG management. Second, firms using technological-monopoly strategies can respond to changes in social and industrial structures. Comparing a monopoly-strategy group with a group centered on ESG/CSR management, I concluded that the monopoly-strategy group could respond to rapid social, structural and technological change. Through Spearman, counterfactual and SHAP analyses, I also demonstrated that firms using monopoly strategies achieved much better results in finances, performance, growth and corporate sustainability than firms using ESG management."
+    },
+    "S00-R002-P005": {
+      "sourceTextSha256": "51d1d636d80757d9ed920a30994384fc028deeca0207a7c8e62cd31f46762ec9",
+      "en": "However, although I had demonstrated the importance of corporate technology and monopoly strategy that I strongly advocate, the importance of identity still needed to be demonstrated. This developed linearly from the importance of firms, emphasized since the first year, to the weaponization of firms in the second year, and then to the use of firms as hegemony. It ultimately led to the assignment of national identity and the emergence of conviction-driven companies through national security."
+    },
+    "S00-R002-P006": {
+      "sourceTextSha256": "e9147b39478a34717e25fd620509a84b77381120ef61b58fa7ebe181f524ea28",
+      "en": "Redefining State–Firm Relations: The Emergence of an Era of Corporate Hegemony"
+    },
+    "S00-R002-P007": {
+      "sourceTextSha256": "7cd076c5411c2b63e5346402d35eb0559600e79bc2e361a3c1c457716dff6d88",
+      "en": "I. Introduction. The recent world has entered a two-sided realist condition. This change is not simply a matter of more conflicts: conflicts are also becoming prolonged, peaceful resolutions are declining sharply, and major powers no longer conceal their ambitions. In particular, Russia (the former Soviet Union) and the United States, the two poles of the Cold War, are waging wars against Ukraine and Iran respectively. These differ from Russia's Crimea operation targeting a limited area and from an episode in America's long-running war on terror."
+    },
+    "S00-R002-P008": {
+      "sourceTextSha256": "b5d727c2e1f960a9cf39a714b7bc65238591fe04c523e07bc19fd2d86b3114ef",
+      "en": "There are various explanations for the world's present condition, including the diversification of interests and hegemony over energy and technology. However, a difference from conventional combat and earlier modern warfare is the emergence of actors that previously had not made their presence felt."
+    },
+    "S00-R002-P009": {
+      "sourceTextSha256": "85122d839be6e6a771c8e4af7016468cc58ae726cdcae7074144108694af3e0d",
+      "en": "Second-year International Politics assignments 1 and 2 ([teacher redacted], [teacher redacted])"
+    },
+    "S00-R002-P010": {
+      "sourceTextSha256": "1c4af33a778260bbd9f7bca6742d4db61e3c15dde3c7a1ddbb2c70e2815da403",
+      "en": "1. Companies that became national power (examples of indirect investment and sustained support by the U.S. Department of War → indirectly introduce the weaponization of ordinary firms)"
+    },
+    "S00-R002-P011": {
+      "sourceTextSha256": "8bfbd956d15eb3b2961eff2b9755fa4ab9d2690b7274158f2787d658f17b62d2",
+      "en": "2. Analysis of modern warfare (conventional forces + electronic/network warfare; examples of U.S. preparations)"
+    },
+    "S00-R002-P012": {
+      "sourceTextSha256": "9a066a4e307e2989f49418cc99dfb5b30f388841fc8716a83090c7e4117589f1",
+      "en": "I-II. The emergence of firms"
+    },
+    "S00-R002-P013": {
+      "sourceTextSha256": "2141553cc5578165455812f49aebb2dc4824afbcf11f50b751c27acd52161052",
+      "en": "Eisenhower mentioned the military-industrial complex in his farewell address, but recent developments differ clearly from it in three main ways. First, firms no longer take only the traditional form of companies making missiles and tanks, but appear as ordinary software, hardware and financial companies. Traditional defense firms such as RTX, Northrop Grumman and Lockheed Martin still exist and are growing. Yet other actors include familiar companies such as Palantir, Alphabet, OpenAI, SpaceX (Tesla) and JPMorgan Chase. Second is the weaponization of firms. The struggle for hegemony between China and the United States, often called a new Cold War, has recently intensified again. In this context, firms are being weaponized, especially in the United States and China."
+    },
+    "S00-R002-P014": {
+      "sourceTextSha256": "3c5f303caeb651934d890fb82d3c1b2444affb2ff4ab0b078036ae2963dbd95d",
+      "en": "I addressed this phenomenon in my second-year report for World Issues and Future Society. Using America's Golden Dome project, it discussed bringing together companies from different fields—Tesla, Meta, Palantir and SpaceX—under the single goal of national defense, assigning them a national identity and simultaneously inducing technological development and collaboration through indirect investment. Third is the transformation of companies into hegemony, the central topic of this report. A China–Taiwan conflict, regarded as a possible next conflict after Russia–Ukraine and U.S.–Iran, has likewise become a central global controversy and concern. China's persistent gray-zone strategies and military exercises fuel those concerns. Yet TSMC, a powerful semiconductor producer with a stated share of up to 80% of global semiconductor production, serves Taiwan as a defense against China and as a diplomatic tool attracting international attention and cooperation through arrangements such as CHIP4."
+    },
+    "S00-R002-P015": {
+      "sourceTextSha256": "d4113cd4ecb94557b34db8796741b9ce6e5d5b4c9210446cea2dd2d7a9ce0b9b",
+      "en": "An invasion would therefore expose China to diplomatic and international criticism for a military seizure aimed at monopolizing global supply chains. Even if China accepted this, TSMC's presence alone would create a second major risk: intervention by the United States and neighboring countries could prevent the invasion. In other words, firms are becoming national power and hegemony."
+    },
+    "S00-R002-P016": {
+      "sourceTextSha256": "4b4b6e17006d9fb7df640df7560db1c36629d4ff4a74dafe8a45d4234f038d27",
+      "en": "Advanced English Reading and Writing assignment 1"
+    },
+    "S00-R002-P017": {
+      "sourceTextSha256": "6d3130ce227bce06b6bc775def73ffac15856191715f55cb0bf7df4943c00853",
+      "en": "Eisenhower's warning about the military-industrial complex and the Oppenheimer moment — the true path of defense companies → safeguarding liberal democracy and preserving society"
+    },
+    "S00-R002-P018": {
+      "sourceTextSha256": "249c779df8516c4a7175944930acfa92e232ac3863db839d6b4795dd6bf80d06",
+      "en": "Second-year World Issues and Future Society"
+    },
+    "S00-R002-P019": {
+      "sourceTextSha256": "5b73b7a71a763e79f6591cc5842d56b445660f30867cb82ca6942138ce440a18",
+      "en": "Can force create peace? Through America's Golden Dome project"
+    },
+    "S00-R002-P020": {
+      "sourceTextSha256": "d5c3573e46e45a0b01e057b14692ba3f1093277376ed17caacbd1032bb7ea272",
+      "en": "(The U.S. Golden Dome project is not simply an interceptor-system concept: it assigns an identity to domestic firms, develops technology through indirect investment and simultaneously prevents outflows through the defense industry.)"
+    },
+    "S00-R002-P021": {
+      "sourceTextSha256": "94f9a33e4b8c6ef7c2da7a2c9968e03ace2144d28e2e41867bf5163e712f313c",
+      "en": "The companies a country possesses can no longer be viewed simply as businesses and part of its wealth. The same applies from South Korea's perspective. Amid the semiconductor boom and stock-market prosperity, Samsung and Hynix account for 52% of the KOSPI's total market capitalization as of June 2026. Although the index fluctuates frequently, if its average is taken to be in the 8,000s, more than 4,000 can be attributed to Hynix and Samsung. Should they be viewed merely as large corporations? If the semiconductor shortage and AI boom driving their prosperity and the KOSPI's surge end, could Samsung and Hynix be reduced to substitutes for TSMC? How should the state respond? This report's central problem begins with such questions."
+    },
+    "S00-R002-P022": {
+      "sourceTextSha256": "3c8cba1512ea959699480a9ba98cb8b15fb4264bfc54050403847498ae1c60e4",
+      "en": "I-II. Redefining the relationship between the state and firms"
+    },
+    "S00-R002-P023": {
+      "sourceTextSha256": "f1d257a341c00b9a19666e05a78ca2229bd17161b7f46b6994ff882eb5881f8e",
+      "en": "Firms have always changed as the world changes, and states have responded. As firms now influence global society in their own right beyond the military-industrial complex, how states treat, understand and use them has become a crucial task. This discussion appears in my reading seminar, where I reconsidered genuine sustainability through Thiel's monopoly theory. I found virtually no correlation between ESG and measures representing sustainability—ROIC, Ro40 and FCF—and, conversely, demonstrated a correlation with technological monopoly, advocating a change from negative views of monopoly. As noted earlier, technological-monopoly companies have become very important national assets. Like Taiwan and TSMC, they can serve as tools of national defense and diplomacy and, viewed differently, even as instruments of offense. For such firms to become national weapons and hegemony, they arguably need an identity oriented toward their country and monopolistic technology."
+    },
+    "S00-R002-P024": {
+      "sourceTextSha256": "07a84a43c9c2d9daf6519e62d727eb914bd3fd457841e7ff14497f42f44436b1",
+      "en": "Reading seminar"
+    },
+    "S00-R003-P001": {
+      "sourceTextSha256": "1184c25db8bfd61700fe48159e42e91882ce7ea1f2ab2c804aae32d3a225a49e",
+      "en": "The core of enduring firms created by technology and identity: reconsidering monopoly strategy and sustainability"
+    },
+    "S00-R003-P002": {
+      "sourceTextSha256": "e4add035e132cf1906113c5c5da630c1fa213593bf59d99abde1ac8a019f9079",
+      "en": "→ Finding genuine corporate sustainability through technology and identity: a strategy for achieving sustainability without falling behind a rapidly changing world"
+    },
+    "S00-R003-P003": {
+      "sourceTextSha256": "2ca18b72760744f3da5bb8f1f4dfd78ee7ba18df1174419019ce3665a3a0aa2c",
+      "en": "Connections"
+    },
+    "S00-R003-P004": {
+      "sourceTextSha256": "87f11b6bbb878507059a71ecf8750e1533ad9237338188e43901b354b057b657",
+      "en": "1. Technology and identity are more important than ESG/CSR."
+    },
+    "S00-R003-P005": {
+      "sourceTextSha256": "6ca03b8a0ecf6fc6c2de4cf410578579ea5a8260c8fc11d40a1fe1b4b2654606",
+      "en": "2. Firms must pursue monopoly strategies."
+    },
+    "S00-R003-P007": {
+      "sourceTextSha256": "38c07d6c5f8588f2adbd3188ea4b1d89ef73864ea79e90edf77c47dc87e274b1",
+      "en": "The importance of companies with convictions rather than a conventional corporate identity was also discussed in my second-year reading colloquium. Firms centered on ultimate convictions and goals possessed a strong national identity or purpose. I also explained the phenomenon in which realizing these convictions instead leads to increased profits and corporate growth."
+    },
+    "S00-R003-P008": {
+      "sourceTextSha256": "0deab29bcd65755d8341303e692cbb8b2d78597b405a1ad5cc9ff0e7cf7d4fac",
+      "en": "Second-year reading colloquium"
+    },
+    "S00-R003-P009": {
+      "sourceTextSha256": "5dfa87a5cdded0f215f3d942aa8dca7a9aacc5c33c89b506b4962f7cb2d56fd8",
+      "en": "Companies with convictions: the emergence of firms serving the state to preserve democracy and freedom"
+    },
+    "S00-R003-P010": {
+      "sourceTextSha256": "0d65c432c14b4ec224abc93437d30db63d17aa705818b4cd65172d7297de0aa9",
+      "en": "The need for stronger convictions, such as preserving democracy, sustaining the Western world and protection against enemies, rather than conventional social goals or giving back (national identity)"
+    },
+    "S00-R003-P011": {
+      "sourceTextSha256": "66b0197084da8f604abaeb5fdfbad12c8c7c47d5dc27b7342c71c1b763ca6f0e",
+      "en": "I-IV. South Korea's problem of ‘outflows’"
+    },
+    "S00-R003-P012": {
+      "sourceTextSha256": "63b7ab81415f6d76e38e3c80daf8df05f003e1a8d259ec959e2a89298d92f2eb",
+      "en": "An era has arrived in which state–firm relations can no longer be regarded simply as a relationship of interests, or one in which the state regulates firms for smooth competition and provides subsidies. The relationship must be redefined. Above all, states and firms must bind together to survive in an increasingly realist international society. Contrary to this trend, South Korea is among the countries experiencing the most frequent outflows of firms and talent. According to an EBS survey, 43% of domestic science and engineering master's and doctoral personnel are considering overseas employment within three years. Five major domestic universities—Seoul National, Yonsei and Korea universities, along with KAIST and POSTECH, which train technological talent coveted in the new Cold War competition, particularly between the United States and China—account for nearly half of the total net overseas outflow. As mentioned in my second-year Global Citizenship Education work, the exchange rate continued to rise, from KRW 1,470 when that report was written to KRW 1,560 now. Even amid the KOSPI boom, Korea's economy remains in a warning state."
+    },
+    "S00-R003-P013": {
+      "sourceTextSha256": "df51814d6b512caedfb32d09e00297a1c16328b8bb9c5cd83254dd6acc0da7b0",
+      "en": "Second-year Global Citizenship Education"
+    },
+    "S00-R003-P014": {
+      "sourceTextSha256": "1ed2824afecd7a4a0f8dbed7edfba8d2ea6cf4ddf54e8302029068458e306d4b",
+      "en": "A crisis of trust in the Korean economy: financial hegemony and the outflow of wealthy people and entrepreneurs"
+    },
+    "S00-R003-P015": {
+      "sourceTextSha256": "37d8ede9796c5a017f4590fc44c300e47e3b05472b986d15e0839af2ca6d1e44",
+      "en": "What stood out this year was the outflow of companies. A recent personal-data breach at Coupang prompted a government investigation and attempts at stringent disciplinary measures and punishment. During that process, two million users left or ceased using the service. Coupang protested that the government's punishment was excessive. Although most consumers and revenue were in Korea and it ‘had been’ a Korean company, Coupang, now a large U.S. company with only its headquarters in America for its NYSE listing, engaged in legal lobbying and protests in the United States. This resulted in Korea's prime minister flying to America to explain the situation. Whatever one's judgment, this problem arose because Coupang, described as the overwhelming leader in Korean logistics and shopping, listed in the United States rather than Korea because it considered this better for corporate growth."
+    },
+    "S00-R003-P016": {
+      "sourceTextSha256": "75cf20567b2c86d086d90aa90167a6695d47ce0a53a3ea72e1d52b92d74a5ed4",
+      "en": "There have also been cases such as Tada, where government regulation caused a firm to lose competitiveness and enabled large companies such as Kakao to become excessively monopolistic. Thiel's ‘monopoly’ and ‘excessive monopoly’ are different concepts. Other anti-business policies and boycotts have likewise created an environment in which firms struggle to operate domestically. Such anti-business and insufficiently business-friendly Korean policies represent a backward step in an era when corporate hegemony and corporate security are becoming important."
+    },
+    "S00-R003-P017": {
+      "sourceTextSha256": "e8671a0acd1fd7b659ca8ab240046bae5d1f75eb006f8955e0a1c2df06b11524",
+      "en": "Third-year International Economics ([name redacted])"
+    },
+    "S00-R003-P018": {
+      "sourceTextSha256": "009ee7c67035d7c3da6f8afc76b0b8733905c7797792347360f08ca54f8691a8",
+      "en": "The paradox of redistribution, the arrival of socialism and the crisis of capitalism"
+    },
+    "S00-R003-P019": {
+      "sourceTextSha256": "e5b752f8260b268f2aa226e914a292072492da002df05d0e3f381079c5b3d489",
+      "en": "→ Kakao's monopoly and deadweight loss following stringent regulation of Tada; wealthy people's departure and project cancellations caused by New York City's wealth tax; calculation of the resulting multiplier effect"
+    },
+    "S00-R003-P020": {
+      "sourceTextSha256": "5336f44a290f540ff8ddb2608965b95e283d48663106a4349cd6103b30e32578",
+      "en": "I-V. Research methods and development of the argument"
+    },
+    "S00-R004-P001": {
+      "sourceTextSha256": "1ce7934997b099d48b99f7855d56be7bcbfb11f4bdf6f0bca39f7a9d49813872",
+      "en": "On the basis of the strong concerns outlined above, I develop the study as follows."
+    },
+    "S00-R004-P002": {
+      "sourceTextSha256": "75d13d914ed464221ad7f4b0a2da6dab28178b181b69d8184db8eee887f356ea",
+      "en": "First, I examine the corporate policies of the United States and China, the principal actors in the new Cold War, to identify their respective corporate strategies. Second, centering on the terms corporate security and corporate hegemony, I use clear data and evidence to examine whether firms have truly become hegemony."
+    },
+    "S00-R004-P003": {
+      "sourceTextSha256": "4e25195778d0d64b452ec043b53c97dee1471ef5782bbc4f1bdfcff5a4c8d877",
+      "en": "Third, I identify the common characteristics and strategies of firms constituting corporate hegemony."
+    },
+    "S00-R004-P004": {
+      "sourceTextSha256": "06f380cf48ebd180fc6f564827c5022d37c3e1da2c039388f80eab05549e1c1c",
+      "en": "Fourth, I introduce the concept of privileged firms and propose a direction for South Korea in its current circumstances."
+    },
+    "S00-R004-P005": {
+      "sourceTextSha256": "e9d44e58e198ab24fa57e7d556f09deeb1ed9dbdbe41a0c1d166825397886144",
+      "en": "II. Main discussion"
+    },
+    "S00-R004-P006": {
+      "sourceTextSha256": "e4acfbfead7d399683445ad031d76e219ff2c72fb8c80da2b1a2cee9a0a7e922",
+      "en": "The following is an example; revise it before use."
+    },
+    "S00-R004-P007": {
+      "sourceTextSha256": "55ae9d97033ab6442064e7d8c687d5ae2d3ab6d7d9e23344406eaeb6c5f3d4c5",
+      "en": "II-I. China's policies toward the West and strategies toward firms"
+    },
+    "S00-R004-P008": {
+      "sourceTextSha256": "8048e440e8ee63bf950d9ca2b51ef4bb29d6bf2030e7a8c296206c56d090bf51",
+      "en": "China was originally a socialist country highly closed to liberal markets and firms. After Deng Xiaoping's opening-up policy, however, it began interacting with free markets, and Chinese products can now readily be found, purchased and seen in free-market economies. There are still many restrictions and censorship requirements for foreign firms entering China's domestic market, but exports from China to the outside world proceed very freely."
+    },
+    "S00-R004-P009": {
+      "sourceTextSha256": "8e13fcf2fd153bb46f1a856ada291b693d4257bc7faea0a6a3d3b4a57729ab0b",
+      "en": "China also began production on the basis of very low labor costs and its population, laying the foundations for its present wealth and strength. Rapid growth and students who studied in the West raised China to a position in which it no longer had to look up to America. Understanding its present stance and direction requires three approaches. First is analysis of outward-facing plans such as Made in China 2025, the 14th and 15th Five-Year Plans and the Belt and Road Initiative. Second is analysis of reports from think tanks concentrating on China, such as the CSIS China section, RAND and Brookings. Third, since America currently describes China as its sole competitor in NSS 2025, is tracing the U.S. State Department's sanctions lists backward. This study combines the three approaches. Ultimately, China's corporate strategy can be summarized by one word, expansion, and divided into two main methods."
+    },
+    "S00-R004-P010": {
+      "sourceTextSha256": "7363e2d50d2a9d127c65611d28b8e6089510256e8fdb39495939591ddbe5f451",
+      "en": "Third-year Regional Understanding assignments 1 and 2"
+    },
+    "S00-R004-P012": {
+      "sourceTextSha256": "f9286534a209c007c28841e158c2964ce1068b899b31682b211ffc5161b05bd1",
+      "en": "1) Sectoral expansion through firms: Mercedes acquisitions and Tencent"
+    },
+    "S00-R004-P013": {
+      "sourceTextSha256": "76837fb155f6cec9ba95bacf897841b8e3898001559934f33b9f49b50d4009a9",
+      "en": "Looking at China's recent corporate and sectoral expansion, it has moved beyond imitating Western firms' designs, strategies, styles and technologies. Made in China 2025 shows an active use of acquisitions of well-known firms to change the image of a Chinese market stigmatized as a market for copies. As noted earlier, states have also recognized firms' importance under realist conditions and are attempting to attract and defend companies. Nevertheless, China's strategy deserves attention."
+    },
+    "S00-R004-P014": {
+      "sourceTextSha256": "153c1e6fba762b0a894c59067565010236eef1056229a0811b28f5793a1ddff8",
+      "en": "Recent growth among Chinese carmakers such as BYD, Geely and XPeng has been rapid. Chinese automobile manufacturing, formerly dismissed as imitation, is enjoying an unprecedented boom in areas including EV battery technology and ride quality. Battery firms such as CATL supply well-known carmakers including Hyundai, Kia and Audi, helping China reach first place in global automobile manufacturing. Alongside this manufacturing development, aggressive acquisitions underpin fundamental technological growth. Mercedes-Benz, the developer of the world's first gasoline engine and still synonymous with luxury cars, is commonly viewed as one of Germany's three major brands. Yet closer inspection reveals Chinese ownership stakes."
+    },
+    "S00-R004-P015": {
+      "sourceTextSha256": "003dfb54baf040fa373934e650058f2454c5fe5204d309e35e2f03ab52ddeaf0",
+      "en": "Initially, China's Geely (spelled ‘Geery’ in the source) asked Daimler, Mercedes' parent, to issue new shares equivalent to 5%, but Daimler refused. German law also required disclosure upon acquiring major stakes of 3%, 5% and 10%, prompting Geely to change tactics. CEO Li Shufu established a personal investment company and steadily acquired shares through American banks such as Bank of America and Morgan Stanley. Institutional investors separately accumulated shares using derivatives such as call and put options for Li's investment firm, Tenaclou3 Prospect Investment. Li then borrowed USD 9 billion and settled at once, becoming Daimler-Benz's largest controlling shareholder with 9.69%. Because the purpose was not simple investment, a collar strategy kept gains and losses from the share purchases close to zero and costs near zero while making him a controlling shareholder. Mercedes' shareholding was dispersed among institutions and individuals rather than concentrated among major holders. A stake near 10%, compared with second-largest shareholder Kuwait's 5%, can therefore be regarded as effectively controlling."
+    },
+    "S00-R004-P016": {
+      "sourceTextSha256": "6a369b873a603d29a24f71f95aa55579156798f52b673da1c0f9a9b0564bc432",
+      "en": "This prompted Beijing Automotive Group, originally responsible for exclusive Mercedes sales in China, to enter the ownership competition on the stated grounds of feeling threatened, eventually obtaining 9.89%. The combined Chinese controlling-shareholder rights of roughly 20% led to the 2019 Smart joint venture and joint EV powertrain design. The third-generation Mercedes-Benz CLA uses a four-cylinder engine developed jointly by Geely (spelled ‘jeery’ in the source) and Renault, entirely designed and produced in China. Geely expanded further through powertrain ventures with Volvo, in which it currently holds 100%, in addition to its Renault collaboration. Ultimately, Mercedes-Benz adopted Geely's GEEA 4.0 electrical/electronic architecture at vehicle-platform level. Although it claimed there were no Chinese executives, Chinese architecture, powertrains and production lines had in practice penetrated the business."
+    },
+    "S00-R004-P017": {
+      "sourceTextSha256": "01c545e944be98761cbcc7ca6ed289816fbfb1938418e751a7863d85cc93edf4",
+      "en": "Such aggressive Chinese cases continue to increase. In video games, Tencent acquired 100% of Riot Games, developer of League of Legends, which dominates the Korean and esports markets. It also acquired more than 40% of Epic Games, described in the source as the developer of Unreal Engine and Rainbow Six Siege, which is also used in U.S. military simulations, and proposed an M&A transaction. It holds 10% of France's Ubisoft and is a major shareholder, including a third-largest shareholder, with more than 15% in major Korean game companies such as Krafton and Netmarble. Although no official announcement connects these aggressive moves to Chinese government plans, CCP branches at CATL offices and state-owned-enterprise financing of Geely's Volvo acquisition have been confirmed. Alibaba founder Jack Ma's disappearance for 80 days following public criticism of the government, reduced public activity after his return, and confirmed CCP membership make it difficult to dismiss suspicions that events still follow the Chinese government's direction."
+    },
+    "S00-R004-P018": {
+      "sourceTextSha256": "d932fd4847d7e1f539bbdcf1c0642686ad98e99c4467c1207a9f1f667967357f",
+      "en": "2) Territorial and resource expansion through firms: Greenland and Cambodia's Prince Group"
+    },
+    "S00-R004-P019": {
+      "sourceTextSha256": "f588adba6225b4fc751f45f9bcfe3f97179cae36e192083d114734e0232576e7",
+      "en": "Third-year Regional Understanding 2 (independent report)"
+    },
+    "S00-R004-P020": {
+      "sourceTextSha256": "49d00522a829b44b6320b451c4c1928b316fdad010e23d3a76b5e16342384d7f",
+      "en": "— Analysis of Chinese territorial expansion through firms: strategies toward the West and territorial expansion"
+    },
+    "S00-R005-P001": {
+      "sourceTextSha256": "c3282a92bddf59672137af5d3f6083c4c03f7a56c37cc62950dfc3147584e12d",
+      "en": "Given China's political system, it is difficult to regard government and firms as separate. Although the state and private firms are formally distinguished, their close connections are difficult to deny. Many large Chinese firms are state-owned, including major listed companies such as ICBC, CCB and CSSC, whose headquarters and branches all have CCP branches. Major private companies, including Tencent, Alibaba, Huawei and BYD, also have CCP branches that intervene in actual management and judgment. Ultimately, the September 2018 amendment to the Code of Corporate Governance for Listed Companies issued by the China Securities Regulatory Commission required all firms listed on domestic Chinese exchanges to establish CCP branches. This placed both emerging startups and established large firms under CCP control."
+    },
+    "S00-R005-P002": {
+      "sourceTextSha256": "2a87d3c6e4a12ebaea97b36cf8a8ab42aac58a1ca90dd611aafebd1a446b98e2",
+      "en": "China thus has a clear system of corporate control. Its use of both state-owned and private companies has consequently remained central to its strategy toward the West and is applied in many directions, particularly territorial expansion."
+    },
+    "S00-R005-P003": {
+      "sourceTextSha256": "59eccfb46b72998f374e6d09af47dbd4a7123ed88a21586fcaf26ea931029f86",
+      "en": "Greenland is a representative example. During the Cold War, the United States perceived a need to detect and intercept Soviet hypersonic missiles traveling along the shortest route before they reached the American mainland. Greenland's location along that route made it important. The Soviet Union's collapse and systemic dissolution reduced that need, and officially only one Space Force base remains following the withdrawal of missile launch sites and other U.S. bases. However, the rapid rise of semiconductors and the melting of Arctic ice under global warming revealed new possibilities. First are vast deposits of rare earths, key semiconductor resources, and other valuable natural resources. Second, Arctic sea routes newly enabled by melting ice offer substantial strategic advantages."
+    },
+    "S00-R005-P004": {
+      "sourceTextSha256": "f588adba6225b4fc751f45f9bcfe3f97179cae36e192083d114734e0232576e7",
+      "en": "Third-year Regional Understanding 2 (independent report)"
+    },
+    "S00-R005-P005": {
+      "sourceTextSha256": "3f3ba3d9e6515fc8d657c0c9037a375ce76b400a72784088fff53ba4d24cf47c",
+      "en": "Introduction"
+    },
+    "S00-R005-P006": {
+      "sourceTextSha256": "e573c80c276c625aba6074e192c3bf82c3e488d856d4898fb4f89d75567c5960",
+      "en": "The circumstances were also conducive. Denmark, which currently possesses Greenland, lacked the technology and funding to develop its resources. China faced the risk of having to rely on reserves if its sole oil import/export route, the Strait of Malacca, were blocked by Malaysia and Singapore, countries friendly to and militarily cooperating with America. Developing new routes was therefore crucial for China. In its 2018 Arctic policy white paper, China designated itself a ‘near-Arctic state’ while pursuing a strategy through firms."
+    },
+    "S00-R005-P007": {
+      "sourceTextSha256": "2c967e115523f980e62dac2040f30c3b9913adcd9b46380748f4ad7f4579e806",
+      "en": "Greenland requested Danish funding for new airports but was refused on commercial grounds. It sought public investment, and China Communications Construction Company, CCCC, attempted to invest. Fearing that Chinese financing and construction could enable military conversion in a contingency or transfer operating rights if debts went unpaid, America strongly persuaded and pressured Denmark, causing the attempt to fail. In 2016, Shanghai-listed Shenghe Resources acquired an 11.3% stake in the Australian mining company Energy Transition Minerals, formerly Greenland Minerals, becoming a major shareholder. At Greenland's Kvanefjeld site, Shenghe used those rights to sign a 2018 MOU with Energy Transition Minerals, securing exclusive processing and marketing rights and thus downstream control as well as equity. The 2021 uranium-mining ban and resulting litigation constrained the project. China's state-owned offshore oil company CNOOC also proposed comprehensive airport financing and construction in Greenland but was blocked. Stakes remain, however, creating concerns about reentry. These continuing attempts through corporate-nationality and equity arrangements show a strategy of expansion through firms."
+    },
+    "S00-R005-P008": {
+      "sourceTextSha256": "87e285f0459159190851152be7022047e0cc9caf6cb405e5acdb41479e871619",
+      "en": "II-II. America's corporate strategy toward China"
+    },
+    "S00-R005-P009": {
+      "sourceTextSha256": "66489444ad270c73d7aca3bff0a4291dd9caec23c9f1f99e90eac5e5ab1a0ff7",
+      "en": "As noted in the introduction, America formerly defined its relationship with firms simply in terms of interests: procurement contracts or short-term project business. It recognized, however, that contractual relationships alone could allow hostile states mobilizing larger capital to capture firms and technological hegemony. This strategy appears in the NDS from Trump's first administration through the current second administration, particularly in strong containment of China, designated the sole competitor, and restraint of Russia. America is consequently pursuing an unprecedented corporate-security strategy based on philosophical conviction and trust between firms and the state, organized around two main axes: ‘great cause’ and ‘privilege.’"
+    },
+    "S00-R005-P010": {
+      "sourceTextSha256": "4623e92bfa14a9689d719ac29fb826163ceec685c88b65bffcd278485d99ea57",
+      "en": "1) Conviction. America instills in firms a national cause of preserving democracy and the free-world camp, and firms voluntarily remain loyal to it. Representative companies include Palantir, a big-data analytics and security firm, and Anduril, an advanced defense-technology company. Establishing this cause channels firms' pursuit of private interest toward national preservation, security and social sustainability, ultimately making the company itself a national weapon and source of hegemony. Unlike ordinary firms developing technology through simple economic interests or short-term procurement contracts, conviction-driven firms bind the very purposes of technological development and business operations fully to the state. The former may lose technology and talent to an opposing camp offering more capital or an attractive market. The latter voluntarily form a technological-security network without departing even during national crises. Corporate identity and conviction thus become the strongest hegemonic weapons available to the state."
+    },
+    "S00-R005-P011": {
+      "sourceTextSha256": "41fc425a319ed84a72935c2f8c010e5d170ae25e7046390e692c8b08686fa336",
+      "en": "Second-year reading colloquium"
+    },
+    "S00-R005-P012": {
+      "sourceTextSha256": "e8f580e2a47a9b05776468853352c5b85a7413a506dc4cfefe642b443dfef155",
+      "en": "These firms developed a firm identity beyond the pursuit of private interests. They possess a clear philosophical identity of protecting the security of America and its allies. At official events such as the annual AIPCON AI conference, Palantir CEO Alex Karp declared that the company would work for America and its allied camp under any circumstances, establishing a clear philosophical direction. As a result, it received a major USD 1 billion contract from the Department of Defense while being actively used as a core AI system on contemporary American battlefields. Repeated emphasis on its philosophical orientation also provides a stable financial structure through close state relationships, despite rapid valuation swings and booms in data processing and AI. With 50% of its business from government contracts, there is little risk of contracts ending or moving elsewhere. Application in actual wars and battlefields also demonstrates effectiveness, gives the company early access to operational data and develops technology based on those data."
+    },
+    "S00-R005-P013": {
+      "sourceTextSha256": "bd0cd8caddc72e4abe9904e250a04aa3880cb0ab3963bad06406be2054f89b6f",
+      "en": "Demonstrated in the second-year reading colloquium"
+    },
+    "S00-R005-P014": {
+      "sourceTextSha256": "172769aaaff82867ee343056e8d75889ec4e6c07ce2de346a3f882ba1886a96a",
+      "en": "Such conviction-driven behavior also appears in finance. JPMorgan Chase chairman Jamie Dimon and Bank of America executives pursue pro-American and pro-Western financial activities grounded in patriotism, positioning themselves as a national financial-security network. They repeatedly express unlimited trust in the American economy in interviews and show strong confidence in the country, including financing and cooperating in wars America needs to fight."
+    },
+    "S00-R005-P015": {
+      "sourceTextSha256": "08c5a17e81b56031038c8a0bb9a8bad63e47d82a3881788658d5859253f9c634",
+      "en": "2) Privilege: Tether and American shipbuilding"
+    },
+    "S00-R005-P016": {
+      "sourceTextSha256": "5484a4c18348e31a796270fd5521893158ee95437b5dee8643972f556749354a",
+      "en": "For firms answering the national cause and supporting national security, America provides extraordinary privileges and legal protections, even willingly compromising traditional free-market principles such as fair competition and antitrust. This means the state no longer regards firms merely as market players, but as national-security assets that must be strictly controlled and protected."
+    },
+    "S00-R005-P017": {
+      "sourceTextSha256": "eea3cf4be67dcfe00f400e19e677c9a62a0a1219bd45c4360c735134215dce75",
+      "en": "An overt example is Tether, a stablecoin issuer with an overwhelming share of the cryptocurrency market. Tether issues coins pegged to the dollar and uses its enormous collateral reserves to buy large amounts of U.S. Treasuries, actively offsetting the debts of an American government facing chronic deficits. More important is the hegemonic dimension. Tether absorbs worldwide monetary liquidity, bringing even funds from emerging markets and sanctioned countries into the ‘digital dollar.’ It thus serves as a spearhead extending American monetary and financial hegemony into the cryptocurrency ecosystem. Although an ordinary financial institution would have faced severe action under labels such as shadow banking, American regulators recognize the national contribution of Tether's Treasury purchases. Through institutional privileges such as regulatory deferment and discussions of special legislation, they tolerate and guarantee its global monopoly structure."
+    },
+    "S00-R005-P018": {
+      "sourceTextSha256": "df51814d6b512caedfb32d09e00297a1c16328b8bb9c5cd83254dd6acc0da7b0",
+      "en": "Second-year Global Citizenship Education"
+    },
+    "S00-R005-P019": {
+      "sourceTextSha256": "862e950324ee66bbe2266f4339b465f3d740cf732d8fcb5f80c469ac3fba2e69",
+      "en": "National privilege is not confined to advanced finance and IT. America's declining shipbuilding and maritime-defense industries likewise became subjects of protection and massive capital injections in the name of maintaining hegemony. After the Cold War, American commercial shipping and civilian shipbuilding were effectively devastated by price competition from Asian countries such as Korea and China. As China's rapidly expanding navy threatened control of the Pacific and Arctic seas, however, America again recognized shipbuilding infrastructure for constructing and maintaining its warships as a lifeline of maritime security."
+    },
+    "S00-R005-P020": {
+      "sourceTextSha256": "dbde15ad5f009d57fe5834ddfa15cc5b85e2f8d98df14252461e5031a59aeb33",
+      "en": "Beyond firmly maintaining the Jones Act, which limits domestic coastal shipping to domestically built vessels, America has recently demonstrated the height of overt state-led privilege through the One Big Beautiful Act, OBBBA. The legislation injects astronomical direct defense funding into domestic shipyards and maritime-defense companies that market logic should have eliminated, and mandates billions of dollars for heavily equipped Polar Security Cutters and other construction to secure the Arctic's strategic value."
+    },
+    "S00-R006-P001": {
+      "sourceTextSha256": "9fd2ad1b431589f19fdd027a4552cf89609e0ca8859f39748f91dcedb082956f",
+      "en": "This completely excludes short-term economics, fair market competition and free-trade efficiency. It is a national decision to preserve shipbuilders' security identity and physical infrastructure, even at enormous fiscal cost, so that maritime force can be projected against China and logistics supply chains defended in a contingency. America's strategy is therefore clear: firms serving the national cause and contributing to security receive monopolistic status and immunity by law, beyond ordinary market rules. These privileges guarantee corporate survival and profit, while their capabilities return as American national power, completing a perfect cycle of state–firm cohesion."
+    },
+    "S00-R006-P002": {
+      "sourceTextSha256": "1c6d1e1d9f25e94a03625d185a4f7566f924d7818ac8415828b59c491607a244",
+      "en": "II-III. Diagnosing South Korea's current situation: absent cause and disappearing privilege"
+    },
+    "S00-R006-P003": {
+      "sourceTextSha256": "40bf5c46ecebbec94af799d03c4e2ffed865a0a8a7f99a47d22f610842148c11",
+      "en": "South Korea is currently caught in a misguided sense of justice. Hannah Arendt's ‘absence of thought,’ central to the banality of evil, demanded reflection, morality and a sense of justice. Yet thoughtless justice and identity-free morality have instead driven companies out of the country or into bankruptcy. Sometimes the unintended result is that competitors gain greater market shares, creating excessive monopolies that can neither be removed nor sanctioned. Government regulation plays an important role in capitalism, but excessive intervention produces harmful results. Amid a turbulent world, Korea persists with anti-business, regulation-centered policies and brings about the outflow of firms and talent. A giant company built on the Korean market chooses a U.S. listing and returns as a weapon pressuring the Korean government, while next-generation industries are extinguished by regulation. This is a painful regression in Korean corporate security. The departure of domestically educated talent is also a painful security failure in an age of technological rather than physical warfare. (Chip War, 2020)"
+    },
+    "S00-R006-P004": {
+      "sourceTextSha256": "c066369759990de96b8da2296cd4a37667f88a6b5653f8684f31189282b86068",
+      "en": "The two new Cold War actors examined above, America and China, differ but both recognize and actively employ firms as hegemony. America turned firms into security assets through cause and privilege. It assigns an ultimate corporate purpose through national identity and enables sustained growth, while clear privileges provide sufficient incentives for firms operating domestically, making them national weapons and hegemony. Most giant companies are concentrated in America, which continues using privilege and cause to sustain this virtuous cycle. China uses coercive control to make firms instruments of expansion. It installed public-security offices in both state-owned and domestically listed firms. Yet these systems created strong potential in state-led industries and supported many efforts at territorial expansion, technological acquisition, premium positioning and other national industrial strengthening."
+    },
+    "S00-R006-P005": {
+      "sourceTextSha256": "756db87b284c169fdc94e71842c5590f1f024bab26177aac46d595be3340a1c3",
+      "en": "By contrast, South Korea has virtually no strategy. As corporate security becomes increasingly important, the behavior of Korea's government and firms reveals a serious insensitivity to security."
+    },
+    "S00-R006-P006": {
+      "sourceTextSha256": "fe9eaf61e5c045c01e880d0985e5f467ccbb29c1d4732977d43babff6ab4aff9",
+      "en": "DCA debate assignment + Modern Society and Philosophy assignment"
+    },
+    "S00-R006-P007": {
+      "sourceTextSha256": "e9820e0a55f90a349dac8ae17af606431a7f1ae2ec242098ad60d8b7cff15357",
+      "en": "Third-year reading seminar"
+    },
+    "S00-R006-P008": {
+      "sourceTextSha256": "82ea7a5de885902c418e37979b4bb227b1982b4a6433b929f464e15b052ffc5f",
+      "en": "Neglect and outflow of advanced IT and platform companies. Naver faced a risk of having to sell all its carefully developed LINE stake to a Japanese company following Japanese administrative guidance, yet the government's diplomatic and policy protection was insufficient. Viva Republica, operator of the leading domestic fintech service Toss, likewise has a substantial portion of its equity held by Chinese capital, intensifying concerns about technology and data-security outflows."
+    },
+    "S00-R006-P009": {
+      "sourceTextSha256": "71632803a7eb1338201fac7e6c0ee1fa5f26170b2475a1f2c4570d3aa4a795cc",
+      "en": "Among defense firms thriving under the label ‘K-defense,’ including Hanwha Aerospace and LIG Nex1, a clear allied cause of preserving democracy is difficult to find. Their arms exports to Vietnam, for example, require serious reconsideration. Vietnam is a socialist state and could become a potential adversary of our allies; monuments expressing hatred of Korean troops still exist there. Selling weapons to such a country for short-term profit demonstrates the absence of a philosophical security objective in Korea's defense industry."
+    },
+    "S00-R006-P010": {
+      "sourceTextSha256": "9ce314a1abf35244eab3db417682c88c553c79e32a5723187a466b0b9e64b3d1",
+      "en": "Essay / International Relations and International Organizations ([redacted])"
+    },
+    "S00-R006-P011": {
+      "sourceTextSha256": "3a0fd270eedde4fa43f9edb544ff6c318ffeda856c9b59d072cf2cb8cf4a407c",
+      "en": "As with Coupang, Kakao and Tada in the introduction, Korea consistently subjects domestically grown platforms and technology firms to punitive regulation and excessive sanctions. This creates resentment and mistrust toward the government rather than loyalty and patriotism, eventually encouraging firms to move headquarters overseas or transfer capital abroad. Tax and institutional privileges for Samsung and SK Hynix are likewise far below those of global competitors, leaving firms to survive on their own."
+    },
+    "S00-R006-P012": {
+      "sourceTextSha256": "1cf3d3f5ea673d0ffee91c7792ad66b498a144078d4f63caf5e1e763847fbd4c",
+      "en": "International Economics assignment ([redacted])"
+    },
+    "S00-R006-P013": {
+      "sourceTextSha256": "54b81ce0aceb1b66573d316047ba562de1ad0dc9ddbf559429e0444ec8282637",
+      "en": "III. Conclusion"
+    },
+    "S00-R006-P014": {
+      "sourceTextSha256": "26f4f5e6671d6d7792a553fcec345a57900732475bee0e7b0fdd4ac722081d20",
+      "en": "III-I. Cause and privilege"
+    },
+    "S00-R006-P015": {
+      "sourceTextSha256": "672f45493c5a2107c1fb37a38e57f30da473a1ad58a81739ec8d90565a52e425",
+      "en": "Today's international order is being reorganized strictly according to power, with major states placing firms on the front line of hegemonic competition. China controls firms as instruments of territorial and technological expansion through coercive systemic cohesion and capital investment. America instills a clear philosophical cause—preserving democracy and allied countries—to elicit voluntary loyalty. It further grants participating firms extraordinary privileges beyond free-market rules, such as monopoly rights, tax benefits and special legislation, creating a perfect cycle in which corporate profits increase national power. Korea must also fully recognize and use the power of firms. III-II. Redefining state–firm relations. In this realist world, the relationship can no longer remain a simple economic arrangement for tax collection and employment."
+    },
+    "S00-R006-P016": {
+      "sourceTextSha256": "c05a8894a10129b4433662cea8e1ab56a7486b0aab594ab8c367021817aa4b75",
+      "en": "As Thiel's monopoly theory confirms, giant firms with unrivaled technology are not mere businesses but powerful ‘weapons’ that defend a country and provide diplomatic advantage, as illustrated by Taiwan's TSMC. States and firms must stop following parallel paths for separate purposes. As a community sharing a common destiny, they must redefine their relationship as a security partnership bound by strong trust and conviction."
+    },
+    "S00-R006-P017": {
+      "sourceTextSha256": "ceb0d79ac0fabcdfeb44aa49148c33c347acd82a32e846c4fc7795cc11b546f3",
+      "en": "International Relations and International Organizations assignment ([teacher redacted])"
+    },
+    "S00-R006-P018": {
+      "sourceTextSha256": "27570bc86ed743bf393e71a1d3eedd56edc1bb191a01b60107c1fc9c43200405",
+      "en": "Redefining 21st-century Para Bellum: the crisis of liberal order and the rise of technological military alliances"
+    },
+    "S00-R006-P019": {
+      "sourceTextSha256": "7fc907fbbadf20ee8471359b98d36e03e461e7e13c5c31f052be930caebcfd5e",
+      "en": "→ Misguided hostility toward defense companies"
+    },
+    "S00-R006-P020": {
+      "sourceTextSha256": "4baaf081a7558a1d7871d36c5131bfcfb849e6ee80f2da4b5ce26672bea75f00",
+      "en": "III-III. The need to redefine Korea's government and firms"
+    },
+    "S00-R006-P021": {
+      "sourceTextSha256": "61e7594b92b4b4dd4d6eacaa9fe81fad055351bd49c8dd0dbeac9c40b5af7d10",
+      "en": "For Korea to survive a rapidly changing world and the turbulent waves of the new Cold War, it must fundamentally redefine the relationship between the state and firms."
+    },
+    "S00-R006-P022": {
+      "sourceTextSha256": "1a8657a57e3a673a09593fc5e474ca4c542b56108bc19c84b246efafbd720c43",
+      "en": "First, it must fully recognize the transformation of firms into hegemony. It should face the possibility that national survival and diplomatic bargaining power depend on the presence of key technological-monopoly firms such as Samsung Electronics and SK Hynix, treating them as Korea's highest-level national-security assets rather than merely conglomerates or economic actors."
+    },
+    "S00-R006-P023": {
+      "sourceTextSha256": "d8793d042fdb0db306bda920af6838421e7b8d6adf10e1c5d33fd09d50b973f2",
+      "en": "Second, firms must receive a clear cause and national identity, without coercive state intervention of the Chinese kind. As in America, sufficient privileges—regulatory removal, tax benefits and infrastructure support—should enable overwhelming global advantage. This should create a clear alignment of interests and voluntary loyalty by showing firms that contributing to national security and interests leads to their own explosive growth. Such clear philosophical loyalty will become national security, national power and ultimately hegemony. Even without external pressure on national industries, active participation and cooperation can contribute sufficiently to national development."
+    },
+    "S00-R006-P024": {
+      "sourceTextSha256": "1b60e2ff8eb4398d8004d3b0958484cbaea3eac9722d53fb4e5d28bbf4a22935",
+      "en": "Third, Korea must move beyond anti-business policies centered on punitive regulation and build strong security and diplomatic protection for domestic firms. As witnessed in Tada's frustrated innovation, Coupang's capital outflow and headquarters relocation, and the Naver–LINE share-sale situation, excessive sanctions driven by votes and regulation or diplomatic incompetence ultimately return as a painful boomerang: the overseas loss of core capital and talent. Korea must realize that shielding its firms from political turbulence in global hegemonic competition is a primary task in protecting its defense capability and security."
+    },
+    "S00-R007-P001": {
+      "sourceTextSha256": "5d1118a8819b13a036e30298817dfc07641f14d82756b7602212a6f8ad61f74d",
+      "en": "In conclusion, to lead international discussion toward more sustainable peace rather than simply declaring that war is bad, Korea must possess strong power of its own. Firms clearly must underpin that power now, and the two must advance together through conviction and identity beyond simple interests. The sources of power are no longer confined to conventional weapons, good diplomacy or high GDP. I believe that loyal companies committed to the national cause, intentional state privileges guaranteeing their monopolistic survival and growth, and clear national identity will become Korea's genuine strength."
+    },
+    "S00-R007-P002": {
+      "sourceTextSha256": "8e675acd83994522914081d51fa655e49edb64405c4caff2a033253da9d47898",
+      "en": "IV. References"
+    },
+    "S00-R007-P003": {
+      "sourceTextSha256": "3deb2c73d5c79e5eb05134ab54ec58ec591207eed468bc3fbaa2ecf5f7c8550d",
+      "en": "Korea Chamber of Commerce and Industry, SGI (Seoul Economic Research Institute). (Publication year unconfirmed). Economic effects of Korea's high-skilled talent outflow and policy responses [SGI Brief]. https://www.korcham.net/new_pdf/target/%5BSGI%20%EB%B8%8C%EB%A6%AC%ED%94%84%5D%20%ED%95%9C%EA%B5%AD%EC%9D%98%20%EA%B3%A0%EA%B8%89%EC%9D%B8%EB%A0%A5%20%ED%95%B4%EC%99%B8%EC%9C%A0%EC%B6%9C%20%ED%98%84%EC%83%81%EC%9D%98%20%EA%B2%BD%EC%A0%9C%EC%A0%81%20%EC%98%81%ED%96%A5%EA%B3%BC%20%EB%8C%80%EC%9D%91%EB%B0%A9%EC%95%88.pdf"
+    },
+    "S00-R007-P004": {
+      "sourceTextSha256": "9bbf17fe7ad48be2d9b0560371d221a575654da818d498bd5b3072d712140d98",
+      "en": "Jeong Tae-gyeong. (2025, November 2). KAIST's triple crisis deepens: presidential risk, brain drain and a leadership vacuum. Shinailbo. https://www.shinailbo.co.kr/news/articleView.html?idxno=2139022"
+    },
+    "S00-R007-P005": {
+      "sourceTextSha256": "8ab806717c24247409b5039299ce69de0d9462bf4bf81a60cf4df7e6c9c4c8e9",
+      "en": "Lee Kwang-hyung. (2025, July 10). [Lee Kwang-hyung's Perspective] The nation's future depends on AI transformation projects over the next five years. KAIST Leadership. https://kaist.ac.kr/leaderkr/html/kaist/0104.html?mode=V&no=1059516ffde69e2914ac2fb15c62dfeb&GotoPage=1"
+    },
+    "S00-R007-P011": {
+      "sourceTextSha256": "40c489fb7b1883a018aff6752285fb3967b53de6f81555fc7c86517292844b55",
+      "en": "Yonhap News. (2026, February 3). Korean defense firms including Hanwha Aerospace hold visiting presentations in Vietnam. Yonhap News. https://www.yna.co.kr/view/AKR20260203168600084"
+    },
+    "S00-R007-P012": {
+      "sourceTextSha256": "749cf62d30bde8af7c24558b579f4b0ea1ac9b9b1b0c5b3671e85a6be358bc8e",
+      "en": "Kim Joo-wan. (2023, June 7). How did the legal Tada become illegal? A detailed five-year record [Geeks]. The Korea Economic Daily. https://www.hankyung.com/article/202306059955i"
+    },
+    "S00-R007-P013": {
+      "sourceTextSha256": "f8de0936d599c8281904a5651ee3281b417e3659bb65826ad2b95a17a7225d59",
+      "en": "BBC News Korea. (2026, February). Rogers appears before the U.S. Congress: why did the Coupang controversy reach America? BBC News Korea. https://www.bbc.com/korean/articles/cx2d45jeyleo"
+    },
+    "S00-R009-P011": {
+      "sourceTextSha256": "ee83820b6efa3018a7445843ec4319395e12ed1ca948d740a8ba5bf4e2d9b8fa",
+      "en": "Boan News. (2025, August 25). Korea ranks sixth in AI worldwide, but the gap with America and China is ‘like heaven and earth.’ https://m.boannews.com/html/detail.html?idx=138890"
+    }
+  },
+  "sourceCount": 192,
+  "translatedCount": 192,
+  "complete": true
+}

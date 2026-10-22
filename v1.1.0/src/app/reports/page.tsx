@@ -23,8 +23,8 @@ export default function Reports() {
         </h1>
         <p>
           <L
-            en="Korean source transcripts, not a new synthesis or a reviewed translation. Personal identifiers are removed; research claims retain their original, unverified status."
-            ko="새로 쓴 통합 보고서나 검수 번역이 아닌, 한국어 원문 전사본입니다. 개인 식별정보를 제거했으며 연구 주장은 원문 그대로 미검증 상태로 구분합니다."
+            en="Complete Korean reading editions, parallel English editorial translations, and source PDFs. Personal identifiers are removed; the original research claims retain their verification status."
+            ko="한국어 전문과 영어 편집 번역을 나란히 읽고 원문 PDF를 펼칠 수 있습니다. 개인 식별정보를 제거했으며 연구 주장의 검증 상태는 원문과 구분합니다."
           />
         </p>
         <div className="callout">

@@ -1,0 +1,118 @@
+{
+  "reportId": "S14",
+  "method": "editorial-translation",
+  "status": "author-review-pending",
+  "paragraphs": {
+    "S14-R009-P005": {
+      "sourceTextSha256": "b1a185826b20d11af9dd8c7783d152fe4bb69ef7aded617c5e35ed9f959d0a96",
+      "en": "Quine, W. V. O. (1948). On what there is. Review of Metaphysics, 2(1), 21 – 38."
+    },
+    "S14-R009-P006": {
+      "sourceTextSha256": "e6f7b417b3a4546c45ca9e21f2f2daea1cbbee0611d8bfb1fc4eb25b5705e4ff",
+      "en": "Quine, W. V. O. (1961). From a logical point of view (2nd ed.). Harvard University Press."
+    },
+    "S14-R009-P007": {
+      "sourceTextSha256": "ea758d221eb410fd4412bd6fcb17ca5817a7acb48e1c6a13ce2ed99e840206fe",
+      "en": "Rawls, J. (1971). A theory of justice. Harvard University Press."
+    },
+    "S14-R009-P008": {
+      "sourceTextSha256": "5c6868dd8a3eadbf0a3f89687f485b6d81d947f95ba65ceac1e45563b5e54322",
+      "en": "Walzer, M. (2006). Just and unjust wars: A moral argument with historical illustrations (4th ed.). Basic Books."
+    },
+    "S14-R009-P009": {
+      "sourceTextSha256": "11aa9a4e56d861ecace31792e9501051ab07f05824f1d0a07ca26ee4f22bbfb4",
+      "en": "Walzer, M. (2004). Arguing about war. Yale University Press."
+    },
+    "S14-R009-P010": {
+      "sourceTextSha256": "65749f1c39e969667f8b46c65b159bb7254b8bb41f4b71f3e1ad17cd72087695",
+      "en": "Arendt, H. (1982). Lectures on Kant’s political philosophy (R. Beiner, Ed.). University of Chicago Press."
+    },
+    "S14-R009-P011": {
+      "sourceTextSha256": "0e3db4eeae68fcb2e598b1a643a2105246f2de8bb5c89f3bbd1e2f2c8df6ff8d",
+      "en": "Jonas, H. (1984). The imperative of responsibility: In search of an ethics for the technological age. University of Chicago Press."
+    },
+    "S14-R009-P012": {
+      "sourceTextSha256": "c416d28079fa483aff2ab7d9fcf335e36b3b0fd717700a408a64241983c4b86f",
+      "en": "Karp, A. (2025). The technological republic: Hard power, soft belief, and the future of the West. Crown."
+    },
+    "S14-R009-P014": {
+      "sourceTextSha256": "3ad6b076534bbcea98354033b31440431aba1cc6386061cf8862bddb6ae98788",
+      "en": "Stanford Encyclopedia of Philosophy. (2023). Ontological commitment. https://plato.stanford.edu/entries/ontological-commitment/"
+    },
+    "S14-R009-P015": {
+      "sourceTextSha256": "5af9776a357b6dda7b96d02764c718691eb74438f885f39ef04d520d0e06dd31",
+      "en": "Stanford Encyclopedia of Philosophy. (2023). Reflective equilibrium. https://plato.stanford.edu/entries/reflective-equilibrium/"
+    },
+    "S14-R009-P016": {
+      "sourceTextSha256": "baaf6dedd789bd83db1f8126b1c9f10d3ce6054f448cf3708887868baf57bdbe",
+      "en": "Stanford Encyclopedia of Philosophy. (2016). War. https://plato.stanford.edu/entries/war/"
+    },
+    "S14-R009-P017": {
+      "sourceTextSha256": "4a36d581621a83c8e2158b49ed0e6d0ea0b9296d460944601b20e7cca3fd8f1c",
+      "en": "Lazar, S. (2017). Evaluating the revisionist critique of just war theory. Daedalus, 146(1), 113– 124. https://doi.org/10.1162/DAED_a_00426"
+    },
+    "S14-R010-P002": {
+      "sourceTextSha256": "6fdf522da05aa1d7b6c19e6ee14246dd408847b1c58bdbe32a243ee850b7350c",
+      "en": "Primoratz, I. (2002). Michael Walzer’s just war theory: Some issues of responsibility. Ethical Theory and Moral Practice, 5(3), 221 – 243."
+    },
+    "S14-R010-P003": {
+      "sourceTextSha256": "c76aafed1cc02fb096249a2dee73c4ec9d7d1b99b271a51773839587ff720979",
+      "en": "Boogaard, J. van den. (2023). Human/machine(-learning) interactions, human agency and the IHL proportionality standard. Journal of Conflict and Security Law, 28(1), 100 – 121."
+    },
+    "S14-R010-P004": {
+      "sourceTextSha256": "127960ead9f5f183361dca86c2ede720b1a6b13fae4b8f60018a74720ebc1486",
+      "en": "Asaro, P. (2012). On banning autonomous weapon systems: Human rights, automation, and the dehumanization of lethal decision-making. International Review of the Red Cross, 94(886), 687 – 709."
+    },
+    "S14-R010-P006": {
+      "sourceTextSha256": "57dbba2b73601c987dfcdd7bc51b8c90b61ec670c0440d8d7f716cd73b04972a",
+      "en": "Palantir Technologies UK Ltd. (2024). Palantir platform: Gotham service definition document [Government Digital Marketplace]. https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/92736/801146272055049-service-definition-document-2024-11-26-1253.pdf"
+    },
+    "S14-R010-P007": {
+      "sourceTextSha256": "71b818893490fdde1960bf8a40698ec7cacd71ccc1b6adc3bd2cb7aced8250eb",
+      "en": "Wang, Y., Li, X., & Liu, K. (2024). A brief analysis of Palantir Gotham. In 2024 10th International Conference on BigDIA (pp. 770 – 776). IEEE."
+    },
+    "S14-R010-P009": {
+      "sourceTextSha256": "357240817109cfab2b739c80c4ebf8b8b909e06dacf6e09befdaccb110b3061f",
+      "en": "Breaking Defense. (2026, May 12). ‘Insatiable appetite’ for AI: Maven usage surged for strikes on Iran. https://breakingdefense.com/2026/05/insatiable-appetite-for-ai-maven-usage-surged-for-strikes-on-iran-pentagon-ai-chief-says/"
+    },
+    "S14-R010-P010": {
+      "sourceTextSha256": "dd107e0d5e65fc73655b1ca442b04661884dd77e3a72ca38b034d25c9f40a145",
+      "en": "Arms Control Association. (2026, May). AI plays major role in the war on Iran. https://www.armscontrol.org/act/2026-05/news/ai-plays-major-role-war-iran"
+    },
+    "S14-R010-P011": {
+      "sourceTextSha256": "2d5feff395fa865cbf277e71caf5762b91c96e78be113324a68f4145bf3d5544",
+      "en": "Geo.tv. (2026, April 5). Operation Epic Fury uses AI battlefield management to hit hundreds of targets in hours. https://www.geo.tv/latest/658582"
+    },
+    "S14-R010-P012": {
+      "sourceTextSha256": "5956ef3abd6ec7b7a4ba5e4acc1233abb5cadc2b09bd24784146561a0bf0b5d9",
+      "en": "Military Times. (2026, March 24). Deadly Iran school strike casts shadow over Pentagon’s AI targeting push. https://www.militarytimes.com/news/your-military/2026/03/24/deadly-iran-school-strike-casts-shadow-over-pentagons-ai-targeting-push/"
+    },
+    "S14-R010-P013": {
+      "sourceTextSha256": "c6fdc10021af65a88231a23a0586a687b287ce2a6bc29275ee56815fb1609dda",
+      "en": "+972 Magazine. (2024, April). ‘Lavender’: The AI machine directing Israel’s bombing spree in Gaza."
+    },
+    "S14-R011-P002": {
+      "sourceTextSha256": "21a87ce372b41e3740b37e48ba04fcea0bdb5cee983d47195354c141a3f2b7f4",
+      "en": "Business & Human Rights Resource Centre. (2024). Palantir allegedly enables Israel’s AI targeting in Gaza. https://www.business-humanrights.org/en/latest-news/palantir-allegedly-enables-israels-ai-targeting-amid-israels-war-in-gaza-raising-concerns-over-war-crimes/"
+    },
+    "S14-R011-P003": {
+      "sourceTextSha256": "3237c6062202a244aa6d3d50ca538587248bcaa3b85355a8c617a468dd15aa12",
+      "en": "IDSA. (2026, April 17). The first AI war: The dilemma of military autonomy. https://idsa.in/publisher/comments/the-first-ai-war-the-dilemma-of-military-autonomy"
+    },
+    "S14-R011-P004": {
+      "sourceTextSha256": "d6fd73079ed30ebf477b96b6aec3366c7f2aa5920f22e023535fae14530cad72",
+      "en": "Lieber Institute West Point. (2025, August 18). Artificial intelligence in armed conflict: The current state of international law. https://lieber.westpoint.edu/artificial-intelligence-armed-conflict-current-state-international-law/"
+    },
+    "S14-R011-P006": {
+      "sourceTextSha256": "12149680f582f3a20eb75d8a3435f93bc711b4a1d088f939f6e4cea8c9621e64",
+      "en": "UN General Assembly. (2024). Resolution 79/239: Artificial intelligence in the military domain [A/RES/79/239]. United Nations."
+    },
+    "S14-R011-P007": {
+      "sourceTextSha256": "66eb7023e094b6b8bb89cd11aec1cff03234d4233499f0c8cd8277b582eb243b",
+      "en": "ICRC Humanitarian Law & Policy Blog. (2024, April 25). The road less travelled: Ethics in the international regulatory debate on autonomous weapon systems. https://blogs.icrc.org/law-and-policy/2024/04/25/"
+    }
+  },
+  "sourceCount": 99,
+  "translatedCount": 27,
+  "complete": false
+}

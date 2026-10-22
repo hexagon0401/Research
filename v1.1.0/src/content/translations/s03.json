@@ -1,0 +1,78 @@
+{
+  "reportId": "S03",
+  "method": "editorial-translation",
+  "status": "author-review-pending",
+  "paragraphs": {
+    "S03-R004-P006": {
+      "sourceTextSha256": "6e8347bd998bb4cdad0a86e3e8adb06b0c7cd2060ad7023fc5254da9d3b1159b",
+      "en": "• Armed Conflict Location & Event Data Project. (2025). ACLED conflict data. Retrieved October 9, 2025, from https://acleddata.com"
+    },
+    "S03-R004-P007": {
+      "sourceTextSha256": "f883f2c3de8dcb40202a61ecd05be8ee76ad6203be2e0b1d90190a94ed159037",
+      "en": "• Armed Conflict Location & Event Data Project. (2023, January 30). Working paper: Comparing conflict data. https://acleddata.com/report/working-paper-comparing-conflict-data"
+    },
+    "S03-R004-P008": {
+      "sourceTextSha256": "9829439de7680de7560adc6b4045684475c9f7418f45383cd650df36da9346dc",
+      "en": "• Uppsala Conflict Data Programme. (2025). UCDP dataset download center. Uppsala University. Retrieved October 9, 2025, from https://ucdp.uu.se/downloads/"
+    },
+    "S03-R004-P009": {
+      "sourceTextSha256": "d95f3de1881ea5b6ab908acce809e601c7a684c8eb9e0ebbed689b53d85df14f",
+      "en": "• U.S. Department of Defense, Missile Defense Agency. (2017). THAAD test & evaluation report FY2017. https://www.dote.osd.mil/Portals/97/pub/reports/FY2017/bmds/2017thaad.pdf"
+    },
+    "S03-R005-P002": {
+      "sourceTextSha256": "939f1474dbd3748151937f1a4f6226f62be392fe0de82241b625cd8ebc066711",
+      "en": "https://www.bbc.com/korean/articles/ckg44l1xllno"
+    },
+    "S03-R005-P004": {
+      "sourceTextSha256": "6a37c5f45c692962a96a132095cfa580c35fc11d13e08755105c8058e7bd10de",
+      "en": "• BBC News. (2024, October 15). What are Israel's Iron Dome, David's Sling, Arrow and … https://www.bbc.com/news/world-middle-east-61717110"
+    },
+    "S03-R005-P005": {
+      "sourceTextSha256": "0f73c0e48ac2e05df7cd6b4f3cd40549515d874c9315e078caac0373c626da59",
+      "en": "• GovConWire. (2025, November 2). SpaceX poised for $2B DOD Golden Dome satellite d e a l. https://www.govconwire.com/2025/11/spacex-poised-for-2-billion-dod-golden-dome-deal/"
+    },
+    "S03-R005-P006": {
+      "sourceTextSha256": "5baf5c87000f2dea08395793bde242def29ac3f3b09a04522f2ee23170c4f078",
+      "en": "• Reuters. (2025, April 17). Musk's SpaceX is frontrunner to build Trump's Golden D o m e. https://www.reuters.com/technology/musks-spacex-frontrunner-build-trumps-golden-dome-2025-04-17/"
+    },
+    "S03-R005-P007": {
+      "sourceTextSha256": "82e9a7d1e4e75e7b6bc025a512956d44f445f30b4ba4f02a4f51dbbff6e3794b",
+      "en": "• CNBC. (2025, August 1). Palantir lands $10 billion Army software and data contract. https://www.cnbc.com/2025/08/01/palantir-lands-10-billion-army-software-and-data-contract.html"
+    },
+    "S03-R005-P008": {
+      "sourceTextSha256": "2b35e04645bb92f1d306fd973b3d6a3115a91a102813dfcb8323427a7bebdd5e",
+      "en": "• Breaking Defense. (2025, July 31). Army consolidates dozens of Palantir software c o n t r a c t s. https://breakingdefense.com/2025/07/army-consolidates-dozens-of-palantir-software-contracts/"
+    },
+    "S03-R005-P009": {
+      "sourceTextSha256": "7cce16f95306d2f07549946b345377ad75f55cc045f371bd41b522ddf6474357",
+      "en": "• Times of India. (2025, November 3). SpaceX may win $2 billion Pentagon deal for Golden Dome. https://timesofindia.indiatimes.com/world/us/spacex-may-win-2-billion-pentagon-deal-for-golden-dome/articleshow/105762500.cms"
+    },
+    "S03-R005-P010": {
+      "sourceTextSha256": "2d0004a02ea441a498f61a1e83fac30d27270f97c4a17d43c9ee8d65e6be1a79",
+      "en": "• Encyclopaedia Britannica. (2025). Aegis combat system. https://www.britannica.com/technology/Aegis-combat-system"
+    },
+    "S03-R005-P011": {
+      "sourceTextSha256": "6e535efc5bcb2bc9130193cf523b00a085666767f589387a270a27dd4a273d0f",
+      "en": "• NexGen Forum. (2025). Punishment or denial: What deters in a Cold War setting? https://nexgen-forum.org/punishment-denial-cold-war"
+    },
+    "S03-R005-P012": {
+      "sourceTextSha256": "55cefd0904d6588650fc752477a85fd9d7db1a212957c0b308590c810149684e",
+      "en": "• United Nations Office for Outer Space Affairs. (2024, December 3). UN reaffirms Outer Space Treaty. https://www.armscontrol.org/blog/2024/12/un-reaffirms-outer-space-treaty"
+    },
+    "S03-R005-P013": {
+      "sourceTextSha256": "d789a6537d0d2fae4a59725bf17ede68f2751309f52b171082081a3bbfc6059b",
+      "en": "• WGI World. (2025, August 7). The upgrade of the US THAAD missile system. https://wgi.world/opinion/upgrades-us-thaad-20250807"
+    },
+    "S03-R005-P014": {
+      "sourceTextSha256": "d28cffa8da0a737fb02a92f197988aa3a021cdb95b08cbcde94617b9903ff266",
+      "en": "• Army.mil. (2025, July 30). U.S. Army Awards Enterprise Service Agreement to Palantir. https://www.army.mil/article/268740/us_army_awards_enterprise_service_agreement_to_palantir"
+    },
+    "S03-R005-P015": {
+      "sourceTextSha256": "78028e80b01329680099da412cb3396766b8b3c828e42864ab614ff4ac5ca28d",
+      "en": "• Surfpac.navy.mil. (2025). Carrier Strike Group (COMCARSTRKGRU) 9. https://www.surfpac.navy.mil/Leaders/Article-View/article/2679820/carrier-strike-group-comcarstrkgru-9/"
+    }
+  },
+  "sourceCount": 47,
+  "translatedCount": 17,
+  "complete": false
+}

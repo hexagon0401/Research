@@ -1,0 +1,90 @@
+{
+  "reportId": "S05",
+  "method": "editorial-translation",
+  "status": "author-review-pending",
+  "paragraphs": {
+    "S05-R001-P013": {
+      "sourceTextSha256": "e3dd0ab1b0d075a100c4727e1251960a7a6cf47de2351102ca577b7b0391c397",
+      "en": "Embrace the World"
+    },
+    "S05-R001-P014": {
+      "sourceTextSha256": "85c606b133a0b7eb57ded2183e75d204eb7a02d35e606abadac1534a1fc58e1a",
+      "en": "Expand Your Dream"
+    },
+    "S05-R004-P016": {
+      "sourceTextSha256": "0b72b4fdd5f6926202a214d960a46d3d8d305b838f0b9ea427d5d5c2a61796bc",
+      "en": "Arner, D. W., Barberis, J., & Buckley, R. P. (2015). The evolution of fintech: A new post-crisis paradigm? Georgetown Journal of International Law, 47, 1271 –1315."
+    },
+    "S05-R004-P017": {
+      "sourceTextSha256": "27d66841ce8a2f806e5bc1dbee8b657cb8145743fa36ad65c4e3541219c6393d",
+      "en": "Bank of Korea. (2025). Financial stability report. Seoul: Bank of Korea."
+    },
+    "S05-R004-P018": {
+      "sourceTextSha256": "3f2ccbb2fc8a2eb5a78e584012c5089d727aae374a2309e60a4a4fe2ad15de7d",
+      "en": "Čihák, M., & Sahay, R. (2020). Finance and inequality. IMF Working Paper, WP/20/108."
+    },
+    "S05-R004-P019": {
+      "sourceTextSha256": "3351fc42382ec84dcf4bb3a4196fc7dd06839b5057823c1c1b1c4c628d406978",
+      "en": "Henley & Partners. (2025). The Henley Private Wealth Migration Report 2025. London: Henley & Partners."
+    },
+    "S05-R004-P020": {
+      "sourceTextSha256": "cba6f53fb39788de81b5a755b5a354fa84ef538971f00937a4c3c371df261a87",
+      "en": "International Monetary Fund. (2025). Republic of Korea: 2025 Article IV Consultation —Press Release. Washington, DC: IMF Publications."
+    },
+    "S05-R004-P021": {
+      "sourceTextSha256": "4fc308f2175b1ba3e0f290bc406f78409661d22733ae2f9997c916fff80c0b29",
+      "en": "Kim, J., Lee, S., & Park, M. (2024). Income inequality and currency stability in emerging markets. Journal of International Economics, 152, 103-118."
+    },
+    "S05-R004-P022": {
+      "sourceTextSha256": "0b6c1491b25082c38c27341749b468106126844093f7f674b9cb106aa65ac637",
+      "en": "Koziuk, V., & Hayda, Y. (2024). Digitalization and the CBDC trilemma. Journal of Eastern European Studies, 8(2), 45 –72."
+    },
+    "S05-R004-P023": {
+      "sourceTextSha256": "c6ee13a3806d7c4d6272dd9a2dfed3ada23a44d8aa777a26c6b48f3e82c062e5",
+      "en": "Korea Statistics. (2024). Household income and asset distribution survey 2024. Daejeon: Statistics Korea."
+    },
+    "S05-R005-P001": {
+      "sourceTextSha256": "3b22d91469f4a10c68b596712e37c219838ea2ab1330c8d20ad124a6c5bea932",
+      "en": "Najaf, K., Cotel, C., & Gupta, A. (2021). Corporate governance issues of fintech companies. In The Fourth Industrial Revolution: Implementation of Artificial Intelligence for Growing Business Success (pp. 187 –197). Springer."
+    },
+    "S05-R005-P002": {
+      "sourceTextSha256": "5bdccbe16ade7c73e97db732f5e87ed669454cf4a7e156047306e5f94bef1be2",
+      "en": "Palantir Technologies. (2024). Foundry for AML: Enterprise compliance solutions. Retrieved from https://www.palantir.com/industries/compliance"
+    },
+    "S05-R005-P003": {
+      "sourceTextSha256": "64ffddea0574fb90fffe4bdf12149d1aa24fc50b093287eb4769cd0f1f55a0ec",
+      "en": "Randombage, S. (2023). Impact of corporate governance mechanisms on total, systematic, market and insolvency risk of fintech companies. International Journal of Financial Studies, 11(4), 98 –115."
+    },
+    "S05-R005-P004": {
+      "sourceTextSha256": "ee6a30e1c2c0690fc0c114ed2bcb7dbb80221e7dc9790fd5f4ecaada929320e9",
+      "en": "Science Po. (2024). Monetary sovereignty in a digital world: Policy brief. Paris: Institute for the Study of Diplomacy."
+    },
+    "S05-R005-P005": {
+      "sourceTextSha256": "195f3798c6659afe81ef21aa61a456bdc71774be370cbd8f5f34ca9507813694",
+      "en": "Sheikh, M. A. (2018). Corporate social responsibility in fintech and income inequality. Journal of Sustainable Finance & Investment, 8(3), 201 –216."
+    },
+    "S05-R005-P006": {
+      "sourceTextSha256": "d5f0ed25261f7d706b9760d774241d05ac0b83e45fbc0bd40bd29ca104f98099",
+      "en": "Tether Operations Limited. (2025). Tether financial statements and operational metrics. Hong Kong: Tether Operations Limited."
+    },
+    "S05-R005-P007": {
+      "sourceTextSha256": "094eb8b76574cb17e677b989319a63375a559ee0cdb7f63f65ebb9480d22d666",
+      "en": "Trump Administration. (2024). Genuine, Oversight of Nuanced and Issued Stablecoins (GENIUS) Act. Washington, DC: U.S. Congress."
+    },
+    "S05-R005-P008": {
+      "sourceTextSha256": "1965e1b2eac35bcf739b2f212247b762ba660e1189d27b8cb45d7368a6354748",
+      "en": "UNESCO. (2024). Global citizenship education: Building peaceful and sustainable worlds. Paris: UNESCO Publishing."
+    },
+    "S05-R005-P009": {
+      "sourceTextSha256": "ffee69c3c41e1d54f8124ed03212032d0ae468fe0de893de2d8630613f885cea",
+      "en": "Xiao, A., Kumar, P., & Li, Y. (2024). The impact of technological innovation on income inequality: A comprehensive analysis. Nature Communications, 15, 7823."
+    },
+    "S05-R005-P010": {
+      "sourceTextSha256": "e34a26bd4e6e4246b32595f40f498f35dc454bd9efc9d0a825dd3d39156bd119",
+      "en": "Yoon, M. (2025, May). The innovative potential of stablecoins: Policy proposals for Korea's fintech ecosystem. National Assembly Policy Forum, Seoul, South Korea."
+    }
+  },
+  "sourceCount": 98,
+  "translatedCount": 20,
+  "complete": false
+}

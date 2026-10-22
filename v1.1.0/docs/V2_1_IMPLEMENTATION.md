@@ -6,7 +6,7 @@ parallel reading and an expandable self-hosted PDF viewer.
 
 ## Completion gates
 
-- [ ] Coordinate-based PDF reading editions; S06 page 5 compared to PDF.
+- [x] Coordinate-based PDF reading editions; S06 page 5 compared to PDF.
 - [ ] All 13 Korean reading editions reviewed for layout and source coverage.
 - [ ] All 13 English editions complete and cross-checked; author review pending.
 - [ ] Parallel reader, stable legacy anchors, contextual highlights and PDF viewer.
@@ -31,3 +31,11 @@ independently verified. Keep author interpretations separate from checked facts.
 Translations must be checkpointed by document, with text fingerprints so later
 Korean corrections cannot silently leave stale English translations. Do not mark
 this release complete while a document is missing its full English edition.
+
+## Checkpoint: S00 and S06
+
+S00: 192/192 passages; S06: 30/30 passages have full editorial English
+translations, including source notes and references. Translation status is
+author-review-pending. Source fingerprints match the current Korean edition.
+The parallel reader, source-location aliases and lazy PDF canvas are implemented;
+functional browser verification is still outstanding. Other reports remain in progress.

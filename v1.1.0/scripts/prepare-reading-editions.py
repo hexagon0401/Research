@@ -13,9 +13,13 @@ import statistics
 from pathlib import Path
 
 import fitz
+from kiwipiepy import Kiwi
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "src/content"
+KIWI = Kiwi(num_workers=2)
+for term in ["레드불", "몬스터", "알류미늄", "충진", "조원", "지속가능성", "기술독점", "온톨로지", "팔란티어", "안듀릴", "스테이블코인", "그린란드", "골든돔", "프린스", "반사실", "하이닉스"]:
+    KIWI.add_user_word(term, "NNP", 10)
 
 
 def clean(text):
@@ -24,6 +28,25 @@ def clean(text):
     text = re.sub(r"\s+([,.;:!?%)\]】])", r"\1", text)
     text = re.sub(r"([(\[【])\s+", r"\1", text)
     return text.strip()
+
+
+def readable_chunks(text):
+    # Do not re-space the author's prose. Only physical line boundaries are
+    # repaired by join_line; this preserves names, spelling and original wording.
+    if len(text) < 650:
+        return [text]
+    sentences = KIWI.split_into_sents(text)
+    chunks = []
+    start = 0
+    last = 0
+    for sentence in sentences:
+        if last > start and sentence.end - start > 550:
+            chunks.append(text[start:last].strip())
+            start = sentence.start
+        last = sentence.end
+    if text[start:].strip():
+        chunks.append(text[start:].strip())
+    return chunks
 
 
 def physical_lines(page):
@@ -57,8 +80,12 @@ def physical_lines(page):
 def join_line(previous, current, trailing):
     if not previous:
         return current
-    if re.search(r"https?://\S+$", previous) and not re.match(r"^https?://", current):
+    if re.search(r"https?://\S+$", previous) and re.fullmatch(r"[A-Za-z0-9_/?%&=.#-]+", current) and (re.search(r"[/%_-]$", previous) or re.search(r"[/%_-]", current)):
         return previous + current
+    if not trailing and re.search(r"[가-힣]$", previous) and re.match(r"^[가-힣]", current):
+        glued = KIWI.glue([previous, current])
+        if re.sub(r"\s", "", glued) == re.sub(r"\s", "", previous + current):
+            return clean(glued)
     # Source line wraps inside Korean words commonly preserve no trailing space.
     suffix = r"^(?:다는|하는|하지|하여|하고|하며|지만|으므로|으로|에서|에게|이다|이나|으며|거나|도록|었다|았다|된다|된다|되지|지는|에도|까지|보다|라는|라고|처럼|의\s|을\s|를\s|은\s|는\s|에\s|과\s|와\s|이\s|가\s|다[. ,])"
     separator = "" if not trailing and re.search(r"[가-힣]$", previous) and re.match(suffix, current) else " "
@@ -114,8 +141,24 @@ def main():
                     for t in re.split(r"\n\s*\n", block["text"]):
                         if clean(t):
                             items.append((clean(re.sub(r"\s*\n\s*", " ", t)), [block["id"]], block["kind"]))
+            items = [(chunk, refs, kind) for text, refs, kind in items for chunk in readable_chunks(text)]
             for number, (text, refs, kind) in enumerate(items, 1):
                 paragraphs.append({"id": f"{rid}-R{section['number']:03d}-P{number:03d}", "sectionId": section["id"], "sourceBlockIds": refs, "sourcePage": section["number"] if pdf else None, "kind": kind, "ko": text, "sourceTextSha256": hashlib.sha256(text.encode()).hexdigest()})
+        # Visually checked continuations: neither the author nor the word changes
+        # at a page break. Both source anchors continue to resolve to the passage.
+        continuations = {
+            "S06": {"S06-R004-P006": "S06-R005-P001", "S06-R006-P005": "S06-R007-P001"},
+            "S08": {"S08-R001-P010": "S08-R002-P001", "S08-R003-P006": "S08-R004-P001"},
+        }.get(rid, {})
+        for first, following in continuations.items():
+            a = next((p for p in paragraphs if p["id"] == first), None)
+            b = next((p for p in paragraphs if p["id"] == following), None)
+            if a and b:
+                a["ko"] = a["ko"] + ("" if rid == "S06" else " ") + b["ko"]
+                a["sourceBlockIds"] = list(dict.fromkeys(a["sourceBlockIds"] + b["sourceBlockIds"]))
+                a["sourcePageEnd"] = b["sourcePage"]
+                a["sourceTextSha256"] = hashlib.sha256(a["ko"].encode()).hexdigest()
+                paragraphs.remove(b)
         edition = {"reportId": rid, "revision": "reading-002", "editing": "layout-only", "translationStatus": "pending", "paragraphs": paragraphs}
         target = out / path.name
         target.write_text(json.dumps(edition, ensure_ascii=False, indent=2) + "\n")

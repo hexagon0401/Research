@@ -1,0 +1,66 @@
+{
+  "reportId": "S15",
+  "method": "editorial-translation",
+  "status": "author-review-pending",
+  "paragraphs": {
+    "S15-R002-P007": {
+      "sourceTextSha256": "7df084d3a612071be1b362cde16bfaa87df521202a205f58f1ee8b527ee52822",
+      "en": "① Google Earth"
+    },
+    "S15-R012-P005": {
+      "sourceTextSha256": "d7211e0481bcced55730068992a0e9736fb5fb7555b8aeef99274b3d959bd1dc",
+      "en": "1. Bermudez, Joseph S. Jr., Victor Cha, and Jennifer Jun. \"Significant Progress of the North Korea-Russia Road Bridge.\" Beyond Parallel, CSIS, October 27, 2025."
+    },
+    "S15-R012-P006": {
+      "sourceTextSha256": "2d275a71acb55c323479690f73745311ad51978d1b9758cc24cd76f8476ae9a2",
+      "en": "2. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Korea-China Standoffs in the PMZ.\" Beyond Parallel, CSIS, October 27, 2025."
+    },
+    "S15-R012-P007": {
+      "sourceTextSha256": "5a721fda07b940a9b691fe0a0f0bd93f7d717f5895df46b9e686f7998dfff363",
+      "en": "3. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Chinese Buoys Near the South Korea-China PMZ.\" Beyond Parallel, CSIS, December 15, 2025."
+    },
+    "S15-R012-P024": {
+      "sourceTextSha256": "e86ad46864855027b39f4324d559b1c4faf69edddbb051303f9cf1e15fd474fa",
+      "en": "16. Cha, Victor, and Ellen Kim. \"Russia's Veto: Dismembering the UN Sanctions Regime on North Korea.\" Critical Questions, CSIS, March 28, 2024."
+    },
+    "S15-R012-P025": {
+      "sourceTextSha256": "aa34f09ba3e8eaaf851772589f69af7de39c10ba2b254a526e1ffc60b2466738",
+      "en": "17. \"After Russia's Veto: The Future of the Sanctions Regime Against North Korea.\" 38 North, April 12, 2024."
+    },
+    "S15-R012-P026": {
+      "sourceTextSha256": "b4c4846ed9e9754e0fd86726baba34a4147206286a93ebac06d79d06927af7ee",
+      "en": "18. \"Russia's veto on UN sanctions monitoring will further embolden North Korea.\" Chatham House, May 14, 2024."
+    },
+    "S15-R012-P027": {
+      "sourceTextSha256": "ba75f46c9660b11eef49c6d24ebaf73c38998e617684085aac88f9c72774a209",
+      "en": "19. \"Russia Ends North Korean Sanctions Panel.\" Arms Control Association, May 2024."
+    },
+    "S15-R012-P029": {
+      "sourceTextSha256": "29f02131c866564b021a8906a30926d3a69153a1af444d00ff09acff41952210",
+      "en": "20. Chu, Mei Mei, Ju-min Park, and Claire Fu. \"China is rebuilding its grip on North Korea. Is Kim Jong Un ready to oblige?\" Reuters, March 11, 2026."
+    },
+    "S15-R012-P030": {
+      "sourceTextSha256": "200c90f91ab4ece13cdcaa046d9b20f6eb1fbef1aa9eaa061b05930121622b53",
+      "en": "21. \"Why China now embraces a nuclear North Korea.\" The Interpreter, Lowy Institute, April 23, 2026."
+    },
+    "S15-R012-P031": {
+      "sourceTextSha256": "43176a6145676343b22a5a14692dfd338db108c5f5dd2de771074cfde7215505",
+      "en": "22. \"The great omission: A clarifying statement on North Korea's nukes.\" The Interpreter, Lowy Institute, October 6, 2025."
+    },
+    "S15-R013-P002": {
+      "sourceTextSha256": "308cd4f5c056330e0ca7454ba38891087da2a4d9989da4824da983c8e35ef630",
+      "en": "23. \"Why Xi Jinping is going to Pyongyang.\" The Interpreter, Lowy Institute, May 27, 2026."
+    },
+    "S15-R013-P006": {
+      "sourceTextSha256": "1879a8ab402d454d82901734c3c687a0e1fda4895a4788c48cbbb1574abb4484",
+      "en": "26. World Bank Open Data. https://data.worldbank.org/"
+    },
+    "S15-R013-P007": {
+      "sourceTextSha256": "e9d07cfe1ae014a209e9c42019cd87550d2d462498f5945f69c85db0aa61c6b4",
+      "en": "27. Marine Regions (Flanders Marine Institute). https://www.marineregions.org/"
+    }
+  },
+  "sourceCount": 130,
+  "translatedCount": 14,
+  "complete": false
+}
