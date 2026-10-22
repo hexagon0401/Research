@@ -11,6 +11,9 @@ export async function GET(
 ) {
   const report = await getReport((await params).id);
   return report
-    ? Response.json({ ...report, readingEdition: await getReadingEdition(report.id) })
+    ? Response.json({
+        ...report,
+        readingEdition: await getReadingEdition(report.id),
+      })
     : Response.json({ error: "Report not found" }, { status: 404 });
 }

@@ -1,10 +1,10 @@
-# IIR — Interactive Research Atlas · v2.0.0
+# IIR — Integrated Independent Research · v2.1.0
 
-지정된 Paper / Ink / Signal과 로컬 Geist·IBM Plex 폰트를 유지한 디자인 개선본입니다. 기존 Next.js·React·TypeScript·SVG·CSS 구조와 연구 콘텐츠를 보존합니다.
+S00의 논지를 중심으로 13개 연구를 연결하는 장문 에세이와 한·영 병렬 자료실입니다. 선 중심 SVG, 로컬 폰트, Next.js·React·TypeScript·CSS를 사용합니다.
 
 ## 실행
 
-Node.js 24.x와 npm을 사용합니다. 기본 읽기 기능은 외부 서비스나 API 키 없이 실행됩니다. 공개용 PDF와 전사본은 키 없이 읽을 수 있으며, 비공개 보존 원본은 Supabase에 따로 저장합니다.
+Node.js 24.x와 npm을 사용합니다. 공개 HTML·PDF는 API 키 없이 읽을 수 있습니다. 비공개 보존 원본은 기존 Supabase Free에 따로 저장합니다.
 
 ```sh
 cd v1.1.0
@@ -12,56 +12,38 @@ npm ci
 npm run dev
 ```
 
-브라우저에서 http://localhost:3000 을 엽니다. 프로덕션 실행은 `npm run build` 후 `npm run start`입니다. 다른 포트는 `npm run dev -- --port 3001`로 지정합니다.
+프로덕션은 `npm run build` 후 `npm run start`입니다. Vercel Root Directory는 `v1.1.0`이며, 버전은 package와 Git 태그로 구분합니다.
 
-## v2.0.0 개선 사항
+## 구성
 
-- 한 문서로 이어지는 전체 폭 구획과 스크롤 진행선.
-- 스크롤에 반응하는 선·궤도·렌즈 행과 포인터 반응.
-- 지도 노드 직접 선택·키보드 미리보기, 선택을 고정할 수 있는 프레임워크.
-- 전역 휠 가로채기 제거, 모션 감소와 읽기 위치 보존.
-- 원문 13개와 개인정보 제거 PDF 13개의 Supabase 업로드·해시·서명 다운로드 검증 완료.
+- `/`: S00 중심 18개 연결 논지, 미국·중국·한국의 구체 사례, 스크롤에 따라 이어지는 공통 시각 영역. 강제 스냅·휠 가로채기·정지 상태 애니메이션 루프가 없습니다.
+- `/archive`, `/reports`: 실제 연구 13개 검색·주제 필터.
+- `/reports/[id]`: 한국어·영어 전문 973개 대응 문단, 원문 위치·기존 주소·핵심 강조·메인 복귀. 넓은 화면은 병렬, 좁은 화면은 언어 전환을 지원합니다.
+- 본문 하단 PDF: 펼칠 때만 자체 호스팅 PDF.js를 로드합니다. 한 번에 한 쪽을 렌더링하며 쪽 이동·확대·전체화면·다운로드를 지원합니다. JavaScript 없이도 양쪽 전문과 다운로드가 남습니다.
+- 기존 `/archive/[slug]`, `/research/[slug]`, `/library`와 공개 API를 유지합니다. 이전 계획 발췌문의 번역 상태는 실제 연구의 편집 번역과 구분합니다.
 
-[v2.0.0 실제 구현·검증 기록](docs/V2_RELEASE.md)을 참고하세요.
+## 콘텐츠와 보존
 
-## 보존한 기능
+`src/content/reports/`는 기존 추출 자료입니다. 별도 `readings/`에 좌표 기반 읽기 순서·문단·출처 참조를, `translations/`에 한국어 지문 해시와 영어 전문을 저장합니다. `reading-tables.ts`는 원본과 대조한 표를, `essay.ts`와 `research-connections.ts`는 논지·연결·출처를 관리합니다. 디자인은 `tokens.css`, 배치·시각 효과는 CSS와 `essay-experience.tsx`로 구분합니다.
 
-- 대형 제목과 개념 그래픽을 분리한 편집형 첫 화면.
-- 국가 선택과 설명이 연결되는 선형 아틀라스, 읽기 쉬운 가설·경계 조건 도식.
-- 사선 시점의 폴더 서가, 종이층·표지 열기, Esc 취소, 선택 복원, 방향키·Home·End 탐색.
-- 정돈된 문서 리더·출처 레일·검색·필터·검증 상태.
-- 모바일·키보드·모션 감소·No-JS·인쇄 경로. 무거운 WebGL 의존성은 추가하지 않았습니다.
+한국어는 표현을 재작성하지 않고 서식을 복원했습니다. 영어는 **편집 번역·저자 최종 검수 전**입니다. 지문 해시·문자 보존 검사는 의미 검수나 연구 결과 재현을 대신하지 않습니다. 공식 자료에 접근하지 못한 외부 근거와 원문의 미검증 주장을 확정 사실로 제시하지 않습니다. [현재 구현·검증 기록](docs/V2_1_RELEASE.md)을 참고하세요.
 
-홈 `/`, 아카이브 `/archive`, 문서 `/archive/[slug]`, 연구 `/research/[slug]`, 참고문헌 `/library`, 방법 `/methods`, 소개 `/about`, 접근성 `/accessibility`와 공개 읽기 API를 유지합니다.
+원본·기존 개인정보 제거 PDF의 바이트와 해시는 유지했습니다. 원본 바이너리·개인정보·인증정보·작업용 파일은 Git에 넣지 않습니다. 읽기본을 재생성하면 문단 ID와 번역 해시가 바뀔 수 있으므로 무심코 덮어쓰지 마세요.
 
-## 검증 명령
+## 검증
 
 ```sh
 npm test
+npm run audit:readings
 npm run typecheck
 npm run format:check
 npm run build
-# 별도 터미널에서 npm run start
-npm run test:e2e
-npm run audit:performance
+# 별도 터미널에서 npm run start -- --port 3001
+CHROME_PATH=/usr/bin/chromium E2E_BASE_URL=http://127.0.0.1:3001 npm run test:e2e
+CHROME_PATH=/usr/bin/chromium AUDIT_URL=http://127.0.0.1:3001 npm run audit:performance
+python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-E2E는 Playwright 관리 Chromium을 기본 사용합니다. 필요하면 `npx playwright install chromium`으로 설치합니다. 기존 Chrome을 사용할 때는 `CHROME_PATH`에 실행 파일 경로를 지정합니다. 성능 계측도 `CHROME_PATH`를 지원합니다. 실행 결과와 제한은 [검증 기록](docs/VALIDATION.md)에 기록합니다. v1.0.0의 스크린샷과 성능 수치를 새 버전 결과로 재사용하지 않습니다.
+`CHROME_PATH`를 생략하면 Playwright 관리 브라우저를 사용합니다. 필요하면 `npx playwright install chromium`을 실행합니다. 문서 전처리 전용 Python 의존성은 `scripts/requirements-reports.txt`에 있으며 웹 실행에는 필요하지 않습니다.
 
-## 콘텐츠와 공개 범위
-
-`map.json`과 연구 발췌 P-001–P-006은 보존합니다. 자료 확보 상태 설명은 실제 원문 접수에 맞춰 갱신합니다. `P-001`–`P-006`, `CLAIM-01`–`CLAIM-06`, 출처 위치와 URL을 보존합니다. EN은 UI 언어이며, 검수 연구 번역이 없어 문서에서는 한국어와 Translation pending 안내를 유지합니다.
-
-원문 13개를 개인정보 제거 전사본과 PDF로 제공하는 `/reports` 자료실을 추가했습니다. 도표의 보고 수치와 연구 주장은 독립적으로 검증되지 않았습니다. 원본 파일은 비공개 보존하며 공개용 사본만 배포합니다. [자료실 처리 기록](docs/REPORT_ARCHIVE.md), [연속 스크롤 개편 계획](docs/CONTINUOUS_SCROLL_PLAN.md)을 참고하세요.
-
-- [디자인 결정](docs/DECISIONS.md)
-- [변경 기록](docs/CHANGELOG.md)
-- [검증 기록](docs/VALIDATION.md)
-- [기존 콘텐츠 감사](docs/CONTENT_AUDIT.md)
-- [구현 범위](docs/IMPLEMENTATION_STATUS.md)
-
-## 무료 배포·원본 접수
-
-[무료 운영 시작 안내](docs/FREE_LAUNCH.md)에 Vercel Root Directory, Supabase SQL·환경 변수, 채팅 원본 접수와 남은 계정 연결 단계를 정리했습니다. 비용 한도는 0원이며 유료 전환은 수행하지 않습니다.
-
-추가 검사: `python3 -m unittest discover -s tests -p "test_intake.py" -v`. 로컬 Docker가 있으면 `python3 scripts/test-storage-policies.py`로 운영 데이터에 접근하지 않고 PostgreSQL 권한을 검증합니다.
+[무료 운영](docs/FREE_LAUNCH.md) · [Open Design 이관](docs/DESIGN_HANDOFF.md) · [변경 기록](docs/CHANGELOG.md) · [이전 v2.0.0 검증](docs/V2_RELEASE.md)

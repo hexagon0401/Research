@@ -3,12 +3,119 @@ import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
 import { evidenceNeeds } from "@/content/repository";
 export const metadata: Metadata = { title: "Evidence, methods & limitations" };
-export default function Methods(){return <main id="main" className="editorial"><header className="page-intro"><span className="eyebrow">METHODS / AN AUDITABLE INQUIRY</span><h1><L en={<>Show the work.<br/>Name the limits.</>} ko={<>과정을 공개하고,<br/>한계를 밝힙니다.</>}/></h1><p><L en="S00 provides the argument. Thirteen distinct reports provide its research context. Reading, translating and connecting them does not independently verify their empirical claims." ko="S00의 논지를 중심으로 서로 다른 보고서 13개를 연결합니다. 원문을 읽고 번역하고 연결하는 일과, 보고된 실증 주장을 독립적으로 검증하는 일은 구분합니다."/></p></header><article className="prose page-content">
-<h2><L en="What is supplied" ko="직접 확인한 자료"/></h2><p><L en="Two planning documents and thirteen distinct research files were inspected. Their original identities, fingerprints and source locators are retained. S03 and S13 are distinct five- and six-page Golden Dome documents. S04, S07, S09, S10 and S12 from the earlier plan have not been supplied and are not silently replaced by similarly named files." ko="계획 문서 2개와 서로 다른 연구 파일 13개를 확인하고 원문의 식별자·해시·위치를 보존했습니다. S03과 S13은 각각 5쪽과 6쪽인 별개의 Golden Dome 문서입니다. 이전 계획의 S04·S07·S09·S10·S12는 미제공 상태이며 비슷한 이름의 자료로 대체하지 않습니다."/></p>
-<h2><L en="Korean transcription and layout" ko="한국어 전사와 서식 교정"/></h2><p><L en="The reading edition reconstructs PDF glyph order, repairs line boundaries, separates worksheet labels from body text, and restores selected tables against the page images. It preserves the author's wording, numbers, notes and unfinished passages. Running headers and a visually checked alpha glyph are accounted for explicitly. A character-inventory audit checks all thirteen reading editions against the preserved source text; it does not by itself prove reading order or meaning." ko="PDF 글자의 배치 순서와 줄 경계를 복원하고, 양식의 항목명과 본문을 분리했으며 일부 표는 쪽 이미지와 대조해 복원했습니다. 저자의 표현·수치·메모·미완성 문장은 보존합니다. 머리말 처리와 원본에서 확인한 α 기호의 복원은 별도로 기록했습니다. 13개 전사본 전체의 문자 구성을 보존된 추출 텍스트와 대조하지만, 이 검사만으로 읽기 순서나 의미가 입증되는 것은 아닙니다."/></p>
-<h2><L en="English editorial translation" ko="영어 편집 번역"/></h2><p><L en="All 973 reading passages have corresponding English text. These are AI-assisted editorial translations pending the author's final review, not certified translations. Names, dates, numbers, qualifications and source notes were compared during preparation. Each translation is bound to its Korean passage's fingerprint, so later Korean changes invalidate stale translations. The six older planning-excerpt routes remain distinct from these full reports." ko="읽기용 문단 973개 모두에 대응하는 영어 본문을 제공합니다. AI를 활용한 편집 번역이며 저자 최종 검수 전 상태로, 공인 번역이 아닙니다. 고유명사·날짜·수치·유보 조건·원문 메모를 준비 과정에서 대조했습니다. 번역마다 한국어 문단의 지문을 연결해 원문 교정 후 낡아진 번역이 남지 않도록 검사합니다. 이전의 여섯 계획 발췌문 주소는 실제 연구 전문과 구분해 유지합니다."/></p>
-<h2><L en="Figures and source PDFs" ko="도표와 원문 PDF"/></h2><p><L en="Figures retain their original visual form in page previews and downloadable PDFs. Text embedded only in raster images is not asserted to have a complete separate English transcription. Source-PDF copies remove personal identifiers; Word and HWPX reading PDFs have reflowed layouts. Unmodified preservation originals remain private. The inline viewer loads only after opening it." ko="도표는 쪽 이미지와 다운로드 가능한 PDF에서 원래 모습으로 확인할 수 있습니다. 이미지 안에만 있는 글자까지 별도의 영어 전사를 완성했다고 주장하지 않습니다. PDF 사본에서는 개인 식별정보를 제거했고, DOCX·HWPX의 PDF 열람본은 서식을 재배치했습니다. 수정하지 않은 보존 원본은 비공개입니다. 본문 아래 뷰어는 펼친 뒤에만 PDF를 불러옵니다."/></p>
-<h2><L en="Interpretation, proposals and verification" ko="해석·제안·검증의 구분"/></h2><p><L en="Cause and privilege are S00's interpretive and policy framework. Procurement does not by itself establish loyalty as a cause; equity ownership does not automatically establish control; appropriations are not payments; proximity does not demonstrate coordination. External legislation and institutional references shown beside cases await independent comparison. Statistical claims, datasets and execution logs have not been independently reproduced." ko="‘대의와 특혜’는 S00의 해석이자 정책 제안입니다. 조달 계약만으로 충성심의 인과를, 지분만으로 통제권을, 예산만으로 실제 지급을, 인접성만으로 공모를 입증하지 않습니다. 사례 옆 법령·기관 자료는 독립 대조 대기 상태로 구분합니다. 원문의 통계 주장·데이터셋·실행 기록을 독립적으로 재현하지 않았습니다."/></p>
-<h2><L en="Map and visual semantics" ko="지도와 도식의 의미"/></h2><p><L en="Maps use public-domain Natural Earth geometry. World markers are approximate country locations. Arctic investment locations and an illustrative sea route are separate layers; the line is not a vessel track or an airport shipping service. Research links show analytical relationships, not proven causal effects. Native scrolling, keyboard and touch navigation, and reduced-motion alternatives preserve access to the same text." ko="지도는 퍼블릭 도메인 Natural Earth 지형을 사용합니다. 세계지도 표시는 국가의 개략 위치입니다. 북극의 투자 지점과 개략 항로는 별도 층위이며, 강조선은 실제 선박 항적이나 공항 간 운항 경로가 아닙니다. 연구 간 선은 분석상의 연결이며 입증된 인과가 아닙니다. 기본 스크롤·키보드·터치·모션 감소 환경에서 같은 본문에 접근할 수 있습니다."/></p>
-<h2><L en="Further reproducibility work" ko="추가 재현 검증 과제"/></h2><p><L en="These requirements come from the integration plan. They are not represented as new analyses performed by this website." ko="아래는 통합 계획의 재현 요구사항이며 사이트가 새로 수행한 분석으로 표시하지 않습니다."/></p><div className="method-list">{evidenceNeeds.map(e=><section className="method-item" id={e.id} key={e.id}><span className="eyebrow">{e.id} / REPRODUCTION PENDING</span><h3>{e.title}</h3><p>{e.needed}</p></section>)}</div><Link className="inline-link" href="/archive"><L en="Read all thirteen studies ↗" ko="13개 연구 전문 읽기 ↗"/></Link>
-</article></main>;}
+export default function Methods() {
+  return (
+    <main id="main" className="editorial">
+      <header className="page-intro">
+        <span className="eyebrow">METHODS / AN AUDITABLE INQUIRY</span>
+        <h1>
+          <L
+            en={
+              <>
+                Show the work.
+                <br />
+                Name the limits.
+              </>
+            }
+            ko={
+              <>
+                과정을 공개하고,
+                <br />
+                한계를 밝힙니다.
+              </>
+            }
+          />
+        </h1>
+        <p>
+          <L
+            en="S00 provides the argument. Thirteen distinct reports provide its research context. Reading, translating and connecting them does not independently verify their empirical claims."
+            ko="S00의 논지를 중심으로 서로 다른 보고서 13개를 연결합니다. 원문을 읽고 번역하고 연결하는 일과, 보고된 실증 주장을 독립적으로 검증하는 일은 구분합니다."
+          />
+        </p>
+      </header>
+      <article className="prose page-content">
+        <h2>
+          <L en="What is supplied" ko="직접 확인한 자료" />
+        </h2>
+        <p>
+          <L
+            en="Two planning documents and thirteen distinct research files were inspected. Their original identities, fingerprints and source locators are retained. S03 and S13 are distinct five- and six-page Golden Dome documents. S04, S07, S09, S10 and S12 from the earlier plan have not been supplied and are not silently replaced by similarly named files."
+            ko="계획 문서 2개와 서로 다른 연구 파일 13개를 확인하고 원문의 식별자·해시·위치를 보존했습니다. S03과 S13은 각각 5쪽과 6쪽인 별개의 Golden Dome 문서입니다. 이전 계획의 S04·S07·S09·S10·S12는 미제공 상태이며 비슷한 이름의 자료로 대체하지 않습니다."
+          />
+        </p>
+        <h2>
+          <L
+            en="Korean transcription and layout"
+            ko="한국어 전사와 서식 교정"
+          />
+        </h2>
+        <p>
+          <L
+            en="The reading edition reconstructs PDF glyph order, repairs line boundaries, separates worksheet labels from body text, and restores selected tables against the page images. It preserves the author's wording, numbers, notes and unfinished passages. Running headers and a visually checked alpha glyph are accounted for explicitly. A character-inventory audit checks all thirteen reading editions against the preserved source text; it does not by itself prove reading order or meaning."
+            ko="PDF 글자의 배치 순서와 줄 경계를 복원하고, 양식의 항목명과 본문을 분리했으며 일부 표는 쪽 이미지와 대조해 복원했습니다. 저자의 표현·수치·메모·미완성 문장은 보존합니다. 머리말 처리와 원본에서 확인한 α 기호의 복원은 별도로 기록했습니다. 13개 전사본 전체의 문자 구성을 보존된 추출 텍스트와 대조하지만, 이 검사만으로 읽기 순서나 의미가 입증되는 것은 아닙니다."
+          />
+        </p>
+        <h2>
+          <L en="English editorial translation" ko="영어 편집 번역" />
+        </h2>
+        <p>
+          <L
+            en="All 973 reading passages have corresponding English text. These are AI-assisted editorial translations pending the author's final review, not certified translations. Names, dates, numbers, qualifications and source notes were compared during preparation. Each translation is bound to its Korean passage's fingerprint, so later Korean changes invalidate stale translations. The six older planning-excerpt routes remain distinct from these full reports."
+            ko="읽기용 문단 973개 모두에 대응하는 영어 본문을 제공합니다. AI를 활용한 편집 번역이며 저자 최종 검수 전 상태로, 공인 번역이 아닙니다. 고유명사·날짜·수치·유보 조건·원문 메모를 준비 과정에서 대조했습니다. 번역마다 한국어 문단의 지문을 연결해 원문 교정 후 낡아진 번역이 남지 않도록 검사합니다. 이전의 여섯 계획 발췌문 주소는 실제 연구 전문과 구분해 유지합니다."
+          />
+        </p>
+        <h2>
+          <L en="Figures and source PDFs" ko="도표와 원문 PDF" />
+        </h2>
+        <p>
+          <L
+            en="Figures retain their original visual form in page previews and downloadable PDFs. Text embedded only in raster images is not asserted to have a complete separate English transcription. Source-PDF copies remove personal identifiers; Word and HWPX reading PDFs have reflowed layouts. Unmodified preservation originals remain private. The inline viewer loads only after opening it."
+            ko="도표는 쪽 이미지와 다운로드 가능한 PDF에서 원래 모습으로 확인할 수 있습니다. 이미지 안에만 있는 글자까지 별도의 영어 전사를 완성했다고 주장하지 않습니다. PDF 사본에서는 개인 식별정보를 제거했고, DOCX·HWPX의 PDF 열람본은 서식을 재배치했습니다. 수정하지 않은 보존 원본은 비공개입니다. 본문 아래 뷰어는 펼친 뒤에만 PDF를 불러옵니다."
+          />
+        </p>
+        <h2>
+          <L
+            en="Interpretation, proposals and verification"
+            ko="해석·제안·검증의 구분"
+          />
+        </h2>
+        <p>
+          <L
+            en="Cause and privilege are S00's interpretive and policy framework. Procurement does not by itself establish loyalty as a cause; equity ownership does not automatically establish control; appropriations are not payments; proximity does not demonstrate coordination. External legislation and institutional references shown beside cases await independent comparison. Statistical claims, datasets and execution logs have not been independently reproduced."
+            ko="‘대의와 특혜’는 S00의 해석이자 정책 제안입니다. 조달 계약만으로 충성심의 인과를, 지분만으로 통제권을, 예산만으로 실제 지급을, 인접성만으로 공모를 입증하지 않습니다. 사례 옆 법령·기관 자료는 독립 대조 대기 상태로 구분합니다. 원문의 통계 주장·데이터셋·실행 기록을 독립적으로 재현하지 않았습니다."
+          />
+        </p>
+        <h2>
+          <L en="Map and visual semantics" ko="지도와 도식의 의미" />
+        </h2>
+        <p>
+          <L
+            en="Maps use public-domain Natural Earth geometry. World markers are approximate country locations. Arctic investment locations and an illustrative sea route are separate layers; the line is not a vessel track or an airport shipping service. Research links show analytical relationships, not proven causal effects. Native scrolling, keyboard and touch navigation, and reduced-motion alternatives preserve access to the same text."
+            ko="지도는 퍼블릭 도메인 Natural Earth 지형을 사용합니다. 세계지도 표시는 국가의 개략 위치입니다. 북극의 투자 지점과 개략 항로는 별도 층위이며, 강조선은 실제 선박 항적이나 공항 간 운항 경로가 아닙니다. 연구 간 선은 분석상의 연결이며 입증된 인과가 아닙니다. 기본 스크롤·키보드·터치·모션 감소 환경에서 같은 본문에 접근할 수 있습니다."
+          />
+        </p>
+        <h2>
+          <L en="Further reproducibility work" ko="추가 재현 검증 과제" />
+        </h2>
+        <p>
+          <L
+            en="These requirements come from the integration plan. They are not represented as new analyses performed by this website."
+            ko="아래는 통합 계획의 재현 요구사항이며 사이트가 새로 수행한 분석으로 표시하지 않습니다."
+          />
+        </p>
+        <div className="method-list">
+          {evidenceNeeds.map((e) => (
+            <section className="method-item" id={e.id} key={e.id}>
+              <span className="eyebrow">{e.id} / REPRODUCTION PENDING</span>
+              <h3>{e.title}</h3>
+              <p>{e.needed}</p>
+            </section>
+          ))}
+        </div>
+        <Link className="inline-link" href="/archive">
+          <L en="Read all thirteen studies ↗" ko="13개 연구 전문 읽기 ↗" />
+        </Link>
+      </article>
+    </main>
+  );
+}

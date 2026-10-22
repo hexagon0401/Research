@@ -65,3 +65,35 @@ Map/framework preview is temporary; pinned user selection takes precedence over 
 The thirteen supplied sources are served separately at /reports with stable locators and reviewed reading copies. Original binaries remain private. Do not redraw reported plots as independently validated results or alter their values for visual effect. Visual token changes must retain contrast, reading order, source IDs and content privacy.
 
 Measured results and untested platforms are recorded in [V2_RELEASE.md](V2_RELEASE.md).
+
+## v2.1.0 active runtime contract — 2026-10-22
+
+This section supersedes the older homepage component map above. The active main
+route uses `EssayExperience`, `EssayVisual` and `SceneDiagram`, with 18 semantic
+beats in `essay.ts`. The previous `ScrollNarrative`, `Atlas`, `Framework` and
+`Shelf` remain historical components and are not the new homepage's engine.
+
+- Preserve one native reading flow: no full-height slide spacers, snap stops or
+  global smooth-scroll animation. The on-demand scroll callback changes CSS
+  progress/tints and updates React only when the active argument changes.
+- One persistent desktop stage crossfades concept, world, Arctic and integrated
+  research layers. Mobile diagrams sit within the text. Pointer decoration moves
+  geometry by at most 5px, not text or hit areas. System reduced motion wins.
+- `essay-map-points.json` and generated SVGs share their geographic projection.
+  The polar sea route is illustrative. Greenland proposals, Southeast Asian
+  relationships and country comparison pins must not become observed shipments
+  or completed investments through visual styling.
+- `research-connections.ts` owns connection text and main-return anchors.
+  `readings/` and `translations/` own paired text and fingerprints, independently
+  of visual tokens. Preserve paragraph IDs, raw source references and aliases.
+- `ParallelReading` provides paired columns and a compact KO/EN switch. Font CSS
+  for reports arrives with server-rendered HTML. Changing reading language owns
+  scroll compensation explicitly; native anchoring must not compensate again.
+- `PdfReader` loads `pdf-canvas` and self-hosted PDF.js only after expansion.
+  Keep the static download fallback and bounded single-page canvas lifecycle.
+  Do not prefetch entire reports or PDF assets from the main essay.
+- Both HTML editions remain readable without JavaScript. English is an editorial
+  translation pending author review; translation presence is not verification.
+
+Read [V2_1_RELEASE.md](V2_1_RELEASE.md) for measured checks and unresolved source
+verification. Original binaries and existing reviewed PDF hashes stay unchanged.

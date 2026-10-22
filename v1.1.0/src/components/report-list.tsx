@@ -10,11 +10,13 @@ export function ReportList() {
   const [query, setQuery] = useState("");
   const [topic, setTopic] = useState("");
   const term = query.normalize("NFC").trim().toLocaleLowerCase();
-  const shown = reports.filter((r) =>
-    (!topic || r.projects.includes(topic)) && `${r.id} ${r.title} ${reportTitlesEn[r.id]} ${r.description} ${r.year} ${r.format}`
-      .normalize("NFC")
-      .toLocaleLowerCase()
-      .includes(term),
+  const shown = reports.filter(
+    (r) =>
+      (!topic || r.projects.includes(topic)) &&
+      `${r.id} ${r.title} ${reportTitlesEn[r.id]} ${r.description} ${r.year} ${r.format}`
+        .normalize("NFC")
+        .toLocaleLowerCase()
+        .includes(term),
   );
   return (
     <>
@@ -30,12 +32,34 @@ export function ReportList() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <label htmlFor="report-topic">{lang === "ko" ? "연구 주제" : "Research thread"}</label>
-        <select id="report-topic" value={topic} onChange={(event) => setTopic(event.target.value)}>
-          <option value="">{lang === "ko" ? "모든 주제" : "All threads"}</option>
-          {projects.map((p) => <option key={p.slug} value={p.slug}>{lang === "ko" ? p.titleKo : p.title}</option>)}
+        <label htmlFor="report-topic">
+          {lang === "ko" ? "연구 주제" : "Research thread"}
+        </label>
+        <select
+          id="report-topic"
+          value={topic}
+          onChange={(event) => setTopic(event.target.value)}
+        >
+          <option value="">
+            {lang === "ko" ? "모든 주제" : "All threads"}
+          </option>
+          {projects.map((p) => (
+            <option key={p.slug} value={p.slug}>
+              {lang === "ko" ? p.titleKo : p.title}
+            </option>
+          ))}
         </select>
-        {(query || topic) && <button className="inline-link report-clear" onClick={() => { setQuery(""); setTopic(""); }}>{lang === "ko" ? "검색·필터 초기화" : "Clear filters"}</button>}
+        {(query || topic) && (
+          <button
+            className="inline-link report-clear"
+            onClick={() => {
+              setQuery("");
+              setTopic("");
+            }}
+          >
+            {lang === "ko" ? "검색·필터 초기화" : "Clear filters"}
+          </button>
+        )}
         <p role="status">
           {shown.length} / {reports.length}{" "}
           {lang === "ko" ? "개 자료" : "reports"}
@@ -54,7 +78,9 @@ export function ReportList() {
             </span>
             <div>
               <h2 lang={lang}>
-                <Link href={`/reports/${r.id}`}>{lang === "ko" ? r.title : reportTitlesEn[r.id]} ↗</Link>
+                <Link href={`/reports/${r.id}`}>
+                  {lang === "ko" ? r.title : reportTitlesEn[r.id]} ↗
+                </Link>
               </h2>
               <p lang="ko">{r.description}</p>
               <span className="report-caption">

@@ -1,6 +1,16 @@
 # Changelog
 
-2026-10-22 갱신: 현재 릴리스는 v2.0.0입니다. [현재 구현·검증](V2_RELEASE.md)과 [원문 자료실](REPORT_ARCHIVE.md)을 참고하세요. 아래는 이전 버전 작성 당시의 기록이며 현재 자료 확보 상태와 구분합니다.
+2026-10-22 갱신: 현재 릴리스는 v2.1.0입니다. [현재 구현·검증](V2_1_RELEASE.md)과 [원문 자료실](REPORT_ARCHIVE.md)을 참고하세요. 아래는 이전 버전 작성 당시의 기록이며 현재 자료 확보 상태와 구분합니다.
+
+## 2.1.0 — 2026-10-22
+
+- Replaced the seven-part homepage presentation with a bilingual S00-led long-form essay, 18 connected arguments, concrete US/China/Korea cases and specific links to supporting source passages.
+- Added one continuous concept/world/Arctic/integration visual stage, mobile inline diagrams, native scrolling, bounded pointer response and reduced-motion alternatives.
+- Completed 13 Korean reading editions and 973 corresponding editorial English passages. Restored PDF punctuation, reading order and selected tables while preserving raw transcripts and existing PDF/original hashes. English remains pending author review.
+- Added paired HTML reading, contextual sentence highlights, legacy anchors, main-return links and a lazy self-hosted PDF viewer with page, zoom, fullscreen and download controls.
+- Changed the archive default to all 13 actual reports, retained legacy topics and extended the public report API additively.
+- Fixed double scroll compensation during reading-language changes and stopped whole-report prefetching from the homepage.
+- Validation and remaining source/platform limitations: V2_1_RELEASE.md.
 
 ## 1.1.0 — 2026-10-21
 

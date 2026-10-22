@@ -7,9 +7,7 @@
     {
       "id": "S15-R001-P001",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -18,9 +16,7 @@
     {
       "id": "S15-R001-P002",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "데이터 분석 프로그램 기반 자율적 교육과정 주제 탐구 활동",
@@ -29,9 +25,7 @@
     {
       "id": "S15-R001-P003",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "학 번",
@@ -40,9 +34,7 @@
     {
       "id": "S15-R001-P004",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "이 름",
@@ -51,9 +43,7 @@
     {
       "id": "S15-R001-P005",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "field-label",
       "ko": "대주제",
@@ -62,9 +52,7 @@
     {
       "id": "S15-R001-P006",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "글로벌 패권 경쟁",
@@ -73,9 +61,7 @@
     {
       "id": "S15-R001-P007",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "field-label",
       "ko": "탐구 동기",
@@ -84,9 +70,7 @@
     {
       "id": "S15-R001-P008",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "자기소개서 느낌으로! 200자 이내.",
@@ -95,9 +79,7 @@
     {
       "id": "S15-R001-P009",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "1. 자신의 브랜딩에 대한 설명",
@@ -106,9 +88,7 @@
     {
       "id": "S15-R001-P010",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "2. 구체적인 자기 장점 기재",
@@ -117,9 +97,7 @@
     {
       "id": "S15-R001-P011",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "3. 관심 있는 주제 + 탐구에 활용한 학문 분야",
@@ -128,9 +106,7 @@
     {
       "id": "S15-R001-P012",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "4. 자신의 진로와 이 주제가 관련된 이유",
@@ -139,9 +115,7 @@
     {
       "id": "S15-R001-P013",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "5. 자신이 가고 싶은 학과와 이 주제와의 관련성 (제일 가고 싶은 학교/ 학과 홈페이지 참고!/ 학교 비전, 학과 인재상, 목표)",
@@ -150,9 +124,7 @@
     {
       "id": "S15-R001-P014",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "1. 필자의 브랜딩은 ‘철학과 기술을 통해 의사결정을 이끌어 내는 기술경영 전문가‘이다. 이러한 브랜딩에는 단순한 데이터 사용을 넘어 데이터의 통합과 처리, 그리고 유기적인 프로세싱을 통해 단순한 데이터 분석과 그로인한 표면적이고 1차원적인 결론,",
@@ -161,9 +133,7 @@
     {
       "id": "S15-R001-P015",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "2. 정량적 데이터를 시각화해 의미있는 결과로 도출해내는 능력이 강점이다. 누구나 도출할 수 있는 표면적이고 동일한 결론이 아닌, 데이터 간 숨겨진 연결고리를 찾아 다른 시각의 분석을 제시한다. 이는 방대한 위성·해양 데이터를 낮은 수준의 온톨로지화를 통해 지정학적 패턴을 추출하는 방법으로 이는 이번 탐구에서도 그대로 드러난다.",
@@ -172,9 +142,7 @@
     {
       "id": "S15-R001-P016",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "3. 국방과 안보, 그리고 이를 뒷받침하는 기술경영에 관심이 많다. 이번 탐구에서는 지정학·국제관계학적 시각으로 중국과 북한의 움직임을 해석하고, 동시에 데이터 사이언스와 GIS 공간분석 기법을 접목해 위성·해양 데이터를 정량화했다. 즉 안보 이슈를 기술경영적 프로세싱으로 다루는 융합적 접근이다.",
@@ -183,9 +151,7 @@
     {
       "id": "S15-R001-P017",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "4. 필자의 진로는 국방·방산 분야의 기술경영 전문가다. 이 분야에서는 단순한 탱크,미사일 같은 하드파워보다, 라벤더,메이븐 시스템처럼 데이터를 의미있게 가공해 의사결정을 이끄는 소프트파워 인텔리전스 역량이 핵심이다. 이번 탐구는 그 역량을 실제 안보 데이터로 직접 구현해본 첫 시도였다.",
@@ -194,9 +160,7 @@
     {
       "id": "S15-R001-P018",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "5. 높은 목표이지만 NYU Tadon BTM(기술경영) 학과를 목표로 노력하고 있다. 최근 트루스 소셜에서 발표한 게시물을 0.1초 먼저보는 API와 같이 정보는 기업에게, 특히나 방산과 국방 기업에게는 가장 중요한 자산이자 동시에 사업 아이템이기도하다. 이러한 방법과 특히나 인터넷과 AI 시대에 정보를 수집하고 분석하고 해석하는 능력은 가장 중요하다고 생각한다.",
@@ -205,9 +169,7 @@
     {
       "id": "S15-R001-P019",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "field-label",
       "ko": "탐구 주제",
@@ -216,9 +178,7 @@
     {
       "id": "S15-R001-P020",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "위성 및 해상 공간 데이터를 활용한 동북아 지정학적 어노말리(Anomaly) 탐지",
@@ -227,9 +187,7 @@
     {
       "id": "S15-R001-P021",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001"],
       "sourcePage": 1,
       "kind": "field-label",
       "ko": "탐구 목적",
@@ -238,10 +196,7 @@
     {
       "id": "S15-R001-P022",
       "sectionId": "S15-L001",
-      "sourceBlockIds": [
-        "S15-L001-P001",
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L001-P001", "S15-L002-P001"],
       "sourcePage": 1,
       "kind": "body",
       "ko": "1. 최근 전세계적으로 안보위기가 대두되며 대한민국또한 이러한 안보 부분에서는 좌시할 수 없다고 판단했다. 무엇보다 중국과 북한이라는 과거, 한국전쟁에서 적으로 마주했던 두 나라의 움직임에 대해서는 꾸준히 보고 관리해야할 필요성이 있으며 특히나 최근 별거 아닌 움직임이 큰 계획의 일부로서 구동되어 국가적인 안보의 위협으로 다가오는 경우가 있고 우리가 이를 포착하지 못할 경우가 있다. 이러한 것은 OSINT(오픈소스 인텔리전스)와 같은 방식으로 데이터를 민간에서 구해 의미있는 결과를 얻어낼 수 있다는 점에서 탐구를 시작했다.",
@@ -251,9 +206,7 @@
     {
       "id": "S15-R002-P001",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -262,9 +215,7 @@
     {
       "id": "S15-R002-P003",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "2. 특히 최근 북한과 중국이 자주 사용하는 방식은 크게 두가지로 나뉜다. 첫째, 회색지대 전략, 둘째, 안정적 무임승차 전략이다. 이러한 두가지 방식은 다양한 지정학적 시그널로 나타나는데 이러한 움직임을 탐지하고 이해하며 단순한 데이터 분석이 아닌 맥락적이고 유의미한 의미를 찾아낼 필요성을 느꼈다.",
@@ -273,9 +224,7 @@
     {
       "id": "S15-R002-P004",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "중국과 북한이 보이는 움직임은 단순히 상업/민간의 움직임이라고 보기 힘들다. 서해에 설치하고 있는 불법 구조물들과 북한이 설치하는 다리의 움직임, 그리고 그 의도를 파악하는 것을 목적으로한다.",
@@ -284,9 +233,7 @@
     {
       "id": "S15-R002-P005",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "이는 필자의 진로인 기술경영, 특히나 국방과 방산이라는 부분에서는 매우 중요하게 작용한다. 탱크와 탄, 전투기와 미사일과 같은 하드파워가 아닌 소프트 파워의 중요성이 각광 받고 있다. 이스라엘의 라벤더 시스템, 미국의 메이븐 시스템은 이러한 시스템의 중요성을 반증하고 있으며 NATO 또한 팔란티어 메이븐 시스템을 도입하며 인텔리전스의 중요성, 또한 단순한 데이터 가공과 처리가 아닌, 의미있는 데이터 프로세싱을 통해 필요한 정보와 의사결정, 그리고 해석을 이끌어내는 것이 가장 중요하다.",
@@ -295,9 +242,7 @@
     {
       "id": "S15-R002-P006",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "3. 고로 본 연구에서 필자는 중국과 북한의 움직임을 파악하고 다양하고 비정형적인 데이터들과 연결시켜 해석한 다음 유의미한 분석과 그에 대한 한국과 한국 우방국들의 필요한 조치를 제언한다. 이러한 컨설팅 방식을 통해 의미있는 데이터를 만들어내는 소프트웨어와 그 아키텍처에 대한 기본적인 수립 또한 포함한다.",
@@ -306,9 +251,7 @@
     {
       "id": "S15-R002-P007",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "field-label",
       "ko": "탐구 방법",
@@ -317,9 +260,7 @@
     {
       "id": "S15-R002-P008",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "① Google Earth",
@@ -328,9 +269,7 @@
     {
       "id": "S15-R002-P009",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "② Python - 데이터 프로세싱 보조",
@@ -339,9 +278,7 @@
     {
       "id": "S15-R002-P010",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "③ Palantir Foundry(Onthology, Pipeline, Map) - 통계 지도 시각화, 고성능 정밀 위성 지도 데이터, 데이터 전처리와 온톨로지화",
@@ -350,9 +287,7 @@
     {
       "id": "S15-R002-P011",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "④ Copernicus 실시간 위성 지도 수집",
@@ -361,9 +296,7 @@
     {
       "id": "S15-R002-P012",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "⑤ Marine Regions - 해상 지도 데이터",
@@ -372,9 +305,7 @@
     {
       "id": "S15-R002-P013",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "⑥ NV/NV α - 자체 개발 OSINT 지능형 자료 수집/웹스크래핑",
@@ -383,9 +314,7 @@
     {
       "id": "S15-R002-P014",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "⑦ CSIS - 보고서에서 지리 좌표 이용",
@@ -394,9 +323,7 @@
     {
       "id": "S15-R002-P015",
       "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
+      "sourceBlockIds": ["S15-L002-P001"],
       "sourcePage": 2,
       "kind": "body",
       "ko": "⑧ Marine Traffic - AIS 데이터",
@@ -405,9 +332,7 @@
     {
       "id": "S15-R003-P001",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -416,9 +341,7 @@
     {
       "id": "S15-R003-P002",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "field-label",
       "ko": "탐구 내용 <문제 분석 및 도출> 중심",
@@ -427,9 +350,7 @@
     {
       "id": "S15-R003-P003",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "1. 데이터 수집 본 연구의 데이터 수집은 다음 두가지의 큰 이슈로 부터 시작한다. 첫번째는 연합뉴스 사에서 발행한 서해의 구조물 관련 이슈, 두번째는 북한 다리의 완공식 관련 뉴스이다. 이 두 뉴스를 따라가보면 현재 두 나라의 움직임에 대한 이해를 할 수 있을 것이라는 가설 설정하에 데이터 수집을 시작했다.",
@@ -438,9 +359,7 @@
     {
       "id": "S15-R003-P004",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "a. 문헌 수집: 문헌 수집에서는 싱크탱크 보고서를 가장 많이 사용하고 찾았다. 다만 다양한 언어와 많은 데이터 량은 사람으로써 처리하기 힘들기에 직접 개발하여 AI에게 부착가능한 NV와 NV 알파 버전의 인텔리전스 수집 툴을 이용하였다. NV를 통해서는 수많은 보고서를 찾고 그 공통점을 찾아내어 핵심을 추출할 수 있고 그 과정에서 발생하는 AI 할루시에이션과 허위정보를 걸러낼 수 있다. 또한 NV 알파를 통해 의미있는 지정학적 위치, 또는 필요한 데이터들을 추출해내어 팔란티어 Foundry나 qgis등에 사용할 수 있는 CSV 툴로 가공했다. 가장 중요한 문헌은 CSIS의 보고서 3건에서 얻을 수 있었으며 이에 대한 내용은 참고 문헌에 표기했다.",
@@ -449,9 +368,7 @@
     {
       "id": "S15-R003-P005",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "b. 지정학적 위치 수집: 앞선 NV 툴의 하네스 알고리즘 바탕 대용량 문서 프로세싱과 안티 할루시에이션처리를 통해 의미있는 위치들을 추출했다. 대표적으로 중국의 구조물 개수와 위치, 북한의 다리 위치와 연도, 그리고 길이와 상세 정보등을 추출해낼 수 있었으며 이를 바탕으로 NV a로 가공된 CSV파일을 팔란티어 온톨로지에 업로드하였다. 업로드 후 오브젝트화를 진행했으며 기본적으로 이용가능한 Raw 데이터로 처리하였다.",
@@ -460,9 +377,7 @@
     {
       "id": "S15-R003-P006",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "c. 사진과 자료 추가 데이터 수집 코페르니쿠스를 통해 10m의 중저품질 시간대별 위성 지도를 추출할 수 있었으며 레이더 지도로 다리의 건설 과정과 시점을 확인할 수 있었다. AIS 추적 툴을 통해 선박의 용도와 이동경로를 확보할 수 있었고 동시에 해상 정보도 확인하여 추출해낼 수 있었다.",
@@ -471,9 +386,7 @@
     {
       "id": "S15-R003-P007",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "2. 데이터 전처리 a. 파이프 라인 처리 앞선 온톨로지로 업로드된 CSV 파일들은 각각 위도와 경도 정보를 포함하고 있으며 동시에 파일의 출처와 유형(NV툴 참고), 그리고 시설에 대한 정보를 처리하였다. 따라서 이를 Geo point와 Geo Shape로 가공하였고 이러한 처리 과정을 통해 고화질 정밀 지도(50cm)에 정밀 표기할 수 있었다.",
@@ -482,9 +395,7 @@
     {
       "id": "S15-R003-P008",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "사용된 데이터와 내용은 다음과 같다. 중국 부표/구조물 위치, 북한 군사 시설과 다리 위치, EEZ 경계선, 북방한계선, 서해 5도. 이는 파이프 라인으로 각 유형에 맞게 가공되었으며 결과적으로 하나의 지도 레이어에 올려졌다.",
@@ -493,9 +404,7 @@
     {
       "id": "S15-R003-P009",
       "sectionId": "S15-L003",
-      "sourceBlockIds": [
-        "S15-L003-P001"
-      ],
+      "sourceBlockIds": ["S15-L003-P001"],
       "sourcePage": 3,
       "kind": "body",
       "ko": "b. 문헌 이중 검증 앞선 정보에서 오류가 발생할 수 이는 안티할루시에이션 알고리즘으로 이중 처리하였으며 오류를 방지하는 절차를 통해 데이터를 온전히 보전했다.",
@@ -504,9 +413,7 @@
     {
       "id": "S15-R004-P001",
       "sectionId": "S15-L004",
-      "sourceBlockIds": [
-        "S15-L004-P001"
-      ],
+      "sourceBlockIds": ["S15-L004-P001"],
       "sourcePage": 4,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -515,9 +422,7 @@
     {
       "id": "S15-R004-P002",
       "sectionId": "S15-L004",
-      "sourceBlockIds": [
-        "S15-L004-P001"
-      ],
+      "sourceBlockIds": ["S15-L004-P001"],
       "sourcePage": 4,
       "kind": "body",
       "ko": "3. 데이터 분석/지도 시각화 데이터는 다음과 같이 분석가능했다.",
@@ -526,9 +431,7 @@
     {
       "id": "S15-R004-P003",
       "sectionId": "S15-L004",
-      "sourceBlockIds": [
-        "S15-L004-P001"
-      ],
+      "sourceBlockIds": ["S15-L004-P001"],
       "sourcePage": 4,
       "kind": "body",
       "ko": "a. 위성 데이터 사용한 위성은 센티넬 2 위성(True color& False color)의 두가지 레이더와 카메라를 이용했다. 이에 대해 두만간 유역의 북한-러시아 우정의 다리(1959)를 기준으로 2026년에 새롭게 다리를 증설했다. 이는 코페르니쿠스 위성을 통해 다음과 같이 확인할 수 있다.",
@@ -537,9 +440,7 @@
     {
       "id": "S15-R004-P004",
       "sectionId": "S15-L004",
-      "sourceBlockIds": [
-        "S15-L004-P001"
-      ],
+      "sourceBlockIds": ["S15-L004-P001"],
       "sourcePage": 4,
       "kind": "body",
       "ko": "시간순으로 나열된 위성사진으로(10m) 건설의 순차적인 모습을 보여준다.(사진에 날짜 표시) 흥미로운점은 위로 올라가게되면 도로가 있음에도 자동차 도로를 하나 더 바로 옆에 연결한 것이라는 점이다.",
@@ -548,9 +449,7 @@
     {
       "id": "S15-R004-P005",
       "sectionId": "S15-L004",
-      "sourceBlockIds": [
-        "S15-L004-P001"
-      ],
+      "sourceBlockIds": ["S15-L004-P001"],
       "sourcePage": 4,
       "kind": "body",
       "ko": "이에 대해서는 크게 두가지 의문점이 존재한다. 첫째, 왜 이미 있는 국경 도로나 현재 있는 만남의 다리가 아닌 추가 선로를 지었는가? 둘째, 왜 다른 곳이 아닌 만남의 다리 옆에 새로운 다리를 추가 개설했는가? 이러한 두가지 질문을 통해 북한과 러시아 사이의 유착과 의도를 파악하는 것을 목적으로 한다.",
@@ -559,9 +458,7 @@
     {
       "id": "S15-R005-P001",
       "sectionId": "S15-L005",
-      "sourceBlockIds": [
-        "S15-L005-P001"
-      ],
+      "sourceBlockIds": ["S15-L005-P001"],
       "sourcePage": 5,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -570,9 +467,7 @@
     {
       "id": "S15-R005-P002",
       "sectionId": "S15-L005",
-      "sourceBlockIds": [
-        "S15-L005-P001"
-      ],
+      "sourceBlockIds": ["S15-L005-P001"],
       "sourcePage": 5,
       "kind": "body",
       "ko": "상단에 표시된 다리가 국경 다리이며 우정의 다리(러-북)는 1951년에 건설되어 러시아- 북한 사이의 연결점이 되었지만 앞선 사진에서 볼 수 있듯 하나의 다리가 더 신설되었다는 점은 북한과 러시아사이의 유착과 관계의 변화가 발생했다고 볼 수 있다. 어느쪽이든 추가적인 육상 이동수단 경로가 필요했다는 점이며 이는 둘 사이의 관계가 더욱 가까워졌음을 볼 수 있다.",
@@ -581,9 +476,7 @@
     {
       "id": "S15-R005-P003",
       "sectionId": "S15-L005",
-      "sourceBlockIds": [
-        "S15-L005-P001"
-      ],
+      "sourceBlockIds": ["S15-L005-P001"],
       "sourcePage": 5,
       "kind": "body",
       "ko": "b. 파운드리 데이터",
@@ -592,9 +485,7 @@
     {
       "id": "S15-R005-P004",
       "sectionId": "S15-L005",
-      "sourceBlockIds": [
-        "S15-L005-P001"
-      ],
+      "sourceBlockIds": ["S15-L005-P001"],
       "sourcePage": 5,
       "kind": "body",
       "ko": "Palantir Foundry에 온톨로지화된 레이어는 크게 다섯 종류로 구성된다. a. 한국 EEZ(Korea EEZ 202607) — Zone ID: KOR-EEZ-001, 출처: Flanders Marine Institute(Marine Regions-v4), Geo Status: verified, Confidence Level: medium b. NLL 스키매틱 라인(Nll Schematic Line 202607) c. 서해 오도 분석 레이어(한국 PMZ 시각화) d. 시설 레이어(Facilities Geo Tumangang Khasan 202607) — 두만강-하산 교량 관련 시설 지오포인트 e. 부표 시설 레이어(Facilities Geo Pmz Buoys 202607) — 중국 관측부표 및 양식 구조물 지오포인트",
@@ -603,9 +494,7 @@
     {
       "id": "S15-R005-P005",
       "sectionId": "S15-L005",
-      "sourceBlockIds": [
-        "S15-L005-P001"
-      ],
+      "sourceBlockIds": ["S15-L005-P001"],
       "sourcePage": 5,
       "kind": "body",
       "ko": "이 중 EEZ 폴리곤 객체는 GeoJSON 형태로 좌표를 보유하며, 각 부표 지오포인트는 앵커 아이콘으로 표기되어 서해 PMZ 경계선을 따라 산개된 배치 양상을 시각적으로 확인할 수 있다. 이러한 레이어 중첩을 통해 중국의 부표 배치가 PMZ 경계 및 잠정 중간선 (median line)과 어떤 위치 관계를 갖는지 정량적으로 판독이 가능했다.",
@@ -614,9 +503,7 @@
     {
       "id": "S15-R006-P001",
       "sectionId": "S15-L006",
-      "sourceBlockIds": [
-        "S15-L006-P001"
-      ],
+      "sourceBlockIds": ["S15-L006-P001"],
       "sourcePage": 6,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -625,9 +512,7 @@
     {
       "id": "S15-R006-P002",
       "sectionId": "S15-L006",
-      "sourceBlockIds": [
-        "S15-L006-P001"
-      ],
+      "sourceBlockIds": ["S15-L006-P001"],
       "sourcePage": 6,
       "kind": "body",
       "ko": "서해 부표 위치와 대한민국의 EEZ",
@@ -636,9 +521,7 @@
     {
       "id": "S15-R007-P001",
       "sectionId": "S15-L007",
-      "sourceBlockIds": [
-        "S15-L007-P001"
-      ],
+      "sourceBlockIds": ["S15-L007-P001"],
       "sourcePage": 7,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -647,9 +530,7 @@
     {
       "id": "S15-R007-P002",
       "sectionId": "S15-L007",
-      "sourceBlockIds": [
-        "S15-L007-P001"
-      ],
+      "sourceBlockIds": ["S15-L007-P001"],
       "sourcePage": 7,
       "kind": "body",
       "ko": "북한의 물자 이송 경로와 다리 위치",
@@ -658,9 +539,7 @@
     {
       "id": "S15-R007-P003",
       "sectionId": "S15-L007",
-      "sourceBlockIds": [
-        "S15-L007-P001"
-      ],
+      "sourceBlockIds": ["S15-L007-P001"],
       "sourcePage": 7,
       "kind": "body",
       "ko": "4. 서해 부표 및 PMZ 대치 분석",
@@ -669,9 +548,7 @@
     {
       "id": "S15-R007-P004",
       "sectionId": "S15-L007",
-      "sourceBlockIds": [
-        "S15-L007-P001"
-      ],
+      "sourceBlockIds": ["S15-L007-P001"],
       "sourcePage": 7,
       "kind": "body",
       "ko": "a. 중국 부표 배치 현황 한국 해군이 2018년 2월부터 2023년 5월까지 서해상에서 식별한 중국 해양관측부표는 총 13기이다. 대부분 등대형 설계(원형 부유 기반, 중앙 타워, 상부 플랫폼)를 가진 10m 급 표준형 부표이며, 일부는 태양광 패널을 탑재해 장기 무인 자율 운용이 가능하다. 이는 AIS 수신기, 통신 모듈 등 지속적 전력이 필요한 장비의 탑재 가능성을 시사한다.",
@@ -680,9 +557,7 @@
     {
       "id": "S15-R007-P005",
       "sectionId": "S15-L007",
-      "sourceBlockIds": [
-        "S15-L007-P001"
-      ],
+      "sourceBlockIds": ["S15-L007-P001"],
       "sourcePage": 7,
       "kind": "body",
       "ko": "지리적 배치 패턴에서 주목할 점은, 2번 부표를 제외한 12기 전부가 PMZ 구역 외부이자 동시에 중국-한국 EEZ 잠정 중간선 기준 중국측에 위치한다는 것이다. 이는 베이징이 서울의 반발을 의식해 직접적 도발(PMZ 내부 또는 중간선 이남 설치)을 회피하면서도, 지속적으로 감시·센싱 자산을 전진배치하는 절제된 회색지대 전술을 구사하고 있음을 보여준다. 오히려 이 때문에 예외적으로 PMZ 내부에 위치한 2번 부표와 Shen Lan 1·2 양식 케이지, Atlantic Amsterdam 통합관리 플랫폼의 존재가 더욱 이례적 신호로 해석된다.",
@@ -691,10 +566,7 @@
     {
       "id": "S15-R007-P006",
       "sectionId": "S15-L007",
-      "sourceBlockIds": [
-        "S15-L007-P001",
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L007-P001", "S15-L008-P001"],
       "sourcePage": 7,
       "kind": "body",
       "ko": "b. 대치 사례 (2025년 9월) AIS 데이터(Starboard Maritime Intelligence)에 따르면 2025년 9월 24일 한국 조사선 온누리호가 PMZ에 진입했고, 약 6시간 후 중국해경국 6307함이 추적을 개시했으며 칭다오항에서 2척이 추가 파견되었다. 9월 25일 온누리호가 Shen Lan 1·2에 근접하자 중국해경 함정이 양측을 밀착 감시했고, 이후 15시간 이상 최근접 1.7해리까지 접근하며 온누리호와 한국해경 3009함을 추적한 뒤 두 선박이 PMZ를 이탈하고서야 감시를 종료 했다. 이는 2025년 2월 발생한 유사 대치의 반복이며, 국회 보고에 따르면 2020년 이후 135회의 한국측 해양조사 중 27회(약 1/5)가 중국의 방해를 받은 것으로 나타나 상시적 패턴임이 확인된다.",
@@ -704,9 +576,7 @@
     {
       "id": "S15-R008-P001",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -715,9 +585,7 @@
     {
       "id": "S15-R008-P003",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "c. 이중용도 의혹 잠수복을 착용하고 산소통을 점검하는 인력이 Shen Lan 2에서 포착된 사진이 공개되며 순수 양식시설이라는 중국측 설명에 대한 의문이 제기되었다. 2001년 한중 어업협정은 PMZ 내 어업활동만 규정할 뿐 구조물·부표 설치에 대한 명시적 허가·금지 조항이 없어, 이러한 회색지대 활동이 법적 공백을 정확히 파고드는 방식으로 이루어지고 있음을 알 수 있다.",
@@ -726,9 +594,7 @@
     {
       "id": "S15-R008-P004",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "5. 문제 도출",
@@ -737,9 +603,7 @@
     {
       "id": "S15-R008-P005",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "본 연구를 통해 확인된 중국과 북한의 서해,두만강 일대 움직임은 개별 사안이 아닌 하나의 구조적 패턴으로 수렴한다.",
@@ -748,9 +612,7 @@
     {
       "id": "S15-R008-P006",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "첫째, 두만강-하산 교량은 단순 인프라 확충이 아니라 북러 관계의 질적 전환을 시사한다. 1951년 건설된 기존 우정의 다리 외에 신규 도로교(총연장 1.3km 이상)를 추가로 건설한다는 것은, 러시아의 우크라이나 전쟁 지속에 따른 대북 물자·인력 이동 수요가 철도만으로 충당되지 않을 만큼 커졌음을 의미한다. 북한측 신규 국경통과지점(약 5㎢) 의 규모와 세관/차량정비/환적 시설 구성은 이 노선이 상시적 대량 물류 통로로 설계되었음을 보여주며, 이는 북한의 대러 의존 심화와 동시에 러시아발 기술과 물자의 유입 통로 확보라는 이중적 함의를 갖는다.",
@@ -759,9 +621,7 @@
     {
       "id": "S15-R008-P007",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "둘째, 서해 PMZ 내 부표·양식장·통합관리 플랫폼의 배치는 전형적인 안정적 무임승차(그레이존) 전략의 실행이다. 중간선 이남·PMZ 외곽에 대다수 자산을 배치함으로써 명시적 도발이라는 프레이밍을 회피하면서도, 13기 부표를 통한 상시 감시망과 다롄,칭다오 해군기지에서 서해로 나가는 길목에 대한 센싱 능력을 축적하고 있다. 이는 남중국해 스카버러 암초에서 확인된 것과 동일한 방법론(구조물 설치 → 기정사실화 → 감시자산 고도화)이 서해에서도 점진적으로 재현되고 있음을 뜻한다.",
@@ -770,9 +630,7 @@
     {
       "id": "S15-R008-P008",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "셋째, 두 사례 모두 공통적으로 '법적 회색지대'를 정밀하게 활용한다. 한중 어업협정과 UNCLOS는 항행의 자유를 보장하지만 구조물 설치 자체를 명시적으로 금지하지 않으며, 북러간 국경 인프라 확충 역시 국제법상 제재 대상이 아니다. 즉 두 행위자 모두 국제 규범을 위반하지 않는 범위 내에서 최대한의 전략적 이익을 추출하는 합리적 행위자로 행동하고 있으며, 이는 한국이 명시적 위법성 입증만으로는 대응할 수 없는 구조적 취약점을 노출한다.",
@@ -781,9 +639,7 @@
     {
       "id": "S15-R008-P009",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "이러한 문제의식은 다음 절 [해결방안 및 제언]에서 다룰 정책적 대응 방향의 전제가 된다.",
@@ -792,9 +648,7 @@
     {
       "id": "S15-R008-P010",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "field-label",
       "ko": "탐구 내용",
@@ -803,9 +657,7 @@
     {
       "id": "S15-R008-P011",
       "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
+      "sourceBlockIds": ["S15-L008-P001"],
       "sourcePage": 8,
       "kind": "body",
       "ko": "1. 위성·해양데이터 상시 모니터링 체계 구축",
@@ -814,9 +666,7 @@
     {
       "id": "S15-R009-P001",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -825,9 +675,7 @@
     {
       "id": "S15-R009-P002",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "field-label",
       "ko": "<해결 방안 및 제언>",
@@ -836,9 +684,7 @@
     {
       "id": "S15-R009-P003",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "한국은 2025년 11월 '425사업'(SAR 위성 4기, EO/IR 위성 1기, 총사업비 약 1조3000억 원)을 완료해 독자 정찰위성 체계를 확보했다. 그러나 425사업의 한반도 재방문 주기는 약 2시간이며, 이 공백을 메우기 위한 소형·초소형 군집위성 51기(국방부 SAR 40기, 과기정통부 EO 11기, 목표 주기 30분)는 아직 전력화 전 단계다. 즉 현재 한국의 독자 감시 자산은 두만강 교량 공정 진척이나 서해 부표 신규 배치처럼 저강도·점진적으로 진행되는 변화를 촘촘히 포착하기에는 시간 해상도가 부족하며, 이 연구에서 활용한 코페르니쿠스와 CSIS Beyond Parallel(Vantor/Maxar) 상업위성 데이터에 대한 의존이 당분간 불가피하다.",
@@ -847,9 +693,7 @@
     {
       "id": "S15-R009-P004",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "1-1: 후속 군집위성 사업의 조기 전력화를 우선순위로 두되, 그 전까지는 CSIS/38 North/NK News 등 민간·싱크탱크가 발행하는 상업위성 분석을 국가 온톨로지 플랫폼(예: 팔란티어 Foundry)에 정기 수집·통합하는 임시 파이프라인을 마련한다.",
@@ -858,9 +702,7 @@
     {
       "id": "S15-R009-P005",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "1-2: 국립해양조사원이 이미 운영 중인 전국 200여 개 해양관측망(조위관측소, 해양관측부이) 의 데이터 체계를, 서해 접경 구간에 한해 안보적 이상탐지 목적의 알고리즘과 연계하는 방안을 검토한다. 기존 인프라를 재활용하는 방식이므로 신규 예산 부담이 상대적으로 적다.",
@@ -869,9 +711,7 @@
     {
       "id": "S15-R009-P006",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "2. PMZ 그레이존 대응: 현재까지의 성과와 남은 과제",
@@ -880,9 +720,7 @@
     {
       "id": "S15-R009-P007",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "2025년 4월 23일 제3차 한중 해양협력대화에서 한국측(강영신 외교부 동북아·중앙아국장)은 PMZ 내 3개 구조물(선란 1·2호, 관리 플랫폼) 전체의 이전을 요구했고, 이동이 어려울 경우 비례대응을 검토하겠다는 입장을 명확히 전달했다. 이후 2025년 4월 24일 중국 외교부가 관리 플랫폼 이전 계획을 공식화했고, 2026년 1월 27일에는 실제로 해당 구조물이 PMZ 밖으로 약 500m 이동하는 것이 확인되었다. 이는 같은 해 이재명 대통령의 방중 이후 한중관계 복원 흐름과 맞물린 결과로 해석된다. 다만 선란 1·2호 양식 케이지는 여전히 잔류 중이며, 문제가 완전히 해소된 것은 아니다.",
@@ -891,9 +729,7 @@
     {
       "id": "S15-R009-P008",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "법리적으로는 견해가 갈린다. 외교부는 항행·조업 자유 침해를 근거로 문제를 제기하는 반면, 한국해양전략연구소 등 국내 전문가들은 2001년 한중 어업협정이 어업 활동 외 구조물 설치를 명시적으로 금지하지 않는다고 본다. 결국 이번 사례에서 실제 이전을 이끌어낸 핵심 동력은 순수한 법적 강제가 아니라 정상외교와 연계된 협상, 그리고 비례대응 시사였다는 점이 중요하다.",
@@ -902,9 +738,7 @@
     {
       "id": "S15-R009-P009",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "2-1: 잔류 중인 선란 1·2호에 대해서도 동일한 방식(정상외교 연계 + 비례대응 시사)의 압박을 지속한다.",
@@ -913,9 +747,7 @@
     {
       "id": "S15-R009-P010",
       "sectionId": "S15-L009",
-      "sourceBlockIds": [
-        "S15-L009-P001"
-      ],
+      "sourceBlockIds": ["S15-L009-P001"],
       "sourcePage": 9,
       "kind": "body",
       "ko": "2-2: 장기적으로 PMZ 내 비어업 구조물 설치에 대한 사전통보·협의 의무화를 한중 어업협정 개정 의제로 공식화해, 개별 사안마다 정상외교에 의존해야 하는 구조적 취약점을 보완한다.",
@@ -924,9 +756,7 @@
     {
       "id": "S15-R010-P001",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -935,9 +765,7 @@
     {
       "id": "S15-R010-P002",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "3. 대응 자산 및 감시 역량의 대칭적 확충",
@@ -946,9 +774,7 @@
     {
       "id": "S15-R010-P003",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "한국 정부는 이미 2025년 4월 회담에서 비례대응 가능성을 공개적으로 시사한 바 있다. 이를 구체화하는 방안으로, 중국측 부표(13기, 2018~2023년 배치, 대부분 PMZ 외곽·중간선 중국측에 절제 배치) 전략에 대응해 한국측 관측 자산을 PMZ 인근에 대칭적으로 배치하는 방안을 검토할 수 있다. 이는 국립해양조사원이 이미 운영 중인 해양관측부이 체계를 서해 접경 구간으로 확장하는 방식으로 상대적으로 낮은 추가 비용으로 실현 가능하며, 도발이 아닌 '동일 수준 대응(tit-for-tat)' 원칙에 근거하므로 국제법상으로도 정당화하기 쉽다.",
@@ -957,9 +783,7 @@
     {
       "id": "S15-R010-P004",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "4. 두만강-하산 교량: 완공 이후 물동량 모니터링과 다자 대응 체계 마련",
@@ -968,9 +792,7 @@
     {
       "id": "S15-R010-P005",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "교량은 당초 2026년 12월 31일 완공 목표였으나 공정이 앞당겨져, 2026년 4월 21일 상판 연결식을 마쳤고 러시아 정부는 북러 신조약 체결 2주년인 6월 19일 완공을 공식 발표했다. 총사업비 약 1억1500만 달러(약 1500억 원), 완공 시 하루 최대 차량 300대· 인원 2000~2850명 처리 가능한 세관·검문소가 함께 구축되며, 철도 여객 운송량도 2026년 1~2월 기준 전년 동기 대비 4배 증가한 것으로 확인되어 교량 개통 이전부터 이미 북러 간 인적·물적 교류가 급증하는 추세다.",
@@ -979,9 +801,7 @@
     {
       "id": "S15-R010-P006",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "문제는 이러한 교류 확대를 검증할 국제적 감시 체계가 사실상 무력화되어 있다는 점이다. 2024년 3월 러시아가 유엔 대북제재 이행 감시 전문가패널(PoE) 갱신안에 거부권을 행사했고 중국이 기권하면서, 같은 해 4월 말 PoE의 임기가 종료되었다. CSIS(Victor Cha, Ellen Kim)와 38 North는 이를 계기로 감시·집행의 무게중심이 유엔 안보리에서 G7 등 뜻을 같이하는 국가군으로 이동할 수밖에 없다고 진단한 바 있다. 즉 두만강 교량을 통한 물동량이 정제유 상한 등 기존 제재를 우회하더라도, 이를 공식적으로 검증할 유엔 차원의 채널은 이미 존재하지 않는다.",
@@ -990,9 +810,7 @@
     {
       "id": "S15-R010-P007",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "4-1: 완공 이후 초기 물동량 통계(화물차 통행량, 세관 통과 인원, 화차 수)를 분기별로 추적하는 것을 이 연구의 후속 과제로 설정한다.",
@@ -1001,9 +819,7 @@
     {
       "id": "S15-R010-P008",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "4-2: 유엔 PoE 공백을 메우기 위해 한·미·일 등이 자체적으로 구성한 대체 모니터링 메커니즘(예: 다국적 제재 이행 감시체)에 이 연구에서 구축한 위성·AIS 기반 온톨로지 데이터를 민간 기여 형태로 제공하는 방안을 장기 과제로 제언한다.",
@@ -1012,9 +828,7 @@
     {
       "id": "S15-R010-P009",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "5. 북·중·러 삼각 재편이라는 상위 맥락에 대한 대응",
@@ -1023,9 +837,7 @@
     {
       "id": "S15-R010-P010",
       "sectionId": "S15-L010",
-      "sourceBlockIds": [
-        "S15-L010-P001"
-      ],
+      "sourceBlockIds": ["S15-L010-P001"],
       "sourcePage": 10,
       "kind": "body",
       "ko": "두만강 교량과 PMZ 구조물은 개별 사안이 아니라 더 큰 구조 변화의 일부다. Reuters 의 2026년 3월 현장 조사에 따르면, 북한이 우크라이나 전쟁 이후 러시아로 급격히 기울자 중국도 단둥(신압록강대교), 취안허, 난핑, 산허 등 북중 접경 전역에서 도로·항만 인프라를 동시다발적으로 재정비하며 전통적 영향력 회복에 나서고 있다. 즉 러시아와 중국이 각각 자국 접경에서 대북 관문을 경쟁적으로 확충하는 이중 전선 현상이 진행 중이며, 두만강 교량은 그중 러시아측 전선의 한 사례에 불과하다.",
@@ -1034,9 +846,7 @@
     {
       "id": "S15-R011-P001",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -1045,9 +855,7 @@
     {
       "id": "S15-R011-P002",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "동시에 Lowy Institute의 분석(2025년 10월, 2026년 5월)은 시진핑-김정은 공식 발표문에서 '한반도 비핵화' 표현이 사라지는 등 중국이 북한의 핵보유를 사실상 기정사실로 수용하는 방향으로 정책을 선회하고 있다고 지적한다. 2026년 6월로 예정된 시진핑의 7 년 만의 방북(5월 트럼프-시진핑, 푸틴-시진핑 연쇄 정상회담 직후 성사)은 이러한 재편의 상징적 장면으로 해석되며, 북한의 핵보유를 대미 협상 지렛대로 활용하려는 중국의 의도가 반영된 것으로 분석된다.",
@@ -1056,9 +864,7 @@
     {
       "id": "S15-R011-P003",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "5-1: 한국의 대북·대중·대러 정책은 개별 이슈(교량, 부표 등) 대응에 그치지 않고, 북중러 삼각관계의 재편 속도와 방향을 정기적으로 재평가하는 상위 분석 틀을 갖춰야 한다. 이 연구에서 구축한 Foundry 기반 온톨로지는 개별 지오포인트 데이터뿐 아니라, 이러한 삼각관계 변수(정상회담 빈도, 공식 발표문 문구 변화, 제재 이행 지표)를 시계열로 통합 관리하는 방향으로 확장될 수 있다.",
@@ -1067,9 +873,7 @@
     {
       "id": "S15-R011-P004",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "5-2: 유엔 안보리 차원의 감시 공백이 구조적으로 장기화될 가능성이 높은 만큼, 한국은 단기적 사안 대응과 별개로 한·미·일 및 뜻을 같이하는 국가군 차원의 독자적 정보공유·검증 체계 구축을 중장기 정책 과제로 설정할 필요가 있다.",
@@ -1078,9 +882,7 @@
     {
       "id": "S15-R011-P005",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "이상의 제언들은 국방·외교·해양수산 부처 간 데이터 공유 체계, 즉 팔란티어형 온톨로지 통합 플랫폼을 전제로 할 때 실효성을 가진다. 특히 2025~2026년 사이 PMZ 구조물 일부 철거가 순수 법적 대응보다 정상외교와 협상을 통해 더 즉각적인 성과를 냈다는 사실, 그리고 두만강 교량이 북러 양자 문제를 넘어 북중러 삼각 재편이라는 더 큰 흐름 속에 위치한다는 사실은 모두 본 연구가 서두에서 제시한 문제의식인 단선적 인과(A →B)가 아닌 다차원적 연쇄효과(B→A, C→B)를 포착하는 소프트파워형 인텔리전스 체계의 필요성을 뒷받침한다.",
@@ -1089,9 +891,7 @@
     {
       "id": "S15-R011-P006",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "field-label",
       "ko": "탐구 내용 요약",
@@ -1100,9 +900,7 @@
     {
       "id": "S15-R011-P007",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "1.위성(Copernicus, 상업위성)·AIS·싱크탱크 보고서(CSIS 등)를 NV 자체 OSINT 툴로 수집·안티할루시네이션 처리한 뒤, Palantir Foundry 온톨로지에 지오포인트/지오쉐이프 형태로 업로드해 서해 PMZ와 두만강-하산 접경을 하나의 지도 레이어로 통합했다. 이를 통해 개별 보도로는 드러나지 않는 두 사안의 위치·시계열 관계를 정량적으로 교차 검증할 수 있었다.",
@@ -1111,9 +909,7 @@
     {
       "id": "S15-R011-P008",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "2. 분석 결과, 두만강-하산 신규 도로교는 러시아의 우크라이나 전쟁 지속에 따른 북러 물류 수요 증가를, 서해 PMZ의 부표·양식장·통합관리 플랫폼은 명시적 도발을 피하며 감시 자산을 점진적으로 축적하는 안정적 무임승차(회색지대) 전략을 각각 보여주었다. 두 사례 모두 국제법·양자협정의 법적 공백을 정밀하게 활용한다는 공통점이 있으며, 더 나아가 이는 북한의 대러 밀착에 대응한 중국의 대북 재개입(단둥·취안허 등 접경 인프라 동시 정비)과 유엔 대북제재 감시체계(PoE) 붕괴라는 상위 구조 변화의 일부로 해석된다.",
@@ -1122,10 +918,7 @@
     {
       "id": "S15-R011-P009",
       "sectionId": "S15-L011",
-      "sourceBlockIds": [
-        "S15-L011-P001",
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L011-P001", "S15-L012-P001"],
       "sourcePage": 11,
       "kind": "body",
       "ko": "3. 이에 따라 독자 위성·해양관측망을 활용한 상시 모니터링 체계 구축, PMZ 구조물에 대한 정상외교 연계 협상 지속과 어업협정 개정, 대칭적 감시 자산 확충, 교량 개통 후 물동량 추적과 한·미·일 대체 모니터링 체계 마련, 그리고 북중러 삼각관계 재편을 상시 추적하는 상위 분석 틀 구축을 제언한다. 이는 단선적 인과가 아닌 다차원적 연쇄효과를 포착하는 소프트파워형 인텔리전스 체계가 필요하다는 본 연구의 문제의식을 뒷받침한다.",
@@ -1135,9 +928,7 @@
     {
       "id": "S15-R012-P001",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -1146,9 +937,7 @@
     {
       "id": "S15-R012-P003",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "탐구 내용 요약 해서 제시!",
@@ -1157,9 +946,7 @@
     {
       "id": "S15-R012-P004",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "field-label",
       "ko": "참고 문헌",
@@ -1168,9 +955,7 @@
     {
       "id": "S15-R012-P005",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "참고 문헌",
@@ -1179,9 +964,7 @@
     {
       "id": "S15-R012-P006",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "[탐구 핵심 참고 보고서]",
@@ -1190,9 +973,7 @@
     {
       "id": "S15-R012-P007",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "1. Bermudez, Joseph S. Jr., Victor Cha, and Jennifer Jun. \"Significant Progress of the North Korea-Russia Road Bridge.\" Beyond Parallel, CSIS, October 27, 2025.",
@@ -1201,9 +982,7 @@
     {
       "id": "S15-R012-P008",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "2. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Korea-China Standoffs in the PMZ.\" Beyond Parallel, CSIS, October 27, 2025.",
@@ -1212,9 +991,7 @@
     {
       "id": "S15-R012-P009",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "3. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Chinese Buoys Near the South Korea-China PMZ.\" Beyond Parallel, CSIS, December 15, 2025.",
@@ -1223,9 +1000,7 @@
     {
       "id": "S15-R012-P010",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "[PMZ 그레이존 대응 관련 국내 보도·분석]",
@@ -1234,9 +1009,7 @@
     {
       "id": "S15-R012-P011",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "4. 뉴스1. \"'서해 구조물' 첫 대면 논의하는 한중…확전이냐 진화냐.\" 2025.4.22.",
@@ -1245,9 +1018,7 @@
     {
       "id": "S15-R012-P012",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "5. 서울평양뉴스(SPN). \"정부 中에 '서해구조물, PMZ 밖 이동' 요구...中, 추가 설치는 않을 듯.\" 2025.4.24.",
@@ -1256,9 +1027,7 @@
     {
       "id": "S15-R012-P013",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "6. 머니투데이. \"中, '서해구조물' 중 관리시설 퇴거 예정…한중 관계 전면 복원의 흐름.\" 2026.1.27.",
@@ -1267,9 +1036,7 @@
     {
       "id": "S15-R012-P014",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "7. 한국국방외교저널. \"중국의 서해 한중 잠정조치수역 내 구조물 설치 현황 및 대응책.\" 2025.6.22.",
@@ -1278,9 +1045,7 @@
     {
       "id": "S15-R012-P015",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "8. 한국해양전략연구소(KIMS). \"서해 중국 구조물 문제 접근의 허와 실: 어떻게 대응해야 하나?\" 2025.11.20.",
@@ -1289,9 +1054,7 @@
     {
       "id": "S15-R012-P016",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "[두만강-하산 교량 완공 관련]",
@@ -1300,9 +1063,7 @@
     {
       "id": "S15-R012-P017",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "9. 자유아시아방송(RFA). \"다리 완공까지 한 달, 북∙러 막바지 공사 분주.\" 2026.5.21.",
@@ -1311,9 +1072,7 @@
     {
       "id": "S15-R012-P018",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "10. 서울평양뉴스(SPN). \"북-러 국경 연결 자동차다리, 2026년 6월 19일 완공.\" 2025.5.31.",
@@ -1322,9 +1081,7 @@
     {
       "id": "S15-R012-P019",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "11. 리포테라. \"67년 만에 두만강에 새 다리 놓인다…북러 자동차 교량 6월 완공, 대북 제재 '균열 가속'.\" 2026.4.24.",
@@ -1333,9 +1090,7 @@
     {
       "id": "S15-R012-P020",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "12. 미주중앙일보. \"교통 인프라까지 척척...밀착 이어가는 북-러 정기 버스 노선도 연내 개통.\" 2026.7.1.",
@@ -1344,9 +1099,7 @@
     {
       "id": "S15-R012-P021",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "[국방·해양 감시 자산 관련]",
@@ -1355,9 +1108,7 @@
     {
       "id": "S15-R012-P022",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "13. 경향신문. \"'425사업 마지막 퍼즐' 정찰위성 5호기…지상국과 교신.\" 2025.11.2.",
@@ -1366,9 +1117,7 @@
     {
       "id": "S15-R012-P023",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "14. 대한민국보훈방송. \"[국방부] 군 정찰위성 425사업 성공…자주국방 한 축 완성.\" 2025.11.20.",
@@ -1377,9 +1126,7 @@
     {
       "id": "S15-R012-P024",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "15. 국립해양조사원(KHOA) 공식 웹사이트 및 공공데이터포털. \"해양관측부이 운영 현황.\" 2025.8.18.",
@@ -1388,9 +1135,7 @@
     {
       "id": "S15-R012-P025",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "[유엔 대북제재 체제 붕괴 관련]",
@@ -1399,9 +1144,7 @@
     {
       "id": "S15-R012-P026",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "16. Cha, Victor, and Ellen Kim. \"Russia's Veto: Dismembering the UN Sanctions Regime on North Korea.\" Critical Questions, CSIS, March 28, 2024.",
@@ -1410,9 +1153,7 @@
     {
       "id": "S15-R012-P027",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "17. \"After Russia's Veto: The Future of the Sanctions Regime Against North Korea.\" 38 North, April 12, 2024.",
@@ -1421,9 +1162,7 @@
     {
       "id": "S15-R012-P028",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "18. \"Russia's veto on UN sanctions monitoring will further embolden North Korea.\" Chatham House, May 14, 2024.",
@@ -1432,9 +1171,7 @@
     {
       "id": "S15-R012-P029",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "19. \"Russia Ends North Korean Sanctions Panel.\" Arms Control Association, May 2024.",
@@ -1443,9 +1180,7 @@
     {
       "id": "S15-R012-P030",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "[북중러 삼각관계 재편 관련]",
@@ -1454,9 +1189,7 @@
     {
       "id": "S15-R012-P031",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "20. Chu, Mei Mei, Ju-min Park, and Claire Fu. \"China is rebuilding its grip on North Korea. Is Kim Jong Un ready to oblige?\" Reuters, March 11, 2026.",
@@ -1465,9 +1198,7 @@
     {
       "id": "S15-R012-P032",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "21. \"Why China now embraces a nuclear North Korea.\" The Interpreter, Lowy Institute, April 23, 2026.",
@@ -1476,9 +1207,7 @@
     {
       "id": "S15-R012-P033",
       "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
+      "sourceBlockIds": ["S15-L012-P001"],
       "sourcePage": 12,
       "kind": "body",
       "ko": "22. \"The great omission: A clarifying statement on North Korea's nukes.\" The Interpreter, Lowy Institute, October 6, 2025.",
@@ -1487,9 +1216,7 @@
     {
       "id": "S15-R013-P001",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
@@ -1498,9 +1225,7 @@
     {
       "id": "S15-R013-P002",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "body",
       "ko": "23. \"Why Xi Jinping is going to Pyongyang.\" The Interpreter, Lowy Institute, May 27, 2026.",
@@ -1509,9 +1234,7 @@
     {
       "id": "S15-R013-P003",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "body",
       "ko": "[탐구 방법 관련 기타 데이터 출처]",
@@ -1520,9 +1243,7 @@
     {
       "id": "S15-R013-P004",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "body",
       "ko": "24. 통계청 SDGs 지표. https://kostat-sdg-kor.github.io/sdg-indicators/",
@@ -1531,9 +1252,7 @@
     {
       "id": "S15-R013-P005",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "body",
       "ko": "25. 공공데이터포털. https://www.data.go.kr/",
@@ -1542,9 +1261,7 @@
     {
       "id": "S15-R013-P006",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "body",
       "ko": "26. World Bank Open Data. https://data.worldbank.org/",
@@ -1553,9 +1270,7 @@
     {
       "id": "S15-R013-P007",
       "sectionId": "S15-L013",
-      "sourceBlockIds": [
-        "S15-L013-P001"
-      ],
+      "sourceBlockIds": ["S15-L013-P001"],
       "sourcePage": 13,
       "kind": "body",
       "ko": "27. Marine Regions (Flanders Marine Institute). https://www.marineregions.org/",

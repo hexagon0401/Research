@@ -1,30 +1,483 @@
 export type Bilingual = { ko: string; en: string };
 export type EssayBeat = {
- id: string; title: Bilingual; intro: Bilingual; bridge: Bilingual;
- mode: "concept" | "world" | "arctic" | "integration";
- country?: "us" | "cn" | "kr";
- tint: [number, number, number];
- passages: { report: string; blocks: string[]; readingIds?: string[]; take?: number }[];
- related: string[]; note?: Bilingual;
- references?: { title: string; url: string }[];
+  id: string;
+  title: Bilingual;
+  intro: Bilingual;
+  bridge: Bilingual;
+  mode: "concept" | "world" | "arctic" | "integration";
+  country?: "us" | "cn" | "kr";
+  tint: [number, number, number];
+  passages: {
+    report: string;
+    blocks: string[];
+    readingIds?: string[];
+    take?: number;
+  }[];
+  related: string[];
+  note?: Bilingual;
+  references?: { title: string; url: string }[];
 };
 export const essay: EssayBeat[] = [
- {id:"survival",mode:"concept",tint:[230,232,230],title:{ko:"시작은 국가가 아니라, 기업의 생존이었다.",en:"It began with survival, before it became a question of the state."},intro:{ko:"빠르게 변하는 산업에서 기업은 어떻게 오래 살아남을 수 있을까. S00의 출발점은 이 질문이다. 독서 세미나에서 기술 독점 전략과 ESG·CSR 경영을 비교한 것은 서로 다른 주제를 수집하기 위해서가 아니었다. 기업이 버틸 수 있게 하는 역량이 무엇인지를 찾고, 그 역량이 사회와 국가에 어떤 의미를 갖는지 묻기 위한 첫 단계였다.",en:"How can a company endure rapid industrial change? This is where S00 begins. Comparing technological-monopoly strategies with ESG and CSR in the reading seminar was not an exercise in collecting unrelated topics. It was a first step toward asking what enables a firm to endure, and what that capability means for society and the state."},passages:[{report:"S00",blocks:["S00-L002-P003"]}],related:["S06"],note:{ko:"여기서 지속가능성은 우선 기업의 존속을 뜻한다. 사회적·환경적 성과와 재무적 생존은 같은 지표가 아니다. S06에 보고된 통계는 원문의 분석이며, 이 사이트에서 독립적으로 재현한 결과는 아니다.",en:"Sustainability here initially means the firm's ability to endure. Social or environmental outcomes and financial survival are different measures. S06's numerical results are the author's reported analysis, not independently reproduced findings."},bridge:{ko:"그러나 기술이 뛰어나다는 이유만으로 기업이 어떤 방향을 선택할지는 설명되지 않는다. 다음 질문은 기술의 크기가 아니라, 그것이 향하는 목적이었다.",en:"Technological strength alone does not explain which direction a firm chooses. The next question concerned not the scale of its technology, but the purpose it serves."}},
- {id:"identity",mode:"concept",tint:[220,229,219],title:{ko:"기술의 우위에, 정체성이라는 질문을 더하다.",en:"A technological advantage raises a question of identity."},intro:{ko:"독점의 이익이 혁신을 이어가게 하는가, 아니면 안주하게 만드는가. S06의 토론은 기술적 우위만으로 답이 끝나지 않는다는 점을 드러낸다. S14의 철학적 탐구는 한 걸음 더 나아가, 기업의 정체성과 그 행동을 판단하는 기준 자체를 묻는다. 국가와 기업의 관계에서도 중요한 것은 계약의 존재뿐 아니라 기업이 무엇을 자신의 목적으로 받아들이는가이다.",en:"Does monopoly profit sustain innovation, or encourage complacency? The S06 discussion shows why technological advantage cannot be the entire answer. S14 goes further by examining identity and the criteria used to judge action. State–firm relations therefore concern not just the existence of a contract, but what a company accepts as its own purpose."},passages:[{report:"S06",blocks:["S06-L004-P001"],take:2},{report:"S00",blocks:["S00-L003-P007"]}],related:["S06","S14"],bridge:{ko:"이 질문을 국가의 관점으로 옮기면, 기업의 기술과 정체성은 더 이상 기업 내부의 문제에 머물지 않는다.",en:"Move this question to the state, and a firm's technology and identity cease to be purely internal matters."}},
- {id:"capability",mode:"world",tint:[216,226,230],title:{ko:"국가의 힘은, 기업의 기술을 통해 작동하기도 한다.",en:"National power can operate through corporate technology."},intro:{ko:"데이터를 모으는 능력, 통신망을 연결하는 능력, 반도체를 생산하고 자본을 움직이는 능력은 서로 다른 산업처럼 보인다. 그러나 국가의 전략적 선택 안에서는 군사·경제·외교 역량의 일부가 된다. S01과 S02가 살핀 정보화된 전장과 경제–안보 복합체는 기업의 역할이 완제품 납품에 한정되지 않는다는 문제의식으로 연결된다.",en:"Collecting data, connecting communications, producing semiconductors and moving capital appear to belong to separate industries. Within a state's strategic choices, however, they become parts of military, economic and diplomatic capability. The information-centered battlespace and economic–security complex examined in S01 and S02 extend the firm's role beyond supplying finished equipment."},passages:[{report:"S00",blocks:["S00-L002-P011"],take:1}],related:["S01","S02"],note:{ko:"S00이 제안하는 ‘기업의 패권화’는 해석의 틀이다. 기술 역량이 존재한다는 사실과 그것이 특정 외교·군사적 결과를 일으켰다는 주장은 구분해서 살펴본다.",en:"S00's ‘corporate hegemonization’ is an interpretive framework. Possessing a capability and causing a particular diplomatic or military outcome are distinct claims."},bridge:{ko:"그렇다면 국가는 기업의 역량을 어떻게 자기 전략과 연결하는가. 미국과 중국은 같은 질문에 서로 다른 방식으로 접근한다.",en:"How, then, does a state connect corporate capability to its own strategy? America and China approach the same question through different mechanisms."}},
- {id:"us-mission",mode:"world",country:"us",tint:[220,228,221],title:{ko:"미국: 조달 계약을 넘어서는 결속을 묻다.",en:"America: asking what binds a firm beyond procurement."},intro:{ko:"S00은 Palantir와 Anduril을 단순한 소프트웨어·방산 기업이 아니라, 미국과 우방의 안보라는 목적을 기업의 정체성과 연결하는 사례로 읽는다. 여기서 살필 전략은 정부가 기술을 구매한다는 사실에 그치지 않는다. 기업의 제품 개발, 장기 수요, 실제 사용 경험, 기업이 공개적으로 설명하는 사명이 어떻게 맞물리는지가 분석의 대상이다.",en:"S00 reads Palantir and Anduril not simply as software and defense suppliers, but as cases linking corporate identity to American and allied security. The mechanism is more than a government buying technology: it concerns the interaction of product development, long-term demand, operational experience and the mission a firm publicly describes."},passages:[{report:"S00",blocks:["S00-L005-P009","S00-L005-P010"]},{report:"S01",blocks:[],readingIds:["S01-R002-P006"]}],related:["S02","S01","S00"],note:{ko:"계약 수주는 철학적 충성심이 수주를 일으켰다는 증거와 같지 않다. 계약의 최대 한도, 실제 발주액, 인식 매출도 각각 다른 값이다. 원문에 등장하는 계약액·매출 비중은 기준 시점과 공시를 별도로 확인해야 한다.",en:"An award does not by itself establish that philosophical loyalty caused it. Contract ceilings, actual orders and recognized revenue are different quantities. Amounts and revenue shares mentioned in the source require dated procurement records and filings."},bridge:{ko:"개별 기업의 사명은 더 큰 국가 프로젝트 안에서 다른 기업의 기술과 연결된다.",en:"A firm's mission can connect its technology to other firms through a larger national project."}},
- {id:"us-dome",mode:"world",country:"us",tint:[215,225,224],title:{ko:"Golden Dome: 개별 기술을 하나의 국가 목표로 묶는 구상.",en:"Golden Dome: bringing separate technologies under one national objective."},intro:{ko:"S03과 S13은 미사일 방어를 감지·통신·지휘통제·요격이 연결되는 체계로 분석한다. 이 관점에서 위성, 데이터 처리, 네트워크, 요격 하드웨어는 개별 시장의 제품이면서 동시에 국가 방어라는 공통 목표의 구성요소가 된다. S00은 이런 프로젝트가 기업에 수요와 협업 기회를 주는 동시에 국가적 목적을 부여할 수 있다고 해석한다.",en:"S03 and S13 analyze missile defense as a system connecting detection, communications, command and control, and interception. Satellites, data processing, networks and interceptor hardware are products in separate markets, yet also components of a shared defense objective. S00 interprets such projects as potential sources of demand, collaboration and national purpose for firms."},passages:[{report:"S13",blocks:[],readingIds:["S13-R001-P007"]}],related:["S03","S13","S11"],note:{ko:"5쪽 자료 S03과 6쪽 자료 S13은 별개의 문서다. 정책 구상, 제안된 기술 역할, 확정 계약, 배치 완료를 구분한다. 원문에 기업이 등장한다는 이유로 그 기업의 사업 참여가 확정됐다고 표시하지 않는다.",en:"The five-page S03 and six-page S13 are distinct documents. A policy concept, proposed technical role, awarded contract and completed deployment are different stages. Mention in a source is not confirmation of participation."},bridge:{ko:"국가와 기업의 결속은 방산에만 나타나는가. 금융으로 이동하면 같은 질문이 다른 형태로 드러난다.",en:"Is this relationship confined to defense? Moving to finance reveals the same question in another form."}},
- {id:"us-finance",mode:"world",country:"us",tint:[227,229,216],title:{ko:"Tether: 기업의 준비자산을 금융 패권의 문제로 읽다.",en:"Tether: reading corporate reserves through monetary power."},intro:{ko:"S05는 한국 경제의 신뢰와 자본 이동에서 출발해 스테이블코인의 정책적 의미를 묻는다. S00은 Tether의 달러 연동 코인과 미 국채 준비자산을 연결하며, 민간 발행자의 사업이 달러 기반 금융 네트워크를 확대할 수 있다는 논지를 제시한다. 이때 기업의 성장과 국가의 금융적 영향력이 같은 방향으로 움직일 수 있다는 점이 ‘기업 패권’이라는 질문에 들어온다.",en:"S05 begins with trust and capital movement in Korea and asks about stablecoins' policy significance. S00 connects Tether's dollar-pegged coins with Treasury reserve assets, proposing that a private issuer's business can expand a dollar-based financial network. The possibility that corporate growth and national financial influence move together becomes part of the corporate-hegemony question."},passages:[{report:"S05",blocks:["S05-L004-P010"],take:1}],related:["S05","S00"],note:{ko:"국채 보유가 특정 발행자의 면책이나 독점 보장을 뜻하지는 않는다. GENIUS Act 등 관련 법제는 발행자 요건·준비자산·감독 조항과 함께 읽어야 하며, S00의 ‘특혜’라는 해석과 법률이 실제로 부여하는 권리는 구분한다.",en:"Holding Treasuries does not establish immunity or a guaranteed monopoly for an issuer. The GENIUS Act and related legislation must be read through issuer eligibility, reserves and supervision, distinguishing S00's interpretation of privilege from rights actually conferred by law."},references:[{title:"GENIUS Act — Public Law 119–27",url:"https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm"}],bridge:{ko:"금융에서 산업 기반으로 시선을 옮겨도, 시장의 효율과 국가의 전략이 만나는 지점은 남는다.",en:"Moving from finance to industrial capacity, the meeting point of market efficiency and national strategy remains."}},
- {id:"us-ships",mode:"world",country:"us",tint:[221,228,217],title:{ko:"조선업: 시장의 비용과 국가가 남겨두려는 역량.",en:"Shipbuilding: market costs and the capacity a state wants to retain."},intro:{ko:"S00은 미국 조선업을 국가가 전략적 생산 기반을 어떻게 유지하는지 묻는 사례로 사용한다. Jones Act의 연안 운송 규정과 조선·쇄빙선 관련 재정 지출은 서로 다른 수단이다. 하나는 특정 운송 시장의 참여 조건에 관한 것이고, 다른 하나는 예산을 통해 생산·조달 역량을 확보하는 방식이다. 이를 같은 ‘특혜’라는 개념으로 묶더라도, 각각의 법적 효과와 수혜 구조는 따로 분석해야 한다.",en:"S00 uses American shipbuilding to ask how a state preserves strategic productive capacity. Jones Act coastwise-shipping rules and shipbuilding or icebreaker appropriations are different instruments: one defines conditions for participating in a transport market, while the other funds production and procurement. Even when grouped under ‘privilege,’ their legal effects and beneficiaries require separate analysis."},passages:[{report:"S00",blocks:["S00-L005-P019"]}],related:["S00","S11"],note:{ko:"Jones Act의 적용 범위와 Public Law 119–21의 예산 항목을 구분한다. 예산 배정은 특정 기업에 실제 지급된 금액과 다르며, 산업 보호를 곧 반독점법 면제나 포괄적 면책으로 표현하지 않는다.",en:"Distinguish the Jones Act's scope from appropriations in Public Law 119–21. Appropriated funding is not the same as money actually paid to a named company, and industrial protection is not blanket antitrust exemption or immunity."},references:[{title:"46 U.S.C. §55102 — Transportation of merchandise",url:"https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title46-section55102&num=0&edition=prelim"},{title:"Public Law 119–21",url:"https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm"}],bridge:{ko:"미국을 ‘대의와 특혜’로 읽었다면, 중국에서는 지분·조직·공간을 통한 연결을 함께 살펴봐야 한다.",en:"If cause and privilege frame the American comparison, China's comparison also requires ownership, organization and space."}},
- {id:"china-ownership",mode:"world",country:"cn",tint:[229,224,215],title:{ko:"중국: 기업의 확장을 지분과 산업의 연결망으로 보다.",en:"China: reading corporate expansion through ownership and industrial networks."},intro:{ko:"S00은 Geely와 Mercedes-Benz의 관계, Smart 합작, 파워트레인 협력, Tencent의 게임 산업 지분을 기업을 통한 분야 확장이라는 틀로 읽는다. 여기서 분석 단위는 기업의 국적 하나가 아니다. 누가 지분을 보유하는지, 이사회와 계약에서 어떤 권리를 갖는지, 제품과 기술의 어느 부분을 함께 만드는지가 중요하다. 브랜드를 유지한 채 기술·생산·유통의 연결이 바뀔 수 있다는 점이 연구의 초점이다.",en:"S00 reads Geely–Mercedes relationships, the Smart venture, powertrain collaboration and Tencent's gaming investments as sectoral expansion through firms. Nationality alone is not the unit of analysis. Ownership, board and contractual rights, and the technologies or products jointly developed matter. The inquiry asks how technology, production and distribution can change while a brand remains."},passages:[{report:"S00",blocks:["S00-L004-P013","S00-L004-P014"]}],related:["S00","S08"],note:{ko:"최대 주주와 경영 지배권은 같지 않고, 서로 다른 중국 투자자의 지분을 합산한다고 공동 통제가 입증되지는 않는다. 원문의 지분율·파워트레인·게임 개발사 관련 서술은 기업별 공시와 기준 시점을 나누어 확인할 항목이다.",en:"The largest shareholder is not necessarily a controlling shareholder. Adding stakes held by different Chinese investors does not establish joint control. Ownership percentages, powertrain claims and game-developer identities in the source need company-specific, dated verification."},bridge:{ko:"지분은 하나의 연결 방식이다. 조직과 제도의 차이를 함께 봐야, 기업의 행동을 국가의 의도와 너무 쉽게 동일시하지 않을 수 있다.",en:"Equity is one form of connection. Organizational and institutional differences matter if corporate conduct is not to be equated too readily with state intention."}},
- {id:"china-governance",mode:"world",country:"cn",tint:[225,222,212],title:{ko:"국유와 민간, 당 조직과 경영권은 어떻게 다른가.",en:"State ownership, private ownership and organizational control are different questions."},intro:{ko:"S00은 ICBC·CCB·CSSC 같은 국유기업과 Tencent·Alibaba·Huawei·BYD 같은 기업을 함께 비교한다. 그러나 국유 지분, 당 조직의 존재, 이사회 의사결정, 국가의 개별 사업 지시는 동일한 증거가 아니다. 국가–기업 결속을 분석하려면 이 층위들을 나눠야 한다. 같은 국적의 기업들이 모두 같은 방식으로 움직인다는 가정 대신, 각 기업의 소유와 조직, 자금과 계약을 연결해 보는 접근이다.",en:"S00 compares state-owned firms such as ICBC, CCB and CSSC with Tencent, Alibaba, Huawei and BYD. State equity, a Party organization, board decision-making and a specific government instruction are not equivalent evidence. Studying state–firm cohesion requires separating these levels and connecting company-specific ownership, organization, finance and contracts rather than assuming all firms of one nationality act identically."},passages:[],related:["S00","S08"],note:{ko:"상장기업 지배구조 규정은 국유기업과 민간기업에 같은 조항이 적용되는지까지 확인해야 한다. 당 조직을 공안 사무소와 혼동하거나, 조직의 존재만으로 특정 해외 투자의 국가 지시를 단정하지 않는다.",en:"Governance rules must be checked for differences between state-owned and private firms. Party organizations are not public-security offices, and their existence alone does not establish state direction of a particular foreign investment."},bridge:{ko:"이런 연결을 지도로 옮기면, 투자와 사업권이 지리적 접근의 문제로 확장된다.",en:"Place those connections on a map, and investment and commercial rights become questions of geographic access."}},
- {id:"china-arctic",mode:"arctic",country:"cn",tint:[210,225,229],title:{ko:"그린란드와 북극: 투자 지점과 항로를 구분하며 연결하다.",en:"Greenland and the Arctic: connect the questions, distinguish the routes."},intro:{ko:"S00과 S08은 CCCC의 그린란드 공항 사업 접근과 Shenghe Resources의 광물 관련 지분을 다룬다. 공항 투자와 광산 지분은 서로 다른 계약이지만, 접근권·자원·물류라는 더 큰 질문 안에서 연결된다. 중국의 2018년 북극 정책은 이 사례를 읽는 국가 수준의 배경이다. 지도는 그린란드의 투자 검토 지점과 러시아 북쪽을 지나는 개략 북극 항로를 구분해 보여준다.",en:"S00 and S08 discuss CCCC's approach to Greenland airport projects and Shenghe Resources' mineral-related stake. Airport investment and mining equity are different arrangements, connected by broader questions about access, resources and logistics. China's 2018 Arctic policy supplies a state-level context. The map distinguishes Greenland investment locations from an illustrative Arctic route north of Russia."},passages:[{report:"S08",blocks:[],readingIds:["S08-R001-P010"]}],related:["S08","S00"],note:{ko:"제안된 사업을 완공·운영 중인 시설로 표시하지 않는다. 공항 입찰의 철회와 광물 프로젝트의 지분·규제 상태는 각각 확인할 항목이다. 강조된 항로는 실제 선박 항적이 아니며 그린란드 공항을 연결하는 운항로도 아니다.",en:"Proposals are not shown as completed or operating facilities. Airport-bid withdrawal and mining ownership or regulatory status require separate checks. The highlighted route is not an observed vessel track or a service linking Greenland airports."},references:[{title:"China's Arctic Policy (2018 white paper)",url:"https://english.www.gov.cn/archive/white_paper/2018/01/26/content_281476026660336.htm"}],bridge:{ko:"북극에서 접근권을 살폈다면, 동남아에서는 거래가 현지의 정치·군사적 관계와 만나는 방식을 묻는다.",en:"After access in the Arctic, Southeast Asia raises questions about how transactions meet local political and military relationships."}},
- {id:"china-myanmar",mode:"world",country:"cn",tint:[224,228,211],title:{ko:"미얀마: 기업의 공급 관계와 정권의 의존성을 함께 보다.",en:"Myanmar: examine supply relationships alongside regime dependence."},intro:{ko:"S08의 미얀마 분석은 AVIC·NORINCO·China South Industries와 같은 공급자, 무기와 부품, 수령 주체를 연결해 정권 생존이라는 상위 맥락에서 읽는다. 화면의 선은 이런 분석 관계를 나타낸다. 공급망이 존재한다는 사실, 특정 장비가 인도됐다는 사실, 국가가 정권을 구제하려 했다는 해석은 서로 다른 층위이므로 같은 색의 선 하나로 확정하지 않는다.",en:"S08 places suppliers such as AVIC, NORINCO and China South Industries, weapons and components, and recipients within the larger context of regime survival. The line on screen represents that analytical relationship. A supply chain, delivery of a particular weapon and an interpretation of state intent occupy different evidentiary levels."},passages:[{report:"S08",blocks:["S08-L003-P001"],take:1}],related:["S08","S11"],note:{ko:"위 인용은 S08에 보고된 주장이다. 금액·기종·이동 경로·외교적 개입의 인과관계는 독립 검증 전이다. 지도는 국가 수준의 개략 위치이며 특정 무기의 실제 운송 항적이 아니다.",en:"The quoted passage reports S08's claims. Amounts, aircraft types, delivery paths and causal claims about diplomatic intervention have not been independently verified here. Map locations are approximate country references, not observed weapons shipments."},references:[{title:"UN Special Rapporteur on Myanmar — source collection",url:"https://www.ohchr.org/en/special-procedures/sr-myanmar"}],bridge:{ko:"같은 질문은 군수 공급을 넘어 토지와 인프라의 관계에서도 반복된다.",en:"The same question recurs beyond arms supply, in land and infrastructure."}},
- {id:"china-cambodia",mode:"world",country:"cn",tint:[227,227,211],title:{ko:"캄보디아: 인접성과 통제권을 혼동하지 않기.",en:"Cambodia: proximity and control are not the same."},intro:{ko:"S08은 Prince Group·Canopy Sands의 상업적 개발과 Ream 해군기지 주변 공간을 연결해 분석한다. 이 사례의 방법론적 의미는 부지 경계와 시설, 사업 주체와 시간을 같은 지도로 묶어 보는 데 있다. 다만 지리적으로 인접하거나 일정이 겹친다는 이유만으로 자금 지원·기지 통제·국가의 지시가 입증되는 것은 아니다. 관계를 발견하는 단계와 그 관계의 의미를 입증하는 단계를 분리해야 한다.",en:"S08 connects Prince Group and Canopy Sands' commercial development with the area around Ream Naval Base. Its methodological interest lies in bringing boundaries, facilities, actors and time into one map. Geographic proximity or coinciding schedules, however, do not themselves establish financing, base control or state instruction. Finding a relationship and demonstrating its meaning are separate steps."},passages:[],related:["S08","S15"],note:{ko:"시설 경계 원자료와 계약서가 이 사이트에 제공된 것은 아니다. 현 단계에서는 원문의 분석 대상과 연결 논리를 설명하며, 민간 개발사가 군사기지를 통제한다고 확정 표시하지 않는다.",en:"Underlying facility boundaries and contracts have not been supplied to this site. This scene explains the source's analytical question and does not assert that a commercial developer controls a military base."},bridge:{ko:"이 사례들을 한국에 적용하려면 ‘미국 또는 중국을 따라야 한다’는 결론보다, 어떤 역량을 어떻게 유지할지를 구체적으로 물어야 한다.",en:"Applying these cases to Korea requires a more specific question than which country to imitate: what capability should be retained, and how?"}},
- {id:"korea-chips",mode:"world",country:"kr",tint:[215,230,218],title:{ko:"한국의 반도체: 기술 우위만으로 결정되지 않는 생산의 조건.",en:"Korean semiconductors: production depends on more than technical advantage."},intro:{ko:"삼성전자와 SK하이닉스의 사례는 국가와 기업의 결속을 생산 현장의 문제로 바꾼다. S16은 수출통제가 해외 공장의 장비 반입, 고객과 시장 선택, 투자 회수, 준수 비용에 어떤 경로로 영향을 미치는지 설명한다. S00의 안보 자산이라는 관점은 여기서 구체적인 경영 의사결정과 만난다. 기업을 지키려는 정책은 생산·공급망·규정의 예측 가능성까지 다뤄야 한다는 질문이다.",en:"Samsung Electronics and SK Hynix turn the question of state–firm relations into a production problem. S16 traces how export controls affect equipment access, customers and markets, investment returns and compliance costs. S00's security-asset perspective meets concrete management decisions: protecting a firm also requires attention to production, supply chains and regulatory predictability."},passages:[{report:"S16",blocks:["S16-L002-P001"],take:5}],related:["S16","S00"],note:{ko:"S16은 수출 증감만으로 수출통제의 효과를 단정하지 않는다. AI 수요·제품 가격·시장 구성과 정책의 영향을 구분한다. 2023년 VEU 관련 사례도 현재 허가 상태를 자동으로 뜻하지 않는다.",en:"S16 does not infer the effects of export controls from export changes alone. AI demand, prices and market composition are separate influences. The 2023 VEU example does not automatically describe current authorization."},bridge:{ko:"공장과 장비에서 보였던 관계는 플랫폼과 데이터의 소유·운영에서도 다시 드러난다.",en:"The relationship visible in factories and equipment reappears in the ownership and operation of platforms and data."}},
- {id:"korea-platforms",mode:"world",country:"kr",tint:[219,228,222],title:{ko:"LINE·핀테크: 기술의 국적과 지배구조의 국적 사이.",en:"LINE and fintech: technology, ownership and jurisdiction can diverge."},intro:{ko:"S00은 Naver와 LINE, Viva Republica와 Toss를 기술·데이터·자본의 이동이라는 질문 안에 놓는다. 플랫폼의 이용자가 있는 곳, 서비스를 운영하는 법인, 지분을 가진 주주, 데이터를 감독하는 제도는 서로 다를 수 있다. 이들을 단순히 ‘한국 기업’ 또는 ‘해외 기업’으로 나누면 기업의 역량이 실제로 어디에 남는지 설명하기 어렵다. 지분과 의결권, 운영 계약과 규제 관할을 함께 살펴야 하는 이유다.",en:"S00 places Naver and LINE, and Viva Republica and Toss, within questions about technology, data and capital movement. Users, operating entities, shareholders and data regulators can sit in different jurisdictions. Simply labeling a firm Korean or foreign does not explain where its capability remains. Equity, voting rights, operating agreements and regulatory jurisdiction must be considered together."},passages:[],related:["S00","S05"],note:{ko:"행정지도·보안 개선 요구·지분 매각 요구·매각 완료는 서로 다른 사건이다. 특정 시점의 외국인 지분만으로 데이터 유출이나 국가의 통제를 입증하지 않는다.",en:"Administrative guidance, security remediation, a request to reconsider ownership and a completed sale are different events. Foreign ownership at a given date does not alone establish data leakage or state control."},bridge:{ko:"소유 구조가 복잡한 만큼, 규제의 효과 역시 하나의 선으로 단정할 수 없다.",en:"As ownership becomes more complex, regulation's effects likewise resist a single causal arrow."}},
- {id:"korea-regulation",mode:"world",country:"kr",tint:[228,227,218],title:{ko:"타다·쿠팡·카카오: 규제의 목적과 결과를 나누어 묻다.",en:"Tada, Coupang and Kakao: distinguish regulation's goals from its effects."},intro:{ko:"S00은 타다의 규제 논쟁, 쿠팡의 상장·법인 구조, 카카오와 경쟁의 문제를 기업 활동의 제도적 환경으로 연결한다. 저자가 묻는 것은 규제가 기업의 기술과 경쟁력을 약화시키고, 의도와 달리 기존 사업자의 힘을 키울 수 있는가이다. 이 논지를 살리되 판결과 법 개정의 시점, 사건 전후의 시장 구조, 기업의 별도 경영 판단을 나눠 살펴본다. 규제가 존재했다는 사실만으로 기업의 이동이나 경쟁자의 성장을 모두 설명할 수는 없다.",en:"S00 connects Tada's regulatory controversy, Coupang's listing and legal structure, and Kakao's competitive position as questions about firms' institutional environment. It asks whether regulation can weaken technological capability and unintentionally strengthen incumbents. The argument requires separating court decisions, legislation, market structure and independent management choices. The presence of regulation alone cannot explain every relocation or competitor's growth."},passages:[{report:"S00",blocks:["S00-L003-P016"]}],related:["S00","S14"],note:{ko:"미국 상장을 본사 이전의 단일 원인으로 표현하거나, 법적 판단과 시장 결과를 같은 사건으로 합치지 않는다. 이 부분은 S00의 정책 비판이며, 개별 인과관계의 실증 완료를 뜻하지 않는다.",en:"A U.S. listing is not treated as the sole cause of headquarters relocation, and legal decisions are not merged with market outcomes. This is S00's policy critique, not a completed causal identification."},bridge:{ko:"그렇다면 기업에 무엇을 허용하고 무엇을 요구해야 하는가. 방산은 기술·수익·국가 목적이 가장 직접적으로 만나는 비교 대상이다.",en:"What should firms be allowed, and what should be expected of them? Defense provides a direct meeting point of technology, profit and national purpose."}},
- {id:"korea-defense",mode:"world",country:"kr",tint:[216,229,217],title:{ko:"K-방산: 수출의 성공을 넘어 전략의 방향을 묻다.",en:"K-defense: ask about strategic direction beyond export success."},intro:{ko:"S00은 Hanwha Aerospace와 LIG Nex1 등을 국가의 목적과 기업의 사업 방향이 어떻게 만나는지 묻는 대상으로 삼는다. S11은 기술군사동맹과 전쟁 억제의 관점으로, S17은 기업의 재무·전략 지표를 비교하는 관점으로 이 질문에 연결된다. S17은 한화의 폴란드 K9·천무 수출을 생산·수요의 성장으로, Palantir의 구독형 소프트웨어를 낮은 한계비용의 성장으로 나누어 본다. 수출액이 늘어났다는 사실, 어떤 국가와 협력한다는 사실, 그 선택이 국가 안보에 바람직하다는 판단은 각각 다른 분석이다. 기업의 기술적 성장과 국가의 전략적 선택을 함께 평가하는 기준이 필요하다.",en:"S00 uses Hanwha Aerospace and LIG Nex1 to ask how national purpose meets corporate strategy. S11 connects this to technological military alliances and deterrence; S17 adds comparative financial and strategic measures. It contrasts production and demand through Hanwha’s K9 and Chunmoo exports to Poland with low-marginal-cost growth through Palantir’s software subscriptions. Rising exports, cooperation with a particular state and a judgment that such cooperation benefits security are different analyses. Technical growth and national strategic choices need to be evaluated together."},passages:[{report:"S17",blocks:["S17-L003-P001"],take:2}],related:["S11","S17","S00"],note:{ko:"S17의 PCA·VAR·클러스터 분석은 원문에 제시된 방법이다. 데이터·실행 코드의 재현 없이 통계적 인과나 예측력을 새로 검증했다고 표시하지 않는다. 수출 상대국에 대한 평가는 저자의 정책적 판단과 사실 관계를 구분한다.",en:"PCA, VAR and clustering are methods reported in S17. Their causal or predictive performance is not presented as independently validated without reproducible data and code. Judgments about export partners are distinguished from descriptive facts."},bridge:{ko:"여기까지의 비교를 설득력 있게 만들려면, 발견한 연결을 다시 자료와 대조하는 단계가 필요하다.",en:"To make these comparisons persuasive, the connections must return to evidence."}},
- {id:"spatial-method",mode:"world",tint:[211,226,230],title:{ko:"연결을 그리는 것에서, 연결을 검증하는 것으로.",en:"From drawing connections to testing them."},intro:{ko:"S08의 다중스케일 접근과 S15의 위성·해상 공간 데이터 분석은 같은 자료를 어떤 단위와 시간축으로 볼지 묻는다. 기업의 계약은 국지적 사건이지만 공급망·시설·정책과 함께 놓으면 다른 질문이 열린다. 반대로 지도에서 인접해 보이는 것만으로 의도와 통제가 증명되는 것은 아니다. 이 연구의 방법론적 과제는 관계를 많이 그리는 데 있지 않고, 어떤 연결은 관측이고 어떤 연결은 해석인지 구분하는 데 있다.",en:"S08's multiscale approach and S15's satellite and maritime analysis ask how observational units and timelines shape interpretation. A contract is local, but placing it alongside supply chains, facilities and policy opens another question. Conversely, proximity on a map does not prove intent or control. The methodological task is not to draw more connections, but to distinguish observation from interpretation."},passages:[{report:"S15",blocks:["S15-L003-P001"],take:2}],related:["S15","S08","S17"],note:{ko:"원문의 시설·항로 데이터셋이 실제로 제공된 것과 보고서에 언급된 것은 구분한다. 이 사이트의 개략 지도는 연구의 구조를 설명하며, 원자료나 관측 결과를 대신하지 않는다.",en:"A dataset mentioned in a report is not the same as a supplied dataset. The site's schematic maps explain the research structure and do not replace underlying observations."},bridge:{ko:"이 구분을 거친 뒤에야, 앞선 모든 질문은 하나의 국가–기업 관계로 다시 모인다.",en:"With that distinction, the preceding questions can converge on a single account of state–firm relations."}},
- {id:"synthesis",mode:"integration",tint:[230,232,230],title:{ko:"기술과 정체성, 대의와 특혜. 국가–기업 관계를 다시 정의하다.",en:"Technology and identity. Cause and privilege. Redefine the relationship."},intro:{ko:"S00의 결론은 국가와 기업을 별개의 이해관계자로만 보는 시각을 넘어서는 제안이다. 기업의 독자 기술은 국가의 역량과 연결되고, 기업의 정체성은 그 역량이 향하는 방향을 정한다. 국가는 그 기여를 인정하며 기업이 장기적으로 성장할 조건을 설계해야 한다는 것이 저자의 논지다. 기업의 지속가능성에서 출발한 질문은 이렇게 안보 파트너십이라는 주장으로 돌아온다.",en:"S00 proposes moving beyond an account of states and firms as separate interest holders. Distinctive corporate technology connects to national capability, while identity shapes its direction. The state, the author argues, should recognize that contribution and create conditions for long-term corporate growth. The initial question of corporate sustainability returns as a proposal for a security partnership."},passages:[{report:"S00",blocks:["S00-L006-P018","S00-L006-P019","S00-L006-P020"]}],related:["S00","S06","S14","S16"],note:{ko:"‘대의와 특혜’는 S00의 정책 제안이다. 위 비교 사례 전체의 인과관계가 입증됐다는 뜻은 아니다. 각 원문의 반론·메모·한계와 함께 읽을 수 있도록, 아래에서 모든 연구 전문으로 연결한다.",en:"Cause and privilege are S00's policy proposal, not a claim that every causal relationship above has been established. The complete studies below preserve counterarguments, notes and limitations alongside the main argument."},bridge:{ko:"연구는 각각의 결과물로 남지만, 질문은 여기에서 하나로 이어진다.",en:"The studies remain distinct works. Their questions form one connected inquiry."}},
+  {
+    id: "survival",
+    mode: "concept",
+    tint: [230, 232, 230],
+    title: {
+      ko: "시작은 국가가 아니라, 기업의 생존이었다.",
+      en: "It began with survival, before it became a question of the state.",
+    },
+    intro: {
+      ko: "빠르게 변하는 산업에서 기업은 어떻게 오래 살아남을 수 있을까. S00의 출발점은 이 질문이다. 독서 세미나에서 기술 독점 전략과 ESG·CSR 경영을 비교한 것은 서로 다른 주제를 수집하기 위해서가 아니었다. 기업이 버틸 수 있게 하는 역량이 무엇인지를 찾고, 그 역량이 사회와 국가에 어떤 의미를 갖는지 묻기 위한 첫 단계였다.",
+      en: "How can a company endure rapid industrial change? This is where S00 begins. Comparing technological-monopoly strategies with ESG and CSR in the reading seminar was not an exercise in collecting unrelated topics. It was a first step toward asking what enables a firm to endure, and what that capability means for society and the state.",
+    },
+    passages: [{ report: "S00", blocks: ["S00-L002-P003"] }],
+    related: ["S06"],
+    note: {
+      ko: "여기서 지속가능성은 우선 기업의 존속을 뜻한다. 사회적·환경적 성과와 재무적 생존은 같은 지표가 아니다. S06에 보고된 통계는 원문의 분석이며, 이 사이트에서 독립적으로 재현한 결과는 아니다.",
+      en: "Sustainability here initially means the firm's ability to endure. Social or environmental outcomes and financial survival are different measures. S06's numerical results are the author's reported analysis, not independently reproduced findings.",
+    },
+    bridge: {
+      ko: "그러나 기술이 뛰어나다는 이유만으로 기업이 어떤 방향을 선택할지는 설명되지 않는다. 다음 질문은 기술의 크기가 아니라, 그것이 향하는 목적이었다.",
+      en: "Technological strength alone does not explain which direction a firm chooses. The next question concerned not the scale of its technology, but the purpose it serves.",
+    },
+  },
+  {
+    id: "identity",
+    mode: "concept",
+    tint: [220, 229, 219],
+    title: {
+      ko: "기술의 우위에, 정체성이라는 질문을 더하다.",
+      en: "A technological advantage raises a question of identity.",
+    },
+    intro: {
+      ko: "독점의 이익이 혁신을 이어가게 하는가, 아니면 안주하게 만드는가. S06의 토론은 기술적 우위만으로 답이 끝나지 않는다는 점을 드러낸다. S14의 철학적 탐구는 한 걸음 더 나아가, 기업의 정체성과 그 행동을 판단하는 기준 자체를 묻는다. 국가와 기업의 관계에서도 중요한 것은 계약의 존재뿐 아니라 기업이 무엇을 자신의 목적으로 받아들이는가이다.",
+      en: "Does monopoly profit sustain innovation, or encourage complacency? The S06 discussion shows why technological advantage cannot be the entire answer. S14 goes further by examining identity and the criteria used to judge action. State–firm relations therefore concern not just the existence of a contract, but what a company accepts as its own purpose.",
+    },
+    passages: [
+      { report: "S06", blocks: ["S06-L004-P001"], take: 2 },
+      { report: "S00", blocks: ["S00-L003-P007"] },
+    ],
+    related: ["S06", "S14"],
+    bridge: {
+      ko: "이 질문을 국가의 관점으로 옮기면, 기업의 기술과 정체성은 더 이상 기업 내부의 문제에 머물지 않는다.",
+      en: "Move this question to the state, and a firm's technology and identity cease to be purely internal matters.",
+    },
+  },
+  {
+    id: "capability",
+    mode: "world",
+    tint: [216, 226, 230],
+    title: {
+      ko: "국가의 힘은, 기업의 기술을 통해 작동하기도 한다.",
+      en: "National power can operate through corporate technology.",
+    },
+    intro: {
+      ko: "데이터를 모으는 능력, 통신망을 연결하는 능력, 반도체를 생산하고 자본을 움직이는 능력은 서로 다른 산업처럼 보인다. 그러나 국가의 전략적 선택 안에서는 군사·경제·외교 역량의 일부가 된다. S01과 S02가 살핀 정보화된 전장과 경제–안보 복합체는 기업의 역할이 완제품 납품에 한정되지 않는다는 문제의식으로 연결된다.",
+      en: "Collecting data, connecting communications, producing semiconductors and moving capital appear to belong to separate industries. Within a state's strategic choices, however, they become parts of military, economic and diplomatic capability. The information-centered battlespace and economic–security complex examined in S01 and S02 extend the firm's role beyond supplying finished equipment.",
+    },
+    passages: [{ report: "S00", blocks: ["S00-L002-P011"], take: 1 }],
+    related: ["S01", "S02"],
+    note: {
+      ko: "S00이 제안하는 ‘기업의 패권화’는 해석의 틀이다. 기술 역량이 존재한다는 사실과 그것이 특정 외교·군사적 결과를 일으켰다는 주장은 구분해서 살펴본다.",
+      en: "S00's ‘corporate hegemonization’ is an interpretive framework. Possessing a capability and causing a particular diplomatic or military outcome are distinct claims.",
+    },
+    bridge: {
+      ko: "그렇다면 국가는 기업의 역량을 어떻게 자기 전략과 연결하는가. 미국과 중국은 같은 질문에 서로 다른 방식으로 접근한다.",
+      en: "How, then, does a state connect corporate capability to its own strategy? America and China approach the same question through different mechanisms.",
+    },
+  },
+  {
+    id: "us-mission",
+    mode: "world",
+    country: "us",
+    tint: [220, 228, 221],
+    title: {
+      ko: "미국: 조달 계약을 넘어서는 결속을 묻다.",
+      en: "America: asking what binds a firm beyond procurement.",
+    },
+    intro: {
+      ko: "S00은 Palantir와 Anduril을 단순한 소프트웨어·방산 기업이 아니라, 미국과 우방의 안보라는 목적을 기업의 정체성과 연결하는 사례로 읽는다. 여기서 살필 전략은 정부가 기술을 구매한다는 사실에 그치지 않는다. 기업의 제품 개발, 장기 수요, 실제 사용 경험, 기업이 공개적으로 설명하는 사명이 어떻게 맞물리는지가 분석의 대상이다.",
+      en: "S00 reads Palantir and Anduril not simply as software and defense suppliers, but as cases linking corporate identity to American and allied security. The mechanism is more than a government buying technology: it concerns the interaction of product development, long-term demand, operational experience and the mission a firm publicly describes.",
+    },
+    passages: [
+      { report: "S00", blocks: ["S00-L005-P009", "S00-L005-P010"] },
+      { report: "S01", blocks: [], readingIds: ["S01-R002-P006"] },
+    ],
+    related: ["S02", "S01", "S00"],
+    note: {
+      ko: "계약 수주는 철학적 충성심이 수주를 일으켰다는 증거와 같지 않다. 계약의 최대 한도, 실제 발주액, 인식 매출도 각각 다른 값이다. 원문에 등장하는 계약액·매출 비중은 기준 시점과 공시를 별도로 확인해야 한다.",
+      en: "An award does not by itself establish that philosophical loyalty caused it. Contract ceilings, actual orders and recognized revenue are different quantities. Amounts and revenue shares mentioned in the source require dated procurement records and filings.",
+    },
+    bridge: {
+      ko: "개별 기업의 사명은 더 큰 국가 프로젝트 안에서 다른 기업의 기술과 연결된다.",
+      en: "A firm's mission can connect its technology to other firms through a larger national project.",
+    },
+  },
+  {
+    id: "us-dome",
+    mode: "world",
+    country: "us",
+    tint: [215, 225, 224],
+    title: {
+      ko: "Golden Dome: 개별 기술을 하나의 국가 목표로 묶는 구상.",
+      en: "Golden Dome: bringing separate technologies under one national objective.",
+    },
+    intro: {
+      ko: "S03과 S13은 미사일 방어를 감지·통신·지휘통제·요격이 연결되는 체계로 분석한다. 이 관점에서 위성, 데이터 처리, 네트워크, 요격 하드웨어는 개별 시장의 제품이면서 동시에 국가 방어라는 공통 목표의 구성요소가 된다. S00은 이런 프로젝트가 기업에 수요와 협업 기회를 주는 동시에 국가적 목적을 부여할 수 있다고 해석한다.",
+      en: "S03 and S13 analyze missile defense as a system connecting detection, communications, command and control, and interception. Satellites, data processing, networks and interceptor hardware are products in separate markets, yet also components of a shared defense objective. S00 interprets such projects as potential sources of demand, collaboration and national purpose for firms.",
+    },
+    passages: [{ report: "S13", blocks: [], readingIds: ["S13-R001-P007"] }],
+    related: ["S03", "S13", "S11"],
+    note: {
+      ko: "5쪽 자료 S03과 6쪽 자료 S13은 별개의 문서다. 정책 구상, 제안된 기술 역할, 확정 계약, 배치 완료를 구분한다. 원문에 기업이 등장한다는 이유로 그 기업의 사업 참여가 확정됐다고 표시하지 않는다.",
+      en: "The five-page S03 and six-page S13 are distinct documents. A policy concept, proposed technical role, awarded contract and completed deployment are different stages. Mention in a source is not confirmation of participation.",
+    },
+    bridge: {
+      ko: "국가와 기업의 결속은 방산에만 나타나는가. 금융으로 이동하면 같은 질문이 다른 형태로 드러난다.",
+      en: "Is this relationship confined to defense? Moving to finance reveals the same question in another form.",
+    },
+  },
+  {
+    id: "us-finance",
+    mode: "world",
+    country: "us",
+    tint: [227, 229, 216],
+    title: {
+      ko: "Tether: 기업의 준비자산을 금융 패권의 문제로 읽다.",
+      en: "Tether: reading corporate reserves through monetary power.",
+    },
+    intro: {
+      ko: "S05는 한국 경제의 신뢰와 자본 이동에서 출발해 스테이블코인의 정책적 의미를 묻는다. S00은 Tether의 달러 연동 코인과 미 국채 준비자산을 연결하며, 민간 발행자의 사업이 달러 기반 금융 네트워크를 확대할 수 있다는 논지를 제시한다. 이때 기업의 성장과 국가의 금융적 영향력이 같은 방향으로 움직일 수 있다는 점이 ‘기업 패권’이라는 질문에 들어온다.",
+      en: "S05 begins with trust and capital movement in Korea and asks about stablecoins' policy significance. S00 connects Tether's dollar-pegged coins with Treasury reserve assets, proposing that a private issuer's business can expand a dollar-based financial network. The possibility that corporate growth and national financial influence move together becomes part of the corporate-hegemony question.",
+    },
+    passages: [{ report: "S05", blocks: ["S05-L004-P010"], take: 1 }],
+    related: ["S05", "S00"],
+    note: {
+      ko: "국채 보유가 특정 발행자의 면책이나 독점 보장을 뜻하지는 않는다. GENIUS Act 등 관련 법제는 발행자 요건·준비자산·감독 조항과 함께 읽어야 하며, S00의 ‘특혜’라는 해석과 법률이 실제로 부여하는 권리는 구분한다.",
+      en: "Holding Treasuries does not establish immunity or a guaranteed monopoly for an issuer. The GENIUS Act and related legislation must be read through issuer eligibility, reserves and supervision, distinguishing S00's interpretation of privilege from rights actually conferred by law.",
+    },
+    references: [
+      {
+        title: "GENIUS Act — Public Law 119–27",
+        url: "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm",
+      },
+    ],
+    bridge: {
+      ko: "금융에서 산업 기반으로 시선을 옮겨도, 시장의 효율과 국가의 전략이 만나는 지점은 남는다.",
+      en: "Moving from finance to industrial capacity, the meeting point of market efficiency and national strategy remains.",
+    },
+  },
+  {
+    id: "us-ships",
+    mode: "world",
+    country: "us",
+    tint: [221, 228, 217],
+    title: {
+      ko: "조선업: 시장의 비용과 국가가 남겨두려는 역량.",
+      en: "Shipbuilding: market costs and the capacity a state wants to retain.",
+    },
+    intro: {
+      ko: "S00은 미국 조선업을 국가가 전략적 생산 기반을 어떻게 유지하는지 묻는 사례로 사용한다. Jones Act의 연안 운송 규정과 조선·쇄빙선 관련 재정 지출은 서로 다른 수단이다. 하나는 특정 운송 시장의 참여 조건에 관한 것이고, 다른 하나는 예산을 통해 생산·조달 역량을 확보하는 방식이다. 이를 같은 ‘특혜’라는 개념으로 묶더라도, 각각의 법적 효과와 수혜 구조는 따로 분석해야 한다.",
+      en: "S00 uses American shipbuilding to ask how a state preserves strategic productive capacity. Jones Act coastwise-shipping rules and shipbuilding or icebreaker appropriations are different instruments: one defines conditions for participating in a transport market, while the other funds production and procurement. Even when grouped under ‘privilege,’ their legal effects and beneficiaries require separate analysis.",
+    },
+    passages: [{ report: "S00", blocks: ["S00-L005-P019"] }],
+    related: ["S00", "S11"],
+    note: {
+      ko: "Jones Act의 적용 범위와 Public Law 119–21의 예산 항목을 구분한다. 예산 배정은 특정 기업에 실제 지급된 금액과 다르며, 산업 보호를 곧 반독점법 면제나 포괄적 면책으로 표현하지 않는다.",
+      en: "Distinguish the Jones Act's scope from appropriations in Public Law 119–21. Appropriated funding is not the same as money actually paid to a named company, and industrial protection is not blanket antitrust exemption or immunity.",
+    },
+    references: [
+      {
+        title: "46 U.S.C. §55102 — Transportation of merchandise",
+        url: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title46-section55102&num=0&edition=prelim",
+      },
+      {
+        title: "Public Law 119–21",
+        url: "https://www.govinfo.gov/content/pkg/PLAW-119publ21/html/PLAW-119publ21.htm",
+      },
+    ],
+    bridge: {
+      ko: "미국을 ‘대의와 특혜’로 읽었다면, 중국에서는 지분·조직·공간을 통한 연결을 함께 살펴봐야 한다.",
+      en: "If cause and privilege frame the American comparison, China's comparison also requires ownership, organization and space.",
+    },
+  },
+  {
+    id: "china-ownership",
+    mode: "world",
+    country: "cn",
+    tint: [229, 224, 215],
+    title: {
+      ko: "중국: 기업의 확장을 지분과 산업의 연결망으로 보다.",
+      en: "China: reading corporate expansion through ownership and industrial networks.",
+    },
+    intro: {
+      ko: "S00은 Geely와 Mercedes-Benz의 관계, Smart 합작, 파워트레인 협력, Tencent의 게임 산업 지분을 기업을 통한 분야 확장이라는 틀로 읽는다. 여기서 분석 단위는 기업의 국적 하나가 아니다. 누가 지분을 보유하는지, 이사회와 계약에서 어떤 권리를 갖는지, 제품과 기술의 어느 부분을 함께 만드는지가 중요하다. 브랜드를 유지한 채 기술·생산·유통의 연결이 바뀔 수 있다는 점이 연구의 초점이다.",
+      en: "S00 reads Geely–Mercedes relationships, the Smart venture, powertrain collaboration and Tencent's gaming investments as sectoral expansion through firms. Nationality alone is not the unit of analysis. Ownership, board and contractual rights, and the technologies or products jointly developed matter. The inquiry asks how technology, production and distribution can change while a brand remains.",
+    },
+    passages: [{ report: "S00", blocks: ["S00-L004-P013", "S00-L004-P014"] }],
+    related: ["S00", "S08"],
+    note: {
+      ko: "최대 주주와 경영 지배권은 같지 않고, 서로 다른 중국 투자자의 지분을 합산한다고 공동 통제가 입증되지는 않는다. 원문의 지분율·파워트레인·게임 개발사 관련 서술은 기업별 공시와 기준 시점을 나누어 확인할 항목이다.",
+      en: "The largest shareholder is not necessarily a controlling shareholder. Adding stakes held by different Chinese investors does not establish joint control. Ownership percentages, powertrain claims and game-developer identities in the source need company-specific, dated verification.",
+    },
+    bridge: {
+      ko: "지분은 하나의 연결 방식이다. 조직과 제도의 차이를 함께 봐야, 기업의 행동을 국가의 의도와 너무 쉽게 동일시하지 않을 수 있다.",
+      en: "Equity is one form of connection. Organizational and institutional differences matter if corporate conduct is not to be equated too readily with state intention.",
+    },
+  },
+  {
+    id: "china-governance",
+    mode: "world",
+    country: "cn",
+    tint: [225, 222, 212],
+    title: {
+      ko: "국유와 민간, 당 조직과 경영권은 어떻게 다른가.",
+      en: "State ownership, private ownership and organizational control are different questions.",
+    },
+    intro: {
+      ko: "S00은 ICBC·CCB·CSSC 같은 국유기업과 Tencent·Alibaba·Huawei·BYD 같은 기업을 함께 비교한다. 그러나 국유 지분, 당 조직의 존재, 이사회 의사결정, 국가의 개별 사업 지시는 동일한 증거가 아니다. 국가–기업 결속을 분석하려면 이 층위들을 나눠야 한다. 같은 국적의 기업들이 모두 같은 방식으로 움직인다는 가정 대신, 각 기업의 소유와 조직, 자금과 계약을 연결해 보는 접근이다.",
+      en: "S00 compares state-owned firms such as ICBC, CCB and CSSC with Tencent, Alibaba, Huawei and BYD. State equity, a Party organization, board decision-making and a specific government instruction are not equivalent evidence. Studying state–firm cohesion requires separating these levels and connecting company-specific ownership, organization, finance and contracts rather than assuming all firms of one nationality act identically.",
+    },
+    passages: [],
+    related: ["S00", "S08"],
+    note: {
+      ko: "상장기업 지배구조 규정은 국유기업과 민간기업에 같은 조항이 적용되는지까지 확인해야 한다. 당 조직을 공안 사무소와 혼동하거나, 조직의 존재만으로 특정 해외 투자의 국가 지시를 단정하지 않는다.",
+      en: "Governance rules must be checked for differences between state-owned and private firms. Party organizations are not public-security offices, and their existence alone does not establish state direction of a particular foreign investment.",
+    },
+    bridge: {
+      ko: "이런 연결을 지도로 옮기면, 투자와 사업권이 지리적 접근의 문제로 확장된다.",
+      en: "Place those connections on a map, and investment and commercial rights become questions of geographic access.",
+    },
+  },
+  {
+    id: "china-arctic",
+    mode: "arctic",
+    country: "cn",
+    tint: [210, 225, 229],
+    title: {
+      ko: "그린란드와 북극: 투자 지점과 항로를 구분하며 연결하다.",
+      en: "Greenland and the Arctic: connect the questions, distinguish the routes.",
+    },
+    intro: {
+      ko: "S00과 S08은 CCCC의 그린란드 공항 사업 접근과 Shenghe Resources의 광물 관련 지분을 다룬다. 공항 투자와 광산 지분은 서로 다른 계약이지만, 접근권·자원·물류라는 더 큰 질문 안에서 연결된다. 중국의 2018년 북극 정책은 이 사례를 읽는 국가 수준의 배경이다. 지도는 그린란드의 투자 검토 지점과 러시아 북쪽을 지나는 개략 북극 항로를 구분해 보여준다.",
+      en: "S00 and S08 discuss CCCC's approach to Greenland airport projects and Shenghe Resources' mineral-related stake. Airport investment and mining equity are different arrangements, connected by broader questions about access, resources and logistics. China's 2018 Arctic policy supplies a state-level context. The map distinguishes Greenland investment locations from an illustrative Arctic route north of Russia.",
+    },
+    passages: [{ report: "S08", blocks: [], readingIds: ["S08-R001-P010"] }],
+    related: ["S08", "S00"],
+    note: {
+      ko: "제안된 사업을 완공·운영 중인 시설로 표시하지 않는다. 공항 입찰의 철회와 광물 프로젝트의 지분·규제 상태는 각각 확인할 항목이다. 강조된 항로는 실제 선박 항적이 아니며 그린란드 공항을 연결하는 운항로도 아니다.",
+      en: "Proposals are not shown as completed or operating facilities. Airport-bid withdrawal and mining ownership or regulatory status require separate checks. The highlighted route is not an observed vessel track or a service linking Greenland airports.",
+    },
+    references: [
+      {
+        title: "China's Arctic Policy (2018 white paper)",
+        url: "https://english.www.gov.cn/archive/white_paper/2018/01/26/content_281476026660336.htm",
+      },
+    ],
+    bridge: {
+      ko: "북극에서 접근권을 살폈다면, 동남아에서는 거래가 현지의 정치·군사적 관계와 만나는 방식을 묻는다.",
+      en: "After access in the Arctic, Southeast Asia raises questions about how transactions meet local political and military relationships.",
+    },
+  },
+  {
+    id: "china-myanmar",
+    mode: "world",
+    country: "cn",
+    tint: [224, 228, 211],
+    title: {
+      ko: "미얀마: 기업의 공급 관계와 정권의 의존성을 함께 보다.",
+      en: "Myanmar: examine supply relationships alongside regime dependence.",
+    },
+    intro: {
+      ko: "S08의 미얀마 분석은 AVIC·NORINCO·China South Industries와 같은 공급자, 무기와 부품, 수령 주체를 연결해 정권 생존이라는 상위 맥락에서 읽는다. 화면의 선은 이런 분석 관계를 나타낸다. 공급망이 존재한다는 사실, 특정 장비가 인도됐다는 사실, 국가가 정권을 구제하려 했다는 해석은 서로 다른 층위이므로 같은 색의 선 하나로 확정하지 않는다.",
+      en: "S08 places suppliers such as AVIC, NORINCO and China South Industries, weapons and components, and recipients within the larger context of regime survival. The line on screen represents that analytical relationship. A supply chain, delivery of a particular weapon and an interpretation of state intent occupy different evidentiary levels.",
+    },
+    passages: [{ report: "S08", blocks: ["S08-L003-P001"], take: 1 }],
+    related: ["S08", "S11"],
+    note: {
+      ko: "위 인용은 S08에 보고된 주장이다. 금액·기종·이동 경로·외교적 개입의 인과관계는 독립 검증 전이다. 지도는 국가 수준의 개략 위치이며 특정 무기의 실제 운송 항적이 아니다.",
+      en: "The quoted passage reports S08's claims. Amounts, aircraft types, delivery paths and causal claims about diplomatic intervention have not been independently verified here. Map locations are approximate country references, not observed weapons shipments.",
+    },
+    references: [
+      {
+        title: "UN Special Rapporteur on Myanmar — source collection",
+        url: "https://www.ohchr.org/en/special-procedures/sr-myanmar",
+      },
+    ],
+    bridge: {
+      ko: "같은 질문은 군수 공급을 넘어 토지와 인프라의 관계에서도 반복된다.",
+      en: "The same question recurs beyond arms supply, in land and infrastructure.",
+    },
+  },
+  {
+    id: "china-cambodia",
+    mode: "world",
+    country: "cn",
+    tint: [227, 227, 211],
+    title: {
+      ko: "캄보디아: 인접성과 통제권을 혼동하지 않기.",
+      en: "Cambodia: proximity and control are not the same.",
+    },
+    intro: {
+      ko: "S08은 Prince Group·Canopy Sands의 상업적 개발과 Ream 해군기지 주변 공간을 연결해 분석한다. 이 사례의 방법론적 의미는 부지 경계와 시설, 사업 주체와 시간을 같은 지도로 묶어 보는 데 있다. 다만 지리적으로 인접하거나 일정이 겹친다는 이유만으로 자금 지원·기지 통제·국가의 지시가 입증되는 것은 아니다. 관계를 발견하는 단계와 그 관계의 의미를 입증하는 단계를 분리해야 한다.",
+      en: "S08 connects Prince Group and Canopy Sands' commercial development with the area around Ream Naval Base. Its methodological interest lies in bringing boundaries, facilities, actors and time into one map. Geographic proximity or coinciding schedules, however, do not themselves establish financing, base control or state instruction. Finding a relationship and demonstrating its meaning are separate steps.",
+    },
+    passages: [],
+    related: ["S08", "S15"],
+    note: {
+      ko: "시설 경계 원자료와 계약서가 이 사이트에 제공된 것은 아니다. 현 단계에서는 원문의 분석 대상과 연결 논리를 설명하며, 민간 개발사가 군사기지를 통제한다고 확정 표시하지 않는다.",
+      en: "Underlying facility boundaries and contracts have not been supplied to this site. This scene explains the source's analytical question and does not assert that a commercial developer controls a military base.",
+    },
+    bridge: {
+      ko: "이 사례들을 한국에 적용하려면 ‘미국 또는 중국을 따라야 한다’는 결론보다, 어떤 역량을 어떻게 유지할지를 구체적으로 물어야 한다.",
+      en: "Applying these cases to Korea requires a more specific question than which country to imitate: what capability should be retained, and how?",
+    },
+  },
+  {
+    id: "korea-chips",
+    mode: "world",
+    country: "kr",
+    tint: [215, 230, 218],
+    title: {
+      ko: "한국의 반도체: 기술 우위만으로 결정되지 않는 생산의 조건.",
+      en: "Korean semiconductors: production depends on more than technical advantage.",
+    },
+    intro: {
+      ko: "삼성전자와 SK하이닉스의 사례는 국가와 기업의 결속을 생산 현장의 문제로 바꾼다. S16은 수출통제가 해외 공장의 장비 반입, 고객과 시장 선택, 투자 회수, 준수 비용에 어떤 경로로 영향을 미치는지 설명한다. S00의 안보 자산이라는 관점은 여기서 구체적인 경영 의사결정과 만난다. 기업을 지키려는 정책은 생산·공급망·규정의 예측 가능성까지 다뤄야 한다는 질문이다.",
+      en: "Samsung Electronics and SK Hynix turn the question of state–firm relations into a production problem. S16 traces how export controls affect equipment access, customers and markets, investment returns and compliance costs. S00's security-asset perspective meets concrete management decisions: protecting a firm also requires attention to production, supply chains and regulatory predictability.",
+    },
+    passages: [{ report: "S16", blocks: ["S16-L002-P001"], take: 5 }],
+    related: ["S16", "S00"],
+    note: {
+      ko: "S16은 수출 증감만으로 수출통제의 효과를 단정하지 않는다. AI 수요·제품 가격·시장 구성과 정책의 영향을 구분한다. 2023년 VEU 관련 사례도 현재 허가 상태를 자동으로 뜻하지 않는다.",
+      en: "S16 does not infer the effects of export controls from export changes alone. AI demand, prices and market composition are separate influences. The 2023 VEU example does not automatically describe current authorization.",
+    },
+    bridge: {
+      ko: "공장과 장비에서 보였던 관계는 플랫폼과 데이터의 소유·운영에서도 다시 드러난다.",
+      en: "The relationship visible in factories and equipment reappears in the ownership and operation of platforms and data.",
+    },
+  },
+  {
+    id: "korea-platforms",
+    mode: "world",
+    country: "kr",
+    tint: [219, 228, 222],
+    title: {
+      ko: "LINE·핀테크: 기술의 국적과 지배구조의 국적 사이.",
+      en: "LINE and fintech: technology, ownership and jurisdiction can diverge.",
+    },
+    intro: {
+      ko: "S00은 Naver와 LINE, Viva Republica와 Toss를 기술·데이터·자본의 이동이라는 질문 안에 놓는다. 플랫폼의 이용자가 있는 곳, 서비스를 운영하는 법인, 지분을 가진 주주, 데이터를 감독하는 제도는 서로 다를 수 있다. 이들을 단순히 ‘한국 기업’ 또는 ‘해외 기업’으로 나누면 기업의 역량이 실제로 어디에 남는지 설명하기 어렵다. 지분과 의결권, 운영 계약과 규제 관할을 함께 살펴야 하는 이유다.",
+      en: "S00 places Naver and LINE, and Viva Republica and Toss, within questions about technology, data and capital movement. Users, operating entities, shareholders and data regulators can sit in different jurisdictions. Simply labeling a firm Korean or foreign does not explain where its capability remains. Equity, voting rights, operating agreements and regulatory jurisdiction must be considered together.",
+    },
+    passages: [],
+    related: ["S00", "S05"],
+    note: {
+      ko: "행정지도·보안 개선 요구·지분 매각 요구·매각 완료는 서로 다른 사건이다. 특정 시점의 외국인 지분만으로 데이터 유출이나 국가의 통제를 입증하지 않는다.",
+      en: "Administrative guidance, security remediation, a request to reconsider ownership and a completed sale are different events. Foreign ownership at a given date does not alone establish data leakage or state control.",
+    },
+    bridge: {
+      ko: "소유 구조가 복잡한 만큼, 규제의 효과 역시 하나의 선으로 단정할 수 없다.",
+      en: "As ownership becomes more complex, regulation's effects likewise resist a single causal arrow.",
+    },
+  },
+  {
+    id: "korea-regulation",
+    mode: "world",
+    country: "kr",
+    tint: [228, 227, 218],
+    title: {
+      ko: "타다·쿠팡·카카오: 규제의 목적과 결과를 나누어 묻다.",
+      en: "Tada, Coupang and Kakao: distinguish regulation's goals from its effects.",
+    },
+    intro: {
+      ko: "S00은 타다의 규제 논쟁, 쿠팡의 상장·법인 구조, 카카오와 경쟁의 문제를 기업 활동의 제도적 환경으로 연결한다. 저자가 묻는 것은 규제가 기업의 기술과 경쟁력을 약화시키고, 의도와 달리 기존 사업자의 힘을 키울 수 있는가이다. 이 논지를 살리되 판결과 법 개정의 시점, 사건 전후의 시장 구조, 기업의 별도 경영 판단을 나눠 살펴본다. 규제가 존재했다는 사실만으로 기업의 이동이나 경쟁자의 성장을 모두 설명할 수는 없다.",
+      en: "S00 connects Tada's regulatory controversy, Coupang's listing and legal structure, and Kakao's competitive position as questions about firms' institutional environment. It asks whether regulation can weaken technological capability and unintentionally strengthen incumbents. The argument requires separating court decisions, legislation, market structure and independent management choices. The presence of regulation alone cannot explain every relocation or competitor's growth.",
+    },
+    passages: [{ report: "S00", blocks: ["S00-L003-P016"] }],
+    related: ["S00", "S14"],
+    note: {
+      ko: "미국 상장을 본사 이전의 단일 원인으로 표현하거나, 법적 판단과 시장 결과를 같은 사건으로 합치지 않는다. 이 부분은 S00의 정책 비판이며, 개별 인과관계의 실증 완료를 뜻하지 않는다.",
+      en: "A U.S. listing is not treated as the sole cause of headquarters relocation, and legal decisions are not merged with market outcomes. This is S00's policy critique, not a completed causal identification.",
+    },
+    bridge: {
+      ko: "그렇다면 기업에 무엇을 허용하고 무엇을 요구해야 하는가. 방산은 기술·수익·국가 목적이 가장 직접적으로 만나는 비교 대상이다.",
+      en: "What should firms be allowed, and what should be expected of them? Defense provides a direct meeting point of technology, profit and national purpose.",
+    },
+  },
+  {
+    id: "korea-defense",
+    mode: "world",
+    country: "kr",
+    tint: [216, 229, 217],
+    title: {
+      ko: "K-방산: 수출의 성공을 넘어 전략의 방향을 묻다.",
+      en: "K-defense: ask about strategic direction beyond export success.",
+    },
+    intro: {
+      ko: "S00은 Hanwha Aerospace와 LIG Nex1 등을 국가의 목적과 기업의 사업 방향이 어떻게 만나는지 묻는 대상으로 삼는다. S11은 기술군사동맹과 전쟁 억제의 관점으로, S17은 기업의 재무·전략 지표를 비교하는 관점으로 이 질문에 연결된다. S17은 한화의 폴란드 K9·천무 수출을 생산·수요의 성장으로, Palantir의 구독형 소프트웨어를 낮은 한계비용의 성장으로 나누어 본다. 수출액이 늘어났다는 사실, 어떤 국가와 협력한다는 사실, 그 선택이 국가 안보에 바람직하다는 판단은 각각 다른 분석이다. 기업의 기술적 성장과 국가의 전략적 선택을 함께 평가하는 기준이 필요하다.",
+      en: "S00 uses Hanwha Aerospace and LIG Nex1 to ask how national purpose meets corporate strategy. S11 connects this to technological military alliances and deterrence; S17 adds comparative financial and strategic measures. It contrasts production and demand through Hanwha’s K9 and Chunmoo exports to Poland with low-marginal-cost growth through Palantir’s software subscriptions. Rising exports, cooperation with a particular state and a judgment that such cooperation benefits security are different analyses. Technical growth and national strategic choices need to be evaluated together.",
+    },
+    passages: [{ report: "S17", blocks: ["S17-L003-P001"], take: 2 }],
+    related: ["S11", "S17", "S00"],
+    note: {
+      ko: "S17의 PCA·VAR·클러스터 분석은 원문에 제시된 방법이다. 데이터·실행 코드의 재현 없이 통계적 인과나 예측력을 새로 검증했다고 표시하지 않는다. 수출 상대국에 대한 평가는 저자의 정책적 판단과 사실 관계를 구분한다.",
+      en: "PCA, VAR and clustering are methods reported in S17. Their causal or predictive performance is not presented as independently validated without reproducible data and code. Judgments about export partners are distinguished from descriptive facts.",
+    },
+    bridge: {
+      ko: "여기까지의 비교를 설득력 있게 만들려면, 발견한 연결을 다시 자료와 대조하는 단계가 필요하다.",
+      en: "To make these comparisons persuasive, the connections must return to evidence.",
+    },
+  },
+  {
+    id: "spatial-method",
+    mode: "world",
+    tint: [211, 226, 230],
+    title: {
+      ko: "연결을 그리는 것에서, 연결을 검증하는 것으로.",
+      en: "From drawing connections to testing them.",
+    },
+    intro: {
+      ko: "S08의 다중스케일 접근과 S15의 위성·해상 공간 데이터 분석은 같은 자료를 어떤 단위와 시간축으로 볼지 묻는다. 기업의 계약은 국지적 사건이지만 공급망·시설·정책과 함께 놓으면 다른 질문이 열린다. 반대로 지도에서 인접해 보이는 것만으로 의도와 통제가 증명되는 것은 아니다. 이 연구의 방법론적 과제는 관계를 많이 그리는 데 있지 않고, 어떤 연결은 관측이고 어떤 연결은 해석인지 구분하는 데 있다.",
+      en: "S08's multiscale approach and S15's satellite and maritime analysis ask how observational units and timelines shape interpretation. A contract is local, but placing it alongside supply chains, facilities and policy opens another question. Conversely, proximity on a map does not prove intent or control. The methodological task is not to draw more connections, but to distinguish observation from interpretation.",
+    },
+    passages: [{ report: "S15", blocks: ["S15-L003-P001"], take: 2 }],
+    related: ["S15", "S08", "S17"],
+    note: {
+      ko: "원문의 시설·항로 데이터셋이 실제로 제공된 것과 보고서에 언급된 것은 구분한다. 이 사이트의 개략 지도는 연구의 구조를 설명하며, 원자료나 관측 결과를 대신하지 않는다.",
+      en: "A dataset mentioned in a report is not the same as a supplied dataset. The site's schematic maps explain the research structure and do not replace underlying observations.",
+    },
+    bridge: {
+      ko: "이 구분을 거친 뒤에야, 앞선 모든 질문은 하나의 국가–기업 관계로 다시 모인다.",
+      en: "With that distinction, the preceding questions can converge on a single account of state–firm relations.",
+    },
+  },
+  {
+    id: "synthesis",
+    mode: "integration",
+    tint: [230, 232, 230],
+    title: {
+      ko: "기술과 정체성, 대의와 특혜. 국가–기업 관계를 다시 정의하다.",
+      en: "Technology and identity. Cause and privilege. Redefine the relationship.",
+    },
+    intro: {
+      ko: "S00의 결론은 국가와 기업을 별개의 이해관계자로만 보는 시각을 넘어서는 제안이다. 기업의 독자 기술은 국가의 역량과 연결되고, 기업의 정체성은 그 역량이 향하는 방향을 정한다. 국가는 그 기여를 인정하며 기업이 장기적으로 성장할 조건을 설계해야 한다는 것이 저자의 논지다. 기업의 지속가능성에서 출발한 질문은 이렇게 안보 파트너십이라는 주장으로 돌아온다.",
+      en: "S00 proposes moving beyond an account of states and firms as separate interest holders. Distinctive corporate technology connects to national capability, while identity shapes its direction. The state, the author argues, should recognize that contribution and create conditions for long-term corporate growth. The initial question of corporate sustainability returns as a proposal for a security partnership.",
+    },
+    passages: [
+      {
+        report: "S00",
+        blocks: ["S00-L006-P018", "S00-L006-P019", "S00-L006-P020"],
+      },
+    ],
+    related: ["S00", "S06", "S14", "S16"],
+    note: {
+      ko: "‘대의와 특혜’는 S00의 정책 제안이다. 위 비교 사례 전체의 인과관계가 입증됐다는 뜻은 아니다. 각 원문의 반론·메모·한계와 함께 읽을 수 있도록, 아래에서 모든 연구 전문으로 연결한다.",
+      en: "Cause and privilege are S00's policy proposal, not a claim that every causal relationship above has been established. The complete studies below preserve counterarguments, notes and limitations alongside the main argument.",
+    },
+    bridge: {
+      ko: "연구는 각각의 결과물로 남지만, 질문은 여기에서 하나로 이어진다.",
+      en: "The studies remain distinct works. Their questions form one connected inquiry.",
+    },
+  },
 ];

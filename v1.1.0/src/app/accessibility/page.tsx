@@ -31,8 +31,8 @@ export default function Accessibility() {
         </h1>
         <p>
           <L
-            en="Every research excerpt is available as HTML. No WebGL, animation or pointer gesture is required to access the content."
-            ko="모든 연구 발췌문은 HTML로 제공됩니다. WebGL, 애니메이션, 포인터 제스처 없이도 내용에 접근할 수 있습니다."
+            en="The essay and all thirteen Korean–English research editions are available as HTML. No animation or pointer gesture is required to read them."
+            ko="에세이와 13개 연구의 한국어·영어 전문은 HTML로 제공됩니다. 애니메이션이나 포인터 제스처 없이도 읽을 수 있습니다."
           />
         </p>
       </div>
@@ -53,26 +53,26 @@ export default function Accessibility() {
         <ul>
           <li>
             <L
-              en="On the narrative, press A while outside a control to reach the archive. Escape returns to the previous reading position after this shortcut. Wheel and touch gestures keep their native browser behavior."
-              ko="내러티브에서 컨트롤 밖에 있을 때 A 키로 서가에 접근합니다. 이 단축 탐색 후 Escape로 이전 읽기 위치로 돌아갑니다. 휠과 터치 제스처는 브라우저 기본 동작을 유지합니다."
+              en="Follow the essay's outline and country links to move between arguments. Wheel and touch gestures keep their native browser behavior."
+              ko="에세이의 흐름과 국가 링크로 논지를 이동합니다. 휠과 터치 제스처는 브라우저 기본 동작을 유지합니다."
             />
           </li>
           <li>
             <L
-              en="Tab moves between links and controls. Enter opens a folder."
-              ko="Tab으로 링크와 컨트롤을 이동하고 Enter로 폴더를 엽니다."
+              en="Tab moves between links and controls. Enter follows a research link or activates a button."
+              ko="Tab으로 링크와 컨트롤을 이동합니다. Enter로 연구 링크를 열거나 버튼을 실행합니다."
             />
           </li>
           <li>
             <L
-              en="Left and right arrow keys move between folders when focus is on the shelf."
-              ko="서가에 포커스가 있을 때 좌우 방향키로 폴더를 이동합니다."
+              en="Use the reader's Korean and English buttons to change language while keeping your current paragraph. Wide screens also support paired reading."
+              ko="리더의 한국어·English 버튼으로 현재 문단을 유지하며 언어를 바꿉니다. 넓은 화면에서는 나란히 읽기도 제공합니다."
             />
           </li>
           <li>
             <L
-              en="On touch screens, swipe the shelf horizontally. Vertical reading uses standard browser scrolling."
-              ko="터치 화면에서는 서가를 가로로 밀어 탐색합니다. 본문은 브라우저의 일반 세로 스크롤을 사용합니다."
+              en="On narrow screens, diagrams appear between paragraphs. Wide tables can scroll horizontally within their own region. PDF controls support page changes, zoom and download."
+              ko="좁은 화면에서는 문단 사이에 관계도를 배치합니다. 넓은 표는 표 영역 안에서 가로로 스크롤할 수 있습니다. PDF는 쪽 이동·확대·축소·다운로드를 지원합니다."
             />
           </li>
           <li>
@@ -87,8 +87,8 @@ export default function Accessibility() {
         </h2>
         <p>
           <L
-            en="A searchable list sits below the spatial shelf. Individual document URLs can be opened directly, reloaded and printed. With JavaScript disabled, the rendered text and document links remain available; interactive filtering and preferences require JavaScript."
-            ko="공간형 서가 아래에 검색 가능한 목록을 제공합니다. 각 문서는 직접 URL로 열고 새로고침하거나 인쇄할 수 있습니다. JavaScript를 끄더라도 렌더링된 본문과 문서 링크는 유지됩니다. 필터와 설정 변경에는 JavaScript가 필요합니다."
+            en="The archive provides a searchable research list. Individual document URLs can be opened directly, reloaded and printed. Without JavaScript, both language editions and PDF download links remain available. Filtering, language controls and the inline PDF canvas require JavaScript."
+            ko="아카이브에서 연구 목록을 검색할 수 있습니다. 각 문서는 직접 URL로 열고 새로고침하거나 인쇄할 수 있습니다. JavaScript를 끄더라도 양쪽 언어의 전문과 PDF 다운로드 링크는 유지됩니다. 필터·언어 조작·사이트 안의 PDF 캔버스에는 JavaScript가 필요합니다."
           />
         </p>
         <Link className="inline-link" href="/archive">

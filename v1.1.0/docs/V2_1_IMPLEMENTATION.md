@@ -1,26 +1,18 @@
-# v2.1.0 implementation checkpoint — 2026-10-22
+# v2.1.0 작업 재개·완료 기록 — 2026-10-22
 
-## Saved implementation
+토큰 중단 당시 남아 있던 코드·번역은 `df1cf6b`로 먼저 커밋·푸시했습니다.
+이후 읽기 위치 보정과 폰트 로딩, 네이티브 앵커 이동, 전문 프리페치,
+문장 강조와 표 가독성을 수정하고 최종 검증을 마쳤습니다.
 
-- All 13 reports have Korean reading editions and complete editorial English translations: 973 paired passages, with matching source fingerprints. English remains author-review-pending.
-- Coordinate-based PDF reading order restores S06 punctuation and S15 worksheet cells; the character-inventory audit accounts for documented running headers and the visually checked alpha glyph. Raw report JSON and original/PDF bytes are unchanged.
-- Parallel HTML reading, legacy paragraph anchors, contextual highlights, return-to-essay links, restored S14 tables, and an expandable self-hosted PDF.js canvas are implemented.
-- The archive defaults to 13 actual reports. Existing topic routes remain available.
-- The bilingual S00 essay has 18 connected narrative beats and specific US/China/Korea cases. One concept/world/Arctic/integration visual stage follows native scrolling, with mobile and reduced-motion alternatives.
-- Source claims, editorial interpretation and pending external verification are distinguished. Official-source requests were blocked by the environment proxy; inaccessible references are not independently verified.
+- 13개 연구 / 한·영 대응 문단 973개. 영어는 편집 번역·저자 최종 검수 전.
+- 기존 추출 JSON·PDF·보존 원본의 바이트와 해시 유지.
+- 빌드·타입·포맷, 단위 18개, Python 7개 통과.
+- 전체 브라우저 86개 통과 / 중복 6개 생략. 마지막 리더 보강 후 관련 12개 추가 통과.
+- Lighthouse 모바일 3회 성능 중앙값 96, 접근성 100.
 
-## Verification at checkpoint
+상세 구현·실측 수치·플랫폼 한계는 [V2_1_RELEASE.md](V2_1_RELEASE.md)를 따릅니다.
+외부 공식 자료의 독립 대조는 네트워크 차단으로 미완료이며, 저자의 번역 최종
+검수와 연구 수치의 재현도 별도 과제입니다. 이를 완료로 표시하지 않습니다.
 
-- Reading audit: all 13 documents / 973 translations pass source-fingerprint, coverage and character-inventory checks.
-- Unit tests: 18 passing in the preceding session.
-- Initial production build and an inline S06 PDF browser smoke check passed before the latest content/layout changes.
-- Final production build, browser regression suite, formatting and performance measurements must be rerun against the current tree. Do not infer their completion from the package version.
-
-## Resume and release gates
-
-1. Run formatting, type checking, unit tests and a production build from `v1.1.0/`.
-2. Start the fresh production build on port 3001 and run Playwright with `CHROME_PATH=/usr/bin/chromium E2E_BASE_URL=http://127.0.0.1:3001 npm run test:e2e`. Resolve real regressions; retain meaningful assertions.
-3. Measure mobile Lighthouse performance and accessibility; record actual results and any remaining limitations.
-4. Update release documentation, commit and push, then tag v2.1.0 only once the final checks are complete. Check the public Vercel deployment.
-
-The current checkpoint is intentionally saved before final release verification so work can resume after quota interruption. Do not regenerate reading paragraph IDs blindly: translations and old paragraph links depend on their current fingerprints and maps. No paid translation API, server, subscription or new infrastructure is required.
+읽기본을 무심코 재생성하지 마세요. 문단 ID·별칭·번역 지문 해시가 연결돼 있습니다.
+유료 서비스나 새 인프라는 필요하지 않습니다.
