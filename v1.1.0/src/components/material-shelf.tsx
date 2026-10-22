@@ -191,7 +191,7 @@ export function ResearchShelf({
     link?.scrollIntoView({
       block: "nearest",
       inline: "nearest",
-      behavior: reduced ? "instant" : "smooth",
+      behavior: "instant",
     });
   }
   const categories =
@@ -398,7 +398,7 @@ export function ResearchShelf({
                         data-folder-id={entry.id}
                         href={entry.href}
                         prefetch={false}
-                        aria-label={`${entry.id} · ${entry.title}`}
+                        aria-label={`${entry.id} ${entry.spine} ${entry.year} · ${entry.title}`}
                         onFocus={() => choose(entry.id)}
                         onPointerEnter={(event) => {
                           if (

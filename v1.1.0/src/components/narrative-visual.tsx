@@ -95,8 +95,8 @@ function RelationDiagram({
                 onClick={() => onSelect(`edge-${i}`)}
                 aria-label={
                   lang === "ko"
-                    ? `${step.ko} 연결 설명`
-                    : `Explain the ${step.en} connection`
+                    ? `연결을 살피기 · ${step.ko}`
+                    : `Examine connection · ${step.en}`
                 }
               >
                 <span aria-hidden="true">↓</span>
@@ -356,8 +356,16 @@ export function NarrativeVisual({ scene }: { scene: SceneMeta }) {
         <p>{visual.note[lang]}</p>
       </details>
       <noscript>
+        <style>{`.relation-diagram,.study-convergence,.map-scale-controls,.case-selection{display:none!important}.capability-expansion,.arctic-expansion{display:block!important}.scene-terrain{animation:none!important}`}</style>
         <div className="static-visual-explanation">
           <p>{visual.note[lang]}</p>
+          <ol>
+            {visual.steps.map((step, i) => (
+              <li key={i}>
+                {(actors[scene.id]?.[i] ?? step)[lang]} · {step[lang]}
+              </li>
+            ))}
+          </ol>
           {scene.id === "china-arctic" && (
             <p>
               {lang === "ko"

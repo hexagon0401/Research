@@ -9,11 +9,11 @@ test("the reading field stays paper, and pointer movement cannot move its geogra
     "china-myanmar",
   );
   await expect(page.locator(".story-chapter")).toHaveCount(6);
-  const map = page.locator("#visual-china-myanmar .terrain-world > g");
-  const before = await map.getAttribute("transform");
+  const map = page.locator("#visual-china-myanmar .terrain-world");
+  const before = await map.getAttribute("style");
   await page.mouse.move(200, 300);
   await page.mouse.move(900, 500);
-  expect(await map.getAttribute("transform")).toBe(before);
+  expect(await map.getAttribute("style")).toBe(before);
   expect(
     await page
       .locator("#main")

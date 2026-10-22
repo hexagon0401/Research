@@ -7,7 +7,7 @@ test("Arctic leaders never fill and screen-pixel labels remain bounded and separ
   const figure = page.locator("#visual-china-arctic");
   await expect(figure.locator(".map-label:not(:disabled)")).toHaveCount(3);
   const labels = figure.locator(".map-label:not(:disabled)");
-  await expect(labels.first()).toHaveAccessibleName("Nuuk");
+  await expect(labels.first()).toHaveAccessibleName(/Nuuk/);
   for (const width of [320, 390, 768, 1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 900 });
     await page.evaluate(() => document.fonts.ready);
@@ -125,8 +125,9 @@ test("source round trips and language changes keep the exact passage", async ({
   await page.locator("[data-return-to-essay]").first().click();
   await expect
     .poll(() =>
-      passage.evaluate((el) =>
-        Math.abs(el.getBoundingClientRect().top - before),
+      passage.evaluate(
+        (el, offset) => Math.abs(el.getBoundingClientRect().top - offset),
+        before,
       ),
     )
     .toBeLessThan(12);
@@ -136,8 +137,9 @@ test("source round trips and language changes keep the exact passage", async ({
   await page.evaluate(() => document.fonts.ready);
   await expect
     .poll(() =>
-      passage.evaluate((el) =>
-        Math.abs(el.getBoundingClientRect().top - before),
+      passage.evaluate(
+        (el, offset) => Math.abs(el.getBoundingClientRect().top - offset),
+        before,
       ),
     )
     .toBeLessThan(24);
@@ -145,8 +147,9 @@ test("source round trips and language changes keep the exact passage", async ({
   await page.goBack();
   await expect
     .poll(() =>
-      passage.evaluate((el) =>
-        Math.abs(el.getBoundingClientRect().top - before),
+      passage.evaluate(
+        (el, offset) => Math.abs(el.getBoundingClientRect().top - offset),
+        before,
       ),
     )
     .toBeLessThan(24);

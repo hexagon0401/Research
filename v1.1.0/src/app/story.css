@@ -2242,3 +2242,39 @@ html:not([data-motion]) .beat-reading {
 html:not([data-motion]) .is-emphasis .beat-reading {
   max-width: none;
 }
+/* Full-frame local SVG images are cached once and lazy-loaded below the fold. */
+.terrain-viewport {
+  display: block;
+  aspect-ratio: 720/520;
+  overflow: clip;
+}
+.terrain-viewport .essay-scene-diagram {
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 720/520;
+}
+.hero-atlas img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+html[data-motion="reduced"] .capability-expansion,
+html[data-motion="reduced"] .arctic-expansion {
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (prefers-reduced-motion: reduce) {
+  .capability-expansion,
+  .arctic-expansion {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.research-essay[data-motion="reduced"] .essay-beat {
+  display: block;
+}
+.research-essay[data-motion="reduced"] .case-visual {
+  position: static;
+}
+.research-essay[data-motion="reduced"] .capability-expansion,
+.research-essay[data-motion="reduced"] .arctic-expansion {
+  grid-template-columns: minmax(0, 1fr);
+}

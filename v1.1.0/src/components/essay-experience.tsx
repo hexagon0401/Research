@@ -8,8 +8,7 @@ import {
   useState,
 } from "react";
 import Link from "next/link";
-import { essay, type EssayBeat } from "@/content/essay";
-import atlas from "@/visuals/atlas.json";
+import type { EssayBeat } from "@/content/essay";
 import { chapterFor, storyChapters, storyVisuals } from "@/visuals/story";
 import { usePreferences } from "./preferences";
 export { SceneDiagram } from "./scene-diagram";
@@ -17,7 +16,9 @@ export type SceneMeta = Pick<
   EssayBeat,
   "id" | "title" | "mode" | "country" | "tint" | "related"
 > & { targets?: Record<string, string> };
-const Context = createContext<{ scene: SceneMeta | null }>({ scene: null });
+const Context = createContext<{ scene: SceneMeta | null; scenes: SceneMeta[] }>(
+  { scene: null, scenes: [] },
+);
 const clamp = (v: number) => Math.max(0, Math.min(1, v));
 export function EssayExperience({
   scenes,
@@ -30,10 +31,14 @@ export function EssayExperience({
   const [active, setActive] = useState(0);
   const { lang, reduced } = usePreferences();
   const lastLang = useRef(lang);
+  const lastReduced = useRef(reduced);
   const read = useRef({ id: scenes[0].id, fraction: 0, started: false });
   const passage = useRef<{ id: string; offset: number } | null>(null);
   useLayoutEffect(() => {
-    if (lastLang.current !== lang && read.current.started) {
+    if (
+      (lastLang.current !== lang || lastReduced.current !== reduced) &&
+      read.current.started
+    ) {
       const point = passage.current;
       const rect = document
         .getElementById(point?.id ?? read.current.id)
@@ -65,13 +70,15 @@ export function EssayExperience({
       document.fonts.ready.then(restore);
       document.fonts.addEventListener("loadingdone", restore, { once: true });
       lastLang.current = lang;
+      lastReduced.current = reduced;
       return () => {
         alive = false;
         document.fonts.removeEventListener("loadingdone", restore);
       };
     }
     lastLang.current = lang;
-  }, [lang]);
+    lastReduced.current = reduced;
+  }, [lang, reduced]);
   useEffect(() => {
     let alive = true;
     const save = (event: MouseEvent) => {
@@ -196,9 +203,11 @@ export function EssayExperience({
       const closest = passages
         .filter((el) => el.getBoundingClientRect().top <= viewport * 0.35)
         .at(-1);
-      passage.current = closest
-        ? { id: closest.id, offset: closest.getBoundingClientRect().top }
-        : null;
+      const anchor = closest ?? activeBeat;
+      passage.current = {
+        id: anchor.id,
+        offset: anchor.getBoundingClientRect().top,
+      };
       const emphases = Array.from(
         element!.querySelectorAll<HTMLElement>(".is-emphasis"),
       );
@@ -291,15 +300,20 @@ export function EssayExperience({
       document.getElementById(scene)?.scrollIntoView({ behavior: "instant" });
   }, []);
   return (
-    <Context.Provider value={{ scene: scenes[active] }}>
-      <main id="main" className="research-essay" ref={root}>
+    <Context.Provider value={{ scene: scenes[active], scenes }}>
+      <main
+        id="main"
+        className="research-essay"
+        data-motion={reduced ? "reduced" : "full"}
+        ref={root}
+      >
         {children}
       </main>
     </Context.Provider>
   );
 }
 export function StoryNavigation() {
-  const { scene } = useContext(Context);
+  const { scene, scenes } = useContext(Context);
   const { lang, setLang } = usePreferences();
   const menu = useRef<HTMLDetailsElement>(null);
   const chapter = chapterFor(scene?.id ?? "survival");
@@ -353,7 +367,7 @@ export function StoryNavigation() {
                   <span className="mono">{item.number}</span>
                   <span>{item.title[lang]}</span>
                 </a>
-                {essay
+                {scenes
                   .filter((beat) => item.beats.includes(beat.id))
                   .map((beat) => (
                     <a
@@ -411,26 +425,14 @@ export function StoryNavigation() {
 export function HeroAtlas() {
   return (
     <figure className="hero-atlas" aria-hidden="true">
-      <svg viewBox="0 0 720 520" width="720" height="520" fill="none">
-        <g className="hero-atlas-globe">
-          <circle cx="360" cy="258" r="202" className="geo-sphere" />
-          <path d={atlas.globe.grid} className="geo-grid" />
-          <path d={atlas.globe.land} className="geo-land" />
-        </g>
-        <path
-          d="M48 258h100M572 258h100M360 24v24M360 468v28"
-          className="geo-registration"
-        />
-        <path
-          d="M102 444h146"
-          className="hero-connection-line"
-          pathLength="1"
-        />
-        <rect x="94" y="436" width="16" height="16" className="geo-signal" />
-        <text x="124" y="476" className="diagram-footnote">
-          ONE QUESTION / DIFFERENT SCALES
-        </text>
-      </svg>
+      <img
+        src="/visuals/globe.svg"
+        width="720"
+        height="520"
+        alt=""
+        fetchPriority="high"
+        decoding="async"
+      />
     </figure>
   );
 }

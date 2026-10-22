@@ -21,7 +21,9 @@ test("library keeps missing books distinct from available research", async ({
   await page.getByRole("searchbox").fill("Thiel");
   await expect(page.locator(".collection-row")).toHaveCount(1);
   await page.getByRole("link", { name: /Zero to One/ }).click();
-  await expect(page.getByText("Not supplied", { exact: true })).toBeVisible();
+  await expect(
+    page.getByText("Not supplied", { exact: true }).first(),
+  ).toBeVisible();
   await expect(page.getByText("Not available", { exact: true })).toBeVisible();
 });
 test("home and document navigation survive without JavaScript", async ({

@@ -98,13 +98,28 @@ test("motion preferences retain reading position and system reduction wins", asy
     "korea-chips",
   );
   await page.evaluate(() => document.fonts.ready);
-  const y = await page.evaluate(() => scrollY);
+  const before = await page
+    .locator("#korea-chips")
+    .evaluate((el) => el.getBoundingClientRect().top);
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator("#main")).toHaveAttribute("data-motion", "reduced");
   await expect(
     page.getByRole("button", { name: /Reduce motion/ }),
   ).toBeDisabled();
-  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(5);
+  await expect(page.locator("#main")).toHaveAttribute(
+    "data-scene",
+    "korea-chips",
+  );
+  await expect
+    .poll(() =>
+      page
+        .locator("#korea-chips")
+        .evaluate(
+          (el, offset) => Math.abs(el.getBoundingClientRect().top - offset),
+          before,
+        ),
+    )
+    .toBeLessThan(12);
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await expect(page.locator("#main")).toHaveAttribute("data-motion", "full");
 });

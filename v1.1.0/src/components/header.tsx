@@ -13,11 +13,7 @@ export function Header() {
   }, [path]);
   return (
     <header className="site-header">
-      <Link
-        href="/"
-        className="brand"
-        aria-label="IIR — Integrated Independent Research"
-      >
+      <Link prefetch={false} href="/" className="brand">
         <Mark />
         <span>
           IIR
@@ -30,6 +26,7 @@ export function Header() {
       </Link>
       <nav aria-label={lang === "ko" ? "주 탐색" : "Main navigation"}>
         <Link
+          prefetch={false}
           href="/archive"
           aria-current={
             path.startsWith("/archive") || path.startsWith("/reports")
@@ -40,6 +37,7 @@ export function Header() {
           {lang === "ko" ? "연구 아카이브" : "Archive"}
         </Link>
         <Link
+          prefetch={false}
           href="/library"
           aria-current={path.startsWith("/library") ? "page" : undefined}
         >
@@ -60,13 +58,13 @@ export function Header() {
             <span aria-hidden="true">＋</span>
           </summary>
           <div className="header-more-panel">
-            <Link href="/about">
+            <Link prefetch={false} href="/about">
               {lang === "ko" ? "연구 소개" : "About the research"}
             </Link>
-            <Link href="/methods">
+            <Link prefetch={false} href="/methods">
               {lang === "ko" ? "방법론과 한계" : "Methods & limitations"}
             </Link>
-            <Link href="/accessibility">
+            <Link prefetch={false} href="/accessibility">
               {lang === "ko" ? "접근성" : "Accessibility"}
             </Link>
           </div>
