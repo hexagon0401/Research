@@ -5,7 +5,7 @@ import type { EssayBeat } from "@/content/essay";
 import points from "@/content/essay-map-points.json";
 import { researchConnections } from "@/content/research-connections";
 import { usePreferences } from "./preferences";
-export type SceneMeta = Pick<EssayBeat, "id" | "title" | "mode" | "country" | "tint" | "related">;
+export type SceneMeta = Pick<EssayBeat, "id" | "title" | "mode" | "country" | "tint" | "related"> & { targets?: Record<string,string> };
 const Context = createContext<{ scene: SceneMeta | null }>({ scene: null });
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const countries = [{ id: "us", target: "us-mission", name: "United States", ko: "미국" }, { id: "cn", target: "china-ownership", name: "China", ko: "중국" }, { id: "kr", target: "korea-chips", name: "South Korea", ko: "한국" }];
@@ -96,6 +96,7 @@ export function SceneDiagram({ scene, compact=false, preview }: { scene: SceneMe
  const { lang }=usePreferences();
  const country=preview??scene.country;
  const isArctic=scene.mode==="arctic";
+ const labels:Record<string,string>={"us-mission":"PALANTIR / ANDURIL · MISSION & PROCUREMENT","us-dome":"GOLDEN DOME · SENSING / DATA / INTERCEPTION","us-finance":"TETHER / USDT · DOLLAR RESERVES","us-ships":"JONES ACT · COASTWISE TRADE & CAPACITY","china-ownership":"GEELY / MERCEDES-BENZ / TENCENT","china-governance":"OWNERSHIP / ORGANIZATION / DECISIONS","china-myanmar":"AVIC / NORINCO · REPORTED SUPPLY RELATIONSHIP","china-cambodia":"CANOPY SANDS / REAM · SPATIAL RELATIONSHIP","korea-chips":"SAMSUNG / SK HYNIX · EXPORT CONTROLS","korea-platforms":"NAVER / LINE · OWNERSHIP & JURISDICTION","korea-regulation":"TADA / COUPANG / KAKAO · REGULATORY EFFECTS","korea-defense":"HANWHA / LIG NEX1 · STRATEGY & PERFORMANCE","spatial-method":"SATELLITE / AIS / ONTOLOGY · OBSERVATION & INFERENCE"};
  return <svg className={`essay-scene-diagram ${compact?"compact":""}`} viewBox={isArctic?"0 0 600 600":"0 0 600 400"} width="600" height={isArctic?600:400} role="img" aria-label={lang==="ko"?scene.title.ko:scene.title.en}>
   {scene.mode==="concept"||scene.mode==="integration"?<Concept integration={scene.mode==="integration"}/>:isArctic?<>
    <image href="/essay-maps/arctic.svg" width="600" height="600"/>
@@ -106,6 +107,7 @@ export function SceneDiagram({ scene, compact=false, preview }: { scene: SceneMe
    <image href="/essay-maps/world.svg" y="15" width="600" height="340"/>
    {Object.entries(points.pins).map(([id,p])=><g key={id} transform={`translate(${p[0]} ${p[1]+15})`} className={country===id?"essay-map-pin active":"essay-map-pin"}><circle r={country===id?12:5}/><path d="M-19 0h8m22 0h8M0-19v8m0 22v8"/><text x={id==="kr"?18:-18} y="-16" textAnchor={id==="kr"?"start":"end"}>{id.toUpperCase()}</text></g>)}
    {(scene.id==="china-myanmar"||scene.id==="china-cambodia")&&<path d={`M${points.pins.cn[0]} ${points.pins.cn[1]+15}L${points.pins[scene.id==="china-myanmar"?"mm":"kh"][0]} ${points.pins[scene.id==="china-myanmar"?"mm":"kh"][1]+15}`} fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="4 6"/>}
+   {labels[scene.id]&&<text x="30" y="352" fill="#0efb2e" fontSize="10">{labels[scene.id]}</text>}
    <text x="30" y="382" fill="#aebdae" fontSize="10">COUNTRY REFERENCES · NOT OBSERVED SHIPMENT TRACKS</text>
   </>}
  </svg>;
@@ -119,6 +121,6 @@ export function EssayVisual(){
   <div className="essay-visual-geometry" role="img" aria-label={lang==="ko"?scene.title.ko:scene.title.en}>{(["concept","world","arctic","integration"] as const).map(mode=><div key={mode} className={`essay-visual-layer mode-${mode}`} aria-hidden="true"><SceneDiagram scene={{...scene,mode}} preview={preview}/></div>)}</div>
   <p className="essay-visual-title">{lang==="ko"?scene.title.ko:scene.title.en}</p>
   <nav className="essay-country-nav" aria-label="Country comparisons">{countries.map(c=><a key={c.id} href={`#${c.target}`} aria-current={scene.country===c.id?"location":undefined} onPointerEnter={()=>setPreview(c.id)} onPointerLeave={()=>setPreview(null)} onFocus={()=>setPreview(c.id)} onBlur={()=>setPreview(null)}>{lang==="ko"?c.ko:c.name}</a>)}</nav>
-  <div className="essay-visual-sources"><span>{lang==="ko"?"연결되는 원문":"READ THE CONNECTION"}</span><div>{scene.related.map(id=><Link key={id} href={`/reports/${id}`} onFocus={()=>setFocused(id)} onBlur={()=>setFocused(null)} onPointerEnter={()=>setFocused(id)} onPointerLeave={()=>setFocused(null)}>{id} ↗</Link>)}</div><p>{displayed?(lang==="ko"?displayed.ko:displayed.en):(lang==="ko"?"연구를 선택하면 사이트 안에서 한·영 전문과 PDF를 읽을 수 있습니다.":"Open a study to read its Korean and English full text and PDF here.")}</p></div>
+  <div className="essay-visual-sources"><span>{lang==="ko"?"연결되는 원문":"READ THE CONNECTION"}</span><div>{scene.related.map(id=><Link key={id} href={scene.targets?.[id]??`/reports/${id}`} onFocus={()=>setFocused(id)} onBlur={()=>setFocused(null)} onPointerEnter={()=>setFocused(id)} onPointerLeave={()=>setFocused(null)}>{id} ↗</Link>)}</div><p>{displayed?(lang==="ko"?displayed.ko:displayed.en):(lang==="ko"?"연구를 선택하면 사이트 안에서 한·영 전문과 PDF를 읽을 수 있습니다.":"Open a study to read its Korean and English full text and PDF here.")}</p></div>
  </aside>;
 }

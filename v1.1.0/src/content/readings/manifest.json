@@ -1,0 +1,98 @@
+{
+  "revision": "reading-002",
+  "translationStatus": "editorial-author-review-pending",
+  "reports": [
+    {
+      "id": "S00",
+      "paragraphCount": 192,
+      "translatedCount": 192,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S01",
+      "paragraphCount": 30,
+      "translatedCount": 30,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S02",
+      "paragraphCount": 75,
+      "translatedCount": 75,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S03",
+      "paragraphCount": 44,
+      "translatedCount": 44,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S05",
+      "paragraphCount": 98,
+      "translatedCount": 98,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S06",
+      "paragraphCount": 30,
+      "translatedCount": 30,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S08",
+      "paragraphCount": 29,
+      "translatedCount": 29,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S11",
+      "paragraphCount": 90,
+      "translatedCount": 90,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S13",
+      "paragraphCount": 60,
+      "translatedCount": 60,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S14",
+      "paragraphCount": 97,
+      "translatedCount": 97,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S15",
+      "paragraphCount": 141,
+      "translatedCount": 141,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S16",
+      "paragraphCount": 30,
+      "translatedCount": 30,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    },
+    {
+      "id": "S17",
+      "paragraphCount": 57,
+      "translatedCount": 57,
+      "sourceCharacterCoverage": "complete",
+      "translationStatus": "editorial-author-review-pending"
+    }
+  ],
+  "totalParagraphs": 973
+}

@@ -16,7 +16,7 @@ const geist = localFont({
 export const metadata: Metadata = {
   title: { default: "IIR — The Architecture of Power", template: "%s — IIR" },
   description:
-    "An evolving research atlas exploring corporate resilience, technological advantage and responsible state–firm partnerships. A planning prototype with transparent evidence status.",
+    "An integrated inquiry into technology, corporate identity and national power. Read the S00 essay and thirteen Korean–English research reports with source PDFs.",
   robots: { index: false, follow: true },
 };
 export default function RootLayout({

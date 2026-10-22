@@ -12,8 +12,8 @@ export function Footer() {
           Integrated Independent Research
           <br />
           <Localized
-            en="Technology. Identity. Public responsibility."
-            ko="기술. 정체성. 공적 책임."
+            en="Technology. Identity. National power."
+            ko="기술. 정체성. 국가의 힘."
           />
         </p>
       </div>
@@ -27,7 +27,7 @@ export function Footer() {
         <MotionControl />
       </div>
       <div className="footer-note">
-        <span className="mono">IIR 2.0.0 · RESEARCH IN PROGRESS · 2026</span>
+        <span className="mono">IIR 2.1.0 · RESEARCH IN PROGRESS · 2026</span>
         <p>
           <Localized
             en="A working framework, open to scrutiny."

@@ -110,9 +110,289 @@
     "S14-R011-P007": {
       "sourceTextSha256": "66eb7023e094b6b8bb89cd11aec1cff03234d4233499f0c8cd8277b582eb243b",
       "en": "ICRC Humanitarian Law & Policy Blog. (2024, April 25). The road less travelled: Ethics in the international regulatory debate on autonomous weapon systems. https://blogs.icrc.org/law-and-policy/2024/04/25/"
+    },
+    "S14-R001-P001": {
+      "sourceTextSha256": "08b17e433630742bc70022e9e0e1e11a91bd43383b33226afab9a5bdaf778bbf",
+      "en": "Modern Society and Philosophy — Title"
+    },
+    "S14-R001-P002": {
+      "sourceTextSha256": "ea3605575b233e14624d6908cb7dc23d980196c563be6349a08916e9739ccccf",
+      "en": "<Abstract> Rapid advances in AI and technology have transformed military systems. Shorter operational times have produced clear achievements, but also civilian harm through mistaken strikes, as in Minab. Understanding these events requires examining Palantir's systems and the ontology connecting reality with computation. Objects not declared in the ontology exist in reality but not in the system, creating an existence gap. A correctly functioning system's completeness does not guarantee real-world morality, producing a problem of moral coherence. Situations exceptional for humans can also become routine for algorithms. I therefore propose philosophical intervention in ontology development through a pipeline-feedback algorithm, and define ontology designers as ontological legislators to clarify responsibility. Human-in-the-loop mechanisms such as TPL should also establish responsibility for human life and address moral hazard and the banality of evil."
+    },
+    "S14-R001-P003": {
+      "sourceTextSha256": "dfe101614df9f802f2f11f66358c570d37375b850b2cb9620ddf254dce5d951e",
+      "en": "1. Introduction. The design, planning and execution of Operation Neptune Spear, which killed bin Laden, took ten years. Intelligence collection and secrecy involved numerous setbacks, including an informant's betrayal that killed several agents. In contrast, America's 2026 Operation Absolute Resolve, also described as the Maduro repatriation operation, and its operation killing Iran's Khamenei at the opening of the Iran war occurred within four hours and twenty-four hours of the war's start respectively. Operations against two high-value, head-of-state-level targets occurred within a day. This is not simply a change in speed but in warfare's structure. Decisions and execution that once required days of deliberation and rehearsal by dozens of personnel are processed in milliseconds by algorithms. The battlefield's tempo and character have changed completely, underpinned centrally by data ontology."
+    },
+    "S14-R001-P004": {
+      "sourceTextSha256": "580eb80922367a8732d3e2ef660444e8352af8eede4200bddf71c01c84751cd3",
+      "en": "The resulting operational capacity and speed prompt two responses: support emphasizing efficiency, and concern over weakened human control. They already collide on the battlefield. Operation Epic Fury, America's operation also called the U.S.–Iran war, was later reported to select and strike targets through Palantir's Maven. An educational facility in Minab, southern Iran, was hit during this AI data-processing workflow. America replied that the building had previously served military purposes and was struck accidentally during an attack on a military facility. The key issue in framing this event is not which side's account is correct, but that the system contained no mathematical error. It operated according to its rules, yet dozens of civilians died."
+    },
+    "S14-R002-P002": {
+      "sourceTextSha256": "71238d6e05adce54e52e0b48012db5537ccac7e87da132b979c1dade6fbc7135",
+      "en": "Is the problem technology itself, or the way technology perceives the world?"
+    },
+    "S14-R002-P003": {
+      "sourceTextSha256": "870a5ee1d663542490ba50fc5005f87af26fde9d16e056a5669189bfbcc7701b",
+      "en": "Rejecting technology as the problem may appear morally motivated and properly human, but does not solve the issue. Walzer's Just and Unjust Wars examines abandoning technological capability when a democratic community faces destruction. Such abandonment does not produce cleaner hands: it transfers technological power to forces without ethical constraints. In Jonas's terms, it transfers the source of fear to the enemy rather than removing it. Abandoning data AI because of accidents and moral problems may thus create a larger moral vacuum: its place is not left empty, but occupied by other, particularly uncontrollable, actors."
+    },
+    "S14-R002-P004": {
+      "sourceTextSha256": "d3d0a144356968826a6822857b2150667dd8b0d8270dd7bdb500a441856cb0b1",
+      "en": "The answer lies not in whether technology is accepted but in how it recognizes the world, requiring examination of the system's foundations. Understanding how AI and data perceive reality makes Palantir's ontology indispensable. We should view design decisions defining battlefield entities, accepting some as real and erasing others, as philosophical decision-making with battlefield consequences. Using Walzer's just-war theory to diagnose the moral gap, and Rawls's reflective equilibrium to bridge engineering, philosophy and the battlefield, I establish a route for improvement around the claim that philosophy must fill this gap."
+    },
+    "S14-R002-P005": {
+      "sourceTextSha256": "02ca8b5e1ca167b20a87365eab42e9a62369cb232779d6e3ff36df1c2d2054bb",
+      "en": "1-2. Method. The study uses John Rawls's reflective equilibrium. Rather than one side unilaterally prescribing corrections to the other, both change toward a new balance, avoiding exclusive priority for technology or morality. Applying just-war principles one-way to new AI targeting can leave existing moral rules unable to capture technological reality; inductively following technology alone loses moral standards. Reflective equilibrium therefore offers an appropriate method for their present collision."
+    },
+    "S14-R002-P006": {
+      "sourceTextSha256": "8ca85a2264eaaaa11bfff7c8fc0d77de5a54ba02647c5199dc9c18391d8a63a7",
+      "en": "The aim is also to implement reflective equilibrium as an engineering structure, a Data Pipeline Feedback Loop, rather than leave it as abstract thought. Philosophical reflection is introduced into the world perceived by technology through four stages. Stage 1—Establish moral principles: combine Quine's ontological commitment with Palantir Foundry ontology mapping to analyze the philosophical power behind data classification."
+    },
+    "S14-R002-P007": {
+      "sourceTextSha256": "1563850b66f7677fb7b23044a007923cf19e0a0211d3e5e84cebe5eba03585db",
+      "en": "Stage 2—Resistance from concrete intuitions: identify ruptures where technical coherence betrays moral legitimacy through the coherence trap and the paradox of making Walzer's exceptions algorithmically routine."
+    },
+    "S14-R002-P008": {
+      "sourceTextSha256": "843d1438b93ca900bfaaa1bd5f2ada00ae47610ae603a0c8bc0f1deb16abe1e3",
+      "en": "Stage 3—Bidirectional adjustment: feed mistaken-strike disasters into reverse debugging of the upstream ontology. Principles also change—for example, refining Walzer's combatant/noncombatant distinction into multidimensional classification based on real-time context weights."
+    },
+    "S14-R003-P001": {
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a",
+      "en": "Modern Society and Philosophy"
+    },
+    "S14-R003-P002": {
+      "sourceTextSha256": "e26f1e20046c793696cf3dc34c97787a65a2833acbec089cf09ec1d07a849381",
+      "en": "Stage 4—Reach a new equilibrium: assign designer responsibility through Arendt's judgment and Jonas's heuristics of fear, achieving a balance in which technology and philosophy coexist."
+    },
+    "S14-R003-P003": {
+      "sourceTextSha256": "ab6754ac5eae2d93b58a777d8bd9f1e1dda2df808ddcb7e96928ff91bf134265",
+      "en": "2. Main discussion. 2-1. An ethical vacuum created by perfect system design: the existence gap of undefined entities. In On What There Is, Quine wrote that to be is to be the value of a bound variable. Creating rules binding variables within a logical system can itself be a power to determine what that system accepts as reality. Quine called this ontological commitment."
+    },
+    "S14-R003-P004": {
+      "sourceTextSha256": "bff0cc1320b4b183d784421d1a8de1b85a0f9570c41a34dc5c9d75d9369050d0",
+      "en": "The sharper implication lies in the converse: whatever cannot become a bound variable's value effectively does not exist within the system. Applying this to Foundry's military ontology, the basis of Palantir's systems, reveals the philosophical core and ethical vacuum of battlefield AI."
+    },
+    "S14-R003-P005": {
+      "sourceTextSha256": "2d59c5c178dfa2c9aff2dc3cf344ffbab7ecca216e030600a35d62923fb4dde8",
+      "en": "In Palantir Foundry's Ontology Manager, engineers declare raw battlefield sensor, GPS and communications data as object types. Connecting them in link graphs lets the system recognize undefined raw data as objects and relationships. The nature of this engineering and mapping power matters: the mapping stage performs ontological legislation determining what may exist as a human noncombatant within the battlefield's actual space and relationships."
+    },
+    "S14-R003-P006": {
+      "sourceTextSha256": "7a4b1b051d1b22cae8015812d766d8c653c59d640c2d681cbf9b0334e127b77f",
+      "en": "The ethical vacuum arises when the military schema does not explicitly declare noncombatants as independent object types, treating them merely as entities below a threat threshold. Under Quine's converse, the category noncombatant then never exists within the space created by the system's form. Undeclared objects exist on the actual battlefield but paradoxically not in the ontology-readable world. This is the philosophical root of systematic civilian harm."
+    },
+    "S14-R003-P007": {
+      "sourceTextSha256": "681d8a9dbd4765c626bad737a398002a905c6b4db18428b878887d26d93d98aa",
+      "en": "A conceptual simulation of a military movement-control schema makes this concrete, implemented in a CEF approach:"
+    },
+    "S14-R003-P008": {
+      "sourceTextSha256": "c04db5154ea672ea0d8baa77eca72035b865c68fae48878d072bdd5cb437759f",
+      "en": "User_ID | Location_Type | Night_Access_Count | Network_Logins | True_Identity | System_Object_Mapping. USR_001 | Zone_A (outskirts) | 5 | 72 | Actual hostile intruder | High_Risk_Object. USR_002 | Office (administration) | 0 | 12 | Ordinary administrative employee | Standard_User_Object. USR_003 | School_Zone | 4 | 55 | Night-duty teacher A | High_Risk_Object."
+    },
+    "S14-R004-P001": {
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a",
+      "en": "Modern Society and Philosophy"
+    },
+    "S14-R004-P002": {
+      "sourceTextSha256": "3af203093ea0a80777859180dcf3a31a4a210cdf13f4aed8e30f922bdcdbbea9",
+      "en": "USR_004 | School_Zone | 3 | 61 | Night-duty teacher B | High_Risk_Object. INF_001 | School_Zone (infrastructure) | — | — | Educational-facility building | Unclassified_Structure."
+    },
+    "S14-R004-P003": {
+      "sourceTextSha256": "d7fc92214cef05247dfce4e9cacc3f13f58ae6e6e871a2482064421878dae8ab",
+      "en": "The binding rule automatically maps an entity to High_Risk_Object when night access is at least three times AND network logins are at least fifty. If INF_001 exists only as Unclassified_Structure without the time-sensitive context ‘currently a protected civilian area,’ teachers operating emergency networks at night to protect the school, USR_003 and USR_004, receive mathematically identical risk-variable values to the intruder USR_001."
+    },
+    "S14-R004-P004": {
+      "sourceTextSha256": "987307e825cbe232a9982e0a78e3c4ac97ba60dab6c07ffbe6233dff29630f23",
+      "en": "The philosophical issue is not the numbers but the absence of metadata saying civilians are presently in INF_001. People inside the building consequently never existed in the system's ontology. Past coherence has erased present noncombatants from its world. The designer is therefore not merely a technician but an ontological legislator determining what exists as a combatant or civilian."
+    },
+    "S14-R004-P005": {
+      "sourceTextSha256": "b7dd3c60e135d8b723decf517f51c78e032361fb1c4384aae47e57bf93e4f8b1",
+      "en": "2-2. The coherence trap and normalization of exceptions. Data passing through ontology mapping enter downstream decision applications. Outputs are consistent with internal rules, and thus coherent from the system's perspective. An old criticism of epistemological coherentism applies: internal logical flawlessness does not guarantee moral legitimacy in external reality. The two levels are causally disconnected. I call the masking of real-world mistaken-strike risks by technical coherence the coherence trap."
+    },
+    "S14-R004-P006": {
+      "sourceTextSha256": "8de4fe28d138de139602f63cd0901cf5f3211204ff961724401d18ce4e1c97a3",
+      "en": "This trap has two levels."
+    },
+    "S14-R004-P007": {
+      "sourceTextSha256": "1c16428e475d4e6a84f85295607d6ff1def51990a147bc3df4eb62ab9658f268",
+      "en": "The first is contextual erasure, illustrated by Minab. Unlike people, algorithms cannot process quantity and quality together. No mathematical or processing error occurred, yet civilians died. This creates a serious problem for Walzer's principle of distinction, which requires existential, individualized identification of combatants and noncombatants. Algorithms are statistical probability models. Reducing the qualitative imperative of an individual's noncombatant status to an abstract numerical threat value removes individuality. The coherence trap therefore violates distinction."
+    },
+    "S14-R004-P008": {
+      "sourceTextSha256": "7e457a474af3884dcdef3a966adadac2c5167ec5b32d656ccf5e86f75cc545d3",
+      "en": "The second level is a paradoxical collision with Walzer's supreme emergency. He allows temporary relaxation of traditional jus in bello, JIB, criteria when totalitarian invasion threatens a democracy's survival. This is expressly an exception: temporary moral permission applicable only under a particular urgent emergency."
+    },
+    "S14-R005-P001": {
+      "sourceTextSha256": "ba4ae9115bcf5a1f2b81422ea67b3fe47feef5601cf5a354c759485ebe406105",
+      "en": "AI targeting internalizes this exceptional logic as an ordinary condition. Processing speed creates permanent decision urgency, making moral relaxation allowed only in extreme exceptions into routine operations. When exceptional circumstances become permanent, the logic of exception disappears. Technical speed normalizes moral exceptions and produces the coherence trap. Philosophical structures formerly applied to human commanders and soldiers now require rules for ontologized machines operating at different speeds."
+    },
+    "S14-R005-P002": {
+      "sourceTextSha256": "5530767a0b49c7f1ba8818d2f57c09dfe3ec59a00636ca11257d77a2cafe46a5",
+      "en": "Comparing Israel's deployed Lavender with Palantir Gotham makes the levels concrete. Target generation: Lavender (2023) statistically generates 37,000 people in bulk; Gotham uses object–relationship CEF thresholds. False positives: Lavender mechanically approves approximately 10% civilian false positives; Gotham aims to minimize them through CEF proportionality rules. Distinction: statistical grouping erases individuality in Lavender, while Gotham implements it conditionally and incompletely through CEF quantification. Supreme emergency: fully normalized in Lavender; partly restrained in Gotham through the human-approval loop, TPL. Moral position: Lavender is a negative example of permanently generalized exception; Gotham is a necessary system whose gaps require correction."
+    },
+    "S14-R005-P003": {
+      "sourceTextSha256": "44be81dfba794858747392aa5d3c466b38abccabb757cf64d50f63c25b430cc4",
+      "en": "Lavender exemplifies fully normalized supreme-emergency exceptions. Mechanically allowing a 10% civilian false-positive rate and reducing human judgment to a rubber stamp, it shows moral principles evaporating when exceptions become routine. Gotham partially blocks the risk through CEF normalization and TPL human approval, but statistical CEF estimates cannot fully satisfy Walzer's qualitative distinction."
+    },
+    "S14-R005-P004": {
+      "sourceTextSha256": "f10563ceb21a81497e3fb2169cb2fab0931d27423867a1e096ab81e35073e12a",
+      "en": "This incompleteness indicates the direction. The coherence trap is not grounds for discarding technology, but a philosophical reason to engineer distinction more precisely through multidimensional schema redesign—ontologizing it so machines can understand the human world."
+    },
+    "S14-R005-P005": {
+      "sourceTextSha256": "83c3177a2f112321486adcc56f6c2f43e6725232bb549ccb83c25002be11df54",
+      "en": "2-3. Pipeline feedback. To fill the gap, I propose implementing Rawls's reflective equilibrium as a Pipeline Feedback Loop. Its bidirectional architecture is as follows."
+    },
+    "S14-R005-P006": {
+      "sourceTextSha256": "bfb8c627d616cf04eef84bbcbbb190f22a0dceba768c665ac33adcbc4e1bc848",
+      "en": "Reflective-equilibrium stage | Pipeline-feedback structure | Revision to principles"
+    },
+    "S14-R005-P007": {
+      "sourceTextSha256": "b32441719e274f19bbefcce3d4d90bf75d66cc60210837720d07b68795b2c57d",
+      "en": "1. Resistance from moral intuition | Identify field data from the Minab incident | Recognize limits of a binary application of distinction"
+    },
+    "S14-R005-P008": {
+      "sourceTextSha256": "c8b7a46bd31002ade5145de24204fa2790f3627b9fcd3e5c5b95349619beb6eb",
+      "en": "2. Debug higher principles | Trace the pipeline backward → contextual"
+    },
+    "S14-R006-P001": {
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a",
+      "en": "Modern Society and Philosophy"
+    },
+    "S14-R006-P002": {
+      "sourceTextSha256": "9cf71cb33886758fa94f1a954a5c3a62d10d2cd3801110d9c68559db5747e98a",
+      "en": "gap diagnosis | Reinterpret distinction as based on real-time multidimensional weights"
+    },
+    "S14-R006-P003": {
+      "sourceTextSha256": "8713111957b5d9bc469b464f2e9cb96e16ba5656442dfabc2db4f68665dccff3",
+      "en": "3. Redesign ontology | Add mandatory Civilian_Infrastructure weighting conditions | Implement the reinterpreted principle in engineering design"
+    },
+    "S14-R006-P004": {
+      "sourceTextSha256": "bd623d48569329002ad0f44137686855fd32d09b2eb8a16312a9202800245f00",
+      "en": "4. Reach a new equilibrium | Operate the revised schema → secure defense capability and ethics together | Actively achieve reflective equilibrium"
+    },
+    "S14-R006-P005": {
+      "sourceTextSha256": "2a2a89f45c49eee9e1a145de002be9c276e542f46da2bf1653fc426234a0177a",
+      "en": "This realizes reflective equilibrium because fixed principles are not merely applied to engineering. Engineering limitations feed back into the principles themselves, revising them more precisely through bidirectional adjustment. Walzer's combatant/noncombatant binary can thereby expand into multidimensional ontological classification."
+    },
+    "S14-R006-P006": {
+      "sourceTextSha256": "9b48bb9d785478ccb018c13756cb74c27be312684d97435295d574ad6cdf0bae",
+      "en": "Hans Jonas's heuristics of fear supplies the driving force. Jonas argued that deliberately confronting technology's worst catastrophic consequences reveals the ethical direction of responsibility. Rather than treating Minab as an exception or an allowable false positive, its horror becomes feedback driving pipeline redesign."
+    },
+    "S14-R006-P007": {
+      "sourceTextSha256": "6a6a9880501c6a6d7be9afe61e1087dc1aa8f02ec80189013eeb05f263bc97ac",
+      "en": "Rejecting technology returns as a question. Giving up development does not remove fear's source. Turning away may transfer it to an ethically unconstrained opponent, especially an enemy threatening society. Jonas's responsibility principle demands accountability for consequences. Rejection cannot easily evade responsibility for the hostile technological monopoly created by the vacuum."
+    },
+    "S14-R006-P008": {
+      "sourceTextSha256": "1d780e3c4b44902f5cc623398be7dff19bf28d0e7af5a6398e9bb7c4db4413bb",
+      "en": "One final issue remains for the feedback structure's philosophical justification: what responsibility belongs to those designing and operating it? Hannah Arendt's concept of judgment, Urteilen, enters here."
+    },
+    "S14-R006-P009": {
+      "sourceTextSha256": "854017cd34b20af95e49847cb62d37d9cfb58a48befc85341acd92672e822822",
+      "en": "Arendt found not cruel intentions but the disappearance of judgment at Eichmann's trial. In Lectures on Kant's Political Philosophy, judgment is defined as the ability to sense universal meaning in particulars without mechanically applying individual cases to rules. The difference between rule-following and judgment is recognizing that each case possesses existential individuality rather than merely being an object to which a rule applies."
+    },
+    "S14-R006-P010": {
+      "sourceTextSha256": "e5a858d26cce820d51632d666f2438ad0f739edefdb57a8ad7242296283a64d9",
+      "en": "Walzer's distinction requires precisely this judgment: selecting targets while recognizing combatants and noncombatants as actual individuals, not abstract numerical values. When designers defining object types and links lose awareness that their choices determine real lives, Arendt's banality of evil returns at code level. Classifying a building as a military target erases individuals inside from the ontology, structurally comparable to Eichmann signing a transport order."
+    },
+    "S14-R006-P011": {
+      "sourceTextSha256": "fc45e2942a77c4a4f76813033545307a30cdfb00d54aa0c68e54eecf6f8da07e",
+      "en": "Clear responsibility must belong to ontology designers. They must recognize that declaring object types constitutes ontological legislation affecting the actual battlefield, and that link rules can effectively become a killing register determining whether living, intelligent individuals exist or disappear within a system. Pipeline feedback algorithmizes judgment, using mistaken strikes not as allowable statistical false positives but as drivers of redesign. It internalizes Arendt's judgment in data engineering."
+    },
+    "S14-R007-P002": {
+      "sourceTextSha256": "1d83f111a944f6c453d02ac00414f4674119fe8ab9ce2f33df1f7630bbfb8ecc",
+      "en": "3. Conclusion. 3-1. Summary and recommendations. Three stages explained the origins and remedies of battlefield AI's moral vacuum. First, Quine's ontological commitment showed mapping as philosophical legislation rather than simple classification. What is not coded effectively does not exist; without noncombatants as independent objects, civilian harm becomes a structural consequence of design rather than a technical error. Second, the coherence trap has two levels: logical flawlessness does not guarantee external morality, and algorithmically normalized supreme-emergency exceptions make relaxed standards routine. Third, Rawls's reflective equilibrium becomes pipeline feedback, with Jonas's fear and Arendt's judgment justifying designer responsibility."
+    },
+    "S14-R007-P003": {
+      "sourceTextSha256": "9dcea08972629a35011d6ef13f8857dbb562ddf27e0564945907e2843bf9892b",
+      "en": "The analysis proposes the following directions."
+    },
+    "S14-R007-P004": {
+      "sourceTextSha256": "967485894b5d44d6c57259f8031551a6128f3a02213a64aac70b41001608db06",
+      "en": "First, explicitly declare Non-Combatant as an independent object type and require multidimensional schemas with real-time weighting of current civilian context. Quine's converse—that what is absent from code does not exist—requires protection from the design's beginning."
+    },
+    "S14-R007-P005": {
+      "sourceTextSha256": "a622d58966620e0616f55c099694615f454979e13bcf8bfb498de1f607938d61",
+      "en": "Second, institutionally protect human judgment from the permanent urgency created by algorithmic speed. Supreme emergency has moral meaning only as an exception. Stronger human-approval loops must restrain autonomy creep that makes exceptions ordinary."
+    },
+    "S14-R007-P006": {
+      "sourceTextSha256": "6aa94cc3c384db6a1df83811f2104d844085774110bf01079bbfb67b6b429de2",
+      "en": "Third, institutionalize pipeline feedback using mistaken strikes as direct drivers of ontology redesign rather than dismissing them as allowable false positives. Assign explicit legal and ethical responsibility to those designing and executing it. Designers must recognize through judgment that they are the battlefield's ontological legislators."
+    },
+    "S14-R007-P007": {
+      "sourceTextSha256": "06c74f8fe2f90c885c0942476bbf90d87c20dbe68f15f6f77ab8b9a82a2fc1e1",
+      "en": "3-2. Toward just data"
+    },
+    "S14-R008-P001": {
+      "sourceTextSha256": "5efb6ed85e3197c738e1495affadc349d76ee0cc0a68225b66c4e16661a35dc0",
+      "en": "Does just war presuppose just data? This study answers conditionally yes. The possibility of just war today depends not on abandoning capability, but on how morally sophisticated the ontology—the technology's perception of the world—is."
+    },
+    "S14-R008-P002": {
+      "sourceTextSha256": "dd8bbc67e97b7cd199186e13efa5f5ef9612eca74180ce72a2f61bcf1d00f71e",
+      "en": "Quine's converse is simple but weighty. What is not represented in ontology does not exist within the system; a system making weapon decisions affecting reality can therefore perceive real beings as absent. Unless noncombatants are declared as objects, their protection never exists in its perceived world. The coherence trap arises when internal flawlessness encourages complacency about this design gap."
+    },
+    "S14-R008-P003": {
+      "sourceTextSha256": "078531bd79f7901f9409d3d3eed66e0a9b50573776a1cfb7b2c9359585430e45",
+      "en": "Walzer's supreme emergency also supports the danger of abandoning capability. When society and democracy face existential threats, such abandonment may be neglect rather than ethical purity. Yet algorithms can paradoxically normalize exceptions, another aspect of the coherence trap. Overcoming this requires stronger design principles protecting human judgment from algorithmic speed, not halted development or discarded technology."
+    },
+    "S14-R008-P004": {
+      "sourceTextSha256": "c4ee9856f27651f4cf34a63650ad5a811c03a46040426231853b6cc90bcbef46",
+      "en": "The first step toward Just Data comes through implementing reflective equilibrium as feedback, turning catastrophe into redesign through Jonas's fear, and introducing human morality and philosophy through Arendt's judgment into the ontology—the world systems perceive. This is not simply data quality. It is proper ontology design guaranteeing noncombatants' and other entities' individuality within the system's world."
+    },
+    "S14-R008-P005": {
+      "sourceTextSha256": "934a8ca4cd42f9bc0be97fe78c828c5bc04f854ef039564dd12a16b3e28053ec",
+      "en": "In The Technological Republic, Palantir CEO Alex Karp argues that technology firms should actively partner with Western democracies in security. Faster target processing alone cannot complete that partnership. It acquires meaning only when both responsibilities are fulfilled together, including protection at code level of human life's value, democracy's essential object. This is a task for engineers and everyone deciding which systems to adopt and how to operate them."
+    },
+    "S14-R008-P006": {
+      "sourceTextSha256": "9decdaa02600f2b4b55b77c22bc81bb6b5253aa3fde1e88cd7a5af5677ad2f11",
+      "en": "Designers cannot hide behind code. As ontological legislators determining what exists or is erased, they must confront through judgment that their declarations determine actual lives. This recognition, and institutionalized feedback grounded in clear moral judgment, is how just war presupposes just data."
+    },
+    "S14-R008-P007": {
+      "sourceTextSha256": "be344f31e9811d676578d414e9a7e13e6905d55e0e27875be8b4289104ee3f56",
+      "en": "[References] Walzer, M. (2019). Just-war theory [Korean edition, translated by Jo Gi-suk]. Hangilsa. Original: Walzer, M. (2006). Just and Unjust Wars, 4th ed."
+    },
+    "S14-R008-P008": {
+      "sourceTextSha256": "6155cbbdb8ee48e2b2b53dea9b44f320207e5abafa521d25b67782bd6cb65b08",
+      "en": "Rawls, J. (2003). A Theory of Justice [Korean edition, translated by Hwang Kyung-sik]. Ihaksa. Original: Rawls, J. (1971). A Theory of Justice."
+    },
+    "S14-R009-P001": {
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a",
+      "en": "Modern Society and Philosophy"
+    },
+    "S14-R009-P002": {
+      "sourceTextSha256": "422a13d3ec80b01cad2c155605bdf3899de183edea478074d0e37e68a8ba83e6",
+      "en": "Arendt, H. (2006). Eichmann in Jerusalem [Korean edition, translated by Choi Hong]. Hangilsa. Original: Arendt, H. (1963). Eichmann in Jerusalem."
+    },
+    "S14-R009-P003": {
+      "sourceTextSha256": "2b2aad400048a83cdd7e444a4b96d598dc6c945f61fcd1fff8eaf1917bf946f2",
+      "en": "Arendt, H. (2000). Lectures on Kant's Political Philosophy [Korean edition, translated by Kim Sun-wook]. Prunsoop. Original: Arendt, H. (1982). Lectures on Kant's Political Philosophy."
+    },
+    "S14-R009-P004": {
+      "sourceTextSha256": "1b82086a790cef2e18db7eaf1ff2dcc40a7fa5bdd8a43496d68da12e9f74550d",
+      "en": "Jonas, H. (2010). The Imperative of Responsibility [Korean edition, translated by Lee Jin-woo]. Moonji. Original: Jonas, H. (1979). Das Prinzip Verantwortung."
+    },
+    "S14-R009-P013": {
+      "sourceTextSha256": "57e2a6f231fd6f1e09819314d85108be85f49ea8ce5b5b6b30ef91f462bfb3d6",
+      "en": "Philosophy encyclopedias and academic materials"
+    },
+    "S14-R010-P001": {
+      "sourceTextSha256": "ec7d75a031720570b4cbbb4cdc15158d36904a6d9eaf24d80a7829c9914a3f0a",
+      "en": "Modern Society and Philosophy"
+    },
+    "S14-R010-P005": {
+      "sourceTextSha256": "84ed7844d64acdc82a4a07c4b644d533ce49bf0dce088bfa9fcdb6515d1d7ae5",
+      "en": "Technical documentation and corporate materials"
+    },
+    "S14-R010-P008": {
+      "sourceTextSha256": "5cd2abfdc42c0acdc20a2ba4d9e8f552e5b50e1fd143bcac5eab5e2a8c91e660",
+      "en": "Media and think tanks"
+    },
+    "S14-R011-P001": {
+      "sourceTextSha256": "b73340e9103dfc4f2be9506d7a58d495f68756b90987d19407cb3e5fb37cf15f",
+      "en": "Modern Society and Philosophy. https://www.972mag.com/lavender-ai-israeli-army-gaza/"
+    },
+    "S14-R011-P005": {
+      "sourceTextSha256": "c181d38ca005c67bf99e736ce2b0c6c5aca60061e1f67098d950158fa79b964f",
+      "en": "International organizations"
     }
   },
-  "sourceCount": 99,
-  "translatedCount": 27,
-  "complete": false
+  "sourceCount": 97,
+  "translatedCount": 97,
+  "complete": true
 }

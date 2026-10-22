@@ -26,7 +26,7 @@ test("every research excerpt resolves to an available source and stable paragrap
     }
   }
 });
-test("unreviewed translations cannot be presented as English research text", () => {
+test("legacy planning excerpts retain their untranslated source status", () => {
   for (const p of content.projects)
     for (const paragraph of p.paragraphs) {
       if (paragraph.translationStatus !== "reviewed")

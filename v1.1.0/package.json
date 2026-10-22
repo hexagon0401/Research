@@ -1,21 +1,22 @@
 {
   "name": "iir-research-atlas",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
     "build": "next build",
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/content.test.mjs tests/assets.test.mjs tests/reports.test.mjs",
+    "test": "node --test tests/content.test.mjs tests/assets.test.mjs tests/reports.test.mjs tests/readings.test.mjs",
     "test:e2e": "playwright test",
     "generate:map": "node scripts/generate-map.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "audit:performance": "node scripts/performance.mjs",
     "intake": "python3 scripts/intake-originals.py",
-    "prebuild": "node scripts/copy-pdf-worker.mjs",
-    "postinstall": "node scripts/copy-pdf-worker.mjs"
+    "prebuild": "node scripts/copy-pdf-worker.mjs && node scripts/audit-reading-editions.mjs",
+    "postinstall": "node scripts/copy-pdf-worker.mjs",
+    "audit:readings": "node scripts/audit-reading-editions.mjs"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",

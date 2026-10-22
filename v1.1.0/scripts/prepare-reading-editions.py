@@ -28,6 +28,8 @@ def clean(text):
     text = re.sub(r" {2,}", " ", text)
     text = re.sub(r"\s+([,.;:!?%)\]】])", r"\1", text)
     text = re.sub(r"([(\[【])\s+", r"\1", text)
+    if text.lstrip().startswith("•") or "http" in text:
+        text = re.sub(r"(?<![A-Za-z])(?:[A-Za-z] ){2,}[A-Za-z](?![A-Za-z])", lambda m: m[0].replace(" ", "") if re.search("[a-z]", m[0]) else m[0], text)
     return text.strip()
 
 
@@ -50,9 +52,9 @@ def readable_chunks(text):
     return chunks
 
 
-def physical_lines(page):
+def physical_lines(page, clip=None):
     chars = []
-    for block in page.get_text("rawdict")["blocks"]:
+    for block in page.get_text("rawdict", clip=clip)["blocks"]:
         for line in block.get("lines", []):
             for span in line["spans"]:
                 for char in span["chars"]:
@@ -93,8 +95,8 @@ def join_line(previous, current, trailing):
     return clean(previous + separator + current)
 
 
-def page_paragraphs(page):
-    lines = physical_lines(page)
+def page_paragraphs(page, clip=None):
+    lines = physical_lines(page, clip)
     if not lines:
         return []
     gaps = [b["y"] - a["y"] for a, b in zip(lines, lines[1:]) if 5 < b["y"] - a["y"] < 35]
@@ -132,10 +134,49 @@ def main():
             continue
         pdf = fitz.open(ROOT / "public" / report["readerUrl"].lstrip("/")) if report["locator"] == "page" else None
         paragraphs = []
+        omitted_headers = []
+        glyph_corrections = []
         for section in report["sections"]:
             if pdf:
-                texts = page_paragraphs(pdf[section["number"] - 1])
-                items = [(t, [b["id"] for b in section["blocks"]], "body") for t in texts]
+                page = pdf[section["number"] - 1]
+                texts = page_paragraphs(page)
+                items = []
+                if rid == "S15":
+                    # The worksheet's left labels span many body lines. Global
+                    # y/x sorting interleaves those labels inside ordinary words.
+                    # Read cells in row/column order, then reconstruct each cell.
+                    tables = page.find_tables().tables
+                    if not tables:
+                        raise ValueError("Expected source worksheet table")
+                    top = min(table.bbox[1] for table in tables)
+                    for line in physical_lines(page, fitz.Rect(0, 0, page.rect.width, top - 1)):
+                        items.append((line["text"], [b["id"] for b in section["blocks"]], "running-header"))
+                    seen = set()
+                    for table in tables:
+                        for row in table.rows:
+                            for cell in row.cells:
+                                if cell is None or tuple(cell) in seen:
+                                    continue
+                                seen.add(tuple(cell))
+                                rect = fitz.Rect(cell)
+                                rect = fitz.Rect(rect.x0 + .3, rect.y0 + .3, rect.x1 - .3, rect.y1 - .3)
+                                kind = "field-label" if rect.width < 100 else "body"
+                                for text in page_paragraphs(page, rect):
+                                    if "\ue09d" in text:
+                                        text = text.replace("\ue09d", "α")
+                                        glyph_corrections.append({"sourcePage": section["number"], "from": "U+E09D", "to": "α", "basis": "Visually checked source glyph"})
+                                    items.append((text, [b["id"] for b in section["blocks"]], kind))
+                    texts = []
+                for text in texts:
+                    kind = "body"
+                    if rid == "S14":
+                        header = "현대사회와 철학"
+                        if text == header:
+                            kind = "running-header"
+                        elif text.startswith(header + " "):
+                            text = text[len(header):].lstrip()
+                            omitted_headers.append({"sourcePage": section["number"], "text": header})
+                    items.append((text, [b["id"] for b in section["blocks"]], kind))
             else:
                 items = []
                 for block in section["blocks"]:
@@ -152,19 +193,27 @@ def main():
             "S03": {"S03-R001-P002": "S03-R001-P003", "S03-R002-P006": "S03-R003-P002", "S03-R003-P006": "S03-R004-P002"},
             "S06": {"S06-R004-P006": "S06-R005-P001", "S06-R006-P005": "S06-R007-P001"},
             "S08": {"S08-R001-P010": "S08-R002-P001", "S08-R003-P006": "S08-R004-P001"},
+            "S11": {"S11-R001-P002": "S11-R001-P003", "S11-R007-P005": "S11-R008-P001", "S11-R008-P008": "S11-R009-P001", "S11-R009-P003": "S11-R010-P001", "S11-R011-P011": "S11-R012-P001"},
             "S13": {"S13-R002-P010": "S13-R003-P001", "S13-R004-P009": "S13-R005-P001"},
+            "S14": {"S14-R001-P004": "S14-R002-P001", "S14-R006-P011": "S14-R007-P001"},
+            "S15": {"S15-R001-P022": "S15-R002-P002", "S15-R007-P006": "S15-R008-P002", "S15-R011-P009": "S15-R012-P002"},
             "S16": {"S16-R002-P007": "S16-R003-P002"},
         }.get(rid, {})
         for first, following in continuations.items():
             a = next((p for p in paragraphs if p["id"] == first), None)
             b = next((p for p in paragraphs if p["id"] == following), None)
             if a and b:
-                a["ko"] = a["ko"] + ("" if rid in {"S01", "S06", "S16"} else " ") + b["ko"]
+                separator = "" if rid in {"S01", "S06", "S14", "S16"} or first in {"S11-R008-P008", "S11-R009-P003", "S15-R001-P022", "S15-R007-P006"} else " "
+                a["ko"] = a["ko"] + separator + b["ko"]
                 a["sourceBlockIds"] = list(dict.fromkeys(a["sourceBlockIds"] + b["sourceBlockIds"]))
                 a["sourcePageEnd"] = b["sourcePage"]
                 a["sourceTextSha256"] = hashlib.sha256(a["ko"].encode()).hexdigest()
                 paragraphs.remove(b)
         edition = {"reportId": rid, "revision": "reading-002", "editing": "layout-only", "translationStatus": "pending", "paragraphs": paragraphs}
+        if omitted_headers:
+            edition["omittedRunningHeaders"] = omitted_headers
+        if glyph_corrections:
+            edition["glyphCorrections"] = glyph_corrections
         target = out / path.name
         target.write_text(json.dumps(edition, ensure_ascii=False, indent=2) + "\n")
         print(rid, len(paragraphs), "reading paragraphs")

@@ -3163,3 +3163,17 @@ html[data-motion="reduced"] .map-crosshair {
 .essay-map-pin { transition: stroke 180ms ease; }
 @media (min-width:1100px) and (max-height:790px) { .essay-visual-geometry { height: 26vh; } }
 @media (prefers-reduced-motion:reduce) { .essay-map-pin { transition: none; } }
+.reading-table-scroll { overflow-x: auto; max-width: 100%; margin: 5px 0; }
+.reading-table-scroll:focus-visible { outline: 2px solid #295e30; outline-offset: 3px; }
+.reading-table-scroll table { border-collapse: collapse; min-width: 480px; width: 100%; font-size: 12px; line-height: 1.7; }
+.reading-table-scroll th, .reading-table-scroll td { border: 1px solid #a7afa4; padding: 10px; vertical-align: top; overflow-wrap: anywhere; }
+.reading-table-scroll th { background: rgba(40,80,45,.08); text-align: left; }
+.reading-table-scroll caption { font-size: 11px; line-height: 1.7; text-align: left; margin-bottom: 12px; }
+.transcript-running-header p { font-size: 11px; color: var(--muted); }
+.transcript-running-header .reading-note-label { display: none; }
+.transcript-field-label { padding-top: 18px; border-bottom: 1px solid var(--line); }
+.transcript-field-label p { font-size: 14px; font-weight: 600; }
+.transcript-field-label .reading-note-label { display: none; }
+.report-clear { display: inline-flex; min-height: 44px; align-items: center; background: transparent; border: 0; cursor: pointer; color: inherit; font-size: 13px; }
+.report-title-translation { font-size: 18px; line-height: 1.65; max-width: 65ch; }
+.reading-ko, .reading-en { min-width: 0; }

@@ -4,55 +4,367 @@
   "status": "author-review-pending",
   "paragraphs": {
     "S11-R012-P002": {
-      "sourceTextSha256": "a89779c6ee5f257eb499f7c92d01fb35be3cf7578690767114c22e07831e867e",
-      "en": "Al Jazeera. (2026, March 16). Map Shows How 22 Days of Attacks Have Evolved in US-Israel War on Iran. https://www.aljazeera.com/news/2026/3/16/map-shows-how-16-days-of-attacks-have-evolved-in-us-israel-war-on-iranAlexander C. Karp & Nicholas W. Zamiska. (2025). The Technological Republic. Crown Currency. https://techrepublicbook.com/Amnesty International. (2026, January 12)."
+      "sourceTextSha256": "6126e14c6555d47867406c64f9e7c8c124af909c1e11255260a87cfdf436489a",
+      "en": "Al Jazeera. (2026, March 16). Map Shows How 22 Days of Attacks Have Evolved in US-Israel War on Iran. https://www.aljazeera.com/news/2026/3/16/map-shows-how-16-days-of-attacks-have-evolved-in-us-israel-war-on-iran Alexander C. Karp & Nicholas W. Zamiska. (2025). The Technological Republic. Crown Currency. https://techrepublicbook.com/ Amnesty International. (2026, January 12)."
     },
     "S11-R012-P003": {
-      "sourceTextSha256": "bc2befafd593bd8e8851450e03f137260aad68c8e9687f25c7a131a160fc117f",
-      "en": "Iran: Deaths and Injuries Rise amid Authorities' Renewed Cycle of Protest Bloodshed. https://www.amnesty.org/en/latest/news/2026/01/iran-deaths-injuries-authorities-protest-bloodshed/Breaking Defense. (2024, May). Can tech reduce civilian deaths in conflict? Alex Karp at Ash Carter Exchange. https://breakingdefense.com/2024/05/mark-milley-civilian-death-ai-technology-alex-karp-palantir/CBS News. (2025)."
+      "sourceTextSha256": "65ea5055b57ff44a5ea757897289c40aaf9531b2b9f5394bc3ecc6574f605c34",
+      "en": "Iran: Deaths and Injuries Rise amid Authorities' Renewed Cycle of Protest Bloodshed. https://www.amnesty.org/en/latest/news/2026/01/iran-deaths-injuries-authorities-protest-bloodshed/ Breaking Defense. (2024, May). Can tech reduce civilian deaths in conflict? Alex Karp at Ash Carter Exchange. https://breakingdefense.com/2024/05/mark-milley-civilian-death-ai-technology-alex-karp-palantir/ CBS News. (2025)."
     },
     "S11-R012-P004": {
-      "sourceTextSha256": "6d507f7f3394494b310badeffd702471d92bb05fe9f590fd41edbe6446945086",
-      "en": "Palmer Luckey: Why AI-powered, autonomous weapons are the future of warfare. 60 Minutes. https://www.cbsnews.com/news/palmer-luckey-ai-powered-autonomous-weapons-future-of-warfare-60-minutes-transcript/Collins Aerospace / RTX Press Release. (2024). Collins Aerospace Awarded NATO NCIA EWPBM Contract. Council on Foreign Relations (CFR). (2025, August 27). The UN Security Council. https://www.cfr.org/backgrounders/un-security-councilCFR / UN Security Council Tracker. (2024–2025)."
+      "sourceTextSha256": "3eb976e45765718fdc49348e5f7d56f9f618ad66dda15ca4c94cbc70280996ad",
+      "en": "Palmer Luckey: Why AI-powered, autonomous weapons are the future of warfare. 60 Minutes. https://www.cbsnews.com/news/palmer-luckey-ai-powered-autonomous-weapons-future-of-warfare-60-minutes-transcript/ Collins Aerospace / RTX Press Release. (2024). Collins Aerospace Awarded NATO NCIA EWPBM Contract. Council on Foreign Relations (CFR). (2025, August 27). The UN Security Council. https://www.cfr.org/backgrounders/un-security-council CFR / UN Security Council Tracker. (2024–2025)."
     },
     "S11-R012-P005": {
-      "sourceTextSha256": "e1ae459b4ced8ff963df26cb91ebfd7ea855d16b62115aa1be11fb521b1d8b8d",
-      "en": "Gaza Security Council Veto Record. CFR Council of Councils. (2025, September 3). The United Nations at Eighty: Reform for a New Geopolitical Era. https://www.cfr.org/councilofcouncils/global-memo/the-united-nations-at-eighty-reform-for-a-new-geopolitical-eraDefense One / Breaking Defense. (2025). NATO Signs First-Ever AI Contract with Palantir for Maven Smart System. DIANA. (2025). About DIANA. https://www.diana.nato.int/DIANA. (2026)"
+      "sourceTextSha256": "72cf8d576258533672028903d8f071539ee2d376d55d09654b6c294713a95935",
+      "en": "Gaza Security Council Veto Record. CFR Council of Councils. (2025, September 3). The United Nations at Eighty: Reform for a New Geopolitical Era. https://www.cfr.org/councilofcouncils/global-memo/the-united-nations-at-eighty-reform-for-a-new-geopolitical-era Defense One / Breaking Defense. (2025). NATO Signs First-Ever AI Contract with Palantir for Maven Smart System. DIANA. (2025). About DIANA. https://www.diana.nato.int/ DIANA. (2026)."
     },
     "S11-R012-P006": {
-      "sourceTextSha256": "f14ea383c7eb9be5da46913fb5ebcba7bab35721c9574a78829175d846a597df",
-      "en": ". 2026 Challenge Programme — 150 Startups Selected. https://www.diana.nato.int/challengeEncyclopaedia Britannica. (2026, March). 2026 Iran War. https://www.britannica.com/event/2026-Iran-ConflictFortune. (2026, March 6). Palmer Luckey says Silicon Valley has the Pentagon all wrong. https://fortune.com/2026/03/06/palmer-luckey-pentagon-anthropic-debate-dario-amodei-claude-ai/Fortune. (2026, March 13)"
+      "sourceTextSha256": "92a8ae0e1a4539eb7facbd86a4d8ca6a20e404eaa5ec584b8e69cdae7f806832",
+      "en": "2026 Challenge Programme — 150 Startups Selected. https://www.diana.nato.int/challenge Encyclopaedia Britannica. (2026, March). 2026 Iran War. https://www.britannica.com/event/2026-Iran-Conflict Fortune. (2026, March 6). Palmer Luckey says Silicon Valley has the Pentagon all wrong. https://fortune.com/2026/03/06/palmer-luckey-pentagon-anthropic-debate-dario-amodei-claude-ai/ Fortune. (2026, March 13)."
     },
     "S11-R012-P007": {
-      "sourceTextSha256": "63cf8c73d9d22fb7661e94e945284078a083e1f9dcda9db35a8830aef12eddf5",
-      "en": ". Palantir CEO Alex Karp says there was 'never a sense' AI products would be used for domestic surveillance. https://fortune.com/2026/03/13/palantir-ceo-alex-karp-interview-anthropic-pentagon-never-a-sense-ai-used-for-domestic-surveillance/Institute for Economics & Peace. (2024, June). Global Peace Index 2024. https://www.economicsandpeace.org/wp-content/uploads/2024/06/GPI-2024-web.pdfInstitute for Economics & Peace. (2025, June)."
+      "sourceTextSha256": "783ecbab4860cb36099d9886f470928efba9059b6c6d60d06b9e6c119ac5118a",
+      "en": "Palantir CEO Alex Karp says there was 'never a sense' AI products would be used for domestic surveillance. https://fortune.com/2026/03/13/palantir-ceo-alex-karp-interview-anthropic-pentagon-never-a-sense-ai-used-for-domestic-surveillance/ Institute for Economics & Peace. (2024, June). Global Peace Index 2024. https://www.economicsandpeace.org/wp-content/uploads/2024/06/GPI-2024-web.pdf Institute for Economics & Peace. (2025, June)."
     },
     "S11-R012-P008": {
-      "sourceTextSha256": "e18cd4f8e49c9737d77bbb1fc1d93fb2846549314ca6aca30bfa5da2de18f085",
-      "en": "Global Peace Index 2025. https://www.visionofhumanity.org/wp-content/uploads/2025/06/Global-Peace-Index-2025-web.pdfIran International. (2025, December 28). Millions Protest Across 31 Provinces in Iran's Largest Uprising Since 1979. https://www.iranintl.com/en/202512281234Iran International. (2026, January 25). Over 36,500 Killed in Iran's Deadliest Massacre. https://www.iranintl.com/en/202601255198NATO. (2024). Defence Expenditure of NATO Countries (2014–2024). Brussels. https://www.nato.int/cps/en/natohq/news_226465.htm"
+      "sourceTextSha256": "f23f3b56f766e43a41f0292f7d9bd5f3164ed72f7cfafdd62c15cf17d66dfa92",
+      "en": "Global Peace Index 2025. https://www.visionofhumanity.org/wp-content/uploads/2025/06/Global-Peace-Index-2025-web.pdf Iran International. (2025, December 28). Millions Protest Across 31 Provinces in Iran's Largest Uprising Since 1979. https://www.iranintl.com/en/202512281234 Iran International. (2026, January 25). Over 36,500 Killed in Iran's Deadliest Massacre. https://www.iranintl.com/en/202601255198 NATO. (2024). Defence Expenditure of NATO Countries (2014–2024). Brussels. https://www.nato.int/cps/en/natohq/news_226465.htm"
     },
     "S11-R013-P001": {
-      "sourceTextSha256": "dce5cf8c66150cb8f18ce586f81946b44ddca0b265cacffdfcc49ca38706ade8",
-      "en": "NATO. (2025). Defence Expenditure of NATO Countries (2014–2025). Brussels. NATO. (2025, June). The Hague Summit Declaration. https://www.nato.int/cps/en/natohq/offci ial_texts_226462.htm NATO Innovation Fund. (2022–2025). About NIF. https://www.natoinnovationfund.com/NATO NSPA. (2024). NSPA Signs Contract with Airbus for Additional MRTT Aircraft. NATO STO. (2025, April 9). Science & Technology Trends 2025–2045. https://www.nato.int/cps/en/natohq/news_234507.htmNPR. (2026, January 27)"
+      "sourceTextSha256": "ef2cdb0337f416491b234be40b9cb2ce1cfe4ece945b94e3e01575a35ed01ce9",
+      "en": "NATO. (2025). Defence Expenditure of NATO Countries (2014–2025). Brussels. NATO. (2025, June). The Hague Summit Declaration. https://www.nato.int/cps/en/natohq/offci ial_texts_226462.htm NATO Innovation Fund. (2022–2025). About NIF. https://www.natoinnovationfund.com/ NATO NSPA. (2024). NSPA Signs Contract with Airbus for Additional MRTT Aircraft. NATO STO. (2025, April 9). Science & Technology Trends 2025–2045. https://www.nato.int/cps/en/natohq/news_234507.htm NPR. (2026, January 27)."
     },
     "S11-R013-P002": {
-      "sourceTextSha256": "82e27332e31e0575eef6f2729e5dd4a808afd3af2b3e6767d53cc85b775cfa18",
-      "en": ". At Least 6,126 People Killed in Iran's Crackdown on Nationwide Protests. https://www.npr.org/2026/01/27/nx-s1-5689793OHCHR. (2026, January). Human Rights Council Adopts Resolution on Iran. https://www.ohchr.org/en/media-advisories/2026/01/human-rights-council-adopts-resolution-extending-mandates-fact-fni ding RealClearDefense. (2025, May). (Re)Claiming Our Deterrence. https://www.realcleardefense.com/articles/2025/05/03/reclaiming_our_deterrence_1107926.htmlThe Guardian / Reuters. (2025, January)."
+      "sourceTextSha256": "543f3c8035fae8e95eb84e57b2dd7c6ee0e80f10e7f5f2c46b0c770a7ca05fde",
+      "en": "At Least 6,126 People Killed in Iran's Crackdown on Nationwide Protests. https://www.npr.org/2026/01/27/nx-s1-5689793 OHCHR. (2026, January). Human Rights Council Adopts Resolution on Iran. https://www.ohchr.org/en/media-advisories/2026/01/human-rights-council-adopts-resolution- extending-mandates-fact-fni ding RealClearDefense. (2025, May). (Re)Claiming Our Deterrence. https://www.realcleardefense.com/articles/2025/05/03/reclaiming_our_deterrence_1107926.html The Guardian / Reuters. (2025, January)."
     },
     "S11-R013-P003": {
-      "sourceTextSha256": "7fa55adbd495eaf40774c3ac4b202e07b5e49571da788125d90a677584235b61",
-      "en": "Trump Signs Executive Order Withdrawing US from 66 UN Bodies. UN General Assembly Press Release. (2025). General Assembly Delegates Demand Overhaul of Security Council Veto. https://press.un.org/en/2025/ga12733.doc.htmUN OCHA. (2025). Funding Cuts Impact on Humanitarian Response. White House Budget Offci e. (2025). FY2026 Budget: UN Peacekeeping Justifci ation. Wilson Center. (2024, June). Global Peace Index 2024: Less Peace, More Conflict. https://www.wilsoncenter.org/video/global-peace-index-2024-less-peace-more-conflict10TV. (2026, March)"
+      "sourceTextSha256": "128e2f61eef2d898c1553fa86826b86bc3dbd08e2402b73180fb7c8a4753d013",
+      "en": "Trump Signs Executive Order Withdrawing US from 66 UN Bodies. UN General Assembly Press Release. (2025). General Assembly Delegates Demand Overhaul of Security Council Veto. https://press.un.org/en/2025/ga12733.doc.htm UN OCHA. (2025). Funding Cuts Impact on Humanitarian Response. White House Budget Offci e. (2025). FY2026 Budget: UN Peacekeeping Justifci ation. Wilson Center. (2024, June). Global Peace Index 2024: Less Peace, More Conflict. https://www.wilsoncenter.org/video/global-peace-index-2024-less-peace-more-conflict 10TV. (2026, March)."
     },
     "S11-R013-P004": {
-      "sourceTextSha256": "75e0bc13a3bbba3b1621c4b6a8bc36731cf6af5888f421b6edadf024db4d56c2",
-      "en": ". Inside Arsenal-1 with Anduril founder Palmer Luckey. https://www.10tv.com/article/news/local/boomtown-ohio/arsenal-1-tour-anduril-founder-palmer-luckey-10tv-exclusive/CSIS. (2025). The Future of NATO Defense, Resilience, and Allied Innovation. https://www.csis.org/events/future-nato-defense-resilience-and-allied-innovationCSIS. (2026, January 8). Strengthening NATO Starts with Fixing Its Industrial Base. https://www.csis.org/analysis/strengthening-nato-starts-fxi ing-its-industrial-base"
+      "sourceTextSha256": "baa905efcfdc43a7ceb4038489b807b2c8918a6557d965bb97b453a84c606ae2",
+      "en": "Inside Arsenal-1 with Anduril founder Palmer Luckey. https://www.10tv.com/article/news/local/boomtown-ohio/arsenal-1-tour-anduril-founder-palmer-luckey-10tv-exclusive/ CSIS. (2025). The Future of NATO Defense, Resilience, and Allied Innovation. https://www.csis.org/events/future-nato-defense-resilience-and-allied-innovation CSIS. (2026, January 8). Strengthening NATO Starts with Fixing Its Industrial Base. https://www.csis.org/analysis/strengthening-nato-starts-fxi ing-its-industrial-base"
     },
     "S11-R001-P004": {
       "sourceTextSha256": "3f3ba3d9e6515fc8d657c0c9037a375ce76b400a72784088fff53ba4d24cf47c",
       "en": "Introduction"
+    },
+    "S11-R001-P001": {
+      "sourceTextSha256": "0e12dc5e5fc5a31d5c73979d52274d544ee8ef07e6df6f33dfaa2373411f66fb",
+      "en": "International Relations and International Organizations —"
+    },
+    "S11-R001-P002": {
+      "sourceTextSha256": "27570bc86ed743bf393e71a1d3eedd56edc1bb191a01b60107c1fc9c43200405",
+      "en": "Redefining 21st-century ‘Para Bellum’: The Crisis of Liberal Order and the Rise of Technological Military Alliances"
+    },
+    "S11-R001-P005": {
+      "sourceTextSha256": "865b85a985ebdadd752941b3bb837623f6d401833d1666b230441e59b2eb6e5f",
+      "en": "If you want peace, prepare for war"
+    },
+    "S11-R001-P006": {
+      "sourceTextSha256": "98f47074a88cdf024c728800292f556c0df0f16a0dd88fb4b20d2f4918781d0c",
+      "en": "Most handguns we commonly imagine use the NATO-standard 9 × 19 mm round, hereafter 9 mm. The 9 × 19 mm Parabellum is used in the UZI, Glock series and many other firearms. ‘Para bellum’ comes from Flavius Vegetius Renatus's military treatise and is famous for the phrase ‘Si vis pacem, para bellum’: if you want peace, prepare for war. Its appearance in a modern NATO firearms standard is no mere coincidence. It shows that states and alliances still operate on the same logic."
+    },
+    "S11-R001-P007": {
+      "sourceTextSha256": "1e417949981a4b9b50675a50a7c51f5e1bdbe60eeea55341c5f16225e4c2f403",
+      "en": "The collapse of peace and declining conflict-resolution capacity"
+    },
+    "S11-R001-P008": {
+      "sourceTextSha256": "bf690296bbd1b6479cdce116cb3319e93b80558a690a74466fea73a3a2f84a5a",
+      "en": "Numerous countries, including America and Russia, formerly the main Cold War powers, have entered wartime conditions. The 2024 GPI report, before the U.S.–Iran war began, already showed this trend. It recorded 59 interstate conflicts, the highest level since World War II. Notably, the proportion ending through peace agreements fell sharply from 23% in the 1970s to 4% in the 2010s. More conflicts coincide with weaker resolution capacity, leaving wars without clear endings and continuing minor clashes and retaliatory attacks afterward."
+    },
+    "S11-R001-P009": {
+      "sourceTextSha256": "f05ddfc5b86198b58005724c1c884074843e161a36f8e6616b8aacdfd3f3703b",
+      "en": "Persistent powerlessness of the UN and the retreat of liberalism"
+    },
+    "S11-R001-P010": {
+      "sourceTextSha256": "e572beafe1d1c22e3d9f26aed504f147d284a2aa59ea1875f5dfcc9eb7bb2bfd",
+      "en": "The collapse of peace and declining resolution capacity naturally increased expectations of UN mediation and solutions. Yet the UN continues to show limitations."
+    },
+    "S11-R001-P011": {
+      "sourceTextSha256": "05d072a580bf190f4ea11df9eb69e568bc6c81a8a982d010f065c452e42c1c97",
+      "en": "During Iran's 2025–2026 antigovernment protests, government-ordered shootings, massacres, internet shutdowns and indiscriminate gunfire occurred on a scale rarely seen today. Yet the UN merely sent a fact-finding mission through a resolution calling an emergency special meeting and took no meaningful action."
+    },
+    "S11-R001-P012": {
+      "sourceTextSha256": "b8060309e9fe0543e6adb1de3955024d84bbb191cfb5993f7096938ff7edbb2b",
+      "en": "The Israel–Gaza conflict was also referred to the UN, but America exercised its Security Council veto eight times, the most since 1986, ultimately permitting a Gaza ceasefire resolution only after 171 days."
+    },
+    "S11-R001-P013": {
+      "sourceTextSha256": "0e1ee31a1e4929d61cda62d8d886fb3b52016a7934e03500e44d154c43a3d69c",
+      "en": "In the U.S./Israel–Iran and Russia–Ukraine wars, major Security Council powers themselves declared war and launched preemptive strikes, leaving the UN seemingly reluctant even to express regret. There was naturally no practical response. The U.S.–Iran war spread to 29 countries, including defending states, creating a major Middle Eastern crisis without any effective response."
+    },
+    "S11-R001-P014": {
+      "sourceTextSha256": "bbc22c3f2f0ead6fd518835d40094ad8ffb51110d5e28a8a9392513aedf11856",
+      "en": "Hans Morgenthau argued that states fundamentally pursue power and idealistic normative systems merely conceal this reality. In Politics Among Nations, he warned against romantic trust in international law and organizations. We must guard against the collapse of an order ideally created through voluntary participation. Voluntarism, weak effectiveness and recommendatory authority have long been recognized limits of liberal systems; his warning is becoming today's reality."
+    },
+    "S11-R001-P015": {
+      "sourceTextSha256": "8a21e93cd737ea5285bb9671178b2cac0f06c78139fe244d25e957a74b70cf1c",
+      "en": "Demonstrating collective defense"
+    },
+    "S11-R001-P016": {
+      "sourceTextSha256": "fafc6f0f19fcd73fbfb29e03970b7705055008b63f47f279742a986b2d5582c2",
+      "en": "The UN faces an enormous structural dilemma. Physical force is needed to obtain the coercion and effectiveness it lacks. Yet intervention centered on the Security Council creates structural inequality, undermining sovereign equality and the one-state-one-vote principle. These fundamental limits of liberal organizations have led Western and European states to refocus on technological military alliances sharing effective physical force rather than reconciling normative gaps."
+    },
+    "S11-R002-P001": {
+      "sourceTextSha256": "153d28f1ef73b5a9b97f3e99a3cb9be3ce5a93d657dbb7eed67818589131e914",
+      "en": "NATO is the representative case. Formed after World War II for collective responses to the Soviet–American Cold War, it has the strategic advantage of Article 5: an attack on one member is regarded as an attack on the alliance as a whole, allowing immediate military intervention without separate political coordination."
+    },
+    "S11-R002-P002": {
+      "sourceTextSha256": "28017f38ec1338c9fea3177ed55a20279072421d1bb2c3411124e861d109a837",
+      "en": "Some judged NATO's historical role complete after the Cold War and détente. Yet the Ukraine war and the 2026 U.S.–Israel–Iran war demonstrate that collective defense remains the strongest practical deterrent in a multipolar world. Organically sharing defenses among allies rather than relying on one country's air-defense network successfully intercepted many missiles. NATO thus emerged as a central alternative overcoming normative liberalism's limits."
+    },
+    "S11-R002-P003": {
+      "sourceTextSha256": "33bab4548eeabf4c4be740a9c25ae4348776a53bf2a35c39038777ef5e8299b1",
+      "en": "Main discussion"
+    },
+    "S11-R002-P004": {
+      "sourceTextSha256": "cf44ded5824081c98af747203c36f71788b5114a01092f41be9b46488d7c8f93",
+      "en": "Are we returning to realism?"
+    },
+    "S11-R002-P005": {
+      "sourceTextSha256": "944e363d311c0a4819478346de14f51174adf87973f503a8feefe3c26aacf403",
+      "en": "Structural failure of the UN system: veto politics and normative gaps"
+    },
+    "S11-R002-P006": {
+      "sourceTextSha256": "7e382f53472ed83b2b53625d11bbc228edb8d1e9bd57ae4c03e8a78125ca76ac",
+      "en": "The UN's influence was so great that its emergence could almost be equated with liberalism's rise and generalization. Assemblies and departments organized around the Security Council, including permanent members, mediated and resolved interstate disputes even during the Cold War. They created an image of the UN as synonymous with liberalism and as a forum for peace through dialogue and negotiation rather than violence."
+    },
+    "S11-R002-P007": {
+      "sourceTextSha256": "abc2b3f56d4c9a3cd77d6c738fedbcf9f3ff57f32878897118907519fd468070",
+      "en": "Recent patterns differ. As the GPI's collapse shows, conflicts are at their highest since World War II, and peaceful resolutions have declined sharply. Negotiation and dialogue matter more than ever because retaliatory effects continue generating additional conflicts and tensions."
+    },
+    "S11-R002-P008": {
+      "sourceTextSha256": "b34de33081b4077f23aea1d8b1e17e28a876fae226212949b88fcfc71d79cbab",
+      "en": "The data, however, show the opposite situation. To examine this, I collected, analyzed and cross-compared quantitative evidence on current worldwide conflicts and UN intervention."
+    },
+    "S11-R002-P009": {
+      "sourceTextSha256": "0025119d53f91af7849ea8fd18d09329d3ce0f36cb4549c88fc020a502d12a9a",
+      "en": "Data analysis"
+    },
+    "S11-R002-P010": {
+      "sourceTextSha256": "73a7604e6960111c588b57130f1b50b9895304f13ac1ebc73d633c5c6253eed1",
+      "en": "The analysis proceeded as follows. First, I contacted UDCP, the Uppsala conflict database, obtained an API key and accessed its database. Second, I specified year ranges for time-series analysis and extracted conflict lists. Third, using the NIM API and a 70-billion-parameter LLM, I converted each conflict into search terms. Fourth, I searched the UN Digital Library for each conflict and checked resolutions and outcomes. Fifth, I categorized results as resolved, ongoing or unresolved, alongside UN intervention (a resolution or comparable document exists) or no intervention, and output the statistics in the terminal."
+    },
+    "S11-R002-P011": {
+      "sourceTextSha256": "55559fa1bcc14a8018ccb411dddf933a3bbf1f7b71387089dfb76dcd6eece648",
+      "en": "The code processed more than 500 conflicts concurrently through multithreading, optimizing the program. Details are open-sourced on GitHub. Personal API and UDCP keys are withheld, and the program cannot operate without them."
+    },
+    "S11-R002-P012": {
+      "sourceTextSha256": "1f1f67b5df1889ce9bbbc55f5ab5442993669725bc997647f52d57f57e8b82fa",
+      "en": "There were 200–300 records at five-year intervals across 35 years, totaling 1,250 conflicts. Computing and time constraints meant an LLM selected fewer than fifty cases for each year to calculate proportions."
+    },
+    "S11-R002-P013": {
+      "sourceTextSha256": "cbe05e4d00464edcfa45cc7b0ff5fa679eeaaa54f68e2d9ec7a7f2c1d5beabb5",
+      "en": "Because no existing tool or API established and organized UN intervention, I developed the system myself. Reliability remains a significant limitation, but cross-comparison can still produce sufficiently meaningful findings."
+    },
+    "S11-R002-P014": {
+      "sourceTextSha256": "202c1f570e1dde60f0bc4a880deba323d74957b34a734b48b2b5161f5384335c",
+      "en": "Visualization and interpretation"
+    },
+    "S11-R002-P015": {
+      "sourceTextSha256": "201790cac0e57cc308550c7116abd5042e2100990f64f59d74302723a031f7d4",
+      "en": "The analysis used two principal measures across five-year intervals from 1990, commonly called the détente period, to 2025. UN intervention rates and resulting conflict-resolution rates were expressed as proportions and plotted."
+    },
+    "S11-R002-P016": {
+      "sourceTextSha256": "f94b947e0618f14ae43b57eb8d669562c99c3665aa8732ed68bd37d55a51c1a6",
+      "en": "The extracted results are as follows."
+    },
+    "S11-R003-P001": {
+      "sourceTextSha256": "ef4741435e102679ec3737ce07916aeb96612734ba8ad0e8659889dd554740c6",
+      "en": "A total of 357 records were output by the algorithm in the format below."
+    },
+    "S11-R003-P002": {
+      "sourceTextSha256": "2724b146cd5685b1f4b78b91d8503512b5133dda6028040934f1d1201e56f177",
+      "en": "The output identifies conflict location and year, the form of UN intervention and resolution status, based on UN Digital Library resolutions and their contents. Converting these data to proportions produces the following results."
+    },
+    "S11-R004-P001": {
+      "sourceTextSha256": "7b8a0eca8869c5c974a81e141c0379d2b8127ba4a0392fb2cc0b2ef58e57657c",
+      "en": "Resolution approached 54% in the 1990s, compared with 18% in 2020–2025, a nearly threefold decrease. More importantly, conflicts labeled ongoing continue increasing. There was a brief lull around the September 11 attacks in 2001, followed by another sharp increase, reaching a stated peak of 40 in 2020. The following graph reinforces this pattern."
+    },
+    "S11-R004-P002": {
+      "sourceTextSha256": "18f0d271283062d12046c0cd7587f825f97114b3efb19799fb838773b2143a71",
+      "en": "The growth in unresolved conflicts is not especially clear, with R² = 0.367, whereas resolved conflicts decline sharply."
+    },
+    "S11-R005-P001": {
+      "sourceTextSha256": "5d547b88ce07bc43551fa89412e9c2ff0cecc2612bbf22fc55ea0226fd2d1b2d",
+      "en": "The graph shows this clearly. Both trend lines have correlations above 0.7: resolved conflicts decrease while ongoing conflicts increase, indicating prolonged and accumulating unresolved conflict. Limitations include quantitative-analysis constraints, computing performance and insufficient time to analyze every conflict."
+    },
+    "S11-R005-P002": {
+      "sourceTextSha256": "3ac3be6e7bb00716ca285d453c0d7ea703e93d592417fa3e51ae508b92fb62fa",
+      "en": "The collapse of peace"
+    },
+    "S11-R005-P003": {
+      "sourceTextSha256": "e67c2e501a986287e0bd732f22f7a4eb47907a74f1b560d86d1a87c9e8cdf340",
+      "en": "This accords with falling global peace and fewer peaceful resolutions in the GPI report. When resolution exceeded 50% in 1990, liberalism and UN intervention could be considered meaningful and correlated with outcomes. Unresolved conflict now increases, modestly but clearly, while prolonged and ongoing conflict grows steadily. The UN is therefore clearly not fulfilling its role."
+    },
+    "S11-R005-P004": {
+      "sourceTextSha256": "e6145b6885732a3df811493fbc5dfb12fe485c2fb549aa9557280946862d229b",
+      "en": "These findings support two answers. First, worldwide conflicts have risen sharply and lie beyond the control and management of organizations such as the UN. Second, the UN and other international organizations appear not to meaningfully influence actual conflict resolution."
+    },
+    "S11-R005-P005": {
+      "sourceTextSha256": "a00807a5943227937206dc0791b8892561c2e831e89933ba586f6677067ae3d7",
+      "en": "NATO's turn toward realism"
+    },
+    "S11-R005-P006": {
+      "sourceTextSha256": "fbc8a86c718bccb9a9fb4f4d04dc56c4eee16fc4c521ccd9f46d6beba17ae819",
+      "en": "Alongside the increasing unresolved-conflict rate and duration, NATO, formed for collective military response, has continuously increased defense spending and contributions. American changes illustrate this:"
+    },
+    "S11-R005-P007": {
+      "sourceTextSha256": "d7f5a0d6f9dc4e2666742d0f6ea560d215e31dd50f57b5c48d7896f025d2ffbb",
+      "en": "1. The second Trump administration's requested 2026 defense budget exceeded KRW 2,000 trillion."
+    },
+    "S11-R005-P008": {
+      "sourceTextSha256": "774b5ea0b563fcbe4726d3426d446319caf596538819c56de76d8b49f140aa8c",
+      "en": "2. Deliberate arrears in UN contributions."
+    },
+    "S11-R005-P009": {
+      "sourceTextSha256": "da82098b5c93ee31081a6d7e2afa98f8a42528cbdcd22e1a29ef4fae7bf1dea0",
+      "en": "3. Increased NATO contributions. These three points show America responding to the trend. China likewise intentionally delays UN payments, paying only necessary budgets when needed, while increasing defense spending by 7% year on year to KRW 405 trillion."
+    },
+    "S11-R005-P010": {
+      "sourceTextSha256": "9ca512820821b776122389e4bcd4f01726ad1b97e46cdb8ef2e271098352b75f",
+      "en": "Global military expenditure has risen alongside the disintegration of peace. This return to realism is overtly demonstrated by spending among NATO states seeking self-help collective defense and stronger security. I collected and cross-checked ten years of spending data, from 2016 to 2026, using official NATO reports."
+    },
+    "S11-R005-P011": {
+      "sourceTextSha256": "cd76c4d7452dabdf71b0c1d99d24217b598fd68bfb9c60f1ee19609cabfce3b3",
+      "en": "Demonstrating collective defense and increasing NATO defense expenditure"
+    },
+    "S11-R006-P001": {
+      "sourceTextSha256": "d452db57ae06db9ccf71797f7f9882fbcdbe4f393550d4715bf217ff9ca05cc1",
+      "en": "NATO members' combined defense spending clearly increases. The first graph rises steadily, with R² = 0.82 indicating a clear correlation. A quadratic trend line was used for changes in the growth rate. It also rises distinctly, with growth itself exceeding 20% in 2025."
+    },
+    "S11-R007-P001": {
+      "sourceTextSha256": "b9ea5c928de9649ff1e4027e792caec6a6a855500893a35b14b4b365a3b9754e",
+      "en": "In 2014, fewer than five members (10.7%) spent 2% of GDP on defense, whereas by 2025 every member met the 2% threshold. Under NATO's Hague pledge, the current target exceeds 5%."
+    },
+    "S11-R007-P002": {
+      "sourceTextSha256": "c95cf9f776c59553d1244be5e44d788abd9775f70e1b762c5f29865dc4709208",
+      "en": "Average NATO defense expenditure as a GDP share also increases steadily. In 2025, all are above 2.50%, representing 50% progress toward the Hague agreement's 5%."
+    },
+    "S11-R007-P003": {
+      "sourceTextSha256": "a00807a5943227937206dc0791b8892561c2e831e89933ba586f6677067ae3d7",
+      "en": "NATO's turn toward realism"
+    },
+    "S11-R007-P004": {
+      "sourceTextSha256": "403b18662ed399d7f1d05734136f847d43cf90c2807d9e3a35ebc539f09f0468",
+      "en": "Stronger national security and increasing purchases of strike weapons"
+    },
+    "S11-R007-P005": {
+      "sourceTextSha256": "015a36f561fa9750a79e3b7c6f28d633e7653dbbf283d7cc936961135a7fcb03",
+      "en": "As conflict analysis showed, Western allies are restructuring military power through realist balancing as international organizations' normative control disintegrates. To examine the underlying narrative and procurement paradigm more deeply, I ran my self-developed NV, Night Vision, AI model. Two loops of the Frame Auditor and Deconstruction Analyst algorithms within its harness traced structural causal relationships and produced a provocative ‘eureka’ insight."
+    },
+    "S11-R008-P002": {
+      "sourceTextSha256": "a665c0b15c0e9f25a796d3a01b3013a4552f0b33ed7c36f18ec2eeb1ce1f6a20",
+      "en": "NATO's official rhetoric remains ‘defensive and proportionate collective security,’ but NV identified procurement patterns elevating offensive Deep Precision Strike, DPS, to an essential alliance mission. The motivation matters. Rearmament is commonly attributed to Russia, yet NV's timing analysis placed announcements for the Anglo-German 2,000 km DPS program and Britain's 600 km Brakestop ballistic-missile project not immediately after the 2022 invasion, but precisely in the 2025 crisis of American credibility associated with the second Trump administration's NATO skepticism. Rather than Russia alone, weakening assurance of automatic American Article 5 intervention triggered a realist survival calculation to obtain sovereign deterrence."
+    },
+    "S11-R008-P003": {
+      "sourceTextSha256": "7c6618b3372ee14690d3d2d2e67b91eb975fa8a6e5c904d9768f5679d006a3c5",
+      "en": "NV also exposed sophisticated institutional framing intended to bypass European pacifist opinion and political friction. NATO's Integrated Air and Missile Defence policy, effective in February 2025, explicitly states that offensive operations are an essential component of comprehensive air defense. Strike weapons are thus procured while diplomatically labeled ‘defense.’"
+    },
+    "S11-R008-P004": {
+      "sourceTextSha256": "c0d60a1a881cd2efda9ded4b3b42bd8507d1be0fa11ad7bd71f9a8961d498957",
+      "en": "Procurement now follows a dual structure: delegated deterrence, buying JASSM-ER or ATACMS through American Foreign Military Sales for immediate deployment but subject to U.S. veto control; and autonomous indigenous deterrence, including ELSA cruise missiles, targeting the 2030s. The paradox is that Trump's first administration withdrew from INF and opened legal space for ground-launched long-range missiles, while his second undermined alliance trust and pushed Europe to fill that space with offensive weapons. An alliance-level security dilemma thus demonstrates the superpower structurally promoting European strategic autonomy."
+    },
+    "S11-R008-P005": {
+      "sourceTextSha256": "50e086b095b7cff60341894109f618e4a070c103ea1df08355a16d2ef234fd1a",
+      "en": "Corporate development and active corporate participation"
+    },
+    "S11-R008-P006": {
+      "sourceTextSha256": "3853358489974dfd2ce7d675c7630e6223e9d6b4cdaa784de38fef8ef35f4b60",
+      "en": "The central force underpinning this realist arms competition and NATO's transformation is explosive growth among private defense firms and their active participation in the security ecosystem. To quantify signs of structural change in the industrial base, I cross-analyzed global defense data and accelerator-program conditions."
+    },
+    "S11-R008-P007": {
+      "sourceTextSha256": "34ee9504135f4d2423f6acfc32540a0b8e23612960e4efbb3082c25995cd92e7",
+      "en": "First, I visualized broader arms-trade trends in the Atlantic camp to examine how growing military tension directly translates into company revenues."
+    },
+    "S11-R008-P008": {
+      "sourceTextSha256": "3bea0fdcda81c34847f592d1b72d4321531b94dee730a53fa2677739845a1bf3",
+      "en": "Global arms sales rose steadily and sharply from approximately USD 540 billion in 2015. The trend's R² = 0.8991 approaches 0.9, statistically indicating that defense-market expansion is locked into macro international-political structures rather than a temporary theme. Revenue approached USD 680 billion in 2024, showing rearmament tightly linked to corporate survival and recovery of fixed capital costs."
+    },
+    "S11-R009-P002": {
+      "sourceTextSha256": "7ba422e3c60568af1ad7ad6c9ff1d9e31646965314efb930ee60ed05ed0f4ffc",
+      "en": "To identify where this capital flows more specifically, I tracked major American defense primes identified by NV as core suppliers in the FMS-dependence chain."
+    },
+    "S11-R009-P003": {
+      "sourceTextSha256": "17c74fac1bd6463d0663e4d230f001323a825daf09ed4cd72b4334cf5f5c020e",
+      "en": "Lockheed Martin's and Northrop Grumman's annual revenues visibly demonstrate the inflows. Lockheed rose from the mid-USD 40 billions in 2015 to above USD 70 billion in 2024, while Northrop nearly doubled from the low-USD 20 billions to USD 40 billion. This resulted from European states racing to buy proven strike assets such as JASSM-ER and ATACMS directly through FMS to fill America's credibility gap, demonstrating stable European export earnings for American contractors through at least the 2032 horizon. More importantly, advanced private deep-tech startups are entering alliance security mechanisms at extraordinary speed beyond traditional manufacturers' oligopoly. NATO's ambitious Defence Innovation Accelerator for the North Atlantic, DIANA, reflects this shift."
+    },
+    "S11-R010-P002": {
+      "sourceTextSha256": "a118bf175bee99d8bcf8ae89da01c50982bbdb1f585216c1978996a0bcdf1a65",
+      "en": "DIANA's selected firms and applications show explosive expansion. Its 2023 first cohort included around forty firms from about 1,300 applications. Through the paradigm shift of the 2025 third cohort, the 2026 fourth cohort reached 150 selected firms and more than 3,800 applications."
+    },
+    "S11-R010-P003": {
+      "sourceTextSha256": "666431e4c67dd3c6a8886fedcc3518acc645e9ae3ea64c0014d0275f8c257a93",
+      "en": "This quantitatively shows private startups in autonomous drones, quantum sensing, cybersecurity and AI entering NATO accelerators and test centers in large numbers. Civilian innovation speed has become central to alliance deterrence, rendering Silicon Valley's earlier misguided hostility and moral aversion to military technology increasingly irrelevant. These three graphs clearly demonstrate that modern technological military alliances are evolving beyond interstate treaties into a vast security–industrial complex combining major defense capital seeking high-margin offensive systems with private deep-tech ecosystems."
+    },
+    "S11-R010-P004": {
+      "sourceTextSha256": "ce5da34183dc53ab86fed2e757c4056a6cb81424b0d228defde55c2099d7814b",
+      "en": "Conclusion"
+    },
+    "S11-R010-P005": {
+      "sourceTextSha256": "4b8b82295883a09fe37c57fe366377203e647ee457aaa4bb701e3e5f108fc95b",
+      "en": "Realism and collective defense"
+    },
+    "S11-R010-P006": {
+      "sourceTextSha256": "0bfc2a9463e1161b408ab45db20650b8e045a69a68e2946d737784c24c0d975d",
+      "en": "The analysis and quantitative indicators point to an evident conclusion. Universal multilateralism and UN-centered normative liberal order, dominant after the Cold War, have been neutralized by veto politics and lack of coercive power. Faced with prolonged conflict and accumulating unresolved wars, international society rapidly returns to a realist paradigm governed by power and deterrence."
+    },
+    "S11-R010-P007": {
+      "sourceTextSha256": "38c4fa0c760fc57a682b2fcaac0877d5e6d595b285f1f74d6bef89fcd5366902",
+      "en": "Amid anxiety over anarchy, states' survival solution is not collective security relying on voluntary cooperation, but institutionalized collective defense and NATO-style technological military alliances backed by physical destruction and binding treaties. Interceptions by linked defenses in the 2026 Middle Eastern war demonstrated that shared systems provide operational deterrence rather than mere theory."
+    },
+    "S11-R011-P001": {
+      "sourceTextSha256": "4fd40ebe2d06ad80b415b134248690a1dc233d19ba2b72568734f4827300e52d",
+      "en": "NATO's present position and limitations"
+    },
+    "S11-R011-P002": {
+      "sourceTextSha256": "ad4ba5c4c2ec960011c2165af550e0fc3d98fc244b7b529e3ac2c49453a0ebfb",
+      "en": "Two strong criticisms can nonetheless be raised. First, if the UN Security Council is criticized as the preserve of major powers, is NATO not likewise an American-centered hegemonic device and instrument consolidating Western dominance? Second, some scholars see NATO not as a purely realist balancing mechanism but as an institutionalized security community operating through multilateral decisions and rules, making its description as a return to realism a theoretical misclassification."
+    },
+    "S11-R011-P003": {
+      "sourceTextSha256": "02ea1dd4d4b01a33cef0d91e1f3a3861c103934e7094e68c7cb008b64661dacc",
+      "en": "In response, this study emphasizes NATO as a thoroughly realist adaptation that does not conceal reality. America's dominant position and hegemonic influence are undeniable, but NATO does not repeat the hypocritical rhetoric of formal sovereign equality associated with the UN. Its essence is a clear military treaty promising a joint response with force to an attacked member, operating through physical power relationships and practical burden-sharing."
+    },
+    "S11-R011-P004": {
+      "sourceTextSha256": "70557d402ce4dab74741ced713a65b67b02c9d199a2ed2f7db85171d6437ee09",
+      "en": "Treating institutional cooperation among multiple countries as a liberal model is superficial. NATO's cohesion comes not from faith in norms but from the realist calculation that ‘I need your strength to survive’ against existential external threats, including Russia and multipolar hostile powers, together with the defense-spending data."
+    },
+    "S11-R011-P005": {
+      "sourceTextSha256": "cfa25158d1eddaf6f958ada626e1ea9931512ffe35227ce35ef5d01dced28e77",
+      "en": "Technology and firms: overcoming misguided hostility"
+    },
+    "S11-R011-P006": {
+      "sourceTextSha256": "04794a5aa9c1ef3a684a93392f35ce330529a561e58feed866c4e5bd8b4481c3",
+      "en": "Strengthening defense requires attention to Alex Karp's argument in The Technological Republic that private technology and national security are inseparable. Silicon Valley and other advanced ecosystems once showed widespread moral aversion to civilian big tech and AI entering military infrastructure. Today's return to realism frequently reveals moral discomfort and blind hostility toward force in response to the collapse of peace believed to have been created by liberalism and the UN. Defining military technology as evil is merely misguided hostility rooted in a liberal-utopian illusion."
+    },
+    "S11-R011-P007": {
+      "sourceTextSha256": "1e27b5f89030f7f6f9e48eb141503f1c99d1d73b5b04576838298699de8c9fe1",
+      "en": "Democracy without deterrence cannot be preserved in realist international politics. Conviction-driven firms such as Palantir and Anduril, providing AI situational awareness and defense digital transformation in support of Western security, do not encourage war. Through technological superiority, they deter reckless preemptive attacks and maintain peace. Korea and other liberal democracies should therefore proactively create technological military-alliance ecosystems linking private deep-tech startups with defense ontologies."
+    },
+    "S11-R011-P008": {
+      "sourceTextSha256": "561e8a16849df15f222becc70ab81b5360f067b7c2f27eb0791d510e887698f0",
+      "en": "Korea and other liberal democracies urgently need to recognize the structural limits of manufacturing-centered defense and reorganize around advanced software. Korea's industry is concentrated on quantitative hardware growth and assembly/manufacturing exports, with critically low independence in the software driving future battlefields. As this study's analysis demonstrates, modern alliance deterrence depends on game-changing AI and hyperconnected situational-awareness systems such as Palantir's Maven and Anduril's autonomous weapons. Yet closed acquisition processes and rigid institutional barriers effectively block private innovation from entering Korean defense. Korea must move beyond replicating and mass-producing complete mobility platforms for export, benchmark NATO DIANA, boldly relax regulations and institutionalize aggressive state-led accelerators enabling AI, quantum and autonomous-driving startups to enter defense procurement."
+    },
+    "S11-R011-P009": {
+      "sourceTextSha256": "f4c7d91fa7552a725de94bc84bbc2bb47dd35b605392ae37eabc71af52bef025",
+      "en": "Korea should also use its distinctive hardware-manufacturing leverage to join Western software-centered technology-security alliances as a core partner. Combining American and European security algorithms with reliable Korean weapon platforms and mass production through a platform–software alliance can complete practical balancing and multilateral deterrence. In multipolar anarchy, where technology is security and survival, a flexible, proactive technological military-alliance ecosystem combining disruptive private innovation with defense ontology is the only practical solution for sustainably preserving Korean sovereign security and liberal-democratic values."
+    },
+    "S11-R011-P010": {
+      "sourceTextSha256": "065ab5ccf544207790ce9c7c5cd3c468a4f0e7fd4d0f5a4935a6f525a6f88d25",
+      "en": "Research limitations"
+    },
+    "S11-R011-P011": {
+      "sourceTextSha256": "2b01be4fcbc7994495457f00d547a740f810253e19451cbf2572ad10423b9cbe",
+      "en": "The study has methodological significance in attempting to develop a quantitative tool linking UCDP with a 70-billion-parameter LLM to automate matching worldwide conflict data to UN resolutions. However, limited personal computing capacity and time prevented exhaustive processing of approximately 1,250 time-series conflicts. Instead, the LLM selected fewer than fifty cases per year for proportions, limiting statistical generalization. Classification accuracy and reliability of the prompt-engineered resolved/unresolved algorithm were also not fully verified. Higher-performance computing and improved algorithms are future tasks."
+    },
+    "S11-R013-P005": {
+      "sourceTextSha256": "4a9608d84b3bcc7d80ff3674a62165bbb2bd11d9cec1e4f405b7ab3924418d97",
+      "en": "Temporary dummy file for data analysis. Temporary file. Temporary 22."
     }
   },
-  "sourceCount": 95,
-  "translatedCount": 12,
-  "complete": false
+  "sourceCount": 90,
+  "translatedCount": 90,
+  "complete": true
 }

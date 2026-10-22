@@ -2,8 +2,237 @@
   "reportId": "S17",
   "method": "editorial-translation",
   "status": "author-review-pending",
-  "paragraphs": {},
+  "paragraphs": {
+    "S17-R001-P001": {
+      "sourceTextSha256": "d96069882579af47c1bb99017c0e1e5b88847a179f0e70dced4e49677808decd",
+      "en": "Architecting a Management-Strategy Model for Defense Firms: PCA, VAR and Cluster Analysis"
+    },
+    "S17-R001-P002": {
+      "sourceTextSha256": "3baefba1cf98e4ef86799d59760ba51721cd1bffb964fd744b9e56579929edbd",
+      "en": "— Mathematics for Economics and Management"
+    },
+    "S17-R001-P003": {
+      "sourceTextSha256": "10ad52a432eb696dd67506642efbe363c77391beb60f3745e1bf96c5ed621b85",
+      "en": "Research background"
+    },
+    "S17-R001-P004": {
+      "sourceTextSha256": "78a7cfda51481ebddc2c8a0e10220a803a7655918538b7fe4daae1cdee42efab",
+      "en": "The arrival of a defense-spending supercycle"
+    },
+    "S17-R001-P005": {
+      "sourceTextSha256": "bcb628e125ed615077fca0d80a323a67c5437496d5d3a51298513ecf0fa975d9",
+      "en": "Since the mid-2020s, structured U.S.–China competition, prolonged Russia–Ukraine war, persistent Middle Eastern conflict and European rearmament have increased defense spending at an unprecedented pace. SIPRI reports 2024 global military expenditure of USD 2.718 trillion, up 9.4%, the fastest annual increase since 1988. Spending rose 37% from 2015 to 2024, while the top 100 defense firms' arms revenues reached USD 679 billion, 26% above 2015. Reaffirmed NATO 2%-of-GDP targets, EU rearmament and increasing Indo-Pacific budgets, including Korea, Japan and Australia, make this a structural megatrend rather than a temporary fluctuation. Analyzing defense is therefore no longer a narrow security-policy topic: it is a macroeconomic question about where large capital flows will go over the next decade."
+    },
+    "S17-R001-P006": {
+      "sourceTextSha256": "e1f15e12d91a4238dd315a758643b427c7c6e82a48bf0c3c3b43cf1ea46aacd9",
+      "en": "Uneven growth paths"
+    },
+    "S17-R001-P007": {
+      "sourceTextSha256": "24411e42d1635e7953fae28158486568009d26db204319ef2028ba1379650493",
+      "en": "More important than aggregate expansion is that firms absorb capital through very different growth models. Traditional primes—Lockheed Martin, RTX, Northrop Grumman and General Dynamics—grow through mass production and long contracts for major systems such as F-35, Patriot and B-21. Stable funding and growth are advantages, but physical production bottlenecks impose fundamental limits. Recent U.S.–Iran operations illustrated this when Tomahawk consumption caught up with production. Without major production-line innovation, revenues cannot grow faster than factory throughput regardless of budget growth."
+    },
+    "S17-R001-P008": {
+      "sourceTextSha256": "09bfca47f76c78cc60e21202c8cd924f878e3aa96ba55ada5f6ce13dcf369df4",
+      "en": "Software-native firms such as Palantir absorb the same budget increases through data-platform licenses and subscriptions, scaling with near-zero marginal costs and no comparable production constraint. Hybrid firms such as Hanwha Aerospace, recently growing through vertical integration—its stated 2024 integration of Hanwha Ocean and Hanwha Systems—and diversified exports, including K9 and Chunmoo to Poland, likewise have growth quality inadequately explained by traditional indicators."
+    },
+    "S17-R001-P009": {
+      "sourceTextSha256": "b2f4631d3211ad10574ccff73cce88d3db58764c77e98ead86d0f4cdedab9af9",
+      "en": "The differences are more extreme among unlisted firms. Anduril's 2025 revenue remained around USD 2 billion, yet its 2026 valuation approached USD 60 billion. This reflects expectations for software-defined weapons and self-funded R&D rather than absolute revenue or backlog. Such valuations, unimaginable for listed primes at comparable revenue, further show the limits of traditional financial measures."
+    },
+    "S17-R001-P010": {
+      "sourceTextSha256": "6ac7c0b06d1cd21fef1bea8faa159587fa818de393b5dbb03e03105a5d1df7a0",
+      "en": "Theoretical background"
+    },
+    "S17-R001-P011": {
+      "sourceTextSha256": "2004c5df0d2e64c240d84fbcbc502c823a72f813b05188991c79ea0c31df3931",
+      "en": "The Resource-Based View, RBV, attributes sustainable advantage to inimitable and nonsubstitutable resources. Traditional defense production facilities and skilled processes can eventually be copied with capital. Data-network effects and ontology-design knowledge in software platforms are relatively harder to imitate. The study applies the proposition that harder-to-copy resources support more durable profitability to defense, reformulating it as a financially testable hypothesis."
+    },
+    "S17-R001-P012": {
+      "sourceTextSha256": "c626781c792f6a8d38e912ea8f4136b5173698bf68c55b4270604afae3b291a8",
+      "en": "Research problems"
+    },
+    "S17-R001-P013": {
+      "sourceTextSha256": "876c98069ca5f6708a1b01f06866ccf617429464b910b9fc3a7f86caf2926683",
+      "en": "The inquiry begins with three structural limitations of existing defense-industry analysis."
+    },
+    "S17-R001-P014": {
+      "sourceTextSha256": "e632d2096101eb94d4db700afe1fdd54ca72b7a305b1807f098b2b6ab675f778",
+      "en": "First is size bias. Evaluation centered on backlog and assets inevitably favors legacy primes with mass-production capacity. Those measures historically mattered, but battlefield superiority is shifting from platform quantities and hardware toward drones, satellites, AI and integrated command-and-control software. The first objective is to test how this structural change appears in corporate profitability and growth. Does the conventional equation ‘large backlog = resilient firm’ still hold in 21st-century defense?"
+    },
+    "S17-R001-P015": {
+      "sourceTextSha256": "77232cbd9045a2abab741902a61f6e9f0b6b8ac4d152dbc576e18e47341f31da",
+      "en": "Second is bias in comparisons across unlike firms. Traditional measures are effectively meaningless for a company dominated by software revenue such as Palantir. Applying hardware-prime standards can overvalue or undervalue it and distort capital allocation. The study therefore uses standardized, general financial ratios and PCA dimensionality reduction to mitigate bias across both types."
+    },
+    "S17-R001-P016": {
+      "sourceTextSha256": "abb4b14574ba38055c931fb4cba6a0f9f85011198d38836e72b885cd8a4752a8",
+      "en": "Third is the empirical gap connecting macro and micro variables. Defense-budget growth reaches corporate revenue with a lag, while monetary variables such as interest rates exert opposing financing-cost pressure. ‘Higher defense spending raises defense stocks’ is actually a dynamic process influenced by monetary policy. VAR impulse-response functions are used to quantify the causal structure tentatively."
+    },
+    "S17-R002-P001": {
+      "sourceTextSha256": "6b5d3e434b44495ecd30d7e286aebb1ddbda51a4ab93baa8ebcb59b99ff2f9ab",
+      "en": "These problems converge on one question: under the same structural defense-budget expansion, which firms secure stronger growth paths, and should the answer be sought in structure rather than size? The study designs a dual framework combining the Defense Viability Index, DVI, which synthesizes static financial ratios, with VAR/IRF time-series dynamics. The axes complement one another by answering different temporal questions: who has a stronger structure, and how does it respond to macroeconomic shocks?"
+    },
+    "S17-R002-P002": {
+      "sourceTextSha256": "8fd86c0a2bb53fedc87487f3b448e02a1cce8ab15ee252e1f00e8507c9ff7f94",
+      "en": "Data collection"
+    },
+    "S17-R002-P003": {
+      "sourceTextSha256": "5e48701366bbd49b807fd7f8803d7c4d3c7ccb321385439cec9b5a35b0923924",
+      "en": "Sample firms"
+    },
+    "S17-R002-P004": {
+      "sourceTextSha256": "3f21a642111bfc7b694e102ccc1b795df36320e25a3c62b5fce5e7bb89a03474",
+      "en": "Company | Type | Notes. Lockheed Martin (LMT): traditional prime; world's largest defense firm by SIPRI. RTX Corporation: traditional prime; aircraft engines, missiles and commercial aviation. Northrop Grumman (NOC): traditional prime; space, strategic bombers and fighters. General Dynamics (GD): traditional prime; ground combat, submarines and business jets. Hanwha Aerospace: vertically integrated hybrid; stated 2024 Hanwha Ocean/Hanwha Systems integration and recent export surge. Palantir Technologies: software native; AI/data platforms without a traditional backlog concept."
+    },
+    "S17-R002-P005": {
+      "sourceTextSha256": "f790ad0d05e0b012fb85053961ba0644750c2371f9553ac0f98eeefd73794473",
+      "en": "Data sources and sample limitations. Financial data were collected directly from 2024 10-Ks and annual reports, quarterly 8-K releases and SIPRI's Arms Industry database. Global military expenditure used SIPRI's 2015–2025 series in constant 2024 dollars. Two limitations apply. Annual sample size: reliable public military-spending and top-100 arms-revenue series effectively provide only eleven annual observations, 2015–2025, a very small sample. Quarterly interpolation: cubic splines produced an n = 40 quarterly series to stabilize VAR estimation. This artificially increases observations mathematically; it does not create forty independent quarters of information."
+    },
+    "S17-R002-P006": {
+      "sourceTextSha256": "1ef1fa36b05b9da459e4b910d68ca028e9ba9abadb25cad219a4d497c4c0efeb",
+      "en": "Interpolated values smoothly connect annual trends, so confidence intervals may be artificially narrow, creating overconfidence. This qualification is repeated in section 5's interpretation and section 6's limitations."
+    },
+    "S17-R002-P007": {
+      "sourceTextSha256": "f738003a22b18c10e28a28b24163f94582892fe3aa3a93ca1bb4e5be43cb4b6e",
+      "en": "Methodology"
+    },
+    "S17-R002-P008": {
+      "sourceTextSha256": "243ed2b958cfd85f9d1368c34973db4d6e996db16e090b28d7ff2300d9515f0f",
+      "en": "Indicator design. Six standardized indicators reduce bias when comparing unlike firms."
+    },
+    "S17-R002-P009": {
+      "sourceTextSha256": "add13a2fa85f7ba9dedd8ef4444db7ac0d5b0872fe5c0049cef7a8ab78b2f3f1",
+      "en": "Indicator | Definition | Reason. Rev_Growth_Pct: year-on-year revenue growth; growth momentum. Gross_Margin_Pct: gross margin; structural profitability applicable to hardware and software. Op_Margin_Pct: operating margin; execution efficiency. RnD_to_Rev_Pct: R&D as a revenue share; technological reinvestment intensity, a proxy for software-centered structural change. Asset_Turnover: total asset turnover; efficiency, an alternative to backlog. Debt_to_Equity: debt ratio; leverage and financing risk."
+    },
+    "S17-R002-P010": {
+      "sourceTextSha256": "5abd4dc87fd43223b13fcd98a1cfdcc0d415675977c58385f05bc5b9bebc9a88",
+      "en": "Selected 2024 observed values were: RTX R&D intensity of 3.63% (USD 2.93 billion R&D / USD 80.7 billion revenue), operating margin 8.26% and gross margin 19.09%. Northrop's fourth-quarter operating margin was 11.2%, with gross margin around 19.8%. General Dynamics reported USD 47.7 billion revenue, up 12.9%, and an operating margin in the low 10s. Palantir recorded USD 2.866 billion revenue, up 28.8%, or 36% in the fourth quarter alone; GAAP net margin reached 16% and gross margin exceeded 80%, a structure unlike hardware primes. Hanwha Aerospace's operating margin improved from 9.8% in 2024 to 11.1% in the first quarter of 2025, driven mainly by exports."
+    },
+    "S17-R002-P011": {
+      "sourceTextSha256": "87da550c6adf6e9f0bdb89493e8cd92628b5fd4aa0d09b0d77fc78006a2cad79",
+      "en": "PCA and K-means clustering"
+    },
+    "S17-R003-P001": {
+      "sourceTextSha256": "f4feb3410572ca68de03c5cf6f639564c521db5a6f13ea3c553df547e3ccd693",
+      "en": "The six indicators were z-score normalized and reduced through PCA to two axes: PC1, innovation/margin, and PC2, size/leverage. K-means with k = 2 produced clusters. A weighted combination based on PC1 scores forms the Defense Viability Index."
+    },
+    "S17-R003-P002": {
+      "sourceTextSha256": "6b9bd19a20c4aaf1ad629f3d3c9e84522e23ec0f47f9982a13b7f2402b1cf261",
+      "en": "VAR(2) with exogenous interest rates and impulse-response functions"
+    },
+    "S17-R003-P003": {
+      "sourceTextSha256": "79e4c25fe9b4cc4413d264933cb397e8319e20d7dd76a570503d263d7f9ab3f7",
+      "en": "Using the spline-interpolated quarterly series, n = 40, described in section 3.2, I constructed a two-variable VAR(2) with global military-expenditure growth, dLog_Milex, and arms-revenue growth, dLog_Arms. Policy-rate change, dRate, was added as an exogenous control in VARX(2). The model generated impulse-response functions and forecast-error variance decompositions, FEVD, for defense-spending and interest-rate shocks."
+    },
+    "S17-R003-P004": {
+      "sourceTextSha256": "8ba9f12bb0b9ddd5c85b9af5c4678a55fa01f2d00abbf41cbdf12710a4f5ceed",
+      "en": "Empirical results"
+    },
+    "S17-R003-P005": {
+      "sourceTextSha256": "e99af1a4e437d0a223338d97c2f3d1e2eb57c5e8fbe9ffcb7b5fdfbe66d02fc7",
+      "en": "Financial-indicator correlations"
+    },
+    "S17-R003-P006": {
+      "sourceTextSha256": "8baad53186980f4e35df2b3c2b13ab2d7dca31af9423701b3c86fbd457c674ea",
+      "en": "Gross margin, operating margin and R&D intensity had correlations above 0.95: Gross_Margin_Pct with Op_Margin_Pct was 0.95, and with RnD_to_Rev_Pct, 0.97. Firms investing more in R&D thus tended to have higher margins within the sample. With only six firms, this cannot yet be generalized as industry-wide causality. Palantir and Hanwha's simultaneously high values across all three indicators may themselves inflate correlations. Asset turnover and debt-to-equity were strongly positively correlated, 0.84, and negatively correlated with profitability, −0.3 to −0.57, suggesting two distinct sample paths: traditional leveraged asset turnover and high-margin, high-R&D growth."
+    },
+    "S17-R003-P007": {
+      "sourceTextSha256": "1aa6f28f49884bc7da30ae401c4c8ffe158a5ff4272ba20a665b7ddf43c01c68",
+      "en": "PCA clustering and DVI"
+    },
+    "S17-R004-P001": {
+      "sourceTextSha256": "973bed94e590999dbd2a72985f8c650a226c4a419ac8d853928af1133f016e33",
+      "en": "On PC1, the innovation/margin axis, Palantir and Hanwha were clearly positive, while Lockheed, RTX, Northrop and General Dynamics were negative or near the origin. Two interpretations follow."
+    },
+    "S17-R004-P002": {
+      "sourceTextSha256": "8ab034607c92520fc63275bdc72f7a75b00fc932051558ef489ab2c17b860e5e",
+      "en": "First is the technology-native/vertical-integration cluster, Palantir and Hanwha, aligned strongly with R&D intensity and gross-margin vectors. This can be read as financial evidence that software and high-value product shares rather than physical production drove recent growth. Their sources differ, however: pure software margins for Palantir, and export volumes plus high-margin maintenance, repair and overhaul services for Hanwha. Sharing a quadrant does not mean sharing a business model."
+    },
+    "S17-R004-P003": {
+      "sourceTextSha256": "0096c3698154351059991f62b78d40da2e75ae8b7031a67e3aab910d51d10f3c",
+      "en": "Second are traditional primes LMT, RTX, NOC and GD, closer to debt-to-equity and asset-turnover vectors. Revenue scale is overwhelmingly larger, but margin expansion is limited. Lockheed's gross margin fell from 13.5% to 9.8% in 2021–2024 while ROE rose into the 84% range. Profitability and leverage thus moved differently, indicating maintained scale with pressured margins."
+    },
+    "S17-R004-P004": {
+      "sourceTextSha256": "6dc1936096c520213b79b4059d95f53be3533c4416930a7802ad5c796e26fe1b",
+      "en": "Impulse-response functions based on VARX(2)"
+    },
+    "S17-R005-P001": {
+      "sourceTextSha256": "5c6f8aac6f8a02360422af247774d278d91126a22fe3163479cb12c18412651d",
+      "en": "Standard-deviation shock to defense expenditure (above) | interest-rate shock (below)"
+    },
+    "S17-R005-P002": {
+      "sourceTextSha256": "2bba71da5325f1d654828c84a34ecb5ced64cb0d6d5ccb624965b99fa8e62eec",
+      "en": "A one-standard-deviation defense-spending shock was estimated to produce a gradually positive response in arms-revenue growth after two to four quarters. Interest-rate shocks instead pulled growth clearly negative initially. Confidence intervals, shown dotted, widened through eight quarters, consistent with the usual accumulation of VAR uncertainty over longer horizons."
+    },
+    "S17-R005-P003": {
+      "sourceTextSha256": "e3ac7b3c94f2cba257ee0b3f465851d763ead50b3c33b3f1175fff2d8484ca1d",
+      "en": "Forecast-error variance decomposition, FEVD"
+    },
+    "S17-R006-P001": {
+      "sourceTextSha256": "69e8d39e16eadf961267e885757db997602a40a9ed20127ab697709d604c5c06",
+      "en": "FEVD estimated that the share of dLog_Arms volatility explained by dLog_Milex grows with the lag, reaching around 80% at eight quarters. Initially, revenue's own inertia and interest-rate shocks explained more. This accords with the hypothesis that macro-political budget decisions may explain more over the long run than individual corporate fundamentals. For the same reasons noted above, it is supporting circumstantial evidence, not statistical proof."
+    },
+    "S17-R006-P002": {
+      "sourceTextSha256": "0aa59e70715e6aff5fd6115557795821ec2307d01e01cc60af4c7cfd199d7dd1",
+      "en": "Limitations and improvements"
+    },
+    "S17-R006-P003": {
+      "sourceTextSha256": "bcb9f5105fc2f83dc858e37c47096164815473bad430b850e1d6dc1258c1aa5e",
+      "en": "Four principal limitations and improvements apply."
+    },
+    "S17-R006-P004": {
+      "sourceTextSha256": "4fc610614a29ae88db1b65dc2b8b316d995758a125d101c8e81de3245b19b879",
+      "en": "First is the small sample. Only about eleven reliable annual macro observations exist, so spline interpolation does not resolve limited statistical significance. Future work should obtain genuinely high-frequency observations, such as SIPRI quarterly execution data or national defense ministries' quarterly expenditure, replacing interpolation with measured data."
+    },
+    "S17-R006-P005": {
+      "sourceTextSha256": "3c398a292209ec23f6147e189dab44880e7e02bdab1ed456ae7f278478b7f381",
+      "en": "Second is residual cross-firm bias. Even standardized measures leave methodological tension in placing Palantir, which lacks conventional backlog, on the same DVI axis as primes. Separate supplementary axes for software-specific indicators such as the Rule of 40 and NRR would be desirable."
+    },
+    "S17-R006-P006": {
+      "sourceTextSha256": "915fb51ed8f44e429ff1c48bd72b3a66f0b5282c1052426eaf672a41f21262ea",
+      "en": "Third is ambiguity between causation and correlation. FEVD and IRF show co-movement of spending and revenue, but many excluded factors remain, including accounting lags between contract awards and revenue recognition and individual issues in programs such as F-35 and Columbia-class submarines."
+    },
+    "S17-R006-P007": {
+      "sourceTextSha256": "6f18ee18925e761d1f37495442fe1ecf7b85c090c5e88da96afa65dec90509ab",
+      "en": "Fourth is inconsistent currency and inflation adjustment: SIPRI spending uses constant 2024 prices while corporate statements use nominal prices. These indicators were not fully harmonized."
+    },
+    "S17-R006-P008": {
+      "sourceTextSha256": "ca5c8414ca576442502c6070227422f36e513a841d99642249ce43c64bd280ef",
+      "en": "Conclusion and implications"
+    },
+    "S17-R007-P001": {
+      "sourceTextSha256": "db2e7f79846421720dce5c83b4e2ffca02d5fdf0360acb1fe529a5357111681f",
+      "en": "The inquiry's provisional answers to the three problems are as follows."
+    },
+    "S17-R007-P002": {
+      "sourceTextSha256": "ce6b8101ced7fc20310efdc5962817b18c672faf91f97100f81ff1d089d7415b",
+      "en": "First, PCA-based standardized indicators offered an alternative to backlog- and asset-centered evaluation. Palantir and Hanwha formed a high-margin/high-R&D cluster, distinct from the four traditional size/leverage primes. This is evidence consistent with the starting hypothesis that a large backlog does not necessarily imply structural resilience."
+    },
+    "S17-R007-P003": {
+      "sourceTextSha256": "6c028d8d663aeedf9c6d59d096cd23a26f50806eaefbaa1042fde11ed22aa0da",
+      "en": "Second, cross-firm bias was not fully resolved, as acknowledged above. Nonetheless, standardization provides a minimal methodological device for comparing different accounting structures in a common language."
+    },
+    "S17-R007-P004": {
+      "sourceTextSha256": "3a652e2cd774305c35b6da4004e443c243fe212b16d5ba9703f202821d6c3f99",
+      "en": "Third, VARX(2) identified a direction in which defense-spending shocks transfer to revenue growth with a lag and interest-rate shocks act oppositely. Small, interpolated samples prevent presenting this as statistical proof. Obtaining high-frequency measured data to retest these directional hypotheses is explicitly left as the central future task."
+    },
+    "S17-R007-P005": {
+      "sourceTextSha256": "bcfbfbf8a48a874555815c207a4654d29d0b499198e0bb457533c5ecf1a3bfcd",
+      "en": "Overlaying the two axes indirectly explains production bottlenecks such as the Tomahawk example. FEVD's approximately 80% long-run spending contribution implies a route from higher budgets to revenues, but actual transmission requires sufficient production and supply capacity. Traditional primes' debt/turnover position opposite the margin/R&D cluster suggests they face physical bottlenecks and leverage constraints when converting the same macro shock into revenue. Palantir's low-marginal-cost software model may convert it faster. Because the VAR was estimated at industry rather than company level, separately testing these bottlenecks by firm remains future work."
+    },
+    "S17-R007-P006": {
+      "sourceTextSha256": "89a84a5465956ce14b5713cc6373d84c40a308dc27e48769a139d41ede4d7f30",
+      "en": "Overall, the inquiry offers circumstantial financial evidence of defense value creation gradually moving from pure economies of scale toward R&D- and software-intensive structures. This conclusion is limited to defense data and is not generalized unchanged to other industries. Rather than declaring overwhelming proof, it is academically more honest and productive to expose limitations and connect them to high-frequency data, software-specific supplementary indicators and company-level VAR cross-validation."
+    },
+    "S17-R007-P007": {
+      "sourceTextSha256": "dd79a2c7ad75cf81fdb400ae3e0e416d217af7b92d78a9642ad4c3c93f30334d",
+      "en": "Regarding where capital may flow over the next decade, the provisional outlook is that continued defense-budget growth will encourage primes to absorb software and service subsidiaries or reorganize portfolios to move along PC1, as in Hanwha's vertical integration. Competition may therefore converge not on a fixed prime/software dichotomy but on how quickly firms supplement physical bottlenecks with software assets."
+    },
+    "S17-R007-P008": {
+      "sourceTextSha256": "d079854f384ab27373d3a8e1d313048196735c6506be3e66fb79e70f45c00239",
+      "en": "Comparing unlike industrial actors in a common quantitative framework while explicitly testing and disclosing its limitations directly connects to my intended technology-management role: designing decision systems grounded in philosophy and technology and taking responsibility for describing their limits. Prioritizing structure over scale and testable hypotheses over certainty offers an answer to the inquiry's ultimate question: what makes a defense company genuinely resilient?"
+    }
+  },
   "sourceCount": 57,
-  "translatedCount": 0,
-  "complete": false
+  "translatedCount": 57,
+  "complete": true
 }

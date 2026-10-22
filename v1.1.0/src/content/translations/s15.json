@@ -4,48 +4,48 @@
   "status": "author-review-pending",
   "paragraphs": {
     "S15-R002-P007": {
-      "sourceTextSha256": "7df084d3a612071be1b362cde16bfaa87df521202a205f58f1ee8b527ee52822",
-      "en": "① Google Earth"
+      "sourceTextSha256": "1064bd64e658f3524bbc0e495865a982590c9daf12f4ebe6e0f8d578ee80e505",
+      "en": "Research methods"
     },
     "S15-R012-P005": {
+      "sourceTextSha256": "c7909ce74a9fb5c83b51191fe999a6c16828ff0a2edb83991e5549462f5ccd9a",
+      "en": "References"
+    },
+    "S15-R012-P006": {
+      "sourceTextSha256": "1e4101161a98cdfc447c6d7bcede5332ff36faae378376a313b58fd88c002ac1",
+      "en": "[Core research reports]"
+    },
+    "S15-R012-P007": {
       "sourceTextSha256": "d7211e0481bcced55730068992a0e9736fb5fb7555b8aeef99274b3d959bd1dc",
       "en": "1. Bermudez, Joseph S. Jr., Victor Cha, and Jennifer Jun. \"Significant Progress of the North Korea-Russia Road Bridge.\" Beyond Parallel, CSIS, October 27, 2025."
     },
-    "S15-R012-P006": {
-      "sourceTextSha256": "2d275a71acb55c323479690f73745311ad51978d1b9758cc24cd76f8476ae9a2",
-      "en": "2. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Korea-China Standoffs in the PMZ.\" Beyond Parallel, CSIS, October 27, 2025."
-    },
-    "S15-R012-P007": {
-      "sourceTextSha256": "5a721fda07b940a9b691fe0a0f0bd93f7d717f5895df46b9e686f7998dfff363",
-      "en": "3. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Chinese Buoys Near the South Korea-China PMZ.\" Beyond Parallel, CSIS, December 15, 2025."
-    },
     "S15-R012-P024": {
+      "sourceTextSha256": "e64b899cf419b6422b91131b328aeefeb5d959ede0fabde0cb6d5f6eeaf465a6",
+      "en": "15. Korea Hydrographic and Oceanographic Agency, KHOA, official website and Public Data Portal. ‘Marine observation-buoy operations.’ 2025-08-18."
+    },
+    "S15-R012-P025": {
+      "sourceTextSha256": "bf38375ea53c2c8599dfd5f02ae4ead8b91f6aa4a4815c6c3e7778a9f612dc35",
+      "en": "[Collapse of the UN North Korea sanctions system]"
+    },
+    "S15-R012-P026": {
       "sourceTextSha256": "e86ad46864855027b39f4324d559b1c4faf69edddbb051303f9cf1e15fd474fa",
       "en": "16. Cha, Victor, and Ellen Kim. \"Russia's Veto: Dismembering the UN Sanctions Regime on North Korea.\" Critical Questions, CSIS, March 28, 2024."
     },
-    "S15-R012-P025": {
+    "S15-R012-P027": {
       "sourceTextSha256": "aa34f09ba3e8eaaf851772589f69af7de39c10ba2b254a526e1ffc60b2466738",
       "en": "17. \"After Russia's Veto: The Future of the Sanctions Regime Against North Korea.\" 38 North, April 12, 2024."
     },
-    "S15-R012-P026": {
-      "sourceTextSha256": "b4c4846ed9e9754e0fd86726baba34a4147206286a93ebac06d79d06927af7ee",
-      "en": "18. \"Russia's veto on UN sanctions monitoring will further embolden North Korea.\" Chatham House, May 14, 2024."
-    },
-    "S15-R012-P027": {
+    "S15-R012-P029": {
       "sourceTextSha256": "ba75f46c9660b11eef49c6d24ebaf73c38998e617684085aac88f9c72774a209",
       "en": "19. \"Russia Ends North Korean Sanctions Panel.\" Arms Control Association, May 2024."
     },
-    "S15-R012-P029": {
-      "sourceTextSha256": "29f02131c866564b021a8906a30926d3a69153a1af444d00ff09acff41952210",
-      "en": "20. Chu, Mei Mei, Ju-min Park, and Claire Fu. \"China is rebuilding its grip on North Korea. Is Kim Jong Un ready to oblige?\" Reuters, March 11, 2026."
-    },
     "S15-R012-P030": {
-      "sourceTextSha256": "200c90f91ab4ece13cdcaa046d9b20f6eb1fbef1aa9eaa061b05930121622b53",
-      "en": "21. \"Why China now embraces a nuclear North Korea.\" The Interpreter, Lowy Institute, April 23, 2026."
+      "sourceTextSha256": "133e4a7e0bf7d4fe22bafc54d12767ce892474cf65c4efec2c7f297034073f1e",
+      "en": "[North Korea–China–Russia realignment]"
     },
     "S15-R012-P031": {
-      "sourceTextSha256": "43176a6145676343b22a5a14692dfd338db108c5f5dd2de771074cfde7215505",
-      "en": "22. \"The great omission: A clarifying statement on North Korea's nukes.\" The Interpreter, Lowy Institute, October 6, 2025."
+      "sourceTextSha256": "29f02131c866564b021a8906a30926d3a69153a1af444d00ff09acff41952210",
+      "en": "20. Chu, Mei Mei, Ju-min Park, and Claire Fu. \"China is rebuilding its grip on North Korea. Is Kim Jong Un ready to oblige?\" Reuters, March 11, 2026."
     },
     "S15-R013-P002": {
       "sourceTextSha256": "308cd4f5c056330e0ca7454ba38891087da2a4d9989da4824da983c8e35ef630",
@@ -58,9 +58,517 @@
     "S15-R013-P007": {
       "sourceTextSha256": "e9d07cfe1ae014a209e9c42019cd87550d2d462498f5945f69c85db0aa61c6b4",
       "en": "27. Marine Regions (Flanders Marine Institute). https://www.marineregions.org/"
+    },
+    "S15-R001-P002": {
+      "sourceTextSha256": "1feeab4fc1682dd70e7229e190b9321778743d22b6e8902d6c4ea609b79192a2",
+      "en": "Data-analysis-based independent curriculum inquiry activity"
+    },
+    "S15-R001-P003": {
+      "sourceTextSha256": "465b511396d293dcfb430264eac0a03f79cb646b609c625e9e88a3b7ec17c516",
+      "en": "Student number"
+    },
+    "S15-R001-P004": {
+      "sourceTextSha256": "ba11ab04db329b0242bf91e593257d8305fbb5360335a9ac11f5abe10b67fd88",
+      "en": "Name"
+    },
+    "S15-R001-P005": {
+      "sourceTextSha256": "ac7623b113f4f9b6226105081afa94d02093c79f5a45a5c98b20600f7d7de3f0",
+      "en": "Main theme"
+    },
+    "S15-R001-P006": {
+      "sourceTextSha256": "eaad813ad0345d9c8e64caa5465ba97b4c06b4a18ee7627be1f1f345542ea903",
+      "en": "Global hegemonic competition"
+    },
+    "S15-R001-P007": {
+      "sourceTextSha256": "4badcb1cca8f2a6fd4c02f049e921c9fe84527f5e93c57d661a834864aec9d1e",
+      "en": "Motivation for inquiry"
+    },
+    "S15-R001-P008": {
+      "sourceTextSha256": "9556baa21024017f612be878b86cad3cd9a0b2a293457c6bf28bacfc4763938d",
+      "en": "Write in the style of a personal statement, within 200 characters."
+    },
+    "S15-R001-P009": {
+      "sourceTextSha256": "8ed67caf1285e3d849d262d45bcbcb9f3987ca077570850b5ab010857c690e21",
+      "en": "1. Explain your personal brand."
+    },
+    "S15-R001-P010": {
+      "sourceTextSha256": "8e5da298bc078c26d8e03030e30088f29c3eb2cb56a5555ee8e5027076a6d8ee",
+      "en": "2. Describe specific strengths."
+    },
+    "S15-R001-P011": {
+      "sourceTextSha256": "b77183e5276bea9b3d655ce902db7b15c851bdf42ca5f0a484536bfc6d29115f",
+      "en": "3. Topic of interest and academic fields used in the inquiry."
+    },
+    "S15-R001-P012": {
+      "sourceTextSha256": "47e36c80d7a214dfc2ec67d386e736b7bc35f71fa08c2d17b5cb70af4e780096",
+      "en": "4. Why the topic relates to your intended career."
+    },
+    "S15-R001-P013": {
+      "sourceTextSha256": "d20d3ea251fc99eead10e9481950059eff322506a22a7a1c0400639d6ac5dad3",
+      "en": "5. Relationship to your intended department. Refer to the preferred school's or department's website, institutional vision, desired student qualities and goals."
+    },
+    "S15-R001-P014": {
+      "sourceTextSha256": "7ac9a719bb069cf4c6631f7059140df2f718ee6a1580be74afecf82973d12754",
+      "en": "1. My brand is a technology-management specialist who derives decisions through philosophy and technology. It goes beyond simply using data toward integration, handling and organic processing, beyond simple analysis and the resulting superficial, one-dimensional conclusions,"
+    },
+    "S15-R001-P015": {
+      "sourceTextSha256": "1470779b667663458b79e1aa2c7d6c5f2e347c4499377b0c513c2b955a38c6b2",
+      "en": "2. My strength is visualizing quantitative data to produce meaningful results. Rather than superficial conclusions anyone could reach, I find hidden connections and offer alternative perspectives. This is evident here in extracting geopolitical patterns from vast satellite and maritime datasets through basic ontology mapping."
+    },
+    "S15-R001-P016": {
+      "sourceTextSha256": "05882ed78cb4e3b77cdec817c1306bea6aa18746f9afc9b5c90f4d28e316496d",
+      "en": "3. I am interested in defense and security and the technology management supporting them. I interpret Chinese and North Korean movements through geopolitics and international relations while quantifying satellite and maritime data through data science and GIS. This integrates security issues with technology-management processing."
+    },
+    "S15-R001-P017": {
+      "sourceTextSha256": "d69f8727b9842c4080fcb0a8f9d5cb20bb895f97fc1431cfade4da2dacf53b8c",
+      "en": "4. My intended career is technology management in defense. Intelligence capabilities that turn data into decisions, as in Lavender and Maven, matter more than hard power such as tanks and missiles alone. This inquiry was my first attempt to implement those capabilities with actual security data."
+    },
+    "S15-R001-P018": {
+      "sourceTextSha256": "fb4dcd430e3e2473f357eb119ae8045d0ec36b40ea4fed4308cfadb595f4fca2",
+      "en": "5. Although ambitious, I am working toward NYU Tandon's BTM, technology-management, program. Information is a crucial asset and business opportunity, especially in defense, as illustrated by APIs seeing Truth Social posts 0.1 seconds earlier. In the internet and AI era, collecting, analyzing and interpreting information are especially important."
+    },
+    "S15-R001-P019": {
+      "sourceTextSha256": "4868040a530e9b701eb4f0c6e5432155ab8c14af0b36de2c01713fc64c49e3ba",
+      "en": "Research topic"
+    },
+    "S15-R001-P020": {
+      "sourceTextSha256": "9d63e5d504be0722be3799318a50846ab073f032753b9eb9e0e0385a0426eb14",
+      "en": "Detecting Northeast Asian Geopolitical Anomalies Using Satellite and Maritime Spatial Data"
+    },
+    "S15-R001-P021": {
+      "sourceTextSha256": "2272688022aadf8b0a607e5df240655e208c8fa6b205f74d98b16bc0d05c5e12",
+      "en": "Research purpose"
+    },
+    "S15-R001-P022": {
+      "sourceTextSha256": "03068b3d4bdf7690771509bb8f64319f9fd40410cb93e3c1f3a2080459868a8a",
+      "en": "1. Growing worldwide security crises cannot be ignored by Korea. The movements of China and North Korea, opponents in the Korean War, require sustained observation and management. Seemingly minor actions may operate as parts of larger plans, becoming national-security threats that go unnoticed. I began because OSINT, open-source intelligence, can obtain civilian data and derive meaningful findings."
+    },
+    "S15-R002-P003": {
+      "sourceTextSha256": "910447a706d36082f0737d1b6923c182d0ca74ec55f5205aab717e8df02cc5f3",
+      "en": "2. Two approaches recently used by North Korea and China are gray-zone strategy and stable free-riding strategy. They appear through geopolitical signals that must be detected and understood contextually, rather than through simple data analysis."
+    },
+    "S15-R002-P004": {
+      "sourceTextSha256": "b1bc801cb6209ef0f3efc9e7c6f1c9a68b51e4ca4628c867208f5c64687e3005",
+      "en": "Their movements are difficult to regard as purely commercial or civilian. The purpose is to identify intentions behind China's allegedly illegal Yellow Sea structures and North Korean bridge construction."
+    },
+    "S15-R002-P005": {
+      "sourceTextSha256": "69cf4ff07aff99a53991936a51a996fd574928a4f2123371776fa6e5b71a2e97",
+      "en": "This matters to my intended defense technology-management career. Soft power is increasingly important alongside tanks, ammunition, fighters and missiles. Israel's Lavender and America's Maven illustrate these systems' importance. NATO's adoption of Palantir Maven likewise emphasizes intelligence: processing must produce needed information, decisions and interpretation rather than merely handle data."
+    },
+    "S15-R002-P006": {
+      "sourceTextSha256": "e896973c025bcc2f08c4085ce60a9de1982ca943a3dc51ccf67143177550753d",
+      "en": "3. I therefore identify Chinese and North Korean movements, connect diverse unstructured data, interpret them and recommend necessary actions for Korea and its allies. This consulting approach also includes foundations for software and architecture producing meaningful data."
+    },
+    "S15-R002-P009": {
+      "sourceTextSha256": "948d2b8b0d39aa0e6f4646dd5a76d50e06e977cb71d49a3455a4ce2407f6fd13",
+      "en": "② Python — supplementary data processing"
+    },
+    "S15-R002-P010": {
+      "sourceTextSha256": "e9a0c922b26cb77949ec388e8e14946e7c48079b49fa4def811732619bf63668",
+      "en": "③ Palantir Foundry (Ontology, Pipeline, Map) — statistical map visualization, high-resolution satellite mapping, preprocessing and ontology mapping"
+    },
+    "S15-R002-P011": {
+      "sourceTextSha256": "2e5b956417feda3b0bc4cd352ae1a13d68c544b95590e885e9b236fd6f798b6d",
+      "en": "④ Copernicus — collection of real-time satellite maps"
+    },
+    "S15-R002-P012": {
+      "sourceTextSha256": "3499405ba172d088406c35da71027267b84a11549faae057953f155a48d7eb26",
+      "en": "⑤ Marine Regions — maritime mapping data"
+    },
+    "S15-R002-P013": {
+      "sourceTextSha256": "4f585662609e04d6bc1a9afb0d1cde23c5878f281bcee3428aef2c17df404228",
+      "en": "⑥ NV / NV α — self-developed intelligent OSINT collection and web scraping"
+    },
+    "S15-R002-P014": {
+      "sourceTextSha256": "f2cc5bdef58a16b71aab0a854b35f347df02a9f4879b77684817441e0212c2c9",
+      "en": "⑦ CSIS — geographic coordinates from reports"
+    },
+    "S15-R002-P015": {
+      "sourceTextSha256": "ed963ca4d562e881371f3a5f3b202a54655f676d6a1589e178c5e90584224c30",
+      "en": "⑧ Marine Traffic — AIS data"
+    },
+    "S15-R003-P002": {
+      "sourceTextSha256": "bfe26a661b1c4ef7b717dc04e5f75211333e4b21df15acd4721eefd7249cf4c8",
+      "en": "Research content: focus on problem analysis and findings"
+    },
+    "S15-R003-P003": {
+      "sourceTextSha256": "bfecf1d7104929ed8f2ed840458de081f98506f986670118880a95b17505b703",
+      "en": "1. Data collection. Collection began with two issues: Yonhap reporting on Yellow Sea structures and news about a North Korean bridge's completion ceremony. I hypothesized that following these reports would help explain the two countries' movements."
+    },
+    "S15-R003-P004": {
+      "sourceTextSha256": "8234883faecec1193328b245b8e9b6917641dec206e83d6bce6ec0c8f8813064",
+      "en": "a. Literature. Think-tank reports were the principal sources, but multiple languages and large volumes were difficult to process manually. I used my self-developed NV and NV Alpha intelligence tools, attachable to AI systems. NV finds reports, identifies commonalities and extracts key points while filtering hallucinations and misinformation. NV Alpha extracts significant locations and other required information into CSV files usable in Palantir Foundry or QGIS. Three CSIS reports were the most important and are listed in the references."
+    },
+    "S15-R003-P005": {
+      "sourceTextSha256": "844ecb9137b8737ae53d49283abf5956664dad07c8fa957b45ccae30fd20c10e",
+      "en": "b. Geopolitical locations. NV's harness-based document processing and antihallucination procedures extracted locations, including Chinese structures and North Korean bridges, their years, lengths and details. CSVs processed through NV Alpha were uploaded to Palantir ontology, converted into objects and treated as available raw data."
+    },
+    "S15-R003-P006": {
+      "sourceTextSha256": "20e4c44bff58c82b49b613c59e4c412176e85a291b216ea5c7e483d710b2b159",
+      "en": "c. Additional images and data. Copernicus provided time-specific satellite maps at medium-to-low, 10 m resolution. Radar maps showed bridge construction processes and timing. AIS tracking supplied vessel purposes and routes, while maritime information was also checked and extracted."
+    },
+    "S15-R003-P007": {
+      "sourceTextSha256": "313a66004cc7108d238699d8eee664f6768249fc4d7ed543faf9011454008b09",
+      "en": "2. Preprocessing. a. Pipeline processing. Uploaded CSVs contained latitude, longitude, source and type information, as described by the NV tool, and facility details. They were processed into GeoPoints and GeoShapes, allowing precise placement on high-resolution 50 cm maps."
+    },
+    "S15-R003-P008": {
+      "sourceTextSha256": "45a6251e2fa0d40fe3d7174766009694e3184288b0d07fc78d9af3a8861f04d5",
+      "en": "The data comprised Chinese buoy/structure locations, North Korean military facilities and bridges, EEZ boundaries, the Northern Limit Line and the five West Sea islands. Each type was processed in a pipeline and combined into one map layer."
+    },
+    "S15-R003-P009": {
+      "sourceTextSha256": "6622b50553c92f43745b73336dfc26cd75a0f0e349ae26985554f344531ddecd",
+      "en": "b. Double-checking literature. Potential source errors were processed again through the antihallucination algorithm. Error-prevention procedures preserved the data."
+    },
+    "S15-R004-P002": {
+      "sourceTextSha256": "f9fca0544fc745de1821cc45466a8cd2d0129c7e265282a1894c9010de932882",
+      "en": "3. Analysis and map visualization. The data were analyzed as follows."
+    },
+    "S15-R004-P003": {
+      "sourceTextSha256": "37aff45e4a27bd1df6beeafc6ea8dfd33faf0b6c623c0428501ca84e6166b472",
+      "en": "a. Satellite data. I used Sentinel-2 true-color and false-color radar and camera modes. A new bridge was added in 2026 alongside the North Korea–Russia Friendship Bridge, dated here to 1959, in the Tumen basin. Copernicus imagery shows it as follows."
+    },
+    "S15-R004-P004": {
+      "sourceTextSha256": "381035f9e189bafe9b573c828a2a014dbfd39cec7eecada1e1341f7c034b7b1d",
+      "en": "The chronological 10 m satellite images show sequential construction, with dates marked. Interestingly, an additional road bridge was placed immediately beside an existing road visible farther north."
+    },
+    "S15-R004-P005": {
+      "sourceTextSha256": "f1a2be73da3c9dca13996f88984fa042018027a6221d71a0895f6e5390657ad4",
+      "en": "Two questions arise: why build an additional crossing rather than use the existing border road or current meeting bridge, and why place it beside that bridge rather than elsewhere? These questions aim to identify North Korean–Russian connections and intentions."
+    },
+    "S15-R005-P002": {
+      "sourceTextSha256": "17db7ebdf1edc82686cad579b983721dad9d52a1a3be06d2c5cac2cd42957521",
+      "en": "The upper bridge is the border crossing. The Russia–North Korea Friendship Bridge, dated here to 1951, connected the countries, but the addition of another bridge suggests a change in their relationship. At least one side needed an additional land-transport route, indicating closer ties."
+    },
+    "S15-R005-P003": {
+      "sourceTextSha256": "2f7be79673c9bfe69f29e43b103b74af8a130d356bb01eb50075581a0d66d040",
+      "en": "b. Foundry data"
+    },
+    "S15-R005-P004": {
+      "sourceTextSha256": "e24ac983eeb1db1eb8b0e22187e637cd23522fd2f2b5b7c36b12e39c04deca91",
+      "en": "Palantir Foundry's ontology has five principal layer types. a. Korea EEZ (Korea EEZ 202607): Zone ID KOR-EEZ-001; source Flanders Marine Institute, Marine Regions-v4; Geo Status ‘verified’ and Confidence Level ‘medium,’ as recorded in the source. b. NLL schematic line (Nll Schematic Line 202607). c. Five West Sea islands analysis layer, visualizing Korea's PMZ. d. Facilities Geo Tumangang Khasan 202607: bridge-related GeoPoints. e. Facilities Geo Pmz Buoys 202607: Chinese observation-buoy and aquaculture-structure GeoPoints."
+    },
+    "S15-R005-P005": {
+      "sourceTextSha256": "2e690227ec2e7c86c65551283c089eb4f06a98b53a4f8e8e64785ab493e18096",
+      "en": "EEZ polygons retain GeoJSON coordinates, and buoy GeoPoints appear as anchor icons showing their scattered positions along the Yellow Sea PMZ. Overlapping layers enabled quantitative reading of buoy locations relative to the PMZ and provisional median line."
+    },
+    "S15-R006-P002": {
+      "sourceTextSha256": "2f1b9a27c43cdbabd80906693e0eb4d1460a343ec8a80a1b4de9eea568bfea3c",
+      "en": "Yellow Sea buoy locations and Korea's EEZ"
+    },
+    "S15-R007-P002": {
+      "sourceTextSha256": "a9a13f753a9f633c6b0ea73c2dadf024c8a7d61509d9b54d3af9b7ac12a2f272",
+      "en": "North Korean supply routes and bridge locations"
+    },
+    "S15-R007-P003": {
+      "sourceTextSha256": "86e0a1be8887dd29624db4fc03219dd21c443eac368d1c7ce459881ef05f8d98",
+      "en": "4. Yellow Sea buoys and PMZ confrontations"
+    },
+    "S15-R007-P004": {
+      "sourceTextSha256": "c7a3571d72b7b02acdd2ff4adc5f0d779053221fd41179f6f8a17cf5607abdbb",
+      "en": "a. Chinese buoy deployment. The Korean navy identified thirteen Chinese marine observation buoys between February 2018 and May 2023. Most are standard 10 m lighthouse-style buoys, with circular floating bases, central towers and upper platforms. Some have solar panels permitting long-term autonomous operation, suggesting possible AIS receivers, communications modules and other continuously powered equipment."
+    },
+    "S15-R007-P005": {
+      "sourceTextSha256": "ce868685b6816363f0dacf3b4bef4a5a35105dab110a4fd829049b7cad53c4e9",
+      "en": "Twelve buoys, all except number two, lie outside the PMZ and on China's side of the provisional China–Korea EEZ median line. This indicates restrained gray-zone tactics: Beijing avoids direct provocation inside the PMZ or south of the median line while forward-deploying surveillance and sensing assets. It makes buoy two and the Shen Lan 1/2 aquaculture cages and Atlantic Amsterdam management platform inside the PMZ more unusual signals."
+    },
+    "S15-R007-P006": {
+      "sourceTextSha256": "8e9935849bdb81b16e36343b6f94d6093bb5ae5031bba57b8cdebc5be9df8e10",
+      "en": "b. Confrontation in September 2025. Starboard Maritime Intelligence AIS data show Korean research vessel Onnuri entering the PMZ on September 24. China Coast Guard vessel 6307 began tracking about six hours later, and two additional vessels departed Qingdao. On September 25, as Onnuri approached Shen Lan 1/2, Chinese vessels monitored from both sides and followed Onnuri and Korean Coast Guard 3009 for more than fifteen hours, approaching within 1.7 nautical miles. Surveillance ended only after the Korean vessels left. This repeated a February 2025 confrontation. Parliamentary reporting states that 27 of 135 Korean marine surveys since 2020, about one-fifth, faced Chinese interference, confirming a persistent pattern."
+    },
+    "S15-R008-P003": {
+      "sourceTextSha256": "310ba2fd9e56d7afa80bdca9c5e27fb1063e99e91d332b085bf995b7f4d54ad2",
+      "en": "c. Dual-use suspicions. Published images of personnel wearing diving suits and checking oxygen tanks on Shen Lan 2 raised doubts about China's purely aquaculture explanation. The 2001 fisheries agreement regulates fishing in the PMZ but has no explicit permission or prohibition for structures and buoys, showing gray-zone activities exploiting a legal gap."
+    },
+    "S15-R008-P004": {
+      "sourceTextSha256": "1259b0d2fec558dd9478048588fd3febd777eda5bef00439a580ad85d8839072",
+      "en": "5. Identifying the problem"
+    },
+    "S15-R008-P005": {
+      "sourceTextSha256": "55484200d82a466daa5592c969d9e9af26707f0b89818e30c3b11c64aed4cd92",
+      "en": "Chinese and North Korean movements in the Yellow Sea and Tumen region converge into a structural pattern rather than isolated issues."
+    },
+    "S15-R008-P006": {
+      "sourceTextSha256": "592bbea8be1b14fdd7eff2fadacbb8eb8750d9984e5cc0034930831c7c644e31",
+      "en": "First, the Tumangang–Khasan bridge suggests a qualitative change in North Korean–Russian ties beyond infrastructure expansion. An additional road bridge exceeding 1.3 km, beside the Friendship Bridge dated here to 1951, indicates wartime demand for North Korean supplies and personnel beyond railway capacity. North Korea's approximately 5 km² border checkpoint and customs, repair and transshipment facilities indicate a permanent high-volume route. This implies both deeper dependence on Russia and a channel for Russian technology and supplies."
+    },
+    "S15-R008-P007": {
+      "sourceTextSha256": "96ac452652a44f8000e75fee109f139f1b598fd0bab08dd7fb3c943f9fa31ab5",
+      "en": "Second, the PMZ buoy, aquaculture and management-platform deployment exemplifies stable free-riding or gray-zone strategy. Locating most assets south of the median line and outside the PMZ, as stated here, avoids overt-provocation framing while accumulating a thirteen-buoy surveillance network and sensing of approaches from Dalian and Qingdao naval bases. It gradually reproduces the South China Sea Scarborough Shoal pattern: install structures → establish facts → upgrade surveillance."
+    },
+    "S15-R008-P008": {
+      "sourceTextSha256": "7e7d0fb67c5b634324985552983f1789c721637c812d1a8c52dea91a6713786a",
+      "en": "Third, both cases precisely exploit legal gray zones. The fisheries agreement and UNCLOS guarantee navigation but do not explicitly ban structures, and North Korean–Russian border infrastructure is not itself sanctioned under international law. Both actors rationally maximize strategic benefit within international norms, exposing a Korean vulnerability that explicit illegality alone cannot address."
+    },
+    "S15-R008-P009": {
+      "sourceTextSha256": "5ed534ae30683747e8054e97e83cbc9d54218cf580e1b69016e7102ce8b179da",
+      "en": "These concerns underpin the policy responses in the following section, Solutions and Recommendations."
+    },
+    "S15-R008-P010": {
+      "sourceTextSha256": "7f1d297b48319add77bf314232d5966195e4ef44cd5242295d13b09b18c22f85",
+      "en": "Research content"
+    },
+    "S15-R008-P011": {
+      "sourceTextSha256": "354fe4c1e18235de9a24eeb1f3a031567c41a16c6c57edd7ca6e15d1b8f64391",
+      "en": "1. Build permanent satellite and maritime monitoring"
+    },
+    "S15-R009-P002": {
+      "sourceTextSha256": "79289ac779b020a07600e7d019f1aed274b704de27b29334be25ccb7783727f3",
+      "en": "<Solutions and recommendations>"
+    },
+    "S15-R009-P003": {
+      "sourceTextSha256": "61490ba477e24f35e3adf5ed17576e60f4b5e26c4d22c2ec7c367bafacee2697",
+      "en": "Korea completed Project 425 in November 2025: four SAR and one EO/IR reconnaissance satellites, costing around KRW 1.3 trillion. Their revisit interval over the peninsula is about two hours. A follow-up 51-satellite constellation—forty Defense Ministry SAR and eleven Science Ministry EO satellites, targeting thirty-minute revisits—is not yet operational. Existing assets therefore lack the temporal resolution to capture incremental bridge construction or buoy deployments closely. Reliance on Copernicus and commercial imagery used by CSIS Beyond Parallel, Vantor/Maxar, remains unavoidable for now."
+    },
+    "S15-R009-P004": {
+      "sourceTextSha256": "8579b92cedb7f095226c98ed7e2bb61708299297c6a249cebf12f178c4bc2bee",
+      "en": "1-1: Prioritize early deployment of follow-up constellations. Until then, create an interim pipeline regularly collecting commercial satellite analysis from CSIS, 38 North and NK News into a national ontology platform such as Palantir Foundry."
+    },
+    "S15-R009-P005": {
+      "sourceTextSha256": "4678999de7efe955d9d4884bdf6eeb10d20f7df534847081e605ee516164e5ab",
+      "en": "1-2: Consider linking Korea Hydrographic and Oceanographic Agency data from over 200 tidal stations and observation buoys to security anomaly-detection algorithms along the Yellow Sea border. Reusing infrastructure requires relatively little new spending."
+    },
+    "S15-R009-P006": {
+      "sourceTextSha256": "18620cf819d00947be0eb375a52105ca1d5101fd010fff21778ee3fe57db9818",
+      "en": "2. PMZ gray-zone response: achievements and remaining tasks"
+    },
+    "S15-R009-P007": {
+      "sourceTextSha256": "385cb8e2b22fe6229d022f4cc15db81201dc804f14e676969ead227adff161e5",
+      "en": "At the third Korea–China maritime cooperation dialogue on April 23, 2025, Korean representative Kang Young-shin requested relocation of all three PMZ structures, Shen Lan 1/2 and the management platform, and clearly indicated proportional responses if relocation proved difficult. China announced a platform-relocation plan on April 24. On January 27, 2026, the structure was observed moving about 500 m outside the PMZ. This is interpreted alongside restored bilateral relations after President Lee's China visit. The Shen Lan cages remain, so the issue is not fully resolved."
+    },
+    "S15-R009-P008": {
+      "sourceTextSha256": "baced2eb6df5cdb6dacf68b3f6703b495cde8e7b665859c6617452c6c9c7b308",
+      "en": "Legal views differ. Korea's Foreign Ministry cites interference with navigation and fishing, while domestic specialists including KIMS argue that the 2001 agreement does not expressly ban nonfishing structures. Relocation therefore depended chiefly on summit-linked negotiations and signals of proportional responses, rather than purely legal coercion."
+    },
+    "S15-R009-P009": {
+      "sourceTextSha256": "f5924e3860a635176c1fa64328b5940f0ef9b2eec78f773b62372192883593f6",
+      "en": "2-1: Continue equivalent pressure—summit diplomacy plus signals of proportional responses—on the remaining Shen Lan 1/2 structures."
+    },
+    "S15-R009-P010": {
+      "sourceTextSha256": "67a352faaa46dd498d2921efc75ce9c71d95e4ae86b1954f9ccb00051e7cac21",
+      "en": "2-2: In the long term, formally seek fisheries-agreement amendments requiring advance notice and consultation for nonfishing PMZ structures, reducing reliance on summit diplomacy for each case."
+    },
+    "S15-R010-P002": {
+      "sourceTextSha256": "f3371fa42bcd2f3419f18c7884f96d460b8e3e4650bbc649f6817f07992c1f75",
+      "en": "3. Symmetrically expand response assets and surveillance"
+    },
+    "S15-R010-P003": {
+      "sourceTextSha256": "1798b0cc837dd2b9b5af6344870a38057578aee904fb8f86e7df603289ab2705",
+      "en": "Korea publicly signaled proportional responses in April 2025. It could operationalize this by symmetrically deploying observation assets near the PMZ against China's thirteen-buoy strategy, established in 2018–2023 largely outside the PMZ and on China's side of the median line. Extending the existing marine-buoy network to border waters is relatively inexpensive and easier to justify legally as tit-for-tat rather than provocation."
+    },
+    "S15-R010-P004": {
+      "sourceTextSha256": "fe774ea96bb7bd8c2409dfa3e2da97b666b9334b3671d7c1b8c9dfde1038b5b7",
+      "en": "4. Tumangang–Khasan bridge: monitor post-completion traffic and develop multilateral responses"
+    },
+    "S15-R010-P005": {
+      "sourceTextSha256": "54680c30af72caafbfb45c6ec214750d62928e3389a668c9e5e47873aeef087f",
+      "en": "Originally scheduled for December 31, 2026, the bridge advanced to a deck-connection ceremony on April 21, with Russia announcing completion on June 19, the second anniversary of the new bilateral treaty. At approximately USD 115 million, around KRW 150 billion, the project includes customs and checkpoints handling up to 300 vehicles and 2,000–2,850 people daily. Railway passenger traffic in January–February 2026 was already four times the year-earlier level, indicating rapidly growing exchanges before the bridge opened."
+    },
+    "S15-R010-P006": {
+      "sourceTextSha256": "7099fb78c6b1a5e8f738cc307381dd4842584eb80dfc579df80c713e04679909",
+      "en": "The problem is that international monitoring has effectively been disabled. Russia vetoed renewal of the UN North Korea sanctions Panel of Experts in March 2024 while China abstained, ending its mandate in late April. CSIS's Victor Cha and Ellen Kim and 38 North argue that monitoring and enforcement must shift from the Security Council toward the G7 and like-minded countries. If bridge flows evade existing sanctions such as refined-oil limits, an official UN verification channel no longer exists."
+    },
+    "S15-R010-P007": {
+      "sourceTextSha256": "2874891fbfddcc6778d49d1e1d4e9820fc1aa6433ffe46a50c254951986ef5d6",
+      "en": "4-1: Make quarterly tracking of early post-completion truck traffic, checkpoint crossings and freight-car counts a follow-up research task."
+    },
+    "S15-R010-P008": {
+      "sourceTextSha256": "7eaa6395c69e8a07425a71a6fe21727c3f9d5f1a9553e5471311f37cf0c82967",
+      "en": "4-2: As a long-term civilian contribution, propose supplying this satellite/AIS ontology data to alternative monitoring mechanisms formed by Korea, America, Japan and others, such as the Multilateral Sanctions Monitoring Team, to fill the Panel of Experts gap."
+    },
+    "S15-R010-P009": {
+      "sourceTextSha256": "05545b637c740e41f8c271cdee5efa918a87aab7e78e2ef48daa8639b237830f",
+      "en": "5. Respond to the wider North Korea–China–Russia realignment"
+    },
+    "S15-R010-P010": {
+      "sourceTextSha256": "14dcb40c1b194305b51d069fb2bebf03da9a8573f168330980ffb0fac5c1dd7c",
+      "en": "The bridge and PMZ structures form part of broader change. Reuters field reporting in March 2026 states that, as North Korea moved toward Russia after the Ukraine war, China simultaneously upgraded border roads and ports at Dandong's New Yalu bridge, Quanhe, Nanping and Sanhe to restore traditional influence. Russia and China are competitively expanding separate gateways to North Korea. The Tumen bridge is only one instance on Russia's front."
+    },
+    "S15-R011-P002": {
+      "sourceTextSha256": "0b940013fe73ebb8893968eab621340657e628dd0bef4f1f6640f994b6f79caa",
+      "en": "Lowy Institute analyses from October 2025 and May 2026 also identify a shift toward accepting North Korean nuclear possession, including omission of ‘Korean Peninsula denuclearization’ from Xi–Kim statements. Xi's planned June 2026 visit, his first in seven years following May meetings with Trump and Putin, symbolizes the realignment and is interpreted as reflecting China's intention to use North Korea's nuclear status as leverage against America."
+    },
+    "S15-R011-P003": {
+      "sourceTextSha256": "51265cb12eaf26ae710a7d10a68b8ba9ae8d1face6a3e9cf4afde203df9b0e6e",
+      "en": "5-1: Korean policy toward the three countries should regularly reassess the speed and direction of triangular realignment rather than address bridges or buoys separately. The Foundry ontology could expand from individual GeoPoints to time-series management of summit frequency, changing official language and sanctions-compliance indicators."
+    },
+    "S15-R011-P004": {
+      "sourceTextSha256": "d82c6214bd7021562c18b52cfad6f3e4aa1095f41956d3756dbd6e12932d7871",
+      "en": "5-2: With the Security Council monitoring gap likely to persist, Korea should treat independent information sharing and verification among Korea, America, Japan and like-minded partners as a medium- to long-term priority alongside immediate responses."
+    },
+    "S15-R011-P005": {
+      "sourceTextSha256": "5eb963a60f1eb54f26d2529be2a0d1226d1f891bd3ed98d7868f7a993e167174",
+      "en": "These recommendations require interministerial data sharing among defense, diplomacy and maritime agencies through an integrated Palantir-style ontology. Partial PMZ removals in 2025–2026 achieved faster results through summit diplomacy than purely legal responses; the bridge also belongs to a wider triangular realignment. Both support the study's premise: intelligence must capture multidimensional chains such as B → A and C → B, not only linear A → B causation."
+    },
+    "S15-R011-P006": {
+      "sourceTextSha256": "b30a2da6765945c91613301ca20790b4b5b6a2c24f945979be3ef69acca57621",
+      "en": "Summary of research content"
+    },
+    "S15-R011-P007": {
+      "sourceTextSha256": "06feb856c0558b416ebeaff0d613c15f805619c9e83da4f2369c0f6f394dcfa2",
+      "en": "1. Satellite data from Copernicus and commercial sources, AIS and think-tank reports including CSIS were collected and antihallucination-processed through NV, then uploaded as GeoPoints and GeoShapes to Foundry. Integrating the Yellow Sea PMZ and Tumangang–Khasan border into one map enabled quantitative cross-checks of spatial and temporal relationships absent from individual news reports."
+    },
+    "S15-R011-P008": {
+      "sourceTextSha256": "397d53b091244f297d9499bc066c94b2f1ec75346ed8d9b9889f935ee083ce06",
+      "en": "2. The new bridge reflected increasing wartime North Korean–Russian logistics demand; PMZ buoys, cages and platforms reflected a stable free-riding, gray-zone strategy gradually accumulating surveillance without overt provocation. Both exploit gaps in international law and bilateral agreements. They also form part of China's renewed engagement in response to North Korea's Russian alignment and the collapse of UN sanctions monitoring."
+    },
+    "S15-R011-P009": {
+      "sourceTextSha256": "0959381f0096482ee59d8c85babdfdb4ab92e03322882775ad129c50e503e943",
+      "en": "3. Recommendations are permanent monitoring using independent satellites and marine networks; continued summit-linked PMZ negotiations and fisheries-agreement reform; symmetric observation assets; post-opening traffic tracking and alternative Korea–U.S.–Japan monitoring; and a higher-level framework continuously tracking triangular realignment. These support the need for intelligence capturing multidimensional chains rather than linear causation."
+    },
+    "S15-R012-P003": {
+      "sourceTextSha256": "aa47e6ea8dffc29ff8ebd254a1e7909b113d34af9210a3566ce4f6360e5d571a",
+      "en": "Present a summary of the inquiry!"
+    },
+    "S15-R012-P004": {
+      "sourceTextSha256": "c7909ce74a9fb5c83b51191fe999a6c16828ff0a2edb83991e5549462f5ccd9a",
+      "en": "References"
+    },
+    "S15-R012-P010": {
+      "sourceTextSha256": "327f14ad4e2ea3b9e474fabb4ee20a0e343de911c6be56c597ca86d6be25617b",
+      "en": "[Korean reporting and analysis on PMZ gray-zone responses]"
+    },
+    "S15-R012-P011": {
+      "sourceTextSha256": "c0d1f407fd0d30582d7f1f0f09fe67d58404821886b213d24e1fd1ebbc416e94",
+      "en": "4. News1. ‘Korea and China discuss Yellow Sea structures face to face for the first time: escalation or de-escalation?’ 2025-04-22."
+    },
+    "S15-R012-P012": {
+      "sourceTextSha256": "88376abece0353cb212b4859dc7f57ecaf218c3e0be3a59e9e56a2ce600ed78c",
+      "en": "5. Seoul Pyongyang News, SPN. ‘Government asks China to move Yellow Sea structures outside the PMZ; further installations appear unlikely.’ 2025-04-24."
+    },
+    "S15-R012-P013": {
+      "sourceTextSha256": "540bc9ceff6bb10af20dd84a8ebb83babc287e6f8c2c3d4cc9b32407d897ca21",
+      "en": "6. MoneyToday. ‘China plans to remove management facility among Yellow Sea structures amid full restoration of bilateral relations.’ 2026-01-27."
+    },
+    "S15-R012-P014": {
+      "sourceTextSha256": "5672b3dcb5c285f2da8d661910a964154d253a9ec07cfcc4381f1839ce86616e",
+      "en": "7. Korea Defense Diplomacy Journal. ‘Chinese structures in the Yellow Sea provisional measures zone: conditions and responses.’ 2025-06-22."
+    },
+    "S15-R012-P015": {
+      "sourceTextSha256": "c8b7c9f88a50ebedbe2d91a259d3e8df28b177e1c9293cf15f4609efdfcb2c25",
+      "en": "8. Korea Institute for Maritime Strategy, KIMS. ‘Illusions and realities in approaching Chinese Yellow Sea structures: how should Korea respond?’ 2025-11-20."
+    },
+    "S15-R012-P016": {
+      "sourceTextSha256": "c005c2f5dd61bab4f2426caa3158040a6d52ac862895bff5c363b969a777d57d",
+      "en": "[Completion of the Tumangang–Khasan bridge]"
+    },
+    "S15-R012-P017": {
+      "sourceTextSha256": "d0621559de2cf12e2b0008e39e7d8d5caa27baa65976d5ad53ad2448e9cbcda5",
+      "en": "9. Radio Free Asia, RFA. ‘One month to bridge completion: North Korea and Russia rush final construction.’ 2026-05-21."
+    },
+    "S15-R012-P018": {
+      "sourceTextSha256": "173eac5273298b41d065d2ec3a6a42d896f93aada113566f55d00bde019d4519",
+      "en": "10. Seoul Pyongyang News, SPN. ‘North Korea–Russia border road bridge to be completed June 19, 2026.’ 2025-05-31."
+    },
+    "S15-R012-P019": {
+      "sourceTextSha256": "6b97cff1dcb6f1267132ebf48f1306e0c86b025f8a582dae173548a591ee5825",
+      "en": "11. Reportera. ‘A new Tumen bridge after 67 years: road bridge completed in June, accelerating cracks in North Korea sanctions.’ 2026-04-24."
+    },
+    "S15-R012-P020": {
+      "sourceTextSha256": "90f0bc9550b757bd1b83bd3d08d4683044d77abcd876cdb776635574489df67f",
+      "en": "12. Korea Daily, U.S. edition. ‘Transport infrastructure advances as North Korea–Russia ties tighten; regular buses also to open this year.’ 2026-07-01."
+    },
+    "S15-R012-P021": {
+      "sourceTextSha256": "c1935a2e18f3fe6e1213e2f96648302aa555eb91e42622800d885c7886571a6b",
+      "en": "[Defense and maritime surveillance assets]"
+    },
+    "S15-R012-P022": {
+      "sourceTextSha256": "066c6406453fcb55e48e240fdc2719ea2c6e8acf987cb520da56617e5c193450",
+      "en": "13. Kyunghyang Shinmun. ‘Project 425's final piece: fifth reconnaissance satellite contacts ground station.’ 2025-11-02."
+    },
+    "S15-R012-P023": {
+      "sourceTextSha256": "510a35d2264d343b7a6f8a967a55c004c5b4aa6ab3bacb42c9e1fe43458484b6",
+      "en": "14. Korea Veterans Broadcasting. ‘[Defense Ministry] Military reconnaissance Project 425 succeeds, completing a pillar of independent defense.’ 2025-11-20."
+    },
+    "S15-R013-P003": {
+      "sourceTextSha256": "693bf9ef2b88a9a7d814ce5a779d1aadb2e22436567d732fb7cd03942342807f",
+      "en": "[Other data sources for research methods]"
+    },
+    "S15-R013-P004": {
+      "sourceTextSha256": "db5c84ce6f77725bfd9a2271b81d1933dd48f1fe437b9ec9948fa8ab59945980",
+      "en": "24. Statistics Korea SDG indicators. https://kostat-sdg-kor.github.io/sdg-indicators/"
+    },
+    "S15-R013-P005": {
+      "sourceTextSha256": "772972db8e26912b8e95a2fdd94cf383e519965f58f8d4a04379d4d344091195",
+      "en": "25. Public Data Portal. https://www.data.go.kr/"
+    },
+    "S15-R001-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R002-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R002-P008": {
+      "sourceTextSha256": "7df084d3a612071be1b362cde16bfaa87df521202a205f58f1ee8b527ee52822",
+      "en": "① Google Earth"
+    },
+    "S15-R003-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R004-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R005-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R006-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R007-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R008-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R009-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R010-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R011-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R012-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
+    },
+    "S15-R012-P008": {
+      "sourceTextSha256": "2d275a71acb55c323479690f73745311ad51978d1b9758cc24cd76f8476ae9a2",
+      "en": "2. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Korea-China Standoffs in the PMZ.\" Beyond Parallel, CSIS, October 27, 2025."
+    },
+    "S15-R012-P009": {
+      "sourceTextSha256": "5a721fda07b940a9b691fe0a0f0bd93f7d717f5895df46b9e686f7998dfff363",
+      "en": "3. Jun, Jennifer, Asia Maritime Transparency Initiative, and Victor Cha. \"Chinese Buoys Near the South Korea-China PMZ.\" Beyond Parallel, CSIS, December 15, 2025."
+    },
+    "S15-R012-P028": {
+      "sourceTextSha256": "b4c4846ed9e9754e0fd86726baba34a4147206286a93ebac06d79d06927af7ee",
+      "en": "18. \"Russia's veto on UN sanctions monitoring will further embolden North Korea.\" Chatham House, May 14, 2024."
+    },
+    "S15-R012-P032": {
+      "sourceTextSha256": "200c90f91ab4ece13cdcaa046d9b20f6eb1fbef1aa9eaa061b05930121622b53",
+      "en": "21. \"Why China now embraces a nuclear North Korea.\" The Interpreter, Lowy Institute, April 23, 2026."
+    },
+    "S15-R012-P033": {
+      "sourceTextSha256": "43176a6145676343b22a5a14692dfd338db108c5f5dd2de771074cfde7215505",
+      "en": "22. \"The great omission: A clarifying statement on North Korea's nukes.\" The Interpreter, Lowy Institute, October 6, 2025."
+    },
+    "S15-R013-P001": {
+      "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7",
+      "en": "Third-year independent curriculum topic inquiry activity"
     }
   },
-  "sourceCount": 130,
-  "translatedCount": 14,
-  "complete": false
+  "sourceCount": 141,
+  "translatedCount": 141,
+  "complete": true
 }

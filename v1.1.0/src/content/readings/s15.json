@@ -11,7 +11,7 @@
         "S15-L001-P001"
       ],
       "sourcePage": 1,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -34,8 +34,8 @@
       ],
       "sourcePage": 1,
       "kind": "body",
-      "ko": "학 번 이 름",
-      "sourceTextSha256": "76eeca7f7fe1887acfe6efe66f681250636143de91f9b952456467c9784f1e3b"
+      "ko": "학 번",
+      "sourceTextSha256": "465b511396d293dcfb430264eac0a03f79cb646b609c625e9e88a3b7ec17c516"
     },
     {
       "id": "S15-R001-P004",
@@ -45,11 +45,44 @@
       ],
       "sourcePage": 1,
       "kind": "body",
-      "ko": "대주제 글로벌 패권 경쟁",
-      "sourceTextSha256": "7063c58dada55136d6a3cd219d38a2ddcaface561cfca990baae9f1d2a4ac274"
+      "ko": "이 름",
+      "sourceTextSha256": "ba11ab04db329b0242bf91e593257d8305fbb5360335a9ac11f5abe10b67fd88"
     },
     {
       "id": "S15-R001-P005",
+      "sectionId": "S15-L001",
+      "sourceBlockIds": [
+        "S15-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "field-label",
+      "ko": "대주제",
+      "sourceTextSha256": "ac7623b113f4f9b6226105081afa94d02093c79f5a45a5c98b20600f7d7de3f0"
+    },
+    {
+      "id": "S15-R001-P006",
+      "sectionId": "S15-L001",
+      "sourceBlockIds": [
+        "S15-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "글로벌 패권 경쟁",
+      "sourceTextSha256": "eaad813ad0345d9c8e64caa5465ba97b4c06b4a18ee7627be1f1f345542ea903"
+    },
+    {
+      "id": "S15-R001-P007",
+      "sectionId": "S15-L001",
+      "sourceBlockIds": [
+        "S15-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "field-label",
+      "ko": "탐구 동기",
+      "sourceTextSha256": "4badcb1cca8f2a6fd4c02f049e921c9fe84527f5e93c57d661a834864aec9d1e"
+    },
+    {
+      "id": "S15-R001-P008",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -60,7 +93,7 @@
       "sourceTextSha256": "9556baa21024017f612be878b86cad3cd9a0b2a293457c6bf28bacfc4763938d"
     },
     {
-      "id": "S15-R001-P006",
+      "id": "S15-R001-P009",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -71,7 +104,7 @@
       "sourceTextSha256": "8ed67caf1285e3d849d262d45bcbcb9f3987ca077570850b5ab010857c690e21"
     },
     {
-      "id": "S15-R001-P007",
+      "id": "S15-R001-P010",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -82,7 +115,7 @@
       "sourceTextSha256": "8e5da298bc078c26d8e03030e30088f29c3eb2cb56a5555ee8e5027076a6d8ee"
     },
     {
-      "id": "S15-R001-P008",
+      "id": "S15-R001-P011",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -93,7 +126,7 @@
       "sourceTextSha256": "b77183e5276bea9b3d655ce902db7b15c851bdf42ca5f0a484536bfc6d29115f"
     },
     {
-      "id": "S15-R001-P009",
+      "id": "S15-R001-P012",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -104,7 +137,7 @@
       "sourceTextSha256": "47e36c80d7a214dfc2ec67d386e736b7bc35f71fa08c2d17b5cb70af4e780096"
     },
     {
-      "id": "S15-R001-P010",
+      "id": "S15-R001-P013",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -115,7 +148,7 @@
       "sourceTextSha256": "d20d3ea251fc99eead10e9481950059eff322506a22a7a1c0400639d6ac5dad3"
     },
     {
-      "id": "S15-R001-P011",
+      "id": "S15-R001-P014",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -126,18 +159,18 @@
       "sourceTextSha256": "7ac9a719bb069cf4c6631f7059140df2f718ee6a1580be74afecf82973d12754"
     },
     {
-      "id": "S15-R001-P012",
+      "id": "S15-R001-P015",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
       ],
       "sourcePage": 1,
       "kind": "body",
-      "ko": "2. 정량적 데이터를 시각화해 의미있는 결과로 도출해내는 능력이 강점이다. 누구나 도출할 수 있는 표면적이고 동일한 결론이 아닌, 데이터 간 숨겨진 연결고리를 찾아 다른 시각의 분석을 제시한다. 이는 방대한 위성·해양 데이터를 낮은 수준의 온톨로지화를 통 탐구 동기 해 지정학적 패턴을 추출하는 방법으로 이는 이번 탐구에서도 그대로 드러난다.",
-      "sourceTextSha256": "74237707cbaed7281d5c6c6501686f564ad7e7f38217d140e03f9826f8595e5c"
+      "ko": "2. 정량적 데이터를 시각화해 의미있는 결과로 도출해내는 능력이 강점이다. 누구나 도출할 수 있는 표면적이고 동일한 결론이 아닌, 데이터 간 숨겨진 연결고리를 찾아 다른 시각의 분석을 제시한다. 이는 방대한 위성·해양 데이터를 낮은 수준의 온톨로지화를 통해 지정학적 패턴을 추출하는 방법으로 이는 이번 탐구에서도 그대로 드러난다.",
+      "sourceTextSha256": "1470779b667663458b79e1aa2c7d6c5f2e347c4499377b0c513c2b955a38c6b2"
     },
     {
-      "id": "S15-R001-P013",
+      "id": "S15-R001-P016",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -148,7 +181,7 @@
       "sourceTextSha256": "05882ed78cb4e3b77cdec817c1306bea6aa18746f9afc9b5c90f4d28e316496d"
     },
     {
-      "id": "S15-R001-P014",
+      "id": "S15-R001-P017",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -159,7 +192,7 @@
       "sourceTextSha256": "d69f8727b9842c4080fcb0a8f9d5cb20bb895f97fc1431cfade4da2dacf53b8c"
     },
     {
-      "id": "S15-R001-P015",
+      "id": "S15-R001-P018",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
@@ -170,26 +203,50 @@
       "sourceTextSha256": "fb4dcd430e3e2473f357eb119ae8045d0ec36b40ea4fed4308cfadb595f4fca2"
     },
     {
-      "id": "S15-R001-P016",
+      "id": "S15-R001-P019",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
       ],
       "sourcePage": 1,
-      "kind": "body",
-      "ko": "탐구 주제 위성 및 해상 공간 데이터를 활용한 동북아 지정학적 어노말리(Anomaly) 탐지",
-      "sourceTextSha256": "e4b68bf874effd61fbf0bb0e73c27d4122e28b6baa23bf44712c49cb2912747e"
+      "kind": "field-label",
+      "ko": "탐구 주제",
+      "sourceTextSha256": "4868040a530e9b701eb4f0c6e5432155ab8c14af0b36de2c01713fc64c49e3ba"
     },
     {
-      "id": "S15-R001-P017",
+      "id": "S15-R001-P020",
       "sectionId": "S15-L001",
       "sourceBlockIds": [
         "S15-L001-P001"
       ],
       "sourcePage": 1,
       "kind": "body",
-      "ko": "탐구 목적 1. 최근 전세계적으로 안보위기가 대두되며 대한민국또한 이러한 안보 부분에서는 좌시",
-      "sourceTextSha256": "575f93380bda86c286091e87e0a41a3ed7919303cb53232811faa83d9149969d"
+      "ko": "위성 및 해상 공간 데이터를 활용한 동북아 지정학적 어노말리(Anomaly) 탐지",
+      "sourceTextSha256": "9d63e5d504be0722be3799318a50846ab073f032753b9eb9e0e0385a0426eb14"
+    },
+    {
+      "id": "S15-R001-P021",
+      "sectionId": "S15-L001",
+      "sourceBlockIds": [
+        "S15-L001-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "field-label",
+      "ko": "탐구 목적",
+      "sourceTextSha256": "2272688022aadf8b0a607e5df240655e208c8fa6b205f74d98b16bc0d05c5e12"
+    },
+    {
+      "id": "S15-R001-P022",
+      "sectionId": "S15-L001",
+      "sourceBlockIds": [
+        "S15-L001-P001",
+        "S15-L002-P001"
+      ],
+      "sourcePage": 1,
+      "kind": "body",
+      "ko": "1. 최근 전세계적으로 안보위기가 대두되며 대한민국또한 이러한 안보 부분에서는 좌시할 수 없다고 판단했다. 무엇보다 중국과 북한이라는 과거, 한국전쟁에서 적으로 마주했던 두 나라의 움직임에 대해서는 꾸준히 보고 관리해야할 필요성이 있으며 특히나 최근 별거 아닌 움직임이 큰 계획의 일부로서 구동되어 국가적인 안보의 위협으로 다가오는 경우가 있고 우리가 이를 포착하지 못할 경우가 있다. 이러한 것은 OSINT(오픈소스 인텔리전스)와 같은 방식으로 데이터를 민간에서 구해 의미있는 결과를 얻어낼 수 있다는 점에서 탐구를 시작했다.",
+      "sourceTextSha256": "03068b3d4bdf7690771509bb8f64319f9fd40410cb93e3c1f3a2080459868a8a",
+      "sourcePageEnd": 2
     },
     {
       "id": "S15-R002-P001",
@@ -198,20 +255,9 @@
         "S15-L002-P001"
       ],
       "sourcePage": 2,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
-    },
-    {
-      "id": "S15-R002-P002",
-      "sectionId": "S15-L002",
-      "sourceBlockIds": [
-        "S15-L002-P001"
-      ],
-      "sourcePage": 2,
-      "kind": "body",
-      "ko": "할 수 없다고 판단했다. 무엇보다 중국과 북한이라는 과거, 한국전쟁에서 적으로 마주했던 두 나라의 움직임에 대해서는 꾸준히 보고 관리해야할 필요성이 있으며 특히나 최근 별거 아닌 움직임이 큰 계획의 일부로서 구동되어 국가적인 안보의 위협으로 다가오는 경우가 있고 우리가 이를 포착하지 못할 경우가 있다. 이러한 것은 OSINT(오픈소스 인텔리전스)와 같은 방식으로 데이터를 민간에서 구해 의미있는 결과를 얻어낼 수 있다는 점에서 탐구를 시작했다.",
-      "sourceTextSha256": "a1aeb43dddaa3d2394f8db63f1d639485682635c9eedfad81cc741b0a6c8a27d"
     },
     {
       "id": "S15-R002-P003",
@@ -264,12 +310,23 @@
         "S15-L002-P001"
       ],
       "sourcePage": 2,
+      "kind": "field-label",
+      "ko": "탐구 방법",
+      "sourceTextSha256": "1064bd64e658f3524bbc0e495865a982590c9daf12f4ebe6e0f8d578ee80e505"
+    },
+    {
+      "id": "S15-R002-P008",
+      "sectionId": "S15-L002",
+      "sourceBlockIds": [
+        "S15-L002-P001"
+      ],
+      "sourcePage": 2,
       "kind": "body",
       "ko": "① Google Earth",
       "sourceTextSha256": "7df084d3a612071be1b362cde16bfaa87df521202a205f58f1ee8b527ee52822"
     },
     {
-      "id": "S15-R002-P008",
+      "id": "S15-R002-P009",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
@@ -280,7 +337,7 @@
       "sourceTextSha256": "948d2b8b0d39aa0e6f4646dd5a76d50e06e977cb71d49a3455a4ce2407f6fd13"
     },
     {
-      "id": "S15-R002-P009",
+      "id": "S15-R002-P010",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
@@ -291,18 +348,18 @@
       "sourceTextSha256": "e9a0c922b26cb77949ec388e8e14946e7c48079b49fa4def811732619bf63668"
     },
     {
-      "id": "S15-R002-P010",
+      "id": "S15-R002-P011",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
       ],
       "sourcePage": 2,
       "kind": "body",
-      "ko": "④ Copernicus 실시간 위성 지도 수집 탐구 방법",
-      "sourceTextSha256": "785eee3fa0be9e27389a284e4b2ef3ac6890da85942891101a44b2188007c8d2"
+      "ko": "④ Copernicus 실시간 위성 지도 수집",
+      "sourceTextSha256": "2e5b956417feda3b0bc4cd352ae1a13d68c544b95590e885e9b236fd6f798b6d"
     },
     {
-      "id": "S15-R002-P011",
+      "id": "S15-R002-P012",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
@@ -313,18 +370,18 @@
       "sourceTextSha256": "3499405ba172d088406c35da71027267b84a11549faae057953f155a48d7eb26"
     },
     {
-      "id": "S15-R002-P012",
+      "id": "S15-R002-P013",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
       ],
       "sourcePage": 2,
       "kind": "body",
-      "ko": "⑥ NV/NV  - 자체 개발 OSINT 지능형 자료 수집/웹스크래핑",
-      "sourceTextSha256": "9943584f27128fd1e94c2dfec9d06c9e566c8ed529dc9ca4ad6e93b028ef8164"
+      "ko": "⑥ NV/NV α - 자체 개발 OSINT 지능형 자료 수집/웹스크래핑",
+      "sourceTextSha256": "4f585662609e04d6bc1a9afb0d1cde23c5878f281bcee3428aef2c17df404228"
     },
     {
-      "id": "S15-R002-P013",
+      "id": "S15-R002-P014",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
@@ -335,7 +392,7 @@
       "sourceTextSha256": "f2cc5bdef58a16b71aab0a854b35f347df02a9f4879b77684817441e0212c2c9"
     },
     {
-      "id": "S15-R002-P014",
+      "id": "S15-R002-P015",
       "sectionId": "S15-L002",
       "sourceBlockIds": [
         "S15-L002-P001"
@@ -352,7 +409,7 @@
         "S15-L003-P001"
       ],
       "sourcePage": 3,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -363,12 +420,23 @@
         "S15-L003-P001"
       ],
       "sourcePage": 3,
+      "kind": "field-label",
+      "ko": "탐구 내용 <문제 분석 및 도출> 중심",
+      "sourceTextSha256": "bfe26a661b1c4ef7b717dc04e5f75211333e4b21df15acd4721eefd7249cf4c8"
+    },
+    {
+      "id": "S15-R003-P003",
+      "sectionId": "S15-L003",
+      "sourceBlockIds": [
+        "S15-L003-P001"
+      ],
+      "sourcePage": 3,
       "kind": "body",
       "ko": "1. 데이터 수집 본 연구의 데이터 수집은 다음 두가지의 큰 이슈로 부터 시작한다. 첫번째는 연합뉴스 사에서 발행한 서해의 구조물 관련 이슈, 두번째는 북한 다리의 완공식 관련 뉴스이다. 이 두 뉴스를 따라가보면 현재 두 나라의 움직임에 대한 이해를 할 수 있을 것이라는 가설 설정하에 데이터 수집을 시작했다.",
       "sourceTextSha256": "bfecf1d7104929ed8f2ed840458de081f98506f986670118880a95b17505b703"
     },
     {
-      "id": "S15-R003-P003",
+      "id": "S15-R003-P004",
       "sectionId": "S15-L003",
       "sourceBlockIds": [
         "S15-L003-P001"
@@ -379,18 +447,29 @@
       "sourceTextSha256": "8234883faecec1193328b245b8e9b6917641dec206e83d6bce6ec0c8f8813064"
     },
     {
-      "id": "S15-R003-P004",
+      "id": "S15-R003-P005",
       "sectionId": "S15-L003",
       "sourceBlockIds": [
         "S15-L003-P001"
       ],
       "sourcePage": 3,
       "kind": "body",
-      "ko": "b. 지정학적 위치 수집: 앞선 NV 툴의 하네스 알고리즘 바탕 대용량 문서 프로세싱과 안티 할루시에이션처리를 통해 의미있는 위치들을 추출했다. 대표적으로 중국의 구조물 개수와 위치, 북한의 다리 위치와 연도, 그리고 길이와 상세 정보등을 추출해낼 수 있었으며 이를 바탕으로 NV a로 가공된 CSV파일을 팔란티어 온톨로지에 업로드하였다. 업 탐구 내용 로드 후 오브젝트화를 진행했으며 기본적으로 이용가능한 Raw 데이터로 처리하였다. <문제 분석 및 c. 사진과 자료 추가 데이터 수집 도출> 코페르니쿠스를 통해 10m의 중저품질 시간대별 위성 지도를 추출할 수 있었으며 레이 중심 더 지도로 다리의 건설 과정과 시점을 확인할 수 있었다. AIS 추적 툴을 통해 선박의 용도와 이동경로를 확보할 수 있었고 동시에 해상 정보도 확인하여 추출해낼 수 있었다.",
-      "sourceTextSha256": "acecd1706215e9ad7f25b77e085803cdd9dd5a156ad4d9958b4ad7d876551a3c"
+      "ko": "b. 지정학적 위치 수집: 앞선 NV 툴의 하네스 알고리즘 바탕 대용량 문서 프로세싱과 안티 할루시에이션처리를 통해 의미있는 위치들을 추출했다. 대표적으로 중국의 구조물 개수와 위치, 북한의 다리 위치와 연도, 그리고 길이와 상세 정보등을 추출해낼 수 있었으며 이를 바탕으로 NV a로 가공된 CSV파일을 팔란티어 온톨로지에 업로드하였다. 업로드 후 오브젝트화를 진행했으며 기본적으로 이용가능한 Raw 데이터로 처리하였다.",
+      "sourceTextSha256": "844ecb9137b8737ae53d49283abf5956664dad07c8fa957b45ccae30fd20c10e"
     },
     {
-      "id": "S15-R003-P005",
+      "id": "S15-R003-P006",
+      "sectionId": "S15-L003",
+      "sourceBlockIds": [
+        "S15-L003-P001"
+      ],
+      "sourcePage": 3,
+      "kind": "body",
+      "ko": "c. 사진과 자료 추가 데이터 수집 코페르니쿠스를 통해 10m의 중저품질 시간대별 위성 지도를 추출할 수 있었으며 레이더 지도로 다리의 건설 과정과 시점을 확인할 수 있었다. AIS 추적 툴을 통해 선박의 용도와 이동경로를 확보할 수 있었고 동시에 해상 정보도 확인하여 추출해낼 수 있었다.",
+      "sourceTextSha256": "20e4c44bff58c82b49b613c59e4c412176e85a291b216ea5c7e483d710b2b159"
+    },
+    {
+      "id": "S15-R003-P007",
       "sectionId": "S15-L003",
       "sourceBlockIds": [
         "S15-L003-P001"
@@ -401,7 +480,7 @@
       "sourceTextSha256": "313a66004cc7108d238699d8eee664f6768249fc4d7ed543faf9011454008b09"
     },
     {
-      "id": "S15-R003-P006",
+      "id": "S15-R003-P008",
       "sectionId": "S15-L003",
       "sourceBlockIds": [
         "S15-L003-P001"
@@ -412,7 +491,7 @@
       "sourceTextSha256": "45a6251e2fa0d40fe3d7174766009694e3184288b0d07fc78d9af3a8861f04d5"
     },
     {
-      "id": "S15-R003-P007",
+      "id": "S15-R003-P009",
       "sectionId": "S15-L003",
       "sourceBlockIds": [
         "S15-L003-P001"
@@ -429,7 +508,7 @@
         "S15-L004-P001"
       ],
       "sourcePage": 4,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -484,7 +563,7 @@
         "S15-L005-P001"
       ],
       "sourcePage": 5,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -539,7 +618,7 @@
         "S15-L006-P001"
       ],
       "sourcePage": 6,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -561,7 +640,7 @@
         "S15-L007-P001"
       ],
       "sourcePage": 7,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -613,12 +692,14 @@
       "id": "S15-R007-P006",
       "sectionId": "S15-L007",
       "sourceBlockIds": [
-        "S15-L007-P001"
+        "S15-L007-P001",
+        "S15-L008-P001"
       ],
       "sourcePage": 7,
       "kind": "body",
-      "ko": "b. 대치 사례 (2025년 9월) AIS 데이터(Starboard Maritime Intelligence)에 따르면 2025년 9월 24일 한국 조사선 온누리호가 PMZ에 진입했고, 약 6시간 후 중국해경국 6307함이 추적을 개시했으며 칭",
-      "sourceTextSha256": "cee9f5cc14a406f002e22ffff043afb0e275d6cd46c44fe221cc4951c33da5ed"
+      "ko": "b. 대치 사례 (2025년 9월) AIS 데이터(Starboard Maritime Intelligence)에 따르면 2025년 9월 24일 한국 조사선 온누리호가 PMZ에 진입했고, 약 6시간 후 중국해경국 6307함이 추적을 개시했으며 칭다오항에서 2척이 추가 파견되었다. 9월 25일 온누리호가 Shen Lan 1·2에 근접하자 중국해경 함정이 양측을 밀착 감시했고, 이후 15시간 이상 최근접 1.7해리까지 접근하며 온누리호와 한국해경 3009함을 추적한 뒤 두 선박이 PMZ를 이탈하고서야 감시를 종료 했다. 이는 2025년 2월 발생한 유사 대치의 반복이며, 국회 보고에 따르면 2020년 이후 135회의 한국측 해양조사 중 27회(약 1/5)가 중국의 방해를 받은 것으로 나타나 상시적 패턴임이 확인된다.",
+      "sourceTextSha256": "8e9935849bdb81b16e36343b6f94d6093bb5ae5031bba57b8cdebc5be9df8e10",
+      "sourcePageEnd": 8
     },
     {
       "id": "S15-R008-P001",
@@ -627,20 +708,9 @@
         "S15-L008-P001"
       ],
       "sourcePage": 8,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
-    },
-    {
-      "id": "S15-R008-P002",
-      "sectionId": "S15-L008",
-      "sourceBlockIds": [
-        "S15-L008-P001"
-      ],
-      "sourcePage": 8,
-      "kind": "body",
-      "ko": "다오항에서 2척이 추가 파견되었다. 9월 25일 온누리호가 Shen Lan 1·2에 근접하자 중국해경 함정이 양측을 밀착 감시했고, 이후 15시간 이상 최근접 1.7해리까지 접근하며 온누리호와 한국해경 3009함을 추적한 뒤 두 선박이 PMZ를 이탈하고서야 감시를 종료 했다. 이는 2025년 2월 발생한 유사 대치의 반복이며, 국회 보고에 따르면 2020년 이후 135회의 한국측 해양조사 중 27회(약 1/5)가 중국의 방해를 받은 것으로 나타나 상시적 패턴임이 확인된다.",
-      "sourceTextSha256": "aaae39ae0cfde37e94ca2e15a4a5920f0bb5fa21a5ebefa9543a50dec57a2e84"
     },
     {
       "id": "S15-R008-P003",
@@ -726,9 +796,20 @@
         "S15-L008-P001"
       ],
       "sourcePage": 8,
+      "kind": "field-label",
+      "ko": "탐구 내용",
+      "sourceTextSha256": "7f1d297b48319add77bf314232d5966195e4ef44cd5242295d13b09b18c22f85"
+    },
+    {
+      "id": "S15-R008-P011",
+      "sectionId": "S15-L008",
+      "sourceBlockIds": [
+        "S15-L008-P001"
+      ],
+      "sourcePage": 8,
       "kind": "body",
-      "ko": "탐구 내용 1. 위성·해양데이터 상시 모니터링 체계 구축",
-      "sourceTextSha256": "2aa56cedffdd4ceb8803cbcf3ff89dd65c9d61f2f1073672bd1c51eb9ebb6f1b"
+      "ko": "1. 위성·해양데이터 상시 모니터링 체계 구축",
+      "sourceTextSha256": "354fe4c1e18235de9a24eeb1f3a031567c41a16c6c57edd7ca6e15d1b8f64391"
     },
     {
       "id": "S15-R009-P001",
@@ -737,7 +818,7 @@
         "S15-L009-P001"
       ],
       "sourcePage": 9,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -748,12 +829,23 @@
         "S15-L009-P001"
       ],
       "sourcePage": 9,
+      "kind": "field-label",
+      "ko": "<해결 방안 및 제언>",
+      "sourceTextSha256": "79289ac779b020a07600e7d019f1aed274b704de27b29334be25ccb7783727f3"
+    },
+    {
+      "id": "S15-R009-P003",
+      "sectionId": "S15-L009",
+      "sourceBlockIds": [
+        "S15-L009-P001"
+      ],
+      "sourcePage": 9,
       "kind": "body",
       "ko": "한국은 2025년 11월 '425사업'(SAR 위성 4기, EO/IR 위성 1기, 총사업비 약 1조3000억 원)을 완료해 독자 정찰위성 체계를 확보했다. 그러나 425사업의 한반도 재방문 주기는 약 2시간이며, 이 공백을 메우기 위한 소형·초소형 군집위성 51기(국방부 SAR 40기, 과기정통부 EO 11기, 목표 주기 30분)는 아직 전력화 전 단계다. 즉 현재 한국의 독자 감시 자산은 두만강 교량 공정 진척이나 서해 부표 신규 배치처럼 저강도·점진적으로 진행되는 변화를 촘촘히 포착하기에는 시간 해상도가 부족하며, 이 연구에서 활용한 코페르니쿠스와 CSIS Beyond Parallel(Vantor/Maxar) 상업위성 데이터에 대한 의존이 당분간 불가피하다.",
       "sourceTextSha256": "61490ba477e24f35e3adf5ed17576e60f4b5e26c4d22c2ec7c367bafacee2697"
     },
     {
-      "id": "S15-R009-P003",
+      "id": "S15-R009-P004",
       "sectionId": "S15-L009",
       "sourceBlockIds": [
         "S15-L009-P001"
@@ -764,7 +856,7 @@
       "sourceTextSha256": "8579b92cedb7f095226c98ed7e2bb61708299297c6a249cebf12f178c4bc2bee"
     },
     {
-      "id": "S15-R009-P004",
+      "id": "S15-R009-P005",
       "sectionId": "S15-L009",
       "sourceBlockIds": [
         "S15-L009-P001"
@@ -775,18 +867,29 @@
       "sourceTextSha256": "4678999de7efe955d9d4884bdf6eeb10d20f7df534847081e605ee516164e5ab"
     },
     {
-      "id": "S15-R009-P005",
+      "id": "S15-R009-P006",
       "sectionId": "S15-L009",
       "sourceBlockIds": [
         "S15-L009-P001"
       ],
       "sourcePage": 9,
       "kind": "body",
-      "ko": "<해결 2. PMZ 그레이존 대응: 현재까지의 성과와 남은 과제 방안 및 제언> 2025년 4월 23일 제3차 한중 해양협력대화에서 한국측(강영신 외교부 동북아·중앙아국장)은 PMZ 내 3개 구조물(선란 1·2호, 관리 플랫폼) 전체의 이전을 요구했고, 이동이 어려울 경우 비례대응을 검토하겠다는 입장을 명확히 전달했다. 이후 2025년 4월 24일 중국 외교부가 관리 플랫폼 이전 계획을 공식화했고, 2026년 1월 27일에는 실제로 해당 구조물이 PMZ 밖으로 약 500m 이동하는 것이 확인되었다. 이는 같은 해 이재명 대통령의 방중 이후 한중관계 복원 흐름과 맞물린 결과로 해석된다. 다만 선란 1·2호 양식 케이지는 여전히 잔류 중이며, 문제가 완전히 해소된 것은 아니다.",
-      "sourceTextSha256": "b5c8e840b8540f0aba9ff9a0f2d4214d75b095b72e29f7eea0d249611f6344b9"
+      "ko": "2. PMZ 그레이존 대응: 현재까지의 성과와 남은 과제",
+      "sourceTextSha256": "18620cf819d00947be0eb375a52105ca1d5101fd010fff21778ee3fe57db9818"
     },
     {
-      "id": "S15-R009-P006",
+      "id": "S15-R009-P007",
+      "sectionId": "S15-L009",
+      "sourceBlockIds": [
+        "S15-L009-P001"
+      ],
+      "sourcePage": 9,
+      "kind": "body",
+      "ko": "2025년 4월 23일 제3차 한중 해양협력대화에서 한국측(강영신 외교부 동북아·중앙아국장)은 PMZ 내 3개 구조물(선란 1·2호, 관리 플랫폼) 전체의 이전을 요구했고, 이동이 어려울 경우 비례대응을 검토하겠다는 입장을 명확히 전달했다. 이후 2025년 4월 24일 중국 외교부가 관리 플랫폼 이전 계획을 공식화했고, 2026년 1월 27일에는 실제로 해당 구조물이 PMZ 밖으로 약 500m 이동하는 것이 확인되었다. 이는 같은 해 이재명 대통령의 방중 이후 한중관계 복원 흐름과 맞물린 결과로 해석된다. 다만 선란 1·2호 양식 케이지는 여전히 잔류 중이며, 문제가 완전히 해소된 것은 아니다.",
+      "sourceTextSha256": "385cb8e2b22fe6229d022f4cc15db81201dc804f14e676969ead227adff161e5"
+    },
+    {
+      "id": "S15-R009-P008",
       "sectionId": "S15-L009",
       "sourceBlockIds": [
         "S15-L009-P001"
@@ -797,7 +900,7 @@
       "sourceTextSha256": "baced2eb6df5cdb6dacf68b3f6703b495cde8e7b665859c6617452c6c9c7b308"
     },
     {
-      "id": "S15-R009-P007",
+      "id": "S15-R009-P009",
       "sectionId": "S15-L009",
       "sourceBlockIds": [
         "S15-L009-P001"
@@ -808,7 +911,7 @@
       "sourceTextSha256": "f5924e3860a635176c1fa64328b5940f0ef9b2eec78f773b62372192883593f6"
     },
     {
-      "id": "S15-R009-P008",
+      "id": "S15-R009-P010",
       "sectionId": "S15-L009",
       "sourceBlockIds": [
         "S15-L009-P001"
@@ -825,7 +928,7 @@
         "S15-L010-P001"
       ],
       "sourcePage": 10,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -935,7 +1038,7 @@
         "S15-L011-P001"
       ],
       "sourcePage": 11,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -990,9 +1093,9 @@
         "S15-L011-P001"
       ],
       "sourcePage": 11,
-      "kind": "body",
-      "ko": "1.위성(Copernicus, 상업위성)·AIS·싱크탱크 보고서(CSIS 등)를 NV 자체 OSINT 툴로 수집·안티할루시네이션 처리한 뒤, Palantir Foundry 온톨로지에 지오포인트/지오쉐이프 형태로 업로드해 서해 PMZ와 두만강-하산 접경을 하나의 지도 레이어로 통합했다. 이를 통해 개별 보도로는 드러나지 않는 두 사안의 위치·시계열 관계를 정량적으로 교차 검증할 수 있었다.",
-      "sourceTextSha256": "06feb856c0558b416ebeaff0d613c15f805619c9e83da4f2369c0f6f394dcfa2"
+      "kind": "field-label",
+      "ko": "탐구 내용 요약",
+      "sourceTextSha256": "b30a2da6765945c91613301ca20790b4b5b6a2c24f945979be3ef69acca57621"
     },
     {
       "id": "S15-R011-P007",
@@ -1002,8 +1105,8 @@
       ],
       "sourcePage": 11,
       "kind": "body",
-      "ko": "2. 분석 결과, 두만강-하산 신규 도로교는 러시아의 우크라이나 전쟁 지속에 따른 북러 탐구 물류 수요 증가를, 서해 PMZ의 부표·양식장·통합관리 플랫폼은 명시적 도발을 피하며 내용 감시 자산을 점진적으로 축적하는 안정적 무임승차(회색지대) 전략을 각각 보여주었다. 요약 두 사례 모두 국제법·양자협정의 법적 공백을 정밀하게 활용한다는 공통점이 있으며, 더 나아가 이는 북한의 대러 밀착에 대응한 중국의 대북 재개입(단둥·취안허 등 접경 인프라 동시 정비)과 유엔 대북제재 감시체계(PoE) 붕괴라는 상위 구조 변화의 일부로 해석된다.",
-      "sourceTextSha256": "183c6f13abb4f544686cf3069348cc2d750eadce35cd20ece9f01ee327189eee"
+      "ko": "1.위성(Copernicus, 상업위성)·AIS·싱크탱크 보고서(CSIS 등)를 NV 자체 OSINT 툴로 수집·안티할루시네이션 처리한 뒤, Palantir Foundry 온톨로지에 지오포인트/지오쉐이프 형태로 업로드해 서해 PMZ와 두만강-하산 접경을 하나의 지도 레이어로 통합했다. 이를 통해 개별 보도로는 드러나지 않는 두 사안의 위치·시계열 관계를 정량적으로 교차 검증할 수 있었다.",
+      "sourceTextSha256": "06feb856c0558b416ebeaff0d613c15f805619c9e83da4f2369c0f6f394dcfa2"
     },
     {
       "id": "S15-R011-P008",
@@ -1013,8 +1116,21 @@
       ],
       "sourcePage": 11,
       "kind": "body",
-      "ko": "3. 이에 따라 독자 위성·해양관측망을 활용한 상시 모니터링 체계 구축, PMZ 구조물에 대한 정상외교 연계 협상 지속과 어업협정 개정, 대칭적 감시 자산 확충, 교량 개통 후",
-      "sourceTextSha256": "211c73eb90bea84e5711dd5bb89168256a3403e272e7af05077a137e25cba230"
+      "ko": "2. 분석 결과, 두만강-하산 신규 도로교는 러시아의 우크라이나 전쟁 지속에 따른 북러 물류 수요 증가를, 서해 PMZ의 부표·양식장·통합관리 플랫폼은 명시적 도발을 피하며 감시 자산을 점진적으로 축적하는 안정적 무임승차(회색지대) 전략을 각각 보여주었다. 두 사례 모두 국제법·양자협정의 법적 공백을 정밀하게 활용한다는 공통점이 있으며, 더 나아가 이는 북한의 대러 밀착에 대응한 중국의 대북 재개입(단둥·취안허 등 접경 인프라 동시 정비)과 유엔 대북제재 감시체계(PoE) 붕괴라는 상위 구조 변화의 일부로 해석된다.",
+      "sourceTextSha256": "397d53b091244f297d9499bc066c94b2f1ec75346ed8d9b9889f935ee083ce06"
+    },
+    {
+      "id": "S15-R011-P009",
+      "sectionId": "S15-L011",
+      "sourceBlockIds": [
+        "S15-L011-P001",
+        "S15-L012-P001"
+      ],
+      "sourcePage": 11,
+      "kind": "body",
+      "ko": "3. 이에 따라 독자 위성·해양관측망을 활용한 상시 모니터링 체계 구축, PMZ 구조물에 대한 정상외교 연계 협상 지속과 어업협정 개정, 대칭적 감시 자산 확충, 교량 개통 후 물동량 추적과 한·미·일 대체 모니터링 체계 마련, 그리고 북중러 삼각관계 재편을 상시 추적하는 상위 분석 틀 구축을 제언한다. 이는 단선적 인과가 아닌 다차원적 연쇄효과를 포착하는 소프트파워형 인텔리전스 체계가 필요하다는 본 연구의 문제의식을 뒷받침한다.",
+      "sourceTextSha256": "0959381f0096482ee59d8c85babdfdb4ab92e03322882775ad129c50e503e943",
+      "sourcePageEnd": 12
     },
     {
       "id": "S15-R012-P001",
@@ -1023,20 +1139,9 @@
         "S15-L012-P001"
       ],
       "sourcePage": 12,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
-    },
-    {
-      "id": "S15-R012-P002",
-      "sectionId": "S15-L012",
-      "sourceBlockIds": [
-        "S15-L012-P001"
-      ],
-      "sourcePage": 12,
-      "kind": "body",
-      "ko": "물동량 추적과 한·미·일 대체 모니터링 체계 마련, 그리고 북중러 삼각관계 재편을 상시 추적하는 상위 분석 틀 구축을 제언한다. 이는 단선적 인과가 아닌 다차원적 연쇄효과를 포착하는 소프트파워형 인텔리전스 체계가 필요하다는 본 연구의 문제의식을 뒷받침한다.",
-      "sourceTextSha256": "9ac3aa401f67977a4624f415bc1ee92526cad54f746fe8c6a64bba761422cf79"
     },
     {
       "id": "S15-R012-P003",
@@ -1046,11 +1151,33 @@
       ],
       "sourcePage": 12,
       "kind": "body",
-      "ko": "탐구 내용 요약 해서 제시! 참고 문헌",
-      "sourceTextSha256": "168c887d48cf5626d1223116c5e13d0641ac6a2f183b4ed8b282fb9cac3bf678"
+      "ko": "탐구 내용 요약 해서 제시!",
+      "sourceTextSha256": "aa47e6ea8dffc29ff8ebd254a1e7909b113d34af9210a3566ce4f6360e5d571a"
     },
     {
       "id": "S15-R012-P004",
+      "sectionId": "S15-L012",
+      "sourceBlockIds": [
+        "S15-L012-P001"
+      ],
+      "sourcePage": 12,
+      "kind": "field-label",
+      "ko": "참고 문헌",
+      "sourceTextSha256": "c7909ce74a9fb5c83b51191fe999a6c16828ff0a2edb83991e5549462f5ccd9a"
+    },
+    {
+      "id": "S15-R012-P005",
+      "sectionId": "S15-L012",
+      "sourceBlockIds": [
+        "S15-L012-P001"
+      ],
+      "sourcePage": 12,
+      "kind": "body",
+      "ko": "참고 문헌",
+      "sourceTextSha256": "c7909ce74a9fb5c83b51191fe999a6c16828ff0a2edb83991e5549462f5ccd9a"
+    },
+    {
+      "id": "S15-R012-P006",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1061,7 +1188,7 @@
       "sourceTextSha256": "1e4101161a98cdfc447c6d7bcede5332ff36faae378376a313b58fd88c002ac1"
     },
     {
-      "id": "S15-R012-P005",
+      "id": "S15-R012-P007",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1072,7 +1199,7 @@
       "sourceTextSha256": "d7211e0481bcced55730068992a0e9736fb5fb7555b8aeef99274b3d959bd1dc"
     },
     {
-      "id": "S15-R012-P006",
+      "id": "S15-R012-P008",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1083,7 +1210,7 @@
       "sourceTextSha256": "2d275a71acb55c323479690f73745311ad51978d1b9758cc24cd76f8476ae9a2"
     },
     {
-      "id": "S15-R012-P007",
+      "id": "S15-R012-P009",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1094,7 +1221,7 @@
       "sourceTextSha256": "5a721fda07b940a9b691fe0a0f0bd93f7d717f5895df46b9e686f7998dfff363"
     },
     {
-      "id": "S15-R012-P008",
+      "id": "S15-R012-P010",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1105,7 +1232,7 @@
       "sourceTextSha256": "327f14ad4e2ea3b9e474fabb4ee20a0e343de911c6be56c597ca86d6be25617b"
     },
     {
-      "id": "S15-R012-P009",
+      "id": "S15-R012-P011",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1116,7 +1243,7 @@
       "sourceTextSha256": "c0d1f407fd0d30582d7f1f0f09fe67d58404821886b213d24e1fd1ebbc416e94"
     },
     {
-      "id": "S15-R012-P010",
+      "id": "S15-R012-P012",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1127,7 +1254,7 @@
       "sourceTextSha256": "88376abece0353cb212b4859dc7f57ecaf218c3e0be3a59e9e56a2ce600ed78c"
     },
     {
-      "id": "S15-R012-P011",
+      "id": "S15-R012-P013",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1138,7 +1265,7 @@
       "sourceTextSha256": "540bc9ceff6bb10af20dd84a8ebb83babc287e6f8c2c3d4cc9b32407d897ca21"
     },
     {
-      "id": "S15-R012-P012",
+      "id": "S15-R012-P014",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1149,7 +1276,7 @@
       "sourceTextSha256": "5672b3dcb5c285f2da8d661910a964154d253a9ec07cfcc4381f1839ce86616e"
     },
     {
-      "id": "S15-R012-P013",
+      "id": "S15-R012-P015",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1160,7 +1287,7 @@
       "sourceTextSha256": "c8b7c9f88a50ebedbe2d91a259d3e8df28b177e1c9293cf15f4609efdfcb2c25"
     },
     {
-      "id": "S15-R012-P014",
+      "id": "S15-R012-P016",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1171,7 +1298,7 @@
       "sourceTextSha256": "c005c2f5dd61bab4f2426caa3158040a6d52ac862895bff5c363b969a777d57d"
     },
     {
-      "id": "S15-R012-P015",
+      "id": "S15-R012-P017",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1182,7 +1309,7 @@
       "sourceTextSha256": "d0621559de2cf12e2b0008e39e7d8d5caa27baa65976d5ad53ad2448e9cbcda5"
     },
     {
-      "id": "S15-R012-P016",
+      "id": "S15-R012-P018",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1193,18 +1320,18 @@
       "sourceTextSha256": "173eac5273298b41d065d2ec3a6a42d896f93aada113566f55d00bde019d4519"
     },
     {
-      "id": "S15-R012-P017",
+      "id": "S15-R012-P019",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
       ],
       "sourcePage": 12,
       "kind": "body",
-      "ko": "11. 리포테라. \"67년 만에 두만강에 새 다리 놓인다…북러 자동차 교량 6월 완공, 대북 제재 '균열 가속'.\" 2026.4.24. 참고 문헌",
-      "sourceTextSha256": "9febdd4113d01ac2332e00e91ad910e2d60a286966244e4cfd1afafd465739db"
+      "ko": "11. 리포테라. \"67년 만에 두만강에 새 다리 놓인다…북러 자동차 교량 6월 완공, 대북 제재 '균열 가속'.\" 2026.4.24.",
+      "sourceTextSha256": "6b97cff1dcb6f1267132ebf48f1306e0c86b025f8a582dae173548a591ee5825"
     },
     {
-      "id": "S15-R012-P018",
+      "id": "S15-R012-P020",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1215,7 +1342,7 @@
       "sourceTextSha256": "90f0bc9550b757bd1b83bd3d08d4683044d77abcd876cdb776635574489df67f"
     },
     {
-      "id": "S15-R012-P019",
+      "id": "S15-R012-P021",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1226,7 +1353,7 @@
       "sourceTextSha256": "c1935a2e18f3fe6e1213e2f96648302aa555eb91e42622800d885c7886571a6b"
     },
     {
-      "id": "S15-R012-P020",
+      "id": "S15-R012-P022",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1237,7 +1364,7 @@
       "sourceTextSha256": "066c6406453fcb55e48e240fdc2719ea2c6e8acf987cb520da56617e5c193450"
     },
     {
-      "id": "S15-R012-P021",
+      "id": "S15-R012-P023",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1248,7 +1375,7 @@
       "sourceTextSha256": "510a35d2264d343b7a6f8a967a55c004c5b4aa6ab3bacb42c9e1fe43458484b6"
     },
     {
-      "id": "S15-R012-P022",
+      "id": "S15-R012-P024",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1259,7 +1386,7 @@
       "sourceTextSha256": "e64b899cf419b6422b91131b328aeefeb5d959ede0fabde0cb6d5f6eeaf465a6"
     },
     {
-      "id": "S15-R012-P023",
+      "id": "S15-R012-P025",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1270,7 +1397,7 @@
       "sourceTextSha256": "bf38375ea53c2c8599dfd5f02ae4ead8b91f6aa4a4815c6c3e7778a9f612dc35"
     },
     {
-      "id": "S15-R012-P024",
+      "id": "S15-R012-P026",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1281,7 +1408,7 @@
       "sourceTextSha256": "e86ad46864855027b39f4324d559b1c4faf69edddbb051303f9cf1e15fd474fa"
     },
     {
-      "id": "S15-R012-P025",
+      "id": "S15-R012-P027",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1292,7 +1419,7 @@
       "sourceTextSha256": "aa34f09ba3e8eaaf851772589f69af7de39c10ba2b254a526e1ffc60b2466738"
     },
     {
-      "id": "S15-R012-P026",
+      "id": "S15-R012-P028",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1303,7 +1430,7 @@
       "sourceTextSha256": "b4c4846ed9e9754e0fd86726baba34a4147206286a93ebac06d79d06927af7ee"
     },
     {
-      "id": "S15-R012-P027",
+      "id": "S15-R012-P029",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1314,7 +1441,7 @@
       "sourceTextSha256": "ba75f46c9660b11eef49c6d24ebaf73c38998e617684085aac88f9c72774a209"
     },
     {
-      "id": "S15-R012-P028",
+      "id": "S15-R012-P030",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1325,7 +1452,7 @@
       "sourceTextSha256": "133e4a7e0bf7d4fe22bafc54d12767ce892474cf65c4efec2c7f297034073f1e"
     },
     {
-      "id": "S15-R012-P029",
+      "id": "S15-R012-P031",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1336,7 +1463,7 @@
       "sourceTextSha256": "29f02131c866564b021a8906a30926d3a69153a1af444d00ff09acff41952210"
     },
     {
-      "id": "S15-R012-P030",
+      "id": "S15-R012-P032",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1347,7 +1474,7 @@
       "sourceTextSha256": "200c90f91ab4ece13cdcaa046d9b20f6eb1fbef1aa9eaa061b05930121622b53"
     },
     {
-      "id": "S15-R012-P031",
+      "id": "S15-R012-P033",
       "sectionId": "S15-L012",
       "sourceBlockIds": [
         "S15-L012-P001"
@@ -1364,7 +1491,7 @@
         "S15-L013-P001"
       ],
       "sourcePage": 13,
-      "kind": "body",
+      "kind": "running-header",
       "ko": "3학년 자율적 교육과정 주제 탐구 활동",
       "sourceTextSha256": "7bce2137a288bb507d80405059801d59291d7b2478fdbc4daae9d8583b7605e7"
     },
@@ -1433,6 +1560,14 @@
       "kind": "body",
       "ko": "27. Marine Regions (Flanders Marine Institute). https://www.marineregions.org/",
       "sourceTextSha256": "e9d07cfe1ae014a209e9c42019cd87550d2d462498f5945f69c85db0aa61c6b4"
+    }
+  ],
+  "glyphCorrections": [
+    {
+      "sourcePage": 2,
+      "from": "U+E09D",
+      "to": "α",
+      "basis": "Visually checked source glyph"
     }
   ]
 }

@@ -1,110 +1,48 @@
-import { test, expect } from "@playwright/test";
+import {test,expect} from '@playwright/test';
 
-test("continuous scroll updates line geometry and chapter without moving focus", async ({
-  page,
-}) => {
-  await page.goto("/");
-  await expect(page.locator("#main")).toHaveAttribute("data-enhanced", "true");
-  const progress = () =>
-    page
-      .locator("#question")
-      .evaluate((e) =>
-        Number((e as HTMLElement).style.getPropertyValue("--scene-progress")),
-      );
-  const before = await progress();
-  await page.evaluate(() => window.scrollBy({ top: 350, behavior: "instant" }));
-  await expect.poll(progress).toBeGreaterThan(before);
-  await page.evaluate(() =>
-    document.getElementById("world")!.scrollIntoView({ behavior: "instant" }),
-  );
-  await expect(page.locator("#main")).toHaveAttribute("data-chapter", "world");
-  const geometry = await page.locator("#world").boundingBox();
-  expect(Math.abs(geometry!.x)).toBeLessThan(1);
-  expect(Math.abs(geometry!.width - page.viewportSize()!.width)).toBeLessThan(
-    1,
-  );
-  await expect(page.locator(".folder").first()).not.toBeFocused();
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth + 1,
-    ),
-  ).toBeTruthy();
+test('the essay replaces slides with a connected argument and thirteen real studies',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');
+ await expect(page.locator('h1')).toContainText('national power');
+ await expect(page.locator('.chapter-label,.scene-progress')).toHaveCount(0);
+ await expect(page.locator('[data-research-node]')).toHaveCount(13);
+ await expect(page.locator('#us-finance')).toContainText('GENIUS Act');
+ await expect(page.locator('#china-myanmar')).toContainText('NORINCO');
+ await expect(page.locator('#korea-chips')).toContainText('SK Hynix');
+ await expect(page.locator('.essay-reading-meta')).toContainText(/\d+ min read/);
+ expect(errors).toEqual([]);
 });
-
-test("pinned framework selection survives scrolling and reading flow can resume", async ({
-  page,
-}) => {
-  await page.goto("/?scene=framework");
-  const node = page.getByRole("button", { name: "Mission & accountability" });
-  await node.click();
-  await page.mouse.move(2, 2);
-  await page.evaluate(() => window.scrollBy({ top: 250, behavior: "instant" }));
-  await expect(node).toHaveAttribute("aria-pressed", "true");
-  await expect(page.locator(".framework-detail p")).toContainText(
-    "democratic oversight",
-  );
-  await page.getByRole("button", { name: "Follow the reading flow" }).click();
-  await expect(node).toHaveAttribute("aria-pressed", "false");
-  await expect(page.locator(".framework-follow")).toContainText(
-    "FOLLOWING THE INQUIRY",
-  );
+test('country navigation and source links work with keyboard and native anchors',async({page})=>{
+ await page.goto('/');const china=page.locator('.essay-outline a[href="#china-ownership"]');await china.focus();await page.keyboard.press('Enter');
+ await expect(page).toHaveURL(/#china-ownership$/);await expect(page.locator('#main')).toHaveAttribute('data-scene','china-ownership');
+ const link=page.locator('#china-myanmar .essay-citation').first();await link.click();
+ await expect(page).toHaveURL(/reports\/S08\?from=china-myanmar#S08-R003-P001/);
+ await expect(page.locator('#S08-R003-P001 .reading-ko')).toContainText('미얀마');
+ await page.locator('[data-return-to-essay]').first().click();await expect(page).toHaveURL(/#china-myanmar$/);
 });
-
-test("motion changes retain the reading position and disable enhanced geometry", async ({
-  page,
-}) => {
-  await page.goto("/?scene=synthesis");
-  await page.evaluate(() => window.scrollBy({ top: 160, behavior: "instant" }));
-  const y = await page.evaluate(() => scrollY);
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await expect(page.locator("#main")).toHaveAttribute("data-enhanced", "false");
-  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(5);
-  expect(
-    await page
-      .locator(".orbit > svg")
-      .evaluate((e) => getComputedStyle(e).transform),
-  ).toBe("none");
-  await page.emulateMedia({ reducedMotion: "no-preference" });
-  await expect(page.locator("#main")).toHaveAttribute("data-enhanced", "true");
+test('visual modes crossfade through the Arctic scene without covering the essay',async({page})=>{
+ await page.goto('/');await page.evaluate(()=>{const r=document.getElementById('china-arctic')!.getBoundingClientRect();scrollTo({top:r.top+scrollY-innerHeight*.35+innerHeight*.3,behavior:'instant'});});
+ await expect(page.locator('#main')).toHaveAttribute('data-scene','china-arctic');
+ const values=await page.locator('#main').evaluate(e=>[Number((e as HTMLElement).style.getPropertyValue('--mode-arctic')),Number((e as HTMLElement).style.getPropertyValue('--mode-world'))]);
+ expect(values[0]).toBeGreaterThan(0);expect(values[0]).toBeLessThan(1);expect(values[1]).toBeGreaterThan(0);
+ const geometry=await page.evaluate(()=>{const v=document.querySelector<HTMLElement>('.essay-visual')!;const b=document.querySelector('.essay-body')!.getBoundingClientRect();return {hidden:getComputedStyle(v).display==='none',left:v.getBoundingClientRect().left,bodyRight:b.right,overflow:document.documentElement.scrollWidth>innerWidth+1};});
+ if(!geometry.hidden)expect(geometry.left).toBeGreaterThan(geometry.bodyRight);expect(geometry.overflow).toBe(false);
 });
-
-test("map exploration previews and pins a country with keyboard equivalence", async ({
-  page,
-}) => {
-  await page.goto("/?scene=world");
-  const china = page.getByRole("button", { name: "02 China" });
-  await china.focus();
-  await expect(page.locator(".region-detail p")).toContainText(
-    "Investment is not automatically evidence",
-  );
-  await page.keyboard.press("Enter");
-  await expect(china).toHaveAttribute("aria-pressed", "true");
-  await page.mouse.move(1, 1);
-  await page.getByRole("heading", { level: 2 }).first().click();
-  await expect(page.locator(".map-country.selected")).toHaveCount(1);
-  await expect(page.locator(".region-detail p")).toContainText(
-    "Investment is not automatically evidence",
-  );
+test('motion preferences retain reading position and system reduction wins',async({page})=>{
+ await page.addInitScript(()=>localStorage.setItem('iir-reduced-motion','false'));await page.goto('/?scene=korea-chips');
+ const y=await page.evaluate(()=>scrollY);await page.emulateMedia({reducedMotion:'reduce'});
+ await expect(page.locator('#main')).toHaveAttribute('data-motion','reduced');await expect(page.getByRole('button',{name:/Reduce motion/})).toBeDisabled();
+ expect(Math.abs((await page.evaluate(()=>scrollY))-y)).toBeLessThan(5);
+ await page.emulateMedia({reducedMotion:'no-preference'});await expect(page.locator('#main')).toHaveAttribute('data-motion','full');
 });
-
-test("system motion preference overrides a stale stored full-motion setting", async ({
-  page,
-}) => {
-  await page.addInitScript(() =>
-    localStorage.setItem("iir-reduced-motion", "false"),
-  );
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
-  await expect(page.locator("html")).toHaveAttribute("data-motion", "reduced");
-  await expect(
-    page.getByRole("button", { name: /Reduce motion/ }),
-  ).toBeDisabled();
-  await expect(
-    page.getByRole("button", { name: /Reduce motion/ }),
-  ).toHaveAttribute("aria-pressed", "true");
-  await page.emulateMedia({ reducedMotion: "no-preference" });
-  await expect(
-    page.getByRole("button", { name: /Reduce motion/ }),
-  ).toBeEnabled();
-  await expect(page.locator("#main")).toHaveAttribute("data-enhanced", "true");
+test('stopping the scroll stops animation work and wheel events remain native',async({page})=>{
+ await page.goto('/');await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(350);
+ const idle=await page.evaluate(async()=>{let n=0;const original=window.requestAnimationFrame;window.requestAnimationFrame=(cb)=>{n++;return original(cb);};await new Promise(r=>setTimeout(r,180));window.requestAnimationFrame=original;return n;});expect(idle).toBe(0);
+ await page.mouse.move(10,250);const before=await page.evaluate(()=>scrollY);await page.mouse.wheel(0,250);await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(before);
+ expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollSnapType)).toBe('none');
+});
+test('switching interface language keeps the reader within the same argument',async({page})=>{
+ await page.goto('/?scene=us-mission');await expect(page.locator('#main')).toHaveAttribute('data-scene','us-mission');
+ await page.getByRole('button',{name:'KO',exact:true}).first().click();await expect(page.locator('html')).toHaveAttribute('lang','ko');
+ await expect(page.locator('#main')).toHaveAttribute('data-scene','us-mission');
+ await expect(page.locator('#us-mission h2')).toContainText('미국');
 });

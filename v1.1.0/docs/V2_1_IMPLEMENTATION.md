@@ -1,54 +1,26 @@
-# v2.1.0 implementation checkpoint
+# v2.1.0 implementation checkpoint — 2026-10-22
 
-The user approved the S00-led long-form narrative, one connected visual stage,
-layout-only Korean editing, thirteen complete editorial English translations,
-parallel reading and an expandable self-hosted PDF viewer.
+## Saved implementation
 
-## Completion gates
+- All 13 reports have Korean reading editions and complete editorial English translations: 973 paired passages, with matching source fingerprints. English remains author-review-pending.
+- Coordinate-based PDF reading order restores S06 punctuation and S15 worksheet cells; the character-inventory audit accounts for documented running headers and the visually checked alpha glyph. Raw report JSON and original/PDF bytes are unchanged.
+- Parallel HTML reading, legacy paragraph anchors, contextual highlights, return-to-essay links, restored S14 tables, and an expandable self-hosted PDF.js canvas are implemented.
+- The archive defaults to 13 actual reports. Existing topic routes remain available.
+- The bilingual S00 essay has 18 connected narrative beats and specific US/China/Korea cases. One concept/world/Arctic/integration visual stage follows native scrolling, with mobile and reduced-motion alternatives.
+- Source claims, editorial interpretation and pending external verification are distinguished. Official-source requests were blocked by the environment proxy; inaccessible references are not independently verified.
 
-- [x] Coordinate-based PDF reading editions; S06 page 5 compared to PDF.
-- [ ] All 13 Korean reading editions reviewed for layout and source coverage.
-- [ ] All 13 English editions complete and cross-checked; author review pending.
-- [ ] Parallel reader, stable legacy anchors, contextual highlights and PDF viewer.
-- [ ] Archive defaults to 13 actual reports, with existing topic routes preserved.
-- [ ] Long-form bilingual S00 narrative and specific country cases.
-- [ ] Connected visual stage, Arctic inset, native scroll and reduced motion.
-- [ ] Production build, relevant unit/browser/coverage checks and measured performance.
-- [ ] Version/tag v2.1.0 pushed and public deployment checked.
+## Verification at checkpoint
 
-## Preservation and external dependencies
+- Reading audit: all 13 documents / 973 translations pass source-fingerprint, coverage and character-inventory checks.
+- Unit tests: 18 passing in the preceding session.
+- Initial production build and an inline S06 PDF browser smoke check passed before the latest content/layout changes.
+- Final production build, browser regression suite, formatting and performance measurements must be rerun against the current tree. Do not infer their completion from the package version.
 
-Existing raw transcript JSON, original files, reviewed PDFs and their fingerprints
-remain unchanged. Reading editions and translations are separate derived content.
-No paid translation API, server or subscription is authorized or needed.
+## Resume and release gates
 
-Official-source requests currently receive a proxy 403. Additional source and
-free model download domains were saved to the environment draft on 2026-10-22;
-the running environment must be updated through environment settings before
-those destinations can be verified. Do not describe inaccessible references as
-independently verified. Keep author interpretations separate from checked facts.
+1. Run formatting, type checking, unit tests and a production build from `v1.1.0/`.
+2. Start the fresh production build on port 3001 and run Playwright with `CHROME_PATH=/usr/bin/chromium E2E_BASE_URL=http://127.0.0.1:3001 npm run test:e2e`. Resolve real regressions; retain meaningful assertions.
+3. Measure mobile Lighthouse performance and accessibility; record actual results and any remaining limitations.
+4. Update release documentation, commit and push, then tag v2.1.0 only once the final checks are complete. Check the public Vercel deployment.
 
-Translations must be checkpointed by document, with text fingerprints so later
-Korean corrections cannot silently leave stale English translations. Do not mark
-this release complete while a document is missing its full English edition.
-
-## Checkpoint: S00 and S06
-
-S00: 192/192 passages; S06: 30/30 passages have full editorial English
-translations, including source notes and references. Translation status is
-author-review-pending. Source fingerprints match the current Korean edition.
-The parallel reader, source-location aliases and lazy PDF canvas are implemented;
-functional browser verification is still outstanding. Other reports remain in progress.
-
-## Checkpoint: complete translations 9/13
-
-S00, S01, S02, S03, S05, S06, S08, S13 and S16 are complete editorial
-translations (author review pending). The remaining reports are S11, S14, S15
-and S17. S03/S13 share checked translations where content matches, while the
-documents retain distinct source identities and paragraph maps.
-
-The long-form homepage, actual-report archive, shared polar/world/concept stage
-and contextual evidence notes are implemented. An initial production build
-passed, and Chromium rendered an inline S06 PDF without page errors. Initial
-paired-reader inspection found an inherited width limit; it was removed. Final
-regression, coverage, accessibility and performance checks remain outstanding.
+The current checkpoint is intentionally saved before final release verification so work can resume after quota interruption. Do not regenerate reading paragraph IDs blindly: translations and old paragraph links depend on their current fingerprints and maps. No paid translation API, server, subscription or new infrastructure is required.

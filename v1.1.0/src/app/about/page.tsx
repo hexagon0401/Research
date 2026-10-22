@@ -38,8 +38,8 @@ export default function About() {
         </h2>
         <p>
           <L
-            en="IIR connects questions of technology management, corporate resilience, philosophy and economic security. The integration plan proposes a synthesis of topic-specific school research, followed by additional verification and comparative analysis."
-            ko="IIR은 기술경영, 기업의 복원력, 철학, 경제안보에 관한 질문을 연결합니다. 통합 작업계획은 개별 교과 탐구를 바탕으로 추가 검증과 비교 분석을 수행하는 종합 연구를 제안합니다."
+            en="IIR connects questions of technology management, corporate resilience, philosophy and economic security. S00 develops the central argument through topic-specific studies, with source texts and evidence limitations available alongside it."
+            ko="IIR은 기술경영, 기업의 복원력, 철학, 경제안보에 관한 질문을 연결합니다. S00이 개별 교과 탐구를 종합하는 논지를 전개하며, 각 원문과 검증의 한계를 함께 읽을 수 있습니다."
           />
         </p>
         <h2>
@@ -65,8 +65,8 @@ export default function About() {
         </h2>
         <p>
           <L
-            en="A functional design draft, prepared on 21 October 2026. The site uses a file-based public content adapter; no database credentials or private research files are exposed. Visual tokens and component contracts are documented for a later Open Design handoff."
-            ko="2026년 10월 21일 기준의 기능 구현 초안입니다. 파일 기반 공개 콘텐츠 어댑터를 사용하며 데이터베이스 인증정보나 비공개 연구 원문을 노출하지 않습니다. 이후 Open Design 이관을 위해 시각 토큰과 컴포넌트 계약을 문서화했습니다."
+            en="Edition 2.1.0, prepared on 22 October 2026: a continuous S00 essay, thirteen bilingual reading editions, and inline source PDFs. The site uses a file-based public content adapter; no database credentials or private research files are exposed. Visual tokens and component contracts are documented for a later Open Design handoff."
+            ko="2026년 10월 22일의 v2.1.0입니다. S00 중심 연속형 에세이, 13개 한영 병렬 전문, 본문 안의 PDF 열람을 제공합니다. 파일 기반 공개 콘텐츠 어댑터를 사용하며 데이터베이스 인증정보나 비공개 연구 원문을 노출하지 않습니다. 이후 Open Design 이관을 위해 시각 토큰과 컴포넌트 계약을 문서화했습니다."
           />
         </p>
         <Link className="inline-link" href="/methods">
