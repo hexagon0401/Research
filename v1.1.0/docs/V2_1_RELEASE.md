@@ -61,3 +61,16 @@ Linux cloud, Node.js 24.x, Chromium 154, Next.js 프로덕션 서버에서 검�
 Safari/iOS·Firefox 실기기, 실제 보조기술 사용과 현장 Core Web Vitals는 미확인입니다. 위 결과는 Chromium 자동화·선별 원본 대조·로컬 성능 측정이며, 모든 환경의 수동 검수 완료를 뜻하지 않습니다.
 
 시각 토큰·콘텐츠·출처·인터랙션 경계는 [Open Design 이관 문서](DESIGN_HANDOFF.md)에 기록했습니다. 유료 번역 API·서버·플랜을 추가하지 않았습니다.
+
+## 운영 반영 확인
+
+<https://research-hxgn.vercel.app>에 릴리스 코드 `fa748c4`가 반영된 뒤,
+TLS 검증을 유지한 HTTP 요청으로 다음을 확인했습니다.
+
+- 새 메인 에세이, `/archive`, `/reports/S06`, 자체 PDF.js 워커: HTTP 200.
+- 운영 공개 API 13개의 영어 문단 973개가 커밋된 번역과 전부 일치.
+- 운영 S06 PDF 다운로드 SHA-256이 기존 열람본과 일치.
+- 별도 로컬 Chromium 확인: 관련 연구에서 브라우저 뒤로가기로 메인의 같은 논지 복원.
+
+운영 HTTP 확인과 위의 로컬 브라우저·Lighthouse 검사는 서로 구분합니다.
+운영 주소에서 실기기 브라우저 검수를 완료했다는 의미는 아닙니다.
