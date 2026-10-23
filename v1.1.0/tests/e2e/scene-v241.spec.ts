@@ -23,10 +23,7 @@ async function position(page: Page, id: string, value: number) {
     const style = getComputedStyle(el),
       top = parseFloat(style.getPropertyValue("--scene-top"));
     const stage = el.querySelector<HTMLElement>(".scene-stage")!;
-    const line =
-      el.getAttribute("data-scene-layout") === "compact"
-        ? top + stage.offsetHeight + 16
-        : top;
+    const line = parseFloat(style.getPropertyValue("--scene-reading-line"));
     const bounds = steps.map(
       (e) => e.getBoundingClientRect().top + scrollY - line,
     );

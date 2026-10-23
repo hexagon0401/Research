@@ -96,7 +96,8 @@ export function useSceneScroll(
         "--scene-last-min",
         `${wide ? height + 160 : 160}px`,
       );
-      const line = wide ? top : top + height + 16;
+      const line = wide ? top + available * 0.35 : top + height + 16;
+      el.style.setProperty("--scene-reading-line", `${line}px`);
       bounds = steps.map(
         (step) => step.getBoundingClientRect().top + y() - line,
       );
@@ -111,6 +112,7 @@ export function useSceneScroll(
       if (keep && wasActive)
         window.scrollTo({ top: target(saved), behavior: "instant" });
       read();
+      window.dispatchEvent(new Event("iir:scene-layout"));
     };
     const schedule = () => {
       if (!frame)
@@ -227,11 +229,11 @@ export function useSceneScroll(
             if (alive) {
               layout();
               seek(saved.progress);
+              sessionStorage.removeItem("iir-motion-return");
+              sessionStorage.removeItem("iir-essay-resume");
             }
           }),
         );
-        sessionStorage.removeItem("iir-motion-return");
-        sessionStorage.removeItem("iir-essay-resume");
       }
     } catch {}
     setReady(true);

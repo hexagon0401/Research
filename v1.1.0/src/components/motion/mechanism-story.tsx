@@ -11,6 +11,8 @@ import { loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
 import { MapTerrain } from "./map-terrain";
+import { fitCamera, pointsBounds } from "@/visuals/camera";
+import cameraRegions from "@/visuals/scene-camera.json";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
   identity: ["S06", "S14"],
@@ -171,20 +173,31 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
                 2.8,
               );
             if (scene.id === "korea-chips") {
+              const overview = fitCamera(
+                pointsBounds(
+                  graph.nodes.map((n) => [n.x, n.y]),
+                  24,
+                ),
+                52,
+                2,
+              );
+              const korea = fitCamera(
+                pointsBounds(
+                  [...cameraRegions.regions.kr, ...cameraRegions.regions.cn],
+                  6,
+                ),
+                60,
+                6,
+              );
               tl.fromTo(
                 "[data-chip-camera]",
-                { x: 0, y: 0, scale: 1 },
-                { x: -90, y: -25, scale: 1.25, duration: 0.8, ease: "none" },
-                0,
-              );
-              tl.to(
-                "[data-chip-camera]",
-                { x: -510, y: -130, scale: 2, duration: 0.8, ease: "none" },
+                overview,
+                { ...korea, duration: 0.65, ease: "none" },
                 1,
               );
               tl.to(
                 "[data-chip-camera]",
-                { x: 0, y: 0, scale: 1, duration: 0.8, ease: "none" },
+                { ...overview, duration: 0.55, ease: "none" },
                 2,
               );
             }
@@ -343,7 +356,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
               )}
               <g data-chip-camera style={{ transformOrigin: "0 0" }}>
                 {scene.id === "korea-chips" && (
-                  <MapTerrain src="/visuals/world.svg" />
+                  <MapTerrain src="/visuals/world.svg" vector />
                 )}
                 {graph.edges.map((e, i) => (
                   <g

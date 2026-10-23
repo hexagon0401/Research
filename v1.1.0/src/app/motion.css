@@ -953,3 +953,72 @@
     display: none;
   }
 }
+/* Shared quiet selection: signal is a point, never a block behind a word. */
+.motion-filter button[aria-pressed="true"] {
+  background: transparent;
+  font-weight: 500;
+  border-bottom: 2px solid var(--ink);
+}
+.motion-filter button[aria-pressed="true"]::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: var(--signal);
+}
+.motion-place-legend button {
+  border-bottom-color: var(--line);
+}
+.scroll-scene .map-label-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.map-label-layer span {
+  position: absolute;
+  translate: -50% -100%;
+  font: 500 14px/1.35 var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+.map-label-layer [hidden] {
+  display: none;
+}
+.motion-china:not([data-phase="1"]) [data-space="polar"],
+.motion-china[data-phase="1"] [data-space="world"] {
+  display: none;
+}
+.cambodia-relation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 0;
+  border-block: 1px solid var(--line);
+  font-size: 15px;
+  margin-block: 24px;
+}
+.diagram-snapshot .map-label-layer {
+  display: none;
+}
+.china-map .map-region {
+  fill: var(--paper);
+  fill-opacity: 0.16;
+  stroke: var(--ink);
+  stroke-width: 0.8;
+  stroke-opacity: 0.3;
+}
+.motion-china[data-phase="0"] .region-gl,
+.motion-china[data-phase="2"] .region-mm,
+.motion-china[data-phase="3"] .region-mm,
+.motion-china[data-phase="4"] .region-kh {
+  stroke-opacity: 1;
+  stroke-width: 1.5;
+  fill-opacity: 0.65;
+}

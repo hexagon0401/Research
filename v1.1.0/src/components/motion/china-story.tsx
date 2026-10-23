@@ -6,6 +6,8 @@ import { usePreferences } from "../preferences";
 import { chinaSteps, sourceHref } from "@/visuals/motion-stories";
 import geography from "@/visuals/motion-geography.json";
 import polar from "@/visuals/atlas-points.json";
+import cameras from "@/visuals/scene-camera.json";
+import { fitCamera, pointsBounds, cameraPoint } from "@/visuals/camera";
 import { clamp, loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
@@ -39,9 +41,7 @@ export function ChinaStory() {
     [layer, setLayer] = useState("all"),
     [comparison, setComparison] = useState("all");
   const activeRef = useRef(0),
-    progress = useRef(0),
-    manual = useRef(false),
-    stageVisible = useRef(false);
+    progress = useRef(0);
   const s = chinaSteps[active];
   const scroll = useSceneScroll(
     root,
@@ -88,7 +88,7 @@ export function ChinaStory() {
     }
     const stopWatching = nearScene(el, () => {
       loadMotion()
-        .then(({ gsap, ScrollTrigger }) => {
+        .then(({ gsap }) => {
           if (!alive) return;
           const ctx = gsap.context(() => {
             const tl = gsap.timeline({ paused: true });
@@ -122,28 +122,82 @@ export function ChinaStory() {
                 tl.set(dot, { autoAlpha: 0 }, i + 0.9);
               }
             });
-            tl.fromTo(
-              "[data-world-camera]",
-              { x: 0, y: 0, scale: 1 },
-              { x: -820, y: -190, scale: 2.5, duration: 0.5, ease: "none" },
+            const overview = fitCamera(
+              pointsBounds([p.cn, p.gl, [420, 15]], 12),
+              36,
               2,
             );
-            tl.to(
-              "[data-world-camera]",
-              { x: -620, y: -150, scale: 2.2, duration: 0.5, ease: "none" },
-              4,
+            const greenland = fitCamera(cameras.regions.gl, 64);
+            const myanmar = fitCamera(
+              pointsBounds([p.cn, ...cameras.regions.mm], 8),
+              60,
             );
-            tl.to(
-              "[data-world-camera]",
-              { x: 0, y: 0, scale: 1, duration: 0.65, ease: "none" },
-              5,
+            const cambodia = fitCamera(cameras.regions.kh, 100, 24);
+            const world = { ...overview };
+            const arctic = fitCamera(
+              pointsBounds(Object.values(polar.arctic.pins), 8),
+              68,
             );
-            tl.fromTo(
-              "[data-polar-camera]",
-              { x: 0, y: 0, scale: 1 },
-              { x: -850, y: -1030, scale: 4.4, duration: 0.65, ease: "none" },
-              1.1,
-            );
+            let frame = { scale: 1, x: 0, y: 0 };
+            const renderCamera = () => {
+              el.querySelector("[data-world-camera]")?.setAttribute(
+                "transform",
+                `translate(${world.x} ${world.y}) scale(${world.scale})`,
+              );
+              el.querySelector("[data-polar-camera]")?.setAttribute(
+                "transform",
+                `translate(${arctic.x} ${arctic.y}) scale(${arctic.scale})`,
+              );
+              el.querySelectorAll<HTMLElement>("[data-place]").forEach(
+                (label) => {
+                  const id = label.dataset.place!;
+                  const polarSpace = label.dataset.space === "polar";
+                  const point = polarSpace
+                    ? polar.arctic.pins[id as keyof typeof polar.arctic.pins]
+                    : p[id as keyof typeof p];
+                  const [x, y] = cameraPoint(
+                    point,
+                    polarSpace ? arctic : world,
+                  );
+                  label.style.left = `${frame.x + x * frame.scale}px`;
+                  label.style.top = `${frame.y + y * frame.scale}px`;
+                  label.hidden = x < 28 || x > 692 || y < 24 || y > 492;
+                },
+              );
+              el.querySelectorAll<SVGCircleElement>(
+                ".china-world circle",
+              ).forEach((c) =>
+                c.setAttribute(
+                  "r",
+                  String(
+                    (c.hasAttribute("data-traveler") ? 3 : 4) / world.scale,
+                  ),
+                ),
+              );
+              el.querySelectorAll<SVGCircleElement>(
+                ".china-polar > g circle",
+              ).forEach((c) => c.setAttribute("r", String(3 / arctic.scale)));
+            };
+            const size = () => {
+              const width = map.current!.clientWidth,
+                height = map.current!.clientHeight;
+              const scale = Math.min(width / 720, height / 520);
+              frame = {
+                scale,
+                x: (width - 720 * scale) / 2,
+                y: (height - 520 * scale) / 2,
+              };
+              renderCamera();
+            };
+            const observer = new ResizeObserver(size);
+            observer.observe(map.current!);
+            size();
+            tl.to(world, { ...greenland, duration: 0.25, ease: "none" }, 0.72);
+            tl.to(world, { ...overview, duration: 0.01 }, 1.99);
+            tl.to(world, { ...myanmar, duration: 0.38, ease: "none" }, 2);
+            tl.to(world, { ...cambodia, duration: 0.4, ease: "none" }, 4);
+            tl.to(world, { ...overview, duration: 0.4, ease: "none" }, 5);
+            tl.eventCallback("onUpdate", renderCamera);
             tl.fromTo(
               "[data-mineral-branch]",
               { strokeDashoffset: 1 },
@@ -178,6 +232,7 @@ export function ChinaStory() {
             el.dataset.motionReady = "true";
             setReady(true);
             cleanup = () => {
+              observer.disconnect();
               ctx.revert();
               timeline.current = null;
             };
@@ -239,6 +294,29 @@ export function ChinaStory() {
             <time>{s.date}</time>
           </div>
           <div ref={map} className="china-map" data-compare={comparison}>
+            <div className="map-label-layer" aria-hidden="true">
+              {Object.entries(names).map(([id, n]) => (
+                <span data-place={id} data-space="world" key={id}>
+                  {n[lang === "ko" ? 0 : 1]}
+                </span>
+              ))}
+              {Object.entries({
+                nuuk: "Nuuk",
+                ilulissat: "Ilulissat",
+                qaqortoq: "Qaqortoq",
+              }).map(([id, n], i) => (
+                <span
+                  data-place={id}
+                  data-space="polar"
+                  key={id}
+                  style={{
+                    translate: `${i === 1 ? "0" : "-50%"} ${i === 2 ? "0" : "-100%"}`,
+                  }}
+                >
+                  {n}
+                </span>
+              ))}
+            </div>
             <svg
               viewBox="0 0 720 520"
               width="720"
@@ -253,7 +331,17 @@ export function ChinaStory() {
               <title>{s.title[lang]}</title>
               <g className="china-world">
                 <g data-world-camera style={{ transformOrigin: "0 0" }}>
-                  <MapTerrain src="/visuals/world.svg" />
+                  <MapTerrain src="/visuals/world.svg" vector />
+                  {Object.entries(cameras.outlines)
+                    .filter(([id]) => ["cn", "gl", "mm", "kh"].includes(id))
+                    .map(([id, d]) => (
+                      <path
+                        key={id}
+                        className={`map-region region-${id}`}
+                        d={d!}
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    ))}
                   {routes.map((d, i) => (
                     <g key={i} className={`china-route china-route-${i}`}>
                       <path
@@ -282,7 +370,7 @@ export function ChinaStory() {
               </g>
               <g className="china-polar">
                 <g data-polar-camera style={{ transformOrigin: "0 0" }}>
-                  <MapTerrain src="/visuals/arctic.svg" />
+                  <MapTerrain src="/visuals/arctic.svg" vector />
                   {Object.entries(polar.arctic.pins).map(([key, pt], i) => (
                     <g key={key}>
                       <circle cx={pt[0]} cy={pt[1]} r="2" />
@@ -302,22 +390,10 @@ export function ChinaStory() {
                   viewBox="0 0 720 520"
                 >
                   <rect width="720" height="520" className="motion-paper" />
-                  <MapTerrain src="/visuals/arctic.svg" />
+                  <MapTerrain src="/visuals/arctic.svg" vector />
                 </svg>
               </g>
             </svg>
-            <div className="cambodia-inset" data-cambodia-inset>
-              <span hidden={layer === "facility"}>
-                Prince Group / Canopy Sands
-              </span>
-              <span>↔</span>
-              <span hidden={layer === "business"}>Ream</span>
-              <small>
-                {lang === "ko"
-                  ? "사업·시설 관계도 · 경계 원자료 없음"
-                  : "Business / facility schematic · boundaries not supplied"}
-              </small>
-            </div>
           </div>
           <ExpandDiagram
             target={map}
@@ -521,6 +597,13 @@ export function ChinaStory() {
               </span>
               <h4>{step.title[lang]}</h4>
               <p>{step.copy[lang]}</p>
+              {i === 4 && (
+                <div className="cambodia-relation">
+                  <strong>Prince Group / Canopy Sands</strong>
+                  <span aria-hidden="true">↔</span>
+                  <strong>Ream</strong>
+                </div>
+              )}
               {i === 5 && (
                 <dl className="china-comparison">
                   <dt>{lang === "ko" ? "주체" : "Actors"}</dt>

@@ -501,7 +501,7 @@ export function mechanismGraph(id: string): {
       nodes = [
         n("us", 186, 166, "미국 · 제도", "U.S. · rules"),
         n("kr", 587, 170, "한국 · 기업", "Korea · firms", 1),
-        n("cn", 543, 205, "중국 · 생산", "China · production", 2),
+        n("cn", 543, 172.5, "중국 · 생산", "China · production", 2),
       ];
       pairs = [
         ["us", "kr", 0],

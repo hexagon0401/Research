@@ -404,9 +404,50 @@ export function EssayExperience({
     };
   }, [scenes, lang, reduced]);
   useEffect(() => {
-    const scene = new URLSearchParams(location.search).get("scene");
-    if (scene && !location.hash)
-      document.getElementById(scene)?.scrollIntoView({ behavior: "instant" });
+    const requested = location.hash
+      ? decodeURIComponent(location.hash.slice(1))
+      : new URLSearchParams(location.search).get("scene");
+    if (
+      !requested ||
+      sessionStorage.getItem("iir-essay-resume") === "true" ||
+      returnPoint.current
+    )
+      return;
+    let frame = 0,
+      live = true;
+    const settle = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        frame = requestAnimationFrame(() => {
+          if (!live || returnPoint.current) return;
+          const target = document.getElementById(requested);
+          if (!target) return;
+          let parent = target.parentElement;
+          while (parent) {
+            if (parent instanceof HTMLDetailsElement) parent.open = true;
+            parent = parent.parentElement;
+          }
+          target.scrollIntoView({ behavior: "instant", block: "start" });
+        });
+      });
+    };
+    const stop = () => {
+      live = false;
+      cancelAnimationFrame(frame);
+    };
+    for (const type of ["wheel", "touchstart", "pointerdown", "keydown"])
+      window.addEventListener(type, stop, { once: true, passive: true });
+    window.addEventListener("iir:scene-layout", settle);
+    document.fonts.ready.then(settle);
+    document.fonts.addEventListener("loadingdone", settle);
+    settle();
+    return () => {
+      stop();
+      window.removeEventListener("iir:scene-layout", settle);
+      document.fonts.removeEventListener("loadingdone", settle);
+      for (const type of ["wheel", "touchstart", "pointerdown", "keydown"])
+        window.removeEventListener(type, stop);
+    };
   }, []);
   return (
     <Context.Provider value={{ scene: scenes[active], scenes }}>

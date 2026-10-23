@@ -3,10 +3,18 @@
 export function MapTerrain({
   src,
   origin = false,
+  vector = false,
 }: {
   src: string;
   origin?: boolean;
+  vector?: boolean;
 }) {
+  if (vector)
+    return (
+      <g>
+        <use href={`${src}#terrain`} />
+      </g>
+    );
   return (
     <foreignObject
       width="720"
