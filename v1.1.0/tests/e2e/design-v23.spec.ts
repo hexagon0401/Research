@@ -135,48 +135,18 @@ test("source round trips and language changes keep the exact passage", async ({
       ),
     )
     .toBeLessThan(12);
-  await page.evaluate(() => {
-    const el = document.querySelector("#us-mission [data-reading-passage]")!;
-    const probe: unknown[] = [];
-    (window as Window & { readingProbe?: unknown[] }).readingProbe = probe;
-    const log = (stage: string) =>
-      probe.push({
-        stage,
-        y: scrollY,
-        top: el.getBoundingClientRect().top,
-        language: document.documentElement.lang,
-        saved: sessionStorage.getItem("iir-essay-return"),
-      });
-    log("returned");
-    document.addEventListener(
-      "iir:before-language",
-      () => {
-        log("before-language");
-        requestAnimationFrame(() => {
-          log("language-frame");
-          requestAnimationFrame(() => log("language-frame-2"));
-        });
-        document.fonts.ready.then(() => log("language-fonts"));
-      },
-      { once: true },
-    );
-    window.addEventListener("scroll", () => {
-      if (probe.length < 30) log("scroll");
-    });
-  });
-  await page.locator(".story-menu summary").click();
-  await page.locator(".story-menu-language button[lang=ko]").click();
+  // Playwright locator.click() scrolls sticky controls into view, shifting the document
+  // before the locale change. Use the actual keyboard path without that automation scroll.
+  await page
+    .locator(".story-menu summary")
+    .evaluate((el: HTMLElement) => el.focus({ preventScroll: true }));
+  await page.keyboard.press("Enter");
+  await page
+    .locator(".story-menu-language button[lang=ko]")
+    .evaluate((el: HTMLElement) => el.focus({ preventScroll: true }));
+  await page.keyboard.press("Enter");
   await expect(page.locator("html")).toHaveAttribute("lang", "ko");
   await page.evaluate(() => document.fonts.ready);
-  await test.info().attach("reading-cursor", {
-    body: JSON.stringify({
-      before,
-      positions: await page.evaluate(
-        () => (window as Window & { readingProbe?: unknown[] }).readingProbe,
-      ),
-    }),
-    contentType: "application/json",
-  });
   await expect
     .poll(() =>
       passage.evaluate(
