@@ -59,7 +59,9 @@ Lighthouse 13.5.0 기본 모바일·시뮬레이션 제한, 동일 최종 빌드
 
 ### 운영 주소
 
-푸시 전 `https://research-hxgn.vercel.app`은 HTTP 200 / IIR 2.3.0이었습니다. `https://research-theta-navy.vercel.app`은 이 환경의 프록시가 403으로 차단해 확인하지 못했습니다. GitHub 푸시 이후의 실제 배포 확인 결과를 이 절에 별도로 기록합니다.
+구현 커밋 `e852d1a`를 main에 푸시한 뒤, **2026-10-23 05:10 UTC**에 [운영 사이트](https://research-hxgn.vercel.app)의 HTTP 200 / **IIR 2.4.0** 반영을 확인했습니다. 같은 주소를 실제 Chromium으로 열어 중국 장면의 `data-motion-ready=true`, 휠 스크롤 이후 진행률 0.0382, 페이지 오류 0개를 확인했습니다. 운영 주소에서 전체 180개 회귀나 Lighthouse를 다시 실행한 결과는 아닙니다.
+
+`https://research-theta-navy.vercel.app`은 이 환경의 프록시가 403으로 차단해 확인하지 못했습니다. 무료 Vercel·Supabase와 기존 배포 경로를 유지했으며 별도 유료 서비스는 추가하지 않았습니다.
 
 ## 보존과 한계
 

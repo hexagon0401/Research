@@ -11,4 +11,6 @@ Deployment root stays `v1.1.0/`. Research data, translations, PDFs and backend c
 
 **Performance target remains open:** the final three mobile Lighthouse runs were 91 / 93 / 93 (median 93), accessibility 100. An earlier build reached median 95, but this is not reported as the final result. The existing >=95 performance gate is preserved and currently fails. See [release evidence and limits](V2_4_RELEASE.md).
 
-Implementation and release are ready; further performance work should focus on initial layout/hydration rather than adding more motion. No paid service or deployment-root migration is needed.
+Implementation `e852d1a` was pushed to main and production HTTP 200 / IIR 2.4.0 was verified at 05:10 UTC on 2026-10-23. A live Chromium check confirmed GSAP ready, real wheel progress and no page errors. The alternate research-theta-navy domain could not be checked through this environment's proxy.
+
+The v2.4.0 tag records this release; further performance work should focus on initial layout/hydration rather than adding more motion. No paid service or deployment-root migration is needed.
