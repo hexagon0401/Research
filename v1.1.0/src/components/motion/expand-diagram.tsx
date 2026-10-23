@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, type RefObject } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { usePreferences } from "../preferences";
 export function ExpandDiagram({
@@ -14,6 +14,27 @@ export function ExpandDiagram({
     snapshot = useRef<HTMLDivElement>(null),
     button = useRef<HTMLButtonElement>(null);
   const [mounted, setMounted] = useState(false);
+  const observer = useRef<ResizeObserver | null>(null);
+  const saved = useRef<{ overflow: string; y: number } | null>(null);
+  const restore = () => {
+    observer.current?.disconnect();
+    if (saved.current) {
+      document.documentElement.style.overflow = saved.current.overflow;
+      window.scrollTo({ top: saved.current.y, behavior: "instant" });
+      saved.current = null;
+    }
+    button.current?.focus({ preventScroll: true });
+  };
+  useEffect(
+    () => () => {
+      observer.current?.disconnect();
+      if (saved.current) {
+        document.documentElement.style.overflow = saved.current.overflow;
+        saved.current = null;
+      }
+    },
+    [],
+  );
   const open = () => {
     window.dispatchEvent(new Event("iir:scene-interrupt"));
     setMounted(true);
@@ -27,8 +48,44 @@ export function ExpandDiagram({
         el.setAttribute("tabindex", "-1");
         el.setAttribute("inert", "");
       });
+      const context = target.current.closest<HTMLElement>(".motion-story");
+      if (context) {
+        snapshot.current.className =
+          "diagram-snapshot " +
+          context.className
+            .split(" ")
+            .filter(
+              (c) =>
+                !["scroll-scene", "case-visual", "emphasis-visual"].includes(c),
+            )
+            .join(" ");
+        Object.entries(context.dataset).forEach(
+          ([k, v]) => (snapshot.current!.dataset[k] = v),
+        );
+      }
       snapshot.current.replaceChildren(clone);
+      saved.current = {
+        overflow: document.documentElement.style.overflow,
+        y: scrollY,
+      };
+      document.documentElement.style.overflow = "hidden";
       dialog.current.showModal();
+      const align = () => {
+        const scale = Math.min(
+          clone.clientWidth / 720,
+          clone.clientHeight / 520,
+        );
+        clone
+          .querySelectorAll<HTMLElement>("[data-canvas-x]")
+          .forEach((label) => {
+            label.style.left = `${(clone.clientWidth - 720 * scale) / 2 + Number(label.dataset.canvasX) * scale}px`;
+            label.style.top = `${(clone.clientHeight - 520 * scale) / 2 + Number(label.dataset.canvasY) * scale}px`;
+          });
+      };
+      observer.current?.disconnect();
+      observer.current = new ResizeObserver(align);
+      observer.current.observe(clone);
+      align();
     });
   };
   return (
@@ -42,7 +99,7 @@ export function ExpandDiagram({
             className="diagram-dialog"
             ref={dialog}
             aria-label={caption}
-            onClose={() => button.current?.focus({ preventScroll: true })}
+            onClose={restore}
           >
             <header>
               <h2>{caption}</h2>

@@ -30,8 +30,20 @@ export function useSceneScroll(
     let destroyTrigger = () => {},
       stopReplay = () => {};
     const y = () => window.scrollY;
+    let lastPaint = -1,
+      lastActive = false;
     const paint = (v: number) => {
-      progress.current = clamp(v);
+      const next = clamp(v);
+      const inView = !!(
+        bounds.length &&
+        y() >= bounds[0] - 1 &&
+        y() <= bounds[count] + 1
+      );
+      if (Math.abs(next - lastPaint) < 0.000001 && inView === lastActive)
+        return;
+      lastPaint = next;
+      lastActive = inView;
+      progress.current = next;
       callback.current(progress.current);
       const active = Math.min(count - 1, Math.floor(progress.current * count));
       steps.forEach((step, i) => {

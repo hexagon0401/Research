@@ -173,7 +173,7 @@ function Connector({ scene }: { scene: SceneMeta }) {
         </span>
       </span>
       <span className="eyebrow">
-        {lang === "ko" ? "편집 연결문" : "EDITORIAL CONNECTION"}
+        {lang === "ko" ? "연결되는 질문" : "CONNECTING QUESTION"}
       </span>
       <p>{copy[lang]}</p>
     </div>

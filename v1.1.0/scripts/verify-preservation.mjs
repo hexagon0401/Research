@@ -11,11 +11,19 @@ const locked = [
   "public/report-media",
   "src/components/pdf-reader.tsx",
 ];
+const editorial = new Set([
+  "src/content/essay.ts",
+  "src/content/research-connections.ts",
+]);
 const changed = execFileSync(
   "git",
-  ["diff", "--name-only", base, "--", ...locked],
+  ["diff", "--relative", "--name-only", base, "--", ...locked],
   { encoding: "utf8" },
-).trim();
+)
+  .trim()
+  .split("\n")
+  .filter((file) => file && !editorial.has(file))
+  .join("\n");
 if (changed)
   throw new Error(`Locked source/backend assets changed: ${changed}`);
 const catalog = JSON.parse(

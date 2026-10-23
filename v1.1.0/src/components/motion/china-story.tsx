@@ -7,10 +7,18 @@ import { chinaSteps, sourceHref } from "@/visuals/motion-stories";
 import geography from "@/visuals/motion-geography.json";
 import polar from "@/visuals/atlas-points.json";
 import cameras from "@/visuals/scene-camera.json";
-import { fitCamera, pointsBounds, cameraPoint } from "@/visuals/camera";
+import {
+  fitCamera,
+  pointsBounds,
+  cameraPoint,
+  type Camera,
+} from "@/visuals/camera";
 import { clamp, loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
+import { SceneText } from "./scene-text";
+import type { ReactNode } from "react";
+import type { Copy } from "@/visuals/motion-stories";
 import { MapTerrain } from "./map-terrain";
 const p = geography.pins;
 const curve = (a: number[], b: number[], lift = 70) =>
@@ -28,16 +36,84 @@ const names = {
   mm: ["미얀마", "Myanmar"],
   kh: ["캄보디아", "Cambodia"],
 };
-export function ChinaStory() {
+
+const cameraOverview = fitCamera(
+  pointsBounds([p.cn, p.gl, [420, 15]], 12),
+  36,
+  2,
+);
+const cameraGreenland = fitCamera(cameras.regions.gl, 64);
+const cameraMyanmar = fitCamera(
+  pointsBounds([p.cn, ...cameras.regions.mm], 8),
+  60,
+);
+const cameraCambodia = fitCamera(cameras.regions.kh, 100, 24);
+const cameraArctic = fitCamera(
+  pointsBounds(Object.values(polar.arctic.pins), 8),
+  68,
+);
+function renderMapCamera(
+  el: HTMLElement,
+  target: HTMLElement,
+  world: Camera,
+  arctic: Camera,
+  cached?: { scale: number; x: number; y: number },
+) {
+  const scale = Math.min(target.clientWidth / 720, target.clientHeight / 520);
+  const frame = cached ?? {
+    scale,
+    x: (target.clientWidth - 720 * scale) / 2,
+    y: (target.clientHeight - 520 * scale) / 2,
+  };
+  el.querySelector("[data-world-camera]")?.setAttribute(
+    "transform",
+    `translate(${world.x} ${world.y}) scale(${world.scale})`,
+  );
+  el.querySelector("[data-polar-camera]")?.setAttribute(
+    "transform",
+    `translate(${arctic.x} ${arctic.y}) scale(${arctic.scale})`,
+  );
+  el.querySelectorAll<HTMLElement>("[data-place]").forEach((label) => {
+    const id = label.dataset.place!;
+    const polarSpace = label.dataset.space === "polar";
+    const point = polarSpace
+      ? polar.arctic.pins[id as keyof typeof polar.arctic.pins]
+      : p[id as keyof typeof p];
+    const [x, y] = cameraPoint(point, polarSpace ? arctic : world);
+    label.dataset.canvasX = String(x);
+    label.dataset.canvasY = String(y);
+    label.style.left = `${frame.x + x * frame.scale}px`;
+    label.style.top = `${frame.y + y * frame.scale}px`;
+    label.hidden = x < 28 || x > 692 || y < 24 || y > 492;
+  });
+  el.querySelectorAll<SVGCircleElement>(".china-world circle").forEach((c) =>
+    c.setAttribute(
+      "r",
+      String((c.hasAttribute("data-traveler") ? 3 : 4) / world.scale),
+    ),
+  );
+  el.querySelectorAll<SVGCircleElement>(".china-polar > g circle").forEach(
+    (c) => c.setAttribute("r", String(3 / arctic.scale)),
+  );
+
+  el.dataset.cameraReady = "true";
+}
+export function ChinaStory({
+  cases,
+  arcticDetail,
+}: {
+  cases?: Record<string, { title: Copy; detail: ReactNode }>;
+  arcticDetail?: ReactNode;
+}) {
   const { lang, reduced } = usePreferences();
   const root = useRef<HTMLElement>(null),
     stage = useRef<HTMLDivElement>(null),
-    range = useRef<HTMLInputElement>(null);
+    range = useRef<HTMLInputElement>(null),
+    mobileRange = useRef<HTMLInputElement>(null);
   const timeline = useRef<gsap.core.Timeline | null>(null),
     map = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0),
     [ready, setReady] = useState(false),
-    [detail, setDetail] = useState(false),
     [layer, setLayer] = useState("all"),
     [comparison, setComparison] = useState("all");
   const activeRef = useRef(0),
@@ -71,6 +147,8 @@ export function ChinaStory() {
       root.current.dataset.phase = String(i);
     }
     if (range.current) range.current.value = String(Math.round(v * 100));
+    if (mobileRange.current)
+      mobileRange.current.value = String(Math.round(v * 100));
     if (activeRef.current !== i) {
       activeRef.current = i;
       setActive(i);
@@ -139,45 +217,8 @@ export function ChinaStory() {
               68,
             );
             let frame = { scale: 1, x: 0, y: 0 };
-            const renderCamera = () => {
-              el.querySelector("[data-world-camera]")?.setAttribute(
-                "transform",
-                `translate(${world.x} ${world.y}) scale(${world.scale})`,
-              );
-              el.querySelector("[data-polar-camera]")?.setAttribute(
-                "transform",
-                `translate(${arctic.x} ${arctic.y}) scale(${arctic.scale})`,
-              );
-              el.querySelectorAll<HTMLElement>("[data-place]").forEach(
-                (label) => {
-                  const id = label.dataset.place!;
-                  const polarSpace = label.dataset.space === "polar";
-                  const point = polarSpace
-                    ? polar.arctic.pins[id as keyof typeof polar.arctic.pins]
-                    : p[id as keyof typeof p];
-                  const [x, y] = cameraPoint(
-                    point,
-                    polarSpace ? arctic : world,
-                  );
-                  label.style.left = `${frame.x + x * frame.scale}px`;
-                  label.style.top = `${frame.y + y * frame.scale}px`;
-                  label.hidden = x < 28 || x > 692 || y < 24 || y > 492;
-                },
-              );
-              el.querySelectorAll<SVGCircleElement>(
-                ".china-world circle",
-              ).forEach((c) =>
-                c.setAttribute(
-                  "r",
-                  String(
-                    (c.hasAttribute("data-traveler") ? 3 : 4) / world.scale,
-                  ),
-                ),
-              );
-              el.querySelectorAll<SVGCircleElement>(
-                ".china-polar > g circle",
-              ).forEach((c) => c.setAttribute("r", String(3 / arctic.scale)));
-            };
+            const renderCamera = () =>
+              renderMapCamera(el, map.current!, world, arctic, frame);
             const size = () => {
               const width = map.current!.clientWidth,
                 height = map.current!.clientHeight;
@@ -198,34 +239,6 @@ export function ChinaStory() {
             tl.to(world, { ...cambodia, duration: 0.4, ease: "none" }, 4);
             tl.to(world, { ...overview, duration: 0.4, ease: "none" }, 5);
             tl.eventCallback("onUpdate", renderCamera);
-            tl.fromTo(
-              "[data-mineral-branch]",
-              { strokeDashoffset: 1 },
-              {
-                strokeDashoffset: 0,
-                autoRound: false,
-                duration: 0.35,
-                ease: "none",
-              },
-              1.5,
-            );
-            tl.fromTo(
-              "[data-schematic-supply]",
-              { strokeDashoffset: 1 },
-              {
-                strokeDashoffset: 0,
-                autoRound: false,
-                duration: 0.55,
-                ease: "none",
-              },
-              2.12,
-            );
-            tl.fromTo(
-              "[data-schematic-dot]",
-              { attr: { cx: 40 } },
-              { attr: { cx: 560 }, duration: 0.55, ease: "none" },
-              2.12,
-            );
             tl.to({}, { duration: 0.01 }, 6.99);
             tl.progress(scroll.progress.current);
             paint(scroll.progress.current);
@@ -249,6 +262,30 @@ export function ChinaStory() {
       setReady(false);
     };
   }, [lang, reduced]);
+  useEffect(() => {
+    const el = root.current,
+      target = map.current;
+    if (!el || !target) return;
+    const draw = () => {
+      if (!timeline.current)
+        renderMapCamera(
+          el,
+          target,
+          active === 2 || active === 3
+            ? cameraMyanmar
+            : active === 4
+              ? cameraCambodia
+              : active === 1
+                ? cameraGreenland
+                : cameraOverview,
+          cameraArctic,
+        );
+    };
+    const observer = new ResizeObserver(draw);
+    observer.observe(target);
+    draw();
+    return () => observer.disconnect();
+  }, [active, lang, reduced]);
   const replayStep = () => scroll.replay();
   return (
     <figure
@@ -261,6 +298,7 @@ export function ChinaStory() {
       data-visual-for="china-arctic"
       data-reading-passage
     >
+      <span id="visual-china-arctic" className="essay-legacy-anchor" />
       <figcaption>
         <span className="eyebrow">
           2018—2025 /{" "}
@@ -270,13 +308,13 @@ export function ChinaStory() {
         </span>
         <h3>
           {lang === "ko"
-            ? "선이 향하는 곳보다, 무엇을 연결하는가."
-            : "What does the line connect?"}
+            ? "공항·공급망·해안 개발로 이어지는 세 사례"
+            : "Three cases: airports, supply networks and coastal development"}
         </h3>
         <p>
           {lang === "ko"
-            ? "스크롤로 관계를 따라가고, 사건 목차에서 되짚어 보세요."
-            : "Scroll through the relationships. Revisit an event below."}
+            ? "기업의 해외 활동은 각 지역의 제도와 공간 속에서 국가 전략과 만난다."
+            : "Overseas business meets national strategy through local institutions and places."}
         </p>
       </figcaption>
       <nav className="case-source-links">
@@ -292,6 +330,33 @@ export function ChinaStory() {
           <div className="motion-date-row">
             <span>{s.status[lang]}</span>
             <time>{s.date}</time>
+            <select
+              className="compact-scene-select"
+              aria-label={lang === "ko" ? "사건 선택" : "Choose an event"}
+              value={active}
+              onChange={(e) => select((+e.target.value + 0.2) / 7)}
+            >
+              {chinaSteps.map((step, i) => (
+                <option value={i} key={step.id}>
+                  {step.date} ·{" "}
+                  {i < 2
+                    ? lang === "ko"
+                      ? "그린란드"
+                      : "Greenland"
+                    : i < 4
+                      ? lang === "ko"
+                        ? "미얀마"
+                        : "Myanmar"
+                      : i === 4
+                        ? lang === "ko"
+                          ? "캄보디아"
+                          : "Cambodia"
+                        : lang === "ko"
+                          ? "비교·종합"
+                          : "Comparison"}
+                </option>
+              ))}
+            </select>
           </div>
           <div ref={map} className="china-map" data-compare={comparison}>
             <div className="map-label-layer" aria-hidden="true">
@@ -395,6 +460,17 @@ export function ChinaStory() {
               </g>
             </svg>
           </div>
+          {active === 4 && (
+            <div className="map-business-link">
+              <span data-layer="business" data-muted={layer === "facility"}>
+                Prince Group / Canopy Sands
+              </span>
+              <span aria-hidden="true">↔</span>
+              <span data-layer="facility" data-muted={layer === "business"}>
+                Ream
+              </span>
+            </div>
+          )}
           <ExpandDiagram
             target={map}
             caption={`${s.date} · ${s.title[lang]}`}
@@ -415,34 +491,6 @@ export function ChinaStory() {
               </button>
             ))}
           </div>
-          {active === 1 && (
-            <p className="motion-inline-note">
-              Nuuk · Ilulissat · Qaqortoq /{" "}
-              {lang === "ko"
-                ? "광물 지분은 공항 제안과 별개"
-                : "Mineral equity is separate from the airport proposal"}
-            </p>
-          )}
-          {active === 2 && (
-            <>
-              <button
-                className="motion-detail-toggle"
-                aria-expanded={detail}
-                onClick={() => setDetail(!detail)}
-              >
-                {lang === "ko"
-                  ? "경로 상세 · 개략 순서도"
-                  : "Route detail · schematic sequence"}
-              </button>
-              {detail && (
-                <p className="motion-route-detail">
-                  {lang === "ko"
-                    ? "구이저우 안순 → 윈난 → 샨주 남산 · S08의 서술, 실제 항적 아님"
-                    : "Anshun → Yunnan → Namsang · S08 account, not an observed track"}
-                </p>
-              )}
-            </>
-          )}
           {active === 4 && (
             <div className="motion-filter">
               {["all", "business", "facility"].map((v) => (
@@ -460,62 +508,6 @@ export function ChinaStory() {
               ))}
             </div>
           )}
-          <div className="motion-mineral-branch" hidden={active !== 1}>
-            <span>Shenghe Resources</span>
-            <svg viewBox="0 0 160 30" width="80" height="30" aria-hidden="true">
-              <path
-                data-mineral-branch
-                pathLength="1"
-                d="M8 15H152"
-                fill="none"
-              />
-            </svg>
-            <span>
-              {lang === "ko"
-                ? "광물 지분 · 별도 관계"
-                : "Mineral equity · separate relationship"}
-            </span>
-          </div>
-          <div
-            className="motion-supply-sequence"
-            hidden={active !== 2 || !detail}
-          >
-            <svg
-              viewBox="0 0 600 80"
-              width="600"
-              height="80"
-              aria-hidden="true"
-            >
-              <path
-                data-schematic-supply
-                d="M40 40H560"
-                pathLength="1"
-                fill="none"
-              />
-              <circle data-schematic-dot cx="40" cy="40" r="5" />
-            </svg>
-            <ol>
-              <li>{lang === "ko" ? "구이저우 안순" : "Anshun"}</li>
-              <li>{lang === "ko" ? "윈난" : "Yunnan"}</li>
-              <li>{lang === "ko" ? "샨주 남산" : "Namsang"}</li>
-            </ol>
-          </div>
-          <div className="china-current-copy">
-            <strong>{s.title[lang]}</strong>
-            <p>{s.copy[lang]}</p>
-            <div className="motion-source-links">
-              {s.sources.map((ref) => (
-                <Link
-                  key={ref.paragraph}
-                  prefetch={false}
-                  href={sourceHref(s, ref)}
-                >
-                  {ref.report} ·{" "}
-                  {lang === "ko" ? "원문 문맥" : "Source context"} →
-                </Link>
-              ))}
-            </div>
-          </div>
           <div className="motion-controls" hidden={!ready && !reduced}>
             <label>
               {lang === "ko" ? "사건 다시 보기" : "Revisit events"}
@@ -595,8 +587,56 @@ export function ChinaStory() {
               <span className="mono">
                 0{i + 1} / {step.date}
               </span>
-              <h4>{step.title[lang]}</h4>
-              <p>{step.copy[lang]}</p>
+              {(i === 2 && cases?.["china-myanmar"]) ||
+              (i === 4 && cases?.["china-cambodia"]) ? (
+                <section
+                  id={i === 2 ? "china-myanmar" : "china-cambodia"}
+                  className="china-case-anchor"
+                  data-essay-beat
+                  aria-label={step.title.en}
+                >
+                  <span
+                    id={
+                      i === 2 ? "visual-china-myanmar" : "visual-china-cambodia"
+                    }
+                    className="essay-legacy-anchor"
+                  />
+                  <h2>
+                    {
+                      cases![i === 2 ? "china-myanmar" : "china-cambodia"]
+                        .title[lang]
+                    }
+                  </h2>
+                  <SceneText text={step} />
+                  {cases![i === 2 ? "china-myanmar" : "china-cambodia"].detail}
+                </section>
+              ) : (
+                <>
+                  <h4>{step.title[lang]}</h4>
+                  <SceneText
+                    text={step}
+                    connection={i === 1 || i === 3 || i === 6}
+                  />
+                </>
+              )}
+              {i === 1 && arcticDetail}
+              {i === 2 && (
+                <details className="scene-detail">
+                  <summary>
+                    {lang === "ko" ? "공급 순서도" : "Supply sequence"}
+                  </summary>
+                  <p>
+                    {lang === "ko"
+                      ? "구이저우 안순 → 윈난 → 샨주 남산"
+                      : "Anshun → Yunnan → Namsang"}
+                  </p>
+                  <small>
+                    {lang === "ko"
+                      ? "S08의 경로 서술을 정리한 순서도"
+                      : "Sequence based on the route described in S08"}
+                  </small>
+                </details>
+              )}
               {i === 4 && (
                 <div className="cambodia-relation">
                   <strong>Prince Group / Canopy Sands</strong>
@@ -620,11 +660,11 @@ export function ChinaStory() {
                       ? "접근권·정권 생존·국가 전략에 대한 저자의 분석"
                       : "The author’s analysis of access, regime survival and state strategy"}
                   </dd>
-                  <dt>{lang === "ko" ? "확인 범위" : "Evidence scope"}</dt>
+                  <dt>{lang === "ko" ? "공통 질문" : "Shared question"}</dt>
                   <dd>
                     {lang === "ko"
-                      ? "원문 문맥 대조 · 항적·시설 경계 원자료 미제공"
-                      : "Source context · underlying tracks and site boundaries not supplied"}
+                      ? "기업의 해외 활동은 어떤 조건에서 국가 전략과 만나는가"
+                      : "Under what conditions does overseas business meet national strategy?"}
                   </dd>
                 </dl>
               )}
@@ -641,6 +681,27 @@ export function ChinaStory() {
             </li>
           ))}
         </ol>
+      </div>
+      <div className="compact-replay motion-controls">
+        <label>
+          {lang === "ko"
+            ? "중국 사례 다시 살펴보기"
+            : "Revisit the China cases"}
+          <input
+            ref={mobileRange}
+            type="range"
+            min="0"
+            max="100"
+            defaultValue="0"
+            aria-label={
+              lang === "ko" ? "중국 사례 탐색" : "China story progress"
+            }
+            onInput={(e) => select(+e.currentTarget.value / 100)}
+          />
+        </label>
+        <button onClick={replayStep} disabled={reduced || !ready}>
+          {lang === "ko" ? "현재 단계 다시 보기" : "Replay this step"}
+        </button>
       </div>
     </figure>
   );

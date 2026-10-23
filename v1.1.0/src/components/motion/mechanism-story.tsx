@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePreferences } from "../preferences";
 import { usePretext } from "../use-pretext";
@@ -10,6 +10,7 @@ import { researchConnections } from "@/content/research-connections";
 import { loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
+import { SceneText } from "./scene-text";
 import { MapTerrain } from "./map-terrain";
 import { fitCamera, pointsBounds } from "@/visuals/camera";
 import cameraRegions from "@/visuals/scene-camera.json";
@@ -18,7 +19,13 @@ const roleGroups: Record<string, string[]> = {
   identity: ["S06", "S14"],
   strategy: ["S05", "S08", "S11", "S15"],
 };
-export function MechanismStory({ scene }: { scene: SceneMeta }) {
+export function MechanismStory({
+  scene,
+  detail,
+}: {
+  scene: SceneMeta;
+  detail?: ReactNode;
+}) {
   const { lang, reduced } = usePreferences();
   const spec = mechanisms[scene.id],
     graph = useMemo(() => mechanismGraph(scene.id), [scene.id]);
@@ -477,8 +484,8 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
                   </div>
                   <small>
                     {lang === "ko"
-                      ? "차원 축소의 개념 · 실제 좌표·로딩 아님"
-                      : "Dimension-reduction concept · not fitted coordinates or loadings"}
+                      ? "PCA · 여섯 기업 지표를 두 분석 축으로"
+                      : "PCA · six financial indicators, two analytical axes"}
                   </small>
                 </div>
               </>
@@ -499,11 +506,12 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
             >
               <span className="mono">0{i + 1}</span>
               <strong>{step.title[lang]}</strong>
-              <p>{step.copy[lang]}</p>
+              <SceneText text={step} connection={i === spec.steps.length - 1} />
               <Link prefetch={false} href={sourceURL(step.source)}>
                 {step.source} ·{" "}
                 {lang === "ko" ? "원문에서 살펴보기" : "Read in context"} →
               </Link>
+              {i === spec.steps.length - 1 && detail}
             </li>
           ))}
         </ol>
@@ -555,7 +563,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           <p>
             {scene.id === "synthesis"
               ? researchConnections[selected]?.[lang]
-              : spec.steps[Math.min(selectedIndex, spec.steps.length - 1)].copy[
+              : spec.steps[Math.min(selectedIndex, spec.steps.length - 1)].lead[
                   lang
                 ]}
           </p>
@@ -597,7 +605,6 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           </Link>
         ))}
       </nav>
-      <p className="motion-evidence-note">{spec.note[lang]}</p>
     </figure>
   );
 }

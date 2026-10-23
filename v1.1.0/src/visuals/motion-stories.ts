@@ -6,7 +6,10 @@ export type MotionStep = {
   id: string;
   beat: string;
   title: Copy;
-  copy: Copy;
+  lead: Copy;
+  facts: Copy[];
+  connection: Copy;
+  detail?: Copy;
   date?: string;
   precision?: "year" | "month" | "day" | "period";
   kind:
@@ -19,10 +22,6 @@ export type MotionStep = {
   status: Copy;
   sources: SourceRef[];
 };
-const ref = (paragraph: string, report = paragraph.slice(0, 3)): SourceRef => ({
-  report,
-  paragraph,
-});
 export const chinaSteps: MotionStep[] = [
   {
     id: "greenland-proposal",
@@ -30,16 +29,38 @@ export const chinaSteps: MotionStep[] = [
     date: "2018",
     precision: "year",
     kind: "investment",
-    title: words(
-      "공항 제안이 접근권의 질문으로",
-      "An airport proposal becomes a question of access",
-    ),
-    copy: words(
-      "CCCC의 공항 사업 제안을 따라 중국에서 그린란드로 관계선을 그립니다. 누크·일루리사트·카코르톡은 제안의 참고 위치이며, 이 선은 화물 운항로가 아닙니다.",
-      "Follow CCCC's airport proposal from China to Greenland. Nuuk, Ilulissat and Qaqortoq locate the proposal; this connection is not a freight route.",
-    ),
-    status: words("사업 제안 · S08 서술", "Proposal · reported in S08"),
-    sources: [ref("S08-R001-P010")],
+    title: {
+      ko: "공항망을 통한 북극 접근",
+      en: "Arctic access through airport infrastructure",
+    },
+    status: {
+      ko: "공항 사업 제안",
+      en: "Airport proposal",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R001-P010",
+      },
+    ],
+    lead: {
+      ko: "2018년 CCCC는 그린란드의 세 공항 사업에 참여하는 제안을 내놓았다. S08은 공항 인프라를 기업의 해외 진출과 전략적 접근권이 만나는 공간으로 읽는다.",
+      en: "In 2018, CCCC proposed participating in three Greenland airport projects. S08 reads airport infrastructure as a meeting point of overseas business and strategic access.",
+    },
+    facts: [
+      {
+        ko: "기업 · CCCC",
+        en: "Company · CCCC",
+      },
+      {
+        ko: "대상 · 누크·일루리사트·카코르톡 공항",
+        en: "Places · Nuuk, Ilulissat and Qaqortoq airports",
+      },
+    ],
+    connection: {
+      ko: "나는 세 지역을 통해 기업의 사업이 각기 다른 방식으로 국가와 결속하는 과정을 비교한다.",
+      en: "Across these places, I compare the different ways corporate activity becomes connected with the state.",
+    },
   },
   {
     id: "greenland-withdrawal",
@@ -47,19 +68,38 @@ export const chinaSteps: MotionStep[] = [
     date: "2019-06",
     precision: "month",
     kind: "investment",
-    title: words(
-      "입찰 철회와 다른 투자 관계를 분리하다",
-      "Separate a withdrawn bid from other investments",
-    ),
-    copy: words(
-      "그린란드로 확대하면 세 공항이 드러납니다. 원문이 서술한 입찰 철회는 공항 제안의 상태 변화입니다. 광물 지분 관계는 별도 가지로 읽으며, 공항 사업이 완성됐다고 표시하지 않습니다.",
-      "Zoom in to locate three airports. The reported withdrawal changes the airport proposal's status. Mineral equity belongs to a separate branch; the airports are not presented as completed Chinese projects.",
-    ),
-    status: words(
-      "철회 · 광물 관계는 별도 확인",
-      "Withdrawal · mineral relationship requires separate checks",
-    ),
-    sources: [ref("S08-R001-P010")],
+    title: {
+      ko: "입찰은 철회되고 다른 사업 관계는 남는다",
+      en: "A withdrawn airport bid and other corporate ties",
+    },
+    status: {
+      ko: "공항 입찰 철회",
+      en: "Airport bid withdrawn",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R001-P010",
+      },
+    ],
+    lead: {
+      ko: "2019년 6월 공항 입찰이 철회됐다. S08은 이 사건 이후의 그린란드를 광물 분야의 기업 관계와 함께 살피며, 접근권을 확보하는 여러 경로를 비교한다.",
+      en: "The airport bid was withdrawn in June 2019. S08 considers the event alongside corporate ties in the mineral sector, comparing different routes to strategic access.",
+    },
+    facts: [
+      {
+        ko: "2019년 6월 · 공항 입찰 철회",
+        en: "June 2019 · airport bid withdrawal",
+      },
+      {
+        ko: "광물 분야 · Shenghe Resources의 별도 기업 관계",
+        en: "Minerals · separate corporate ties involving Shenghe Resources",
+      },
+    ],
+    connection: {
+      ko: "나는 세 지역을 통해 기업의 사업이 각기 다른 방식으로 국가와 결속하는 과정을 비교한다.",
+      en: "Across these places, I compare the different ways corporate activity becomes connected with the state.",
+    },
   },
   {
     id: "myanmar-supply",
@@ -67,19 +107,38 @@ export const chinaSteps: MotionStep[] = [
     date: "2021–2022",
     precision: "period",
     kind: "reported-supply",
-    title: words(
-      "기업·장비·수령 주체를 연결하다",
-      "Connect suppliers, equipment and recipients",
-    ),
-    copy: words(
-      "AVIC·NORINCO·China South Industries와 미얀마 군정의 공급 관계를 살핍니다. 경로 상세에서는 구이저우 안순→윈난→샨주 남산이라는 원문 서술을 개략 순서도로 확인합니다. 실제 항적은 아닙니다.",
-      "Examine the supply relationships attributed to AVIC, NORINCO and China South Industries. Route detail follows the source's Anshun → Yunnan → Namsang sequence as a schematic, not an observed track.",
-    ),
-    status: words(
-      "원문 서술의 공급 관계 · 독립 검증 전",
-      "Source-reported supply · not independently verified",
-    ),
-    sources: [ref("S08-R003-P001")],
+    title: {
+      ko: "무기 공급망이 정권의 버팀목이 될 때",
+      en: "Arms supply and regime resilience",
+    },
+    status: {
+      ko: "군수품 조달 · S08",
+      en: "Military supply · S08",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R003-P001",
+      },
+    ],
+    lead: {
+      ko: "무기 거래를 외교적 지원과 함께 놓으면, 거래 대금보다 큰 질문이 나타난다. S08은 중국 군수기업의 공급 관계를 통해 장비 조달이 미얀마 군정의 전력과 정권 유지에 어떤 역할을 하는지 분석한다.",
+      en: "Reading arms transactions alongside diplomacy raises a question beyond their price. S08 examines Chinese suppliers to ask how military procurement relates to the Myanmar junta’s capabilities and survival.",
+    },
+    facts: [
+      {
+        ko: "공급자 · AVIC·NORINCO·China South Industries",
+        en: "Suppliers · AVIC, NORINCO and China South Industries",
+      },
+      {
+        ko: "2021–2022 · S08이 다룬 장비 조달",
+        en: "2021–2022 · equipment procurement discussed in S08",
+      },
+    ],
+    connection: {
+      ko: "캄보디아에서는 무기 공급에서 해안의 개발사업과 시설로 시선을 넓힌다.",
+      en: "Cambodia extends the question from military supply to coastal development and facilities.",
+    },
   },
   {
     id: "myanmar-diplomacy",
@@ -87,19 +146,38 @@ export const chinaSteps: MotionStep[] = [
     date: "2024-08",
     precision: "month",
     kind: "analysis",
-    title: words(
-      "장비 공급과 외교적 해석은 다르다",
-      "Supply and diplomatic interpretation are different",
-    ),
-    copy: words(
-      "물자 공급의 이동점을 멈추고 외교적 접촉과 정권 생존에 관한 분석선을 분리합니다. 무엇이 공급됐다는 서술과 왜 개입했는가에 대한 저자의 해석은 같은 수준의 증거가 아닙니다.",
-      "Stop the supply marker and separate diplomatic contact from the author's interpretation of regime survival. A report of supplied equipment and an explanation of state intent are different evidentiary claims.",
-    ),
-    status: words(
-      "저자의 분석 · 인과 확인 아님",
-      "Author's analysis · not causal confirmation",
-    ),
-    sources: [ref("S08-R003-P001")],
+    title: {
+      ko: "외교적 지원이 더해지는 공급 관계",
+      en: "Supply relationships alongside diplomatic support",
+    },
+    status: {
+      ko: "외교 관계 · 연구의 해석",
+      en: "Diplomacy · research interpretation",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R003-P001",
+      },
+    ],
+    lead: {
+      ko: "S08은 2024년 8월의 외교적 움직임을 앞선 군수품 공급과 함께 다룬다. 장비를 거래하는 기업의 관계가 국가의 영향력과 정권 유지의 문제로 이어지는 대목이다.",
+      en: "S08 reads diplomatic developments in August 2024 alongside earlier military supply. Corporate transactions become part of a wider inquiry into state influence and regime survival.",
+    },
+    facts: [
+      {
+        ko: "2024년 8월 · 왕이의 방문을 다룬 분석",
+        en: "August 2024 · the study’s account of Wang Yi’s visit",
+      },
+      {
+        ko: "논점 · 군수품 공급과 외교적 지원의 결합",
+        en: "Question · military supply alongside diplomatic support",
+      },
+    ],
+    connection: {
+      ko: "캄보디아에서는 무기 공급에서 해안의 개발사업과 시설로 시선을 넓힌다.",
+      en: "Cambodia extends the question from military supply to coastal development and facilities.",
+    },
   },
   {
     id: "cambodia-relations",
@@ -107,19 +185,38 @@ export const chinaSteps: MotionStep[] = [
     date: "2025-04-05",
     precision: "day",
     kind: "investment",
-    title: words(
-      "기업·사업·시설을 함께 살펴보다",
-      "Read the firm, development and facility together",
-    ),
-    copy: words(
-      "캄보디아로 시선을 옮겨 Prince Group·Canopy Sands의 개발과 Ream 시설을 구분합니다. 날짜는 S08이 서술한 개소식입니다. 인접성은 자금·통제·국가 지시의 증명이 아니며, 구체적인 수송 항로를 덧붙이지 않습니다.",
-      "Move to Cambodia and distinguish Prince Group / Canopy Sands development from the Ream facility. The date is the opening reported in S08. Proximity does not establish finance, control or state instruction; no shipping route is invented.",
-    ),
-    status: words(
-      "기업·사업 관계 · 시설 경계 원자료 없음",
-      "Business relationship · underlying site boundaries not supplied",
-    ),
-    sources: [ref("S08-R002-P002")],
+    title: {
+      ko: "리조트 개발과 해군기지가 만나는 해안",
+      en: "Where development meets a naval base",
+    },
+    status: {
+      ko: "상업 개발·시설 관계",
+      en: "Development and facilities",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R002-P002",
+      },
+    ],
+    lead: {
+      ko: "캄보디아 사례의 무대는 Ream 해군기지 주변 해안이다. S08은 Prince Group·Canopy Sands의 개발사업과 기지 확장을 함께 놓고, 상업적 진출이 전략적 접근권과 만나는 지점을 분석한다.",
+      en: "Along the coast around Ream naval base, S08 examines Prince Group and Canopy Sands’ development activities alongside military expansion. The case asks how commercial footholds can acquire strategic significance.",
+    },
+    facts: [
+      {
+        ko: "기업 · Prince Group·Canopy Sands",
+        en: "Companies · Prince Group and Canopy Sands",
+      },
+      {
+        ko: "공간 · Ream 해군기지 주변 해안",
+        en: "Place · the coast around Ream naval base",
+      },
+    ],
+    connection: {
+      ko: "이 비교를 한국으로 가져오면, 어떤 기업 역량을 어떤 조건에서 유지할 것인가라는 질문이 남는다.",
+      en: "For Korea, the comparison raises a question: which capabilities should be maintained, and under what conditions?",
+    },
   },
   {
     id: "china-comparison",
@@ -127,19 +224,50 @@ export const chinaSteps: MotionStep[] = [
     date: "2018–2025",
     precision: "period",
     kind: "analysis",
-    title: words(
-      "세 지역, 같은 네 가지 질문",
-      "Three places, four shared questions",
-    ),
-    copy: words(
-      "기업·주체, 사업·공급 관계, 국가 전략에 대한 해석, 확인 가능한 범위를 비교합니다. 공통 질문은 있지만 세 사례가 하나의 운송 작전이거나 서로의 원인이라는 뜻은 아닙니다.",
-      "Compare actors, business or supply relationships, interpretations of state strategy and evidence scope. A shared question does not make these cases a single transport operation or prove that one caused another.",
-    ),
-    status: words(
-      "비교 프레임 · 저자의 분석",
-      "Comparative framework · author's analysis",
-    ),
-    sources: [ref("S08-R001-P010"), ref("S08-R003-P001"), ref("S08-R002-P002")],
+    title: {
+      ko: "세 지역에서 반복되는 국가와 기업의 질문",
+      en: "A recurring question across three places",
+    },
+    status: {
+      ko: "세 사례 비교",
+      en: "Comparing three cases",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R001-P010",
+      },
+      {
+        report: "S08",
+        paragraph: "S08-R003-P001",
+      },
+      {
+        report: "S08",
+        paragraph: "S08-R002-P002",
+      },
+    ],
+    lead: {
+      ko: "그린란드의 공항, 미얀마의 무기 공급, 캄보디아의 해안 개발은 서로 다른 사업이다. 함께 비교할 때 드러나는 질문은 기업의 활동이 어떤 제도와 공간을 통해 국가의 전략과 만나는가이다.",
+      en: "Airports in Greenland, arms supply in Myanmar and coastal development in Cambodia involve different activities. Together they ask which institutions and places connect corporate activity with state strategy.",
+    },
+    facts: [
+      {
+        ko: "그린란드 · 인프라와 접근권",
+        en: "Greenland · infrastructure and access",
+      },
+      {
+        ko: "미얀마 · 공급망과 군정의 지속 능력",
+        en: "Myanmar · supply networks and regime resilience",
+      },
+      {
+        ko: "캄보디아 · 개발사업과 전략적 공간",
+        en: "Cambodia · development and strategic space",
+      },
+    ],
+    connection: {
+      ko: "이 비교를 한국으로 가져오면, 어떤 기업 역량을 어떤 조건에서 유지할 것인가라는 질문이 남는다.",
+      en: "For Korea, the comparison raises a question: which capabilities should be maintained, and under what conditions?",
+    },
   },
   {
     id: "china-replay",
@@ -147,19 +275,46 @@ export const chinaSteps: MotionStep[] = [
     date: "2018–2025",
     precision: "period",
     kind: "analysis",
-    title: words(
-      "시간순으로 되짚으며 연결의 의미를 묻다",
-      "Revisit the sequence and question the connections",
-    ),
-    copy: words(
-      "아래 사건 목차나 탐색 바로 장면을 되짚어 보세요. 간격과 이동 속도는 설명의 진행을 뜻하며 실제 기간·운송 시간·투자 규모를 나타내지 않습니다. 각 장면에서 원문 문맥까지 이어 읽을 수 있습니다.",
-      "Revisit a scene with the event index or scrubber. Spacing and movement represent the explanation, not elapsed years, transport time or investment size. Each scene links to its source in context.",
-    ),
-    status: words(
-      "시간순 사건 탐색 · 실제 시간 축 아님",
-      "Chronological event index · not a scaled time axis",
-    ),
-    sources: [ref("S08-R001-P010"), ref("S08-R003-P001"), ref("S08-R002-P002")],
+    title: {
+      ko: "사업의 형태를 넘어 결속의 조건으로",
+      en: "From forms of business to conditions of coordination",
+    },
+    status: {
+      ko: "통합 연구로 이어지는 질문",
+      en: "Toward the integrated inquiry",
+    },
+    sources: [
+      {
+        report: "S08",
+        paragraph: "S08-R001-P010",
+      },
+      {
+        report: "S08",
+        paragraph: "S08-R003-P001",
+      },
+      {
+        report: "S08",
+        paragraph: "S08-R002-P002",
+      },
+    ],
+    lead: {
+      ko: "내가 세 지역을 함께 보는 이유는 사업의 형태가 달라도 기업과 국가의 결속을 묻는 질문으로 이어지기 때문이다. 이 비교는 한국에서 어떤 역량을 어떤 조건으로 유지할 것인가라는 다음 질문을 남긴다.",
+      en: "I compare these places because different forms of business lead back to a shared question about the firm and the state. That comparison raises the next question for Korea: which capabilities should be maintained, and under what conditions?",
+    },
+    facts: [
+      {
+        ko: "비교의 축 · 기업, 제도, 공간",
+        en: "Comparative axes · firms, institutions and space",
+      },
+      {
+        ko: "다음 질문 · 한국 기업의 역량과 공적 책임",
+        en: "Next question · Korean firms’ capabilities and public responsibilities",
+      },
+    ],
+    connection: {
+      ko: "이 비교를 한국으로 가져오면, 어떤 기업 역량을 어떤 조건에서 유지할 것인가라는 질문이 남는다.",
+      en: "For Korea, the comparison raises a question: which capabilities should be maintained, and under what conditions?",
+    },
   },
 ];
 export function sourceHref(step: MotionStep, source: SourceRef) {

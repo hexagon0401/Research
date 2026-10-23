@@ -15,7 +15,7 @@ test("chronological scenes retain date precision and real source paragraphs", ()
   for (const s of chinaSteps) {
     assert(!ids.has(s.id));
     ids.add(s.id);
-    assert(s.copy.ko.length > 30 && s.copy.en.length > 60);
+    assert(s.lead.ko.length > 30 && s.lead.en.length > 60);
     for (const ref of s.sources) {
       const report = JSON.parse(
         readFileSync(`src/content/readings/${ref.report.toLowerCase()}.json`),
@@ -27,8 +27,23 @@ test("chronological scenes retain date precision and real source paragraphs", ()
 });
 test("business relationships cannot silently become observed shipment tracks", () => {
   assert.equal(chinaSteps[4].kind, "investment");
-  assert.match(chinaSteps[4].copy.en, /no shipping route/);
+  assert.match(chinaSteps[4].lead.en, /development/);
+  assert(!/freight|shipping route|cargo/.test(chinaSteps[4].lead.en));
   assert.equal(chinaSteps[2].kind, "reported-supply");
-  assert.match(chinaSteps[2].copy.en, /not an observed track/);
-  assert.match(chinaSteps[6].copy.en, /not elapsed years/);
+  assert(chinaSteps[2].sources.some((s) => s.paragraph === "S08-R003-P001"));
+  assert.equal(chinaSteps[6].kind, "analysis");
+  assert.equal(chinaSteps[6].precision, "period");
+});
+
+test("editorial scene text is bilingual, structured and free of production instructions", () => {
+  for (const step of chinaSteps) {
+    assert(step.facts.length >= 2);
+    assert(step.connection.ko && step.connection.en);
+    const text = JSON.stringify([step.lead, step.facts, step.connection]);
+    assert(
+      !/표시하지 않습니다|선을 그립니다|수치를 만들어|no shipping route is invented|Stop the supply marker/.test(
+        text,
+      ),
+    );
+  }
 });

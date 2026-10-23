@@ -27,7 +27,7 @@ export function Footer() {
         <MotionControl />
       </div>
       <div className="footer-note">
-        <span className="mono">IIR 2.4.0 · RESEARCH IN PROGRESS · 2026</span>
+        <span className="mono">IIR 2.4.1 · RESEARCH IN PROGRESS · 2026</span>
         <p>
           <Localized
             en="A working framework, open to scrutiny."
@@ -38,6 +38,13 @@ export function Footer() {
           <Localized en="Back to top ↑" ko="맨 위로 ↑" />
         </a>
       </div>
+      <blockquote className="footer-motto" lang="en">
+        <p>
+          “(Dante once said that) the hottest places in hell are reserved for
+          those who in a period of moral crisis maintain their neutrality.”
+        </p>
+        <cite>John F. Kennedy</cite>
+      </blockquote>
     </footer>
   );
 }

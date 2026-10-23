@@ -1,409 +1,1060 @@
 import { words, type Copy } from "./motion-stories";
-export type MechanismStep = { title: Copy; copy: Copy; source: string };
+export type MechanismStep = {
+  title: Copy;
+  lead: Copy;
+  facts: Copy[];
+  connection: Copy;
+  detail?: Copy;
+  source: string;
+};
 export type Mechanism = {
   group: "origin" | "america" | "korea" | "method" | "synthesis";
   title: Copy;
   note: Copy;
   steps: MechanismStep[];
 };
-const step = (
-  ko: string,
-  en: string,
-  k: string,
-  e: string,
-  source: string,
-): MechanismStep => ({ title: words(ko, en), copy: words(k, e), source });
 export const mechanisms: Record<string, Mechanism> = {
   capability: {
     group: "origin",
-    title: words(
-      "기업에서 국가로, 질문이 이동하다",
-      "Watch a question move from firm to state",
-    ),
-    note: words(
-      "편집 연결 · 기술 보유와 전략적 결과의 인과를 구분합니다.",
-      "Editorial connection · capability is distinct from proof of strategic effects.",
-    ),
+    title: {
+      ko: "기업의 역량을 잇는 네 고리",
+      en: "Four connections from firm to state",
+    },
+    note: {
+      ko: "미국과 중국은 기업의 역량을 국가 전략에 연결하는 서로 다른 방식을 보여준다.",
+      en: "The United States and China connect corporate capability to national strategy in different ways.",
+    },
     steps: [
-      step(
-        "기업 → 기술",
-        "Firm → technology",
-        "기업이 오래 살아남는 조건을 묻는 S06에서 출발합니다. 선은 기술적 우위라는 첫 질문에 도착합니다.",
-        "Begin with S06: what lets a firm endure? The line reaches the first question of technological advantage.",
-        "S06",
-      ),
-      step(
-        "기술 → 정체성",
-        "Technology → identity",
-        "같은 기술도 무엇을 위해 사용하는가에 따라 방향이 달라집니다. 정체성의 가지는 S14의 질문입니다.",
-        "Purpose changes the direction of the same capability. The identity branch opens S14’s question.",
-        "S14",
-      ),
-      step(
-        "데이터 · 계약 · 생산",
-        "Data · contracts · production",
-        "기업의 역량은 데이터, 계약, 생산 기반을 통해 더 큰 구조와 연결됩니다. 세 신호를 따로 따라가 보세요.",
-        "Follow three separate signals: data, contracts and productive capacity connect corporate capability to a larger structure.",
-        "S01",
-      ),
-      step(
-        "국가의 전략적 역량",
-        "National strategic capability",
-        "이 연결이 국가의 선택지로 확장됩니다. 이것은 분석의 틀이며, 특정 군사·외교 결과의 인과 증명은 아닙니다.",
-        "The connections expand into national options: an analytical framework, not proof of a particular military or diplomatic outcome.",
-        "S02",
-      ),
+      {
+        title: {
+          ko: "기술은 기업의 생존 조건이 된다",
+          en: "Technology can sustain a firm",
+        },
+        lead: {
+          ko: "기술적 우위는 기업이 경쟁력을 지키고 재투자할 수 있는 기반이다. S06의 기업 생존 연구는 이 조건을 사회적 책임과 함께 묻는다.",
+          en: "Technological advantage can support competitiveness and reinvestment. S06 examines that condition alongside the firm’s social responsibilities.",
+        },
+        facts: [
+          {
+            ko: "데이터 · 정보를 수집하고 판단에 연결하는 능력",
+            en: "Data · collecting information and putting it to use",
+          },
+          {
+            ko: "계약 · 공적 수요와 기업의 기술을 잇는 제도",
+            en: "Contracts · institutions connecting public demand and technology",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S06",
+      },
+      {
+        title: {
+          ko: "목적이 기술의 방향을 바꾼다",
+          en: "Purpose gives technology direction",
+        },
+        lead: {
+          ko: "기업이 무엇을 추구하는지에 따라 같은 기술의 쓰임도 달라진다. S14의 정체성 문제는 기업의 선택을 판단할 기준으로 이어진다.",
+          en: "The ends a firm pursues shape how its technology is used. S14’s inquiry into identity develops criteria for judging those choices.",
+        },
+        facts: [
+          {
+            ko: "계약 · 공적 수요와 기업의 기술을 잇는 제도",
+            en: "Contracts · institutions connecting public demand and technology",
+          },
+          {
+            ko: "생산 · 전략을 지속시키는 산업 기반",
+            en: "Production · the industrial capacity that sustains strategy",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S14",
+      },
+      {
+        title: {
+          ko: "데이터·계약·생산이 기업 밖을 잇는다",
+          en: "Data, contracts and production connect the firm",
+        },
+        lead: {
+          ko: "데이터는 판단에, 계약은 공적 수요에, 생산 기반은 지속적인 공급에 연결된다. 서로 다른 세 경로가 기업의 역량을 더 넓은 체계에 참여시킨다.",
+          en: "Data supports decisions, contracts connect public demand, and production enables continuing supply. These three routes connect corporate capabilities to larger systems.",
+        },
+        facts: [
+          {
+            ko: "생산 · 전략을 지속시키는 산업 기반",
+            en: "Production · the industrial capacity that sustains strategy",
+          },
+          {
+            ko: "데이터 · 정보를 수집하고 판단에 연결하는 능력",
+            en: "Data · collecting information and putting it to use",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S01",
+      },
+      {
+        title: {
+          ko: "연결된 역량이 국가의 선택지가 된다",
+          en: "Connected capabilities become national options",
+        },
+        lead: {
+          ko: "기업이 가진 기술과 생산 능력은 국가가 전략을 실행하는 데 필요한 기반이 된다. 내가 묻는 것은 이 결속을 가능하게 하는 제도와 그에 따르는 책임이다.",
+          en: "Corporate technology and production can form a foundation for national strategy. I ask which institutions make that connection possible and what responsibilities follow.",
+        },
+        facts: [
+          {
+            ko: "데이터 · 정보를 수집하고 판단에 연결하는 능력",
+            en: "Data · collecting information and putting it to use",
+          },
+          {
+            ko: "계약 · 공적 수요와 기업의 기술을 잇는 제도",
+            en: "Contracts · institutions connecting public demand and technology",
+          },
+        ],
+        connection: {
+          ko: "미국과 중국은 기업의 역량을 국가 전략에 연결하는 서로 다른 방식을 보여준다.",
+          en: "The United States and China connect corporate capability to national strategy in different ways.",
+        },
+        source: "S02",
+      },
     ],
   },
   "us-mission": {
     group: "america",
-    title: words(
-      "요구에서 제품으로, 조달의 연결",
-      "From demand to product: procurement",
-    ),
-    note: words(
-      "분석 구조 · 계약 한도·발주액·매출은 서로 다릅니다.",
-      "Analytical structure · ceilings, orders and revenue are different.",
-    ),
+    title: {
+      ko: "수요에서 개발로, 사용에서 개선으로",
+      en: "Demand, development and feedback",
+    },
+    note: {
+      ko: "개별 기업의 기술을 하나의 체계로 묶으면 국가 프로젝트의 문제가 된다.",
+      en: "Connecting separate firms’ technologies brings us to the scale of a national system.",
+    },
     steps: [
-      step(
-        "공적 요구",
-        "Public demand",
-        "정부의 요구가 기업의 기술과 만납니다. Palantir·Anduril의 사명과 조달 관계를 함께 읽습니다.",
-        "Public demand meets corporate technology. Read Palantir and Anduril’s stated missions alongside procurement.",
-        "S00",
-      ),
-      step(
-        "제품 개발",
-        "Product development",
-        "조달은 반복 수요와 개발 기회를 제공할 수 있습니다. 계약의 존재만으로 철학적 충성심의 효과를 입증하지는 않습니다.",
-        "Procurement can offer recurring demand and development opportunities. A contract alone does not prove the effect of philosophical loyalty.",
-        "S02",
-      ),
-      step(
-        "사용 경험과 환류",
-        "Use and feedback",
-        "운영 경험이 다음 개발 질문으로 돌아오는 개념적 연결입니다. 실제 성과 수치를 만들어 넣지 않습니다.",
-        "Operational experience returns as a conceptual feedback path to development, without invented performance figures.",
-        "S01",
-      ),
+      {
+        title: {
+          ko: "정부의 수요가 기술과 만난다",
+          en: "Public demand meets technology",
+        },
+        lead: {
+          ko: "Palantir의 데이터 분석과 Anduril의 국방 기술은 정부의 안보 수요와 연결된다. S00은 기업이 내세우는 사명과 실제 조달 관계를 함께 읽는다.",
+          en: "Palantir’s data analysis and Anduril’s defense technology meet public security needs. S00 reads their stated missions alongside procurement relationships.",
+        },
+        facts: [
+          {
+            ko: "Palantir · 데이터 분석과 의사결정",
+            en: "Palantir · data analysis and decision-making",
+          },
+          {
+            ko: "Anduril · 국방 기술과 제품 개발",
+            en: "Anduril · defense technology and product development",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "계약이 제품 개발의 조건이 된다",
+          en: "Contracts shape product development",
+        },
+        lead: {
+          ko: "공적 수요와 계약은 기업이 기술을 개발하고 제품을 개선할 수 있는 사업 조건을 만든다. 이 관계에서는 수요의 지속성과 기업의 개발 능력이 함께 중요하다.",
+          en: "Public demand and contracts help shape the conditions for development and improvement. Both continuing demand and a firm’s ability to develop products matter.",
+        },
+        facts: [
+          {
+            ko: "Anduril · 국방 기술과 제품 개발",
+            en: "Anduril · defense technology and product development",
+          },
+          {
+            ko: "정부 조달 · 수요, 계약, 사용 경험의 연결",
+            en: "Procurement · demand, contracts and operational feedback",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S02",
+      },
+      {
+        title: {
+          ko: "사용 경험이 다음 개발로 돌아온다",
+          en: "Operational experience informs development",
+        },
+        lead: {
+          ko: "제품의 사용 경험은 새로운 요구와 개선 과제로 이어진다. 정부와 기업의 관계는 발주와 납품을 넘어 반복적인 개발 과정으로 확장된다.",
+          en: "Experience with a product creates new requirements and improvements. The government–firm relationship extends beyond an order and delivery into an ongoing development process.",
+        },
+        facts: [
+          {
+            ko: "정부 조달 · 수요, 계약, 사용 경험의 연결",
+            en: "Procurement · demand, contracts and operational feedback",
+          },
+          {
+            ko: "Palantir · 데이터 분석과 의사결정",
+            en: "Palantir · data analysis and decision-making",
+          },
+        ],
+        connection: {
+          ko: "개별 기업의 기술을 하나의 체계로 묶으면 국가 프로젝트의 문제가 된다.",
+          en: "Connecting separate firms’ technologies brings us to the scale of a national system.",
+        },
+        source: "S01",
+      },
     ],
   },
   "us-dome": {
     group: "america",
-    title: words("감지 → 통합 → 판단", "Sense → integrate → decide"),
-    note: words(
-      "S03·S13의 체계 구상 · 실제 배치나 기업 수주 확정이 아닙니다.",
-      "A system concept in S03 / S13, not confirmed deployment or awards.",
-    ),
+    title: {
+      ko: "감지·통합·판단·대응",
+      en: "Sense, integrate, decide, respond",
+    },
+    note: {
+      ko: "기업과 국가의 연결은 방어 체계뿐 아니라 금융에서도 나타난다.",
+      en: "The state–firm relationship also operates through finance.",
+    },
     steps: [
-      step(
-        "서로 다른 감지",
-        "Separate observations",
-        "위성과 레이더의 신호는 서로 다른 곳에서 시작합니다. 센서가 존재한다는 것만으로 하나의 체계가 되지는 않습니다.",
-        "Satellite and radar signals start separately. Possessing sensors does not by itself create one system.",
-        "S13",
-      ),
-      step(
-        "공통 의미 계층",
-        "A shared meaning layer",
-        "신호가 데이터 통합 지점으로 모입니다. 서로 다른 기술을 같은 판단에 사용할 수 있도록 연결하는 단계입니다.",
-        "Signals meet at data integration: connecting distinct technologies so they can inform a common decision.",
-        "S03",
-      ),
-      step(
-        "판단과 대응의 연결",
-        "Connect decision and response",
-        "통합된 정보를 지휘·판단·대응으로 잇습니다. 노드를 선택해 원문의 제안된 역할을 확인하세요.",
-        "Connect integrated information to command, decision and response. Select a node to read the proposed roles in context.",
-        "S13",
-      ),
+      {
+        title: {
+          ko: "서로 다른 센서가 정보를 모은다",
+          en: "Different sensors collect information",
+        },
+        lead: {
+          ko: "위성과 레이더는 서로 다른 위치와 방식으로 정보를 수집한다. Golden Dome 구상의 출발점은 이 감지 역량을 하나의 방어 목표 아래 연결하는 일이다.",
+          en: "Satellites and radar collect information from different locations and through different methods. The Golden Dome concept begins by connecting these capabilities to a shared defense objective.",
+        },
+        facts: [
+          {
+            ko: "감지 · 위성과 레이더",
+            en: "Sensing · satellites and radar",
+          },
+          {
+            ko: "통합 · 서로 다른 정보를 같은 판단에 활용",
+            en: "Integration · making different information usable together",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S13",
+      },
+      {
+        title: {
+          ko: "데이터 통합이 공동 판단을 돕는다",
+          en: "Data integration supports a shared assessment",
+        },
+        lead: {
+          ko: "감지된 정보가 같은 체계에서 활용되어야 판단에 쓰일 수 있다. S03과 S13은 서로 다른 기술을 묶는 통합의 역할에 주목한다.",
+          en: "Collected information needs to be usable within a shared system. S03 and S13 emphasize the role of integration in bringing distinct technologies together.",
+        },
+        facts: [
+          {
+            ko: "통합 · 서로 다른 정보를 같은 판단에 활용",
+            en: "Integration · making different information usable together",
+          },
+          {
+            ko: "판단과 대응 · 체계 구상 속 역할의 연결",
+            en: "Decision and response · roles within a proposed system",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S03",
+      },
+      {
+        title: {
+          ko: "판단과 대응이 체계로 이어진다",
+          en: "Decisions connect to responses",
+        },
+        lead: {
+          ko: "통합된 정보는 지휘와 판단, 대응 수단의 연결로 이어진다. 이 구상에서 중요한 것은 개별 기술의 성능과 기술 사이의 연결을 함께 설계하는 일이다.",
+          en: "Integrated information connects command, decisions and response capabilities. The system concept concerns both individual technologies and the relationships between them.",
+        },
+        facts: [
+          {
+            ko: "판단과 대응 · 체계 구상 속 역할의 연결",
+            en: "Decision and response · roles within a proposed system",
+          },
+          {
+            ko: "감지 · 위성과 레이더",
+            en: "Sensing · satellites and radar",
+          },
+        ],
+        connection: {
+          ko: "기업과 국가의 연결은 방어 체계뿐 아니라 금융에서도 나타난다.",
+          en: "The state–firm relationship also operates through finance.",
+        },
+        source: "S13",
+      },
     ],
   },
   "us-finance": {
     group: "america",
-    title: words(
-      "발행과 상환, 서로 다른 방향",
-      "Issuance and redemption run in different directions",
-    ),
-    note: words(
-      "작동 원리 개략도 · 실제 준비자산 비율·독점 보장 아님",
-      "Mechanism schematic · not reserve proportions or a monopoly guarantee",
-    ),
+    title: {
+      ko: "달러·준비자산·토큰의 순환",
+      en: "Dollars, reserves and tokens",
+    },
+    note: {
+      ko: "금융망이 자본의 흐름을 지탱한다면, 조선업은 전략을 실행할 물리적 기반을 묻는다.",
+      en: "Where finance supports capital flows, shipbuilding raises the question of physical capacity.",
+    },
     steps: [
-      step(
-        "법정화폐와 발행자",
-        "Fiat and issuer",
-        "달러 연동 토큰은 발행자의 준비와 상환 구조를 함께 살펴야 합니다.",
-        "Read a dollar-linked token together with its issuer’s reserve and redemption structure.",
-        "S05",
-      ),
-      step(
-        "준비자산",
-        "Reserve assets",
-        "원문은 Tether의 준비자산과 미 국채를 금융 영향력의 질문으로 연결합니다.",
-        "The source connects Tether’s reserves and Treasuries to a question of monetary influence.",
-        "S00",
-      ),
-      step(
-        "토큰과 상환",
-        "Token and redemption",
-        "발행·상환 선택으로 반대 방향의 연결을 살펴봅니다. 국채 보유가 면책이나 독점권을 뜻하지는 않습니다.",
-        "Switch between issuance and redemption to follow opposite directions. Treasury holdings do not establish immunity or monopoly rights.",
-        "S05",
-      ),
+      {
+        title: {
+          ko: "이용자와 발행자를 잇는 달러",
+          en: "Dollars connect holders and the issuer",
+        },
+        lead: {
+          ko: "USDT의 구조는 이용자의 달러와 발행자의 토큰을 연결한다. 토큰에 대한 신뢰는 발행 이후의 상환 능력과 함께 형성된다.",
+          en: "USDT connects holders’ dollars with tokens issued by Tether. Confidence in the token depends in part on the ability to redeem it.",
+        },
+        facts: [
+          {
+            ko: "발행·상환 · 이용자와 발행자의 거래",
+            en: "Issuance and redemption · the holder–issuer relationship",
+          },
+          {
+            ko: "준비자산 · 상환 능력을 뒷받침하는 자산",
+            en: "Reserves · assets supporting redemption",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S05",
+      },
+      {
+        title: {
+          ko: "준비자산이 기업과 국가 금융을 잇는다",
+          en: "Reserves connect corporate and public finance",
+        },
+        lead: {
+          ko: "S00은 Tether의 준비자산 중 미국 국채가 차지하는 역할에 주목한다. 기업의 자산 운용이 국채 수요와 달러 금융망의 문제로 확장되는 지점이다.",
+          en: "S00 focuses on the role of U.S. Treasuries in Tether’s reserves. Corporate asset management becomes connected with demand for public debt and dollar-based finance.",
+        },
+        facts: [
+          {
+            ko: "준비자산 · 상환 능력을 뒷받침하는 자산",
+            en: "Reserves · assets supporting redemption",
+          },
+          {
+            ko: "미국 국채 · 기업의 자산 운용과 국가 금융의 접점",
+            en: "U.S. Treasuries · a meeting point of corporate assets and public finance",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "상환 가능성이 금융 신뢰를 지탱한다",
+          en: "Redemption supports financial trust",
+        },
+        lead: {
+          ko: "이용자의 토큰과 발행자의 준비자산은 상환 관계로 다시 만난다. S05의 신뢰 문제는 S00에서 달러의 국제적 통용이라는 질문으로 이어진다.",
+          en: "Tokens and reserve assets meet again through redemption. S05’s question of trust develops into S00’s inquiry into the international use of the dollar.",
+        },
+        facts: [
+          {
+            ko: "미국 국채 · 기업의 자산 운용과 국가 금융의 접점",
+            en: "U.S. Treasuries · a meeting point of corporate assets and public finance",
+          },
+          {
+            ko: "발행·상환 · 이용자와 발행자의 거래",
+            en: "Issuance and redemption · the holder–issuer relationship",
+          },
+        ],
+        connection: {
+          ko: "금융망이 자본의 흐름을 지탱한다면, 조선업은 전략을 실행할 물리적 기반을 묻는다.",
+          en: "Where finance supports capital flows, shipbuilding raises the question of physical capacity.",
+        },
+        source: "S05",
+      },
     ],
   },
   "us-ships": {
     group: "america",
-    title: words(
-      "법령·발주·시설에서 산업 기반으로",
-      "From law, orders and facilities to capacity",
-    ),
-    note: words(
-      "제도적 연결 · 예산 배정과 생산 결과는 구분합니다.",
-      "Institutional connections · appropriations and output are distinct.",
-    ),
+    title: {
+      ko: "제도·발주·생산의 연결",
+      en: "Rules, orders and production",
+    },
+    note: {
+      ko: "중국 사례에서는 기업의 소유 관계와 해외 사업을 통해 또 다른 결속 방식을 살핀다.",
+      en: "The Chinese cases reveal another form of coordination through ownership and overseas projects.",
+    },
     steps: [
-      step(
-        "제도",
-        "Institution",
-        "존스법과 관련 정책을 시장이 작동하는 조건으로 읽습니다.",
-        "Read the Jones Act and related policy as conditions under which a market operates.",
-        "S00",
-      ),
-      step(
-        "발주와 시설",
-        "Orders and facilities",
-        "발주·투자와 조선소의 생산 기반이 만나는 연결을 그립니다.",
-        "Follow the connection between orders, investment and shipyard capacity.",
-        "S00",
-      ),
-      step(
-        "국가의 선택지",
-        "National options",
-        "산업 기반은 전략적 선택과 연결됩니다. 예산만으로 실제 생산 능력 향상을 단정하지 않습니다.",
-        "Industrial capacity connects to strategic options. Funding alone does not establish increased output.",
-        "S02",
-      ),
+      {
+        title: {
+          ko: "법이 시장의 조건을 정한다",
+          en: "Law shapes market conditions",
+        },
+        lead: {
+          ko: "존스법은 미국 연안 운송이 이루어지는 제도적 조건을 규정한다. S00은 이러한 조건을 조선업의 유지와 국가 전략의 관점에서 살핀다.",
+          en: "The Jones Act sets conditions for U.S. coastwise trade. S00 examines those conditions in relation to shipbuilding and national strategy.",
+        },
+        facts: [
+          {
+            ko: "존스법 · 미국 연안 운송의 제도적 조건",
+            en: "Jones Act · conditions governing U.S. coastwise trade",
+          },
+          {
+            ko: "발주·시설 · 수요와 조선소의 연결",
+            en: "Orders and facilities · connecting demand to shipyards",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "발주가 생산 기반과 만난다",
+          en: "Orders meet industrial capacity",
+        },
+        lead: {
+          ko: "공공 발주와 투자는 조선소의 설비, 인력, 생산 계획과 연결된다. 산업 역량은 지속적인 수요와 실제 생산 기반이 만나는 곳에서 유지된다.",
+          en: "Public orders and investment connect with shipyard facilities, labor and production planning. Industrial capability depends on the relationship between sustained demand and productive capacity.",
+        },
+        facts: [
+          {
+            ko: "발주·시설 · 수요와 조선소의 연결",
+            en: "Orders and facilities · connecting demand to shipyards",
+          },
+          {
+            ko: "산업 기반 · 장기적인 전략 수행 능력",
+            en: "Industrial capacity · the ability to sustain strategy",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "생산 능력이 전략의 지속성을 뒷받침한다",
+          en: "Production supports strategic continuity",
+        },
+        lead: {
+          ko: "선박을 지속적으로 만들고 유지할 수 있는 능력은 국가의 장기적인 선택지와 연결된다. 조선업은 기업 지원을 산업 기반의 문제로 읽게 하는 사례다.",
+          en: "The ability to build and maintain ships supports long-term national options. Shipbuilding brings the discussion of corporate support into the question of industrial capacity.",
+        },
+        facts: [
+          {
+            ko: "산업 기반 · 장기적인 전략 수행 능력",
+            en: "Industrial capacity · the ability to sustain strategy",
+          },
+          {
+            ko: "존스법 · 미국 연안 운송의 제도적 조건",
+            en: "Jones Act · conditions governing U.S. coastwise trade",
+          },
+        ],
+        connection: {
+          ko: "중국 사례에서는 기업의 소유 관계와 해외 사업을 통해 또 다른 결속 방식을 살핀다.",
+          en: "The Chinese cases reveal another form of coordination through ownership and overseas projects.",
+        },
+        source: "S02",
+      },
     ],
   },
   "korea-chips": {
     group: "korea",
-    title: words(
-      "하나의 기업, 여러 관할의 조건",
-      "One firm, conditions across jurisdictions",
-    ),
-    note: words(
-      "관련 위치와 제도 조건 · 실제 수송량·차단 결과 아님",
-      "Reference geography and institutional conditions, not shipment volumes or observed blocks",
-    ),
+    title: {
+      ko: "기술과 생산을 둘러싼 세 국가",
+      en: "Three jurisdictions around technology and production",
+    },
+    note: {
+      ko: "플랫폼에서도 기술의 출처, 기업의 소유, 실제 운영 권한을 함께 살펴야 한다.",
+      en: "Platforms also require us to consider the origins of technology alongside ownership and operational authority.",
+    },
     steps: [
-      step(
-        "기술과 장비",
-        "Technology and equipment",
-        "미국의 기술·장비와 수출통제 조건을 살핍니다.",
-        "Examine U.S. technology, equipment and export-control conditions.",
-        "S16",
-      ),
-      step(
-        "한국 기업",
-        "Korean firms",
-        "삼성·SK하이닉스는 기업의 기술과 여러 국가의 제도 사이에서 생산·투자 선택을 합니다.",
-        "Samsung and SK hynix face production and investment choices spanning technology and several legal systems.",
-        "S16",
-      ),
-      step(
-        "생산 거점과 허가",
-        "Production and permissions",
-        "중국의 생산 거점을 함께 놓으면 허가와 공급망 조건이 기업 내부의 선택과 만납니다.",
-        "Including production sites in China reveals how permissions and supply-chain conditions meet corporate choices.",
-        "S16",
-      ),
+      {
+        title: {
+          ko: "기술과 장비에는 제도적 조건이 따른다",
+          en: "Technology and equipment operate under rules",
+        },
+        lead: {
+          ko: "반도체 생산에는 기술과 장비의 이용 조건이 함께 작용한다. 미국의 수출통제는 한국 기업이 생산과 투자를 결정하는 환경의 일부다.",
+          en: "Semiconductor production depends on access to technology and equipment. U.S. export controls form part of the environment in which Korean firms make production and investment decisions.",
+        },
+        facts: [
+          {
+            ko: "기업 · 삼성전자·SK하이닉스",
+            en: "Companies · Samsung Electronics and SK hynix",
+          },
+          {
+            ko: "제도 · 기술·장비의 이전과 수출통제",
+            en: "Institutions · transfers of technology and equipment",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S16",
+      },
+      {
+        title: {
+          ko: "한국 기업은 여러 관할에서 선택한다",
+          en: "Korean firms make choices across jurisdictions",
+        },
+        lead: {
+          ko: "삼성전자와 SK하이닉스는 기술 경쟁력과 해외 생산 기반을 함께 관리한다. 기업의 선택은 한국의 산업 정책과 다른 국가의 제도 사이에 놓인다.",
+          en: "Samsung Electronics and SK hynix manage technological competition alongside overseas production. Their choices sit between Korean industrial policy and the rules of other jurisdictions.",
+        },
+        facts: [
+          {
+            ko: "제도 · 기술·장비의 이전과 수출통제",
+            en: "Institutions · transfers of technology and equipment",
+          },
+          {
+            ko: "생산 · 여러 국가에 걸친 공급망",
+            en: "Production · supply chains spanning several jurisdictions",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S16",
+      },
+      {
+        title: {
+          ko: "공급망이 기업과 국가의 문제를 묶는다",
+          en: "Supply chains connect corporate and national choices",
+        },
+        lead: {
+          ko: "생산시설과 기술의 관계를 함께 보면 기업의 경쟁력과 국가의 협상 조건이 연결된다. S16의 반도체 분석은 S00의 제도 설계 문제로 이어진다.",
+          en: "Reading production facilities together with technology connects firm competitiveness with national bargaining conditions. S16’s semiconductor inquiry feeds into S00’s question of institutional design.",
+        },
+        facts: [
+          {
+            ko: "생산 · 여러 국가에 걸친 공급망",
+            en: "Production · supply chains spanning several jurisdictions",
+          },
+          {
+            ko: "기업 · 삼성전자·SK하이닉스",
+            en: "Companies · Samsung Electronics and SK hynix",
+          },
+        ],
+        connection: {
+          ko: "플랫폼에서도 기술의 출처, 기업의 소유, 실제 운영 권한을 함께 살펴야 한다.",
+          en: "Platforms also require us to consider the origins of technology alongside ownership and operational authority.",
+        },
+        source: "S16",
+      },
     ],
   },
   "korea-platforms": {
     group: "korea",
-    title: words(
-      "기술·소유·관할을 분해해 보기",
-      "Separate technology, ownership and jurisdiction",
-    ),
-    note: words(
-      "구조 설명 · 외국인 지분만으로 데이터 유출·국가 통제를 입증하지 않습니다.",
-      "Structural explanation · foreign equity alone does not establish data leakage or state control.",
-    ),
+    title: {
+      ko: "기술·소유·관할의 세 층위",
+      en: "Technology, ownership and jurisdiction",
+    },
+    note: {
+      ko: "국내 규제를 살필 때도 정책의 목적과 기업이 대응하는 방식을 함께 읽어야 한다.",
+      en: "Domestic regulation likewise needs to be read together with the ways firms respond.",
+    },
     steps: [
-      step(
-        "기술과 운영",
-        "Technology and operation",
-        "서비스를 만든 기술과 실제 운영 주체를 먼저 구분합니다.",
-        "First distinguish the technology behind a service from the entity operating it.",
-        "S00",
-      ),
-      step(
-        "소유와 권한",
-        "Ownership and authority",
-        "주주 지분·의결권·운영 계약은 다른 종류의 권리입니다.",
-        "Equity, voting rights and operating agreements are distinct rights.",
-        "S00",
-      ),
-      step(
-        "규제 관할",
-        "Regulatory jurisdiction",
-        "LINE 사례를 어떤 국가의 어떤 제도가 적용되는가라는 질문으로 다시 봅니다.",
-        "Revisit LINE through the question of which jurisdiction and rules apply.",
-        "S05",
-      ),
+      {
+        title: {
+          ko: "기술과 운영의 주체를 살핀다",
+          en: "Identify technology and operational roles",
+        },
+        lead: {
+          ko: "서비스를 만드는 기술과 실제 운영 능력은 플랫폼의 기반이다. LINE 사례는 이 기반을 기업의 이름이나 국적보다 구체적인 역할로 나누어 살펴보게 한다.",
+          en: "Technology and operational capability form the basis of a platform. LINE invites an examination of those roles beyond the company’s name or nationality.",
+        },
+        facts: [
+          {
+            ko: "기술·운영 · 서비스를 실제로 유지하는 역량",
+            en: "Technology and operations · keeping a service running",
+          },
+          {
+            ko: "지분·권한 · 투자와 의사결정의 구조",
+            en: "Ownership and authority · investment and decision-making",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "지분과 의사결정의 구조를 읽는다",
+          en: "Read ownership and decision-making together",
+        },
+        lead: {
+          ko: "투자자의 지분과 기업의 실제 의사결정 권한은 함께 살펴야 할 항목이다. 누가 기술을 제공하고 누가 사업 방향을 정하는지를 나누면 관계가 더 선명해진다.",
+          en: "Equity and actual decision-making authority need to be examined together. Distinguishing who supplies technology from who sets business direction makes the relationship clearer.",
+        },
+        facts: [
+          {
+            ko: "지분·권한 · 투자와 의사결정의 구조",
+            en: "Ownership and authority · investment and decision-making",
+          },
+          {
+            ko: "규제 관할 · 감독과 책임을 묻는 주체",
+            en: "Jurisdiction · supervision and accountability",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "감독과 책임이 관할의 문제로 이어진다",
+          en: "Jurisdiction brings supervision and accountability",
+        },
+        lead: {
+          ko: "플랫폼의 운영과 데이터는 규제 관할의 문제로 이어진다. 이 세 층위를 함께 읽으면 기업과 국가의 관계를 기술·소유·책임의 결합으로 볼 수 있다.",
+          en: "Operations and data lead to questions of regulatory jurisdiction. Together, these layers reveal the relationship between technology, ownership and accountability.",
+        },
+        facts: [
+          {
+            ko: "규제 관할 · 감독과 책임을 묻는 주체",
+            en: "Jurisdiction · supervision and accountability",
+          },
+          {
+            ko: "기술·운영 · 서비스를 실제로 유지하는 역량",
+            en: "Technology and operations · keeping a service running",
+          },
+        ],
+        connection: {
+          ko: "국내 규제를 살필 때도 정책의 목적과 기업이 대응하는 방식을 함께 읽어야 한다.",
+          en: "Domestic regulation likewise needs to be read together with the ways firms respond.",
+        },
+        source: "S05",
+      },
     ],
   },
   "korea-regulation": {
     group: "korea",
-    title: words(
-      "정책 목적과 결과를 나란히",
-      "Place policy aims beside outcomes",
-    ),
-    note: words(
-      "S00의 정책 비판 · 개별 인과의 실증 완료가 아닙니다.",
-      "S00’s policy critique, not completed causal identification.",
-    ),
+    title: {
+      ko: "정책의 목적과 기업의 대응",
+      en: "Public objectives and corporate responses",
+    },
+    note: {
+      ko: "방산에서는 국가의 목표와 기업의 기술·생산 역량이 더욱 직접적으로 만난다.",
+      en: "Defense brings national objectives into a more direct relationship with corporate technology and production.",
+    },
     steps: [
-      step(
-        "목적과 법적 사건",
-        "Aims and legal events",
-        "타다·쿠팡·카카오를 같은 사건으로 묶지 않고 제도와 시점을 구분합니다.",
-        "Distinguish institutions and timing instead of merging Tada, Coupang and Kakao into one event.",
-        "S00",
-      ),
-      step(
-        "기업의 판단",
-        "Corporate decisions",
-        "법적 조건과 기업의 별도 전략 판단을 나누어 연결합니다.",
-        "Separate legal conditions from a firm’s own strategic decisions.",
-        "S14",
-      ),
-      step(
-        "분석된 결과",
-        "Interpreted outcomes",
-        "규제의 존재가 모든 시장 변화의 원인인 것은 아닙니다. 선은 저자가 제기한 질문을 보여줍니다.",
-        "Regulation’s existence does not explain every market change. The line shows the author’s question.",
-        "S00",
-      ),
+      {
+        title: {
+          ko: "정책이 해결하려는 문제에서 출발한다",
+          en: "Begin with the public objective",
+        },
+        lead: {
+          ko: "규제는 공적 문제에 대한 대응으로 등장한다. 타다·쿠팡·카카오 사례에서는 정책의 목적과 제도 변화의 맥락을 먼저 살핀다.",
+          en: "Regulation emerges in response to public problems. The cases of Tada, Coupang and Kakao begin with policy objectives and the context of institutional change.",
+        },
+        facts: [
+          {
+            ko: "사례 · 타다·쿠팡·카카오",
+            en: "Cases · Tada, Coupang and Kakao",
+          },
+          {
+            ko: "정책 · 공적 목적과 제도 변화",
+            en: "Policy · public objectives and institutional change",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "기업은 사업모델로 대응한다",
+          en: "Firms respond through their business models",
+        },
+        lead: {
+          ko: "기업은 규제 환경 안에서 서비스와 투자, 조직의 방향을 조정한다. 정책과 기업 전략을 함께 읽으면 같은 제도에 대한 서로 다른 대응이 드러난다.",
+          en: "Firms adjust services, investment and organization within a regulatory environment. Reading policy alongside strategy reveals different responses to the same institutional conditions.",
+        },
+        facts: [
+          {
+            ko: "정책 · 공적 목적과 제도 변화",
+            en: "Policy · public objectives and institutional change",
+          },
+          {
+            ko: "기업 · 사업모델과 대응 전략",
+            en: "Firms · business models and strategic responses",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S14",
+      },
+      {
+        title: {
+          ko: "제도와 경쟁력의 관계를 다시 묻는다",
+          en: "Reconsider institutions and competitiveness",
+        },
+        lead: {
+          ko: "S00은 한국의 규제 환경을 기업의 역량과 국가 전략이라는 관점에서 비판적으로 검토한다. 이 비교는 어떤 지원과 책임을 함께 설계할지의 질문으로 이어진다.",
+          en: "S00 critically examines Korea’s regulatory environment through corporate capability and national strategy. The comparison leads to the design of support and responsibility.",
+        },
+        facts: [
+          {
+            ko: "기업 · 사업모델과 대응 전략",
+            en: "Firms · business models and strategic responses",
+          },
+          {
+            ko: "사례 · 타다·쿠팡·카카오",
+            en: "Cases · Tada, Coupang and Kakao",
+          },
+        ],
+        connection: {
+          ko: "방산에서는 국가의 목표와 기업의 기술·생산 역량이 더욱 직접적으로 만난다.",
+          en: "Defense brings national objectives into a more direct relationship with corporate technology and production.",
+        },
+        source: "S00",
+      },
     ],
   },
   "korea-defense": {
     group: "korea",
-    title: words(
-      "생산·기술·수출을 전략으로 연결",
-      "Connect production, technology and exports to strategy",
-    ),
-    note: words(
-      "방산기업의 역할 비교 · 성과·예측치를 새로 추정하지 않습니다.",
-      "Comparing firms’ roles, without newly estimated performance or forecasts.",
-    ),
+    title: {
+      ko: "기업 역량에서 공적 기여로",
+      en: "From corporate capability to public contribution",
+    },
+    note: {
+      ko: "사례를 연결한 다음에는 그 연결을 어떤 자료와 방법으로 읽었는지 살펴볼 차례다.",
+      en: "Having connected the cases, I turn to the evidence and methods used to read them.",
+    },
     steps: [
-      step(
-        "기업의 역량",
-        "Corporate capability",
-        "한화·LIG 등의 기술과 생산 기반에서 출발합니다.",
-        "Start with technology and productive capacity, including Hanwha and LIG.",
-        "S11",
-      ),
-      step(
-        "사업과 수출",
-        "Business and exports",
-        "기업의 사업 구조와 수출 관계가 국가 목적과 어떻게 만나는지 묻습니다.",
-        "Ask how business structure and export relationships meet national aims.",
-        "S17",
-      ),
-      step(
-        "지원과 요구",
-        "Support and expectations",
-        "기업에 무엇을 허용하고 무엇을 요구할지의 질문으로 이어집니다. 정책이 성과의 원인이라는 증명과 구분합니다.",
-        "Move toward what firms should be allowed and expected to do, separately from proving policy caused performance.",
-        "S00",
-      ),
+      {
+        title: {
+          ko: "기술과 생산이 방산의 기반을 이룬다",
+          en: "Technology and production underpin defense capability",
+        },
+        lead: {
+          ko: "방산기업의 역량은 연구개발과 생산 기반이 함께 만들고 유지한다. 한화·LIG 등의 사례는 기술과 산업 능력을 연결해 읽는 출발점이다.",
+          en: "Defense capability is built through development and production together. Hanwha and LIG provide cases for examining the relationship between technological and industrial capacity.",
+        },
+        facts: [
+          {
+            ko: "역량 · 기술 개발·생산·수출",
+            en: "Capabilities · development, production and exports",
+          },
+          {
+            ko: "기업 분석 · S17의 재무 지표와 분석 방법",
+            en: "Firm analysis · S17’s financial indicators and methods",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S11",
+      },
+      {
+        title: {
+          ko: "수출이 기업과 국가의 관계를 넓힌다",
+          en: "Exports widen the state–firm relationship",
+        },
+        lead: {
+          ko: "방산 수출은 기업의 시장 확대와 국가 간 관계가 만나는 분야다. S17의 기업 지표 분석은 이 관계를 기업의 경영 조건에서 살펴보는 방법을 제공한다.",
+          en: "Defense exports connect market expansion with international relationships. S17’s financial indicators offer a way to examine the firms’ operating conditions within that relationship.",
+        },
+        facts: [
+          {
+            ko: "기업 분석 · S17의 재무 지표와 분석 방법",
+            en: "Firm analysis · S17’s financial indicators and methods",
+          },
+          {
+            ko: "정책 질문 · 지원의 조건과 공적 기여",
+            en: "Policy question · conditions for support and public contribution",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S17",
+      },
+      {
+        title: {
+          ko: "지원과 기여를 함께 설계한다",
+          en: "Design support and contribution together",
+        },
+        lead: {
+          ko: "국가가 기업의 기술과 생산을 지원한다면, 그 역량이 어떤 공적 기여로 이어질지도 물어야 한다. 방산 사례는 S00의 정책 제안을 구체적인 기업 역량과 연결한다.",
+          en: "Support for corporate technology and production raises the question of public contribution. Defense connects S00’s policy proposal with concrete corporate capabilities.",
+        },
+        facts: [
+          {
+            ko: "정책 질문 · 지원의 조건과 공적 기여",
+            en: "Policy question · conditions for support and public contribution",
+          },
+          {
+            ko: "역량 · 기술 개발·생산·수출",
+            en: "Capabilities · development, production and exports",
+          },
+        ],
+        connection: {
+          ko: "사례를 연결한 다음에는 그 연결을 어떤 자료와 방법으로 읽었는지 살펴볼 차례다.",
+          en: "Having connected the cases, I turn to the evidence and methods used to read them.",
+        },
+        source: "S00",
+      },
     ],
   },
   "spatial-method": {
     group: "method",
-    title: words(
-      "같은 자료, 달라지는 분석 단위",
-      "Same material, different units of analysis",
-    ),
-    note: words(
-      "방법 설명 · 제공되지 않은 시설 경계·항적·주성분 좌표는 생성하지 않습니다.",
-      "Method schematic · no invented site boundaries, tracks or principal-component coordinates.",
-    ),
+    title: {
+      ko: "기록에서 비교와 해석으로",
+      en: "From records to comparison and interpretation",
+    },
+    note: {
+      ko: "방법이 다른 연구들을 다시 모으면, 국가와 기업의 관계를 묻는 하나의 논증이 된다.",
+      en: "Bringing these different methods together develops a shared argument about the state and the firm.",
+    },
     steps: [
-      step(
-        "개별 기록",
-        "Individual records",
-        "기업·시설·사건을 개별 기록으로 살펴봅니다.",
-        "Begin with firms, facilities and events as individual records.",
-        "S15",
-      ),
-      step(
-        "시간과 공간",
-        "Time and space",
-        "시간·공간을 함께 놓으면 개별 사건 사이의 새로운 질문이 생깁니다.",
-        "Aligning time and space raises new questions between individual events.",
-        "S08",
-      ),
-      step(
-        "보고와 해석",
-        "Reporting and interpretation",
-        "비교 슬라이더로 보고된 내용과 저자의 해석을 구분합니다. 자료가 추가되었다는 이유만으로 통제나 의도가 증명되지는 않습니다.",
-        "Use the comparison slider to separate reported material from interpretation. More connections do not by themselves prove control or intent.",
-        "S15",
-      ),
-      step(
-        "여섯 지표, 두 분석 축",
-        "Six indicators, two analytical axes",
-        "S17의 PCA가 여러 지표를 압축하는 방법을 개념적으로 보여줍니다. 실제 로딩·좌표·순위를 표시하는 그래프가 아닙니다.",
-        "A conceptual view of S17’s PCA compression, not a chart of estimated loadings, coordinates or rankings.",
-        "S17",
-      ),
+      {
+        title: {
+          ko: "기록 하나에서 질문을 시작한다",
+          en: "Start with an individual record",
+        },
+        lead: {
+          ko: "기업, 시설, 사건은 각각 연구의 출발점이 된다. 기록의 주체와 장소, 시점을 정리하면 비교할 항목이 생긴다.",
+          en: "A firm, facility or event can become a starting point for inquiry. Identifying actors, places and dates creates the basis for comparison.",
+        },
+        facts: [
+          {
+            ko: "공간 분석 · 행위자·장소·시간을 함께 비교",
+            en: "Spatial analysis · comparing actors, places and times",
+          },
+          {
+            ko: "자료와 해석 · 기록에서 논증으로",
+            en: "Evidence and interpretation · from records to an argument",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S15",
+      },
+      {
+        title: {
+          ko: "시간과 공간을 같은 기준에 놓는다",
+          en: "Align records in time and space",
+        },
+        lead: {
+          ko: "서로 다른 기록을 같은 시간과 공간에 놓으면 별개로 보이던 활동 사이의 관계를 살필 수 있다. S08과 S15는 이러한 비교가 만들어 내는 질문을 다룬다.",
+          en: "Aligning records in time and space allows relationships between apparently separate activities to be examined. S08 and S15 explore the questions that emerge from that comparison.",
+        },
+        facts: [
+          {
+            ko: "자료와 해석 · 기록에서 논증으로",
+            en: "Evidence and interpretation · from records to an argument",
+          },
+          {
+            ko: "PCA · 여섯 지표의 정보를 적은 수의 축으로 압축",
+            en: "PCA · reducing several indicators to fewer analytical axes",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S08",
+      },
+      {
+        title: {
+          ko: "기록을 해석으로 연결한다",
+          en: "Develop an interpretation from records",
+        },
+        lead: {
+          ko: "자료는 어떤 사건이 기록되어 있는지를 보여주고, 해석은 그 관계가 왜 중요한지를 묻는다. 연구의 논증은 이 둘을 연결하면서 발전한다.",
+          en: "Evidence describes what has been recorded; interpretation asks why a relationship matters. An argument develops by bringing the two into conversation.",
+        },
+        facts: [
+          {
+            ko: "PCA · 여섯 지표의 정보를 적은 수의 축으로 압축",
+            en: "PCA · reducing several indicators to fewer analytical axes",
+          },
+          {
+            ko: "공간 분석 · 행위자·장소·시간을 함께 비교",
+            en: "Spatial analysis · comparing actors, places and times",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S15",
+      },
+      {
+        title: {
+          ko: "여섯 지표에서 비교의 축을 찾는다",
+          en: "Find comparative axes across six indicators",
+        },
+        lead: {
+          ko: "S17은 성장률, 수익성, 연구개발 등 여러 기업 지표를 함께 분석한다. PCA는 서로 연관된 지표의 정보를 적은 수의 축으로 묶어 비교를 돕는 방법이다.",
+          en: "S17 examines indicators including growth, profitability and research spending. PCA summarizes information across related variables into fewer axes to support comparison.",
+        },
+        facts: [
+          {
+            ko: "공간 분석 · 행위자·장소·시간을 함께 비교",
+            en: "Spatial analysis · comparing actors, places and times",
+          },
+          {
+            ko: "자료와 해석 · 기록에서 논증으로",
+            en: "Evidence and interpretation · from records to an argument",
+          },
+        ],
+        connection: {
+          ko: "방법이 다른 연구들을 다시 모으면, 국가와 기업의 관계를 묻는 하나의 논증이 된다.",
+          en: "Bringing these different methods together develops a shared argument about the state and the firm.",
+        },
+        source: "S17",
+      },
     ],
   },
   synthesis: {
     group: "synthesis",
-    title: words(
-      "서로 다른 연구가 논증으로 모이다",
-      "Distinct studies converge into an argument",
-    ),
-    note: words(
-      "연구의 기여 관계 · 모든 사례의 인과가 입증됐다는 뜻은 아닙니다.",
-      "Contributions to an argument, not proof of every causal claim.",
-    ),
+    title: {
+      ko: "서로 다른 연구가 하나의 질문으로",
+      en: "Different studies, one shared question",
+    },
+    note: {
+      ko: "내가 남기는 질문은 지원의 크기보다 그 조건이다. 기업의 역량이 공적 기여로 이어지도록 어떤 책임과 견제 장치를 설계할 것인가.",
+      en: "My remaining question concerns the conditions of support more than its scale. What responsibilities and checks can connect corporate capability with public contribution?",
+    },
     steps: [
-      step(
-        "다른 역할",
-        "Distinct roles",
-        "각 연구는 출발 질문·안보·금융·공간·산업 정책에서 서로 다른 역할을 맡습니다.",
-        "Each study contributes a different role: origins, security, finance, space or industrial policy.",
-        "S06",
-      ),
-      step(
-        "관점을 선택하기",
-        "Choose a perspective",
-        "기술·정체성·국가 전략을 선택하면 관련 연구와 연결 이유가 강조됩니다.",
-        "Choose technology, identity or state strategy to highlight relevant studies and their contributions.",
-        "S14",
-      ),
-      step(
-        "S00으로 합류",
-        "Converge on S00",
-        "가지의 선이 S00으로 모이지만 연구 각각의 제목과 반론은 그대로 남습니다.",
-        "Branches meet at S00, while the studies retain their identities and counterarguments.",
-        "S00",
-      ),
-      step(
-        "제안과 남은 질문",
-        "Proposal and open questions",
-        "국가–기업 관계에 대한 제안과 검증 과제를 함께 읽습니다. 원문에서 앞뒤 문맥까지 확인하세요.",
-        "Read the proposed state–firm relationship alongside open questions, then follow the full source context.",
-        "S00",
-      ),
+      {
+        title: {
+          ko: "각 연구가 다른 질문을 맡는다",
+          en: "Each study contributes a different question",
+        },
+        lead: {
+          ko: "기업의 존속, 정체성, 현대전, 금융, 공간과 산업 정책은 서로 다른 자료와 방법에서 출발한다. 각 연구의 역할을 따라가면 하나의 논증이 만들어지는 과정을 읽을 수 있다.",
+          en: "Resilience, identity, warfare, finance, space and industrial policy begin with different materials and methods. Their contributions show how a shared argument takes shape.",
+        },
+        facts: [
+          {
+            ko: "출발 질문 · 기업의 존속과 기술의 목적",
+            en: "Starting questions · corporate resilience and technological purpose",
+          },
+          {
+            ko: "비교 · 미국·중국·한국의 서로 다른 결속 방식",
+            en: "Comparison · different forms of state–firm coordination",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S06",
+      },
+      {
+        title: {
+          ko: "기술·정체성·전략으로 다시 읽는다",
+          en: "Read through technology, identity and strategy",
+        },
+        lead: {
+          ko: "세 관점은 같은 연구를 서로 다르게 연결한다. 기술은 역량의 작동 방식을, 정체성은 목적을, 전략은 기업과 국가의 결속을 묻는다.",
+          en: "The three perspectives connect the studies in different ways. Technology concerns how capability works, identity concerns purpose, and strategy concerns the relationship between firm and state.",
+        },
+        facts: [
+          {
+            ko: "비교 · 미국·중국·한국의 서로 다른 결속 방식",
+            en: "Comparison · different forms of state–firm coordination",
+          },
+          {
+            ko: "제안 · 지원, 기여, 책임을 함께 설계",
+            en: "Proposal · designing support, contribution and accountability together",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S14",
+      },
+      {
+        title: {
+          ko: "연구의 질문들이 S00으로 모인다",
+          en: "The questions converge in S00",
+        },
+        lead: {
+          ko: "S00은 앞선 연구에서 나온 질문을 국가와 기업의 관계라는 틀에 모은다. 내가 주목하는 것은 기업의 힘을 국가가 어떤 제도로 연결하고 어떤 책임을 요구할 것인가이다.",
+          en: "S00 brings the earlier questions into a framework for state–firm relations. I focus on the institutions that connect corporate power with the state and the responsibilities that follow.",
+        },
+        facts: [
+          {
+            ko: "제안 · 지원, 기여, 책임을 함께 설계",
+            en: "Proposal · designing support, contribution and accountability together",
+          },
+          {
+            ko: "출발 질문 · 기업의 존속과 기술의 목적",
+            en: "Starting questions · corporate resilience and technological purpose",
+          },
+        ],
+        connection: {
+          ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
+          en: "This connection asks how corporate capability participates in national choices.",
+        },
+        source: "S00",
+      },
+      {
+        title: {
+          ko: "공적 기여를 지원의 조건으로 묻는다",
+          en: "Ask what public contribution support should require",
+        },
+        lead: {
+          ko: "기업에 제공되는 지원과 기업이 감당할 책임은 함께 설계되어야 한다. 이 제안은 기술적 기여, 공정한 경쟁과 권리 보호를 같은 정책 질문으로 연결한다.",
+          en: "Support and corporate responsibility should be designed together. The proposal connects technological contribution, fair competition and the protection of rights within one policy question.",
+        },
+        facts: [
+          {
+            ko: "출발 질문 · 기업의 존속과 기술의 목적",
+            en: "Starting questions · corporate resilience and technological purpose",
+          },
+          {
+            ko: "비교 · 미국·중국·한국의 서로 다른 결속 방식",
+            en: "Comparison · different forms of state–firm coordination",
+          },
+        ],
+        connection: {
+          ko: "내가 남기는 질문은 지원의 크기보다 그 조건이다. 기업의 역량이 공적 기여로 이어지도록 어떤 책임과 견제 장치를 설계할 것인가.",
+          en: "My remaining question concerns the conditions of support more than its scale. What responsibilities and checks can connect corporate capability with public contribution?",
+        },
+        source: "S00",
+      },
     ],
   },
 };

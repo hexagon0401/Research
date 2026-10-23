@@ -152,6 +152,11 @@ export function EssayExperience({
               offset: current.getBoundingClientRect().top,
               beat: current.closest("[data-essay-beat]")?.id ?? current.id,
               lang,
+              openDetails: Array.from(
+                root.current?.querySelectorAll<HTMLDetailsElement>(
+                  "details[id][open]",
+                ) ?? [],
+              ).map((el) => el.id),
             }),
           );
           sessionStorage.setItem("iir-essay-resume", "true");
@@ -160,6 +165,13 @@ export function EssayExperience({
     const restore = () => {
       try {
         if (sessionStorage.getItem("iir-essay-resume") !== "true") return;
+        const saved = JSON.parse(
+          sessionStorage.getItem("iir-essay-return") ?? "null",
+        );
+        for (const id of saved?.openDetails ?? []) {
+          const detail = document.getElementById(id);
+          if (detail instanceof HTMLDetailsElement) detail.open = true;
+        }
         const motion = JSON.parse(
           sessionStorage.getItem("iir-motion-return") ?? "null",
         );
@@ -170,9 +182,6 @@ export function EssayExperience({
             return;
           }
         }
-        const saved = JSON.parse(
-          sessionStorage.getItem("iir-essay-return") ?? "null",
-        );
         if (
           !saved ||
           (location.hash &&
@@ -181,6 +190,12 @@ export function EssayExperience({
           return;
         const target = document.getElementById(saved.anchor);
         if (target) {
+          for (
+            let parent = target.parentElement;
+            parent;
+            parent = parent.parentElement
+          )
+            if (parent instanceof HTMLDetailsElement) parent.open = true;
           restoredAnchor.current = saved.anchor;
           returnPoint.current = { id: saved.anchor, offset: saved.offset };
           if (root.current) root.current.dataset.positionManaged = "true";
@@ -404,9 +419,9 @@ export function EssayExperience({
     };
   }, [scenes, lang, reduced]);
   useEffect(() => {
-    const requested = location.hash
+    let requested = location.hash
       ? decodeURIComponent(location.hash.slice(1))
-      : new URLSearchParams(location.search).get("scene");
+      : (new URLSearchParams(location.search).get("scene") ?? "");
     if (
       !requested ||
       sessionStorage.getItem("iir-essay-resume") === "true" ||
@@ -437,12 +452,19 @@ export function EssayExperience({
     };
     for (const type of ["wheel", "touchstart", "pointerdown", "keydown"])
       window.addEventListener(type, stop, { once: true, passive: true });
+    const hashChange = () => {
+      requested = decodeURIComponent(location.hash.slice(1));
+      live = true;
+      settle();
+    };
+    window.addEventListener("hashchange", hashChange);
     window.addEventListener("iir:scene-layout", settle);
     document.fonts.ready.then(settle);
     document.fonts.addEventListener("loadingdone", settle);
     settle();
     return () => {
       stop();
+      window.removeEventListener("hashchange", hashChange);
       window.removeEventListener("iir:scene-layout", settle);
       document.fonts.removeEventListener("loadingdone", settle);
       for (const type of ["wheel", "touchstart", "pointerdown", "keydown"])
