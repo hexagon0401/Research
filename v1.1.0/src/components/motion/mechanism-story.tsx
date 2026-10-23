@@ -6,6 +6,7 @@ import { usePretext } from "../use-pretext";
 import type { SceneMeta } from "../essay-experience";
 import { mechanisms, mechanismGraph } from "@/visuals/mechanisms";
 import { contributionLabels, studySpines } from "@/visuals/story";
+import { researchConnections } from "@/content/research-connections";
 import { clamp, loadMotion, nearScene } from "./runtime";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
@@ -20,6 +21,8 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
     diagram = useRef<HTMLDivElement>(null),
     selectedPanel = useRef<HTMLDivElement>(null),
     lastTrigger = useRef<HTMLElement | null>(null);
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
   const [active, setActive] = useState(0),
     [selected, setSelected] = useState<string | null>(null),
     [direction, setDirection] = useState(false),
@@ -31,7 +34,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
   useEffect(() => {
     const el = diagram.current;
     if (!el || !engine) return;
-    const font = `500 14px ${getComputedStyle(el).fontFamily}`;
+
     const measure = () => {
       engine.setLocale(lang);
       el.querySelectorAll<HTMLElement>("[data-graph-node]").forEach((node) => {
@@ -39,6 +42,8 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           graph.nodes.find((n) => n.id === node.dataset.graphNode)?.label[
             lang
           ] ?? "";
+        const style = getComputedStyle(node);
+        const font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
         const prepared = engine.prepare(label, font, {
           wordBreak: lang === "ko" ? "keep-all" : "normal",
         });
@@ -143,6 +148,20 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
                 2,
               );
             }
+            el.querySelectorAll<SVGPathElement>("[data-pca-edge]").forEach(
+              (path, i) =>
+                tl.fromTo(
+                  path,
+                  { strokeDashoffset: 1 },
+                  {
+                    strokeDashoffset: 0,
+                    autoRound: false,
+                    duration: 0.3,
+                    ease: "none",
+                  },
+                  3 + i * 0.06,
+                ),
+            );
             tl.to({}, { duration: 0.01 }, total - 0.01);
             const update = (v: number) => {
               progress.current = v;
@@ -165,7 +184,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
             const mm = gsap.matchMedia();
             if (scene.id === "us-dome")
               mm.add("(min-width:1024px) and (min-height:700px)", () => {
-                const stage = diagram.current!;
+                const stage = el.querySelector<HTMLElement>(".mechanism-body")!;
                 if (stage.offsetHeight > innerHeight - 120) return;
                 el.dataset.domePinned = "true";
                 const t = ScrollTrigger.create({
@@ -217,9 +236,11 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
   };
   const sourceURL = (source: string) =>
     scene.targets?.[source] ?? `/reports/${source}?from=${scene.id}`;
+  const selectedIndex =
+    graph.nodes.find((n) => n.id === selected)?.step ?? active;
   const selectedSource = selected?.startsWith("S")
     ? selected
-    : spec.steps[Math.min(active, spec.steps.length - 1)].source;
+    : spec.steps[Math.min(selectedIndex, spec.steps.length - 1)].source;
   const pathFor = (from: string, to: string, feedback?: boolean) => {
     const a = graph.nodes.find((n) => n.id === from)!,
       b = graph.nodes.find((n) => n.id === to)!;
@@ -258,6 +279,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           {[false, true].map((v) => (
             <button
               key={String(v)}
+              disabled={!hydrated}
               aria-pressed={direction === v}
               onClick={() => setDirection(v)}
             >
@@ -280,6 +302,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           {["all", "technology", "identity", "strategy"].map((v) => (
             <button
               key={v}
+              disabled={!hydrated}
               aria-pressed={perspective === v}
               onClick={() => setPerspective(v)}
             >
@@ -361,6 +384,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
               {graph.nodes.map((node) => (
                 <button
                   key={node.id}
+                  disabled={!hydrated}
                   data-graph-node={node.id}
                   data-current={node.step === active}
                   data-dimmed={
@@ -394,6 +418,30 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
                 <span className="method-analysis-path" />
               </div>
               <div className="method-pca">
+                <svg
+                  viewBox="0 0 720 520"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  {Array.from({ length: 6 }, (_, i) => (
+                    <path
+                      key={i}
+                      data-pca-edge
+                      pathLength="1"
+                      d={`M150 ${50 + i * 82}C280 ${50 + i * 82} 260 260 360 260`}
+                      fill="none"
+                    />
+                  ))}
+                  {[170, 350].map((y) => (
+                    <path
+                      key={y}
+                      data-pca-edge
+                      pathLength="1"
+                      d={`M360 260Q450 260 570 ${y}`}
+                      fill="none"
+                    />
+                  ))}
+                </svg>
                 <div>
                   {[
                     "Rev Growth",
@@ -433,7 +481,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
               <p>{step.copy[lang]}</p>
               <Link prefetch={false} href={sourceURL(step.source)}>
                 {step.source} ·{" "}
-                {lang === "ko" ? "원문에서 살펴보기" : "Read in context"} ↗
+                {lang === "ko" ? "원문에서 살펴보기" : "Read in context"} →
               </Link>
             </li>
           ))}
@@ -485,12 +533,14 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           </strong>
           <p>
             {scene.id === "synthesis"
-              ? contributionLabels[selected]?.[lang]
-              : spec.steps[active].copy[lang]}
+              ? researchConnections[selected]?.[lang]
+              : spec.steps[Math.min(selectedIndex, spec.steps.length - 1)].copy[
+                  lang
+                ]}
           </p>
           <Link prefetch={false} href={sourceURL(selectedSource)}>
             {selectedSource} ·{" "}
-            {lang === "ko" ? "원문 문맥과 PDF" : "Full context and PDF"} ↗
+            {lang === "ko" ? "원문 문맥과 PDF" : "Full context and PDF"} →
           </Link>
         </div>
       )}
@@ -501,6 +551,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
             .map((node) => (
               <button
                 key={node.id}
+                disabled={!hydrated}
                 data-study-node={node.id}
                 data-dimmed={
                   perspective !== "all" &&

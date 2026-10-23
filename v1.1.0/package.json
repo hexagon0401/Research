@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/content.test.mjs tests/assets.test.mjs tests/reports.test.mjs tests/readings.test.mjs tests/geometry.test.mjs",
+    "test": "node --test tests/content.test.mjs tests/assets.test.mjs tests/reports.test.mjs tests/readings.test.mjs tests/geometry.test.mjs tests/motion.test.mjs",
     "test:e2e": "playwright test",
     "generate:map": "node scripts/generate-map.mjs",
     "format": "prettier --write .",

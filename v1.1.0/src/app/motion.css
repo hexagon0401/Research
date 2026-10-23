@@ -622,3 +622,102 @@
 .china-map[data-compare="kh"] .china-route-3 {
   opacity: 0.08;
 }
+.mechanism-diagram > svg {
+  overflow: hidden;
+}
+.mechanism-geographic {
+  overflow: hidden;
+}
+.mechanism-capability .mechanism-node-layer button {
+  border: 0;
+  background: var(--paper);
+  box-shadow: none;
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+.mechanism-capability .mechanism-node-layer button[data-current="true"] {
+  text-decoration: underline;
+  text-decoration-color: #295e30;
+  text-underline-offset: 6px;
+}
+.method-pca > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.method-pca > svg path {
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  fill: none;
+}
+.method-pca > div,
+.method-pca > small {
+  z-index: 1;
+  position: relative;
+  background: var(--paper);
+}
+.china-inline-map {
+  display: none;
+}
+.china-inline-map svg {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  display: block;
+}
+.china-inline-map path {
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  stroke-dasharray: 1;
+  fill: none;
+}
+.china-inline-map circle {
+  fill: var(--signal);
+  stroke: var(--ink);
+}
+.china-comparison {
+  font-size: 15px;
+  line-height: 1.75;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px 20px;
+  margin-block: 24px;
+}
+.china-comparison dt {
+  font-weight: 500;
+}
+.china-comparison dd {
+  margin: 0;
+}
+@media (max-width: 1023px), (max-height: 699px) {
+  .china-step-list {
+    order: 0;
+  }
+  .china-motion-stage {
+    order: 1;
+  }
+  .china-inline-map {
+    display: block;
+    margin-block: 20px;
+  }
+  .mechanism-capability .mechanism-node-layer button {
+    font-size: 17px;
+  }
+  .china-comparison {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .china-comparison dd {
+    margin-bottom: 12px;
+  }
+}
+.motion-story [data-dimmed="true"] {
+  opacity: 0.72;
+}
+.motion-story .mechanism-link[data-dimmed="true"] {
+  opacity: 0.18;
+}

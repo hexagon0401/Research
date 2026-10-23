@@ -65,6 +65,10 @@ export function ChinaStory() {
     progress.current = v;
     if (root.current) {
       root.current.dataset.progress = v.toFixed(4);
+      root.current.style.setProperty(
+        "--local-route-progress",
+        String(clamp((v * 7 - 2 - 0.12) / 0.55)),
+      );
       root.current.dataset.phase = String(i);
       if (driver.current?.isActive)
         window.dispatchEvent(
@@ -157,6 +161,21 @@ export function ChinaStory() {
             const update = (v: number) => {
               tl.progress(v);
               paint(v);
+              const scale =
+                Number(
+                  gsap.getProperty(
+                    el.querySelector("[data-world-camera]"),
+                    "scaleX",
+                  ),
+                ) || 1;
+              el.querySelectorAll<SVGCircleElement>(
+                ".china-world circle",
+              ).forEach((c) =>
+                c.setAttribute(
+                  "r",
+                  String((c.hasAttribute("data-traveler") ? 3 : 4) / scale),
+                ),
+              );
             };
             const triggers: Trigger[] = [];
             const media = gsap.matchMedia();
@@ -202,6 +221,53 @@ export function ChinaStory() {
                 },
               }),
             );
+            media.add("(max-width:1023px), (max-height:699px)", () => {
+              const local: Trigger[] = [];
+              el.querySelectorAll<HTMLElement>(".china-inline-map").forEach(
+                (map) => {
+                  const tween = gsap.timeline({ paused: true });
+                  map
+                    .querySelectorAll<SVGPathElement>("[data-inline-route]")
+                    .forEach((path) => {
+                      tween.fromTo(
+                        path,
+                        { strokeDashoffset: 1 },
+                        {
+                          strokeDashoffset: 0,
+                          duration: 1,
+                          autoRound: false,
+                          ease: "none",
+                        },
+                        0,
+                      );
+                      const dot = path.nextElementSibling;
+                      if (dot)
+                        tween.to(
+                          dot,
+                          {
+                            motionPath: {
+                              path,
+                              align: path,
+                              alignOrigin: [0.5, 0.5],
+                            },
+                            duration: 1,
+                            ease: "none",
+                          },
+                          0,
+                        );
+                    });
+                  local.push(
+                    ScrollTrigger.create({
+                      trigger: map,
+                      start: "top 85%",
+                      end: "bottom 35%",
+                      onUpdate: (self) => tween.progress(self.progress),
+                    }),
+                  );
+                },
+              );
+              return () => local.forEach((t) => t.kill());
+            });
             el.dataset.motionReady = "true";
             setReady(true);
             const cancel = () => replay.current?.kill();
@@ -223,6 +289,7 @@ export function ChinaStory() {
             window.addEventListener("wheel", cancel, { passive: true });
             window.addEventListener("touchstart", cancel, { passive: true });
             window.addEventListener("keydown", cancel);
+            window.addEventListener("pointerdown", cancel);
             document.fonts.ready.then(() => {
               if (alive) ScrollTrigger.refresh();
             });
@@ -253,6 +320,7 @@ export function ChinaStory() {
               window.removeEventListener("wheel", cancel);
               window.removeEventListener("touchstart", cancel);
               window.removeEventListener("keydown", cancel);
+              window.removeEventListener("pointerdown", cancel);
               window.dispatchEvent(
                 new CustomEvent("iir:motion-scene", { detail: { beat: null } }),
               );
@@ -496,7 +564,7 @@ export function ChinaStory() {
                   href={sourceHref(s, ref)}
                 >
                   {ref.report} ·{" "}
-                  {lang === "ko" ? "원문 문맥" : "Source context"} ↗
+                  {lang === "ko" ? "원문 문맥" : "Source context"} →
                 </Link>
               ))}
             </div>
@@ -581,6 +649,70 @@ export function ChinaStory() {
               </span>
               <h4>{step.title[lang]}</h4>
               <p>{step.copy[lang]}</p>
+              {i === 5 && (
+                <dl className="china-comparison">
+                  <dt>{lang === "ko" ? "주체" : "Actors"}</dt>
+                  <dd>CCCC · AVIC / NORINCO · Prince Group / Canopy Sands</dd>
+                  <dt>{lang === "ko" ? "관계" : "Relationships"}</dt>
+                  <dd>
+                    {lang === "ko"
+                      ? "공항 제안 / 공급 서술 / 사업·시설"
+                      : "Airport proposal / reported supply / business and facility"}
+                  </dd>
+                  <dt>{lang === "ko" ? "해석" : "Interpretation"}</dt>
+                  <dd>
+                    {lang === "ko"
+                      ? "접근권·정권 생존·국가 전략에 대한 저자의 분석"
+                      : "The author’s analysis of access, regime survival and state strategy"}
+                  </dd>
+                  <dt>{lang === "ko" ? "확인 범위" : "Evidence scope"}</dt>
+                  <dd>
+                    {lang === "ko"
+                      ? "원문 문맥 대조 · 항적·시설 경계 원자료 미제공"
+                      : "Source context · underlying tracks and site boundaries not supplied"}
+                  </dd>
+                </dl>
+              )}
+              <div
+                className="china-inline-map"
+                aria-label={
+                  lang === "ko" ? "단계별 개략 지도" : "Step reference map"
+                }
+              >
+                <svg
+                  viewBox="0 0 720 520"
+                  width="720"
+                  height="520"
+                  role="img"
+                  aria-label={step.title[lang]}
+                >
+                  <image
+                    href={
+                      i === 1 ? "/visuals/arctic.svg" : "/visuals/world.svg"
+                    }
+                    width="720"
+                    height="520"
+                  />
+                  {i !== 1 &&
+                    routes
+                      .filter(
+                        (_, r) =>
+                          i >= 5 ||
+                          r === (i === 0 ? 0 : i === 2 ? 2 : i === 3 ? 3 : 4),
+                      )
+                      .map((d, j) => (
+                        <g key={j}>
+                          <path
+                            data-inline-route
+                            d={d}
+                            pathLength="1"
+                            fill="none"
+                          />
+                          <circle data-inline-signal r="4" />
+                        </g>
+                      ))}
+                </svg>
+              </div>
               <span className="motion-status">{step.status[lang]}</span>
               {step.sources.map((ref) => (
                 <Link
@@ -588,7 +720,7 @@ export function ChinaStory() {
                   prefetch={false}
                   href={sourceHref(step, ref)}
                 >
-                  {ref.report} · {lang === "ko" ? "원문 읽기" : "Read source"} ↗
+                  {ref.report} · {lang === "ko" ? "원문 읽기" : "Read source"} →
                 </Link>
               ))}
             </li>

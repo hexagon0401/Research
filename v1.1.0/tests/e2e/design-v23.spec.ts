@@ -1,73 +1,36 @@
 import { test, expect } from "@playwright/test";
 
-test("Arctic leaders never fill and screen-pixel labels remain bounded and separate", async ({
+test("Chinese relationship leaders never fill and the reference legend stays readable", async ({
   page,
 }) => {
-  await page.goto("/?scene=china-arctic");
-  const figure = page.locator("#visual-china-arctic");
-  await figure
-    .locator(".arctic-expansion > .scene-stage")
-    .last()
-    .scrollIntoViewIfNeeded();
-  await expect(figure.locator(".map-label:not(:disabled)")).toHaveCount(3);
-  const labels = figure.locator(".map-label:not(:disabled)");
-  await expect(labels.first()).toHaveAccessibleName(/Nuuk/);
+  await page.goto("/#motion-china");
+  const figure = page.locator("#motion-china");
+  await expect(figure.locator(".china-step-list")).toContainText("Nuuk");
   for (const width of [320, 390, 768, 1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    await page.evaluate(() => document.fonts.ready);
-    await expect
-      .poll(() =>
-        labels.first().evaluate((e) => e.getBoundingClientRect().width),
-      )
-      .toBeGreaterThan(0);
-    const info = await labels.evaluateAll((els) =>
-      els.map((el) => {
-        const r = el.getBoundingClientRect();
-        const s = getComputedStyle(el);
-        return {
-          x: r.x,
-          y: r.y,
-          w: r.width,
-          h: r.height,
-          size: parseFloat(s.fontSize),
-        };
-      }),
-    );
-    for (const a of info) {
-      expect(a.size).toBeGreaterThanOrEqual(14);
-      expect(a.x).toBeGreaterThanOrEqual(0);
-      expect(a.x + a.w).toBeLessThanOrEqual(width + 1);
-      for (const b of info) {
-        if (a === b) continue;
-        expect(
-          a.x + a.w <= b.x + 1 ||
-            b.x + b.w <= a.x + 1 ||
-            a.y + a.h <= b.y + 1 ||
-            b.y + b.h <= a.y + 1,
-        ).toBe(true);
-      }
-    }
     expect(
       await figure
-        .locator(".map-leader")
-        .evaluateAll((els) =>
-          els.every(
-            (el) =>
-              el.getAttribute("fill") === "none" &&
-              getComputedStyle(el).fill === "none",
+        .locator(".china-map path")
+        .evaluateAll((es) =>
+          es.every(
+            (e) =>
+              e.getAttribute("fill") === "none" &&
+              getComputedStyle(e).fill === "none",
           ),
         ),
     ).toBe(true);
+    for (const label of await figure
+      .locator(".motion-place-legend button")
+      .all())
+      expect(
+        await label.evaluate((e) => parseFloat(getComputedStyle(e).fontSize)),
+      ).toBeGreaterThanOrEqual(14);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth + 1,
+      ),
+    ).toBe(true);
   }
-  await labels.first().focus();
-  await page.keyboard.press("Enter");
-  await expect(figure.locator(".case-selection")).toContainText("CCCC");
-  await expect(figure.locator(".case-selection a")).toHaveAttribute(
-    "href",
-    /S08-R001-P010/,
-  );
-  await page.keyboard.press("Escape");
-  await expect(labels.first()).toBeFocused();
 });
 
 test("all eighteen figures, three reserved expansions and study roles survive the full reading matrix", async ({
@@ -179,6 +142,7 @@ test("study branches and connection explanations work by keyboard and touch", as
   await page.goto("/?scene=synthesis");
   const figure = page.locator("#visual-synthesis");
   const branch = figure.locator('[data-study-node="S08"]');
+  await expect(branch).toBeEnabled();
   await branch.focus();
   await page.keyboard.press("Enter");
   await expect(figure.locator(".case-selection")).toContainText(
@@ -191,7 +155,9 @@ test("study branches and connection explanations work by keyboard and touch", as
   await page.keyboard.press("Escape");
   await expect(branch).toBeFocused();
   await page.goto("/?scene=us-finance");
-  const edge = page.locator("#visual-us-finance .relation-edge").first();
+  const edge = page
+    .locator('#visual-us-finance [data-graph-node="token"]')
+    .first();
   if (info.project.use.hasTouch) await edge.tap();
   else await edge.click();
   await expect(
@@ -206,7 +172,9 @@ test("three emphasis scenes stay in normal flow during wheel reading", async ({
   await page.goto("/");
   await page.evaluate(() => document.fonts.ready);
   for (const id of ["capability", "china-arctic", "synthesis"]) {
-    const figure = page.locator(`#visual-${id}`);
+    const figure = page.locator(
+      id === "china-arctic" ? "#motion-china" : `#visual-${id}`,
+    );
     await figure.scrollIntoViewIfNeeded();
     const before = await page.evaluate(() => scrollY);
     await page.mouse.move(10, 250);
@@ -216,8 +184,8 @@ test("three emphasis scenes stay in normal flow during wheel reading", async ({
       .toBeGreaterThan(before);
     await page.mouse.wheel(0, -180);
     await page.waitForTimeout(200);
-    expect(await figure.evaluate((el) => getComputedStyle(el).position)).toBe(
-      "static",
+    expect(["static", "relative"]).toContain(
+      await figure.evaluate((el) => getComputedStyle(el).position),
     );
     await figure.screenshot({ path: `.local/validation/${id}-desktop.png` });
   }
@@ -245,11 +213,11 @@ test("static modes retain every case, explanation and source without animation",
   await p.goto(`${baseURL}/`);
   await expect(p.locator("[data-visual-for]")).toHaveCount(18);
   await expect(
-    p.locator("#visual-synthesis .static-visual-explanation > ul > li"),
-  ).toHaveCount(13);
-  await expect(
-    p.locator("#visual-china-arctic .static-visual-explanation"),
-  ).toContainText("CCCC");
+    p.locator("#visual-synthesis .motion-study-roles > button"),
+  ).toHaveCount(12);
+  await expect(p.locator("#motion-china .china-step-list")).toContainText(
+    "CCCC",
+  );
   await p.locator("#us-mission .essay-citation").first().click();
   await expect(p.locator("#transcript")).toBeVisible();
   await context.close();

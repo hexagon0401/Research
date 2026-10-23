@@ -33,10 +33,17 @@ export function EssayExperience({
   useEffect(() => {
     const sync = (event: Event) => {
       motionScene.current = (event as CustomEvent).detail?.beat ?? null;
+      if (motionScene.current) {
+        const i = scenes.findIndex((s) => s.id === motionScene.current);
+        if (i >= 0) {
+          setActive(i);
+          if (root.current) root.current.dataset.scene = motionScene.current;
+        }
+      }
     };
     window.addEventListener("iir:motion-scene", sync);
     return () => window.removeEventListener("iir:motion-scene", sync);
-  }, []);
+  }, [scenes]);
   const { lang, reduced } = usePreferences();
   const lastLang = useRef(lang);
   const lastReduced = useRef(reduced);
