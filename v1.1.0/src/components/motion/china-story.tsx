@@ -1,12 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import type { ScrollTrigger as Trigger } from "gsap/ScrollTrigger";
+
 import Link from "next/link";
 import { usePreferences } from "../preferences";
 import { chinaSteps, sourceHref } from "@/visuals/motion-stories";
 import geography from "@/visuals/motion-geography.json";
 import polar from "@/visuals/atlas-points.json";
-import { clamp, loadMotion, nearScene, watchViewportFit } from "./runtime";
+import { clamp, loadMotion, nearScene } from "./runtime";
+import { useSceneScroll } from "./use-scene-scroll";
+import { ExpandDiagram } from "./expand-diagram";
 import { MapTerrain } from "./map-terrain";
 const p = geography.pins;
 const curve = (a: number[], b: number[], lift = 70) =>
@@ -30,8 +32,7 @@ export function ChinaStory() {
     stage = useRef<HTMLDivElement>(null),
     range = useRef<HTMLInputElement>(null);
   const timeline = useRef<gsap.core.Timeline | null>(null),
-    driver = useRef<Trigger | null>(null),
-    replay = useRef<gsap.core.Tween | null>(null);
+    map = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0),
     [ready, setReady] = useState(false),
     [detail, setDetail] = useState(false),
@@ -42,23 +43,19 @@ export function ChinaStory() {
     manual = useRef(false),
     stageVisible = useRef(false);
   const s = chinaSteps[active];
-  const select = (value: number, source = "control") => {
-    replay.current?.kill();
-    const v = clamp(value);
-    progress.current = v;
-    if (driver.current && root.current?.dataset.pinned === "true") {
-      window.scrollTo({
-        top:
-          driver.current.start +
-          v * (driver.current.end - driver.current.start),
-        behavior: "instant",
-      });
-    } else {
-      manual.current = source !== "scroll";
-      timeline.current?.progress(v);
+  const scroll = useSceneScroll(
+    root,
+    stage,
+    ".china-step-list > li",
+    chinaSteps.length,
+    (v) => {
+      timeline.current?.progress(reduced ? 1 : v);
       paint(v);
-    }
-  };
+    },
+    lang,
+    reduced,
+  );
+  const select = (value: number) => scroll.seek(value);
   function paint(v: number) {
     const i = Math.min(
       chinaSteps.length - 1,
@@ -72,12 +69,6 @@ export function ChinaStory() {
         String(clamp((v * 7 - 2 - 0.12) / 0.55)),
       );
       root.current.dataset.phase = String(i);
-      if (driver.current?.isActive || (manual.current && stageVisible.current))
-        window.dispatchEvent(
-          new CustomEvent("iir:motion-scene", {
-            detail: { beat: chinaSteps[i].beat },
-          }),
-        );
     }
     if (range.current) range.current.value = String(Math.round(v * 100));
     if (activeRef.current !== i) {
@@ -95,24 +86,6 @@ export function ChinaStory() {
       el.dataset.motionReady = "false";
       return;
     }
-    const visibility = new IntersectionObserver(
-      ([entry]) => {
-        stageVisible.current = entry.isIntersecting;
-        if (manual.current && !driver.current?.isActive) {
-          window.dispatchEvent(
-            new CustomEvent("iir:motion-scene", {
-              detail: {
-                beat: entry.isIntersecting
-                  ? chinaSteps[activeRef.current].beat
-                  : null,
-              },
-            }),
-          );
-        }
-      },
-      { rootMargin: "-80px 0px 0px 0px" },
-    );
-    if (stage.current) visibility.observe(stage.current);
     const stopWatching = nearScene(el, () => {
       loadMotion()
         .then(({ gsap, ScrollTrigger }) => {
@@ -200,199 +173,13 @@ export function ChinaStory() {
               2.12,
             );
             tl.to({}, { duration: 0.01 }, 6.99);
-            const update = (v: number) => {
-              tl.progress(v);
-              paint(v);
-              const scale =
-                Number(
-                  gsap.getProperty(
-                    el.querySelector("[data-world-camera]"),
-                    "scaleX",
-                  ),
-                ) || 1;
-              el.querySelectorAll<SVGCircleElement>(
-                ".china-world circle",
-              ).forEach((c) =>
-                c.setAttribute(
-                  "r",
-                  String((c.hasAttribute("data-traveler") ? 3 : 4) / scale),
-                ),
-              );
-            };
-            const triggers: Trigger[] = [];
-            const media = gsap.matchMedia();
-            media.add("(min-width:1024px) and (min-height:700px)", () => {
-              const visual = stage.current!;
-              let pin: Trigger | null = null;
-              return watchViewportFit(visual, 90, (fits) => {
-                if (fits) {
-                  el.dataset.pinned = "true";
-                  pin = ScrollTrigger.create({
-                    trigger: el.querySelector(".china-scroll-body"),
-                    start: "top 80px",
-                    end: () =>
-                      `+=${Math.max(innerHeight, el.querySelector<HTMLElement>(".china-step-list")!.offsetHeight - visual.offsetHeight)}`,
-                    pin: visual,
-                    pinSpacing: false,
-                    invalidateOnRefresh: true,
-                    onToggle: (self) => {
-                      if (!self.isActive)
-                        window.dispatchEvent(
-                          new CustomEvent("iir:motion-scene", {
-                            detail: { beat: null },
-                          }),
-                        );
-                    },
-                    onUpdate: (self) => {
-                      manual.current = false;
-                      update(self.progress);
-                    },
-                  });
-                  driver.current = pin;
-                } else {
-                  pin?.kill();
-                  pin = null;
-                  driver.current = null;
-                  el.dataset.pinned = "false";
-                  window.dispatchEvent(
-                    new CustomEvent("iir:motion-scene", {
-                      detail: { beat: null },
-                    }),
-                  );
-                }
-                ScrollTrigger.refresh();
-              });
-            });
-            triggers.push(
-              ScrollTrigger.create({
-                trigger: el.querySelector(".china-scroll-body"),
-                start: "top 75%",
-                end: "bottom 65%",
-                onUpdate: (self) => {
-                  if (!driver.current && !manual.current) update(self.progress);
-                },
-              }),
-            );
-            media.add("(max-width:1023px), (max-height:699px)", () => {
-              const local: Trigger[] = [];
-              el.querySelectorAll<HTMLElement>(".china-inline-map").forEach(
-                (map) => {
-                  const tween = gsap.timeline({ paused: true });
-                  map
-                    .querySelectorAll<SVGPathElement>("[data-inline-route]")
-                    .forEach((path) => {
-                      tween.fromTo(
-                        path,
-                        { strokeDashoffset: 1 },
-                        {
-                          strokeDashoffset: 0,
-                          duration: 1,
-                          autoRound: false,
-                          ease: "none",
-                        },
-                        0,
-                      );
-                      const dot = path.nextElementSibling;
-                      if (dot)
-                        tween.to(
-                          dot,
-                          {
-                            motionPath: {
-                              path,
-                              align: path,
-                              alignOrigin: [0.5, 0.5],
-                            },
-                            duration: 1,
-                            ease: "none",
-                          },
-                          0,
-                        );
-                    });
-                  local.push(
-                    ScrollTrigger.create({
-                      trigger: map,
-                      start: "top 85%",
-                      end: "bottom 35%",
-                      onUpdate: (self) => tween.progress(self.progress),
-                    }),
-                  );
-                },
-              );
-              return () => local.forEach((t) => t.kill());
-            });
+            tl.progress(scroll.progress.current);
+            paint(scroll.progress.current);
             el.dataset.motionReady = "true";
             setReady(true);
-            const cancel = () => replay.current?.kill();
-            const save = (e: MouseEvent) => {
-              if (!(e.target as Element).closest('a[href*="/reports/"]'))
-                return;
-              try {
-                sessionStorage.setItem(
-                  "iir-motion-return",
-                  JSON.stringify({
-                    id: "motion-china",
-                    progress: progress.current,
-                    beat: chinaSteps[activeRef.current].beat,
-                    stageOffset:
-                      stage.current?.getBoundingClientRect().top ?? 80,
-                  }),
-                );
-              } catch {}
-            };
-            el.addEventListener("click", save);
-            window.addEventListener("wheel", cancel, { passive: true });
-            window.addEventListener("touchstart", cancel, { passive: true });
-            window.addEventListener("keydown", cancel);
-            window.addEventListener("pointerdown", cancel);
-            document.fonts.ready.then(() => {
-              if (alive) {
-                ScrollTrigger.refresh();
-                window.dispatchEvent(new Event("iir:motion-layout"));
-              }
-            });
-            const saved = (() => {
-              try {
-                return JSON.parse(
-                  sessionStorage.getItem("iir-motion-return") ?? "null",
-                );
-              } catch {
-                return null;
-              }
-            })();
-            if (
-              saved?.id === "motion-china" &&
-              sessionStorage.getItem("iir-essay-resume") === "true"
-            ) {
-              requestAnimationFrame(() => {
-                if (alive) {
-                  select(saved.progress);
-                  if (el.dataset.pinned !== "true" && stage.current)
-                    window.scrollBy({
-                      top:
-                        stage.current.getBoundingClientRect().top -
-                        (saved.stageOffset ?? 80),
-                      behavior: "instant",
-                    });
-                }
-              });
-              sessionStorage.removeItem("iir-motion-return");
-              sessionStorage.removeItem("iir-essay-resume");
-            }
             cleanup = () => {
-              replay.current?.kill();
-              media.revert();
-              triggers.forEach((t) => t.kill());
-              el.removeEventListener("click", save);
-              window.removeEventListener("wheel", cancel);
-              window.removeEventListener("touchstart", cancel);
-              window.removeEventListener("keydown", cancel);
-              window.removeEventListener("pointerdown", cancel);
-              window.dispatchEvent(
-                new CustomEvent("iir:motion-scene", { detail: { beat: null } }),
-              );
               ctx.revert();
               timeline.current = null;
-              driver.current = null;
             };
           }, el);
         })
@@ -403,44 +190,16 @@ export function ChinaStory() {
     return () => {
       alive = false;
       stopWatching();
-      visibility.disconnect();
-      stageVisible.current = false;
       cleanup();
       setReady(false);
     };
   }, [lang, reduced]);
-  const replayStep = async () => {
-    if (reduced || !timeline.current) return;
-    const { gsap } = await loadMotion();
-    const i = activeRef.current,
-      from = (i + 0.05) / 7,
-      to = (i + 0.95) / 7;
-    select(from);
-    const position = { value: from };
-    replay.current = gsap.to(position, {
-      value: to,
-      duration: 2.4,
-      ease: "none",
-      onUpdate: () => {
-        if (driver.current && root.current?.dataset.pinned === "true")
-          window.scrollTo({
-            top:
-              driver.current.start +
-              position.value * (driver.current.end - driver.current.start),
-            behavior: "instant",
-          });
-        else {
-          timeline.current?.progress(position.value);
-          paint(position.value);
-        }
-      },
-    });
-  };
+  const replayStep = () => scroll.replay();
   return (
     <figure
       ref={root}
       id="motion-china"
-      className="case-visual motion-story motion-china emphasis-visual"
+      className="case-visual scroll-scene motion-story motion-china emphasis-visual"
       data-motion-group="china"
       data-phase={active}
       data-pinned="false"
@@ -473,13 +232,13 @@ export function ChinaStory() {
           S08 · {lang === "ko" ? "원문 문맥" : "Source context"}
         </Link>
       </nav>
-      <div className="china-scroll-body">
-        <div className="china-motion-stage" ref={stage}>
+      <div className="china-scroll-body scene-body">
+        <div className="china-motion-stage scene-stage" ref={stage}>
           <div className="motion-date-row">
             <span>{s.status[lang]}</span>
             <time>{s.date}</time>
           </div>
-          <div className="china-map" data-compare={comparison}>
+          <div ref={map} className="china-map" data-compare={comparison}>
             <svg
               viewBox="0 0 720 520"
               width="720"
@@ -560,6 +319,10 @@ export function ChinaStory() {
               </small>
             </div>
           </div>
+          <ExpandDiagram
+            target={map}
+            caption={`${s.date} · ${s.title[lang]}`}
+          />
           <div className="motion-place-legend">
             {Object.entries(names).map(([id, n]) => (
               <button
@@ -742,11 +505,12 @@ export function ChinaStory() {
             ))}
           </nav>
         </div>
-        <ol className="china-step-list">
+        <ol className="china-step-list scene-steps">
           {chinaSteps.map((step, i) => (
             <li
               id={`motion-${step.id}`}
               data-motion-step={step.id}
+              data-beat={step.beat}
               data-step-index={i}
               data-reading-passage
               key={step.id}
@@ -781,42 +545,6 @@ export function ChinaStory() {
                   </dd>
                 </dl>
               )}
-              <div
-                className="china-inline-map"
-                aria-label={
-                  lang === "ko" ? "단계별 개략 지도" : "Step reference map"
-                }
-              >
-                <svg
-                  viewBox="0 0 720 520"
-                  width="720"
-                  height="520"
-                  role="img"
-                  aria-label={step.title[lang]}
-                >
-                  <MapTerrain
-                    src={i === 1 ? "/visuals/arctic.svg" : "/visuals/world.svg"}
-                  />
-                  {i !== 1 &&
-                    routes
-                      .filter(
-                        (_, r) =>
-                          i >= 5 ||
-                          r === (i === 0 ? 0 : i === 2 ? 2 : i === 3 ? 3 : 4),
-                      )
-                      .map((d, j) => (
-                        <g key={j}>
-                          <path
-                            data-inline-route
-                            d={d}
-                            pathLength="1"
-                            fill="none"
-                          />
-                          <circle data-inline-signal r="4" />
-                        </g>
-                      ))}
-                </svg>
-              </div>
               <span className="motion-status">{step.status[lang]}</span>
               {step.sources.map((ref) => (
                 <Link

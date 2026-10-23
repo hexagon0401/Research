@@ -7,7 +7,9 @@ import type { SceneMeta } from "../essay-experience";
 import { mechanisms, mechanismGraph } from "@/visuals/mechanisms";
 import { contributionLabels, studySpines } from "@/visuals/story";
 import { researchConnections } from "@/content/research-connections";
-import { clamp, loadMotion, nearScene, watchViewportFit } from "./runtime";
+import { loadMotion, nearScene } from "./runtime";
+import { useSceneScroll } from "./use-scene-scroll";
+import { ExpandDiagram } from "./expand-diagram";
 import { MapTerrain } from "./map-terrain";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
@@ -20,6 +22,8 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
     graph = useMemo(() => mechanismGraph(scene.id), [scene.id]);
   const root = useRef<HTMLElement>(null),
     diagram = useRef<HTMLDivElement>(null),
+    stage = useRef<HTMLDivElement>(null),
+    timeline = useRef<gsap.core.Timeline | null>(null),
     selectedPanel = useRef<HTMLDivElement>(null),
     lastTrigger = useRef<HTMLElement | null>(null);
   const [hydrated, setHydrated] = useState(false);
@@ -31,6 +35,27 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
     [perspective, setPerspective] = useState("all");
   const activeRef = useRef(0),
     progress = useRef(0);
+  const scroll = useSceneScroll(
+    root,
+    stage,
+    ".mechanism-steps > li",
+    spec.steps.length,
+    (v) => {
+      progress.current = v;
+      timeline.current?.progress(reduced ? 1 : v);
+      if (root.current) root.current.dataset.progress = v.toFixed(4);
+      const i = Math.min(
+        spec.steps.length - 1,
+        Math.floor(v * spec.steps.length),
+      );
+      if (activeRef.current !== i) {
+        activeRef.current = i;
+        setActive(i);
+      }
+    },
+    lang,
+    reduced,
+  );
   const engine = usePretext(root, scene.id === "capability");
   useEffect(() => {
     const el = diagram.current;
@@ -178,57 +203,12 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
                 ),
             );
             tl.to({}, { duration: 0.01 }, total - 0.01);
-            const update = (v: number) => {
-              progress.current = v;
-              tl.progress(v);
-              el.dataset.progress = v.toFixed(4);
-              const i = Math.min(total - 1, Math.floor(v * total));
-              el.dataset.activeStep = String(i);
-              if (activeRef.current !== i) {
-                activeRef.current = i;
-                setActive(i);
-              }
-            };
-            const trigger = ScrollTrigger.create({
-              trigger: diagram.current,
-              start: "top 85%",
-              end: "bottom 22%",
-              invalidateOnRefresh: true,
-              onRefresh: () => tl.invalidate().progress(progress.current),
-              onUpdate: (self) => update(self.progress),
-            });
-            const mm = gsap.matchMedia();
-            if (scene.id === "us-dome")
-              mm.add("(min-width:1024px) and (min-height:700px)", () => {
-                const stage = el.querySelector<HTMLElement>(".mechanism-body")!;
-                let pin: ReturnType<typeof ScrollTrigger.create> | null = null;
-                return watchViewportFit(stage, 120, (fits) => {
-                  if (fits) {
-                    el.dataset.domePinned = "true";
-                    pin = ScrollTrigger.create({
-                      trigger: stage,
-                      start: "top 88px",
-                      end: () => `+=${innerHeight * 1.5}`,
-                      pin: stage,
-                      pinSpacing: true,
-                      onUpdate: (self) => update(self.progress),
-                    });
-                    trigger.disable(false);
-                  } else {
-                    pin?.kill();
-                    pin = null;
-                    trigger.enable();
-                    el.dataset.domePinned = "false";
-                  }
-                  ScrollTrigger.refresh();
-                });
-              });
+            timeline.current = tl;
+            tl.progress(scroll.progress.current);
             el.dataset.motionReady = "true";
-            update(trigger.progress);
             cleanup = () => {
-              mm.revert();
-              trigger.kill();
               ctx.revert();
+              timeline.current = null;
               el.dataset.motionReady = "false";
               diagram.current?.style.removeProperty("content-visibility");
             };
@@ -276,7 +256,7 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
   return (
     <figure
       ref={root}
-      className={`case-visual motion-story mechanism-story mechanism-${scene.id} ${["capability", "synthesis"].includes(scene.id) ? "emphasis-visual" : ""}`}
+      className={`case-visual scroll-scene motion-story mechanism-story mechanism-${scene.id} ${["capability", "synthesis"].includes(scene.id) ? "emphasis-visual" : ""}`}
       id={`visual-${scene.id}`}
       data-motion-group={spec.group}
       data-visual-for={scene.id}
@@ -343,151 +323,160 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           ))}
         </div>
       )}
-      <div className="mechanism-body">
-        <div
-          className={`mechanism-diagram ${scene.id === "korea-chips" ? "mechanism-geographic" : ""}`}
-          ref={diagram}
-        >
-          <svg
-            viewBox="0 0 720 520"
-            width="720"
-            height="520"
-            preserveAspectRatio={
-              scene.id === "korea-chips" ? "xMidYMid meet" : "none"
-            }
-            aria-hidden="true"
+      <div className="mechanism-body scene-body">
+        <div className="scene-stage" ref={stage}>
+          <div
+            className={`mechanism-diagram ${scene.id === "korea-chips" ? "mechanism-geographic" : ""}`}
+            ref={diagram}
           >
-            {scene.id === "capability" && (
-              <MapTerrain src="/visuals/globe.svg" origin />
-            )}
-            <g data-chip-camera style={{ transformOrigin: "0 0" }}>
-              {scene.id === "korea-chips" && (
-                <MapTerrain src="/visuals/world.svg" />
+            <svg
+              viewBox="0 0 720 520"
+              width="720"
+              height="520"
+              preserveAspectRatio={
+                scene.id === "korea-chips" ? "xMidYMid meet" : "none"
+              }
+              aria-hidden="true"
+            >
+              {scene.id === "capability" && (
+                <MapTerrain src="/visuals/globe.svg" origin />
               )}
-              {graph.edges.map((e, i) => (
-                <g
-                  key={i}
-                  className={`mechanism-link ${e.feedback ? "feedback" : ""}`}
-                  data-edge-from={e.from}
-                  data-edge-to={e.to}
-                  data-dimmed={
-                    scene.id === "synthesis" &&
-                    perspective !== "all" &&
-                    !roleGroups[perspective]?.includes(e.from)
-                  }
-                >
-                  <path
-                    data-mechanism-edge={i}
-                    pathLength="1"
-                    d={pathFor(e.from, e.to, e.feedback)}
-                    fill="none"
+              <g data-chip-camera style={{ transformOrigin: "0 0" }}>
+                {scene.id === "korea-chips" && (
+                  <MapTerrain src="/visuals/world.svg" />
+                )}
+                {graph.edges.map((e, i) => (
+                  <g
+                    key={i}
+                    className={`mechanism-link ${e.feedback ? "feedback" : ""}`}
+                    data-edge-from={e.from}
+                    data-edge-to={e.to}
+                    data-dimmed={
+                      scene.id === "synthesis" &&
+                      perspective !== "all" &&
+                      !roleGroups[perspective]?.includes(e.from)
+                    }
+                  >
+                    <path
+                      data-mechanism-edge={i}
+                      pathLength="1"
+                      d={pathFor(e.from, e.to, e.feedback)}
+                      fill="none"
+                      vectorEffect="non-scaling-stroke"
+                    />
+                    <circle data-signal={i} r="4" />
+                  </g>
+                ))}
+                {graph.nodes.map((node) => (
+                  <circle
+                    key={node.id}
+                    cx={node.x}
+                    cy={node.y}
+                    r={node.id === "S00" ? 9 : 4}
+                    className="mechanism-point"
                     vectorEffect="non-scaling-stroke"
                   />
-                  <circle data-signal={i} r="4" />
-                </g>
-              ))}
-              {graph.nodes.map((node) => (
-                <circle
-                  key={node.id}
-                  cx={node.x}
-                  cy={node.y}
-                  r={node.id === "S00" ? 9 : 4}
-                  className="mechanism-point"
-                  vectorEffect="non-scaling-stroke"
-                />
-              ))}
-            </g>
-          </svg>
-          {scene.id !== "korea-chips" && (
-            <div className="mechanism-node-layer">
-              {graph.nodes.map((node) => (
-                <button
-                  key={node.id}
-                  disabled={!hydrated}
-                  data-graph-node={node.id}
-                  data-current={node.step === active}
-                  data-dimmed={
-                    scene.id === "synthesis" &&
-                    perspective !== "all" &&
-                    node.id !== "S00" &&
-                    !roleGroups[perspective]?.includes(node.id)
-                  }
-                  style={{ left: `${node.x / 7.2}%`, top: `${node.y / 5.2}%` }}
-                  onClick={() => choose(node.id)}
-                  aria-label={
-                    scene.id === "synthesis"
-                      ? `${node.id} · ${studySpines[node.id]?.[lang] ?? node.id}`
-                      : node.label[lang]
-                  }
-                >
-                  {node.label[lang]}
-                </button>
-              ))}
-            </div>
-          )}
-          {scene.id === "spatial-method" && (
-            <>
-              <div
-                className="method-lens"
-                style={{ clipPath: `inset(0 ${100 - lens}% 0 0)` }}
-              >
-                <span>
-                  {lang === "ko" ? "저자의 해석" : "AUTHOR’S INTERPRETATION"}
-                </span>
-                <span className="method-analysis-path" />
+                ))}
+              </g>
+            </svg>
+            {scene.id !== "korea-chips" && (
+              <div className="mechanism-node-layer">
+                {graph.nodes.map((node) => (
+                  <button
+                    key={node.id}
+                    disabled={!hydrated}
+                    data-graph-node={node.id}
+                    data-current={node.step === active}
+                    data-dimmed={
+                      scene.id === "synthesis" &&
+                      perspective !== "all" &&
+                      node.id !== "S00" &&
+                      !roleGroups[perspective]?.includes(node.id)
+                    }
+                    style={{
+                      left: `${node.x / 7.2}%`,
+                      top: `${node.y / 5.2}%`,
+                    }}
+                    onClick={() => choose(node.id)}
+                    aria-label={
+                      scene.id === "synthesis"
+                        ? `${node.id} · ${studySpines[node.id]?.[lang] ?? node.id}`
+                        : node.label[lang]
+                    }
+                  >
+                    {node.label[lang]}
+                  </button>
+                ))}
               </div>
-              <div className="method-pca">
-                <svg
-                  viewBox="0 0 720 520"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
+            )}
+            {scene.id === "spatial-method" && (
+              <>
+                <div
+                  className="method-lens"
+                  style={{ clipPath: `inset(0 ${100 - lens}% 0 0)` }}
                 >
-                  {Array.from({ length: 6 }, (_, i) => (
-                    <path
-                      key={i}
-                      data-pca-edge
-                      pathLength="1"
-                      d={`M150 ${50 + i * 82}C280 ${50 + i * 82} 260 260 360 260`}
-                      fill="none"
-                    />
-                  ))}
-                  {[170, 350].map((y) => (
-                    <path
-                      key={y}
-                      data-pca-edge
-                      pathLength="1"
-                      d={`M360 260Q450 260 570 ${y}`}
-                      fill="none"
-                    />
-                  ))}
-                </svg>
-                <div>
-                  {[
-                    "Rev Growth",
-                    "Gross Margin",
-                    "Op Margin",
-                    "R&D / Revenue",
-                    "Asset Turnover",
-                    "Debt / Equity",
-                  ].map((k) => (
-                    <span key={k}>{k}</span>
-                  ))}
+                  <span>
+                    {lang === "ko" ? "저자의 해석" : "AUTHOR’S INTERPRETATION"}
+                  </span>
+                  <span className="method-analysis-path" />
                 </div>
-                <span aria-hidden="true">→</span>
-                <div>
-                  <span>PC1</span>
-                  <span>PC2</span>
+                <div className="method-pca">
+                  <svg
+                    viewBox="0 0 720 520"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    {Array.from({ length: 6 }, (_, i) => (
+                      <path
+                        key={i}
+                        data-pca-edge
+                        pathLength="1"
+                        d={`M150 ${50 + i * 82}C280 ${50 + i * 82} 260 260 360 260`}
+                        fill="none"
+                      />
+                    ))}
+                    {[170, 350].map((y) => (
+                      <path
+                        key={y}
+                        data-pca-edge
+                        pathLength="1"
+                        d={`M360 260Q450 260 570 ${y}`}
+                        fill="none"
+                      />
+                    ))}
+                  </svg>
+                  <div>
+                    {[
+                      "Rev Growth",
+                      "Gross Margin",
+                      "Op Margin",
+                      "R&D / Revenue",
+                      "Asset Turnover",
+                      "Debt / Equity",
+                    ].map((k) => (
+                      <span key={k}>{k}</span>
+                    ))}
+                  </div>
+                  <span aria-hidden="true">→</span>
+                  <div>
+                    <span>PC1</span>
+                    <span>PC2</span>
+                  </div>
+                  <small>
+                    {lang === "ko"
+                      ? "차원 축소의 개념 · 실제 좌표·로딩 아님"
+                      : "Dimension-reduction concept · not fitted coordinates or loadings"}
+                  </small>
                 </div>
-                <small>
-                  {lang === "ko"
-                    ? "차원 축소의 개념 · 실제 좌표·로딩 아님"
-                    : "Dimension-reduction concept · not fitted coordinates or loadings"}
-                </small>
-              </div>
-            </>
-          )}
+              </>
+            )}
+          </div>
+          <ExpandDiagram
+            target={diagram}
+            caption={spec.steps[active].title[lang]}
+          />
         </div>
-        <ol className="mechanism-steps">
+        <ol className="mechanism-steps scene-steps">
           {spec.steps.map((step, i) => (
             <li
               id={`motion-${scene.id}-${i + 1}`}
