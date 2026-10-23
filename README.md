@@ -1,8 +1,25 @@
 # Research
 
-IIR 연구 사이트입니다. 현재 코드 버전은 **v2.3.0**입니다. Vercel 배포 Root Directory는 기존 **v1.1.0**을 유지합니다.
+**최신 v2.3.0 → 코드 위치 [v1.1.0/](v1.1.0/)**
+
+IIR 연구 사이트입니다. `v1.1.0/`은 Vercel의 고정 배포 경로이며, 현재 코드 버전은 **v2.3.0**입니다. 새 버전마다 폴더를 복제하지 않고 package 버전과 Git 태그로 구분합니다.
 
 [사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.3.0 구현·검증](v1.1.0/docs/V2_3_RELEASE.md)
+
+## 버전과 코드 위치
+
+| 버전별 소스                                                          | 변경·검증 기록                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------ |
+| [v2.3.0 · 최신](https://github.com/hexagon0401/Research/tree/v2.3.0) | [읽기 흐름·그래픽 개선](v1.1.0/docs/V2_3_RELEASE.md)   |
+| [v2.2.0](https://github.com/hexagon0401/Research/tree/v2.2.0)        | [Open Design 개편](v1.1.0/docs/V2_2_RELEASE.md)        |
+| [v2.1.0](https://github.com/hexagon0401/Research/tree/v2.1.0)        | [연결형 에세이·한영 전문](v1.1.0/docs/V2_1_RELEASE.md) |
+| [v2.0.0](https://github.com/hexagon0401/Research/tree/v2.0.0)        | [연속형 스크롤](v1.1.0/docs/V2_RELEASE.md)             |
+| [v1.1.2](https://github.com/hexagon0401/Research/tree/v1.1.2)        | [원문·PDF 자료실](CHANGELOG.md#112--2026-10-22)        |
+| [v1.1.1](https://github.com/hexagon0401/Research/tree/v1.1.1)        | [화살표 표시 오류 수정](CHANGELOG.md#111--2026-10-21)  |
+
+위 버전의 앱 소스는 각 태그 안의 `v1.1.0/`에 있습니다. [v1.0.0/](v1.0.0/)은 이전 초안 보관용입니다. 전체 변경 내용은 [변경 기록](CHANGELOG.md)을 참고하세요.
+
+## 사이트 구성
 
 - Paper 바탕에서 18개 논지와 사례별 관계도·지도가 이어지고, 기업 역량·그린란드·통합 연구는 세 강조 구간으로 펼쳐집니다.
 - 실제 연구와 참고자료를 폴더·책등으로 탐색하고, 축소 목차와 진행 표시로 읽기를 이어갑니다.
