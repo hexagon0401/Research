@@ -29,6 +29,14 @@ export function EssayExperience({
 }) {
   const root = useRef<HTMLElement>(null);
   const [active, setActive] = useState(0);
+  const motionScene = useRef<string | null>(null);
+  useEffect(() => {
+    const sync = (event: Event) => {
+      motionScene.current = (event as CustomEvent).detail?.beat ?? null;
+    };
+    window.addEventListener("iir:motion-scene", sync);
+    return () => window.removeEventListener("iir:motion-scene", sync);
+  }, []);
   const { lang, reduced } = usePreferences();
   const lastLang = useRef(lang);
   const lastReduced = useRef(reduced);
@@ -144,6 +152,16 @@ export function EssayExperience({
     const restore = () => {
       try {
         if (sessionStorage.getItem("iir-essay-resume") !== "true") return;
+        const motion = JSON.parse(
+          sessionStorage.getItem("iir-motion-return") ?? "null",
+        );
+        if (motion?.id === "motion-china") {
+          const figure = document.getElementById(motion.id);
+          if (figure) {
+            figure.scrollIntoView({ behavior: "instant", block: "start" });
+            return;
+          }
+        }
         const saved = JSON.parse(
           sessionStorage.getItem("iir-essay-return") ?? "null",
         );
@@ -319,12 +337,16 @@ export function EssayExperience({
         const weight = Number(type === currentType);
         element!.style.setProperty(`--mode-${type}`, String(weight));
       }
-      element!.dataset.scene = current.id;
+      const displayIndex = motionScene.current
+        ? scenes.findIndex((s) => s.id === motionScene.current)
+        : index;
+      const visibleIndex = displayIndex < 0 ? index : displayIndex;
+      element!.dataset.scene = scenes[visibleIndex].id;
       element!.dataset.motion = reduced ? "reduced" : "full";
       if (progressBar) progressBar.value = clamp(y / maximum);
-      if (previous !== index) {
-        previous = index;
-        setActive(index);
+      if (previous !== visibleIndex) {
+        previous = visibleIndex;
+        setActive(visibleIndex);
       }
     }
     function schedule() {

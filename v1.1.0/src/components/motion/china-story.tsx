@@ -66,6 +66,12 @@ export function ChinaStory() {
     if (root.current) {
       root.current.dataset.progress = v.toFixed(4);
       root.current.dataset.phase = String(i);
+      if (driver.current?.isActive)
+        window.dispatchEvent(
+          new CustomEvent("iir:motion-scene", {
+            detail: { beat: chinaSteps[i].beat },
+          }),
+        );
     }
     if (range.current) range.current.value = String(Math.round(v * 100));
     if (activeRef.current !== i) {
@@ -96,7 +102,12 @@ export function ChinaStory() {
               tl.fromTo(
                 path,
                 { strokeDashoffset: 1 },
-                { strokeDashoffset: 0, duration: 0.55, ease: "none" },
+                {
+                  strokeDashoffset: 0,
+                  autoRound: false,
+                  duration: 0.55,
+                  ease: "none",
+                },
                 i + 0.12,
               );
               if (dot) {
@@ -161,6 +172,14 @@ export function ChinaStory() {
                 pin: visual,
                 pinSpacing: false,
                 invalidateOnRefresh: true,
+                onToggle: (self) => {
+                  if (!self.isActive)
+                    window.dispatchEvent(
+                      new CustomEvent("iir:motion-scene", {
+                        detail: { beat: null },
+                      }),
+                    );
+                },
                 onUpdate: (self) => {
                   manual.current = false;
                   update(self.progress);
@@ -195,6 +214,7 @@ export function ChinaStory() {
                   JSON.stringify({
                     id: "motion-china",
                     progress: progress.current,
+                    beat: chinaSteps[activeRef.current].beat,
                   }),
                 );
               } catch {}
@@ -219,7 +239,9 @@ export function ChinaStory() {
               saved?.id === "motion-china" &&
               sessionStorage.getItem("iir-essay-resume") === "true"
             ) {
-              select(saved.progress);
+              requestAnimationFrame(() => {
+                if (alive) select(saved.progress);
+              });
               sessionStorage.removeItem("iir-motion-return");
               sessionStorage.removeItem("iir-essay-resume");
             }
@@ -231,6 +253,9 @@ export function ChinaStory() {
               window.removeEventListener("wheel", cancel);
               window.removeEventListener("touchstart", cancel);
               window.removeEventListener("keydown", cancel);
+              window.dispatchEvent(
+                new CustomEvent("iir:motion-scene", { detail: { beat: null } }),
+              );
               ctx.revert();
               timeline.current = null;
               driver.current = null;
@@ -279,7 +304,7 @@ export function ChinaStory() {
     <figure
       ref={root}
       id="motion-china"
-      className="case-visual motion-story motion-china"
+      className="case-visual motion-story motion-china emphasis-visual"
       data-motion-group="china"
       data-phase={active}
       data-pinned="false"
@@ -304,6 +329,14 @@ export function ChinaStory() {
             : "Scroll through the relationships. Revisit an event below."}
         </p>
       </figcaption>
+      <nav className="case-source-links">
+        <Link
+          prefetch={false}
+          href="/reports/S08?from=china-arctic#S08-R001-P010"
+        >
+          S08 · {lang === "ko" ? "원문 문맥" : "Source context"}
+        </Link>
+      </nav>
       <div className="china-scroll-body">
         <div className="china-motion-stage" ref={stage}>
           <div className="motion-date-row">
@@ -397,6 +430,7 @@ export function ChinaStory() {
                 key={id}
                 onClick={() => {
                   setComparison(id);
+                  if (activeRef.current >= 5) return;
                   if (id === "gl") select(0.1);
                   if (id === "mm") select(2.5 / 7);
                   if (id === "kh") select(4.5 / 7);

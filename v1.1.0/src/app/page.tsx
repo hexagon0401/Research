@@ -15,6 +15,8 @@ import {
 import { HeroAtlas } from "@/components/hero-atlas";
 import { NarrativeVisual } from "@/components/narrative-visual";
 import { ChinaStory } from "@/components/motion/china-story";
+import { MechanismStory } from "@/components/motion/mechanism-story";
+import { mechanisms } from "@/visuals/mechanisms";
 import "./motion.css";
 import { ResearchShelf } from "@/components/material-shelf";
 import { reports } from "@/content/report-catalog";
@@ -229,7 +231,7 @@ export default async function Home() {
                   <section
                     id={beat.id}
                     key={beat.id}
-                    className={`essay-beat ${emphasisScenes.has(beat.id) ? "is-emphasis" : ""}`}
+                    className={`essay-beat ${emphasisScenes.has(beat.id) ? "is-emphasis" : ""} ${mechanisms[beat.id] ? "has-motion" : ""}`}
                     data-essay-beat
                   >
                     <div className="beat-reading">
@@ -287,6 +289,7 @@ export default async function Home() {
                       {beat.id === "china-arctic" ? (
                         <ChinaStory />
                       ) : (
+                        !mechanisms[beat.id] &&
                         emphasisScenes.has(beat.id) && (
                           <NarrativeVisual
                             scene={scenes.find(
@@ -437,7 +440,12 @@ export default async function Home() {
                         <span aria-hidden="true">↓</span>
                       </p>
                     </div>
-                    {!emphasisScenes.has(beat.id) && (
+                    {mechanisms[beat.id] && (
+                      <MechanismStory
+                        scene={scenes.find((scene) => scene.id === beat.id)!}
+                      />
+                    )}
+                    {!mechanisms[beat.id] && !emphasisScenes.has(beat.id) && (
                       <NarrativeVisual
                         scene={scenes.find((scene) => scene.id === beat.id)!}
                       />

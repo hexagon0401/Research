@@ -14,6 +14,7 @@ export function loadMotion() {
   ])
     .then(([{ gsap }, { ScrollTrigger }, { MotionPathPlugin }]) => {
       gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+      gsap.config({ autoSleep: 12 });
       ScrollTrigger.config({ ignoreMobileResize: true });
       return { gsap, ScrollTrigger };
     })

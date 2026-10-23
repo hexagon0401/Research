@@ -327,3 +327,298 @@
 .china-route-3 path {
   stroke-dasharray: 0.025 0.018;
 }
+/* Other mechanisms deliberately keep their graphics in document flow. */
+.essay-beat.has-motion {
+  display: block;
+}
+.essay-beat.has-motion > .beat-reading {
+  max-width: 72ch;
+}
+.essay-beat.has-motion > .motion-story {
+  margin-block: 40px;
+}
+.mechanism-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+.mechanism-diagram {
+  position: relative;
+  height: clamp(400px, 40vw, 520px);
+  min-width: 0;
+  background: var(--paper);
+}
+.mechanism-diagram > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+.mechanism-diagram .origin-globe {
+  opacity: 0.13;
+  transform-origin: 360px 260px;
+}
+.mechanism-link path {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 1;
+}
+.mechanism-link.feedback path {
+  stroke-dasharray: 0.025 0.018;
+}
+.mechanism-link circle,
+.mechanism-point {
+  fill: var(--signal);
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+[data-signal] {
+  visibility: hidden;
+}
+.motion-story[data-motion-ready="true"] [data-signal] {
+  visibility: visible;
+}
+.mechanism-node-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.mechanism-node-layer button {
+  position: absolute;
+  translate: -50% -50%;
+  width: var(--measured-word, min(25%, 132px));
+  max-width: 26%;
+  min-height: 44px;
+  padding: 8px 5px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  pointer-events: auto;
+}
+.mechanism-node-layer button[data-current="true"] {
+  border-color: var(--ink);
+  box-shadow: inset 0 -3px 0 var(--signal);
+}
+[data-dimmed="true"] {
+  opacity: 0.3;
+}
+.mechanism-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mechanism-steps li {
+  border-top: 1px solid var(--line);
+  padding: 16px 0 22px;
+  scroll-margin-top: 100px;
+}
+.mechanism-steps li.is-current {
+  border-color: var(--ink);
+}
+.mechanism-steps strong {
+  font-size: 18px;
+  line-height: 1.5;
+  display: block;
+  margin-top: 8px;
+}
+.mechanism-steps .mono {
+  font-size: 12px;
+}
+.mechanism-steps p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 10px;
+}
+.mechanism-steps a {
+  font-size: 13px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: underline;
+}
+.motion-evidence-note {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 24px;
+}
+.mechanism-geographic {
+  aspect-ratio: 720/520;
+  height: auto;
+  min-height: 0;
+}
+.mechanism-selection {
+  padding: 20px;
+  border: 1px solid var(--ink);
+  margin-block: 16px;
+}
+.mechanism-selection > button {
+  float: right;
+  background: transparent;
+  border: 0;
+  min-height: 44px;
+  padding: 8px;
+}
+.mechanism-selection > strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 80%;
+}
+.mechanism-selection p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.mechanism-selection a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  text-decoration: underline;
+}
+.evidence-lens-label {
+  display: grid;
+  gap: 12px;
+  font-size: 14px;
+  max-width: 720px;
+}
+.evidence-lens-label input {
+  width: 100%;
+  min-height: 44px;
+  accent-color: var(--ink);
+  touch-action: pan-y;
+}
+.method-lens {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-left: 3px solid var(--signal);
+  background: rgb(14 251 46 / 5%);
+}
+.method-lens > span:first-child {
+  font: 12px/1.5 var(--font-mono);
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+}
+.method-analysis-path {
+  position: absolute;
+  inset: 20%;
+  border: 1px dashed var(--ink);
+  border-radius: 50%;
+}
+.method-pca {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  grid-template-columns: minmax(0, 1.5fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+}
+.method-pca > div {
+  display: grid;
+  gap: 16px;
+}
+.method-pca > div > span {
+  border-bottom: 1px solid var(--line);
+  padding: 6px;
+  font-size: 14px;
+}
+.method-pca small {
+  grid-column: 1/-1;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.mechanism-spatial-method[data-active-step="3"] .method-pca {
+  display: grid;
+}
+.motion-study-roles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+.motion-study-roles button {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 16px;
+  min-height: 100px;
+}
+.motion-study-roles strong {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.motion-study-roles button > span {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.mechanism-synthesis .mechanism-node-layer button[data-graph-node="S00"] {
+  background: var(--signal);
+  font-size: 20px;
+}
+@media (max-width: 1023px), (max-height: 699px) {
+  .mechanism-body {
+    display: block;
+  }
+  .mechanism-steps {
+    margin-top: 24px;
+  }
+  .motion-study-roles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mechanism-diagram {
+    height: 420px;
+  }
+  .mechanism-geographic {
+    height: auto;
+  }
+  .mechanism-steps p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 460px) {
+  .motion-study-roles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mechanism-node-layer button {
+    padding: 6px 3px;
+    font-size: 14px;
+  }
+  .mechanism-synthesis .mechanism-diagram {
+    height: 520px;
+  }
+}
+@media print {
+  .mechanism-body {
+    display: block;
+  }
+  .mechanism-diagram {
+    position: relative !important;
+    transform: none !important;
+  }
+  .motion-filter,
+  .evidence-lens-label {
+    display: none;
+  }
+}
+.china-map[data-compare="gl"] .china-route-2,
+.china-map[data-compare="gl"] .china-route-3,
+.china-map[data-compare="gl"] .china-route-4,
+.china-map[data-compare="mm"] .china-route-0,
+.china-map[data-compare="mm"] .china-route-1,
+.china-map[data-compare="mm"] .china-route-4,
+.china-map[data-compare="kh"] .china-route-0,
+.china-map[data-compare="kh"] .china-route-1,
+.china-map[data-compare="kh"] .china-route-2,
+.china-map[data-compare="kh"] .china-route-3 {
+  opacity: 0.08;
+}
