@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { prepare, measureNaturalWidth, setLocale } from "@chenglou/pretext";
-import atlas from "@/visuals/atlas.json";
+import { usePretext } from "./use-pretext";
+import atlas from "@/visuals/atlas-points.json";
 import { storyVisuals } from "@/visuals/story";
 import {
   fitCamera,
@@ -16,9 +16,9 @@ const names: Record<string, { ko: string; en: string }> = {
   kr: { ko: "한국", en: "Korea" },
   mm: { ko: "미얀마", en: "Myanmar" },
   kh: { ko: "캄보디아", en: "Cambodia" },
-  Nuuk: { ko: "누크", en: "Nuuk" },
-  Ilulissat: { ko: "일루리사트", en: "Ilulissat" },
-  Qaqortoq: { ko: "카코르톡", en: "Qaqortoq" },
+  nuuk: { ko: "누크", en: "Nuuk" },
+  ilulissat: { ko: "일루리사트", en: "Ilulissat" },
+  qaqortoq: { ko: "카코르톡", en: "Qaqortoq" },
 };
 export function worldPins(scene: SceneMeta) {
   if (scene.id === "china-myanmar") return ["cn", "mm"];
@@ -46,6 +46,7 @@ export function SceneDiagram({
     labels: PlacedLabel[];
   } | null>(null);
   const geographic = visual.type === "world" || visual.type === "arctic";
+  const engine = usePretext(stage, geographic);
   const raw =
     visual.type === "arctic"
       ? Object.entries(atlas.arctic.pins)
@@ -70,7 +71,8 @@ export function SceneDiagram({
         : { scale: 1, x: 0, y: 0 };
   useEffect(() => {
     const el = stage.current;
-    if (!el || !geographic) return;
+    if (!el || !geographic || !engine) return;
+    const { prepare, measureNaturalWidth, setLocale } = engine;
     let alive = true;
     const measure = () => {
       if (!alive) return;
@@ -105,87 +107,34 @@ export function SceneDiagram({
       document.fonts.removeEventListener("loadingdone", measure);
     };
     // Reprepare on locale, font completion and size changes; never during scroll.
-  }, [scene.id, lang, detail, geographic]);
+  }, [scene.id, lang, detail, geographic, engine]);
   return (
     <div
       className={`scene-stage ${compact ? "compact" : ""}`}
       data-scene-diagram={scene.id}
       ref={stage}
     >
-      <svg
-        className="essay-scene-diagram"
-        viewBox="0 0 720 520"
-        width="720"
-        height="520"
-        role="img"
-        aria-label={visual.heading[lang]}
-      >
-        <title>{visual.heading[lang]}</title>
-        <desc>{visual.note[lang]}</desc>
-        <g
-          className={`scene-terrain terrain-${visual.type}`}
+      <div className="terrain-viewport">
+        {/* The complete frame remains local and lazy; only the geographic viewport zooms. */}
+        <img
+          className={`essay-scene-diagram scene-terrain terrain-${visual.type}`}
           key={`${scene.id}-${detail}`}
-        >
-          {visual.type === "world" && (
-            <g transform={`translate(${cam.x} ${cam.y}) scale(${cam.scale})`}>
-              <path d={atlas.world.grid} className="geo-grid" fill="none" />
-              <path d={atlas.world.land} className="geo-land" />
-              {raw.map(([id]) => (
-                <path
-                  key={id}
-                  d={
-                    atlas.world.countries[
-                      id as keyof typeof atlas.world.countries
-                    ]
-                  }
-                  className="geo-country selected"
-                />
-              ))}
-            </g>
-          )}
-          {visual.type === "arctic" && (
-            <g transform={`translate(${cam.x} ${cam.y}) scale(${cam.scale})`}>
-              <circle cx="360" cy="250" r="220" className="geo-sphere" />
-              <path d={atlas.arctic.grid} className="geo-grid" fill="none" />
-              <path d={atlas.arctic.land} className="geo-land" />
-            </g>
-          )}
-          {visual.type === "globe" && (
-            <>
-              <circle cx="360" cy="258" r="202" className="geo-sphere" />
-              <path d={atlas.globe.grid} className="geo-grid" />
-              <path d={atlas.globe.land} className="geo-land" />
-            </>
-          )}
-          {(visual.type === "concept" || visual.type === "integration") && (
-            <>
-              <path d="M144 260H576" className="concept-thread" fill="none" />
-              {visual.steps.map((step, i) => (
-                <g key={i} transform={`translate(${64 + i * 216} 172)`}>
-                  <rect
-                    width="160"
-                    height="160"
-                    className={
-                      i === 1 ? "concept-block focal" : "concept-block"
-                    }
-                  />
-                  <text x="16" y="32" className="diagram-index">
-                    0{i + 1}
-                  </text>
-                  <text
-                    x="80"
-                    y="98"
-                    textAnchor="middle"
-                    className="diagram-label"
-                  >
-                    {step[lang]}
-                  </text>
-                </g>
-              ))}
-            </>
-          )}
-        </g>
-      </svg>
+          src={`/visuals/${visual.type}.svg`}
+          width="720"
+          height="520"
+          loading="lazy"
+          decoding="async"
+          alt={visual.heading[lang]}
+          style={
+            geographic
+              ? {
+                  transform: `translate(${(cam.x / 720) * 100}%, ${(cam.y / 520) * 100}%) scale(${cam.scale})`,
+                  transformOrigin: "0 0",
+                }
+              : undefined
+          }
+        />
+      </div>
       {geographic && geometry && (
         <>
           <svg
@@ -213,7 +162,7 @@ export function SceneDiagram({
                 className="map-label"
                 style={{ left: p.left, top: p.top, width: p.width }}
                 onClick={() => onSelect?.(p.id)}
-                aria-label={p.text}
+                aria-label={p.numbered ? `${p.number} · ${p.text}` : p.text}
                 disabled={!onSelect}
               >
                 {p.numbered ? p.number : p.text}

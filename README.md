@@ -1,10 +1,10 @@
 # Research
 
-IIR 연구 사이트입니다. 현재 코드 버전은 **v2.2.0**입니다. Vercel 배포 Root Directory는 기존 **v1.1.0**을 유지합니다.
+IIR 연구 사이트입니다. 현재 코드 버전은 **v2.3.0**입니다. Vercel 배포 Root Directory는 기존 **v1.1.0**을 유지합니다.
 
-[사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.2.0 구현·검증](v1.1.0/docs/V2_2_RELEASE.md)
+[사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.3.0 구현·검증](v1.1.0/docs/V2_3_RELEASE.md)
 
-- Paper 바탕에서 S00 에세이의 여섯 흐름과 지구본·개념도·세계·북극 지도가 이어집니다.
+- Paper 바탕에서 18개 논지와 사례별 관계도·지도가 이어지고, 기업 역량·그린란드·통합 연구는 세 강조 구간으로 펼쳐집니다.
 - 실제 연구와 참고자료를 폴더·책등으로 탐색하고, 축소 목차와 진행 표시로 읽기를 이어갑니다.
 - 실제 연구 13개, 한국어·영어 전문 973개 문단, 관련 논지 강조와 왕복 링크.
 - 사이트 안의 PDF 열람·다운로드. 영어는 편집 번역이며 저자 최종 검수 전입니다.

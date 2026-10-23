@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div>
-        <Link href="/" className="footer-brand">
+        <Link prefetch={false} href="/" className="footer-brand">
           IIR
           <span className="signal-square" />
         </Link>
@@ -18,16 +18,16 @@ export function Footer() {
         </p>
       </div>
       <div className="footer-links">
-        <Link href="/methods">
+        <Link prefetch={false} href="/methods">
           <Localized en="Methods & limitations" ko="방법론과 한계" />
         </Link>
-        <Link href="/accessibility">
+        <Link prefetch={false} href="/accessibility">
           <Localized en="Accessibility" ko="접근성" />
         </Link>
         <MotionControl />
       </div>
       <div className="footer-note">
-        <span className="mono">IIR 2.2.0 · RESEARCH IN PROGRESS · 2026</span>
+        <span className="mono">IIR 2.3.0 · RESEARCH IN PROGRESS · 2026</span>
         <p>
           <Localized
             en="A working framework, open to scrutiny."

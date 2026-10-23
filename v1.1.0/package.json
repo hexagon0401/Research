@@ -1,13 +1,13 @@
 {
   "name": "iir-research-atlas",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
     "build": "next build",
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/content.test.mjs tests/assets.test.mjs tests/reports.test.mjs tests/readings.test.mjs",
+    "test": "node --test tests/content.test.mjs tests/assets.test.mjs tests/reports.test.mjs tests/readings.test.mjs tests/geometry.test.mjs",
     "test:e2e": "playwright test",
     "generate:map": "node scripts/generate-map.mjs",
     "format": "prettier --write .",
@@ -16,7 +16,8 @@
     "intake": "python3 scripts/intake-originals.py",
     "prebuild": "node scripts/copy-pdf-worker.mjs && node scripts/audit-reading-editions.mjs",
     "postinstall": "node scripts/copy-pdf-worker.mjs",
-    "audit:readings": "node scripts/audit-reading-editions.mjs"
+    "audit:readings": "node scripts/audit-reading-editions.mjs",
+    "audit:preservation": "node scripts/verify-preservation.mjs"
   },
   "dependencies": {
     "@chenglou/pretext": "1.0.0",

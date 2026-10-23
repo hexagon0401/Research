@@ -29,7 +29,10 @@ export function PreferencesProvider({
   useEffect(() => {
     try {
       const saved = localStorage.getItem("iir-language");
-      if (saved === "en" || saved === "ko") setLang(saved);
+      if (saved === "en" || saved === "ko") {
+        document.documentElement.lang = saved;
+        setLang(saved);
+      }
     } catch {}
     const media = matchMedia("(prefers-reduced-motion: reduce)");
     const sync = () => {
@@ -50,6 +53,8 @@ export function PreferencesProvider({
     document.documentElement.dataset.motion = reduced ? "reduced" : "full";
   }, [lang, reduced]);
   const updateLang = (value: "en" | "ko") => {
+    document.dispatchEvent(new Event("iir:before-language"));
+    document.documentElement.lang = value;
     setLang(value);
     try {
       localStorage.setItem("iir-language", value);

@@ -1,10 +1,14 @@
 # Open Design 이관 계약
 
-## 현재 디자인 — v2.2.0
+## 현재 디자인 — v2.3.0
 
-현재 메인은 `src/app/story.css`, `src/components/essay-experience.tsx`, `src/visuals/`를 사용합니다. 검정 사이드 패널과 포인터 추적 이동·배경색 보간은 제거했습니다. 논지의 진행에 따라 지리적 초점과 설명 도식만 움직이며, 지역 강조용 작은 그라데이션 외에는 반복 배경 효과를 쓰지 않습니다. 실제 자료 서가는 `material-shelf.tsx`입니다. 이 절과 [v2.2.0 시각 설계](V2_2_DESIGN.md)가 아래 이전 버전의 시각 구현 설명보다 우선합니다. 원문·출처·백엔드 불변조건은 계속 적용합니다.
+현재 메인은 `src/app/page.tsx`, `story.css`, `essay-experience.tsx`, `narrative-visual.tsx`, `scene-diagram.tsx`, `src/visuals/story.ts`를 사용합니다. 18개 논지가 각자의 그림·제목·범례·원문 링크를 함께 소유합니다. 이전 공유 지도 패널·투영 간 교차 잔상·포인터 추적은 사용하지 않습니다. 기업 역량·북극/그린란드·최종 통합만 정상 문서 흐름에서 전체 폭으로 펼칩니다. 원문 인용 영역은 겹치거나 이동시키지 않습니다.
 
-이 저장소는 기능을 확인할 수 있는 초안입니다. Open Design 도구에 업로드하거나 외부로 전송한 상태가 아닙니다.
+지도는 로컬 Natural Earth SVG 지형과 화면 픽셀 단위 HTML 지명을 분리합니다. `label-layout.ts`가 충돌과 카메라 범위를 계산하며, `use-pretext.ts`가 근처 장면에서만 Pretext 1.0.0을 불러옵니다. 지명과 짧은 편집 연결문만 측정하고, 전문은 DOM 텍스트로 보존합니다. 좁은 화면은 번호+HTML 목록, 모션 감소와 No-JS는 정적 세로 구성을 제공합니다. 선의 `fill="none"`과 점·면의 개별 스타일을 유지하세요.
+
+실제 자료 서가는 `material-shelf.tsx`, 원문 왕복 위치는 `essay-experience.tsx`의 문단 ID·화면 오프셋으로 관리합니다. 목차의 언어 버튼은 상단에 둡니다. 스크롤 이벤트는 요청 시 한 프레임만 처리하며, 정지 상태의 반복 RAF·강제 정지·자동 진행은 추가하지 않습니다.
+
+이 절과 [v2.3.0 구현·검증](V2_3_RELEASE.md)이 아래의 역사적 컴포넌트·런타임 설명보다 우선합니다. 배포 루트 `v1.1.0/`, 기존 주소·본문·번역·PDF·공개 API·백엔드 불변조건은 유지합니다. GitHub Actions의 Chromium 검사는 운영 주소에 대한 최종 화면 대조와 구분합니다.
 
 ## 바꿀 수 있는 시각 계층
 
@@ -20,7 +24,7 @@
 | `--gutter`       | `clamp(24px, 5vw, 84px)`                           |
 | `--duration`     | 기본 260ms                                         |
 
-전체 스타일은 `src/app/globals.css`에 있습니다. Tailwind나 UI 프레임워크를 혼용하지 않습니다. 지도와 개념도는 SVG 선 중심이며, 폴더는 CSS로 만든 2.5D 표현입니다. 무거운 WebGL과 애니메이션 엔진을 초기 의존성에 포함하지 않았습니다.
+공통 스타일은 `src/app/globals.css`, 현재 에세이·서가 스타일은 `src/app/story.css`에 있습니다. Tailwind나 UI 프레임워크를 혼용하지 않습니다. 지도와 개념도는 SVG 선 중심이며, 폴더는 CSS로 만든 2.5D 표현입니다. 무거운 WebGL과 애니메이션 엔진을 초기 의존성에 포함하지 않았습니다.
 
 한국어는 로컬 IBM Plex Sans KR 400/500을 사용합니다. npm 패키지의 SIL Open Font License를 확인했으며, 한국어 UI나 원문이 필요한 경로에서만 폰트 CSS를 지연 로딩하고, Unicode 범위별 서브셋은 필요한 글리프만 브라우저가 요청합니다. JavaScript 미사용 시 시스템 CJK 폴백을 사용합니다. 외부 폰트 API를 호출하지 않습니다.
 

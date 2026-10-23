@@ -2,13 +2,18 @@ import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
 import {
   EssayExperience,
-  EssayVisual,
-  InlineVisual,
-  HeroAtlas,
   StoryNavigation,
 } from "@/components/essay-experience";
 import { essay } from "@/content/essay";
-import { storyChapters } from "@/visuals/story";
+import {
+  storyChapters,
+  emphasisScenes,
+  glossaries,
+  contributionLabels,
+  studySpines,
+} from "@/visuals/story";
+import { HeroAtlas } from "@/components/hero-atlas";
+import { NarrativeVisual } from "@/components/narrative-visual";
 import { ResearchShelf } from "@/components/material-shelf";
 import { reports } from "@/content/report-catalog";
 import { getReadingEdition } from "@/content/reading-repository";
@@ -109,6 +114,9 @@ export default async function Home() {
   );
   return (
     <EssayExperience scenes={scenes}>
+      <noscript>
+        <style>{`.essay-beat{display:block}.beat-reading{max-width:72ch}.is-emphasis .beat-reading{max-width:none}`}</style>
+      </noscript>
       <header id="question" className="essay-hero section-shell">
         <span className="eyebrow">
           <span className="signal-square" /> INTEGRATED INDEPENDENT RESEARCH /
@@ -187,6 +195,17 @@ export default async function Home() {
           />
         </p>
       </header>
+      <section className="essay-starting-question section-shell">
+        <span className="eyebrow">
+          S00 / <L ko="비교의 질문" en="THE COMPARATIVE QUESTION" />
+        </span>
+        <p>
+          <L
+            ko="기업의 역량은 어떤 제도를 거쳐 국가의 힘이 되고, 그 결속에는 어떤 책임이 따르는가? 미국의 조달·금융, 중국의 소유·공간 전략, 한국의 생산·규제 문제를 같은 질문으로 읽습니다."
+            en="Through which institutions does corporate capability become national power, and what accountability follows? Read American procurement and finance, Chinese ownership and spatial strategy, and Korean production and regulation against that shared question."
+          />
+        </p>
+      </section>
       <StoryNavigation />
       <div className="essay-layout section-shell">
         <article className="essay-body" aria-label="Main research narrative">
@@ -208,135 +227,218 @@ export default async function Home() {
                   <section
                     id={beat.id}
                     key={beat.id}
-                    className="essay-beat"
+                    className={`essay-beat ${emphasisScenes.has(beat.id) ? "is-emphasis" : ""}`}
                     data-essay-beat
                   >
-                    {legacy[beat.id]?.map((id) => (
-                      <span key={id} id={id} className="essay-legacy-anchor" />
-                    ))}
-                    {beat.country && (
-                      <span className="eyebrow essay-country-label">
-                        {beat.country === "us"
-                          ? "UNITED STATES"
-                          : beat.country === "cn"
-                            ? "CHINA"
-                            : "SOUTH KOREA"}{" "}
-                        / <L ko="사례와 메커니즘" en="CASE & MECHANISM" />
-                      </span>
-                    )}
-                    <h2>
-                      <L ko={beat.title.ko} en={beat.title.en} />
-                    </h2>
-                    <p className="essay-intro">
-                      <L ko={beat.intro.ko} en={beat.intro.en} />
-                    </p>
-                    {[
-                      "survival",
-                      "capability",
-                      "us-mission",
-                      "us-dome",
-                      "china-ownership",
-                      "china-arctic",
-                      "korea-chips",
-                      "spatial-method",
-                      "synthesis",
-                    ].includes(beat.id) && <InlineVisual scene={beat} />}
-                    {beat.selected.length > 0 && (
-                      <div className="essay-source-excerpts">
-                        <span className="eyebrow">
-                          <L
-                            ko="논지를 따라 원문에서 읽기"
-                            en="FOLLOW THE ARGUMENT IN THE SOURCE"
-                          />
-                        </span>
-                        {beat.selected.map((p) => (
-                          <div className="essay-source-passage" key={p.id}>
-                            <p>
-                              <L
-                                ko={p.ko}
-                                en={
-                                  p.en ?? "Editorial translation in progress."
-                                }
-                              />
-                            </p>
-                            <Link
-                              prefetch={false}
-                              href={`/reports/${p.report}?from=${beat.id}#${p.id}`}
-                              className="essay-citation"
-                            >
-                              {p.report} ·{" "}
-                              <L
-                                ko="앞뒤 문맥과 함께 읽기 ↗"
-                                en="Read with its context ↗"
-                              />
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    {beat.note && (
-                      <aside className="essay-evidence-note">
-                        <span className="eyebrow">
-                          <L
-                            ko="해석과 근거의 경계"
-                            en="INTERPRETATION & EVIDENCE"
-                          />
-                        </span>
-                        <p>
-                          <L ko={beat.note.ko} en={beat.note.en} />
-                        </p>
-                      </aside>
-                    )}
-                    {beat.references && (
-                      <details className="essay-references">
-                        <summary>
-                          <L
-                            ko="함께 대조할 법령·기관 자료"
-                            en="Legislation and institutional references"
-                          />
-                        </summary>
-                        <p>
-                          <L
-                            ko="원문과 별도로 대조할 자료입니다. 아래 링크의 최신 내용과 사례별 적용은 검증 대기입니다."
-                            en="References for comparison with the source. Their latest contents and application to these cases await verification."
-                          />
-                        </p>
-                        <ul>
-                          {beat.references.map((ref) => (
-                            <li key={ref.url}>
-                              <a
-                                href={ref.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {ref.title} ↗
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </details>
-                    )}
-                    <nav
-                      className="essay-related"
-                      aria-label="Read related full studies"
-                    >
-                      {beat.related.map((id) => (
-                        <Link key={id} href={beat.targets[id]} prefetch={false}>
-                          <span>{id}</span>
-                          <L ko="연구 전문" en="Full study" /> ↗
-                        </Link>
+                    <div className="beat-reading">
+                      {legacy[beat.id]?.map((id) => (
+                        <span
+                          key={id}
+                          id={id}
+                          className="essay-legacy-anchor"
+                        />
                       ))}
-                    </nav>
-                    <p className="essay-bridge">
-                      <L ko={beat.bridge.ko} en={beat.bridge.en} />
-                      <span aria-hidden="true">↓</span>
-                    </p>
+                      {beat.country && (
+                        <span className="eyebrow essay-country-label">
+                          {beat.country === "us"
+                            ? "UNITED STATES"
+                            : beat.country === "cn"
+                              ? "CHINA"
+                              : "SOUTH KOREA"}{" "}
+                          / <L ko="사례와 메커니즘" en="CASE & MECHANISM" />
+                        </span>
+                      )}
+                      <h2>
+                        <L ko={beat.title.ko} en={beat.title.en} />
+                      </h2>
+                      <span className="eyebrow editorial-label">
+                        <L
+                          ko="사건과 쟁점 · 편집 개요"
+                          en="CASE & QUESTION · EDITORIAL OVERVIEW"
+                        />
+                      </span>
+                      <p className="essay-intro">
+                        <L ko={beat.intro.ko} en={beat.intro.en} />
+                      </p>
+                      {beat.id === "china-arctic" && (
+                        <p className="map-scope-note">
+                          <L
+                            ko="이 버전의 지도는 공항 제안의 참고 위치만 표시합니다. 본문에서 논의한 북극 항로와 광물 지분은 공항을 잇는 선으로 표시하지 않습니다."
+                            en="This map locates the airport proposals only. Arctic routes and mining equity discussed in the text are not drawn as lines joining airports."
+                          />
+                        </p>
+                      )}
+                      {glossaries[beat.id]?.map((item) => (
+                        <details className="essay-glossary" key={item.term.en}>
+                          <summary>
+                            <L ko={item.term.ko} en={item.term.en} /> ·{" "}
+                            <L ko="뜻 살펴보기" en="Term explained" />
+                          </summary>
+                          <p>
+                            <L
+                              ko={item.definition.ko}
+                              en={item.definition.en}
+                            />
+                          </p>
+                        </details>
+                      ))}
+                      {emphasisScenes.has(beat.id) && (
+                        <NarrativeVisual
+                          scene={scenes.find((scene) => scene.id === beat.id)!}
+                        />
+                      )}
+                      {beat.selected.length > 0 && (
+                        <div className="essay-source-excerpts">
+                          <span className="eyebrow">
+                            <L
+                              ko="원문 발췌 · 저자의 서술"
+                              en="SOURCE EXCERPT · AUTHOR’S ACCOUNT"
+                            />
+                          </span>
+                          {beat.selected.map((p, passageIndex) => (
+                            <div
+                              className="essay-source-passage"
+                              id={`essay-${beat.id}-${p.id}`}
+                              key={p.id}
+                              data-reading-passage
+                            >
+                              <p>
+                                <L
+                                  ko={
+                                    passageIndex < 2
+                                      ? markSentence(p.ko, beat.id)
+                                      : p.ko
+                                  }
+                                  en={
+                                    p.en
+                                      ? passageIndex < 2
+                                        ? markSentence(p.en, beat.id)
+                                        : p.en
+                                      : "Editorial translation in progress."
+                                  }
+                                />
+                              </p>
+                              <Link
+                                prefetch={false}
+                                href={`/reports/${p.report}?from=${beat.id}#${p.id}`}
+                                className="essay-citation"
+                              >
+                                {p.report} ·{" "}
+                                <L
+                                  ko="앞뒤 문맥과 함께 읽기 ↗"
+                                  en="Read with its context ↗"
+                                />
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {beat.note && (
+                        <details className="essay-evidence-note">
+                          <summary>
+                            <L
+                              ko="확인 범위 · 해석과 검증을 구분해 읽기"
+                              en="Evidence scope · distinguish interpretation from verification"
+                            />
+                          </summary>
+                          <span className="eyebrow">
+                            <L
+                              ko="해석과 근거의 경계"
+                              en="INTERPRETATION & EVIDENCE"
+                            />
+                          </span>
+                          <p>
+                            <L ko={beat.note.ko} en={beat.note.en} />
+                          </p>
+                        </details>
+                      )}
+                      {beat.references && (
+                        <details className="essay-references">
+                          <summary>
+                            <L
+                              ko="함께 대조할 법령·기관 자료"
+                              en="Legislation and institutional references"
+                            />
+                          </summary>
+                          <p>
+                            <L
+                              ko="원문과 별도로 대조할 자료입니다. 아래 링크의 최신 내용과 사례별 적용은 검증 대기입니다."
+                              en="References for comparison with the source. Their latest contents and application to these cases await verification."
+                            />
+                          </p>
+                          <ul>
+                            {beat.references.map((ref) => (
+                              <li key={ref.url}>
+                                <a
+                                  href={ref.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {ref.title} ↗
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </details>
+                      )}
+                      <nav
+                        className="essay-related"
+                        aria-label="Read related full studies"
+                      >
+                        {beat.related.map((id) => (
+                          <Link
+                            key={id}
+                            href={beat.targets[id]}
+                            prefetch={false}
+                          >
+                            <span className="mono">{id}</span>
+                            <span className="od-field">
+                              <strong>
+                                <L
+                                  ko={studySpines[id].ko}
+                                  en={studySpines[id].en}
+                                />
+                              </strong>
+                              <span>
+                                <L
+                                  ko={contributionLabels[id].ko}
+                                  en={contributionLabels[id].en}
+                                />
+                              </span>
+                            </span>{" "}
+                            ↗
+                          </Link>
+                        ))}
+                      </nav>
+                      <span className="eyebrow editorial-label">
+                        <L
+                          ko={
+                            beat.id === "synthesis"
+                              ? "정책 제안으로 이어지는 편집 연결"
+                              : "편집 설명 · 다음 질문"
+                          }
+                          en={
+                            beat.id === "synthesis"
+                              ? "EDITORIAL CONNECTION TO POLICY PROPOSALS"
+                              : "EDITORIAL CONNECTION · THE NEXT QUESTION"
+                          }
+                        />
+                      </span>
+                      <p className="essay-bridge">
+                        <L ko={beat.bridge.ko} en={beat.bridge.en} />
+                        <span aria-hidden="true">↓</span>
+                      </p>
+                    </div>
+                    {!emphasisScenes.has(beat.id) && (
+                      <NarrativeVisual
+                        scene={scenes.find((scene) => scene.id === beat.id)!}
+                      />
+                    )}
                   </section>
                 ))}
             </section>
           ))}
         </article>
-        <EssayVisual />
       </div>
       <section id="integration" className="essay-integration section-shell">
         <span id="index" className="essay-legacy-anchor" />
@@ -365,6 +467,7 @@ export default async function Home() {
             en="These connections describe shared questions and analytical roles. They do not merge distinct reports into one artifact or treat connections as proof of statistical causation. Each study retains its own full text and source document."
           />
         </p>
+        <ComparativeReading />
         <ResearchShelf kind="archive" compact from="integration" />
         <Link id="archive-entry" className="essay-archive-link" href="/archive">
           <L ko="연구 아카이브 열기" en="Open the research archive" />
@@ -372,5 +475,115 @@ export default async function Home() {
         </Link>
       </section>
     </EssayExperience>
+  );
+}
+
+function markSentence(text: string, scene: string) {
+  const end = text.search(/[.!?。](?:\s|$)/);
+  if (end < 0) return text;
+  return (
+    <>
+      <a className="source-key-link" href={`#visual-${scene}`}>
+        <mark className="source-key-sentence">{text.slice(0, end + 1)}</mark>
+      </a>
+      {text.slice(end + 1)}
+    </>
+  );
+}
+function ComparativeReading() {
+  const rows = [
+    {
+      ko: [
+        "미국",
+        "조달·금융·국가 프로젝트",
+        "계약과 준비자산의 경로",
+        "계약 상한·집행, 보유·면책을 구분",
+      ],
+      en: [
+        "America",
+        "Procurement, finance, national projects",
+        "Contracts and reserve assets",
+        "Separate ceilings from spending; holdings from immunity",
+      ],
+      href: "#us-mission",
+    },
+    {
+      ko: [
+        "중국",
+        "소유·조직·공간 전략",
+        "지분과 사업 접근의 경로",
+        "지분·인접성만으로 지시를 단정하지 않음",
+      ],
+      en: [
+        "China",
+        "Ownership, organizations, spatial strategy",
+        "Equity and project access",
+        "Equity and proximity do not establish state direction",
+      ],
+      href: "#china-ownership",
+    },
+    {
+      ko: [
+        "한국",
+        "생산·플랫폼·규제",
+        "기술과 제도 사이의 선택",
+        "정책 효과와 시장·기업 요인을 분리",
+      ],
+      en: [
+        "Korea",
+        "Production, platforms, regulation",
+        "Choices between technology and institutions",
+        "Distinguish policy effects from market and firm factors",
+      ],
+      href: "#korea-chips",
+    },
+  ];
+  return (
+    <section className="comparative-reading">
+      <h3>
+        <L
+          ko="같은 질문으로 다시 비교하기"
+          en="Compare through the same question"
+        />
+      </h3>
+      <div className="comparison-grid">
+        {rows.map((row) => (
+          <article key={row.href}>
+            <h4>
+              <a href={row.href}>
+                <L ko={row.ko[0]} en={row.en[0]} /> ↑
+              </a>
+            </h4>
+            {[1, 2, 3].map((i) => (
+              <div className="od-field" key={i}>
+                <span className="eyebrow">
+                  <L
+                    ko={["", "결속 방식", "작동 수단", "확인할 문제"][i]}
+                    en={
+                      ["", "CONNECTION", "INSTRUMENT", "EVIDENCE QUESTION"][i]
+                    }
+                  />
+                </span>
+                <p>
+                  <L ko={row.ko[i]} en={row.en[i]} />
+                </p>
+              </div>
+            ))}
+          </article>
+        ))}
+      </div>
+      <p className="comparison-proposal">
+        <strong>
+          S00 · <L ko="저자의 정책 제안" en="THE AUTHOR’S POLICY PROPOSAL" />
+        </strong>
+        <L
+          ko="기술과 기업을 단순 보호 대상으로 보기보다, 국가와 기업의 목적·책임·협력 조건을 함께 재정의하자는 질문으로 이어집니다. 구체적 문맥과 제안의 범위는 S00 전문에서 확인합니다."
+          en="The comparison leads to S00's proposal to reconsider the purposes, responsibilities and terms of cooperation between states and firms. Read S00 for the scope and context of that proposal."
+        />{" "}
+        <Link href="/reports/S00?from=integration" prefetch={false}>
+          <L ko="S00 전문 ↗" en="Full S00 ↗" />
+        </Link>
+      </p>
+    </section>
   );
 }

@@ -376,3 +376,97 @@ export const studySpines: Record<string, Label> = {
   S16: l("반도체", "Semiconductors"),
   S17: l("방산 전략", "Defense"),
 };
+
+/** v2.3 editorial metadata; source documents and their claims are immutable. */
+export const emphasisScenes = new Set([
+  "capability",
+  "china-arctic",
+  "synthesis",
+]);
+export const contributionLabels: Record<string, Label> = {
+  S00: l("통합 질문과 정책 제언", "Synthesis & proposals"),
+  S01: l("데이터 역량의 작동 방식", "Data capability"),
+  S02: l("미국의 제도적 연결", "American institutions"),
+  S03: l("국가 프로젝트 · 5쪽", "National project · 5 pp"),
+  S05: l("준비자산과 금융 신뢰", "Reserves & trust"),
+  S06: l("기업 존속의 출발 질문", "Corporate resilience"),
+  S08: l("사례의 공간 분석 근거", "Spatial case analysis"),
+  S11: l("안보·동맹의 분석 틀", "Security & alliances"),
+  S13: l("국가 프로젝트 · 6쪽", "National project · 6 pp"),
+  S14: l("정체성 판단의 기준", "Identity & judgment"),
+  S15: l("관측 자료를 통한 점검", "Observational methods"),
+  S16: l("수출통제의 생산 경로", "Controls & production"),
+  S17: l("방산 비교와 방법의 한계", "Defense & method limits"),
+};
+export const glossaries: Record<string, { term: Label; definition: Label }[]> =
+  {
+    "us-mission": [
+      {
+        term: l("정부조달", "Public procurement"),
+        definition: l(
+          "정부가 재화·용역을 계약으로 구매하는 절차입니다. 계약 상한은 실제 지급액과 구분합니다.",
+          "Government purchasing through contracts. A contract ceiling is distinct from actual expenditure.",
+        ),
+      },
+    ],
+    "us-finance": [
+      {
+        term: l("준비자산", "Reserve assets"),
+        definition: l(
+          "발행자가 상환 등을 뒷받침하기 위해 보유하는 자산입니다. 자산 구성·평가 시점·상환 조건은 별도로 확인합니다.",
+          "Assets held to support redemption and other obligations. Composition, valuation dates and redemption terms require separate checks.",
+        ),
+      },
+    ],
+    "china-ownership": [
+      {
+        term: l("지배구조", "Corporate governance"),
+        definition: l(
+          "주주·이사회·경영진 사이에 권한과 책임을 배분하는 구조입니다. 지분율만으로 실제 결정권을 확정할 수는 없습니다.",
+          "The allocation of authority and accountability among shareholders, boards and management. Equity alone does not settle actual decision rights.",
+        ),
+      },
+    ],
+    "korea-chips": [
+      {
+        term: l("수출통제", "Export controls"),
+        definition: l(
+          "품목·기술·최종 사용자 등에 따라 이전이나 수출을 제한하는 제도입니다. 특정 연도의 허가 사례를 현재 상태와 구분합니다.",
+          "Rules restricting transfers by item, technology or end user. A historical authorization does not establish today's status.",
+        ),
+      },
+    ],
+    "spatial-method": [
+      {
+        term: l("공간적 인접성", "Spatial proximity"),
+        definition: l(
+          "같은 장소나 가까운 위치에 있다는 관측입니다. 거래·통제·인과관계를 입증하려면 별도 자료가 필요합니다.",
+          "An observation that entities occupy nearby locations. Transactions, control and causation require separate evidence.",
+        ),
+      },
+    ],
+  };
+export const editorialConnectors: Record<string, Label> = {
+  capability: l(
+    "기업 안에 축적된 기술과 데이터는 생산 기반, 계약, 제도를 거치며 국가의 선택지와 연결됩니다. 넓어지는 것은 지도의 크기만이 아니라, 같은 역량을 바라보는 분석의 범위입니다.",
+    "Technology and data accumulated inside firms meet industrial capacity, contracts and institutions. The expanding scale represents a wider analytical frame, rather than proof that a technology caused a national outcome.",
+  ),
+  "china-arctic": l(
+    "먼저 북극권에서 그린란드의 위치를 보고, 다음으로 세 공항 사업의 참고 위치를 구분합니다. 지점을 잇는 얇은 선은 지명 설명선입니다. 투자 관계나 실제 운항 경로를 뜻하지 않습니다.",
+    "Locate Greenland in the Arctic before examining the three airport reference locations. Thin leaders connect place names to points; they represent neither investment flows nor observed flight or shipping routes.",
+  ),
+  synthesis: l(
+    "서로 다른 질문과 방법을 가진 연구들이 S00으로 모입니다. 각 가지를 선택해 그 연구가 보태는 역할을 읽고, 원문으로 이동해 독립적으로 확인할 수 있습니다.",
+    "Distinct questions and methods meet in S00. Select a branch to see its contribution, then read the study in its own context. A connection is an analytical role, not evidence that the studies share one result.",
+  ),
+};
+// Geography is retained only where location is part of the argument.
+for (const id of [
+  "us-mission",
+  "us-finance",
+  "us-ships",
+  "china-ownership",
+  "china-governance",
+  "korea-defense",
+])
+  storyVisuals[id].type = "concept";

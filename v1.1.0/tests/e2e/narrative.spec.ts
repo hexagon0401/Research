@@ -53,43 +53,38 @@ test("country navigation and source links work with keyboard and native anchors"
   await page.locator("[data-return-to-essay]").first().click();
   await expect(page).toHaveURL(/#china-myanmar$/);
 });
-test("visual modes crossfade through the Arctic scene without covering the essay", async ({
+test("case figures retain matching geometry, caption and source at every boundary", async ({
   page,
 }) => {
   await page.goto("/");
-  await page.evaluate(() => {
-    const r = document.getElementById("china-arctic")!.getBoundingClientRect();
-    scrollTo({
-      top: r.top + scrollY - innerHeight * 0.35 + innerHeight * 0.3,
-      behavior: "instant",
-    });
-  });
-  await expect(page.locator("#main")).toHaveAttribute(
-    "data-scene",
-    "china-arctic",
-  );
-  const values = await page
-    .locator("#main")
-    .evaluate((e) => [
-      Number((e as HTMLElement).style.getPropertyValue("--mode-arctic")),
-      Number((e as HTMLElement).style.getPropertyValue("--mode-world")),
-    ]);
-  expect(values[0]).toBeGreaterThan(0);
-  expect(values[0]).toBeLessThan(1);
-  expect(values[1]).toBeGreaterThan(0);
-  const geometry = await page.evaluate(() => {
-    const v = document.querySelector<HTMLElement>(".essay-visual")!;
-    const b = document.querySelector(".essay-body")!.getBoundingClientRect();
-    return {
-      hidden: getComputedStyle(v).display === "none",
-      left: v.getBoundingClientRect().left,
-      bodyRight: b.right,
-      overflow: document.documentElement.scrollWidth > innerWidth + 1,
-    };
-  });
-  if (!geometry.hidden)
-    expect(geometry.left).toBeGreaterThan(geometry.bodyRight);
-  expect(geometry.overflow).toBe(false);
+  const ids = await page
+    .locator("[data-essay-beat]")
+    .evaluateAll((els) => els.map((e) => e.id));
+  for (const id of [...ids, ...ids.toReversed()]) {
+    await page.evaluate((id) => {
+      const el = document.getElementById(id)!;
+      scrollTo({
+        top: el.getBoundingClientRect().top + scrollY - innerHeight * 0.25,
+        behavior: "instant",
+      });
+    }, id);
+    await expect(page.locator("#main")).toHaveAttribute("data-scene", id);
+    const figure = page.locator(`[data-visual-for="${id}"]`);
+    await expect(figure.locator("figcaption h3")).not.toBeEmpty();
+    await expect(
+      figure.locator(".case-source-links a").first(),
+    ).toHaveAttribute("href", new RegExp(`from=${id}`));
+    await expect(
+      figure.locator(
+        ".terrain-world .terrain-arctic,.terrain-arctic .terrain-world",
+      ),
+    ).toHaveCount(0);
+  }
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth + 1,
+    ),
+  ).toBe(true);
 });
 test("motion preferences retain reading position and system reduction wins", async ({
   page,
@@ -103,13 +98,28 @@ test("motion preferences retain reading position and system reduction wins", asy
     "korea-chips",
   );
   await page.evaluate(() => document.fonts.ready);
-  const y = await page.evaluate(() => scrollY);
+  const before = await page
+    .locator("#korea-chips")
+    .evaluate((el) => el.getBoundingClientRect().top);
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator("#main")).toHaveAttribute("data-motion", "reduced");
   await expect(
     page.getByRole("button", { name: /Reduce motion/ }),
   ).toBeDisabled();
-  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(5);
+  await expect(page.locator("#main")).toHaveAttribute(
+    "data-scene",
+    "korea-chips",
+  );
+  await expect
+    .poll(() =>
+      page
+        .locator("#korea-chips")
+        .evaluate(
+          (el, offset) => Math.abs(el.getBoundingClientRect().top - offset),
+          before,
+        ),
+    )
+    .toBeLessThan(12);
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await expect(page.locator("#main")).toHaveAttribute("data-motion", "full");
 });
