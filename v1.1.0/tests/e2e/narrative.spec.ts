@@ -42,6 +42,7 @@ test("country navigation and source links work with keyboard and native anchors"
     "data-scene",
     "china-ownership",
   );
+  await page.locator("#detail-china-myanmar > summary").click();
   const link = page.locator("#china-myanmar .essay-citation").first();
   await link.click();
   await expect(page).toHaveURL(
@@ -69,16 +70,24 @@ test("case figures retain matching geometry, caption and source at every boundar
       });
     }, id);
     await expect(page.locator("#main")).toHaveAttribute("data-scene", id);
-    const figure = page.locator(`[data-visual-for="${id}"]`);
-    await expect(figure.locator("figcaption h3")).not.toBeEmpty();
-    await expect(
-      figure.locator(".case-source-links a").first(),
-    ).toHaveAttribute("href", new RegExp(`from=${id}`));
-    await expect(
-      figure.locator(
-        ".terrain-world .terrain-arctic,.terrain-arctic .terrain-world",
-      ),
-    ).toHaveCount(0);
+    if (["china-myanmar", "china-cambodia"].includes(id)) {
+      await expect(page.locator("#motion-china .scene-stage")).toBeVisible();
+      await expect(page.locator(`#${id} h2`)).not.toBeEmpty();
+      await expect(
+        page.locator(`#${id} a[href*="from=${id}"]`).first(),
+      ).toHaveAttribute("href", /reports\/S08/);
+    } else {
+      const figure = page.locator(`[data-visual-for="${id}"]`);
+      await expect(figure.locator("figcaption h3")).not.toBeEmpty();
+      await expect(
+        figure.locator(".case-source-links a").first(),
+      ).toHaveAttribute("href", new RegExp(`from=${id}`));
+      await expect(
+        figure.locator(
+          ".terrain-world .terrain-arctic,.terrain-arctic .terrain-world",
+        ),
+      ).toHaveCount(0);
+    }
   }
   expect(
     await page.evaluate(
@@ -140,6 +149,14 @@ test("stopping the scroll stops animation work and wheel events remain native", 
     window.requestAnimationFrame = original;
     return n;
   });
+  // GSAP has its own sleeping ticker; verify visible scene geometry stays idle.
+  const geometry = await page
+    .locator("#visual-capability")
+    .getAttribute("data-progress");
+  await page.waitForTimeout(200);
+  expect(
+    await page.locator("#visual-capability").getAttribute("data-progress"),
+  ).toBe(geometry);
   expect(idle).toBe(0);
   await page.mouse.move(10, 250);
   const before = await page.evaluate(() => scrollY);

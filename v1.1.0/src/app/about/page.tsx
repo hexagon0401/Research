@@ -65,8 +65,8 @@ export default function About() {
         </h2>
         <p>
           <L
-            en="Edition 2.4.0, prepared on 23 October 2026: scroll-driven research mechanisms, a continuous S00 essay, thirteen bilingual reading editions, and inline source PDFs. The site uses a file-based public content adapter; no database credentials or private research files are exposed. Visual tokens and component contracts are documented for a later Open Design handoff."
-            ko="2026년 10월 23일의 v2.4.0입니다. 스크롤로 설명하는 연구 메커니즘, S00 중심 연속형 에세이, 13개 한영 병렬 전문, 본문 안의 PDF 열람을 제공합니다. 파일 기반 공개 콘텐츠 어댑터를 사용하며 데이터베이스 인증정보나 비공개 연구 원문을 노출하지 않습니다. 이후 Open Design 이관을 위해 시각 토큰과 컴포넌트 계약을 문서화했습니다."
+            en="Edition 2.4.1, prepared on 23 October 2026: persistent scroll-driven diagrams, edited bilingual case summaries, a continuous S00 essay, thirteen bilingual reading editions, and inline source PDFs. The site uses a file-based public content adapter; no database credentials or private research files are exposed. Visual tokens and component contracts are documented for a later Open Design handoff."
+            ko="2026년 10월 23일의 v2.4.1입니다. 설명과 함께 고정되는 그림, 다듬은 한영 사례 설명, S00 중심 연속형 에세이, 13개 한영 병렬 전문, 본문 안의 PDF 열람을 제공합니다. 파일 기반 공개 콘텐츠 어댑터를 사용하며 데이터베이스 인증정보나 비공개 연구 원문을 노출하지 않습니다. 이후 Open Design 이관을 위해 시각 토큰과 컴포넌트 계약을 문서화했습니다."
           />
         </p>
         <Link className="inline-link" href="/methods">

@@ -91,7 +91,8 @@ export function ExpandDiagram({
   return (
     <>
       <button className="diagram-expand" ref={button} onClick={open}>
-        {lang === "ko" ? "그림 크게 보기" : "Enlarge diagram"} ↗
+        {lang === "ko" ? "그림 크게 보기" : "Enlarge diagram"}
+        <span aria-hidden="true"> ＋</span>
       </button>
       {mounted &&
         createPortal(

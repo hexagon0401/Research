@@ -88,6 +88,9 @@ export function useSceneScroll(
         bounds.length && y() >= bounds[0] && y() <= bounds[count];
       const saved = progress.current;
       const nav = document.querySelector<HTMLElement>(".story-navigation");
+      // CSS zoom changes rendered dimensions while inline style values stay in layout pixels.
+      const zoom =
+        parseFloat(getComputedStyle(document.documentElement).zoom) || 1;
       const top = (nav?.getBoundingClientRect().height ?? 56) + 12;
       const available = Math.max(
         180,
@@ -98,15 +101,15 @@ export function useSceneScroll(
         ? Math.min(available, 780)
         : Math.min(300, available * 0.34);
       el.dataset.sceneLayout = wide ? "wide" : "compact";
-      el.style.setProperty("--scene-top", `${top}px`);
-      el.style.setProperty("--scene-stage-height", `${height}px`);
+      el.style.setProperty("--scene-top", `${top / zoom}px`);
+      el.style.setProperty("--scene-stage-height", `${height / zoom}px`);
       el.style.setProperty(
         "--scene-step-min",
-        `${wide ? Math.max(300, available * 0.55) : 0}px`,
+        `${(wide ? Math.max(300, available * 0.55) : 0) / zoom}px`,
       );
       el.style.setProperty(
         "--scene-last-min",
-        `${wide ? height + 160 : 160}px`,
+        `${(wide ? height + 160 : 160) / zoom}px`,
       );
       const line = wide ? top + available * 0.35 : top + height + 16;
       el.style.setProperty("--scene-reading-line", `${line}px`);

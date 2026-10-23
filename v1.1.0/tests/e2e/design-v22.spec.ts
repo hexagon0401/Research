@@ -9,7 +9,7 @@ test("the reading field stays paper, and pointer movement cannot move its geogra
     "china-myanmar",
   );
   await expect(page.locator(".story-chapter")).toHaveCount(6);
-  const map = page.locator("#visual-china-myanmar .terrain-world");
+  const map = page.locator("#motion-china [data-world-camera]");
   const before = await map.getAttribute("style");
   await page.mouse.move(200, 300);
   await page.mouse.move(900, 500);

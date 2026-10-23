@@ -13,7 +13,8 @@ async function china(page: Page) {
 }
 async function seek(page: Page, value: number) {
   await page
-    .getByRole("slider", { name: "China story progress" })
+    .locator("#motion-china input[type=range]")
+    .first()
     .evaluate((el: HTMLInputElement, v) => {
       el.value = String(v);
       el.dispatchEvent(new Event("input", { bubbles: true }));
@@ -40,9 +41,7 @@ test("six mechanism groups and full chronological source records are present", a
   await expect(page.locator(".china-step-list>li")).toHaveCount(7);
   await expect(page.locator(".motion-study-roles button")).toHaveCount(12);
   await expect(page.locator(".china-step-list")).toContainText("2021–2022");
-  await expect(page.locator(".china-step-list")).toContainText(
-    "not an observed track",
-  );
+  await expect(page.locator(".china-step-list")).toContainText("AVIC");
 });
 test("China has continuous line and traveler progress, correct dates and reversible scrubbing", async ({
   page,
@@ -82,15 +81,14 @@ test("China has continuous line and traveler progress, correct dates and reversi
   await seek(page, 65);
   await expect(root).toHaveAttribute("data-phase", "4");
   await expect(root.locator(".motion-date-row time")).toHaveText("2025-04-05");
-  await expect(root.locator(".china-current-copy")).toContainText(
+  await expect(root.locator(".china-step-list>li").nth(4)).toContainText(
     "Canopy Sands",
   );
-  await expect(root.locator(".china-current-copy a")).toHaveAttribute(
-    "href",
-    /S08-R002-P002/,
-  );
+  await expect(
+    root.locator(".china-step-list>li").nth(4).locator(":scope > a").first(),
+  ).toHaveAttribute("href", /S08-R002-P002/);
 });
-test("small screens replay locally, range keyboard works and route detail stays schematic", async ({
+test("compact scene selection, range keyboard and supply sequence keep the diagram visible", async ({
   page,
 }, info) => {
   test.skip(
@@ -99,42 +97,41 @@ test("small screens replay locally, range keyboard works and route detail stays 
   );
   await china(page);
   const root = page.locator("#motion-china");
-  await expect(root).toHaveAttribute("data-pinned", "false");
-  const y = await page.evaluate(() => scrollY);
-  await seek(page, 36);
-  await expect(root).toHaveAttribute("data-phase", "2");
-  expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(2);
+  await expect(root).toHaveAttribute("data-scene-layout", "compact");
   await root
-    .getByRole("button", { name: "Route detail · schematic sequence" })
-    .click();
-  await expect(root.locator(".motion-route-detail")).toContainText(
-    "Anshun → Yunnan → Namsang",
-  );
-  await expect(root.locator(".motion-route-detail")).toContainText(
-    "not an observed track",
-  );
-  const slider = page.getByRole("slider", { name: "China story progress" });
+    .getByRole("combobox", { name: "Choose an event" })
+    .selectOption("2");
+  await expect(root).toHaveAttribute("data-phase", "2");
+  const detail = root
+    .locator(".scene-detail")
+    .filter({ hasText: "Supply sequence" });
+  await detail.locator("summary").click();
+  await expect(detail).toContainText("Anshun → Yunnan → Namsang");
+  const stage = root.locator(".scene-stage");
+  const box = await stage.boundingBox();
+  expect(box!.y).toBeGreaterThan(30);
+  expect(box!.y + box!.height).toBeLessThan(page.viewportSize()!.height);
+  const slider = root.locator(".compact-replay input");
   await slider.focus();
   await page.keyboard.press("End");
   await expect(root).toHaveAttribute("data-phase", "6");
-  await root.locator(".china-motion-stage").scrollIntoViewIfNeeded();
   await seek(page, 65);
   await expect(page.locator(".story-current")).toContainText("Cambodia");
-  const caption = root.locator(".cambodia-inset small");
-  await expect(caption).toBeVisible();
-  const bounds = await caption.boundingBox();
-  const map = await root.locator(".china-map").boundingBox();
-  expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(
-    map!.y + map!.height + 1,
+  await expect(root.locator(".map-business-link")).toContainText(
+    "Canopy Sands",
   );
 });
+
 test("explicit replay is interruptible and wheel scrolling stays native", async ({
   page,
 }) => {
   await china(page);
   await seek(page, 4);
   const root = page.locator("#motion-china");
-  await root.getByRole("button", { name: "Replay this step" }).click();
+  await root
+    .getByRole("button", { name: "Replay this step" })
+    .filter({ visible: true })
+    .click();
   await page.waitForTimeout(200);
   const a = Number(await root.getAttribute("data-progress"));
   await page.waitForTimeout(200);
@@ -158,8 +155,9 @@ test("real wheel scroll changes signal geometry in unpinned mechanisms", async (
   ]) {
     const figure = page.locator("#visual-" + id),
       stage = figure.locator(".mechanism-diagram");
-    await stage.evaluate((e) =>
-      scrollTo(0, e.getBoundingClientRect().top + scrollY - innerHeight * 0.72),
+    await figure.scrollIntoViewIfNeeded();
+    await figure.evaluate((el) =>
+      scrollTo(0, Number((el as HTMLElement).dataset.sceneStart) + 40),
     );
     await expect(figure).toHaveAttribute("data-motion-ready", "true");
     await page.waitForTimeout(200);
@@ -169,16 +167,24 @@ test("real wheel scroll changes signal geometry in unpinned mechanisms", async (
     await expect
       .poll(() => figure.getAttribute("data-progress"))
       .not.toBe(first);
-    if (id === "synthesis") {
-      await page.mouse.wheel(0, 500);
-      await expect
-        .poll(() => figure.getAttribute("data-active-step"))
-        .toBe("2");
+
+    // Some mechanisms introduce their first signal after the opening question.
+    // Reach that part by native wheel input rather than assuming every first step has a signal.
+    for (
+      let tick = 0;
+      tick < 12 && Number(await figure.getAttribute("data-progress")) < 0.78;
+      tick++
+    ) {
+      await page.mouse.wheel(0, 240);
+      await page.waitForTimeout(60);
     }
-    const moving = await figure
-      .locator("[data-signal]")
-      .evaluateAll((es) => es.some((e) => !!e.getAttribute("transform")));
-    expect(moving).toBe(true);
+    await expect
+      .poll(() =>
+        figure
+          .locator("[data-signal]")
+          .evaluateAll((es) => es.some((e) => !!e.getAttribute("transform"))),
+      )
+      .toBe(true);
   }
 });
 test("evidence lens and research perspectives affect the explanation and preserve source access", async ({
@@ -242,6 +248,7 @@ test("reduced and no-JS modes retain all stages and source links", async ({
     p.locator('.china-step-list a[href*="S08-R002-P002"]'),
   ).not.toHaveCount(0);
   await expect(p.locator(".mechanism-steps")).toHaveCount(11);
+  await p.locator("#detail-us-mission > summary").click();
   await p.locator("#us-mission .essay-citation").first().click();
   await expect(p.locator("#transcript")).toBeVisible();
   await context.close();
@@ -266,7 +273,7 @@ test("source round trips restore both the selected Chinese scene and the visible
     "data-phase",
     "4",
   );
-  const source = page.locator("#motion-china .china-current-copy a");
+  const source = page.locator("#motion-cambodia-relations > a").first();
   await source.scrollIntoViewIfNeeded();
   const before = await page
     .locator(".china-motion-stage")
@@ -288,31 +295,34 @@ test("source round trips restore both the selected Chinese scene and the visible
     .toBeLessThan(24);
 });
 
-test("pins release and return when stage fit changes inside the desktop media query", async ({
+test("sticky stages fit resized desktop and compact viewports without GSAP pinning", async ({
   page,
 }, info) => {
-  test.skip(info.project.name !== "desktop", "Wide viewport fit regression");
+  test.skip(info.project.name !== "desktop", "Viewport fit regression");
   await china(page);
-  const root = page.locator("#motion-china");
-  const chinaStage = root.locator(".china-motion-stage");
-  // Model a longer translated explanation while keeping both sizes inside the
-  // desktop media query. A query-change-only implementation must fail here.
-  await chinaStage.evaluate((el) => (el.style.minHeight = "780px"));
-  await expect(root).toHaveAttribute("data-pinned", "true");
-  await page.setViewportSize({ width: 1440, height: 740 });
-  await expect(root).toHaveAttribute("data-pinned", "false");
-  await expect(chinaStage).not.toHaveCSS("position", "fixed");
-  await page.setViewportSize({ width: 1440, height: 1000 });
-  await expect(root).toHaveAttribute("data-pinned", "true");
-  const dome = page.locator("#visual-us-dome");
-  await dome.scrollIntoViewIfNeeded();
-  await expect(dome).toHaveAttribute("data-motion-ready", "true");
-  const domeStage = dome.locator(".mechanism-body");
-  await domeStage.evaluate((el) => (el.style.minHeight = "780px"));
-  await expect(dome).toHaveAttribute("data-dome-pinned", "true");
-  await page.setViewportSize({ width: 1440, height: 740 });
-  await expect(dome).toHaveAttribute("data-dome-pinned", "false");
-  await expect(domeStage).not.toHaveCSS("position", "fixed");
-  await page.setViewportSize({ width: 1440, height: 1000 });
-  await expect(dome).toHaveAttribute("data-dome-pinned", "true");
+  for (const viewport of [
+    { width: 1440, height: 740 },
+    { width: 1440, height: 500 },
+    { width: 1440, height: 1000 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await seek(page, 35);
+    for (const selector of ["#motion-china", "#visual-us-dome"]) {
+      const root = page.locator(selector);
+      await root.scrollIntoViewIfNeeded();
+      await expect(root).toHaveAttribute("data-motion-ready", "true");
+      await root.evaluate((el) =>
+        scrollTo(0, Number((el as HTMLElement).dataset.sceneStart) + 80),
+      );
+      await expect
+        .poll(async () => (await root.locator(".scene-stage").boundingBox())!.y)
+        .toBeGreaterThan(30);
+      const stage = root.locator(".scene-stage");
+      await expect(stage).toHaveCSS("position", "sticky");
+      const bounds = await stage.boundingBox();
+      expect(bounds!.y).toBeGreaterThanOrEqual(40);
+      expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(viewport.height);
+    }
+  }
+  await expect(page.locator(".pin-spacer")).toHaveCount(0);
 });

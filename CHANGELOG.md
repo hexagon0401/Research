@@ -1,6 +1,13 @@
 # Releases
 
-현재 릴리스는 [v2.4.0](https://github.com/hexagon0401/Research/tree/v2.4.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.4.1](https://github.com/hexagon0401/Research/tree/v2.4.1)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.4.1 — 2026-10-23
+
+- Kept all twelve animated diagrams visible with CSS sticky stages and measured explanation boundaries; removed GSAP screen pinning.
+- Integrated the Greenland, Myanmar and Cambodia narrative into one persistent map, with fitted regional cameras, frozen enlarged views and quiet selection controls.
+- Re-edited bilingual main-page summaries, connections and diagrams; folded detailed arguments and source excerpts while preserving eighteen argument addresses.
+- Added the requested Kennedy motto. Preserved thirteen full studies, 973 bilingual passages, PDF hashes and public APIs. [Implementation and verification](v1.1.0/docs/V2_4_1_RELEASE.md).
 
 ## 2.4.0 — 2026-10-23
 

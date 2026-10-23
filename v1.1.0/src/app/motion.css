@@ -221,7 +221,7 @@
 .china-step-list > li.is-current {
   border-top-color: var(--ink);
 }
-.china-step-list h4 {
+.china-step-list h3 {
   font: 500 clamp(23px, 2.3vw, 32px)/1.4 var(--font-display);
   margin: 20px 0;
   letter-spacing: -0.035em;
@@ -1210,4 +1210,46 @@ html {
     --scene-step-min: 0px;
     --scene-last-min: 160px;
   }
+}
+
+/* Keep compact map controls out of the map's limited drawing area. */
+.compact-case-filter {
+  display: none;
+}
+.scroll-scene[data-scene-layout="compact"] .scene-stage > .motion-filter {
+  display: none;
+}
+.scroll-scene[data-scene-layout="compact"] .compact-case-filter {
+  display: flex;
+}
+.scroll-scene[data-scene-layout="compact"] .china-motion-stage .diagram-expand {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+  background: var(--paper);
+}
+.scroll-scene[data-scene-layout="compact"] .china-map {
+  margin-bottom: 0;
+}
+
+/* The compact convergence map uses small labels; its full study buttons remain below. */
+.compact-study-labels {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.compact-study-labels span {
+  position: absolute;
+  translate: -50% -50%;
+  background: var(--paper);
+  font: 500 12px/1.3 var(--font-body);
+  padding: 2px 4px;
+}
+.mechanism-synthesis[data-scene-layout="compact"] .mechanism-node-layer {
+  display: none;
+}
+.mechanism-synthesis[data-scene-layout="compact"] .compact-study-labels {
+  display: block;
 }

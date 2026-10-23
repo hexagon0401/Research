@@ -429,6 +429,21 @@ export function MechanismStory({
                 ))}
               </div>
             )}
+            {scene.id === "synthesis" && (
+              <div className="compact-study-labels" aria-hidden="true">
+                {graph.nodes.map((node) => (
+                  <span
+                    key={node.id}
+                    style={{
+                      left: `${node.x / 7.2}%`,
+                      top: `${node.y / 5.2}%`,
+                    }}
+                  >
+                    {node.id}
+                  </span>
+                ))}
+              </div>
+            )}
             {scene.id === "spatial-method" && (
               <>
                 <div

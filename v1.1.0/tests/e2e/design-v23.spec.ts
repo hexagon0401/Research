@@ -10,7 +10,7 @@ test("Chinese relationship leaders never fill and the reference legend stays rea
     await page.setViewportSize({ width, height: 900 });
     expect(
       await figure
-        .locator(".china-map path")
+        .locator(".china-map path:not(.map-region)")
         .evaluateAll((es) =>
           es.every(
             (e) =>
@@ -33,7 +33,7 @@ test("Chinese relationship leaders never fill and the reference legend stays rea
   }
 });
 
-test("all eighteen figures, three reserved expansions and study roles survive the full reading matrix", async ({
+test("all eighteen arguments and sixteen figures, three reserved expansions and study roles survive the full reading matrix", async ({
   page,
 }, info) => {
   test.skip(info.project.name !== "desktop", "Matrix runs once");
@@ -48,7 +48,7 @@ test("all eighteen figures, three reserved expansions and study roles survive th
       await page.reload();
       await expect(page.locator("html")).toHaveAttribute("lang", language);
       await page.evaluate(() => document.fonts.ready);
-      await expect(page.locator("[data-visual-for]")).toHaveCount(18);
+      await expect(page.locator("[data-visual-for]")).toHaveCount(16);
       await expect(page.locator(".emphasis-visual")).toHaveCount(3);
       await expect(page.locator(".convergence-branches button")).toHaveCount(
         12,
@@ -78,7 +78,8 @@ test("source round trips and language changes keep the exact passage", async ({
 }) => {
   await page.goto("/?scene=us-mission");
   await page.evaluate(() => document.fonts.ready);
-  const passage = page.locator("#us-mission [data-reading-passage]").first();
+  await page.locator("#detail-us-mission > summary").click();
+  const passage = page.locator("#us-mission .essay-source-passage").first();
   await passage.evaluate((el) =>
     window.scrollTo({
       top: el.getBoundingClientRect().top + scrollY - 130,
@@ -146,7 +147,7 @@ test("study branches and connection explanations work by keyboard and touch", as
   await branch.focus();
   await page.keyboard.press("Enter");
   await expect(figure.locator(".case-selection")).toContainText(
-    "Spatial analysis",
+    "Spatial inquiry",
   );
   await expect(figure.locator(".case-selection a")).toHaveAttribute(
     "href",
@@ -162,7 +163,7 @@ test("study branches and connection explanations work by keyboard and touch", as
   else await edge.click();
   await expect(
     page.locator("#visual-us-finance .case-selection"),
-  ).toContainText("Treasury holdings");
+  ).toContainText("reserve assets");
 });
 
 test("three emphasis scenes stay in normal flow during wheel reading", async ({
@@ -211,13 +212,14 @@ test("static modes retain every case, explanation and source without animation",
   });
   const p = await context.newPage();
   await p.goto(`${baseURL}/`);
-  await expect(p.locator("[data-visual-for]")).toHaveCount(18);
+  await expect(p.locator("[data-visual-for]")).toHaveCount(16);
   await expect(
     p.locator("#visual-synthesis .motion-study-roles > button"),
   ).toHaveCount(12);
   await expect(p.locator("#motion-china .china-step-list")).toContainText(
     "CCCC",
   );
+  await p.locator("#detail-us-mission > summary").click();
   await p.locator("#us-mission .essay-citation").first().click();
   await expect(p.locator("#transcript")).toBeVisible();
   await context.close();

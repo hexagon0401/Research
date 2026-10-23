@@ -1,6 +1,14 @@
 # Open Design 이관 계약
 
-## 현재 런타임 — v2.4.0
+## 현재 런타임 — v2.4.1
+
+이 절과 [v2.4.1 기록](V2_4_1_RELEASE.md)이 아래 역사적 설명보다 우선합니다. 12개 애니메이션 도식은 `use-scene-scroll.ts`로 설명 단계의 실제 위치를 측정합니다. 고정은 CSS sticky, 진행만 ScrollTrigger와 GSAP이 담당합니다. `stepId + localProgress`에 날짜·제목·선·카메라를 맞추고, 강제 휠 처리·GSAP pin을 추가하지 않습니다. 작은 화면도 탐색 막대 아래의 축소 그림을 유지하며 확대 대화상자는 현재 장면의 정적 복사본입니다.
+
+중국의 세 지역은 한 도식에 통합했습니다. 18개 논지 주소는 유지하며, 독립 그림은 16개입니다. `scene-camera.json`의 투영된 실제 지역 경계로 카메라를 맞추고, 별도 HTML 지명은 화면 크기를 유지합니다. 북극·세계 투영은 별개 프레임입니다. 면 강조 대신 밑줄·작은 Signal 점·굵기로 선택을 표시합니다.
+
+메인 편집 데이터는 `title / lead / facts / connection / detail`로 나눕니다. `essay.ts`와 `research-connections.ts`는 수정 가능한 편집 설명이며, `readings/`, `translations/`, 보존 PDF·API·백엔드는 보존 검사 대상입니다. 펼친 원문에서 보고서로 왕복하면 펼침과 읽기 위치를 복원합니다. 디자인 토큰은 기존 Paper·Ink·Signal을 유지합니다.
+
+## 이전 런타임 — v2.4.0
 
 이 절과 [v2.4.0 기록](V2_4_RELEASE.md)이 아래 역사적 설명보다 우선합니다. `motion.css`와 `src/components/motion/`은 GSAP·ScrollTrigger·MotionPathPlugin을 장면 근처에서 로드합니다. ScrollTrigger가 도형의 진행을 소유하며 기존 읽기 상태 관리와 같은 transform을 함께 쓰지 않습니다. 중국의 날짜·제목·지도·출처는 하나의 단계 상태에서 파생합니다.
 

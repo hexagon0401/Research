@@ -1,7 +1,7 @@
-name: Research v2.4 browser and preservation checks
+name: Research v2.4.1 browser and preservation checks
 on:
   push:
-    branches: [v2.4.0-candidate]
+    branches: [v2.4.1-candidate]
   workflow_dispatch:
     inputs:
       target_url:
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: research-v24-validation
+          name: research-v241-validation
           path: |
             v1.1.0/.local/validation/
             v1.1.0/.local/audits/

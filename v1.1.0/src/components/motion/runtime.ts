@@ -37,34 +37,3 @@ export function nearScene(element: HTMLElement, run: () => void) {
   return () => observer.disconnect();
 }
 export const clamp = (n: number) => Math.max(0, Math.min(1, n));
-
-/** Pin only while the complete stage fits, including resize within a media query. */
-export function watchViewportFit(
-  element: HTMLElement,
-  clearance: number,
-  apply: (fits: boolean) => void,
-) {
-  let previous: boolean | undefined;
-  let frame = 0;
-  const check = () => {
-    frame = 0;
-    const fits = element.offsetHeight <= innerHeight - clearance;
-    if (fits !== previous) {
-      previous = fits;
-      apply(fits);
-    }
-  };
-  const schedule = () => {
-    if (!frame) frame = requestAnimationFrame(check);
-  };
-  const observer = new ResizeObserver(schedule);
-  observer.observe(element);
-  window.addEventListener("resize", schedule, { passive: true });
-  check();
-  return () => {
-    observer.disconnect();
-    window.removeEventListener("resize", schedule);
-    cancelAnimationFrame(frame);
-    if (previous) apply(false);
-  };
-}

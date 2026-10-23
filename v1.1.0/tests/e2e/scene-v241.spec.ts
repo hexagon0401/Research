@@ -92,3 +92,33 @@ test("enlarged diagram is a frozen accessible view and Escape restores focus and
   await expect(trigger).toBeFocused();
   expect(Math.abs((await page.evaluate(() => scrollY)) - y)).toBeLessThan(2);
 });
+
+test("low screens and 200 percent zoom keep the complete sticky stage inside the reading window", async ({
+  page,
+}, info) => {
+  test.skip(info.project.name !== "desktop", "Zoom matrix runs once");
+  await page.goto("/");
+  for (const viewport of [
+    { width: 1440, height: 500 },
+    { width: 1920, height: 900 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.evaluate(() => (document.documentElement.style.zoom = "2"));
+    for (const id of ["#visual-capability", "#motion-china"]) {
+      const root = page.locator(id);
+      await root.scrollIntoViewIfNeeded();
+      await expect(root).toHaveAttribute("data-scene-start", /.+/);
+      await page.waitForTimeout(100);
+      await root.evaluate((el) =>
+        scrollTo(0, Number((el as HTMLElement).dataset.sceneStart) + 80),
+      );
+      await expect
+        .poll(async () => {
+          const r = (await root.locator(".scene-stage").boundingBox())!;
+          return r.y >= 30 && r.y + r.height <= viewport.height - 8;
+        })
+        .toBe(true);
+    }
+    await page.evaluate(() => (document.documentElement.style.zoom = ""));
+  }
+});

@@ -47,7 +47,15 @@ const cameraMyanmar = fitCamera(
   pointsBounds([p.cn, ...cameras.regions.mm], 8),
   60,
 );
-const cameraCambodia = fitCamera(cameras.regions.kh, 100, 24);
+const cameraCambodia = fitCamera(cameras.regions.kh, 72, 48);
+const comparisonCamera = (selected: string, fallback: Camera) =>
+  selected === "gl"
+    ? cameraGreenland
+    : selected === "mm"
+      ? cameraMyanmar
+      : selected === "kh"
+        ? cameraCambodia
+        : fallback;
 const cameraArctic = fitCamera(
   pointsBounds(Object.values(polar.arctic.pins), 8),
   68,
@@ -117,7 +125,9 @@ export function ChinaStory({
     [layer, setLayer] = useState("all"),
     [comparison, setComparison] = useState("all");
   const activeRef = useRef(0),
-    progress = useRef(0);
+    progress = useRef(0),
+    comparisonRef = useRef("all"),
+    drawCameraRef = useRef<(() => void) | null>(null);
   const s = chinaSteps[active];
   const scroll = useSceneScroll(
     root,
@@ -210,7 +220,7 @@ export function ChinaStory({
               pointsBounds([p.cn, ...cameras.regions.mm], 8),
               60,
             );
-            const cambodia = fitCamera(cameras.regions.kh, 100, 24);
+            const cambodia = fitCamera(cameras.regions.kh, 72, 48);
             const world = { ...overview };
             const arctic = fitCamera(
               pointsBounds(Object.values(polar.arctic.pins), 8),
@@ -218,7 +228,16 @@ export function ChinaStory({
             );
             let frame = { scale: 1, x: 0, y: 0 };
             const renderCamera = () =>
-              renderMapCamera(el, map.current!, world, arctic, frame);
+              renderMapCamera(
+                el,
+                map.current!,
+                tl.time() >= 5
+                  ? comparisonCamera(comparisonRef.current, world)
+                  : world,
+                arctic,
+                frame,
+              );
+            drawCameraRef.current = renderCamera;
             const size = () => {
               const width = map.current!.clientWidth,
                 height = map.current!.clientHeight;
@@ -248,6 +267,7 @@ export function ChinaStory({
               observer.disconnect();
               ctx.revert();
               timeline.current = null;
+              drawCameraRef.current = null;
             };
           }, el);
         })
@@ -267,17 +287,20 @@ export function ChinaStory({
       target = map.current;
     if (!el || !target) return;
     const draw = () => {
-      if (!timeline.current)
+      if (timeline.current) drawCameraRef.current?.();
+      else
         renderMapCamera(
           el,
           target,
-          active === 2 || active === 3
-            ? cameraMyanmar
-            : active === 4
-              ? cameraCambodia
-              : active === 1
-                ? cameraGreenland
-                : cameraOverview,
+          active >= 5
+            ? comparisonCamera(comparisonRef.current, cameraOverview)
+            : active === 2 || active === 3
+              ? cameraMyanmar
+              : active === 4
+                ? cameraCambodia
+                : active === 1
+                  ? cameraGreenland
+                  : cameraOverview,
           cameraArctic,
         );
     };
@@ -285,7 +308,7 @@ export function ChinaStory({
     observer.observe(target);
     draw();
     return () => observer.disconnect();
-  }, [active, lang, reduced]);
+  }, [active, lang, reduced, comparison]);
   const replayStep = () => scroll.replay();
   return (
     <figure
@@ -480,6 +503,7 @@ export function ChinaStory({
               <button
                 key={id}
                 onClick={() => {
+                  comparisonRef.current = id;
                   setComparison(id);
                   if (activeRef.current >= 5) return;
                   if (id === "gl") select(0.1);
@@ -612,7 +636,7 @@ export function ChinaStory({
                 </section>
               ) : (
                 <>
-                  <h4>{step.title[lang]}</h4>
+                  <h3>{step.title[lang]}</h3>
                   <SceneText
                     text={step}
                     connection={i === 1 || i === 3 || i === 6}
@@ -636,6 +660,32 @@ export function ChinaStory({
                       : "Sequence based on the route described in S08"}
                   </small>
                 </details>
+              )}
+              {i === 4 && (
+                <div
+                  className="compact-case-filter motion-filter"
+                  aria-label={
+                    lang === "ko"
+                      ? "기업과 시설의 연결"
+                      : "Business and facility connections"
+                  }
+                >
+                  {["all", "business", "facility"].map((v) => (
+                    <button
+                      key={v}
+                      aria-pressed={layer === v}
+                      onClick={() => setLayer(v)}
+                    >
+                      {lang === "ko"
+                        ? {
+                            all: "전체",
+                            business: "기업·사업",
+                            facility: "시설",
+                          }[v]
+                        : v}
+                    </button>
+                  ))}
+                </div>
               )}
               {i === 4 && (
                 <div className="cambodia-relation">
@@ -696,6 +746,7 @@ export function ChinaStory({
             aria-label={
               lang === "ko" ? "중국 사례 탐색" : "China story progress"
             }
+            aria-valuetext={`${s.date} · ${s.title[lang]}`}
             onInput={(e) => select(+e.currentTarget.value / 100)}
           />
         </label>

@@ -47,3 +47,63 @@ test("editorial scene text is bilingual, structured and free of production instr
     );
   }
 });
+
+test("all main editorial summaries preserve the argument identities and source references", async () => {
+  const { essay } = await import("../src/content/essay.ts");
+  const expected = [
+    "survival",
+    "identity",
+    "capability",
+    "us-mission",
+    "us-dome",
+    "us-finance",
+    "us-ships",
+    "china-ownership",
+    "china-governance",
+    "china-arctic",
+    "china-myanmar",
+    "china-cambodia",
+    "korea-chips",
+    "korea-platforms",
+    "korea-regulation",
+    "korea-defense",
+    "spatial-method",
+    "synthesis",
+  ];
+  assert.deepEqual(
+    essay.map((beat) => beat.id),
+    expected,
+  );
+  for (const beat of essay) {
+    assert(beat.facts.length >= 2 && beat.facts.length <= 3);
+    for (const lang of ["ko", "en"]) {
+      assert(beat.title[lang] && beat.lead[lang] && beat.connection[lang]);
+      const copy = [
+        beat.title[lang],
+        beat.lead[lang],
+        ...beat.facts.map((fact) => fact[lang]),
+        beat.connection[lang],
+      ].join(" ");
+      assert(
+        !/표시하지 않습니다|선을 그립니다|수치를 만들어|do not invent|we draw|AI generated/i.test(
+          copy,
+        ),
+        beat.id,
+      );
+    }
+    for (const passage of beat.passages) {
+      const source = JSON.parse(
+        readFileSync(
+          `src/content/reports/${passage.report.toLowerCase()}.json`,
+        ),
+      );
+      for (const block of passage.blocks)
+        assert(
+          source.sections
+            .flatMap((section) => section.blocks)
+            .some((b) => b.id === block),
+          `${beat.id}: ${block}`,
+        );
+    }
+  }
+});
