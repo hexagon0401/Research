@@ -4,6 +4,10 @@ const atlas = JSON.parse(readFileSync("src/visuals/atlas.json", "utf8"));
 mkdirSync("public/visuals", { recursive: true });
 const style =
   "<style>path,circle{vector-effect:non-scaling-stroke}.grid{fill:none;stroke:#0e131f;stroke-opacity:.08;stroke-width:.8}.land{fill:#0e131f;fill-opacity:.03;stroke:#0e131f;stroke-opacity:.65;stroke-width:1}.sphere{fill:none;stroke:#0e131f;stroke-opacity:.3;stroke-width:1}</style>";
+// 0.1 viewBox unit precision: maximum displacement 0.05 units, below the visible stroke.
+// Keep the original atlas and pin coordinates intact; only compact the localized artwork.
+const compact = (path) =>
+  path.replace(/-?\d+\.\d+/g, (n) => String(Math.round(Number(n) * 10) / 10));
 for (const kind of ["world", "globe", "arctic"]) {
   const a = atlas[kind];
   const sphere =
@@ -14,7 +18,7 @@ for (const kind of ["world", "globe", "arctic"]) {
         : "";
   writeFileSync(
     `public/visuals/${kind}.svg`,
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520"><g id="terrain">${style}<title>Natural Earth · ${kind}</title>${sphere}<path class="grid" d="${a.grid}"/><path class="land" d="${a.land}"/></g></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520"><g id="terrain">${style}<title>Natural Earth · ${kind}</title>${sphere}<path class="grid" d="${compact(a.grid)}"/><path class="land" d="${compact(a.land)}"/></g></svg>`,
   );
 }
 writeFileSync(
@@ -26,5 +30,5 @@ writeFileSync(
   ) + "\n",
 );
 console.log(
-  "Three local SVG terrains: 720 × 520; original atlas coordinates preserved.",
+  "Three local SVG terrains: 720 × 520; original atlas retained; localized paths compacted to 0.1 units.",
 );

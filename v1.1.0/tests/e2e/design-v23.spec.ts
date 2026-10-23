@@ -160,7 +160,9 @@ test("source round trips and language changes keep the exact passage", async ({
     (el) => el.getBoundingClientRect().top,
   );
   await passage.locator(".essay-citation").click();
+  await expect(page).toHaveURL(/\/reports\//);
   await page.goBack();
+  await expect(page.locator(".research-essay")).toBeVisible();
   await expect
     .poll(() =>
       passage.evaluate(

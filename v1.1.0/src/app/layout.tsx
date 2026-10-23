@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "@fontsource/ibm-plex-sans/latin-400.css";
+import "@fontsource/ibm-plex-sans/latin-500.css";
 import "./globals.css";
 import "./story.css";
 import { PreferencesProvider } from "@/components/preferences";
@@ -10,21 +12,6 @@ const geist = localFont({
   variable: "--font-geist",
   display: "swap",
   weight: "100 900",
-  preload: true,
-});
-const plex = localFont({
-  src: [
-    {
-      path: "../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2",
-      weight: "400",
-    },
-    {
-      path: "../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-500-normal.woff2",
-      weight: "500",
-    },
-  ],
-  variable: "--font-plex",
-  display: "swap",
   preload: true,
 });
 export const metadata: Metadata = {
@@ -39,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.variable} ${plex.variable}`}>
+    <html lang="en" className={geist.variable}>
       <body id="top">
         <PreferencesProvider>
           <a className="skip-link" href="#main">
