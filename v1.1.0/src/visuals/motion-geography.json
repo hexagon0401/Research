@@ -1,0 +1,11 @@
+{
+  "pins": {
+    "cn": [543.1742719145892, 172.49821020625905],
+    "mm": [537.9871065839486, 205.49732486691818],
+    "kh": [557.0589524467783, 223.041744144823],
+    "gl": [297.9992081845945, 98.39645756219849],
+    "us": [185.98501582159886, 165.9164816629716],
+    "kr": [586.779737937182, 170.30205239287102]
+  },
+  "source": "Approximate reference points, Natural Earth 1:110m / world-atlas; connecting curves are explanatory relationships, not transport tracks."
+}

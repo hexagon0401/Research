@@ -14,6 +14,8 @@ import {
 } from "@/visuals/story";
 import { HeroAtlas } from "@/components/hero-atlas";
 import { NarrativeVisual } from "@/components/narrative-visual";
+import { ChinaStory } from "@/components/motion/china-story";
+import "./motion.css";
 import { ResearchShelf } from "@/components/material-shelf";
 import { reports } from "@/content/report-catalog";
 import { getReadingEdition } from "@/content/reading-repository";
@@ -282,10 +284,16 @@ export default async function Home() {
                           </p>
                         </details>
                       ))}
-                      {emphasisScenes.has(beat.id) && (
-                        <NarrativeVisual
-                          scene={scenes.find((scene) => scene.id === beat.id)!}
-                        />
+                      {beat.id === "china-arctic" ? (
+                        <ChinaStory />
+                      ) : (
+                        emphasisScenes.has(beat.id) && (
+                          <NarrativeVisual
+                            scene={scenes.find(
+                              (scene) => scene.id === beat.id,
+                            )!}
+                          />
+                        )
                       )}
                       {beat.selected.length > 0 && (
                         <div className="essay-source-excerpts">
