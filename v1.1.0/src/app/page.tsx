@@ -17,6 +17,7 @@ import { NarrativeVisual } from "@/components/narrative-visual";
 import { ChinaStory } from "@/components/motion/china-story";
 import { MechanismStory } from "@/components/motion/mechanism-story";
 import { mechanisms } from "@/visuals/mechanisms";
+import { chinaSteps } from "@/visuals/motion-stories";
 import "./motion.css";
 import { ResearchShelf } from "@/components/material-shelf";
 import { reports } from "@/content/report-catalog";
@@ -83,28 +84,39 @@ export default async function Home() {
       ).map((p) => ({ ...p, report: spec.report }));
     }),
   }));
-  const koChars = composed.reduce(
-    (n, b) =>
-      n +
-      b.intro.ko.length +
-      b.bridge.ko.length +
-      (b.note?.ko.length ?? 0) +
-      b.selected.reduce((k, p) => k + p.ko.length, 0),
-    0,
-  );
-  const enWords = composed.reduce(
-    (n, b) =>
-      n +
-      [
-        b.intro.en,
-        b.bridge.en,
-        b.note?.en ?? "",
-        ...b.selected.map((p) => p.en ?? ""),
-      ]
-        .join(" ")
-        .split(/\s+/).length,
-    0,
-  );
+  const motionCopy = [
+    ...chinaSteps,
+    ...Object.values(mechanisms).flatMap((s) => s.steps),
+  ];
+  const koChars =
+    motionCopy.reduce((n, s) => n + s.title.ko.length + s.copy.ko.length, 0) +
+    composed.reduce(
+      (n, b) =>
+        n +
+        b.intro.ko.length +
+        b.bridge.ko.length +
+        (b.note?.ko.length ?? 0) +
+        b.selected.reduce((k, p) => k + p.ko.length, 0),
+      0,
+    );
+  const enWords =
+    motionCopy.reduce(
+      (n, s) => n + `${s.title.en} ${s.copy.en}`.split(/\s+/).length,
+      0,
+    ) +
+    composed.reduce(
+      (n, b) =>
+        n +
+        [
+          b.intro.en,
+          b.bridge.en,
+          b.note?.en ?? "",
+          ...b.selected.map((p) => p.en ?? ""),
+        ]
+          .join(" ")
+          .split(/\s+/).length,
+      0,
+    );
   const scenes = composed.map(
     ({ id, title, mode, country, tint, related, targets }) => ({
       id,

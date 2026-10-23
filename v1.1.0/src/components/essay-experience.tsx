@@ -50,6 +50,7 @@ export function EssayExperience({
   const read = useRef({ id: scenes[0].id, fraction: 0, started: false });
   const passage = useRef<{ id: string; offset: number } | null>(null);
   const restoredAnchor = useRef<string | null>(null);
+  const returnPoint = useRef<{ id: string; offset: number } | null>(null);
   useEffect(() => {
     const capture = () => {
       const candidates = Array.from(
@@ -181,6 +182,8 @@ export function EssayExperience({
         const target = document.getElementById(saved.anchor);
         if (target) {
           restoredAnchor.current = saved.anchor;
+          returnPoint.current = { id: saved.anchor, offset: saved.offset };
+          if (root.current) root.current.dataset.positionManaged = "true";
           passage.current = { id: saved.anchor, offset: saved.offset };
           window.scrollBy({
             top: target.getBoundingClientRect().top - saved.offset,
@@ -191,6 +194,7 @@ export function EssayExperience({
       } catch {}
     };
     const releaseAnchor = () => {
+      returnPoint.current = null;
       restoredAnchor.current = null;
     };
     const releaseByKey = (event: KeyboardEvent) => {
@@ -217,6 +221,18 @@ export function EssayExperience({
         });
     };
     document.fonts.ready.then(afterFonts);
+    const settleMotion = () => {
+      const point = returnPoint.current;
+      if (!point) return;
+      const target = document.getElementById(point.id);
+      if (target)
+        window.scrollBy({
+          top: target.getBoundingClientRect().top - point.offset,
+          behavior: "instant",
+        });
+    };
+    window.addEventListener("iir:motion-layout", settleMotion);
+    document.fonts.addEventListener("loadingdone", settleMotion);
     window.addEventListener("pageshow", afterFonts);
     root.current?.addEventListener("click", save);
     const el = root.current;
@@ -227,6 +243,8 @@ export function EssayExperience({
       window.removeEventListener("keydown", releaseByKey);
       el?.removeEventListener("click", save);
       window.removeEventListener("pageshow", afterFonts);
+      window.removeEventListener("iir:motion-layout", settleMotion);
+      document.fonts.removeEventListener("loadingdone", settleMotion);
     };
   }, [lang]);
   useEffect(() => {

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "@fontsource/ibm-plex-sans/latin-400.css";
-import "@fontsource/ibm-plex-sans/latin-500.css";
 import "./globals.css";
 import "./story.css";
 import { PreferencesProvider } from "@/components/preferences";
@@ -10,9 +8,26 @@ import { Footer } from "@/components/footer";
 const geist = localFont({
   src: "../../node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2",
   variable: "--font-geist",
-  display: "swap",
+  display: "optional",
   weight: "100 900",
   preload: true,
+});
+const plex = localFont({
+  src: [
+    {
+      path: "../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-500-normal.woff2",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--font-plex",
+  display: "optional",
+  preload: false,
 });
 export const metadata: Metadata = {
   title: { default: "IIR — The Architecture of Power", template: "%s — IIR" },
@@ -26,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={`${geist.variable} ${plex.variable}`}>
       <body id="top">
         <PreferencesProvider>
           <a className="skip-link" href="#main">

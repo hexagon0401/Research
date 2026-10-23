@@ -10,7 +10,8 @@
   --inverse-line: rgb(230 232 230 / 24%);
   --font-display: var(--font-geist), sans-serif;
   --font-body:
-    "IBM Plex Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    var(--font-plex), "IBM Plex Sans", "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --gutter: clamp(24px, 4.5vw, 80px);
   --content-max: 1600px;
@@ -38,8 +39,8 @@
 html:lang(ko) {
   --font-display: var(--font-geist), "IBM Plex Sans KR", sans-serif;
   --font-body:
-    "IBM Plex Sans", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
-    sans-serif;
+    var(--font-plex), "IBM Plex Sans", "IBM Plex Sans KR",
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 [lang="ko"] {
   font-family:

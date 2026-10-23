@@ -1,6 +1,13 @@
 # Releases
 
-현재 릴리스는 [v2.3.0](https://github.com/hexagon0401/Research/tree/v2.3.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.4.0](https://github.com/hexagon0401/Research/tree/v2.4.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.4.0 — 2026-10-23
+
+- Added six groups of scroll-driven research mechanisms using lazy GSAP 3.15.0, ScrollTrigger and MotionPathPlugin.
+- Added chronological Chinese case exploration, fractional route drawing, camera changes, explicit interruptible replay and small-screen local controls.
+- Added system assembly, issuance/redemption direction, jurisdiction layers, evidence comparison and research convergence with source context.
+- Preserved research text, translations, PDF hashes, APIs and deployment root. [Implementation and verification](v1.1.0/docs/V2_4_RELEASE.md).
 
 ## 2.3.0 — 2026-10-23
 

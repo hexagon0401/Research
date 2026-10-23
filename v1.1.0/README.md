@@ -1,6 +1,6 @@
-# IIR — Integrated Independent Research · v2.3.0
+# IIR — Integrated Independent Research · v2.4.0
 
-**이 폴더의 현재 버전은 v2.3.0입니다.** 폴더명 `v1.1.0/`은 Vercel 배포 경로로 유지합니다. 이전 버전의 소스와 변경 기록은 [저장소의 버전 안내](../README.md#버전과-코드-위치)를 참고하세요.
+**이 폴더의 현재 버전은 v2.4.0입니다.** 폴더명 `v1.1.0/`은 Vercel 배포 경로로 유지합니다. 이전 버전의 소스와 변경 기록은 [저장소의 버전 안내](../README.md#버전과-코드-위치)를 참고하세요.
 
 S00의 논지를 여섯 흐름으로 읽고, Paper 바탕의 지도·개념 설명과 실제 자료 폴더를 탐색하는 연구 에세이입니다. 13개 연구와 한·영 병렬 자료실을 보존합니다. 선 중심 SVG, 로컬 폰트, Next.js·React·TypeScript·CSS를 사용합니다.
 
@@ -30,7 +30,7 @@ npm run dev
 
 `src/content/reports/`는 기존 추출 자료입니다. 별도 `readings/`에 좌표 기반 읽기 순서·문단·출처 참조를, `translations/`에 한국어 지문 해시와 영어 전문을 저장합니다. `reading-tables.ts`는 원본과 대조한 표를, `essay.ts`와 `research-connections.ts`는 논지·연결·출처를 관리합니다. 공통 디자인은 `tokens.css`, 새 스크롤·서가 배치는 `story.css`, 장면은 `essay-experience.tsx`, 자료 모형은 `material-shelf.tsx`에 있습니다. `src/visuals/`의 표기·지도 geometry는 연구 원문과 분리합니다. 정지 상태나 포인터 이동으로 화면을 흔들지 않습니다.
 
-한국어는 표현을 재작성하지 않고 서식을 복원했습니다. 영어는 **편집 번역·저자 최종 검수 전**입니다. 지문 해시·문자 보존 검사는 의미 검수나 연구 결과 재현을 대신하지 않습니다. 공식 자료에 접근하지 못한 외부 근거와 원문의 미검증 주장을 확정 사실로 제시하지 않습니다. [현재 구현·검증 기록](docs/V2_3_RELEASE.md)을 참고하세요.
+한국어는 표현을 재작성하지 않고 서식을 복원했습니다. 영어는 **편집 번역·저자 최종 검수 전**입니다. 지문 해시·문자 보존 검사는 의미 검수나 연구 결과 재현을 대신하지 않습니다. 공식 자료에 접근하지 못한 외부 근거와 원문의 미검증 주장을 확정 사실로 제시하지 않습니다. [현재 구현·검증 기록](docs/V2_4_RELEASE.md)을 참고하세요.
 
 원본·기존 개인정보 제거 PDF의 바이트와 해시는 유지했습니다. 원본 바이너리·개인정보·인증정보·작업용 파일은 Git에 넣지 않습니다. 읽기본을 재생성하면 문단 ID와 번역 해시가 바뀔 수 있으므로 무심코 덮어쓰지 마세요.
 
@@ -52,8 +52,14 @@ python3 -m unittest discover -s tests -p 'test_*.py' -v
 
 [무료 운영](docs/FREE_LAUNCH.md) · [Open Design 이관](docs/DESIGN_HANDOFF.md) · [변경 기록](docs/CHANGELOG.md) · [이전 v2.0.0 검증](docs/V2_RELEASE.md)
 
-## v2.3.0 읽기와 그래픽
+## v2.4.0 읽기와 그래픽
 
 본문 순서와 원문을 유지하며 18개 사례별 그림·제목·범례·출처를 한 단위로 제공합니다. Pretext 1.0.0으로 HTML 지명과 연결문을 측정합니다. 세 강조 장면, 클릭·키보드 설명, 전문용어 풀이, 원문 문단 왕복, 국가별 비교를 추가했습니다.
 
-`npm run audit:preservation`은 v2.2.0 기준 원문·번역·API·백엔드와 PDF 해시를 검사합니다. `npm run test:e2e`는 Chromium에서 반응형·조작 회귀를, `npm run audit:performance`는 운영 빌드의 모바일 Lighthouse 3회 중앙값을 측정합니다. 실제 결과와 미완료 범위는 [v2.3.0 기록](docs/V2_3_RELEASE.md)을 따릅니다.
+`npm run audit:preservation`은 v2.2.0 기준 원문·번역·API·백엔드와 PDF 해시를 검사합니다. `npm run test:e2e`는 Chromium에서 반응형·조작 회귀를, `npm run audit:performance`는 운영 빌드의 모바일 Lighthouse 3회 중앙값을 측정합니다. 실제 결과와 미완료 범위는 [v2.4.0 기록](docs/V2_4_RELEASE.md)을 따릅니다.
+
+## v2.4.0 스크롤 메커니즘
+
+GSAP 3.15.0·ScrollTrigger·MotionPathPlugin은 메인 장면 근처에서만 로드합니다. `src/visuals/motion-stories.ts`와 `mechanisms.ts`는 한영 설명·원문 참조·날짜·역할을, `src/components/motion/`은 재생과 상호작용을 관리합니다. 중국과 Golden Dome의 고정 외에는 자연스러운 문서 흐름을 유지합니다. 작은 화면에는 중국의 단계별 개략 지도와 하단 탐색기를 제공합니다.
+
+지도 선은 원문 서술·사업 관계·분석을 구분합니다. 경로 속도·길이는 실제 운송 시간이나 규모가 아닙니다. 원문·번역·PDF·API는 보존합니다. 실행한 검사와 한계는 [릴리스 기록](docs/V2_4_RELEASE.md)을 따릅니다.

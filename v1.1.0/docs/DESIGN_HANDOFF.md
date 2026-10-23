@@ -1,5 +1,13 @@
 # Open Design 이관 계약
 
+## 현재 런타임 — v2.4.0
+
+이 절과 [v2.4.0 기록](V2_4_RELEASE.md)이 아래 역사적 설명보다 우선합니다. `motion.css`와 `src/components/motion/`은 GSAP·ScrollTrigger·MotionPathPlugin을 장면 근처에서 로드합니다. ScrollTrigger가 도형의 진행을 소유하며 기존 읽기 상태 관리와 같은 transform을 함께 쓰지 않습니다. 중국의 날짜·제목·지도·출처는 하나의 단계 상태에서 파생합니다.
+
+중국의 연속 사건과 Golden Dome의 짧은 설명만 넓고 높은 화면에서 고정합니다. 작은 화면은 일반 세로 흐름과 국소 탐색기를 사용합니다. 선 그리기의 정규화된 값에는 GSAP `autoRound:false`를 유지해야 합니다. 원문은 HTML이며 글자를 날리거나 가리지 않습니다. 새로운 항적·시설 경계·통계 결과를 장식으로 생성하지 마세요.
+
+프레임마다 텍스트를 재측정하지 않습니다. 언어·폰트·크기 변경 시 측정하고, 각 컴포넌트의 GSAP context와 matchMedia를 정리합니다. `data-motion-group`, `data-progress`, `data-phase` / `data-active-step`은 브라우저 회귀 관측에 사용합니다. 원문 왕복은 문단과 장면 위치를 복원합니다.
+
 ## 현재 디자인 — v2.3.0
 
 현재 메인은 `src/app/page.tsx`, `story.css`, `essay-experience.tsx`, `narrative-visual.tsx`, `scene-diagram.tsx`, `src/visuals/story.ts`를 사용합니다. 18개 논지가 각자의 그림·제목·범례·원문 링크를 함께 소유합니다. 이전 공유 지도 패널·투영 간 교차 잔상·포인터 추적은 사용하지 않습니다. 기업 역량·북극/그린란드·최종 통합만 정상 문서 흐름에서 전체 폭으로 펼칩니다. 원문 인용 영역은 겹치거나 이동시키지 않습니다.

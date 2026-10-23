@@ -6,7 +6,8 @@ import { usePreferences } from "../preferences";
 import { chinaSteps, sourceHref } from "@/visuals/motion-stories";
 import geography from "@/visuals/motion-geography.json";
 import polar from "@/visuals/atlas-points.json";
-import { clamp, loadMotion, nearScene } from "./runtime";
+import { clamp, loadMotion, nearScene, watchViewportFit } from "./runtime";
+import { MapTerrain } from "./map-terrain";
 const p = geography.pins;
 const curve = (a: number[], b: number[], lift = 70) =>
   `M${a[0]} ${a[1]}Q${(a[0] + b[0]) / 2} ${Math.min(a[1], b[1]) - lift} ${b[0]} ${b[1]}`;
@@ -38,7 +39,8 @@ export function ChinaStory() {
     [comparison, setComparison] = useState("all");
   const activeRef = useRef(0),
     progress = useRef(0),
-    manual = useRef(false);
+    manual = useRef(false),
+    stageVisible = useRef(false);
   const s = chinaSteps[active];
   const select = (value: number, source = "control") => {
     replay.current?.kill();
@@ -70,7 +72,7 @@ export function ChinaStory() {
         String(clamp((v * 7 - 2 - 0.12) / 0.55)),
       );
       root.current.dataset.phase = String(i);
-      if (driver.current?.isActive)
+      if (driver.current?.isActive || (manual.current && stageVisible.current))
         window.dispatchEvent(
           new CustomEvent("iir:motion-scene", {
             detail: { beat: chinaSteps[i].beat },
@@ -93,6 +95,24 @@ export function ChinaStory() {
       el.dataset.motionReady = "false";
       return;
     }
+    const visibility = new IntersectionObserver(
+      ([entry]) => {
+        stageVisible.current = entry.isIntersecting;
+        if (manual.current && !driver.current?.isActive) {
+          window.dispatchEvent(
+            new CustomEvent("iir:motion-scene", {
+              detail: {
+                beat: entry.isIntersecting
+                  ? chinaSteps[activeRef.current].beat
+                  : null,
+              },
+            }),
+          );
+        }
+      },
+      { rootMargin: "-80px 0px 0px 0px" },
+    );
+    if (stage.current) visibility.observe(stage.current);
     const stopWatching = nearScene(el, () => {
       loadMotion()
         .then(({ gsap, ScrollTrigger }) => {
@@ -152,10 +172,32 @@ export function ChinaStory() {
               1.1,
             );
             tl.fromTo(
-              "[data-cambodia-inset]",
-              { y: 28 },
-              { y: 0, duration: 0.3, ease: "none" },
-              4.65,
+              "[data-mineral-branch]",
+              { strokeDashoffset: 1 },
+              {
+                strokeDashoffset: 0,
+                autoRound: false,
+                duration: 0.35,
+                ease: "none",
+              },
+              1.5,
+            );
+            tl.fromTo(
+              "[data-schematic-supply]",
+              { strokeDashoffset: 1 },
+              {
+                strokeDashoffset: 0,
+                autoRound: false,
+                duration: 0.55,
+                ease: "none",
+              },
+              2.12,
+            );
+            tl.fromTo(
+              "[data-schematic-dot]",
+              { attr: { cx: 40 } },
+              { attr: { cx: 560 }, duration: 0.55, ease: "none" },
+              2.12,
             );
             tl.to({}, { duration: 0.01 }, 6.99);
             const update = (v: number) => {
@@ -181,35 +223,45 @@ export function ChinaStory() {
             const media = gsap.matchMedia();
             media.add("(min-width:1024px) and (min-height:700px)", () => {
               const visual = stage.current!;
-              if (visual.offsetHeight > innerHeight - 90) return;
-              el.dataset.pinned = "true";
-              const trig = ScrollTrigger.create({
-                trigger: el.querySelector(".china-scroll-body"),
-                start: "top 80px",
-                end: () =>
-                  `+=${Math.max(innerHeight, el.querySelector<HTMLElement>(".china-step-list")!.offsetHeight - visual.offsetHeight)}`,
-                pin: visual,
-                pinSpacing: false,
-                invalidateOnRefresh: true,
-                onToggle: (self) => {
-                  if (!self.isActive)
-                    window.dispatchEvent(
-                      new CustomEvent("iir:motion-scene", {
-                        detail: { beat: null },
-                      }),
-                    );
-                },
-                onUpdate: (self) => {
-                  manual.current = false;
-                  update(self.progress);
-                },
+              let pin: Trigger | null = null;
+              return watchViewportFit(visual, 90, (fits) => {
+                if (fits) {
+                  el.dataset.pinned = "true";
+                  pin = ScrollTrigger.create({
+                    trigger: el.querySelector(".china-scroll-body"),
+                    start: "top 80px",
+                    end: () =>
+                      `+=${Math.max(innerHeight, el.querySelector<HTMLElement>(".china-step-list")!.offsetHeight - visual.offsetHeight)}`,
+                    pin: visual,
+                    pinSpacing: false,
+                    invalidateOnRefresh: true,
+                    onToggle: (self) => {
+                      if (!self.isActive)
+                        window.dispatchEvent(
+                          new CustomEvent("iir:motion-scene", {
+                            detail: { beat: null },
+                          }),
+                        );
+                    },
+                    onUpdate: (self) => {
+                      manual.current = false;
+                      update(self.progress);
+                    },
+                  });
+                  driver.current = pin;
+                } else {
+                  pin?.kill();
+                  pin = null;
+                  driver.current = null;
+                  el.dataset.pinned = "false";
+                  window.dispatchEvent(
+                    new CustomEvent("iir:motion-scene", {
+                      detail: { beat: null },
+                    }),
+                  );
+                }
+                ScrollTrigger.refresh();
               });
-              driver.current = trig;
-              return () => {
-                trig.kill();
-                driver.current = null;
-                el.dataset.pinned = "false";
-              };
             });
             triggers.push(
               ScrollTrigger.create({
@@ -281,6 +333,8 @@ export function ChinaStory() {
                     id: "motion-china",
                     progress: progress.current,
                     beat: chinaSteps[activeRef.current].beat,
+                    stageOffset:
+                      stage.current?.getBoundingClientRect().top ?? 80,
                   }),
                 );
               } catch {}
@@ -291,7 +345,10 @@ export function ChinaStory() {
             window.addEventListener("keydown", cancel);
             window.addEventListener("pointerdown", cancel);
             document.fonts.ready.then(() => {
-              if (alive) ScrollTrigger.refresh();
+              if (alive) {
+                ScrollTrigger.refresh();
+                window.dispatchEvent(new Event("iir:motion-layout"));
+              }
             });
             const saved = (() => {
               try {
@@ -307,7 +364,16 @@ export function ChinaStory() {
               sessionStorage.getItem("iir-essay-resume") === "true"
             ) {
               requestAnimationFrame(() => {
-                if (alive) select(saved.progress);
+                if (alive) {
+                  select(saved.progress);
+                  if (el.dataset.pinned !== "true" && stage.current)
+                    window.scrollBy({
+                      top:
+                        stage.current.getBoundingClientRect().top -
+                        (saved.stageOffset ?? 80),
+                      behavior: "instant",
+                    });
+                }
               });
               sessionStorage.removeItem("iir-motion-return");
               sessionStorage.removeItem("iir-essay-resume");
@@ -337,6 +403,8 @@ export function ChinaStory() {
     return () => {
       alive = false;
       stopWatching();
+      visibility.disconnect();
+      stageVisible.current = false;
       cleanup();
       setReady(false);
     };
@@ -426,7 +494,7 @@ export function ChinaStory() {
               <title>{s.title[lang]}</title>
               <g className="china-world">
                 <g data-world-camera style={{ transformOrigin: "0 0" }}>
-                  <image href="/visuals/world.svg" width="720" height="520" />
+                  <MapTerrain src="/visuals/world.svg" />
                   {routes.map((d, i) => (
                     <g key={i} className={`china-route china-route-${i}`}>
                       <path
@@ -455,7 +523,7 @@ export function ChinaStory() {
               </g>
               <g className="china-polar">
                 <g data-polar-camera style={{ transformOrigin: "0 0" }}>
-                  <image href="/visuals/arctic.svg" width="720" height="520" />
+                  <MapTerrain src="/visuals/arctic.svg" />
                   {Object.entries(polar.arctic.pins).map(([key, pt], i) => (
                     <g key={key}>
                       <circle cx={pt[0]} cy={pt[1]} r="2" />
@@ -475,7 +543,7 @@ export function ChinaStory() {
                   viewBox="0 0 720 520"
                 >
                   <rect width="720" height="520" className="motion-paper" />
-                  <image href="/visuals/arctic.svg" width="720" height="520" />
+                  <MapTerrain src="/visuals/arctic.svg" />
                 </svg>
               </g>
             </svg>
@@ -553,6 +621,46 @@ export function ChinaStory() {
               ))}
             </div>
           )}
+          <div className="motion-mineral-branch" hidden={active !== 1}>
+            <span>Shenghe Resources</span>
+            <svg viewBox="0 0 160 30" width="80" height="30" aria-hidden="true">
+              <path
+                data-mineral-branch
+                pathLength="1"
+                d="M8 15H152"
+                fill="none"
+              />
+            </svg>
+            <span>
+              {lang === "ko"
+                ? "광물 지분 · 별도 관계"
+                : "Mineral equity · separate relationship"}
+            </span>
+          </div>
+          <div
+            className="motion-supply-sequence"
+            hidden={active !== 2 || !detail}
+          >
+            <svg
+              viewBox="0 0 600 80"
+              width="600"
+              height="80"
+              aria-hidden="true"
+            >
+              <path
+                data-schematic-supply
+                d="M40 40H560"
+                pathLength="1"
+                fill="none"
+              />
+              <circle data-schematic-dot cx="40" cy="40" r="5" />
+            </svg>
+            <ol>
+              <li>{lang === "ko" ? "구이저우 안순" : "Anshun"}</li>
+              <li>{lang === "ko" ? "윈난" : "Yunnan"}</li>
+              <li>{lang === "ko" ? "샨주 남산" : "Namsang"}</li>
+            </ol>
+          </div>
           <div className="china-current-copy">
             <strong>{s.title[lang]}</strong>
             <p>{s.copy[lang]}</p>
@@ -686,12 +794,8 @@ export function ChinaStory() {
                   role="img"
                   aria-label={step.title[lang]}
                 >
-                  <image
-                    href={
-                      i === 1 ? "/visuals/arctic.svg" : "/visuals/world.svg"
-                    }
-                    width="720"
-                    height="520"
+                  <MapTerrain
+                    src={i === 1 ? "/visuals/arctic.svg" : "/visuals/world.svg"}
                   />
                   {i !== 1 &&
                     routes

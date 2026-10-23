@@ -7,7 +7,8 @@ import type { SceneMeta } from "../essay-experience";
 import { mechanisms, mechanismGraph } from "@/visuals/mechanisms";
 import { contributionLabels, studySpines } from "@/visuals/story";
 import { researchConnections } from "@/content/research-connections";
-import { clamp, loadMotion, nearScene } from "./runtime";
+import { clamp, loadMotion, nearScene, watchViewportFit } from "./runtime";
+import { MapTerrain } from "./map-terrain";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
   identity: ["S06", "S14"],
@@ -35,7 +36,10 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
     const el = diagram.current;
     if (!el || !engine) return;
 
+    let alive = true;
+    const cache = new Map<string, ReturnType<typeof engine.prepare>>();
     const measure = () => {
+      if (!alive) return;
       engine.setLocale(lang);
       el.querySelectorAll<HTMLElement>("[data-graph-node]").forEach((node) => {
         const label =
@@ -44,17 +48,30 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
           ] ?? "";
         const style = getComputedStyle(node);
         const font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
-        const prepared = engine.prepare(label, font, {
-          wordBreak: lang === "ko" ? "keep-all" : "normal",
-        });
+        const key = `${font}|${label}`;
+        let prepared = cache.get(key);
+        if (!prepared) {
+          prepared = engine.prepare(label, font, {
+            wordBreak: lang === "ko" ? "keep-all" : "normal",
+          });
+          cache.set(key, prepared);
+        }
         node.style.setProperty(
           "--measured-word",
           `${Math.min(132, Math.ceil(engine.measureNaturalWidth(prepared)) + 24)}px`,
         );
       });
     };
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
     measure();
     document.fonts.ready.then(measure);
+    document.fonts.addEventListener("loadingdone", measure);
+    return () => {
+      alive = false;
+      observer.disconnect();
+      document.fonts.removeEventListener("loadingdone", measure);
+    };
   }, [engine, graph, lang]);
   useEffect(() => {
     const el = root.current;
@@ -65,6 +82,9 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
       loadMotion()
         .then(({ gsap, ScrollTrigger }) => {
           if (!alive) return;
+          // Fixed-size diagrams can skip off-screen layout until the engine approaches.
+          if (diagram.current)
+            diagram.current.style.contentVisibility = "visible";
           const ctx = gsap.context(() => {
             const tl = gsap.timeline({ paused: true });
             const total = spec.steps.length;
@@ -106,16 +126,11 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
             graph.nodes.forEach((node) => {
               const button = el.querySelector(`[data-graph-node="${node.id}"]`);
               if (!button) return;
-              const move =
+              const move = () =>
                 scene.id === "korea-platforms"
-                  ? (node.step - 1) * 80
-                  : scene.id === "synthesis"
-                    ? node.x < 360
-                      ? -22
-                      : node.x > 360
-                        ? 22
-                        : 0
-                    : 0;
+                  ? (node.step - 1) *
+                    Math.min(80, (diagram.current?.clientWidth ?? 720) * 0.1)
+                  : 0;
               tl.fromTo(
                 button,
                 { x: move, y: scene.id === "korea-platforms" ? 0 : 10 },
@@ -179,28 +194,34 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
               start: "top 85%",
               end: "bottom 22%",
               invalidateOnRefresh: true,
+              onRefresh: () => tl.invalidate().progress(progress.current),
               onUpdate: (self) => update(self.progress),
             });
             const mm = gsap.matchMedia();
             if (scene.id === "us-dome")
               mm.add("(min-width:1024px) and (min-height:700px)", () => {
                 const stage = el.querySelector<HTMLElement>(".mechanism-body")!;
-                if (stage.offsetHeight > innerHeight - 120) return;
-                el.dataset.domePinned = "true";
-                const t = ScrollTrigger.create({
-                  trigger: el.querySelector(".mechanism-body"),
-                  start: "top 88px",
-                  end: () => `+=${innerHeight * 1.5}`,
-                  pin: stage,
-                  pinSpacing: true,
-                  onUpdate: (self) => update(self.progress),
+                let pin: ReturnType<typeof ScrollTrigger.create> | null = null;
+                return watchViewportFit(stage, 120, (fits) => {
+                  if (fits) {
+                    el.dataset.domePinned = "true";
+                    pin = ScrollTrigger.create({
+                      trigger: stage,
+                      start: "top 88px",
+                      end: () => `+=${innerHeight * 1.5}`,
+                      pin: stage,
+                      pinSpacing: true,
+                      onUpdate: (self) => update(self.progress),
+                    });
+                    trigger.disable(false);
+                  } else {
+                    pin?.kill();
+                    pin = null;
+                    trigger.enable();
+                    el.dataset.domePinned = "false";
+                  }
+                  ScrollTrigger.refresh();
                 });
-                trigger.disable(false);
-                return () => {
-                  t.kill();
-                  trigger.enable();
-                  el.dataset.domePinned = "false";
-                };
               });
             el.dataset.motionReady = "true";
             update(trigger.progress);
@@ -209,9 +230,13 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
               trigger.kill();
               ctx.revert();
               el.dataset.motionReady = "false";
+              diagram.current?.style.removeProperty("content-visibility");
             };
             document.fonts.ready.then(() => {
-              if (alive) ScrollTrigger.refresh();
+              if (alive) {
+                ScrollTrigger.refresh();
+                window.dispatchEvent(new Event("iir:motion-layout"));
+              }
             });
           }, el);
         })
@@ -333,17 +358,11 @@ export function MechanismStory({ scene }: { scene: SceneMeta }) {
             aria-hidden="true"
           >
             {scene.id === "capability" && (
-              <image
-                href="/visuals/globe.svg"
-                width="720"
-                height="520"
-                data-origin-globe
-                className="origin-globe"
-              />
+              <MapTerrain src="/visuals/globe.svg" origin />
             )}
             <g data-chip-camera style={{ transformOrigin: "0 0" }}>
               {scene.id === "korea-chips" && (
-                <image href="/visuals/world.svg" width="720" height="520" />
+                <MapTerrain src="/visuals/world.svg" />
               )}
               {graph.edges.map((e, i) => (
                 <g

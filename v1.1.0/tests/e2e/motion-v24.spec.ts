@@ -117,6 +117,16 @@ test("small screens replay locally, range keyboard works and route detail stays 
   await slider.focus();
   await page.keyboard.press("End");
   await expect(root).toHaveAttribute("data-phase", "6");
+  await root.locator(".china-motion-stage").scrollIntoViewIfNeeded();
+  await seek(page, 65);
+  await expect(page.locator(".story-current")).toContainText("Cambodia");
+  const caption = root.locator(".cambodia-inset small");
+  await expect(caption).toBeVisible();
+  const bounds = await caption.boundingBox();
+  const map = await root.locator(".china-map").boundingBox();
+  expect(bounds!.y + bounds!.height).toBeLessThanOrEqual(
+    map!.y + map!.height + 1,
+  );
 });
 test("explicit replay is interruptible and wheel scrolling stays native", async ({
   page,
@@ -245,4 +255,64 @@ test("motion controls and complete page pass accessibility rules", async ({
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();
   expect(result.violations).toEqual([]);
+});
+
+test("source round trips restore both the selected Chinese scene and the visible replay stage", async ({
+  page,
+}) => {
+  await china(page);
+  await seek(page, 65);
+  await expect(page.locator("#motion-china")).toHaveAttribute(
+    "data-phase",
+    "4",
+  );
+  const source = page.locator("#motion-china .china-current-copy a");
+  await source.scrollIntoViewIfNeeded();
+  const before = await page
+    .locator(".china-motion-stage")
+    .evaluate((el) => el.getBoundingClientRect().top);
+  await source.click();
+  await expect(page).toHaveURL(/reports\/S08/);
+  await page.locator("[data-return-to-essay]").first().click();
+  const root = page.locator("#motion-china");
+  await expect(root).toHaveAttribute("data-motion-ready", "true");
+  await expect(root).toHaveAttribute("data-phase", "4");
+  await expect
+    .poll(async () =>
+      Math.abs(
+        (await root
+          .locator(".china-motion-stage")
+          .evaluate((el) => el.getBoundingClientRect().top)) - before,
+      ),
+    )
+    .toBeLessThan(24);
+});
+
+test("pins release and return when stage fit changes inside the desktop media query", async ({
+  page,
+}, info) => {
+  test.skip(info.project.name !== "desktop", "Wide viewport fit regression");
+  await china(page);
+  const root = page.locator("#motion-china");
+  const chinaStage = root.locator(".china-motion-stage");
+  // Model a longer translated explanation while keeping both sizes inside the
+  // desktop media query. A query-change-only implementation must fail here.
+  await chinaStage.evaluate((el) => (el.style.minHeight = "780px"));
+  await expect(root).toHaveAttribute("data-pinned", "true");
+  await page.setViewportSize({ width: 1440, height: 740 });
+  await expect(root).toHaveAttribute("data-pinned", "false");
+  await expect(chinaStage).not.toHaveCSS("position", "fixed");
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await expect(root).toHaveAttribute("data-pinned", "true");
+  const dome = page.locator("#visual-us-dome");
+  await dome.scrollIntoViewIfNeeded();
+  await expect(dome).toHaveAttribute("data-motion-ready", "true");
+  const domeStage = dome.locator(".mechanism-body");
+  await domeStage.evaluate((el) => (el.style.minHeight = "780px"));
+  await expect(dome).toHaveAttribute("data-dome-pinned", "true");
+  await page.setViewportSize({ width: 1440, height: 740 });
+  await expect(dome).toHaveAttribute("data-dome-pinned", "false");
+  await expect(domeStage).not.toHaveCSS("position", "fixed");
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await expect(dome).toHaveAttribute("data-dome-pinned", "true");
 });
