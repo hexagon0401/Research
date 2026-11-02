@@ -1,0 +1,1456 @@
+{
+  "date": "2026-11-02T05:05:26.270Z",
+  "url": "http://127.0.0.1:3022",
+  "geometry": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.0004",
+      "kind": "visual-capability",
+      "ratio": 0.6568235367063493,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.2493",
+      "kind": "visual-capability",
+      "ratio": 0.6568235367063493,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.4999",
+      "kind": "visual-capability",
+      "ratio": 0.6568235367063493,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.7501",
+      "kind": "visual-capability",
+      "ratio": 0.6568235367063493,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.9991",
+      "kind": "visual-capability",
+      "ratio": 0.6568235367063493,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.0000",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.2497",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.4999",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.7497",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.9990",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0216"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0427"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0771"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0803"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1217"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3071"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3286"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3630"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3658"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.4071"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.5929"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6143"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6485"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6514"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6928"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.0004",
+      "kind": "visual-capability",
+      "ratio": 1.034994663900914,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.2501",
+      "kind": "visual-capability",
+      "ratio": 1.034994663900914,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.4997",
+      "kind": "visual-capability",
+      "ratio": 1.034994663900914,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.7497",
+      "kind": "visual-capability",
+      "ratio": 1.034994663900914,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.9990",
+      "kind": "visual-capability",
+      "ratio": 1.034994663900914,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.0002",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.2500",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.5000",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.7500",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.9991",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0215"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0427"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0770"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0802"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1214"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3071"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3286"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3628"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3657"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.4072"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.5929"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6142"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6485"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6514"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6928"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.0000",
+      "kind": "visual-capability",
+      "ratio": 1.9916624663978493,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.2500",
+      "kind": "visual-capability",
+      "ratio": 1.9916624663978493,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.5000",
+      "kind": "visual-capability",
+      "ratio": 1.9916624663978493,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.7501",
+      "kind": "visual-capability",
+      "ratio": 1.9916624663978493,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.9991",
+      "kind": "visual-capability",
+      "ratio": 1.9916624663978493,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.0002",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.2501",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.5000",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.7502",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.9993",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0215"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0430"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0770"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0800"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1213"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3071"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3286"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3628"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3656"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.4072"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.5928"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6143"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6487"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6514"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6928"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.0001",
+      "kind": "visual-capability",
+      "ratio": 1.1480074940503315,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.2499",
+      "kind": "visual-capability",
+      "ratio": 1.1480074940503315,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.5002",
+      "kind": "visual-capability",
+      "ratio": 1.1480074940503315,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.7501",
+      "kind": "visual-capability",
+      "ratio": 1.1480074940503315,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.9990",
+      "kind": "visual-capability",
+      "ratio": 1.1480074940503315,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.0003",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.2497",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.4998",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.7500",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.9988",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0214"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0428"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0772"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0801"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1214"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3072"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3286"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3628"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.3657"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 20,
+      "curveInside": true,
+      "progress": "0.4071"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.5929"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6143"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6485"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6515"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 15,
+      "curveInside": false,
+      "progress": "0.6929"
+    }
+  ],
+  "scroll": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "run": 1,
+      "frames": 110,
+      "median": 16.699999999999818,
+      "p95": 33.400000000000546,
+      "longTasks": [60, 68],
+      "scriptMs": 71.228,
+      "layoutMs": 101.724,
+      "recalcMs": 1578.6630000000002
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "run": 2,
+      "frames": 112,
+      "median": 16.699999999999818,
+      "p95": 33.399999999999636,
+      "longTasks": [],
+      "scriptMs": 55.904999999999994,
+      "layoutMs": 64.78799999999998,
+      "recalcMs": 1122.5629999999996
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "run": 3,
+      "frames": 106,
+      "median": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "longTasks": [51],
+      "scriptMs": 54.071000000000005,
+      "layoutMs": 79.765,
+      "recalcMs": 914.8419999999998
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "run": 1,
+      "frames": 112,
+      "median": 16.699999999999818,
+      "p95": 33.399999999999636,
+      "longTasks": [53],
+      "scriptMs": 60.577999999999996,
+      "layoutMs": 67.92,
+      "recalcMs": 1216.109
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "run": 2,
+      "frames": 108,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "longTasks": [],
+      "scriptMs": 54.438999999999986,
+      "layoutMs": 61.657000000000004,
+      "recalcMs": 1137.854
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "run": 3,
+      "frames": 102,
+      "median": 16.69999999999891,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 50.649,
+      "layoutMs": 63.863,
+      "recalcMs": 787.9719999999999
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "run": 1,
+      "frames": 112,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 57.044,
+      "layoutMs": 57.002,
+      "recalcMs": 1133.709
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "run": 2,
+      "frames": 102,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 51.937,
+      "layoutMs": 56.798,
+      "recalcMs": 797.1219999999998
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "run": 3,
+      "frames": 110,
+      "median": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 50.77100000000001,
+      "layoutMs": 54.396999999999984,
+      "recalcMs": 1071.205
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 1,
+      "frames": 108,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "longTasks": [],
+      "scriptMs": 54.11099999999999,
+      "layoutMs": 54.355000000000004,
+      "recalcMs": 1099.58
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 2,
+      "frames": 102,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 47.069,
+      "layoutMs": 54.369,
+      "recalcMs": 764.7979999999999
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 3,
+      "frames": 106,
+      "median": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 48.88099999999999,
+      "layoutMs": 54.02200000000001,
+      "recalcMs": 1107.7419999999997
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    }
+  ]
+}
