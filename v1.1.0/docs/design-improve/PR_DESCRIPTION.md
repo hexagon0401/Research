@@ -31,3 +31,7 @@ Production build, typecheck, formatting, 31 unit/content checks and original/PDF
 ## Production integration update
 
 The author has now explicitly authorized main integration/deployment of all completed work. The earlier draft/preview restriction is historical and no longer blocks this release. v2.4.4 passes the complete 272-item browser checkpoint (238 pass / 34 conditional exclusions), build, types, formatting, 31 unit/content checks and source/PDF preservation. Fresh release mobile performance median is 90, accessibility/best practices 100; the absolute 95 target remains unmet. See ../V2_4_4_RELEASE.md and IMPLEMENTATION_PROMPT.md. Proposed research wording and classifications are still not published.
+
+## Production result
+
+Completed main integration and production verification as v2.4.4 on 2026-11-02 18:19 KST. Four operating viewport profiles, real CDP touch, bilingual/source/glossary/404 navigation, frozen diagram masks and no-store crawler policy passed; page errors zero. See ../V2_4_4_RELEASE.md and ../validation/v2.4.4-live.json. Earlier review-only restrictions are historical.
