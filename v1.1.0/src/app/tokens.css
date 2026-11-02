@@ -1,6 +1,8 @@
 /* IIR v1.1.0 — shared brand and presentation tokens. */
 :root {
-  --paper: #e6e8e6;
+  --paper: #f0f0ea;
+  --folio-surface: #e4e7de;
+  --folio-rule: rgb(14 19 31 / 16%);
   --ink: #0e131f;
   --signal: #0efb2e;
   --muted: #515863;

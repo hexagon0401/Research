@@ -1,0 +1,331 @@
+{
+  "views": [
+    {
+      "width": 375,
+      "height": 812,
+      "lang": "en",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1rem",
+        "--gutter": "24px"
+      }
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "lang": "en",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1rem",
+        "--gutter": "24px"
+      }
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "lang": "ko",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1rem",
+        "--gutter": "24px"
+      }
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "lang": "ko",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1rem",
+        "--gutter": "24px"
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "lang": "en",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "lang": "en",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "lang": "ko",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "lang": "ko",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "lang": "en",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      },
+      "axe": []
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "lang": "en",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "lang": "ko",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "lang": "ko",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1536,
+      "height": 864,
+      "lang": "en",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1536,
+      "height": 864,
+      "lang": "en",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1536,
+      "height": 864,
+      "lang": "ko",
+      "reducedMotion": "no-preference",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    },
+    {
+      "width": 1536,
+      "height": 864,
+      "lang": "ko",
+      "reducedMotion": "reduce",
+      "overflow": false,
+      "missing": [],
+      "empty": [],
+      "tokens": {
+        "--paper": "#f0f0ea",
+        "--ink": "#0e131f",
+        "--signal": "#0efb2e",
+        "--font-body": "\"plex\", \"plex Fallback\", \"IBM Plex Sans\", \"IBM Plex Sans KR\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif",
+        "--text-body": "1.0625rem",
+        "--gutter": "clamp(24px, 4.5vw, 80px)"
+      }
+    }
+  ],
+  "reports": [
+    {
+      "id": "S00",
+      "status": 200
+    },
+    {
+      "id": "S01",
+      "status": 200
+    },
+    {
+      "id": "S02",
+      "status": 200
+    },
+    {
+      "id": "S03",
+      "status": 200
+    },
+    {
+      "id": "S05",
+      "status": 200
+    },
+    {
+      "id": "S06",
+      "status": 200
+    },
+    {
+      "id": "S08",
+      "status": 200
+    },
+    {
+      "id": "S11",
+      "status": 200
+    },
+    {
+      "id": "S13",
+      "status": 200
+    },
+    {
+      "id": "S14",
+      "status": 200
+    },
+    {
+      "id": "S15",
+      "status": 200
+    },
+    {
+      "id": "S16",
+      "status": 200
+    },
+    {
+      "id": "S17",
+      "status": 200
+    }
+  ]
+}

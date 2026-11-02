@@ -18,7 +18,7 @@ test("the reading field stays paper, and pointer movement cannot move its geogra
     await page
       .locator("#main")
       .evaluate((e) => getComputedStyle(e).backgroundColor),
-  ).toBe("rgb(230, 232, 230)");
+  ).toBe("rgb(240, 240, 234)");
 });
 
 test("the compact contents menu navigates and closes with a keyboard return path", async ({

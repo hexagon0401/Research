@@ -1,4 +1,6 @@
+import { reports } from "@/content/report-catalog";
 import { StudyNumberNote } from "@/components/author-strip";
+import { Arrow } from "@/components/icons";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
 export default function Archive() {
   return (
     <main id="main" className="section-shell archive-reading-index">
-      <header className="page-intro">
+      <header className="page-intro folio-archive-intro">
+        <span className="folio-archive-count" aria-hidden="true">
+          {reports.length.toString().padStart(2, "0")}
+        </span>
         <span className="eyebrow">THE ARCHIVE / 13 CONNECTED STUDIES</span>
         <h1>
           <L
@@ -38,10 +43,8 @@ export default function Archive() {
           />
         </p>
         <Link className="inline-link" href="/#integration">
-          <L
-            en="See how the studies connect ↗"
-            ko="연구가 연결되는 과정 보기 ↗"
-          />
+          <L en="See how the studies connect" ko="연구가 연결되는 과정 보기" />
+          <Arrow diagonal />
         </Link>
       </header>
       <StudyNumberNote />

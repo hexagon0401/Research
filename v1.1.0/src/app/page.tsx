@@ -1,3 +1,4 @@
+import { Arrow } from "@/components/icons";
 import { AuthorStrip, StudyNumberNote } from "@/components/author-strip";
 import { FactText } from "@/components/motion/scene-text";
 import Link from "next/link";
@@ -300,7 +301,8 @@ export default async function Home() {
               />
             </span>
             <Link className="inline-link" href="/reports/S00" prefetch={false}>
-              <L ko="통합 연구 전문 읽기 ↗" en="Read the full synthesis ↗" />
+              <L ko="통합 연구 전문 읽기" en="Read the full synthesis" />
+              <Arrow diagonal />
             </Link>
           </div>
         </div>

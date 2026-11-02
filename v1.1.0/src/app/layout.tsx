@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "./story.css";
 import "./refinements.css";
+import "./folio.css";
 import { PreferencesProvider } from "@/components/preferences";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";

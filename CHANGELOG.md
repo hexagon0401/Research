@@ -1,6 +1,14 @@
 # Releases
 
-현재 릴리스는 [v2.4.4](https://github.com/hexagon0401/Research/tree/v2.4.4)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.5.0](https://github.com/hexagon0401/Research/tree/v2.5.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.5.0 — 2026-11-02
+
+- Introduce a coherent Swiss research folio: S00 cover, archive count and chapter numerals share an editorial system.
+- Refine the paper/surface palette, replace large green selection fills with a restrained spine, and clarify the active reading step.
+- Preserve all original research, translations, PDF hashes, anchors, routes and scroll controls.
+- Apply verified high-end-visual-design, minimalist-ui and redesign-existing-projects instructions selectively to the research context; document primary web sources.
+- [Validation and production verification](v1.1.0/docs/V2_5_0_RELEASE.md).
 
 ## 2.4.4 — 2026-11-02
 

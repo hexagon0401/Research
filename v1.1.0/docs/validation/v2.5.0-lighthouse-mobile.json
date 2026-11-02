@@ -1,0 +1,65 @@
+{
+  "profile": "Lighthouse mobile / simulated throttling / production build",
+  "scores": {
+    "performance": 90,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "runs": [
+    {
+      "run": 1,
+      "date": "2026-11-02T10:40:21.129Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 92,
+        "accessibility": 100,
+        "best-practices": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1545.4470000000001,
+        "largest-contentful-paint": 3029.7880000000005,
+        "total-blocking-time": 149.50000000000023,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1545.4470000000001,
+        "total-byte-weight": 461419
+      }
+    },
+    {
+      "run": 2,
+      "date": "2026-11-02T10:40:30.813Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1499.98405,
+        "largest-contentful-paint": 3165.9362,
+        "total-blocking-time": 201,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1499.98405,
+        "total-byte-weight": 461419
+      }
+    },
+    {
+      "run": 3,
+      "date": "2026-11-02T10:40:40.290Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 84,
+        "accessibility": 100,
+        "best-practices": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1670.8304999999998,
+        "largest-contentful-paint": 3910.274,
+        "total-blocking-time": 188.5,
+        "cumulative-layout-shift": 0,
+        "speed-index": 2910.35198192577,
+        "total-byte-weight": 461419
+      }
+    }
+  ],
+  "note": "Local production build; final archive CTA glyph replacement does not alter the measured home route. Three serial runs, no selection of best run."
+}

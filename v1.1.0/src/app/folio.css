@@ -1,0 +1,293 @@
+/* Swiss research folio: one grid, oversized identifiers, restrained signal. */
+.essay-hero {
+  padding-block: 36px 48px;
+}
+.essay-hero > .eyebrow {
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+.essay-hero-composition {
+  gap: 24px 48px;
+  margin-block: 36px 40px;
+  align-items: start;
+}
+.essay-hero h1 {
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+.essay-hero h1 span {
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.14em;
+}
+.hero-author {
+  border-top: 1px solid var(--folio-rule);
+  padding-top: 14px;
+  align-self: end;
+}
+.hero-author strong {
+  font-weight: 600;
+}
+.hero-atlas.folio-atlas {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 380px;
+  padding: 24px;
+  overflow: hidden;
+  max-width: none;
+  background: var(--folio-surface);
+  border-left: 2px solid var(--ink);
+  isolation: isolate;
+  align-self: stretch;
+  transform: none;
+}
+.folio-atlas > svg {
+  position: absolute;
+  top: 12%;
+  right: -20%;
+  width: 116%;
+  height: auto;
+  opacity: 0.32;
+  pointer-events: none;
+}
+.atlas-folio-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font: 12px/1.5 var(--font-mono);
+  letter-spacing: 0.03em;
+}
+.atlas-folio-number {
+  position: relative;
+  align-self: center;
+  font: 500 clamp(100px, 12vw, 184px)/0.95 var(--font-display);
+  letter-spacing: -0.08em;
+  margin-block: 32px;
+}
+.atlas-folio-caption {
+  display: grid;
+  gap: 4px;
+  border-top: 1px solid var(--folio-rule);
+  padding-top: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+}
+.atlas-folio-caption > span:first-child {
+  font-weight: 500;
+}
+.essay-hero-bottom {
+  align-items: start;
+  padding-block: 28px 32px;
+}
+.essay-hero-bottom > p {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  max-width: 42ch;
+}
+.essay-reading-meta {
+  border-left: 1px solid var(--folio-rule);
+  padding-left: 24px;
+}
+.essay-outline {
+  gap: 4px 20px;
+  border-top-color: var(--ink);
+}
+.essay-outline a {
+  font-weight: 500;
+}
+.essay-outline > span {
+  color: var(--ink);
+}
+.essay-starting-question {
+  border-top: 0;
+  padding-block: 24px 48px;
+}
+.chapter-opening {
+  border-top: 2px solid var(--ink);
+  padding-block: 24px 40px;
+  align-items: baseline;
+  gap: 24px;
+}
+.chapter-opening-number {
+  font: 400 clamp(52px, 5.8vw, 88px)/0.9 var(--font-display);
+  letter-spacing: -0.075em;
+}
+.chapter-opening-label {
+  font: 500 clamp(20px, 2.2vw, 30px)/1.3 var(--font-display);
+  letter-spacing: -0.03em;
+  max-width: 25ch;
+}
+.story-chapter + .story-chapter {
+  border-top: 0;
+}
+.beat-reading h2 {
+  letter-spacing: -0.04em;
+}
+.essay-intro,
+.scene-lead,
+.scene-facts,
+.glossary-index p {
+  text-wrap: wrap;
+}
+.case-visual figcaption > .eyebrow {
+  letter-spacing: 0.07em;
+  font-size: 12px;
+}
+.case-visual h3 {
+  letter-spacing: -0.035em;
+}
+.scene-steps > li {
+  position: relative;
+}
+.scene-steps > li[aria-current="step"] > .mono {
+  border-left: 3px solid var(--ink);
+  padding-left: 10px;
+}
+.scene-steps > li > strong {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+.scene-steps .scene-lead {
+  line-height: 1.8;
+}
+.scene-steps .scene-facts {
+  color: var(--muted);
+}
+.scene-steps .scene-facts strong {
+  color: var(--ink);
+}
+.material-folder.selected .material-cover {
+  background: var(--folio-surface);
+  box-shadow:
+    inset 3px 0 0 var(--signal),
+    3px 3px 0 var(--surface);
+}
+.material-folder.selected .material-id {
+  font-weight: 600;
+}
+.material-cover {
+  box-shadow: 3px 3px 0 rgb(14 19 31 / 12%);
+}
+.folio-archive-intro {
+  position: relative;
+  padding-right: 27%;
+}
+.folio-archive-count {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font: 400 clamp(112px, 16vw, 240px)/0.9 var(--font-display);
+  letter-spacing: -0.085em;
+}
+.folio-archive-intro h1 {
+  font-size: clamp(44px, 5vw, 80px);
+}
+.glossary-index > section {
+  padding-block: 24px 8px;
+}
+.reading-page .page-intro h1 {
+  letter-spacing: -0.04em;
+}
+.site-footer {
+  border-top: 2px solid var(--ink);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .essay-hero-composition {
+    gap: 24px 32px;
+  }
+  .hero-atlas.folio-atlas {
+    min-height: 340px;
+    padding: 20px;
+  }
+  .atlas-folio-number {
+    font-size: 112px;
+  }
+}
+@media (max-width: 767px) {
+  .site-header nav {
+    gap: 14px;
+  }
+  .essay-hero {
+    padding-block: 28px 36px;
+  }
+  .essay-hero-composition {
+    gap: 22px;
+    margin-block: 28px 32px;
+  }
+  .essay-hero h1 {
+    font-size: clamp(36px, 9.6vw, 48px);
+    line-height: 1.1;
+  }
+  .hero-atlas.folio-atlas {
+    width: 100%;
+    max-width: none;
+    min-height: 238px;
+    padding: 20px;
+  }
+  .folio-atlas > svg {
+    width: 92%;
+    top: -9%;
+    right: -10%;
+  }
+  .atlas-folio-number {
+    font-size: 116px;
+    margin-block: 16px;
+  }
+  .atlas-folio-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 12px;
+  }
+  .atlas-folio-label {
+    font-size: 12px;
+  }
+  .essay-reading-meta {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .essay-hero-bottom {
+    gap: 24px;
+  }
+  .essay-outline {
+    gap: 0 12px;
+  }
+  .chapter-opening {
+    gap: 16px;
+    padding-block: 20px 28px;
+  }
+  .chapter-opening-number {
+    font-size: 54px;
+  }
+  .chapter-opening-label {
+    font-size: 21px;
+  }
+  .folio-archive-intro {
+    padding-right: 0;
+  }
+  .folio-archive-count {
+    display: none;
+  }
+}
+@media (max-width: 374px) {
+  .site-header nav {
+    gap: 8px;
+  }
+  .atlas-folio-caption {
+    display: grid;
+    gap: 3px;
+  }
+}
+
+.atlas-folio-label,
+.atlas-folio-caption {
+  position: relative;
+  z-index: 1;
+  background: var(--folio-surface);
+}
+.material-folder:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  box-shadow: none;
+}

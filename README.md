@@ -1,16 +1,17 @@
 # Research
 
-**최신 v2.4.4 → 코드 위치 [v1.1.0/](v1.1.0/)**
+**최신 v2.5.0 → 코드 위치 [v1.1.0/](v1.1.0/)**
 
-IIR 연구 사이트입니다. `v1.1.0/`은 Vercel의 고정 배포 경로이며, 현재 코드 버전은 **v2.4.4**입니다. 새 버전마다 폴더를 복제하지 않고 package 버전과 Git 태그로 구분합니다.
+IIR 연구 사이트입니다. `v1.1.0/`은 Vercel의 고정 배포 경로이며, 현재 코드 버전은 **v2.5.0**입니다. 새 버전마다 폴더를 복제하지 않고 package 버전과 Git 태그로 구분합니다.
 
-[사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.4.4 구현·검증](v1.1.0/docs/V2_4_4_RELEASE.md)
+[사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.5.0 구현·검증](v1.1.0/docs/V2_5_0_RELEASE.md)
 
 ## 버전과 코드 위치
 
 | 버전별 소스                                                          | 변경·검증 기록                                                                    |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [v2.4.4 · 최신](https://github.com/hexagon0401/Research/tree/v2.4.4) | [저자 소개·가독성·용어집과 검증된 디자인 개선](v1.1.0/docs/V2_4_4_RELEASE.md)     |
+| [v2.5.0 · 최신](https://github.com/hexagon0401/Research/tree/v2.5.0) | [Swiss research folio — 시각 체계와 가독성](v1.1.0/docs/V2_5_0_RELEASE.md)        |
+| [v2.4.4](https://github.com/hexagon0401/Research/tree/v2.4.4)        | [저자 소개·가독성·용어집과 검증된 디자인 개선](v1.1.0/docs/V2_4_4_RELEASE.md)     |
 | [v2.4.3](https://github.com/hexagon0401/Research/tree/v2.4.3)        | [도식 오류·비교 도구·가독성 보완과 72시간 AI 검토](v1.1.0/docs/V2_4_3_RELEASE.md) |
 | [v2.4.2](https://github.com/hexagon0401/Research/tree/v2.4.2)        | [원형·경로·화면 비율 교정과 스크롤 최적화](v1.1.0/docs/V2_4_2_RELEASE.md)         |
 | [v2.4.1](https://github.com/hexagon0401/Research/tree/v2.4.1)        | [그림 고정·지역 확대·한영 편집](v1.1.0/docs/V2_4_1_RELEASE.md)                    |
