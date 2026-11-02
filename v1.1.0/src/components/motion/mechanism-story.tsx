@@ -69,11 +69,17 @@ export function MechanismStory({
     reduced,
   );
   useEffect(() => {
-    if (!diagram.current) return;
-    const frame = bindDiagramFrame(diagram.current);
-    frameRenderer.current = frame.draw;
+    const target = diagram.current;
+    if (!target) return;
+    let dispose = () => {};
+    const stop = nearScene(target, () => {
+      const frame = bindDiagramFrame(target);
+      frameRenderer.current = frame.draw;
+      dispose = frame.dispose;
+    });
     return () => {
-      frame.dispose();
+      stop();
+      dispose();
       frameRenderer.current = null;
     };
   }, [scene.id, lang]);

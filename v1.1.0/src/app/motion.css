@@ -1317,3 +1317,18 @@ html {
 .geographic-node-layer button[data-graph-node="cn"] {
   translate: -50% 15%;
 }
+
+.geographic-node-layer button,
+.motion-place-legend button,
+.motion-filter button {
+  min-width: 44px;
+}
+
+/* Fixed-height canvases can skip off-screen work without changing article geometry. */
+.scroll-scene .mechanism-diagram,
+.scroll-scene .china-map {
+  content-visibility: auto;
+}
+.diagram-snapshot .china-map {
+  content-visibility: visible !important;
+}

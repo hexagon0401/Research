@@ -187,11 +187,31 @@ export function ChinaStory({
   );
   const select = (value: number) => scroll.seek(value);
   useEffect(() => {
-    if (!root.current || !map.current) return;
-    const frame = bindMapFrame(root.current, map.current);
-    frameRenderer.current = frame.draw;
+    const el = root.current,
+      target = map.current;
+    if (!el || !target) return;
+    let dispose = () => {};
+    const stop = nearScene(target, () => {
+      const frame = bindMapFrame(el, target);
+      frameRenderer.current = frame.draw;
+      dispose = frame.dispose;
+      const i = activeRef.current;
+      frame.draw(
+        i >= 5
+          ? comparisonCamera(comparisonRef.current, cameraOverview)
+          : i === 4
+            ? cameraCambodia
+            : i === 2 || i === 3
+              ? cameraMyanmar
+              : i === 1
+                ? cameraGreenland
+                : routeCameras[0],
+        cameraArctic,
+      );
+    });
     return () => {
-      frame.dispose();
+      stop();
+      dispose();
       frameRenderer.current = null;
     };
   }, [lang]);
@@ -230,6 +250,7 @@ export function ChinaStory({
       loadMotion()
         .then(({ gsap }) => {
           if (!alive) return;
+          map.current?.style.setProperty("content-visibility", "visible");
           const ctx = gsap.context(() => {
             const tl = gsap.timeline({ paused: true });
             timeline.current = tl;
@@ -310,6 +331,7 @@ export function ChinaStory({
               ctx.revert();
               timeline.current = null;
               drawCameraRef.current = null;
+              map.current?.style.removeProperty("content-visibility");
             };
           }, el);
         })
