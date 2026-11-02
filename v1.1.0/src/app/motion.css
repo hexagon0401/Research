@@ -1253,3 +1253,48 @@ html {
 .mechanism-synthesis[data-scene-layout="compact"] .compact-study-labels {
   display: block;
 }
+
+/* v2.4.2: every overlay follows the same isotropic SVG viewport. */
+.mechanism-diagram {
+  overflow: hidden;
+}
+.mechanism-node-layer,
+.compact-study-labels {
+  visibility: hidden;
+}
+.mechanism-diagram[data-frame-ready="true"] .mechanism-node-layer,
+.mechanism-diagram[data-frame-ready="true"] .compact-study-labels {
+  visibility: visible;
+}
+.geographic-node-layer button {
+  translate: -50% -115%;
+  border: 0;
+  width: auto;
+  max-width: 30%;
+  background: var(--paper);
+}
+.mechanism-spatial-method[data-active-step="3"] .method-pca {
+  display: block;
+  padding: 0;
+}
+.method-pca .pca-node-layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.method-pca .pca-node-layer > span {
+  position: absolute;
+  translate: -50% -50%;
+  font: 400 12px/1.3 var(--font-body);
+  padding: 3px;
+  border: 0;
+  background: var(--paper);
+  max-width: 40%;
+}
+.method-pca > small {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  font-size: 11px;
+}

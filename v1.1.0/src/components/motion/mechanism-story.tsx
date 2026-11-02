@@ -14,6 +14,8 @@ import { SceneText } from "./scene-text";
 import { MapTerrain } from "./map-terrain";
 import { fitCamera, pointsBounds } from "@/visuals/camera";
 import cameraRegions from "@/visuals/scene-camera.json";
+import { bindDiagramFrame, bindTraveler, identityCamera } from "./frame";
+import type { Camera } from "@/visuals/camera";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
   identity: ["S06", "S14"],
@@ -34,7 +36,8 @@ export function MechanismStory({
     stage = useRef<HTMLDivElement>(null),
     timeline = useRef<gsap.core.Timeline | null>(null),
     selectedPanel = useRef<HTMLDivElement>(null),
-    lastTrigger = useRef<HTMLElement | null>(null);
+    lastTrigger = useRef<HTMLElement | null>(null),
+    frameRenderer = useRef<((camera: Camera) => void) | null>(null);
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => setHydrated(true), []);
   const [active, setActive] = useState(0),
@@ -65,6 +68,15 @@ export function MechanismStory({
     lang,
     reduced,
   );
+  useEffect(() => {
+    if (!diagram.current) return;
+    const frame = bindDiagramFrame(diagram.current);
+    frameRenderer.current = frame.draw;
+    return () => {
+      frame.dispose();
+      frameRenderer.current = null;
+    };
+  }, [scene.id, lang]);
   const engine = usePretext(root, scene.id === "capability");
   useEffect(() => {
     const el = diagram.current;
@@ -133,43 +145,24 @@ export function MechanismStory({
                 {
                   strokeDashoffset: 0,
                   autoRound: false,
-                  duration: 0.6,
+                  duration: 0.45,
                   ease: "none",
                 },
-                edge.step + 0.12,
+                edge.step + 0.1,
               );
-              tl.set(dot, { autoAlpha: 0 }, 0);
-              tl.set(dot, { autoAlpha: 1 }, edge.step + 0.12);
-              tl.to(
-                dot,
-                {
-                  motionPath: {
-                    path,
-                    align: path,
-                    alignOrigin: [0.5, 0.5],
-                    start: direction ? 1 : 0,
-                    end: direction ? 0 : 1,
-                  },
-                  duration: 0.6,
-                  ease: "none",
-                },
-                edge.step + 0.12,
-              );
-              tl.set(dot, { autoAlpha: 0 }, edge.step + 0.9);
-            });
-            graph.nodes.forEach((node) => {
-              const button = el.querySelector(`[data-graph-node="${node.id}"]`);
-              if (!button) return;
-              const move = () =>
-                scene.id === "korea-platforms"
-                  ? (node.step - 1) *
-                    Math.min(80, (diagram.current?.clientWidth ?? 720) * 0.1)
-                  : 0;
+              const traveler = bindTraveler(path, dot as SVGCircleElement),
+                state = { value: 0 };
+              traveler(0);
               tl.fromTo(
-                button,
-                { x: move, y: scene.id === "korea-platforms" ? 0 : 10 },
-                { x: 0, y: 0, duration: 0.5, ease: "none" },
-                Math.min(node.step, total - 1) + 0.1,
+                state,
+                { value: 0 },
+                {
+                  value: 1,
+                  duration: 0.45,
+                  ease: "none",
+                  onUpdate: () => traveler(state.value),
+                },
+                edge.step + 0.1,
               );
             });
             if (scene.id === "capability")
@@ -188,7 +181,7 @@ export function MechanismStory({
                 52,
                 2,
               );
-              const korea = fitCamera(
+              const regional = fitCamera(
                 pointsBounds(
                   [...cameraRegions.regions.kr, ...cameraRegions.regions.cn],
                   6,
@@ -196,17 +189,21 @@ export function MechanismStory({
                 60,
                 6,
               );
-              tl.fromTo(
-                "[data-chip-camera]",
-                overview,
-                { ...korea, duration: 0.65, ease: "none" },
-                1,
-              );
-              tl.to(
-                "[data-chip-camera]",
-                { ...overview, duration: 0.55, ease: "none" },
-                2,
-              );
+              const world = { ...overview };
+              const camera =
+                el.querySelector<SVGGElement>("[data-chip-camera]")!;
+              const render = () => {
+                camera.setAttribute(
+                  "transform",
+                  `translate(${world.x} ${world.y}) scale(${world.scale})`,
+                );
+                frameRenderer.current?.(world);
+              };
+              // Every new relation is drawn with both ends visible, then the local region is examined.
+              tl.to(world, { ...regional, duration: 0.3, ease: "none" }, 1.55);
+              tl.to(world, { ...overview, duration: 0.1, ease: "none" }, 2);
+              tl.eventCallback("onUpdate", render);
+              render();
             }
             el.querySelectorAll<SVGPathElement>("[data-pca-edge]").forEach(
               (path, i) =>
@@ -229,6 +226,7 @@ export function MechanismStory({
             cleanup = () => {
               ctx.revert();
               timeline.current = null;
+              frameRenderer.current?.(identityCamera);
               el.dataset.motionReady = "false";
               diagram.current?.style.removeProperty("content-visibility");
             };
@@ -353,15 +351,17 @@ export function MechanismStory({
               viewBox="0 0 720 520"
               width="720"
               height="520"
-              preserveAspectRatio={
-                scene.id === "korea-chips" ? "xMidYMid meet" : "none"
-              }
+              preserveAspectRatio="xMidYMid meet"
               aria-hidden="true"
             >
               {scene.id === "capability" && (
                 <MapTerrain src="/visuals/globe.svg" origin />
               )}
-              <g data-chip-camera style={{ transformOrigin: "0 0" }}>
+              <g
+                data-chip-camera
+                data-camera-scale="1"
+                style={{ transformOrigin: "0 0" }}
+              >
                 {scene.id === "korea-chips" && (
                   <MapTerrain src="/visuals/world.svg" vector />
                 )}
@@ -384,7 +384,7 @@ export function MechanismStory({
                       fill="none"
                       vectorEffect="non-scaling-stroke"
                     />
-                    <circle data-signal={i} r="4" />
+                    <circle data-signal={i} data-radius-px="3" r="3" />
                   </g>
                 ))}
                 {graph.nodes.map((node) => (
@@ -392,48 +392,53 @@ export function MechanismStory({
                     key={node.id}
                     cx={node.x}
                     cy={node.y}
-                    r={node.id === "S00" ? 9 : 4}
+                    r="4"
+                    data-radius-px="4"
                     className="mechanism-point"
                     vectorEffect="non-scaling-stroke"
                   />
                 ))}
               </g>
             </svg>
-            {scene.id !== "korea-chips" && (
-              <div className="mechanism-node-layer">
-                {graph.nodes.map((node) => (
-                  <button
-                    key={node.id}
-                    disabled={!hydrated}
-                    data-graph-node={node.id}
-                    data-current={node.step === active}
-                    data-dimmed={
-                      scene.id === "synthesis" &&
-                      perspective !== "all" &&
-                      node.id !== "S00" &&
-                      !roleGroups[perspective]?.includes(node.id)
-                    }
-                    style={{
-                      left: `${node.x / 7.2}%`,
-                      top: `${node.y / 5.2}%`,
-                    }}
-                    onClick={() => choose(node.id)}
-                    aria-label={
-                      scene.id === "synthesis"
-                        ? `${node.id} · ${studySpines[node.id]?.[lang] ?? node.id}`
-                        : node.label[lang]
-                    }
-                  >
-                    {node.label[lang]}
-                  </button>
-                ))}
-              </div>
-            )}
+            <div
+              className={`mechanism-node-layer ${scene.id === "korea-chips" ? "geographic-node-layer" : ""}`}
+            >
+              {graph.nodes.map((node) => (
+                <button
+                  key={node.id}
+                  disabled={!hydrated}
+                  data-graph-node={node.id}
+                  data-anchor-x={node.x}
+                  data-anchor-y={node.y}
+                  data-current={node.step === active}
+                  data-dimmed={
+                    scene.id === "synthesis" &&
+                    perspective !== "all" &&
+                    node.id !== "S00" &&
+                    !roleGroups[perspective]?.includes(node.id)
+                  }
+                  style={{
+                    left: `${node.x / 7.2}%`,
+                    top: `${node.y / 5.2}%`,
+                  }}
+                  onClick={() => choose(node.id)}
+                  aria-label={
+                    scene.id === "synthesis"
+                      ? `${node.id} · ${studySpines[node.id]?.[lang] ?? node.id}`
+                      : node.label[lang]
+                  }
+                >
+                  {node.label[lang]}
+                </button>
+              ))}
+            </div>
             {scene.id === "synthesis" && (
               <div className="compact-study-labels" aria-hidden="true">
                 {graph.nodes.map((node) => (
                   <span
                     key={node.id}
+                    data-anchor-x={node.x}
+                    data-anchor-y={node.y}
                     style={{
                       left: `${node.x / 7.2}%`,
                       top: `${node.y / 5.2}%`,
@@ -458,7 +463,7 @@ export function MechanismStory({
                 <div className="method-pca">
                   <svg
                     viewBox="0 0 720 520"
-                    preserveAspectRatio="none"
+                    preserveAspectRatio="xMidYMid meet"
                     aria-hidden="true"
                   >
                     {Array.from({ length: 6 }, (_, i) => (
@@ -480,7 +485,7 @@ export function MechanismStory({
                       />
                     ))}
                   </svg>
-                  <div>
+                  <div className="pca-node-layer">
                     {[
                       "Rev Growth",
                       "Gross Margin",
@@ -488,14 +493,29 @@ export function MechanismStory({
                       "R&D / Revenue",
                       "Asset Turnover",
                       "Debt / Equity",
-                    ].map((k) => (
-                      <span key={k}>{k}</span>
+                    ].map((label, i) => (
+                      <span
+                        key={label}
+                        data-anchor-x="150"
+                        data-anchor-y={50 + i * 82}
+                        style={{
+                          left: `${150 / 7.2}%`,
+                          top: `${(50 + i * 82) / 5.2}%`,
+                        }}
+                      >
+                        {label}
+                      </span>
                     ))}
-                  </div>
-                  <span aria-hidden="true">→</span>
-                  <div>
-                    <span>PC1</span>
-                    <span>PC2</span>
+                    {[170, 350].map((y, i) => (
+                      <span
+                        key={y}
+                        data-anchor-x="570"
+                        data-anchor-y={y}
+                        style={{ left: `${570 / 7.2}%`, top: `${y / 5.2}%` }}
+                      >
+                        PC{i + 1}
+                      </span>
+                    ))}
                   </div>
                   <small>
                     {lang === "ko"

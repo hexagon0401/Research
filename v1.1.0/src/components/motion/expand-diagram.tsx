@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { usePreferences } from "../preferences";
+import { alignFrozenFrame } from "./frame";
 export function ExpandDiagram({
   target,
   caption,
@@ -70,18 +71,7 @@ export function ExpandDiagram({
       };
       document.documentElement.style.overflow = "hidden";
       dialog.current.showModal();
-      const align = () => {
-        const scale = Math.min(
-          clone.clientWidth / 720,
-          clone.clientHeight / 520,
-        );
-        clone
-          .querySelectorAll<HTMLElement>("[data-canvas-x]")
-          .forEach((label) => {
-            label.style.left = `${(clone.clientWidth - 720 * scale) / 2 + Number(label.dataset.canvasX) * scale}px`;
-            label.style.top = `${(clone.clientHeight - 520 * scale) / 2 + Number(label.dataset.canvasY) * scale}px`;
-          });
-      };
+      const align = () => alignFrozenFrame(clone);
       observer.current?.disconnect();
       observer.current = new ResizeObserver(align);
       observer.current.observe(clone);

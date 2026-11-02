@@ -9,9 +9,12 @@ export function MapTerrain({
   origin?: boolean;
   vector?: boolean;
 }) {
-  if (vector)
+  if (vector || origin)
     return (
-      <g>
+      <g
+        className={origin ? "origin-globe" : undefined}
+        data-origin-globe={origin ? "" : undefined}
+      >
         <use href={`${src}#terrain`} />
       </g>
     );

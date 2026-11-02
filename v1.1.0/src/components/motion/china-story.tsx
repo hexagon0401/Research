@@ -20,16 +20,27 @@ import { SceneText } from "./scene-text";
 import type { ReactNode } from "react";
 import type { Copy } from "@/visuals/motion-stories";
 import { MapTerrain } from "./map-terrain";
+import { relationshipCurve, fitViewport } from "@/visuals/motion-geometry";
+import { positionOverlay, bindTraveler } from "./frame";
 const p = geography.pins;
-const curve = (a: number[], b: number[], lift = 70) =>
-  `M${a[0]} ${a[1]}Q${(a[0] + b[0]) / 2} ${Math.min(a[1], b[1]) - lift} ${b[0]} ${b[1]}`;
-const routes = [
-  curve(p.cn, p.gl, 85),
-  curve(p.cn, p.gl, 110),
-  curve(p.cn, p.mm, 32),
-  curve(p.cn, p.mm, 65),
-  curve(p.cn, p.kh, 36),
+const routeShapes = [
+  relationshipCurve(p.cn, p.gl),
+  relationshipCurve(p.cn, p.gl),
+  relationshipCurve(p.cn, p.mm),
+  relationshipCurve(p.cn, p.mm, -1),
+  relationshipCurve(p.cn, p.kh),
 ];
+const routes = routeShapes.map((shape) => shape.d);
+const routeCameras = routeShapes.map((shape) =>
+  fitCamera(
+    pointsBounds(
+      shape.points.map((p) => [...p]),
+      12,
+    ),
+    52,
+    12,
+  ),
+);
 const names = {
   cn: ["중국", "China"],
   gl: ["그린란드", "Greenland"],
@@ -38,8 +49,8 @@ const names = {
 };
 
 const cameraOverview = fitCamera(
-  pointsBounds([p.cn, p.gl, [420, 15]], 12),
-  36,
+  pointsBounds([p.cn, p.gl, p.mm, p.kh], 24),
+  52,
   2,
 );
 const cameraGreenland = fitCamera(cameras.regions.gl, 64);
@@ -60,51 +71,81 @@ const cameraArctic = fitCamera(
   pointsBounds(Object.values(polar.arctic.pins), 8),
   68,
 );
-function renderMapCamera(
-  el: HTMLElement,
-  target: HTMLElement,
-  world: Camera,
-  arctic: Camera,
-  cached?: { scale: number; x: number; y: number },
-) {
-  const scale = Math.min(target.clientWidth / 720, target.clientHeight / 520);
-  const frame = cached ?? {
-    scale,
-    x: (target.clientWidth - 720 * scale) / 2,
-    y: (target.clientHeight - 520 * scale) / 2,
+function bindMapFrame(el: HTMLElement, target: HTMLElement) {
+  let frame = fitViewport(target.clientWidth, target.clientHeight),
+    world = { ...cameraOverview },
+    arctic = { ...cameraArctic },
+    previous = "";
+  const worldGroup = el.querySelector<SVGGElement>("[data-world-camera]")!,
+    polarGroup = el.querySelector<SVGGElement>("[data-polar-camera]")!;
+  const labels = Array.from(
+    el.querySelectorAll<HTMLElement>("[data-place]"),
+  ).map((label) => ({
+    label,
+    polar: label.dataset.space === "polar",
+    point:
+      label.dataset.space === "polar"
+        ? polar.arctic.pins[
+            label.dataset.place as keyof typeof polar.arctic.pins
+          ]
+        : p[label.dataset.place as keyof typeof p],
+  }));
+  const markers = Array.from(
+    el.querySelectorAll<SVGCircleElement>("[data-radius-px]"),
+  ).map((circle) => ({
+    circle,
+    polar: !!circle.closest("[data-polar-camera]"),
+    radius: Number(circle.dataset.radiusPx),
+  }));
+  const draw = (nextWorld: Camera, nextArctic: Camera = arctic) => {
+    world = { ...nextWorld };
+    arctic = { ...nextArctic };
+    const key = [
+      world.x,
+      world.y,
+      world.scale,
+      arctic.x,
+      arctic.y,
+      arctic.scale,
+      frame.scale,
+      frame.x,
+      frame.y,
+    ].join("|");
+    if (previous === key) return;
+    previous = key;
+    worldGroup.setAttribute(
+      "transform",
+      `translate(${world.x} ${world.y}) scale(${world.scale})`,
+    );
+    worldGroup.dataset.cameraScale = String(world.scale);
+    polarGroup.setAttribute(
+      "transform",
+      `translate(${arctic.x} ${arctic.y}) scale(${arctic.scale})`,
+    );
+    polarGroup.dataset.cameraScale = String(arctic.scale);
+    labels.forEach(({ label, point, polar }) =>
+      positionOverlay(label, cameraPoint(point, polar ? arctic : world), frame),
+    );
+    markers.forEach(({ circle, polar, radius }) =>
+      circle.setAttribute(
+        "r",
+        String(
+          radius /
+            Math.max(0.0001, frame.scale * (polar ? arctic : world).scale),
+        ),
+      ),
+    );
+    el.dataset.cameraReady = "true";
   };
-  el.querySelector("[data-world-camera]")?.setAttribute(
-    "transform",
-    `translate(${world.x} ${world.y}) scale(${world.scale})`,
-  );
-  el.querySelector("[data-polar-camera]")?.setAttribute(
-    "transform",
-    `translate(${arctic.x} ${arctic.y}) scale(${arctic.scale})`,
-  );
-  el.querySelectorAll<HTMLElement>("[data-place]").forEach((label) => {
-    const id = label.dataset.place!;
-    const polarSpace = label.dataset.space === "polar";
-    const point = polarSpace
-      ? polar.arctic.pins[id as keyof typeof polar.arctic.pins]
-      : p[id as keyof typeof p];
-    const [x, y] = cameraPoint(point, polarSpace ? arctic : world);
-    label.dataset.canvasX = String(x);
-    label.dataset.canvasY = String(y);
-    label.style.left = `${frame.x + x * frame.scale}px`;
-    label.style.top = `${frame.y + y * frame.scale}px`;
-    label.hidden = x < 28 || x > 692 || y < 24 || y > 492;
-  });
-  el.querySelectorAll<SVGCircleElement>(".china-world circle").forEach((c) =>
-    c.setAttribute(
-      "r",
-      String((c.hasAttribute("data-traveler") ? 3 : 4) / world.scale),
-    ),
-  );
-  el.querySelectorAll<SVGCircleElement>(".china-polar > g circle").forEach(
-    (c) => c.setAttribute("r", String(3 / arctic.scale)),
-  );
-
-  el.dataset.cameraReady = "true";
+  const measure = () => {
+    frame = fitViewport(target.clientWidth, target.clientHeight);
+    previous = "";
+    draw(world, arctic);
+  };
+  const observer = new ResizeObserver(measure);
+  observer.observe(target);
+  measure();
+  return { draw, dispose: () => observer.disconnect() };
 }
 export function ChinaStory({
   cases,
@@ -127,7 +168,10 @@ export function ChinaStory({
   const activeRef = useRef(0),
     progress = useRef(0),
     comparisonRef = useRef("all"),
-    drawCameraRef = useRef<(() => void) | null>(null);
+    drawCameraRef = useRef<(() => void) | null>(null),
+    frameRenderer = useRef<((world: Camera, arctic?: Camera) => void) | null>(
+      null,
+    );
   const s = chinaSteps[active];
   const scroll = useSceneScroll(
     root,
@@ -142,6 +186,15 @@ export function ChinaStory({
     reduced,
   );
   const select = (value: number) => scroll.seek(value);
+  useEffect(() => {
+    if (!root.current || !map.current) return;
+    const frame = bindMapFrame(root.current, map.current);
+    frameRenderer.current = frame.draw;
+    return () => {
+      frame.dispose();
+      frameRenderer.current = null;
+    };
+  }, [lang]);
   function paint(v: number) {
     const i = Math.min(
       chinaSteps.length - 1,
@@ -152,7 +205,7 @@ export function ChinaStory({
       root.current.dataset.progress = v.toFixed(4);
       root.current.style.setProperty(
         "--local-route-progress",
-        String(clamp((v * 7 - 2 - 0.12) / 0.55)),
+        String(clamp((v * 7 - 2 - 0.1) / 0.45)),
       );
       root.current.dataset.phase = String(i);
     }
@@ -183,88 +236,89 @@ export function ChinaStory({
             timeline.current = tl;
             const paths = el.querySelectorAll<SVGPathElement>("[data-route]");
             paths.forEach((path, i) => {
-              const dot = el.querySelector(`[data-traveler="${i}"]`);
+              const dot = el.querySelector<SVGCircleElement>(
+                `[data-traveler="${i}"]`,
+              )!;
+              const traveler = bindTraveler(path, dot),
+                state = { value: 0 };
+              traveler(0);
               tl.fromTo(
                 path,
                 { strokeDashoffset: 1 },
                 {
                   strokeDashoffset: 0,
                   autoRound: false,
-                  duration: 0.55,
+                  duration: 0.45,
                   ease: "none",
                 },
-                i + 0.12,
+                i + 0.1,
               );
-              if (dot) {
-                tl.set(dot, { autoAlpha: 0 }, 0);
-                tl.set(dot, { autoAlpha: 1 }, i + 0.12);
-                tl.to(
-                  dot,
-                  {
-                    duration: 0.55,
-                    motionPath: { path, align: path, alignOrigin: [0.5, 0.5] },
-                    ease: "none",
-                  },
-                  i + 0.12,
-                );
-                tl.set(dot, { autoAlpha: 0 }, i + 0.9);
-              }
+              tl.fromTo(
+                state,
+                { value: 0 },
+                {
+                  value: 1,
+                  duration: 0.45,
+                  ease: "none",
+                  onUpdate: () => traveler(state.value),
+                },
+                i + 0.1,
+              );
             });
-            const overview = fitCamera(
-              pointsBounds([p.cn, p.gl, [420, 15]], 12),
-              36,
-              2,
-            );
-            const greenland = fitCamera(cameras.regions.gl, 64);
-            const myanmar = fitCamera(
-              pointsBounds([p.cn, ...cameras.regions.mm], 8),
-              60,
-            );
-            const cambodia = fitCamera(cameras.regions.kh, 72, 48);
-            const world = { ...overview };
-            const arctic = fitCamera(
-              pointsBounds(Object.values(polar.arctic.pins), 8),
-              68,
-            );
-            let frame = { scale: 1, x: 0, y: 0 };
+            const world = { ...routeCameras[0] };
             const renderCamera = () =>
-              renderMapCamera(
-                el,
-                map.current!,
+              frameRenderer.current?.(
                 tl.time() >= 5
                   ? comparisonCamera(comparisonRef.current, world)
                   : world,
-                arctic,
-                frame,
+                cameraArctic,
               );
             drawCameraRef.current = renderCamera;
-            const size = () => {
-              const width = map.current!.clientWidth,
-                height = map.current!.clientHeight;
-              const scale = Math.min(width / 720, height / 520);
-              frame = {
-                scale,
-                x: (width - 720 * scale) / 2,
-                y: (height - 520 * scale) / 2,
-              };
-              renderCamera();
-            };
-            const observer = new ResizeObserver(size);
-            observer.observe(map.current!);
-            size();
-            tl.to(world, { ...greenland, duration: 0.25, ease: "none" }, 0.72);
-            tl.to(world, { ...overview, duration: 0.01 }, 1.99);
-            tl.to(world, { ...myanmar, duration: 0.38, ease: "none" }, 2);
-            tl.to(world, { ...cambodia, duration: 0.4, ease: "none" }, 4);
-            tl.to(world, { ...overview, duration: 0.4, ease: "none" }, 5);
+            // A route is complete before its camera leaves the overview.
+            tl.to(
+              world,
+              { ...cameraGreenland, duration: 0.3, ease: "none" },
+              0.55,
+            );
+            tl.to(
+              world,
+              { ...routeCameras[2], duration: 0.1, ease: "none" },
+              2,
+            );
+            tl.to(
+              world,
+              { ...cameraMyanmar, duration: 0.3, ease: "none" },
+              2.55,
+            );
+            tl.to(
+              world,
+              { ...routeCameras[3], duration: 0.1, ease: "none" },
+              3,
+            );
+            tl.to(
+              world,
+              { ...cameraMyanmar, duration: 0.3, ease: "none" },
+              3.55,
+            );
+            tl.to(
+              world,
+              { ...routeCameras[4], duration: 0.1, ease: "none" },
+              4,
+            );
+            tl.to(
+              world,
+              { ...cameraCambodia, duration: 0.3, ease: "none" },
+              4.55,
+            );
+            tl.to(world, { ...cameraOverview, duration: 0.1, ease: "none" }, 5);
             tl.eventCallback("onUpdate", renderCamera);
+            renderCamera();
             tl.to({}, { duration: 0.01 }, 6.99);
             tl.progress(scroll.progress.current);
             paint(scroll.progress.current);
             el.dataset.motionReady = "true";
             setReady(true);
             cleanup = () => {
-              observer.disconnect();
               ctx.revert();
               timeline.current = null;
               drawCameraRef.current = null;
@@ -283,31 +337,20 @@ export function ChinaStory({
     };
   }, [lang, reduced]);
   useEffect(() => {
-    const el = root.current,
-      target = map.current;
-    if (!el || !target) return;
-    const draw = () => {
-      if (timeline.current) drawCameraRef.current?.();
-      else
-        renderMapCamera(
-          el,
-          target,
-          active >= 5
-            ? comparisonCamera(comparisonRef.current, cameraOverview)
+    if (timeline.current) drawCameraRef.current?.();
+    else
+      frameRenderer.current?.(
+        active >= 5
+          ? comparisonCamera(comparisonRef.current, cameraOverview)
+          : active === 4
+            ? cameraCambodia
             : active === 2 || active === 3
               ? cameraMyanmar
-              : active === 4
-                ? cameraCambodia
-                : active === 1
-                  ? cameraGreenland
-                  : cameraOverview,
-          cameraArctic,
-        );
-    };
-    const observer = new ResizeObserver(draw);
-    observer.observe(target);
-    draw();
-    return () => observer.disconnect();
+              : active === 1
+                ? cameraGreenland
+                : routeCameras[0],
+        cameraArctic,
+      );
   }, [active, lang, reduced, comparison]);
   const replayStep = () => scroll.replay();
   return (
@@ -418,7 +461,11 @@ export function ChinaStory({
             >
               <title>{s.title[lang]}</title>
               <g className="china-world">
-                <g data-world-camera style={{ transformOrigin: "0 0" }}>
+                <g
+                  data-world-camera
+                  data-camera-scale="1"
+                  style={{ transformOrigin: "0 0" }}
+                >
                   <MapTerrain src="/visuals/world.svg" vector />
                   {Object.entries(cameras.outlines)
                     .filter(([id]) => ["cn", "gl", "mm", "kh"].includes(id))
@@ -439,11 +486,12 @@ export function ChinaStory({
                         pathLength="1"
                         vectorEffect="non-scaling-stroke"
                       />
-                      <circle data-traveler={i} r="3" />
+                      <circle data-traveler={i} data-radius-px="3" r="3" />
                       <circle
                         cx={(i < 2 ? p.gl : i === 4 ? p.kh : p.mm)[0]}
                         cy={(i < 2 ? p.gl : i === 4 ? p.kh : p.mm)[1]}
                         r="4"
+                        data-radius-px="4"
                         vectorEffect="non-scaling-stroke"
                       />
                     </g>
@@ -452,16 +500,21 @@ export function ChinaStory({
                     cx={p.cn[0]}
                     cy={p.cn[1]}
                     r="4"
+                    data-radius-px="4"
                     className="china-origin"
                   />
                 </g>
               </g>
               <g className="china-polar">
-                <g data-polar-camera style={{ transformOrigin: "0 0" }}>
+                <g
+                  data-polar-camera
+                  data-camera-scale="1"
+                  style={{ transformOrigin: "0 0" }}
+                >
                   <MapTerrain src="/visuals/arctic.svg" vector />
                   {Object.entries(polar.arctic.pins).map(([key, pt], i) => (
                     <g key={key}>
-                      <circle cx={pt[0]} cy={pt[1]} r="2" />
+                      <circle cx={pt[0]} cy={pt[1]} r="4" data-radius-px="4" />
                       <path
                         d={`M${pt[0]} ${pt[1]}h${8 + i * 5}`}
                         fill="none"

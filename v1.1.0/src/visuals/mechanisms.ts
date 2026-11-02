@@ -1,4 +1,5 @@
 import { words, type Copy } from "./motion-stories";
+import geography from "./motion-geography.json";
 export type MechanismStep = {
   title: Copy;
   lead: Copy;
@@ -1150,9 +1151,26 @@ export function mechanismGraph(id: string): {
       break;
     case "korea-chips":
       nodes = [
-        n("us", 186, 166, "미국 · 제도", "U.S. · rules"),
-        n("kr", 587, 170, "한국 · 기업", "Korea · firms", 1),
-        n("cn", 543, 172.5, "중국 · 생산", "China · production", 2),
+        n(
+          "us",
+          ...(geography.pins.us as [number, number]),
+          "미국 · 제도",
+          "U.S. · rules",
+        ),
+        n(
+          "kr",
+          ...(geography.pins.kr as [number, number]),
+          "한국 · 기업",
+          "Korea · firms",
+          1,
+        ),
+        n(
+          "cn",
+          ...(geography.pins.cn as [number, number]),
+          "중국 · 생산",
+          "China · production",
+          2,
+        ),
       ];
       pairs = [
         ["us", "kr", 0],
