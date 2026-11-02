@@ -139,17 +139,6 @@ export function MechanismStory({
                 `[data-mechanism-edge="${i}"]`,
               )!;
               const dot = el.querySelector(`[data-signal="${i}"]`)!;
-              tl.fromTo(
-                path,
-                { strokeDashoffset: 1 },
-                {
-                  strokeDashoffset: 0,
-                  autoRound: false,
-                  duration: 0.45,
-                  ease: "none",
-                },
-                edge.step + 0.1,
-              );
               const traveler = bindTraveler(path, dot as SVGCircleElement),
                 state = { value: 0 };
               traveler(0);
@@ -192,7 +181,11 @@ export function MechanismStory({
               const world = { ...overview };
               const camera =
                 el.querySelector<SVGGElement>("[data-chip-camera]")!;
+              let cameraKey = "";
               const render = () => {
+                const key = [world.x, world.y, world.scale].join("|");
+                if (key === cameraKey) return;
+                cameraKey = key;
                 camera.setAttribute(
                   "transform",
                   `translate(${world.x} ${world.y}) scale(${world.scale})`,
@@ -377,9 +370,32 @@ export function MechanismStory({
                       !roleGroups[perspective]?.includes(e.from)
                     }
                   >
+                    <defs>
+                      <mask
+                        id={`draw-${scene.id}-${i}`}
+                        maskUnits="userSpaceOnUse"
+                        x="-16"
+                        y="-16"
+                        width="752"
+                        height="552"
+                      >
+                        <path
+                          data-draw-mask
+                          d={pathFor(e.from, e.to, e.feedback)}
+                          pathLength="1"
+                          style={{
+                            fill: "none",
+                            stroke: "white",
+                            strokeWidth: 12,
+                            strokeDasharray: "1",
+                            strokeDashoffset: 0,
+                          }}
+                        />
+                      </mask>
+                    </defs>
                     <path
                       data-mechanism-edge={i}
-                      pathLength="1"
+                      mask={`url(#draw-${scene.id}-${i})`}
                       d={pathFor(e.from, e.to, e.feedback)}
                       fill="none"
                       vectorEffect="non-scaling-stroke"
@@ -428,7 +444,13 @@ export function MechanismStory({
                       : node.label[lang]
                   }
                 >
-                  {node.label[lang]}
+                  {scene.id === "korea-chips"
+                    ? {
+                        us: lang === "ko" ? "미국" : "U.S.",
+                        kr: lang === "ko" ? "한국" : "Korea",
+                        cn: lang === "ko" ? "중국" : "China",
+                      }[node.id]
+                    : node.label[lang]}
                 </button>
               ))}
             </div>

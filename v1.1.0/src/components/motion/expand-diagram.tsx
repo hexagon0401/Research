@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useRef, useState, useId, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { usePreferences } from "../preferences";
 import { alignFrozenFrame } from "./frame";
@@ -11,6 +11,7 @@ export function ExpandDiagram({
   caption: string;
 }) {
   const { lang } = usePreferences();
+  const copyPrefix = useId().replaceAll(":", "");
   const dialog = useRef<HTMLDialogElement>(null),
     snapshot = useRef<HTMLDivElement>(null),
     button = useRef<HTMLButtonElement>(null);
@@ -44,7 +45,36 @@ export function ExpandDiagram({
       const clone = target.current.cloneNode(true) as HTMLElement;
       clone.removeAttribute("id");
       clone.style.removeProperty("content-visibility");
-      clone.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"));
+      const ids = new Map<string, string>();
+      clone.querySelectorAll("[id]").forEach((el) => {
+        const old = el.id,
+          next = `${copyPrefix}-${old}`;
+        ids.set(old, next);
+        el.id = next;
+      });
+      clone.querySelectorAll("*").forEach((el) => {
+        for (const attr of [
+          "mask",
+          "clip-path",
+          "filter",
+          "fill",
+          "stroke",
+          "href",
+          "xlink:href",
+        ]) {
+          const value = el.getAttribute(attr);
+          if (!value) continue;
+          if (value.startsWith("#") && ids.has(value.slice(1)))
+            el.setAttribute(attr, "#" + ids.get(value.slice(1)));
+          else
+            el.setAttribute(
+              attr,
+              value.replace(/url\(#([^)]+)\)/g, (full, id) =>
+                ids.has(id) ? `url(#${ids.get(id)})` : full,
+              ),
+            );
+        }
+      });
       clone.querySelectorAll("button,input,a").forEach((el) => {
         el.setAttribute("tabindex", "-1");
         el.setAttribute("inert", "");

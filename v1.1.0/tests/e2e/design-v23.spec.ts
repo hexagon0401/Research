@@ -10,7 +10,7 @@ test("Chinese relationship leaders never fill and the reference legend stays rea
     await page.setViewportSize({ width, height: 900 });
     expect(
       await figure
-        .locator(".china-map path:not(.map-region)")
+        .locator(".china-map path:not(.map-region):not([data-draw-mask])")
         .evaluateAll((es) =>
           es.every(
             (e) =>

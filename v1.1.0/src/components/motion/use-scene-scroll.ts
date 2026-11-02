@@ -26,12 +26,16 @@ export function useSceneScroll(
     const steps = Array.from(el.querySelectorAll<HTMLElement>(stepsSelector));
     let bounds: number[] = [],
       alive = true,
-      frame = 0;
+      frame = 0,
+      layoutPending = false;
+    let syncTrigger: ((start: number, end: number) => void) | null = null;
     let destroyTrigger = () => {},
       stopReplay = () => {};
     const y = () => window.scrollY;
     let lastPaint = -1,
-      lastActive = false;
+      lastActive = false,
+      lastStep = -1,
+      lastBeat: string | null | undefined;
     const paint = (v: number) => {
       const next = clamp(v);
       const inView = !!(
@@ -46,20 +50,31 @@ export function useSceneScroll(
       progress.current = next;
       callback.current(progress.current);
       const active = Math.min(count - 1, Math.floor(progress.current * count));
-      steps.forEach((step, i) => {
-        step.classList.toggle("is-current", i === active);
-        if (i === active) step.setAttribute("aria-current", "step");
-        else step.removeAttribute("aria-current");
-      });
-      const inScene =
-        bounds.length && y() >= bounds[0] - 1 && y() <= bounds[count] + 1;
-      el.dataset.sceneActive = String(!!inScene);
-      if (el.id === "motion-china")
-        window.dispatchEvent(
-          new CustomEvent("iir:motion-scene", {
-            detail: { beat: inScene ? steps[active]?.dataset.beat : null },
-          }),
-        );
+      if (active !== lastStep) {
+        if (lastStep < 0)
+          steps.forEach((step) => {
+            step.classList.remove("is-current");
+            step.removeAttribute("aria-current");
+          });
+        else {
+          steps[lastStep].classList.remove("is-current");
+          steps[lastStep].removeAttribute("aria-current");
+        }
+        steps[active].classList.add("is-current");
+        steps[active].setAttribute("aria-current", "step");
+        lastStep = active;
+      }
+      if (el.dataset.sceneActive !== String(inView))
+        el.dataset.sceneActive = String(inView);
+      if (el.id === "motion-china") {
+        const beat = inView ? steps[active]?.dataset.beat : null;
+        if (beat !== lastBeat) {
+          lastBeat = beat;
+          window.dispatchEvent(
+            new CustomEvent("iir:motion-scene", { detail: { beat } }),
+          );
+        }
+      }
     };
     const read = () => {
       if (!bounds.length) return;
@@ -126,15 +141,23 @@ export function useSceneScroll(
       el.dataset.sceneEnd = String(bounds[count]);
       if (keep && wasActive)
         window.scrollTo({ top: target(saved), behavior: "instant" });
+      syncTrigger?.(bounds[0], bounds[count]);
       read();
       window.dispatchEvent(new Event("iir:scene-layout"));
     };
-    const schedule = () => {
+    const queue = () => {
       if (!frame)
         frame = requestAnimationFrame(() => {
           frame = 0;
-          layout();
+          if (layoutPending) {
+            layoutPending = false;
+            layout();
+          } else read();
         });
+    };
+    const schedule = () => {
+      layoutPending = true;
+      queue();
     };
     const resize = () => layout(true);
     layout();
@@ -148,13 +171,7 @@ export function useSceneScroll(
     document.fonts.ready.then(schedule);
     document.fonts.addEventListener("loadingdone", schedule);
     // Native reading works before the engine loads and in reduced-motion mode.
-    const nativeScroll = () => {
-      if (!frame)
-        frame = requestAnimationFrame(() => {
-          frame = 0;
-          read();
-        });
-    };
+    const nativeScroll = () => queue();
     window.addEventListener("scroll", nativeScroll, { passive: true });
     const stopWatching = reduced
       ? () => {}
@@ -167,9 +184,20 @@ export function useSceneScroll(
                 start: () => bounds[0],
                 end: () => bounds[count],
                 onUpdate: read,
-                onRefresh: () => layout(),
+                onRefresh: read,
               });
-              destroyTrigger = () => trigger.kill();
+              syncTrigger = (start, end) =>
+                (
+                  trigger as typeof trigger & {
+                    setPositions: (start: number, end: number) => void;
+                  }
+                ).setPositions(start, end);
+              // The engine becomes the sole scroll clock. Native events remain the fallback only.
+              window.removeEventListener("scroll", nativeScroll);
+              destroyTrigger = () => {
+                syncTrigger = null;
+                trigger.kill();
+              };
             })
             .catch(() => {});
         });

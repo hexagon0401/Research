@@ -116,3 +116,59 @@ test("unfinished Chinese routes stay inside the map and traveler stays on the cu
       expect(result.distance).toBeLessThanOrEqual(2);
     }
 });
+
+test("zoom preserves continuous supply strokes and screen-size markers", async ({
+  page,
+}) => {
+  await page.goto("/#motion-china");
+  for (const step of [0, 2, 4])
+    for (const local of [0.3, 0.54, 0.9]) {
+      const root = await seek(page, "#motion-china", (step + local) / 7);
+      const path = root.locator(`[data-route="${step}"]`);
+      await expect(path).toHaveCSS("stroke-dasharray", "none");
+      const dot = root.locator(`[data-traveler="${step}"]`);
+      const marker = await dot.evaluate((el: SVGCircleElement) => {
+        const m = el.getScreenCTM()!;
+        return {
+          radius: el.r.baseVal.value * Math.hypot(m.a, m.b),
+          effect: getComputedStyle(el).vectorEffect,
+        };
+      });
+      expect(marker.radius).toBeCloseTo(3, 1);
+      expect(marker.effect).toBe("non-scaling-stroke");
+    }
+});
+
+test("enlarged views keep their own frozen drawing masks and correctly aligned labels", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const root = await seek(page, "#visual-capability", 0.35);
+  await root.getByRole("button", { name: "Enlarge diagram" }).click();
+  const result = await page.locator(".diagram-snapshot").evaluate((el) =>
+    Array.from(el.querySelectorAll("[mask]")).every((path) => {
+      const ref = path.getAttribute("mask")!.match(/#([^)]*)/)![1];
+      return !!el.querySelector(`[id="${ref}"]`);
+    }),
+  );
+  expect(result).toBe(true);
+  const offset = await page
+    .locator(".diagram-snapshot [data-anchor-x]")
+    .first()
+    .evaluate((el) => {
+      const root = el.closest(".mechanism-diagram")!,
+        svg = root.querySelector("svg")!,
+        m = svg.getScreenCTM()!,
+        point = new DOMPoint(
+          Number((el as HTMLElement).dataset.anchorX),
+          Number((el as HTMLElement).dataset.anchorY),
+        ).matrixTransform(m),
+        r = root.getBoundingClientRect();
+      return Math.hypot(
+        point.x - (r.left + parseFloat((el as HTMLElement).style.left)),
+        point.y - (r.top + parseFloat((el as HTMLElement).style.top)),
+      );
+    });
+  expect(offset).toBeLessThanOrEqual(2);
+  await page.keyboard.press("Escape");
+});

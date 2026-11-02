@@ -243,17 +243,6 @@ export function ChinaStory({
                 state = { value: 0 };
               traveler(0);
               tl.fromTo(
-                path,
-                { strokeDashoffset: 1 },
-                {
-                  strokeDashoffset: 0,
-                  autoRound: false,
-                  duration: 0.45,
-                  ease: "none",
-                },
-                i + 0.1,
-              );
-              tl.fromTo(
                 state,
                 { value: 0 },
                 {
@@ -479,11 +468,34 @@ export function ChinaStory({
                     ))}
                   {routes.map((d, i) => (
                     <g key={i} className={`china-route china-route-${i}`}>
+                      <defs>
+                        <mask
+                          id={`draw-china-${i}`}
+                          maskUnits="userSpaceOnUse"
+                          x="-16"
+                          y="-16"
+                          width="752"
+                          height="552"
+                        >
+                          <path
+                            data-draw-mask
+                            d={d}
+                            pathLength="1"
+                            style={{
+                              fill: "none",
+                              stroke: "white",
+                              strokeWidth: 12,
+                              strokeDasharray: "1",
+                              strokeDashoffset: 0,
+                            }}
+                          />
+                        </mask>
+                      </defs>
                       <path
                         data-route={i}
+                        mask={`url(#draw-china-${i})`}
                         d={d}
                         fill="none"
-                        pathLength="1"
                         vectorEffect="non-scaling-stroke"
                       />
                       <circle data-traveler={i} data-radius-px="3" r="3" />
@@ -501,6 +513,7 @@ export function ChinaStory({
                     cy={p.cn[1]}
                     r="4"
                     data-radius-px="4"
+                    vectorEffect="non-scaling-stroke"
                     className="china-origin"
                   />
                 </g>
@@ -514,7 +527,13 @@ export function ChinaStory({
                   <MapTerrain src="/visuals/arctic.svg" vector />
                   {Object.entries(polar.arctic.pins).map(([key, pt], i) => (
                     <g key={key}>
-                      <circle cx={pt[0]} cy={pt[1]} r="4" data-radius-px="4" />
+                      <circle
+                        cx={pt[0]}
+                        cy={pt[1]}
+                        r="4"
+                        data-radius-px="4"
+                        vectorEffect="non-scaling-stroke"
+                      />
                       <path
                         d={`M${pt[0]} ${pt[1]}h${8 + i * 5}`}
                         fill="none"

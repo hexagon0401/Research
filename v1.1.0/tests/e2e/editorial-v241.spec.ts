@@ -51,7 +51,7 @@ test("regional zoom, quiet selection and frozen enlargement preserve geometry", 
   await page.goto("/#motion-china");
   const root = page.locator("#motion-china");
   await expect(root).toHaveAttribute("data-motion-ready", "true");
-  await seek(page, 65);
+  await seek(page, 70);
   await expect
     .poll(async () =>
       root.locator("[data-world-camera]").getAttribute("transform"),

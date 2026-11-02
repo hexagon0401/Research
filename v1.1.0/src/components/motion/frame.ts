@@ -51,7 +51,8 @@ export function alignFrozenFrame(root: HTMLElement) {
 }
 export function bindDiagramFrame(root: HTMLElement) {
   let frame = fitViewport(root.clientWidth, root.clientHeight),
-    camera = { ...identityCamera };
+    camera = { ...identityCamera },
+    previous = "";
   const labels = Array.from(
     root.querySelectorAll<HTMLElement>("[data-anchor-x]"),
   ).map((el) => ({
@@ -64,6 +65,16 @@ export function bindDiagramFrame(root: HTMLElement) {
   const group = root.querySelector<SVGGElement>("[data-chip-camera]");
   const draw = (next: Camera = camera) => {
     camera = next;
+    const key = [
+      camera.x,
+      camera.y,
+      camera.scale,
+      frame.scale,
+      frame.x,
+      frame.y,
+    ].join("|");
+    if (key === previous) return;
+    previous = key;
     if (group) group.dataset.cameraScale = String(camera.scale);
     labels.forEach(({ el, point }) =>
       positionOverlay(el, cameraPoint(point, camera), frame),
@@ -81,6 +92,7 @@ export function bindDiagramFrame(root: HTMLElement) {
   };
   const measure = () => {
     frame = fitViewport(root.clientWidth, root.clientHeight);
+    previous = "";
     draw();
   };
   const observer = new ResizeObserver(measure);
@@ -91,13 +103,18 @@ export function bindDiagramFrame(root: HTMLElement) {
 /** Arc length and node references are cached once. Moving dots stay in path-local coordinates. */
 export function bindTraveler(path: SVGPathElement, dot: SVGCircleElement) {
   const length = path.getTotalLength();
+  const mask =
+    path.parentElement!.querySelector<SVGPathElement>("[data-draw-mask]");
   let previous = -1;
+  dot.setAttribute("vector-effect", "non-scaling-stroke");
   dot.removeAttribute("transform");
   dot.style.removeProperty("transform");
   return (value: number) => {
     const u = Math.max(0, Math.min(1, value));
     if (u === previous) return;
     previous = u;
+    if (mask) mask.style.strokeDashoffset = String(1 - u);
+    path.dataset.drawProgress = String(u);
     const p = path.getPointAtLength(length * u);
     dot.setAttribute("cx", String(p.x));
     dot.setAttribute("cy", String(p.y));

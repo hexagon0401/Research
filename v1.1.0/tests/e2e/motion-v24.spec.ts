@@ -48,7 +48,7 @@ test("China has continuous line and traveler progress, correct dates and reversi
 }) => {
   await china(page);
   const root = page.locator("#motion-china"),
-    path = root.locator('[data-route="0"]'),
+    path = root.locator(".china-route-0 [data-draw-mask]"),
     dot = root.locator('[data-traveler="0"]');
   await seek(page, 4);
   await expect(root).toHaveAttribute("data-phase", "0");
@@ -60,14 +60,20 @@ test("China has continuous line and traveler progress, correct dates and reversi
   const before = await path.evaluate((e) =>
     parseFloat(getComputedStyle(e).strokeDashoffset),
   );
-  const first = await dot.getAttribute("transform");
+  const first = await dot.evaluate((el) =>
+    [el.getAttribute("cx"), el.getAttribute("cy")].join(","),
+  );
   await seek(page, 9);
   await expect
     .poll(() =>
       path.evaluate((e) => parseFloat(getComputedStyle(e).strokeDashoffset)),
     )
     .toBeLessThan(before - 0.1);
-  expect(await dot.getAttribute("transform")).not.toBe(first);
+  expect(
+    await dot.evaluate((el) =>
+      [el.getAttribute("cx"), el.getAttribute("cy")].join(","),
+    ),
+  ).not.toBe(first);
   await seek(page, 4);
   await expect
     .poll(async () =>
@@ -182,7 +188,9 @@ test("real wheel scroll changes signal geometry in unpinned mechanisms", async (
       .poll(() =>
         figure
           .locator("[data-signal]")
-          .evaluateAll((es) => es.some((e) => !!e.getAttribute("transform"))),
+          .evaluateAll((es) =>
+            es.some((e) => Number(e.getAttribute("cx")) > 0),
+          ),
       )
       .toBe(true);
   }

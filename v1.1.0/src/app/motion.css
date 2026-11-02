@@ -1298,3 +1298,22 @@ html {
   right: 8px;
   font-size: 11px;
 }
+
+/* Drawing masks scale with the path; visible strokes retain constant screen width. */
+.mechanism-link path[data-mechanism-edge] {
+  stroke-dasharray: none;
+}
+.mechanism-link.feedback path[data-mechanism-edge] {
+  stroke-dasharray: 4 4;
+}
+.china-route path[data-route] {
+  stroke-dasharray: none;
+}
+.china-route-1 path[data-route],
+.china-route-3 path[data-route] {
+  stroke-dasharray: 5 5;
+}
+
+.geographic-node-layer button[data-graph-node="cn"] {
+  translate: -50% 15%;
+}
