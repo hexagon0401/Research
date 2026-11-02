@@ -99,6 +99,8 @@ test("regional zoom, quiet selection and frozen enlargement preserve geometry", 
 });
 test("reduced motion and failed engine retain regional scenes and readable sources", async ({
   page,
+  browser,
+  baseURL,
 }, info) => {
   test.skip(info.project.name !== "desktop", "Fallback pass runs once");
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -120,24 +122,42 @@ test("reduced motion and failed engine retain regional scenes and readable sourc
       ),
   );
   expect(blocked.length).toBeGreaterThan(0);
-  await page.route("**/_next/static/chunks/**", (route) =>
-    blocked.some((name) =>
-      route
-        .request()
-        .url()
-        .endsWith("/" + name),
-    )
-      ? route.abort()
-      : route.continue(),
-  );
-  await page.goto("/#motion-china");
-  await seek(page, 65);
-  await expect(
-    page.locator("#motion-china [data-world-camera]"),
-  ).toHaveAttribute("transform", /scale\((3[0-9]|4[0-9])/);
-  await expect(page.locator("#china-cambodia")).toContainText("Canopy Sands");
-  await expect(page.locator("#motion-cambodia-relations>a")).toHaveAttribute(
-    "href",
-    /S08-R002-P002/,
-  );
+  const fallback = await browser.newPage({
+    viewport: { width: 1440, height: 1000 },
+  });
+  let failures = 0;
+  try {
+    await fallback.route("**/_next/static/chunks/**", (route) => {
+      if (
+        blocked.some((name) =>
+          route
+            .request()
+            .url()
+            .endsWith("/" + name),
+        )
+      ) {
+        failures++;
+        return route.abort();
+      }
+      return route.continue();
+    });
+    await fallback.goto(baseURL + "/#motion-china");
+    await seek(fallback, 65);
+    await expect.poll(() => failures).toBeGreaterThan(0);
+    await expect(fallback.locator("#motion-china")).not.toHaveAttribute(
+      "data-motion-ready",
+      "true",
+    );
+    await expect(
+      fallback.locator("#motion-china [data-world-camera]"),
+    ).toHaveAttribute("transform", /scale\((3[0-9]|4[0-9])/);
+    await expect(fallback.locator("#china-cambodia")).toContainText(
+      "Canopy Sands",
+    );
+    await expect(
+      fallback.locator("#motion-cambodia-relations>a"),
+    ).toHaveAttribute("href", /S08-R002-P002/);
+  } finally {
+    await fallback.close();
+  }
 });

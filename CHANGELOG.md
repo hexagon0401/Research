@@ -1,6 +1,14 @@
 # Releases
 
-현재 릴리스는 [v2.4.1](https://github.com/hexagon0401/Research/tree/v2.4.1)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.4.2](https://github.com/hexagon0401/Research/tree/v2.4.2)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.4.2 — 2026-11-02
+
+- Preserved globe and diagram proportions with one isotropic viewport for SVGs, labels and enlarged views.
+- Removed geographic curve hairpins and fragmented drawing strokes; aligned local travelers and constant-size markers with routes.
+- Completed routes before regional zoom and retained source context, reverse scrolling and responsive sticky stages.
+- Removed duplicate scroll drivers, unused motion-path loading and inherited page-wide scroll styling; cached scene and passage measurements.
+- Preserved all source editions, PDF hashes, APIs and deployment root. [Measurements and verification](v1.1.0/docs/V2_4_2_RELEASE.md).
 
 ## 2.4.1 — 2026-10-23
 

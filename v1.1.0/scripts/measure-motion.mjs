@@ -50,6 +50,10 @@ try {
     for (const id of ["capability", "korea-chips"])
       for (const progress of [0, 0.25, 0.5, 0.75, 0.999]) {
         const root = await seek(page, "#visual-" + id, progress);
+        if (process.env.MEASURE_CAPTURES === "all")
+          await page.screenshot({
+            path: `${output}/${id}-${viewport.width}-${viewport.height}-${progress}.png`,
+          });
         results.geometry.push(
           await root.evaluate(
             (el, context) => {
@@ -71,6 +75,10 @@ try {
     for (const step of [0, 2, 4])
       for (const local of [0.15, 0.3, 0.54, 0.56, 0.85]) {
         const root = await seek(page, "#motion-china", (step + local) / 7);
+        if (process.env.MEASURE_CAPTURES === "all")
+          await page.screenshot({
+            path: `${output}/china-${viewport.width}-${viewport.height}-${step}-${local}.png`,
+          });
         results.geometry.push(
           await root.evaluate(
             (el, context) => {

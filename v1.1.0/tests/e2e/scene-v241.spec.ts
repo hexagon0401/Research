@@ -54,6 +54,14 @@ test("every animated diagram stays on screen through all five measured progress 
   for (const id of [...scenes.map((s) => "#visual-" + s), "#motion-china"]) {
     for (const v of [0, 0.25, 0.5, 0.75, 0.999]) {
       const root = await position(page, id, v);
+      const ratio = await root
+        .locator(".mechanism-diagram>svg,.china-map>svg")
+        .first()
+        .evaluate((el) => {
+          const m = (el as SVGSVGElement).getScreenCTM()!;
+          return Math.hypot(m.a, m.b) / Math.hypot(m.c, m.d);
+        });
+      expect(Math.abs(ratio - 1), `${id} ${v} isotropic`).toBeLessThan(0.01);
       const stage = root.locator(".scene-stage");
       const rect = await stage.boundingBox();
       const nav = await page.locator(".story-navigation").boundingBox();
