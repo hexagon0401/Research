@@ -24,6 +24,9 @@ export function Footer() {
         <Link prefetch={false} href="/accessibility">
           <Localized en="Accessibility" ko="접근성" />
         </Link>
+        <Link prefetch={false} href="/glossary">
+          <Localized en="Glossary" ko="용어 찾아보기" />
+        </Link>
         <MotionControl />
       </div>
       <div className="footer-note">

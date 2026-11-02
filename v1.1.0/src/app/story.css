@@ -2279,3 +2279,61 @@ html[data-motion="reduced"] .arctic-expansion {
 .research-essay {
   overflow-anchor: none;
 }
+/* Phase 1: expose orientation without changing the research or brand. */
+.site-header nav > a.header-about {
+  display: inline-flex;
+}
+.source-availability {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-block: 16px;
+}
+.glossary-index {
+  display: grid;
+  gap: var(--space-8);
+}
+.glossary-index > section {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-6);
+  max-width: 68ch;
+}
+.glossary-index h2 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+.glossary-index p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-block: 16px;
+}
+.hero-author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.hero-author a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+}
+.study-number-note {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 60ch;
+}
+@media (min-width: 1024px) {
+  .essay-hero-composition > .hero-author {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .essay-hero-composition > .hero-atlas {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}

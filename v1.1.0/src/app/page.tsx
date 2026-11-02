@@ -1,3 +1,4 @@
+import { AuthorStrip, StudyNumberNote } from "@/components/author-strip";
 import { FactText } from "@/components/motion/scene-text";
 import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
@@ -132,11 +133,23 @@ export default async function Home() {
   const detailFor = (beat: (typeof composed)[number]) => (
     <details className="case-detail" id={`detail-${beat.id}`}>
       <summary>
-        <L
-          ko={`논증·원문 발췌 · ${beat.selected.length}개 문단`}
-          en={`Argument & source excerpts · ${beat.selected.length} passages`}
-        />
+        {beat.selected.length ? (
+          <L
+            ko={`논증·원문 발췌 · ${beat.selected.length}개 문단`}
+            en={`Argument & source excerpts · ${beat.selected.length} passages`}
+          />
+        ) : (
+          <L ko="관련 원문·출처" en="Related reports & sources" />
+        )}
       </summary>
+      {!beat.selected.length && (
+        <p className="source-availability">
+          <L
+            ko="이 주제의 원문은 아래 연결된 연구에서 읽을 수 있습니다."
+            en="Read the source passages in the linked full reports below."
+          />
+        </p>
+      )}
       {beat.selected.length > 0 && (
         <div className="essay-source-excerpts">
           <span className="eyebrow">
@@ -267,6 +280,7 @@ export default async function Home() {
               }
             />
           </h1>
+          <AuthorStrip />
           <HeroAtlas />
         </div>
         <div className="essay-hero-bottom">
@@ -278,6 +292,7 @@ export default async function Home() {
           </p>
           <div className="essay-reading-meta">
             <span className="mono">S00 + 12 CONNECTED STUDIES</span>
+            <StudyNumberNote />
             <span>
               <L
                 ko={`약 ${Math.ceil(koChars / 600)}분 · 원문 펼쳐 읽기 포함`}

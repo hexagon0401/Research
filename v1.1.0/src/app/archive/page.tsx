@@ -1,3 +1,4 @@
+import { StudyNumberNote } from "@/components/author-strip";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
@@ -43,6 +44,7 @@ export default function Archive() {
           />
         </Link>
       </header>
+      <StudyNumberNote />
       <section className="page-content" aria-label="Full research reports">
         <ResearchShelf kind="archive" />
       </section>

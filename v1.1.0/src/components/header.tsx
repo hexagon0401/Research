@@ -43,6 +43,14 @@ export function Header() {
         >
           {lang === "ko" ? "참고자료" : "Library"}
         </Link>
+        <Link
+          prefetch={false}
+          href="/about"
+          className="header-about"
+          aria-current={path === "/about" ? "page" : undefined}
+        >
+          {lang === "ko" ? "소개" : "About"}
+        </Link>
         <details
           className="header-more"
           ref={more}
@@ -58,8 +66,8 @@ export function Header() {
             <span aria-hidden="true">＋</span>
           </summary>
           <div className="header-more-panel">
-            <Link prefetch={false} href="/about">
-              {lang === "ko" ? "연구 소개" : "About the research"}
+            <Link prefetch={false} href="/glossary">
+              {lang === "ko" ? "용어 찾아보기" : "Glossary"}
             </Link>
             <Link prefetch={false} href="/methods">
               {lang === "ko" ? "방법론과 한계" : "Methods & limitations"}
