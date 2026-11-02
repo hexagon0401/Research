@@ -48,8 +48,38 @@ export function MechanismStory({
   const [active, setActive] = useState(0),
     [selected, setSelected] = useState<string | null>(null),
     [direction, setDirection] = useState(false),
-    [lens, setLens] = useState(50),
+    [lensMode, setLensMode] = useState<"auto" | "manual">("auto"),
     [perspective, setPerspective] = useState("all");
+  const lensValue = useRef(100),
+    lensModeRef = useRef<"auto" | "manual">("auto"),
+    lensInput = useRef<HTMLInputElement>(null),
+    lensOutput = useRef<HTMLOutputElement>(null),
+    lensClip = useRef<SVGRectElement>(null);
+  const renderLens = (value: number) => {
+    const next = Math.max(0, Math.min(100, value));
+    lensValue.current = next;
+    const text =
+      lang === "ko"
+        ? `해석 표시 영역 ${Math.round(next)}%`
+        : `Interpretation display area ${Math.round(next)}%`;
+    if (lensInput.current) {
+      lensInput.current.value = String(next);
+      lensInput.current.setAttribute("aria-valuetext", text);
+    }
+    if (lensOutput.current) lensOutput.current.textContent = text;
+    lensClip.current?.setAttribute("width", String((310 * next) / 100));
+  };
+  const syncLens = (value: number) => {
+    if (scene.id !== "spatial-method") return;
+    const local = Math.max(0, Math.min(1, value * spec.steps.length - 2));
+    renderLens(
+      lensModeRef.current === "manual"
+        ? lensValue.current
+        : reduced
+          ? 100
+          : ((local - 0.1) / 0.65) * 100,
+    );
+  };
   const activeRef = useRef(0),
     progress = useRef(0);
   const scroll = useSceneScroll(
@@ -59,6 +89,7 @@ export function MechanismStory({
     spec.steps.length,
     (v) => {
       progress.current = v;
+      syncLens(v);
       timeline.current?.progress(reduced ? 1 : v);
       if (root.current) root.current.dataset.progress = v.toFixed(4);
       const i = Math.min(
@@ -73,6 +104,9 @@ export function MechanismStory({
     lang,
     reduced,
   );
+  useEffect(() => {
+    syncLens(progress.current);
+  }, [lang, reduced]);
   useEffect(() => {
     const target = diagram.current;
     if (!target) return;
@@ -146,6 +180,9 @@ export function MechanismStory({
             const tl = gsap.timeline({ paused: true });
             const total = spec.steps.length;
             graph.edges.forEach((edge, i) => {
+              // Interpretation branches have one owner: the comparison clip, never a second timeline.
+              if (scene.id === "spatial-method" && edge.to === "interpretation")
+                return;
               const path = el.querySelector<SVGPathElement>(
                 `[data-mechanism-edge="${i}"]`,
               )!;
@@ -355,6 +392,22 @@ export function MechanismStory({
               preserveAspectRatio="xMidYMid meet"
               aria-hidden="true"
             >
+              {scene.id === "spatial-method" && (
+                <defs>
+                  <clipPath
+                    id="method-comparison-clip"
+                    clipPathUnits="userSpaceOnUse"
+                  >
+                    <rect
+                      ref={lensClip}
+                      x="330"
+                      y="0"
+                      width="310"
+                      height="520"
+                    />
+                  </clipPath>
+                </defs>
+              )}
               <g
                 data-chip-camera
                 data-camera-scale="1"
@@ -367,6 +420,16 @@ export function MechanismStory({
                   <g
                     key={i}
                     className={`mechanism-link ${e.feedback ? "feedback" : ""}`}
+                    clipPath={
+                      scene.id === "spatial-method" && e.to === "interpretation"
+                        ? "url(#method-comparison-clip)"
+                        : undefined
+                    }
+                    data-interpretation={
+                      scene.id === "spatial-method" && e.to === "interpretation"
+                        ? "true"
+                        : undefined
+                    }
                     data-edge-from={e.from}
                     data-edge-to={e.to}
                     data-dimmed={
@@ -478,15 +541,6 @@ export function MechanismStory({
             )}
             {scene.id === "spatial-method" && (
               <>
-                <div
-                  className="method-lens"
-                  style={{ clipPath: `inset(0 ${100 - lens}% 0 0)` }}
-                >
-                  <span>
-                    {lang === "ko" ? "저자의 해석" : "AUTHOR’S INTERPRETATION"}
-                  </span>
-                  <span className="method-analysis-path" />
-                </div>
                 <div className="method-pca">
                   <svg
                     viewBox="0 0 720 520"
@@ -496,7 +550,7 @@ export function MechanismStory({
                     {Array.from({ length: 8 }, (_, i) => {
                       const d =
                         i < 6
-                          ? `M150 ${50 + i * 82}C280 ${50 + i * 82} 260 260 360 260`
+                          ? `M150 ${50 + i * 68}C280 ${50 + i * 68} 260 260 360 260`
                           : `M360 260Q450 260 570 ${i === 6 ? 170 : 350}`;
                       return (
                         <g key={i}>
@@ -535,21 +589,31 @@ export function MechanismStory({
                     })}
                   </svg>
                   <div className="pca-node-layer">
-                    {[
-                      "Rev Growth",
-                      "Gross Margin",
-                      "Op Margin",
-                      "R&D / Revenue",
-                      "Asset Turnover",
-                      "Debt / Equity",
-                    ].map((label, i) => (
+                    {(lang === "ko"
+                      ? [
+                          "매출 성장률",
+                          "매출총이익률",
+                          "영업이익률",
+                          "연구개발/매출",
+                          "자산회전율",
+                          "부채/자본",
+                        ]
+                      : [
+                          "Revenue growth",
+                          "Gross margin",
+                          "Op. margin",
+                          "R&D / revenue",
+                          "Asset turnover",
+                          "Debt / equity",
+                        ]
+                    ).map((label, i) => (
                       <span
                         key={label}
                         data-anchor-x="150"
-                        data-anchor-y={50 + i * 82}
+                        data-anchor-y={50 + i * 68}
                         style={{
                           left: `${150 / 7.2}%`,
-                          top: `${(50 + i * 82) / 5.2}%`,
+                          top: `${(50 + i * 68) / 5.2}%`,
                         }}
                       >
                         {label}
@@ -562,7 +626,7 @@ export function MechanismStory({
                         data-anchor-y={y}
                         style={{ left: `${570 / 7.2}%`, top: `${y / 5.2}%` }}
                       >
-                        PC{i + 1}
+                        {lang === "ko" ? "분석 축" : "Axis"} {i + 1} (PC{i + 1})
                       </span>
                     ))}
                   </div>
@@ -579,6 +643,87 @@ export function MechanismStory({
             target={diagram}
             caption={spec.steps[active].title[lang]}
           />
+          {scene.id === "spatial-method" && (
+            <div
+              className="evidence-comparison"
+              hidden={active !== 2}
+              data-mode={lensMode}
+            >
+              <label className="evidence-lens-label">
+                <span>
+                  {lang === "ko"
+                    ? "기록에서 해석으로"
+                    : "From records to interpretation"}
+                </span>
+                <input
+                  ref={lensInput}
+                  type="range"
+                  min="0"
+                  max="100"
+                  defaultValue="100"
+                  disabled={!hydrated}
+                  aria-label={
+                    lang === "ko"
+                      ? "근거와 해석 비교"
+                      : "Evidence and interpretation comparison"
+                  }
+                  onPointerDown={() => {
+                    lensModeRef.current = "manual";
+                    setLensMode("manual");
+                  }}
+                  onKeyDown={(e) => {
+                    if (
+                      [
+                        "ArrowLeft",
+                        "ArrowRight",
+                        "ArrowUp",
+                        "ArrowDown",
+                        "Home",
+                        "End",
+                        "PageUp",
+                        "PageDown",
+                      ].includes(e.key)
+                    ) {
+                      lensModeRef.current = "manual";
+                      setLensMode("manual");
+                    }
+                  }}
+                  onChange={(e) => {
+                    lensModeRef.current = "manual";
+                    setLensMode("manual");
+                    renderLens(Number(e.target.value));
+                  }}
+                />
+              </label>
+              <div className="comparison-status">
+                <span>
+                  {lang === "ko"
+                    ? lensMode === "auto"
+                      ? "스크롤 연동"
+                      : "직접 비교"
+                    : lensMode === "auto"
+                      ? "Scroll-linked"
+                      : "Manual comparison"}
+                </span>
+                <output ref={lensOutput} aria-live="off">
+                  {lang === "ko"
+                    ? "해석 표시 영역 100%"
+                    : "Interpretation display area 100%"}
+                </output>
+                {!reduced && lensMode === "manual" && (
+                  <button
+                    onClick={() => {
+                      lensModeRef.current = "auto";
+                      setLensMode("auto");
+                      syncLens(progress.current);
+                    }}
+                  >
+                    {lang === "ko" ? "스크롤에 맞춰 보기" : "Follow scroll"}
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
         </div>
         <ol className="mechanism-steps scene-steps">
           {spec.steps.map((step, i) => (
@@ -593,7 +738,11 @@ export function MechanismStory({
               <SceneText text={step} connection={i === spec.steps.length - 1} />
               <Link prefetch={false} href={sourceURL(step.source)}>
                 {step.source} ·{" "}
-                {lang === "ko" ? "원문에서 살펴보기" : "Read in context"} →
+                {studySpines[step.source]?.[lang] ??
+                  (lang === "ko"
+                    ? "원문에서 살펴보기"
+                    : "Read in context")}{" "}
+                →
               </Link>
               {i === spec.steps.length - 1 && detail}
             </li>
@@ -608,25 +757,6 @@ export function MechanismStory({
             </button>
           ))}
         </div>
-      )}
-      {scene.id === "spatial-method" && (
-        <label className="evidence-lens-label">
-          {lang === "ko"
-            ? "보고된 내용 ↔ 저자의 해석"
-            : "Reported material ↔ author’s interpretation"}
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value={lens}
-            aria-label={
-              lang === "ko"
-                ? "근거와 해석 비교"
-                : "Evidence and interpretation comparison"
-            }
-            onChange={(e) => setLens(+e.target.value)}
-          />
-        </label>
       )}
       {selected && (
         <div

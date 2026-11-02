@@ -36,14 +36,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Technological advantage can support competitiveness and reinvestment. S06 examines that condition alongside the firm’s social responsibilities.",
         },
         facts: [
-          {
-            ko: "데이터 · 정보를 수집하고 판단에 연결하는 능력",
-            en: "Data · collecting information and putting it to use",
-          },
-          {
-            ko: "계약 · 공적 수요와 기업의 기술을 잇는 제도",
-            en: "Contracts · institutions connecting public demand and technology",
-          },
+          words(
+            "경쟁력 · 기술적 우위를 유지할 수 있는가",
+            "Competitiveness · can technological advantage be sustained?",
+          ),
+          words(
+            "지속가능성 · 기업의 생존을 사회적 책임과 함께 살피기",
+            "Sustainability · considering survival alongside social responsibility",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -61,14 +61,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "The ends a firm pursues shape how its technology is used. S14’s inquiry into identity develops criteria for judging those choices.",
         },
         facts: [
-          {
-            ko: "계약 · 공적 수요와 기업의 기술을 잇는 제도",
-            en: "Contracts · institutions connecting public demand and technology",
-          },
-          {
-            ko: "생산 · 전략을 지속시키는 산업 기반",
-            en: "Production · the industrial capacity that sustains strategy",
-          },
+          words(
+            "정체성 · 기업은 무엇을 위해 기술을 사용하는가",
+            "Identity · what does a firm use its technology for?",
+          ),
+          words(
+            "선택의 기준 · 역량의 크기에서 목적의 문제로",
+            "Criteria for choice · from the extent of capability to its purpose",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -86,14 +86,18 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Data supports decisions, contracts connect public demand, and production enables continuing supply. These three routes connect corporate capabilities to larger systems.",
         },
         facts: [
-          {
-            ko: "생산 · 전략을 지속시키는 산업 기반",
-            en: "Production · the industrial capacity that sustains strategy",
-          },
-          {
-            ko: "데이터 · 정보를 수집하고 판단에 연결하는 능력",
-            en: "Data · collecting information and putting it to use",
-          },
+          words(
+            "데이터 · 정보를 판단으로 연결",
+            "Data · connecting information to decisions",
+          ),
+          words(
+            "계약 · 공적 수요와 기술을 연결",
+            "Contracts · connecting public demand to technology",
+          ),
+          words(
+            "생산 기반 · 기술을 지속적인 공급으로 연결",
+            "Production capacity · turning technology into continuing supply",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -111,14 +115,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Corporate technology and production can form a foundation for national strategy. I ask which institutions make that connection possible and what responsibilities follow.",
         },
         facts: [
-          {
-            ko: "데이터 · 정보를 수집하고 판단에 연결하는 능력",
-            en: "Data · collecting information and putting it to use",
-          },
-          {
-            ko: "계약 · 공적 수요와 기업의 기술을 잇는 제도",
-            en: "Contracts · institutions connecting public demand and technology",
-          },
+          words(
+            "전략의 조건 · 기업의 기술과 생산 능력",
+            "Strategic conditions · corporate technology and production",
+          ),
+          words(
+            "공적 책임 · 지원의 조건과 기여를 함께 묻기",
+            "Public responsibility · considering the terms of support and contribution",
+          ),
         ],
         connection: {
           ko: "미국과 중국은 기업의 역량을 국가 전략에 연결하는 서로 다른 방식을 보여준다.",
@@ -149,14 +153,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Palantir’s data analysis and Anduril’s defense technology meet public security needs. S00 reads their stated missions alongside procurement relationships.",
         },
         facts: [
-          {
-            ko: "Palantir · 데이터 분석과 의사결정",
-            en: "Palantir · data analysis and decision-making",
-          },
-          {
-            ko: "Anduril · 국방 기술과 제품 개발",
-            en: "Anduril · defense technology and product development",
-          },
+          words(
+            "Palantir · 데이터 분석으로 안보 수요에 참여",
+            "Palantir · meeting security needs through data analysis",
+          ),
+          words(
+            "Anduril · 국방 기술을 제품으로 개발",
+            "Anduril · developing defense technologies into products",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -174,14 +178,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Public demand and contracts help shape the conditions for development and improvement. Both continuing demand and a firm’s ability to develop products matter.",
         },
         facts: [
-          {
-            ko: "Anduril · 국방 기술과 제품 개발",
-            en: "Anduril · defense technology and product development",
-          },
-          {
-            ko: "정부 조달 · 수요, 계약, 사용 경험의 연결",
-            en: "Procurement · demand, contracts and operational feedback",
-          },
+          words(
+            "수요 · 개발 목표를 구체화하는 공적 요구",
+            "Demand · public requirements that shape development goals",
+          ),
+          words(
+            "계약 · 기술 개발과 개선을 뒷받침하는 사업 조건",
+            "Contracts · business conditions supporting development and improvement",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -199,14 +203,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Experience with a product creates new requirements and improvements. The government–firm relationship extends beyond an order and delivery into an ongoing development process.",
         },
         facts: [
-          {
-            ko: "정부 조달 · 수요, 계약, 사용 경험의 연결",
-            en: "Procurement · demand, contracts and operational feedback",
-          },
-          {
-            ko: "Palantir · 데이터 분석과 의사결정",
-            en: "Palantir · data analysis and decision-making",
-          },
+          words(
+            "사용 경험 · 제품의 개선 과제를 발견",
+            "Operational experience · identifying improvements to a product",
+          ),
+          words(
+            "다음 개발 · 새로운 요구가 개발 과정으로 환류",
+            "Further development · feeding new requirements back into development",
+          ),
         ],
         connection: {
           ko: "개별 기업의 기술을 하나의 체계로 묶으면 국가 프로젝트의 문제가 된다.",
@@ -853,14 +857,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "A firm, facility or event can become a starting point for inquiry. Identifying actors, places and dates creates the basis for comparison.",
         },
         facts: [
-          {
-            ko: "공간 분석 · 행위자·장소·시간을 함께 비교",
-            en: "Spatial analysis · comparing actors, places and times",
-          },
-          {
-            ko: "자료와 해석 · 기록에서 논증으로",
-            en: "Evidence and interpretation · from records to an argument",
-          },
+          words(
+            "주체 · 어느 기업과 시설이 등장하는가",
+            "Actors · which firms and facilities appear in the record?",
+          ),
+          words(
+            "사건 · 무엇이 언제, 어디에서 기록됐는가",
+            "Events · what was recorded, when and where?",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -878,14 +882,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Aligning records in time and space allows relationships between apparently separate activities to be examined. S08 and S15 explore the questions that emerge from that comparison.",
         },
         facts: [
-          {
-            ko: "자료와 해석 · 기록에서 논증으로",
-            en: "Evidence and interpretation · from records to an argument",
-          },
-          {
-            ko: "PCA · 여섯 지표의 정보를 적은 수의 축으로 압축",
-            en: "PCA · reducing several indicators to fewer analytical axes",
-          },
+          words(
+            "시간 · 활동의 순서와 시점을 비교",
+            "Time · comparing the order and timing of activities",
+          ),
+          words(
+            "공간 · 주체와 시설의 위치 관계를 비교",
+            "Space · comparing the locations of actors and facilities",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -903,14 +907,14 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "Evidence describes what has been recorded; interpretation asks why a relationship matters. An argument develops by bringing the two into conversation.",
         },
         facts: [
-          {
-            ko: "PCA · 여섯 지표의 정보를 적은 수의 축으로 압축",
-            en: "PCA · reducing several indicators to fewer analytical axes",
-          },
-          {
-            ko: "공간 분석 · 행위자·장소·시간을 함께 비교",
-            en: "Spatial analysis · comparing actors, places and times",
-          },
+          words(
+            "기록 · 사건과 관계에 관한 자료",
+            "Records · material documenting events and relationships",
+          ),
+          words(
+            "해석 · 시간·공간의 연결이 갖는 전략적 의미",
+            "Interpretation · the strategic significance of connections in time and space",
+          ),
         ],
         connection: {
           ko: "이 연결은 기업의 역량이 국가의 선택에 참여하는 조건을 묻는다.",
@@ -928,14 +932,18 @@ export const mechanisms: Record<string, Mechanism> = {
           en: "S17 examines indicators including growth, profitability and research spending. PCA summarizes information across related variables into fewer axes to support comparison.",
         },
         facts: [
-          {
-            ko: "공간 분석 · 행위자·장소·시간을 함께 비교",
-            en: "Spatial analysis · comparing actors, places and times",
-          },
-          {
-            ko: "자료와 해석 · 기록에서 논증으로",
-            en: "Evidence and interpretation · from records to an argument",
-          },
+          words(
+            "성장·수익성 · 매출 성장률, 매출총이익률, 영업이익률",
+            "Growth and profitability · revenue growth, gross margin and operating margin",
+          ),
+          words(
+            "투자·효율·재무구조 · 연구개발비/매출, 자산회전율, 부채/자본",
+            "Investment, efficiency and financing · R&D/revenue, asset turnover and debt/equity",
+          ),
+          words(
+            "PCA · 여섯 지표의 정보를 두 분석 축으로 요약",
+            "PCA · summarizing six indicators into two analytical axes",
+          ),
         ],
         connection: {
           ko: "방법이 다른 연구들을 다시 모으면, 국가와 기업의 관계를 묻는 하나의 논증이 된다.",

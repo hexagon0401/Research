@@ -488,25 +488,6 @@
   accent-color: var(--ink);
   touch-action: pan-y;
 }
-.method-lens {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-left: 3px solid var(--signal);
-  background: rgb(14 251 46 / 5%);
-}
-.method-lens > span:first-child {
-  font: 12px/1.5 var(--font-mono);
-  position: absolute;
-  bottom: 4px;
-  left: 8px;
-}
-.method-analysis-path {
-  position: absolute;
-  inset: 20%;
-  border: 1px dashed var(--ink);
-  border-radius: 50%;
-}
 .method-pca {
   display: none;
   position: absolute;
@@ -1357,4 +1338,84 @@ html {
 .method-pca > svg path[data-pca-edge] {
   stroke-dasharray: none;
   stroke-width: 1.5;
+}
+
+/* Comparison controls belong to the sticky drawing, and only to the interpretation step. */
+.evidence-comparison[hidden] {
+  display: none;
+}
+.evidence-comparison {
+  flex: none;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.evidence-lens-label {
+  gap: 0;
+  font-size: 13px;
+}
+.evidence-lens-label input:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+.comparison-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  line-height: 1.4;
+}
+.comparison-status button {
+  min-height: 44px;
+  text-decoration: underline;
+  font-size: 13px;
+}
+.mechanism-link[data-interpretation="true"] path[data-mechanism-edge] {
+  stroke-dasharray: 5 4;
+}
+.scene-facts strong,
+.case-facts strong {
+  font-weight: 600;
+}
+.method-pca .pca-node-layer > span {
+  font-size: 13px;
+}
+.method-pca > small {
+  font-size: 13px;
+}
+.scene-steps > li > a,
+.motion-source-links a {
+  font-size: 14px;
+}
+.motion-date-row span {
+  font-size: 13px;
+}
+@media (max-width: 767px), (max-height: 699px) {
+  .evidence-comparison {
+    margin-top: 0;
+  }
+  .evidence-lens-label {
+    display: block;
+  }
+  .evidence-lens-label > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .comparison-status {
+    font-size: 12px;
+    gap: 2px 8px;
+  }
+  .comparison-status button {
+    min-height: 44px;
+  }
+}
+.scene-facts strong,
+.case-facts strong {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  font-weight: 600;
 }

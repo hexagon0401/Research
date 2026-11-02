@@ -7,6 +7,17 @@ export type SceneTextData = {
   connection: Copy;
   detail?: Copy;
 };
+export function FactText({ value }: { value: string }) {
+  const split = value.indexOf(" · ");
+  return split < 0 ? (
+    value
+  ) : (
+    <>
+      <strong>{value.slice(0, split)}</strong>
+      {value.slice(split)}
+    </>
+  );
+}
 export function SceneText({
   text,
   connection = true,
@@ -20,7 +31,9 @@ export function SceneText({
       <p className="scene-lead">{text.lead[lang]}</p>
       <ul className="scene-facts">
         {text.facts.map((fact, i) => (
-          <li key={i}>{fact[lang]}</li>
+          <li key={i}>
+            <FactText value={fact[lang]} />
+          </li>
         ))}
       </ul>
       {connection && (

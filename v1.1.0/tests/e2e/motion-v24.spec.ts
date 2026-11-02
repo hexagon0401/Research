@@ -202,16 +202,19 @@ test("evidence lens and research perspectives affect the explanation and preserv
   const lens = page.getByRole("slider", {
     name: "Evidence and interpretation comparison",
   });
+  const root = page.locator("#visual-spatial-method");
+  await root.locator(".mechanism-steps>li").nth(2).scrollIntoViewIfNeeded();
+  await expect(lens).toBeVisible();
   await lens.focus();
   await page.keyboard.press("Home");
-  await expect(page.locator(".method-lens")).toHaveCSS(
-    "clip-path",
-    "inset(0px 100% 0px 0px)",
+  await expect(root.locator("#method-comparison-clip rect")).toHaveAttribute(
+    "width",
+    "0",
   );
   await page.keyboard.press("End");
-  await expect(page.locator(".method-lens")).toHaveCSS(
-    "clip-path",
-    "inset(0px 0% 0px 0px)",
+  await expect(root.locator("#method-comparison-clip rect")).toHaveAttribute(
+    "width",
+    "310",
   );
   await page.goto("/?scene=synthesis");
   await page.getByRole("button", { name: "identity", exact: true }).click();

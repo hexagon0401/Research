@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 import { usePreferences } from "../preferences";
+import { studySpines } from "@/visuals/story";
 import { chinaSteps, sourceHref } from "@/visuals/motion-stories";
 import geography from "@/visuals/motion-geography.json";
 import polar from "@/visuals/atlas-points.json";
@@ -810,7 +811,7 @@ export function ChinaStory({
                   prefetch={false}
                   href={sourceHref(step, ref)}
                 >
-                  {ref.report} · {lang === "ko" ? "원문 읽기" : "Read source"} →
+                  {ref.report} · {studySpines.S08[lang]} →
                 </Link>
               ))}
             </li>

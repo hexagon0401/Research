@@ -1,3 +1,4 @@
+import { FactText } from "@/components/motion/scene-text";
 import Link from "next/link";
 import { Localized as L } from "@/components/preferences";
 import {
@@ -131,7 +132,10 @@ export default async function Home() {
   const detailFor = (beat: (typeof composed)[number]) => (
     <details className="case-detail" id={`detail-${beat.id}`}>
       <summary>
-        <L ko="논증·원문 더 읽기" en="Read the argument and sources" />
+        <L
+          ko={`논증·원문 발췌 · ${beat.selected.length}개 문단`}
+          en={`Argument & source excerpts · ${beat.selected.length} passages`}
+        />
       </summary>
       {beat.selected.length > 0 && (
         <div className="essay-source-excerpts">
@@ -382,7 +386,10 @@ export default async function Home() {
                       <ul className="case-facts">
                         {beat.facts.map((fact, i) => (
                           <li key={i}>
-                            <L ko={fact.ko} en={fact.en} />
+                            <L
+                              ko={<FactText value={fact.ko} />}
+                              en={<FactText value={fact.en} />}
+                            />
                           </li>
                         ))}
                       </ul>

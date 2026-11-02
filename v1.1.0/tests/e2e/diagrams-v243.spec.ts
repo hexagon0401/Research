@@ -71,17 +71,57 @@ test("PCA has visible intermediate and complete connections without an opaque la
       es.map((e) => Number((e as SVGElement).dataset.drawProgress)),
     );
   expect(progress.some((v) => v > 0 && v < 1)).toBe(true);
-  await root
-    .locator(".mechanism-diagram")
-    .screenshot({
-      path: `.local/v243/pca-mid-${page.viewportSize()!.width}.png`,
-    });
+  await root.locator(".mechanism-diagram").screenshot({
+    path: `.local/v243/pca-mid-${page.viewportSize()!.width}.png`,
+  });
   await seek(page, "#visual-spatial-method", 0.999);
   for (const path of await root.locator("[data-pca-edge]").all())
     await expect(path).toHaveAttribute("data-draw-progress", "1");
+  await root.locator(".mechanism-diagram").screenshot({
+    path: `.local/v243/pca-complete-${page.viewportSize()!.width}.png`,
+  });
+});
+
+test("comparison follows scroll both ways, allows persistent manual values, resumes and hides during PCA", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const root = await seek(page, "#visual-spatial-method", 2.12 / 4),
+    bar = root.getByRole("slider", {
+      name: "Evidence and interpretation comparison",
+    }),
+    clip = root.locator("#method-comparison-clip rect");
+  await expect(bar).toBeVisible();
+  const first = Number(await bar.inputValue());
+  await seek(page, "#visual-spatial-method", 2.7 / 4);
+  expect(Number(await bar.inputValue())).toBeGreaterThan(first + 70);
+  await seek(page, "#visual-spatial-method", 2.2 / 4);
+  expect(Number(await bar.inputValue())).toBeLessThan(20);
+  await bar.focus();
+  await page.keyboard.press("Home");
+  await page.keyboard.press("ArrowRight");
+  await expect(bar).toHaveValue("1");
+  await expect(root.locator(".evidence-comparison")).toHaveAttribute(
+    "data-mode",
+    "manual",
+  );
+  await seek(page, "#visual-spatial-method", 2.8 / 4);
+  await expect(bar).toHaveValue("1");
+  await page.setViewportSize({
+    width: page.viewportSize()!.width,
+    height: page.viewportSize()!.height - 20,
+  });
+  await expect(bar).toHaveValue("1");
   await root
-    .locator(".mechanism-diagram")
-    .screenshot({
-      path: `.local/v243/pca-complete-${page.viewportSize()!.width}.png`,
-    });
+    .getByRole("button", { name: "Follow scroll", exact: true })
+    .click();
+  await expect(root.locator(".evidence-comparison")).toHaveAttribute(
+    "data-mode",
+    "auto",
+  );
+  await expect
+    .poll(async () => Number(await clip.getAttribute("width")))
+    .toBeGreaterThan(300);
+  await seek(page, "#visual-spatial-method", 3.5 / 4);
+  await expect(bar).toBeHidden();
 });
