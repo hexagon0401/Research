@@ -13,7 +13,7 @@ import {
   cameraPoint,
   type Camera,
 } from "@/visuals/camera";
-import { clamp, loadMotion, nearScene } from "./runtime";
+import { loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
 import { SceneText } from "./scene-text";
@@ -135,7 +135,7 @@ function bindMapFrame(el: HTMLElement, target: HTMLElement) {
         ),
       ),
     );
-    el.dataset.cameraReady = "true";
+    if (el.dataset.cameraReady !== "true") el.dataset.cameraReady = "true";
   };
   const measure = () => {
     frame = fitViewport(target.clientWidth, target.clientHeight);
@@ -203,15 +203,14 @@ export function ChinaStory({
     progress.current = v;
     if (root.current) {
       root.current.dataset.progress = v.toFixed(4);
-      root.current.style.setProperty(
-        "--local-route-progress",
-        String(clamp((v * 7 - 2 - 0.1) / 0.45)),
-      );
-      root.current.dataset.phase = String(i);
+      if (root.current.dataset.phase !== String(i))
+        root.current.dataset.phase = String(i);
     }
-    if (range.current) range.current.value = String(Math.round(v * 100));
-    if (mobileRange.current)
-      mobileRange.current.value = String(Math.round(v * 100));
+    const percent = String(Math.round(v * 100));
+    if (range.current && range.current.value !== percent)
+      range.current.value = percent;
+    if (mobileRange.current && mobileRange.current.value !== percent)
+      mobileRange.current.value = percent;
     if (activeRef.current !== i) {
       activeRef.current = i;
       setActive(i);

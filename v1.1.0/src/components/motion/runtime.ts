@@ -10,10 +10,9 @@ export function loadMotion() {
   return (pending ??= Promise.all([
     import("gsap"),
     import("gsap/ScrollTrigger"),
-    import("gsap/MotionPathPlugin"),
   ])
-    .then(([{ gsap }, { ScrollTrigger }, { MotionPathPlugin }]) => {
-      gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+    .then(([{ gsap }, { ScrollTrigger }]) => {
+      gsap.registerPlugin(ScrollTrigger);
       gsap.config({ autoSleep: 12 });
       ScrollTrigger.config({ ignoreMobileResize: true });
       return { gsap, ScrollTrigger };

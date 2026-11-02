@@ -276,6 +276,9 @@ export function EssayExperience({
       dirty = true,
       previous = -1;
     let positions: { top: number; height: number }[] = [];
+    let passagePositions: { el: HTMLElement; top: number }[][] = [];
+    const hero = element.querySelector<HTMLElement>(".hero-atlas");
+    let heroTravel = "";
     const integration = element.querySelector<HTMLElement>("#integration");
     let integrationPosition: { top: number; height: number } | null = null;
     let maximum = 1,
@@ -291,6 +294,13 @@ export function EssayExperience({
           const r = beat.getBoundingClientRect();
           return { top: r.top + y, height: r.height };
         });
+        passagePositions = beats.map((beat) =>
+          Array.from(
+            beat.querySelectorAll<HTMLElement>("[data-reading-passage]"),
+          )
+            .filter((el) => el.getClientRects().length > 0)
+            .map((el) => ({ el, top: el.getBoundingClientRect().top + y })),
+        );
         if (integration) {
           const r = integration.getBoundingClientRect();
           integrationPosition = { top: r.top + y, height: r.height };
@@ -310,14 +320,11 @@ export function EssayExperience({
       if (!pos) return;
       const fraction = clamp((axis - pos.top) / Math.max(1, pos.height));
       const current = scenes[index];
-      const currentType = storyVisuals[current.id].type;
       const activeBeat = beats[index];
-      const passages = Array.from(
-        activeBeat.querySelectorAll<HTMLElement>("[data-reading-passage]"),
-      );
-      const closest = passages
-        .filter((el) => el.getBoundingClientRect().top <= viewport * 0.35)
+      const closestRecord = passagePositions[index]
+        ?.filter((p) => p.top <= axis)
         .at(-1);
+      const closest = closestRecord?.el;
       const anchor =
         (restoredAnchor.current
           ? document.getElementById(restoredAnchor.current)
@@ -326,17 +333,13 @@ export function EssayExperience({
         activeBeat;
       passage.current = {
         id: anchor.id,
-        offset: anchor.getBoundingClientRect().top,
+        offset:
+          anchor === activeBeat
+            ? pos.top - y
+            : closestRecord?.el === anchor
+              ? closestRecord.top - y
+              : anchor.getBoundingClientRect().top,
       };
-      const emphases = Array.from(
-        element!.querySelectorAll<HTMLElement>(".is-emphasis"),
-      );
-      const emphasisProgress = emphases.map((el) => ({
-        el,
-        progress: clamp(
-          (viewport * 0.8 - el.getBoundingClientRect().top) / viewport,
-        ),
-      }));
       read.current =
         integrationPosition && axis >= integrationPosition.top
           ? {
@@ -348,41 +351,21 @@ export function EssayExperience({
               started: true,
             }
           : { id: current.id, fraction, started: axis >= positions[0].top };
-      emphasisProgress.forEach(({ el, progress }) =>
-        el.style.setProperty(
-          "--emphasis-progress",
-          String(reduced ? 1 : progress),
-        ),
-      );
-      // Native scroll only; all geometry reads happen before writes. No pointer or idle animation loop.
-      element!.style.setProperty(
-        "--reading-progress",
-        String(clamp(y / maximum)),
-      );
-      element!.style.setProperty(
-        "--beat-progress",
-        String(reduced ? 1 : fraction),
-      );
-      element!.style.setProperty(
-        "--hero-travel",
-        `${reduced ? 0 : Math.min(y * 0.08, 40)}px`,
-      );
-      for (const type of [
-        "concept",
-        "world",
-        "globe",
-        "arctic",
-        "integration",
-      ]) {
-        const weight = Number(type === currentType);
-        element!.style.setProperty(`--mode-${type}`, String(weight));
+      // Keep scroll-only state out of inherited main-level CSS variables.
+      // The former shared SVG layers no longer exist; only the hero still uses local parallax.
+      const travel = `${reduced ? 0 : Math.min(y * 0.08, 40)}px`;
+      if (hero && heroTravel !== travel) {
+        hero.style.setProperty("--hero-travel", travel);
+        heroTravel = travel;
       }
       const displayIndex = motionScene.current
         ? scenes.findIndex((s) => s.id === motionScene.current)
         : index;
       const visibleIndex = displayIndex < 0 ? index : displayIndex;
-      element!.dataset.scene = scenes[visibleIndex].id;
-      element!.dataset.motion = reduced ? "reduced" : "full";
+      if (element!.dataset.scene !== scenes[visibleIndex].id)
+        element!.dataset.scene = scenes[visibleIndex].id;
+      const motion = reduced ? "reduced" : "full";
+      if (element!.dataset.motion !== motion) element!.dataset.motion = motion;
       if (progressBar) progressBar.value = clamp(y / maximum);
       if (previous !== visibleIndex) {
         previous = visibleIndex;

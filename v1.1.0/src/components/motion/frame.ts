@@ -88,7 +88,7 @@ export function bindDiagramFrame(root: HTMLElement) {
         ),
       ),
     );
-    root.dataset.frameReady = "true";
+    if (root.dataset.frameReady !== "true") root.dataset.frameReady = "true";
   };
   const measure = () => {
     frame = fitViewport(root.clientWidth, root.clientHeight);
