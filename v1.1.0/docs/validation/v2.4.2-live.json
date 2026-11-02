@@ -1,0 +1,48 @@
+{
+  "version": "2.4.2",
+  "commit": "001c29f",
+  "url": "https://research-hxgn.vercel.app/#motion-china",
+  "time": "2026-11-02T05:49:13.229Z",
+  "globeRatio": 1,
+  "english": {
+    "phase": "4",
+    "progress": "0.6500",
+    "date": "2025-04-05",
+    "stage": {
+      "top": 70,
+      "bottom": 850
+    },
+    "camera": "translate(-2703.983628 -843.681381) scale(5.580632)"
+  },
+  "korean": {
+    "phase": "4",
+    "title": "캄보디아: 리조트 개발과 해군기지가 만나는 해안",
+    "top": 70,
+    "bottom": 850
+  },
+  "wheel": {
+    "before": 0.6531,
+    "after": 0.6755
+  },
+  "mobile": {
+    "top": 70,
+    "bottom": 327.71875
+  },
+  "errors": [],
+  "regionalZoom": {
+    "phase": 4,
+    "progress": 0.7,
+    "scale": 42.032644,
+    "mask": true
+  },
+  "touch": {
+    "initial": "0.3201",
+    "progress": "0.3822",
+    "phase": "2",
+    "stage": {
+      "top": 70,
+      "bottom": 327.71875
+    },
+    "language": "ko"
+  }
+}
