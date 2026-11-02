@@ -203,7 +203,15 @@ test("evidence lens and research perspectives affect the explanation and preserv
     name: "Evidence and interpretation comparison",
   });
   const root = page.locator("#visual-spatial-method");
-  await root.locator(".mechanism-steps>li").nth(2).scrollIntoViewIfNeeded();
+  await expect(root).toHaveAttribute("data-motion-ready", "true");
+  await page.mouse.wheel(0, 1);
+  await root.evaluate((el) => {
+    const passage = el.querySelectorAll(".mechanism-steps>li")[2],
+      line = parseFloat(
+        getComputedStyle(el).getPropertyValue("--scene-reading-line"),
+      );
+    scrollTo(0, passage.getBoundingClientRect().top + scrollY - line + 60);
+  });
   await expect(lens).toBeVisible();
   await lens.focus();
   await page.keyboard.press("Home");

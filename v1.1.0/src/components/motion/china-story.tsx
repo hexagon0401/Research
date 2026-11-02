@@ -452,7 +452,7 @@ export function ChinaStory({
                   data-space="polar"
                   key={id}
                   style={{
-                    translate: `${i === 1 ? "0" : "-50%"} ${i === 2 ? "0" : "-100%"}`,
+                    translate: `${i === 0 ? "-50%" : "8px"} ${i === 0 ? "calc(-100% - 5px)" : "-50%"}`,
                   }}
                 >
                   {n}

@@ -1,6 +1,15 @@
 # Releases
 
-현재 릴리스는 [v2.4.2](https://github.com/hexagon0401/Research/tree/v2.4.2)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.4.3](https://github.com/hexagon0401/Research/tree/v2.4.3)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.4.3 — 2026-11-02
+
+- Remove arbitrary airport leaders and the capability diagram’s decorative globe; keep the introductory globe and geographic maps.
+- Make PCA connections visible with transparent labels and scalable drawing masks, including reduced-motion and static readers.
+- Link interpretation comparison to scroll, retain manual values, and offer explicit automatic resume.
+- Clarify eleven bilingual step summaries, PCA terms, source titles and excerpt counts without editing source editions.
+- Add an absolute, non-renewing 72-hour crawler review window with no-store responses, API/originals exclusions and unchanged noindex.
+- [Validation and activation deadline](v1.1.0/docs/V2_4_3_RELEASE.md).
 
 ## 2.4.2 — 2026-11-02
 

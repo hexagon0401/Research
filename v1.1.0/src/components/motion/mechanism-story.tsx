@@ -468,7 +468,9 @@ export function MechanismStory({
                       fill="none"
                       vectorEffect="non-scaling-stroke"
                     />
-                    <circle data-signal={i} data-radius-px="3" r="3" />
+                    {!(
+                      scene.id === "spatial-method" && e.to === "interpretation"
+                    ) && <circle data-signal={i} data-radius-px="3" r="3" />}
                   </g>
                 ))}
                 {graph.nodes.map((node) => (
@@ -632,8 +634,8 @@ export function MechanismStory({
                   </div>
                   <small>
                     {lang === "ko"
-                      ? "PCA · 여섯 기업 지표를 두 분석 축으로"
-                      : "PCA · six financial indicators, two analytical axes"}
+                      ? "PCA · 여섯 지표, 두 분석 축"
+                      : "PCA · six indicators, two axes"}
                   </small>
                 </div>
               </>
@@ -647,7 +649,7 @@ export function MechanismStory({
             <div
               className="evidence-comparison"
               hidden={active !== 2}
-              data-mode={lensMode}
+              data-mode={reduced ? "manual" : lensMode}
             >
               <label className="evidence-lens-label">
                 <span>
@@ -698,10 +700,10 @@ export function MechanismStory({
               <div className="comparison-status">
                 <span>
                   {lang === "ko"
-                    ? lensMode === "auto"
+                    ? !reduced && lensMode === "auto"
                       ? "스크롤 연동"
                       : "직접 비교"
-                    : lensMode === "auto"
+                    : !reduced && lensMode === "auto"
                       ? "Scroll-linked"
                       : "Manual comparison"}
                 </span>
@@ -783,7 +785,9 @@ export function MechanismStory({
           </p>
           <Link prefetch={false} href={sourceURL(selectedSource)}>
             {selectedSource} ·{" "}
-            {lang === "ko" ? "원문 문맥과 PDF" : "Full context and PDF"} →
+            {studySpines[selectedSource]?.[lang] ??
+              (lang === "ko" ? "원문 문맥과 PDF" : "Full context and PDF")}{" "}
+            →
           </Link>
         </div>
       )}
@@ -815,7 +819,9 @@ export function MechanismStory({
       >
         {scene.related.map((id) => (
           <Link key={id} prefetch={false} href={sourceURL(id)}>
-            {id} · {lang === "ko" ? "원문 문맥" : "Source context"}
+            {id} ·{" "}
+            {studySpines[id]?.[lang] ??
+              (lang === "ko" ? "원문 문맥" : "Source context")}
           </Link>
         ))}
       </nav>

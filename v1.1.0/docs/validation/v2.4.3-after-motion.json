@@ -1,0 +1,1456 @@
+{
+  "date": "2026-11-02T07:06:08.228Z",
+  "url": "http://127.0.0.1:3035",
+  "geometry": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.0004",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.2493",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.4999",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.7501",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.9991",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.0000",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.2497",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.4999",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.7503",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "progress": "0.9990",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 728
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0216"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0427"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0771"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0803"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1217"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3072"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3286"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3629"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3657"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.4071"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.5929"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6142"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6486"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6514"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.6928"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.0004",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.2501",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.4997",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.7499",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.9992",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.0000",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.2494",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.4996",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.7496",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "progress": "0.9987",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 662.078125,
+        "height": 462
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0215"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0431"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0772"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0799"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1214"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3072"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3285"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3628"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3658"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.4071"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.5928"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6143"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6485"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6514"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.6929"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.0000",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.2500",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.5000",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.7502",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.9988",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.0000",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.2504",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.5003",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.7498",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "progress": "0.9989",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 683.90625,
+        "height": 248
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0215"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0429"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0771"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0801"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1216"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3071"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3285"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3628"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3657"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.4072"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.5929"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6143"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6486"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6515"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.6929"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.0001",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.2499",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.5002",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.7502",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.9991",
+      "kind": "visual-capability",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.0003",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.2498",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.4999",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.7500",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "progress": "0.9989",
+      "kind": "visual-korea-chips",
+      "ratio": 1,
+      "frame": {
+        "width": 327,
+        "height": 205.71875
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0215"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0429"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0771"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.0800"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 0,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.1215"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3071"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3286"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3629"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.3657"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 2,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.4072"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.15,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.5929"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.3,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6142"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.54,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6485"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.56,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": true,
+      "progress": "0.6514"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "step": 4,
+      "local": 0.85,
+      "kind": "china",
+      "backtracks": 0,
+      "curveInside": false,
+      "progress": "0.6929"
+    }
+  ],
+  "scroll": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "run": 1,
+      "frames": 101,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 33.062999999999995,
+      "layoutMs": 22.807000000000002,
+      "recalcMs": 16.058
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "run": 2,
+      "frames": 101,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 35.848000000000006,
+      "layoutMs": 26.181000000000004,
+      "recalcMs": 19.247
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "run": 3,
+      "frames": 101,
+      "median": 16.69999999999891,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 30.036999999999995,
+      "layoutMs": 23.996999999999996,
+      "recalcMs": 19.317
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "run": 1,
+      "frames": 100,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "longTasks": [],
+      "scriptMs": 31.196,
+      "layoutMs": 22.445,
+      "recalcMs": 16.154000000000003
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "run": 2,
+      "frames": 100,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 28.659000000000002,
+      "layoutMs": 22.62,
+      "recalcMs": 16.356
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "run": 3,
+      "frames": 100,
+      "median": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 26.398000000000003,
+      "layoutMs": 21.857000000000003,
+      "recalcMs": 16.198999999999998
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 600
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "run": 1,
+      "frames": 100,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 33.946999999999996,
+      "layoutMs": 26.985000000000003,
+      "recalcMs": 16.676
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "run": 2,
+      "frames": 100,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 35.25,
+      "layoutMs": 25.19,
+      "recalcMs": 16.174
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "run": 3,
+      "frames": 100,
+      "median": 16.69999999999891,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 32.042,
+      "layoutMs": 24.956,
+      "recalcMs": 16.628999999999998
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 1,
+      "frames": 100,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 29.805000000000003,
+      "layoutMs": 19.129,
+      "recalcMs": 13.4
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 2,
+      "frames": 100,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "longTasks": [],
+      "scriptMs": 23.229,
+      "layoutMs": 18.727,
+      "recalcMs": 12.201999999999998
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "run": 3,
+      "frames": 100,
+      "median": 16.69999999999891,
+      "p95": 16.799999999999272,
+      "longTasks": [],
+      "scriptMs": 28.256000000000004,
+      "layoutMs": 18.282,
+      "recalcMs": 15.243000000000004
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "idle": {
+        "mutations": 0,
+        "visualChanged": false
+      }
+    }
+  ]
+}

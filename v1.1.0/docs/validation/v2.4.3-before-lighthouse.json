@@ -1,0 +1,64 @@
+{
+  "profile": "Lighthouse mobile / simulated throttling / production build",
+  "scores": {
+    "performance": 90,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "runs": [
+    {
+      "run": 1,
+      "date": "2026-11-02T06:30:04.808Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1466.12105,
+        "largest-contentful-paint": 3327.36315,
+        "total-blocking-time": 148,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1494.4418252522744,
+        "total-byte-weight": 455485
+      }
+    },
+    {
+      "run": 2,
+      "date": "2026-11-02T06:30:14.412Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1450.7229,
+        "largest-contentful-paint": 3018.8916,
+        "total-blocking-time": 178,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1450.7229,
+        "total-byte-weight": 455485
+      }
+    },
+    {
+      "run": 3,
+      "date": "2026-11-02T06:30:23.663Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1667.5392,
+        "largest-contentful-paint": 3323.3856,
+        "total-blocking-time": 125.92319999999995,
+        "cumulative-layout-shift": 0,
+        "speed-index": 1667.5392,
+        "total-byte-weight": 455485
+      }
+    }
+  ]
+}

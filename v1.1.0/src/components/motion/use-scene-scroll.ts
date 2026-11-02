@@ -114,7 +114,13 @@ export function useSceneScroll(
       const wide = el.clientWidth >= 880 && available >= 440;
       const height = wide
         ? Math.min(available, 780)
-        : Math.min(300, available * 0.34);
+        : Math.min(
+            300,
+            el.id === "visual-spatial-method"
+              ? // Leave room for the comparison controls and three distinct rows of labels.
+                Math.max(available * 0.34, Math.min(240, available - 120))
+              : available * 0.34,
+          );
       el.dataset.sceneLayout = wide ? "wide" : "compact";
       el.style.setProperty("--scene-top", `${top / zoom}px`);
       el.style.setProperty("--scene-stage-height", `${height / zoom}px`);

@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-02T07:03:54.633Z",
+  "url": "http://127.0.0.1:3035",
+  "views": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "manualValue": "0",
+      "labelsSeparate": true,
+      "locatorWidth": 96,
+      "pcaFrozenMasks": 8
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "manualValue": "85",
+      "labelsSeparate": true,
+      "locatorWidth": 72,
+      "pcaFrozenMasks": 8
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 500
+      },
+      "manualValue": "0",
+      "labelsSeparate": true,
+      "locatorWidth": 96,
+      "pcaFrozenMasks": 8
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "manualValue": "0",
+      "labelsSeparate": true,
+      "locatorWidth": 72,
+      "pcaFrozenMasks": 8
+    }
+  ],
+  "errors": [],
+  "touchComparison": 85,
+  "robots": {
+    "status": 200,
+    "headers": {
+      "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "cdn-cache-control": "no-store",
+      "connection": "keep-alive",
+      "content-type": "text/plain",
+      "date": "Mon, 02 Nov 2026 07:04:10 GMT",
+      "keep-alive": "timeout=5",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "transfer-encoding": "chunked",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "vercel-cdn-cache-control": "no-store",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY"
+    },
+    "body": "User-Agent: *\nDisallow: /\n\n"
+  }
+}

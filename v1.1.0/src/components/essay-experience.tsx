@@ -58,12 +58,20 @@ export function EssayExperience({
           "[data-reading-passage], [data-essay-beat]",
         ) ?? [],
       );
+      const sceneStep = root.current?.querySelector<HTMLElement>(
+        '.scroll-scene[data-scene-active="true"] .scene-steps > li[aria-current="step"]',
+      );
       const el =
         (restoredAnchor.current
           ? document.getElementById(restoredAnchor.current)
           : null) ??
+        sceneStep ??
         candidates
-          .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
+          .filter(
+            (el) =>
+              el.getClientRects().length > 0 &&
+              el.getBoundingClientRect().top <= innerHeight * 0.35,
+          )
           .at(-1);
       if (el)
         passage.current = { id: el.id, offset: el.getBoundingClientRect().top };
