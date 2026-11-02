@@ -70,3 +70,15 @@ CHROME_PATH=/usr/bin/chromium AUDIT_URL=http://127.0.0.1:3000 npm run audit:perf
 ```
 
 성능 측정은 브라우저 회귀 종료 후 순차 실행한다. 새 배포에서도 config의 고정 종료 시각을 유지한다. 운영 문제가 생기면 v2.4.2로 되돌릴 수 있다. 해당 태그의 robots는 전체 차단이다. 운영 확인은 main 푸시 후 아래에 기록한다.
+
+### 운영 확인
+
+2026-11-02 **16:21 KST**, 코드 커밋 `3c7b6f3`의 [운영 사이트](https://research-hxgn.vercel.app)를 Chromium으로 확인했다. [운영 검사 결과](validation/v2.4.3-live.json)를 보관한다.
+
+- 1440×1000·1440×500·390×844·320×568에서 공항 표시선 제거, 안내 지도 96/72px와 지명 비겹침, 기업→국가 배경 지구본 제거·첫 화면 지구본 유지 확인.
+- 비교 바의 스크롤 연동·수동 우선·자동 복귀, 실제 CDP 터치의 85% 선택, 한영 전환 후 단계·수동값 유지 확인.
+- PCA 완료 및 확대 보기의 8개 독립 마스크 참조 확인. 페이지 오류 0개.
+- robots HTTP 200, `Allow: /`, `/api/`·`/originals/` 제외, 브라우저 `Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate`, `CDN-Cache-Control: no-store`, Vercel `MISS` 확인.
+- 공개 메인·자료실·S08 보고서 HTTP 200과 HTML `noindex, follow` 유지 확인. 종료 시각은 **2026-11-05 16:08:44 KST**로 변함없다.
+
+운영에서 전체 회귀·Lighthouse를 다시 실행한 결과는 아니다. 실제 휴대전화 Safari 대신 Linux Chromium의 화면·터치 에뮬레이션으로 확인했다.
