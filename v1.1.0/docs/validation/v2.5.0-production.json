@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-02T10:44:02.675Z",
+  "url": "https://research-hxgn.vercel.app",
+  "views": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "manualValue": "0",
+      "labelsSeparate": true,
+      "locatorWidth": 96,
+      "pcaFrozenMasks": 8
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "manualValue": "85",
+      "labelsSeparate": true,
+      "locatorWidth": 72,
+      "pcaFrozenMasks": 8
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 500
+      },
+      "manualValue": "0",
+      "labelsSeparate": true,
+      "locatorWidth": 96,
+      "pcaFrozenMasks": 8
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "manualValue": "0",
+      "labelsSeparate": true,
+      "locatorWidth": 72,
+      "pcaFrozenMasks": 8
+    }
+  ],
+  "errors": [],
+  "touchComparison": 85,
+  "glossaryAndRecovery": true,
+  "robots": {
+    "status": 200,
+    "body": "User-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /originals/\n",
+    "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+  }
+}

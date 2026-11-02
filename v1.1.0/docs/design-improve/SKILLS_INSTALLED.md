@@ -1,5 +1,7 @@
 # Design skill verification
 
+Current state (2026-11-02): redesign-existing-projects, high-end-visual-design and minimalist-ui are installed project-locally for Codex. Historical initial-phase restrictions/results below are retained; the Swiss folio update records the later explicit authorization and verified installation.
+
 Initial phase: no skill was installed. Update after the author supplied the specific redesign URL: the original `redesign-existing-projects` skill has now been manually installed and read, as detailed below. No installer, hook, global config, plugin, MCP server, runtime dependency or Tier C skill was executed/added.
 
 The required provenance entry point https://open-design.ai/plugins/codex-design/ returned HTTP 403. Direct Tier A page requests also failed in this environment. Upstream installation/license checks could therefore not be completed under section 2B.1. The document explicitly permits continuing without skills that fail verification (2B.5.4); the audit here is our own code/browser audit.

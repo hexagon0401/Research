@@ -19,4 +19,8 @@ The temporary crawler window and noindex policy are unchanged; the absolute expi
 - Archive and synthesis arrows use the existing SVG icon to avoid font-dependent missing glyphs. The archive-only final correction was rebuilt and checked separately after the full matrix: four viewport checks passed.
 - No Safari/Firefox or physical-device run was performed in this environment. No material performance gain is claimed from CSS wrap changes alone.
 
-Production verification follows deployment below.
+## Production verification
+
+Deployed main application commit **4683f59** was visible at https://research-hxgn.vercel.app on **2 November 2026, 19:44 KST**. A direct Chromium check against production passed at 1440×1000, 390×844 touch, 1440×500 and 320×568. It confirmed the v2.5.0 footer/S00 cover, all 18 beat anchors, manual comparison and automatic resume, language-state persistence, eight PCA snapshot masks, airport labels separate from the 96px/72px locator, source glossary links, bilingual 404 recovery and the real archive count. Actual CDP touch moved the comparison to 85%. No page errors were collected.
+
+Public pages returned 200 with noindex maintained; robots.txt returned the temporary allow policy with no-store. The existing expiry was not extended. [Production results](validation/v2.5.0-production.json). Local viewport captures and browser-emulated touch are distinguished from physical-device testing.
