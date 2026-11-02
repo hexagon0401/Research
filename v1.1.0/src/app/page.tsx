@@ -237,7 +237,7 @@ export default async function Home() {
   return (
     <EssayExperience scenes={scenes}>
       <noscript>
-        <style>{`.essay-beat{display:block}.beat-reading{max-width:72ch}.is-emphasis .beat-reading{max-width:none}.scroll-scene .scene-stage{position:static;height:480px}.scroll-scene .scene-body{display:block}.scroll-scene .scene-steps>li{min-height:0}.diagram-expand{display:none}.scroll-scene .mechanism-diagram{flex:none;height:auto;aspect-ratio:720/520}.mechanism-node-layer,.compact-study-labels{visibility:visible}`}</style>
+        <style>{`.essay-beat{display:block}.beat-reading{max-width:72ch}.is-emphasis .beat-reading{max-width:none}.scroll-scene .scene-stage{position:static;height:480px}.scroll-scene .scene-body{display:block}.scroll-scene .scene-steps>li{min-height:0}.diagram-expand{display:none}.scroll-scene .mechanism-diagram{flex:none;height:auto;aspect-ratio:720/520}.mechanism-node-layer,.compact-study-labels{visibility:visible}.mechanism-spatial-method .method-pca{display:block}.mechanism-spatial-method .method-pca [data-draw-mask]{stroke-dashoffset:0!important}`}</style>
       </noscript>
       <header id="question" className="essay-hero section-shell">
         <span className="eyebrow">

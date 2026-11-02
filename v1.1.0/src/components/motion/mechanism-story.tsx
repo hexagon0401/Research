@@ -14,7 +14,12 @@ import { SceneText } from "./scene-text";
 import { MapTerrain } from "./map-terrain";
 import { fitCamera, pointsBounds } from "@/visuals/camera";
 import cameraRegions from "@/visuals/scene-camera.json";
-import { bindDiagramFrame, bindTraveler, identityCamera } from "./frame";
+import {
+  bindDiagramFrame,
+  bindTraveler,
+  bindDrawPath,
+  identityCamera,
+} from "./frame";
 import type { Camera } from "@/visuals/camera";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
@@ -160,13 +165,6 @@ export function MechanismStory({
                 edge.step + 0.1,
               );
             });
-            if (scene.id === "capability")
-              tl.fromTo(
-                "[data-origin-globe]",
-                { scale: 0.62 },
-                { scale: 1, duration: 1, ease: "none" },
-                2.8,
-              );
             if (scene.id === "korea-chips") {
               const overview = fitCamera(
                 pointsBounds(
@@ -205,18 +203,22 @@ export function MechanismStory({
               render();
             }
             el.querySelectorAll<SVGPathElement>("[data-pca-edge]").forEach(
-              (path, i) =>
+              (path, i) => {
+                const draw = bindDrawPath(path),
+                  state = { value: 0 };
+                draw(0);
                 tl.fromTo(
-                  path,
-                  { strokeDashoffset: 1 },
+                  state,
+                  { value: 0 },
                   {
-                    strokeDashoffset: 0,
-                    autoRound: false,
-                    duration: 0.3,
+                    value: 1,
+                    duration: i < 6 ? 0.22 : 0.2,
                     ease: "none",
+                    onUpdate: () => draw(state.value),
                   },
-                  3 + i * 0.06,
-                ),
+                  i < 6 ? 3.1 + i * 0.035 : 3.5 + (i - 6) * 0.05,
+                );
+              },
             );
             tl.to({}, { duration: 0.01 }, total - 0.01);
             timeline.current = tl;
@@ -353,9 +355,6 @@ export function MechanismStory({
               preserveAspectRatio="xMidYMid meet"
               aria-hidden="true"
             >
-              {scene.id === "capability" && (
-                <MapTerrain src="/visuals/globe.svg" origin />
-              )}
               <g
                 data-chip-camera
                 data-camera-scale="1"
@@ -494,24 +493,46 @@ export function MechanismStory({
                     preserveAspectRatio="xMidYMid meet"
                     aria-hidden="true"
                   >
-                    {Array.from({ length: 6 }, (_, i) => (
-                      <path
-                        key={i}
-                        data-pca-edge
-                        pathLength="1"
-                        d={`M150 ${50 + i * 82}C280 ${50 + i * 82} 260 260 360 260`}
-                        fill="none"
-                      />
-                    ))}
-                    {[170, 350].map((y) => (
-                      <path
-                        key={y}
-                        data-pca-edge
-                        pathLength="1"
-                        d={`M360 260Q450 260 570 ${y}`}
-                        fill="none"
-                      />
-                    ))}
+                    {Array.from({ length: 8 }, (_, i) => {
+                      const d =
+                        i < 6
+                          ? `M150 ${50 + i * 82}C280 ${50 + i * 82} 260 260 360 260`
+                          : `M360 260Q450 260 570 ${i === 6 ? 170 : 350}`;
+                      return (
+                        <g key={i}>
+                          <defs>
+                            <mask
+                              id={`pca-draw-${i}`}
+                              maskUnits="userSpaceOnUse"
+                              x="0"
+                              y="0"
+                              width="720"
+                              height="520"
+                            >
+                              <path
+                                data-draw-mask
+                                d={d}
+                                pathLength="1"
+                                style={{
+                                  fill: "none",
+                                  stroke: "white",
+                                  strokeWidth: 12,
+                                  strokeDasharray: "1",
+                                  strokeDashoffset: 0,
+                                }}
+                              />
+                            </mask>
+                          </defs>
+                          <path
+                            data-pca-edge
+                            mask={`url(#pca-draw-${i})`}
+                            d={d}
+                            fill="none"
+                            vectorEffect="non-scaling-stroke"
+                          />
+                        </g>
+                      );
+                    })}
                   </svg>
                   <div className="pca-node-layer">
                     {[

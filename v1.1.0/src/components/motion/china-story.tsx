@@ -546,7 +546,7 @@ export function ChinaStory({
                   style={{ transformOrigin: "0 0" }}
                 >
                   <MapTerrain src="/visuals/arctic.svg" vector />
-                  {Object.entries(polar.arctic.pins).map(([key, pt], i) => (
+                  {Object.entries(polar.arctic.pins).map(([key, pt]) => (
                     <g key={key}>
                       <circle
                         cx={pt[0]}
@@ -555,25 +555,17 @@ export function ChinaStory({
                         data-radius-px="4"
                         vectorEffect="non-scaling-stroke"
                       />
-                      <path
-                        d={`M${pt[0]} ${pt[1]}h${8 + i * 5}`}
-                        fill="none"
-                        vectorEffect="non-scaling-stroke"
-                      />
                     </g>
                   ))}
                 </g>
-                <svg
-                  x="500"
-                  y="20"
-                  width="180"
-                  height="150"
-                  viewBox="0 0 720 520"
-                >
-                  <rect width="720" height="520" className="motion-paper" />
-                  <MapTerrain src="/visuals/arctic.svg" vector />
-                </svg>
               </g>
+            </svg>
+            <svg
+              className="arctic-locator"
+              viewBox="0 0 720 520"
+              aria-hidden="true"
+            >
+              <MapTerrain src="/visuals/arctic.svg" vector />
             </svg>
           </div>
           {active === 4 && (

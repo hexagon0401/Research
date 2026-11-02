@@ -100,11 +100,23 @@ export function bindDiagramFrame(root: HTMLElement) {
   measure();
   return { draw, dispose: () => observer.disconnect() };
 }
+/** The same scalable drawing mask is used for routes and analytical connections. */
+export function bindDrawPath(path: SVGPathElement) {
+  const mask =
+    path.parentElement!.querySelector<SVGPathElement>("[data-draw-mask]");
+  let previous = -1;
+  return (value: number) => {
+    const u = Math.max(0, Math.min(1, value));
+    if (u === previous) return;
+    previous = u;
+    if (mask) mask.style.strokeDashoffset = String(1 - u);
+    path.dataset.drawProgress = String(u);
+  };
+}
 /** Arc length and node references are cached once. Moving dots stay in path-local coordinates. */
 export function bindTraveler(path: SVGPathElement, dot: SVGCircleElement) {
   const length = path.getTotalLength();
-  const mask =
-    path.parentElement!.querySelector<SVGPathElement>("[data-draw-mask]");
+  const draw = bindDrawPath(path);
   let previous = -1;
   dot.setAttribute("vector-effect", "non-scaling-stroke");
   dot.removeAttribute("transform");
@@ -113,8 +125,7 @@ export function bindTraveler(path: SVGPathElement, dot: SVGCircleElement) {
     const u = Math.max(0, Math.min(1, value));
     if (u === previous) return;
     previous = u;
-    if (mask) mask.style.strokeDashoffset = String(1 - u);
-    path.dataset.drawProgress = String(u);
+    draw(u);
     const p = path.getPointAtLength(length * u);
     dot.setAttribute("cx", String(p.x));
     dot.setAttribute("cy", String(p.y));

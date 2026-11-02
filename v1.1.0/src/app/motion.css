@@ -355,10 +355,6 @@
   display: block;
   overflow: visible;
 }
-.mechanism-diagram .origin-globe {
-  opacity: 0.13;
-  transform-origin: 360px 260px;
-}
 .mechanism-link path {
   stroke: var(--ink);
   stroke-width: 1.5;
@@ -1331,4 +1327,34 @@ html {
 }
 .diagram-snapshot .china-map {
   content-visibility: visible !important;
+}
+
+/* A screen-sized locator never grows with the regional map camera. */
+.china-map > svg.arctic-locator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 96px;
+  height: 96px;
+  max-height: none;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: none;
+  pointer-events: none;
+}
+.motion-china[data-phase="1"] .arctic-locator {
+  display: block;
+}
+@media (max-width: 767px) {
+  .china-map > svg.arctic-locator {
+    width: 72px;
+    height: 72px;
+  }
+}
+.method-pca .pca-node-layer {
+  background: transparent;
+}
+.method-pca > svg path[data-pca-edge] {
+  stroke-dasharray: none;
+  stroke-width: 1.5;
 }

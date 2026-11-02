@@ -2,29 +2,19 @@
  * The fixed SVG frame preserves projection coordinates and no-JS layout. */
 export function MapTerrain({
   src,
-  origin = false,
   vector = false,
 }: {
   src: string;
-  origin?: boolean;
   vector?: boolean;
 }) {
-  if (vector || origin)
+  if (vector)
     return (
-      <g
-        className={origin ? "origin-globe" : undefined}
-        data-origin-globe={origin ? "" : undefined}
-      >
+      <g>
         <use href={`${src}#terrain`} />
       </g>
     );
   return (
-    <foreignObject
-      width="720"
-      height="520"
-      className={origin ? "origin-globe" : undefined}
-      data-origin-globe={origin ? "" : undefined}
-    >
+    <foreignObject width="720" height="520">
       {/* Local SVG terrain is decorative; interactive labels remain HTML. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
