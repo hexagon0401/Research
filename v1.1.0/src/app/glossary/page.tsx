@@ -18,6 +18,16 @@ export default function Glossary() {
           />
         </p>
       </header>
+      <nav className="glossary-jump-list" aria-label="Glossary terms">
+        {Object.entries(glossaries).flatMap(([beat, terms]) =>
+          terms.map((entry, i) => (
+            <a key={beat + i} href={`#term-${beat}-${i}`}>
+              <L ko={entry.term.ko} en={entry.term.en} />
+            </a>
+          )),
+        )}
+        <a href="#term-rule-of-40">Ro40 / Rule of 40</a>
+      </nav>
       <div className="page-content glossary-index">
         {Object.entries(glossaries).flatMap(([beat, terms]) =>
           terms.map((entry, i) => (

@@ -1,0 +1,196 @@
+/* redesign-existing-projects: retain IIR's identity, clarify reading and states. */
+.essay-hero h1 {
+  letter-spacing: -0.05em;
+}
+.essay-hero h1,
+.page-intro h1,
+.beat-reading h2,
+.scene-steps > li > strong {
+  text-wrap: balance;
+}
+.essay-intro,
+.scene-lead,
+.scene-facts,
+.glossary-index p {
+  text-wrap: pretty;
+}
+.mono,
+.motion-date-row time,
+.essay-reading-meta {
+  font-variant-numeric: tabular-nums;
+}
+.hero-author {
+  color: var(--muted);
+}
+.hero-author strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.hero-author a {
+  color: var(--ink);
+  text-underline-offset: 4px;
+}
+.study-number-note {
+  margin: 0;
+}
+.site-header nav a,
+.header-more summary,
+.essay-outline a,
+.hero-author a,
+.glossary-jump-list a,
+.case-detail > summary {
+  transition:
+    color var(--duration-exit),
+    background-color var(--duration-exit),
+    border-color var(--duration-exit);
+}
+.header-more summary[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.site-header nav a:focus-visible,
+.header-more summary:focus-visible,
+.hero-author a:focus-visible,
+.essay-outline a:focus-visible,
+.glossary-jump-list a:focus-visible,
+.case-detail > summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  box-shadow: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .site-header nav a:hover,
+  .hero-author a:hover,
+  .essay-outline a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .header-more summary:hover,
+  .glossary-jump-list a:hover,
+  .research-essay .case-detail > summary:hover {
+    background: var(--surface);
+  }
+}
+.header-more summary:active,
+.glossary-jump-list a:active,
+.research-essay .case-detail > summary:active {
+  background: var(--surface);
+}
+.research-essay .case-detail {
+  border-block: 0;
+  border-left: 2px solid var(--line);
+  padding: 4px 0 4px 16px;
+  margin-block: 24px 32px;
+}
+.research-essay .case-detail[open] {
+  border-left-color: var(--ink);
+}
+.research-essay .case-detail > summary {
+  padding: 8px 12px 8px 0;
+  font-weight: 500;
+}
+.research-essay .case-detail > summary::after {
+  font-weight: 400;
+  color: var(--muted);
+}
+.research-essay .case-detail .essay-source-passage {
+  border-top-color: var(--line);
+}
+.research-essay .case-detail .essay-citation {
+  font-size: 14px;
+  text-underline-offset: 4px;
+}
+.glossary-jump-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  margin-block: 24px 40px;
+  max-width: 68ch;
+}
+.glossary-jump-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.glossary-index section,
+.glossary-index > h2 {
+  scroll-margin-top: 32px;
+}
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  align-items: center;
+  margin-top: 32px;
+}
+.not-found-actions a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .essay-hero h1 {
+    font-size: clamp(36px, 9.6vw, 48px);
+    max-width: none;
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+  }
+  .essay-hero-composition {
+    margin-block: 28px 32px;
+    gap: 20px;
+  }
+  .essay-hero-composition > .hero-atlas {
+    max-width: 280px;
+    justify-self: center;
+    width: 100%;
+  }
+  .hero-author {
+    font-size: 14px;
+    gap: 4px 12px;
+  }
+  .research-essay .case-detail {
+    padding-left: 12px;
+  }
+  .glossary-jump-list {
+    gap: 0 16px;
+    margin-block: 16px 32px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header nav a,
+  .header-more summary,
+  .essay-outline a,
+  .hero-author a,
+  .glossary-jump-list a,
+  .case-detail > summary {
+    transition: none;
+  }
+}
+html[data-motion="reduced"]
+  :is(
+    .site-header nav a,
+    .header-more summary,
+    .essay-outline a,
+    .hero-author a,
+    .glossary-jump-list a,
+    .case-detail > summary
+  ) {
+  transition: none;
+}
+/* Keep the key phrase intact and the author below the title at tablet widths too. */
+.essay-hero h1 span {
+  white-space: nowrap;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .essay-hero-composition > .hero-author {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .essay-hero-composition > .hero-atlas {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}

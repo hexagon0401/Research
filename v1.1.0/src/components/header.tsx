@@ -61,7 +61,13 @@ export function Header() {
             }
           }}
         >
-          <summary>
+          <summary
+            aria-current={
+              ["/methods", "/accessibility", "/glossary"].includes(path)
+                ? "page"
+                : undefined
+            }
+          >
             {lang === "ko" ? "더 보기" : "More"}
             <span aria-hidden="true">＋</span>
           </summary>

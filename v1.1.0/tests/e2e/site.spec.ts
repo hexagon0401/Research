@@ -75,7 +75,7 @@ test("home accessibility and core page widths remain usable", async ({
 test("unknown documents fail cleanly", async ({ page }) => {
   const response = await page.goto("/archive/not-a-document");
   expect(response?.status()).toBe(404);
-  await expect(page.locator("h1")).toContainText("still unwritten");
+  await expect(page.locator("h1")).toContainText("Page not found");
 });
 test("both languages fit the release viewport matrix", async ({
   page,

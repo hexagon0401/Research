@@ -11,7 +11,7 @@ export function AuthorStrip() {
         <L ko={author.period.ko} en={author.period.en} />
       </span>
       <a href={author.contact} target="_blank" rel="noopener noreferrer">
-        LinkedIn ↗
+        LinkedIn
       </a>
     </div>
   );

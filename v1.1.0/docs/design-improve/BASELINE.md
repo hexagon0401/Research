@@ -37,3 +37,7 @@ Fresh mobile Lighthouse runs after the changes: see lighthouse-mobile-after.json
 This is a review branch, not a declaration that every backlog item or engineering gate is complete. Research wording proposals and P1/P2 structural changes await review under the attached request.
 
 Metric-level gate: prior release median LCP 3315.4ms → 3184.4ms; CLS 0 → 0; total transfer 458515 → 459493 bytes (+0.21%). Median TBT 152.1ms → 176.5ms (+16.1%) exceeds the document's 5% metric tolerance. The runs vary (after 140/176.5/216ms), so this needs a controlled fresh baseline and performance investigation before merge. Do not treat the small overall score difference as proof that all performance gates passed. This is an unfinished performance gate on the review branch.
+
+## Subsequent redesign refinement
+
+The original redesign-existing-projects skill has now been read and applied. The later three-run comparison reports median performance 91, TBT 116.5ms, LCP 3321.6ms and CLS 0. The earlier TBT gate failure above is historical; this later sample resolves that relative regression. See redesign/RESULTS.md for the measurements and remaining verification limits.

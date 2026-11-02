@@ -4,3 +4,6 @@ package-lock.json
 src/content/map.json
 test-results
 playwright-report
+
+# Local, uncommitted third-party skill sources
+.agents/
