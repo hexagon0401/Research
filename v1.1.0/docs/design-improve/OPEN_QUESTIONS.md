@@ -18,3 +18,7 @@ The author directed checking the Library and Archive. The current published repo
 4. New glossary terms beyond the existing definitions and source-backed Rule of 40 require usage review.
 
 No publishing, merging, hook installation or global skill changes have been requested in this phase. Preview availability must be confirmed rather than invented.
+
+## Main deployment authorization update
+
+The author explicitly requested installing the skill through the CLI, applying an adapted prompt and pushing all completed work to main on 2026-11-02. The previous review-only restriction is superseded for this release. Unapproved research-wording proposals remain separate; no need to ask for deployment permission again. See ../V2_4_4_RELEASE.md for actual validation and deployment results.

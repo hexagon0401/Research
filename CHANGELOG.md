@@ -1,6 +1,14 @@
 # Releases
 
-현재 릴리스는 [v2.4.3](https://github.com/hexagon0401/Research/tree/v2.4.3)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.4.4](https://github.com/hexagon0401/Research/tree/v2.4.4)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.4.4 — 2026-11-02
+
+- Integrate the author-approved profile, visible About navigation, related-source guidance and bilingual glossary.
+- Refine responsive headings, tablet author/map layout, disclosure hierarchy and accessible reading-action states.
+- Add glossary navigation and bilingual missing-page recovery while preserving research editions, PDFs, URLs and APIs.
+- Verify the original redesign-existing-projects skill through its pinned upstream revision and install it through the Skills CLI.
+- [Deployment and validation](v1.1.0/docs/V2_4_4_RELEASE.md). The existing 72-hour crawler window is unchanged.
 
 ## 2.4.3 — 2026-11-02
 

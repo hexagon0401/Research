@@ -194,3 +194,40 @@ html[data-motion="reduced"]
     grid-row: 1 / span 2;
   }
 }
+/* Reading/source actions use the same quiet keyboard state as navigation. */
+:is(
+  .inline-link,
+  .essay-citation,
+  .essay-related a,
+  .case-source-links a,
+  .reading-context a
+):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  box-shadow: none;
+}
+.essay-citation,
+.case-source-links a,
+.reading-context a {
+  text-underline-offset: 4px;
+  transition:
+    color var(--duration-exit),
+    text-decoration-color var(--duration-exit);
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(.essay-citation, .case-source-links a, .reading-context a):hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .essay-citation,
+  .case-source-links a,
+  .reading-context a {
+    transition: none;
+  }
+}
+html[data-motion="reduced"]
+  :is(.essay-citation, .case-source-links a, .reading-context a) {
+  transition: none;
+}

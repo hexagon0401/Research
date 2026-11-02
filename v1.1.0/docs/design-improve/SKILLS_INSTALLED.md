@@ -27,3 +27,18 @@ At the initial phase no skill directory was created. The later manual installati
 - Conflicts overridden: suggestions to invent names/numbers, randomize dates, add stock imagery, global smooth/inertial scroll or replace the brand conflict with the research-preservation request. None was applied.
 
 See redesign/AUDIT.md for the scan, diagnosis and exact changes.
+
+## Skills CLI installation and production authorization
+
+On 2026-11-02 the author explicitly requested the Skills CLI command and main deployment. `skills` 1.7.4 exists on npm (modified 2026-10-19). The requested current-main source returned: `No matching skills found for: redesign-existing-projects`; it offered only design-taste-frontend. No different skill was installed.
+
+The original skill was recovered from upstream e04409a461022e1b9d0e898eac6b9224e2b9dc4e and installed with the same CLI:
+
+```sh
+npx skills add /tmp/iir-redesign-cli-source/skills/redesign-skill --skill redesign-existing-projects --agent codex --yes --copy
+npx skills list --agent codex --json
+```
+
+The local input is a `git archive` of that exact upstream revision's skill folder, with its MIT license. CLI output confirmed installation and listing for Codex at `/workspace/Research/.agents/skills/redesign-existing-projects`, scope project. Installed SKILL.md SHA-256: a75d547d04595fe97a5d377dddf145d029d51487a4f2a0a5a9d3b532ca3b84cd, matching the previously read original. Existing app-local manual files were kept. The root skill files and generated skills-lock.json are locally excluded from Git. No restart claim is made; instructions are applied directly in the current task.
+
+The adapted and applied prompt is IMPLEMENTATION_PROMPT.md. It corrects the supplied dashboard/Tailwind assumptions to the actual research site and records preservation and validation gates. The author's explicit main/deployment request supersedes REQUEST.md's earlier review-only workflow. The crawler window is not renewed.
