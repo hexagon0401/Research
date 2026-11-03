@@ -1505,3 +1505,30 @@ html[data-motion="reduced"] [data-draw-mask] {
   > span {
   font-size: 20px;
 }
+
+/* Endpoint and pattern both identify the two separated geographic relationships. */
+.mechanism-korea-chips
+  .mechanism-link[data-edge-from="us"][data-edge-to="cn"]
+  path[data-mechanism-edge] {
+  stroke-dasharray: 5 4;
+}
+.relation-line-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-block: 4px;
+}
+.relation-line-key > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.relation-line-key i {
+  width: 24px;
+  border-top: 1.5px solid var(--ink);
+}
+.relation-line-key i.dashed {
+  border-top-style: dashed;
+}

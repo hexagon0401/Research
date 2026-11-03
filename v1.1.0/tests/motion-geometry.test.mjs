@@ -59,3 +59,22 @@ test("coincident reference points produce no phantom route or invalid coordinate
   assert.equal(c.d, "");
   assert(!JSON.stringify(c).includes("NaN"));
 });
+test("short opposing relationships are visibly bowed while tiny edges remain bounded", () => {
+  const a = pins.cn,
+    b = pins.mm,
+    plus = relationshipCurve(a, b, 1),
+    minus = relationshipCurve(a, b, -1);
+  assert(
+    Math.hypot(
+      plus.control[0] - minus.control[0],
+      plus.control[1] - minus.control[1],
+    ) /
+      2 >=
+      20,
+  );
+  const tiny = relationshipCurve([0, 0], [0.1, 0.1]);
+  assert(
+    Math.hypot(tiny.control[0] - 0.05, tiny.control[1] - 0.05) <=
+      Math.hypot(0.1, 0.1) * 0.8 + 1e-8,
+  );
+});

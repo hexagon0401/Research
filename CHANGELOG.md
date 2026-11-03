@@ -1,6 +1,14 @@
 # Releases
 
-현재 릴리스는 [v2.6.0](https://github.com/hexagon0401/Research/tree/v2.6.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.6.1](https://github.com/hexagon0401/Research/tree/v2.6.1)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.6.1 — 2026-11-03
+
+- Separate near-collinear semiconductor relationships into clearly bowed north/south arcs, with line patterns and endpoint keys.
+- Strengthen short Myanmar curves without folding; camera bounds include curve controls and paths are cached.
+- Upgrade native-lazy map fallback images to vector terrain only near their figures; retain static/no-JS reading.
+- Recover from malformed hash encodings without replacing the readable site with a client error.
+- [Measured verification](v1.1.0/docs/curved-relations/RESULTS.md).
 
 ## 2.6.0 — 2026-11-03
 

@@ -400,6 +400,24 @@ export function ChinaStory({
             ? "기업의 해외 활동은 각 지역의 제도와 공간 속에서 국가 전략과 만난다."
             : "Overseas business meets national strategy through local institutions and places."}
         </p>
+        <div
+          className="relation-line-key"
+          aria-label={
+            lang === "ko" ? "미얀마 관계선 범례" : "Myanmar relationship key"
+          }
+        >
+          <span>{lang === "ko" ? "미얀마" : "Myanmar"}</span>
+          <span>
+            <i aria-hidden="true" />
+            {lang === "ko" ? "공급 관계" : "Supply relationship"}
+          </span>
+          <span>
+            <i className="dashed" aria-hidden="true" />
+            {lang === "ko"
+              ? "외교·전략 해석"
+              : "Diplomatic / strategic interpretation"}
+          </span>
+        </div>
       </figcaption>
       <nav className="case-source-links">
         <Link

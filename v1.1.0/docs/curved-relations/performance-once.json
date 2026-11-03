@@ -1,0 +1,15 @@
+{
+  "profile": "Single mobile lab run; abbreviated at the user’s request, not a median",
+  "date": "2026-11-03T05:54:12.220Z",
+  "scores": {
+    "performance": 82,
+    "accessibility": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": 3755.5463,
+    "total-blocking-time": 266,
+    "cumulative-layout-shift": 0,
+    "total-byte-weight": 429663
+  },
+  "terrainRequests": []
+}

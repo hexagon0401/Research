@@ -1,4 +1,5 @@
 "use client";
+import { readAnchor } from "@/utils/read-anchor";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { usePreferences } from "./preferences";
 import { storyChapters } from "@/visuals/story";
@@ -14,7 +15,7 @@ export function ReadingControls() {
     const main = control.current?.closest("main");
     if (!main) return;
     function revealHash() {
-      const id = decodeURIComponent(location.hash.slice(1));
+      const id = readAnchor(location.hash);
       const el = id ? document.getElementById(id) : null;
       for (let p = el?.parentElement; p; p = p.parentElement)
         if (p instanceof HTMLDetailsElement) p.open = true;
@@ -101,7 +102,7 @@ export function ReadingControls() {
         !u.hash
       )
         return;
-      const el = document.getElementById(decodeURIComponent(u.hash.slice(1)));
+      const el = document.getElementById(readAnchor(u.hash));
       for (let p = el?.parentElement; p; p = p.parentElement)
         if (p instanceof HTMLDetailsElement) p.open = true;
     };

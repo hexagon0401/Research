@@ -1,4 +1,5 @@
 "use client";
+import { readAnchor } from "@/utils/read-anchor";
 import {
   createContext,
   useContext,
@@ -211,8 +212,7 @@ export function EssayExperience({
         }
         if (
           !saved ||
-          (location.hash &&
-            decodeURIComponent(location.hash.slice(1)) !== saved.beat)
+          (location.hash && readAnchor(location.hash) !== saved.beat)
         )
           return;
         const target = document.getElementById(saved.anchor);
@@ -430,7 +430,7 @@ export function EssayExperience({
   }, [scenes, lang, reduced]);
   useEffect(() => {
     let requested = location.hash
-      ? decodeURIComponent(location.hash.slice(1))
+      ? readAnchor(location.hash)
       : (new URLSearchParams(location.search).get("scene") ?? "");
     if (
       !requested ||
@@ -463,7 +463,7 @@ export function EssayExperience({
     for (const type of ["wheel", "touchstart", "pointerdown", "keydown"])
       window.addEventListener(type, stop, { once: true, passive: true });
     const hashChange = () => {
-      requested = decodeURIComponent(location.hash.slice(1));
+      requested = readAnchor(location.hash);
       live = true;
       settle();
     };

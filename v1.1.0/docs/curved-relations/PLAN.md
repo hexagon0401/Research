@@ -1,0 +1,9 @@
+# v2.6.1 — distinguish relationships without changing the research
+
+The broad Markdown-brief update is already deployed in v2.6.0 (Quick/Full, exact source guide, reviewer/method/PDF/FAQ page, citations, print/share/history, navigation and preservation). This follow-up closes the explicit curve problem and checks errors/performance. Original research, classifications awaiting author review, crawler expiry and hosting configuration remain unchanged.
+
+1. Replace the near-horizontal semiconductor diagram paths with a shared, visibly bowed geographic curve. Put the two American relationships on opposite sides, distinguish their line styles and label endpoints. Strengthen short China–Myanmar curves without backtracking or adding transport facts. Fit cameras to curve control bounds as well as reference points, and cache paths for masks and travelers.
+2. Fix reproducible malformed-hash navigation failures with one safe decoder. Verify direct URLs, ordinary anchors and keyboard source returns.
+3. Defer off-screen vector terrain: the current initial-load audit requests world.svg (32,129 transfer bytes) and arctic.svg (11,339) before their figures are visible. Use native-lazy SVG images as the server/no-JS fallback, upgrading to the existing vector terrain near the viewport. Preserve the hero globe and all geography/data.
+4. Verify visible curvature/separation, monotone route progress, camera containment, traveler alignment, reverse scroll, reduced motion, no-JS terrain, lazy loading, malformed hashes, source/PDF invariants and responsive behavior. Measure real screenshots/network/Lighthouse; do not equate path syntax with a visible improvement or claim unmeasured environments pass.
+5. Commit the fix, push main and v2.6.1, verify the actual deployment. No new dependency, server, runtime third-party request or paid service.

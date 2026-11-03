@@ -22,6 +22,7 @@ import {
   identityCamera,
 } from "./frame";
 import type { Camera } from "@/visuals/camera";
+import { relationshipCurve } from "@/visuals/motion-geometry";
 const roleGroups: Record<string, string[]> = {
   technology: ["S01", "S02", "S03", "S13", "S16", "S17"],
   identity: ["S06", "S14"],
@@ -39,6 +40,29 @@ export function MechanismStory({
   const { lang, reduced } = usePreferences();
   const spec = mechanisms[scene.id],
     graph = useMemo(() => mechanismGraph(scene.id), [scene.id]);
+  const paths = useMemo(
+    () =>
+      graph.edges.map((edge) => {
+        const a = graph.nodes.find((n) => n.id === edge.from)!;
+        const b = graph.nodes.find((n) => n.id === edge.to)!;
+        if (scene.id === "korea-chips")
+          return relationshipCurve(
+            [a.x, a.y],
+            [b.x, b.y],
+            edge.from === "us" && edge.to === "kr" ? -1 : 1,
+          );
+        return {
+          d: edge.feedback
+            ? `M${a.x} ${a.y}Q360 485 ${b.x} ${b.y}`
+            : `M${a.x} ${a.y}C${(a.x + b.x) / 2} ${a.y} ${(a.x + b.x) / 2} ${b.y} ${b.x} ${b.y}`,
+          points: [
+            [a.x, a.y],
+            [b.x, b.y],
+          ],
+        };
+      }),
+    [graph, scene.id],
+  );
   const readingSteps = useMemo(
     () => dedupeFactSteps(spec.steps, initialFacts),
     [spec.steps, initialFacts],
@@ -212,7 +236,7 @@ export function MechanismStory({
             if (scene.id === "korea-chips") {
               const overview = fitCamera(
                 pointsBounds(
-                  graph.nodes.map((n) => [n.x, n.y]),
+                  paths.flatMap((path) => path.points.map((p) => [...p])),
                   24,
                 ),
                 52,
@@ -290,7 +314,7 @@ export function MechanismStory({
       stop();
       cleanup();
     };
-  }, [scene.id, lang, reduced, graph, spec, direction]);
+  }, [scene.id, lang, reduced, graph, spec, direction, paths]);
   useEffect(() => {
     if (selected) selectedPanel.current?.focus({ preventScroll: true });
   }, [selected]);
@@ -309,13 +333,6 @@ export function MechanismStory({
   const selectedSource = selected?.startsWith("S")
     ? selected
     : spec.steps[Math.min(selectedIndex, spec.steps.length - 1)].source;
-  const pathFor = (from: string, to: string, feedback?: boolean) => {
-    const a = graph.nodes.find((n) => n.id === from)!,
-      b = graph.nodes.find((n) => n.id === to)!;
-    return feedback
-      ? `M${a.x} ${a.y}Q360 485 ${b.x} ${b.y}`
-      : `M${a.x} ${a.y}C${(a.x + b.x) / 2} ${a.y} ${(a.x + b.x) / 2} ${b.y} ${b.x} ${b.y}`;
-  };
   return (
     <figure
       ref={root}
@@ -336,6 +353,21 @@ export function MechanismStory({
           {lang === "ko" ? "스크롤로 읽는 메커니즘" : "FOLLOW THE MECHANISM"}
         </span>
         <h3>{spec.title[lang]}</h3>
+        {scene.id === "korea-chips" && (
+          <div
+            className="relation-line-key"
+            aria-label={lang === "ko" ? "관계선 범례" : "Relationship key"}
+          >
+            <span>
+              <i aria-hidden="true" />
+              {lang === "ko" ? "미국–한국" : "U.S.–Korea"}
+            </span>
+            <span>
+              <i className="dashed" aria-hidden="true" />
+              {lang === "ko" ? "미국–중국" : "U.S.–China"}
+            </span>
+          </div>
+        )}
       </figcaption>
       {scene.id === "us-finance" && (
         <div
@@ -456,7 +488,7 @@ export function MechanismStory({
                       >
                         <path
                           data-draw-mask
-                          d={pathFor(e.from, e.to, e.feedback)}
+                          d={paths[i].d}
                           pathLength="1"
                           style={{
                             fill: "none",
@@ -471,7 +503,7 @@ export function MechanismStory({
                     <path
                       data-mechanism-edge={i}
                       mask={`url(#draw-${scene.id}-${i})`}
-                      d={pathFor(e.from, e.to, e.feedback)}
+                      d={paths[i].d}
                       fill="none"
                       vectorEffect="non-scaling-stroke"
                     />

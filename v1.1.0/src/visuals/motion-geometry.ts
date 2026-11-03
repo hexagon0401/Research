@@ -30,7 +30,11 @@ export function relationshipCurve(a: Point, b: Point, side = 1) {
     dy = b[1] - a[1],
     length = Math.hypot(dx, dy);
   if (length < 1e-6) return { d: "", points: [a, b], control: [...a] };
-  const bend = Math.min(60, length * 0.18) * Math.sign(side || 1);
+  // A quadratic's midpoint bows by half its control offset. Short country
+  // relationships need a minimum bow, while tiny/coincident edges stay bounded.
+  const bend =
+    Math.min(60, length * 0.8, Math.max(24, length * 0.36)) *
+    Math.sign(side || 1);
   const control = [
     (a[0] + b[0]) / 2 - (dy / length) * bend,
     (a[1] + b[1]) / 2 + (dx / length) * bend,
