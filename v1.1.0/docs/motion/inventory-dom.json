@@ -1,0 +1,142 @@
+[
+  {
+    "lang": "en",
+    "entries": [
+      {
+        "id": "EM-01",
+        "approved": true,
+        "count": 8
+      },
+      {
+        "id": "EM-01b",
+        "approved": true,
+        "count": 4
+      },
+      {
+        "id": "EM-02",
+        "approved": true,
+        "count": 4
+      },
+      {
+        "id": "EM-05",
+        "approved": true,
+        "count": 6
+      },
+      {
+        "id": "EM-AUTHORITY",
+        "approved": true,
+        "count": 4
+      },
+      {
+        "id": "EM-09",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-13",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-20",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-23",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-25",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-27",
+        "approved": true,
+        "count": 2
+      },
+      {
+        "id": "EM-08",
+        "approved": false,
+        "count": 1
+      },
+      {
+        "id": "EM-07",
+        "approved": false,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "lang": "ko",
+    "entries": [
+      {
+        "id": "EM-01",
+        "approved": true,
+        "count": 15
+      },
+      {
+        "id": "EM-01b",
+        "approved": true,
+        "count": 6
+      },
+      {
+        "id": "EM-02",
+        "approved": true,
+        "count": 3
+      },
+      {
+        "id": "EM-05",
+        "approved": true,
+        "count": 10
+      },
+      {
+        "id": "EM-AUTHORITY",
+        "approved": true,
+        "count": 3
+      },
+      {
+        "id": "EM-09",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-13",
+        "approved": true,
+        "count": 2
+      },
+      {
+        "id": "EM-20",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-23",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-25",
+        "approved": true,
+        "count": 1
+      },
+      {
+        "id": "EM-27",
+        "approved": true,
+        "count": 2
+      },
+      {
+        "id": "EM-08",
+        "approved": false,
+        "count": 5
+      },
+      {
+        "id": "EM-07",
+        "approved": false,
+        "count": 1
+      }
+    ]
+  }
+]

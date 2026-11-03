@@ -1,5 +1,9 @@
 # Releases
 
+## v2.7.0 — 2026-11-03
+
+Motion.md 기반의 원문 보존 강조, 여섯 단계 연결선, 소유·권한 기호, 세 사례의 출처 수치 카드와 PCA·S00 합류 연출을 추가했습니다. 새 패키지·지도 좌표·비교 수치 없이 기존 스크롤과 13개 전문을 유지합니다. [범위·검증](v1.1.0/docs/motion/RESULTS.md).
+
 현재 릴리스는 [v2.6.1](https://github.com/hexagon0401/Research/tree/v2.6.1)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
 
 ## 2.6.1 — 2026-11-03

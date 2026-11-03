@@ -1,0 +1,39 @@
+[
+  {
+    "anchor": "S08-R001-P010",
+    "before": 162.21875,
+    "after": 162.21875,
+    "delta": 0,
+    "mode": "full"
+  },
+  {
+    "anchor": "S08-R003-P001",
+    "before": 89.5,
+    "after": 89.5,
+    "delta": 0,
+    "mode": "full"
+  },
+  {
+    "anchor": "S16-R002-P003",
+    "before": 43.1875,
+    "after": 43.1875,
+    "delta": 0,
+    "mode": "full"
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 500
+    },
+    "cssZoom": 2,
+    "overflow": 0
+  },
+  {
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "cssZoom": 2,
+    "overflow": 0
+  }
+]
