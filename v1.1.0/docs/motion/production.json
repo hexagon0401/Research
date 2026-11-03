@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-03T06:32:53.263Z",
+  "url": "https://research-hxgn.vercel.app",
+  "release": "2.7.0",
+  "errors": [],
+  "editorialSettles": true,
+  "nativeWheelPCA": true,
+  "mobileFrame": {
+    "rect": "{\"x\":24,\"y\":236.21875,\"width\":327,\"height\":402.5625,\"top\":236.21875,\"right\":351,\"bottom\":638.78125,\"left\":24}",
+    "scrollY": 29938,
+    "height": 51640,
+    "viewport": 844,
+    "visibility": "visible",
+    "topElement": "LI"
+  },
+  "mobileKoreanSource": true,
+  "reducedMotion": true
+}

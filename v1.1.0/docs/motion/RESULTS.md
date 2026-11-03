@@ -29,3 +29,9 @@ Lighthouse 13.5.0, three serial mobile/simulated-throttling audits on the final 
 The preceding release's single abbreviated score was 82, and v2.6.0's historical three-run median was 88. These are not a controlled A/B; no causal improvement or universal 5% timing-regression gate is claimed. Physical-device INP and scroll-frame profiling across every browser remain unmeasured.
 
 Initial home JS: ten script responses, independently gzip-compressed total 211,448 bytes. Historical v2.6.0 measurement was 210,222 bytes (+1,226 bytes / 0.58%); this is a historical reference, **not a controlled v2.6.1 A/B**. No new runtime package. New visuals are inline source primitives/CSS, not downloaded image assets; existing terrain is unchanged and retains lazy delivery. Screenshots in this directory are documentation only, not site payload.
+
+## Production
+
+Application release **f194371** was deployed on https://research-hxgn.vercel.app. Direct Chromium verification recorded **3 November 2026, 15:32 KST**: v2.7.0 marker, eleven emphasis entries, all three source figures, finite editorial animation, actual wheel-driven PCA movement, Korean mobile source/caution, reduced-motion cleanup and retained noindex. No page errors. The mobile capture waits for Korean font/layout settling before recording the visible frame. [Live result](production.json) · [PCA mid-progress](production-pca.png) · [Korean source card](production-source-ko.png).
+
+Main and annotated tag v2.7.0 include this verification record. Existing performance-target limitations and optional excluded enhancements above remain explicit.
