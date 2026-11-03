@@ -1,3 +1,5 @@
+import { CopyCitation } from "@/components/copy-citation";
+import { researchAuthor } from "@/config/research-author";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -192,6 +194,9 @@ export default async function ReportPage({
             <L en="Methods & limitations ↗" ko="방법론과 한계 ↗" />
           </Link>
         </details>
+        <CopyCitation
+          text={`${researchAuthor.name.en} (${researchAuthor.name.ko}). (${r.year}). ${r.title} [${r.id}; ${r.titleType === "catalogue" ? "catalogue title; " : ""}research report]. https://research-hxgn.vercel.app/reports/${r.id}`}
+        />
         <nav className="report-actions" aria-label="Reading shortcuts">
           <a className="inline-link" href="#transcript">
             <L en="Read the full text ↓" ko="전문 읽기 ↓" />

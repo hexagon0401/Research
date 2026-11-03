@@ -10,7 +10,7 @@ Author supplied: 유하민 / Daniel Yu; 세종국제고등학교; June 2025–Oc
 
 The author directed checking the Library and Archive. The current published report manifest contains 13 report IDs, and the library is populated from `research.json` sources. S04 and S10 are referenced in evidenceNeeds as planned evidence requirements; S07/S09/S12 identifiers were not found in src/content. This does not establish that the author's underlying research is missing. Do not delete or relabel items or invent a reason for gaps. The UI explains that IDs are identifiers, not list positions. Expanded inventory reconciliation remains open if additional original records exist outside this checkout.
 
-## Decisions for the next phase
+## Historical decisions — superseded by the completion update below
 
 1. Review the concrete findings/excerpt/claim-label proposals in CONTENT_PROPOSALS.md.
 2. Approve a quick/full wireframe before P1/P2 structural implementation (PHASE_2_PLAN.md).
@@ -22,3 +22,7 @@ No publishing, merging, hook installation or global skill changes have been requ
 ## Main deployment authorization update
 
 The author explicitly requested installing the skill through the CLI, applying an adapted prompt and pushing all completed work to main on 2026-11-02. The previous review-only restriction is superseded for this release. Unapproved research-wording proposals remain separate; no need to ask for deployment permission again. See ../V2_4_4_RELEASE.md for actual validation and deployment results.
+
+## Current completion update — 3 November 2026 KST
+
+The user explicitly requested auditing and implementing unfinished work. This supersedes the earlier structural review-only hold for the implemented Quick/Full, source placement, reviewer, citation, share and print interfaces. Existing explicit main/deployment authorization continues. No further approval is needed for these concrete, reversible UI changes. Remaining research-only decisions: final epistemic labels, original-wording corrections, hypothesis support statuses, new change-my-mind text and a new abstract. Optional gimmicks are deliberately deferred with reasons in completion/STATUS.md; they are not blockers or silently marked complete.

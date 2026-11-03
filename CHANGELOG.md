@@ -1,6 +1,15 @@
 # Releases
 
-현재 릴리스는 [v2.5.0](https://github.com/hexagon0401/Research/tree/v2.5.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+현재 릴리스는 [v2.6.0](https://github.com/hexagon0401/Research/tree/v2.6.0)입니다. 최신 앱은 `v1.1.0/`에서 유지하며, 이전 코드는 [버전별 Git 태그](https://github.com/hexagon0401/Research/tags)로 확인합니다.
+
+## 2.6.0 — 2026-11-03
+
+- Audit every item in the uploaded design-improvement brief; distinguish implemented features, author-only decisions and optional deferrals.
+- Add exact-source reading entry points, shareable Quick/Full chapter disclosures and safe reading shortcuts.
+- Align Tether's primary excerpt with the actual S00 passage; deduplicate exact repeated facts at render time.
+- Add a reviewer brief, source-backed methods, PDF index, FAQ, citation copy/fallback, site history and self-hosted sharing/print support.
+- Preserve research originals, bilingual translations, all 18 argument addresses, 973 passages, PDF hashes and existing APIs.
+- [Item-by-item status](v1.1.0/docs/design-improve/completion/STATUS.md) · [Verification](v1.1.0/docs/design-improve/completion/RESULTS.md).
 
 ## 2.5.0 — 2026-11-02
 

@@ -277,8 +277,9 @@ export const essay: EssayBeat[] = [
     },
     passages: [
       {
-        report: "S05",
-        blocks: ["S05-L004-P010"],
+        report: "S00",
+        blocks: [],
+        readingIds: ["S00-R005-P017"],
         take: 1,
       },
     ],

@@ -25,12 +25,26 @@ const allowed = new Set([
 ]);
 export function ReadingReturn({ fallback }: { fallback: string }) {
   const [target, setTarget] = useState(fallback);
+  const [quick, setQuick] = useState(false);
   useEffect(() => {
     const from = new URLSearchParams(location.search).get("from");
     if (from && allowed.has(from)) setTarget(from);
+    try {
+      const saved = JSON.parse(
+        sessionStorage.getItem("iir-essay-return") ?? "null",
+      );
+      setQuick(
+        sessionStorage.getItem("iir-essay-resume") === "true" &&
+          saved?.mode === "quick",
+      );
+    } catch {}
   }, []);
   return (
-    <Link className="inline-link" data-return-to-essay href={`/#${target}`}>
+    <Link
+      className="inline-link"
+      data-return-to-essay
+      href={`/${quick ? "?mode=quick" : ""}#${target}`}
+    >
       <L en="Continue the main argument ↗" ko="메인의 해당 논지로 돌아가기 ↗" />
     </Link>
   );

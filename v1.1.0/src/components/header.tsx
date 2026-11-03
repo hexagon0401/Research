@@ -63,7 +63,13 @@ export function Header() {
         >
           <summary
             aria-current={
-              ["/methods", "/accessibility", "/glossary"].includes(path)
+              [
+                "/methods",
+                "/accessibility",
+                "/glossary",
+                "/reviewers",
+                "/changelog",
+              ].includes(path)
                 ? "page"
                 : undefined
             }
@@ -72,6 +78,12 @@ export function Header() {
             <span aria-hidden="true">＋</span>
           </summary>
           <div className="header-more-panel">
+            <Link prefetch={false} href="/reviewers">
+              {lang === "ko" ? "검토자 요약" : "For reviewers"}
+            </Link>
+            <Link prefetch={false} href="/changelog">
+              {lang === "ko" ? "변경 기록" : "Site editions"}
+            </Link>
             <Link prefetch={false} href="/glossary">
               {lang === "ko" ? "용어 찾아보기" : "Glossary"}
             </Link>

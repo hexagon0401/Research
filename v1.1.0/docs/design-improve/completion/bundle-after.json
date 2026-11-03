@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-03T01:06:50.536Z",
+  "url": "http://127.0.0.1:3062",
+  "scope": "Fresh English home load through networkidle; decoded JS responses independently gzip-compressed, not transfer size or route-exclusive code",
+  "assets": [
+    {
+      "path": "/_next/static/chunks/3smzbt61m2ybb.js",
+      "decodedBytes": 30549,
+      "gzipBytes": 8313
+    },
+    {
+      "path": "/_next/static/chunks/3lkjoyra63jvo.js",
+      "decodedBytes": 13492,
+      "gzipBytes": 3742
+    },
+    {
+      "path": "/_next/static/chunks/26zg-pmtr-o0q.js",
+      "decodedBytes": 417,
+      "gzipBytes": 247
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-2c3mg3r-05n1w.js",
+      "decodedBytes": 11255,
+      "gzipBytes": 4390
+    },
+    {
+      "path": "/_next/static/chunks/39rcz-vfva885.js",
+      "decodedBytes": 17473,
+      "gzipBytes": 6429
+    },
+    {
+      "path": "/_next/static/chunks/1u3cdz85zmh2h.js",
+      "decodedBytes": 60792,
+      "gzipBytes": 21530
+    },
+    {
+      "path": "/_next/static/chunks/3q07ylq30_aow.js",
+      "decodedBytes": 229597,
+      "gzipBytes": 71897
+    },
+    {
+      "path": "/_next/static/chunks/1whx6oatipf78.js",
+      "decodedBytes": 138639,
+      "gzipBytes": 46093
+    },
+    {
+      "path": "/_next/static/chunks/27besji_mx-5t.js",
+      "decodedBytes": 158637,
+      "gzipBytes": 44067
+    },
+    {
+      "path": "/_next/static/chunks/2s5if1us3_j-u.js",
+      "decodedBytes": 13822,
+      "gzipBytes": 3514
+    }
+  ],
+  "decodedBytes": 674673,
+  "gzipBytes": 210222
+}

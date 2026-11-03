@@ -1,0 +1,54 @@
+[
+  {
+    "route": "quick",
+    "width": 375,
+    "lang": "en",
+    "words": 1006,
+    "overflow": false
+  },
+  {
+    "route": "reviewers",
+    "width": 375,
+    "lang": "en",
+    "overflow": false
+  },
+  {
+    "route": "quick",
+    "width": 375,
+    "lang": "ko",
+    "words": 912,
+    "overflow": false
+  },
+  {
+    "route": "reviewers",
+    "width": 375,
+    "lang": "ko",
+    "overflow": false
+  },
+  {
+    "route": "quick",
+    "width": 1280,
+    "lang": "en",
+    "words": 1022,
+    "overflow": false
+  },
+  {
+    "route": "reviewers",
+    "width": 1280,
+    "lang": "en",
+    "overflow": false
+  },
+  {
+    "route": "quick",
+    "width": 1280,
+    "lang": "ko",
+    "words": 928,
+    "overflow": false
+  },
+  {
+    "route": "reviewers",
+    "width": 1280,
+    "lang": "ko",
+    "overflow": false
+  }
+]

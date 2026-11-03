@@ -1,3 +1,5 @@
+import { ReadingControls } from "@/components/reading-controls";
+import { SourceGuide } from "@/components/source-guide";
 import { Arrow } from "@/components/icons";
 import { AuthorStrip, StudyNumberNote } from "@/components/author-strip";
 import { FactText } from "@/components/motion/scene-text";
@@ -349,6 +351,10 @@ export default async function Home() {
           />
         </p>
       </section>
+      <section className="section-shell reading-entry">
+        <ReadingControls />
+        <SourceGuide />
+      </section>
       <StoryNavigation />
       <div className="essay-layout section-shell">
         <article className="essay-body" aria-label="Main research narrative">
@@ -364,111 +370,142 @@ export default async function Home() {
                   <L ko={chapter.title.ko} en={chapter.title.en} />
                 </span>
               </header>
-              {composed
-                .filter(
-                  (beat) =>
-                    chapter.beats.includes(beat.id) &&
-                    !["china-myanmar", "china-cambodia"].includes(beat.id),
-                )
-                .map((beat) => (
-                  <section
-                    id={beat.id}
-                    key={beat.id}
-                    className={`essay-beat ${emphasisScenes.has(beat.id) ? "is-emphasis" : ""} ${mechanisms[beat.id] ? "has-motion" : ""}`}
-                    data-essay-beat
-                  >
-                    <div className="beat-reading">
-                      {legacy[beat.id]?.map((id) => (
-                        <span
-                          key={id}
-                          id={id}
-                          className="essay-legacy-anchor"
-                        />
-                      ))}
-                      {beat.country && (
-                        <span className="eyebrow essay-country-label">
-                          {beat.country === "us"
-                            ? "UNITED STATES"
-                            : beat.country === "cn"
-                              ? "CHINA"
-                              : "SOUTH KOREA"}
-                        </span>
-                      )}
-                      <h2>
-                        <L ko={beat.title.ko} en={beat.title.en} />
-                      </h2>
-                      <p className="essay-intro">
-                        <L ko={beat.lead.ko} en={beat.lead.en} />
-                      </p>
-                      <ul className="case-facts">
-                        {beat.facts.map((fact, i) => (
-                          <li key={i}>
-                            <L
-                              ko={<FactText value={fact.ko} />}
-                              en={<FactText value={fact.en} />}
-                            />
-                          </li>
-                        ))}
-                      </ul>
-                      {glossaries[beat.id]?.map((item) => (
-                        <details className="essay-glossary" key={item.term.en}>
-                          <summary>
-                            <L ko={item.term.ko} en={item.term.en} /> ·{" "}
-                            <L ko="용어" en="Term" />
-                          </summary>
-                          <p>
-                            <L
-                              ko={item.definition.ko}
-                              en={item.definition.en}
-                            />
-                          </p>
-                        </details>
-                      ))}
-                    </div>
-                    {beat.id === "china-arctic" ? (
-                      <ChinaStory
-                        arcticDetail={detailFor(beat)}
-                        cases={Object.fromEntries(
-                          ["china-myanmar", "china-cambodia"].map((id) => {
-                            const item = composed.find((b) => b.id === id)!;
-                            return [
-                              id,
-                              { title: item.title, detail: detailFor(item) },
-                            ];
-                          }),
-                        )}
-                      />
-                    ) : mechanisms[beat.id] ? (
-                      <MechanismStory
-                        scene={scenes.find((s) => s.id === beat.id)!}
-                        detail={detailFor(beat)}
-                      />
-                    ) : (
-                      <>
-                        <NarrativeVisual
-                          scene={scenes.find((s) => s.id === beat.id)!}
-                        />
-                        {detailFor(beat)}
-                      </>
-                    )}
-                    <p className="essay-bridge">
+              <div className="chapter-quick">
+                <p>
+                  <L
+                    ko={composed.find((b) => b.id === chapter.anchor)!.lead.ko}
+                    en={composed.find((b) => b.id === chapter.anchor)!.lead.en}
+                  />
+                </p>
+                <nav aria-label="Chapter topics">
+                  {chapter.beats.map((id) => (
+                    <a href={`#${id}`} key={id}>
                       <L
-                        ko={
-                          (beat.id === "china-arctic"
-                            ? composed.find((b) => b.id === "china-cambodia")!
-                            : beat
-                          ).connection.ko
-                        }
-                        en={
-                          (beat.id === "china-arctic"
-                            ? composed.find((b) => b.id === "china-cambodia")!
-                            : beat
-                          ).connection.en
-                        }
+                        ko={composed.find((b) => b.id === id)!.title.ko}
+                        en={composed.find((b) => b.id === id)!.title.en}
                       />
-                    </p>
-                  </section>
-                ))}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+              <details className="chapter-reasoning" open>
+                <summary>
+                  <L
+                    ko="논증과 그림 펼쳐 읽기"
+                    en="Open the reasoning and diagrams"
+                  />
+                </summary>
+                {composed
+                  .filter(
+                    (beat) =>
+                      chapter.beats.includes(beat.id) &&
+                      !["china-myanmar", "china-cambodia"].includes(beat.id),
+                  )
+                  .map((beat) => (
+                    <section
+                      id={beat.id}
+                      key={beat.id}
+                      className={`essay-beat ${emphasisScenes.has(beat.id) ? "is-emphasis" : ""} ${mechanisms[beat.id] ? "has-motion" : ""}`}
+                      data-essay-beat
+                    >
+                      <div className="beat-reading">
+                        {legacy[beat.id]?.map((id) => (
+                          <span
+                            key={id}
+                            id={id}
+                            className="essay-legacy-anchor"
+                          />
+                        ))}
+                        {beat.country && (
+                          <span className="eyebrow essay-country-label">
+                            {beat.country === "us"
+                              ? "UNITED STATES"
+                              : beat.country === "cn"
+                                ? "CHINA"
+                                : "SOUTH KOREA"}
+                          </span>
+                        )}
+                        <h2>
+                          <L ko={beat.title.ko} en={beat.title.en} />
+                        </h2>
+                        <p className="essay-intro">
+                          <L ko={beat.lead.ko} en={beat.lead.en} />
+                        </p>
+                        <ul className="case-facts">
+                          {beat.facts.map((fact, i) => (
+                            <li key={i}>
+                              <L
+                                ko={<FactText value={fact.ko} />}
+                                en={<FactText value={fact.en} />}
+                              />
+                            </li>
+                          ))}
+                        </ul>
+                        {glossaries[beat.id]?.map((item) => (
+                          <details
+                            className="essay-glossary"
+                            key={item.term.en}
+                          >
+                            <summary>
+                              <L ko={item.term.ko} en={item.term.en} /> ·{" "}
+                              <L ko="용어" en="Term" />
+                            </summary>
+                            <p>
+                              <L
+                                ko={item.definition.ko}
+                                en={item.definition.en}
+                              />
+                            </p>
+                          </details>
+                        ))}
+                      </div>
+                      {beat.id === "china-arctic" ? (
+                        <ChinaStory
+                          initialFacts={beat.facts}
+                          arcticDetail={detailFor(beat)}
+                          cases={Object.fromEntries(
+                            ["china-myanmar", "china-cambodia"].map((id) => {
+                              const item = composed.find((b) => b.id === id)!;
+                              return [
+                                id,
+                                { title: item.title, detail: detailFor(item) },
+                              ];
+                            }),
+                          )}
+                        />
+                      ) : mechanisms[beat.id] ? (
+                        <MechanismStory
+                          initialFacts={beat.facts}
+                          scene={scenes.find((s) => s.id === beat.id)!}
+                          detail={detailFor(beat)}
+                        />
+                      ) : (
+                        <>
+                          <NarrativeVisual
+                            scene={scenes.find((s) => s.id === beat.id)!}
+                          />
+                          {detailFor(beat)}
+                        </>
+                      )}
+                      <p className="essay-bridge">
+                        <L
+                          ko={
+                            (beat.id === "china-arctic"
+                              ? composed.find((b) => b.id === "china-cambodia")!
+                              : beat
+                            ).connection.ko
+                          }
+                          en={
+                            (beat.id === "china-arctic"
+                              ? composed.find((b) => b.id === "china-cambodia")!
+                              : beat
+                            ).connection.en
+                          }
+                        />
+                      </p>
+                    </section>
+                  ))}
+              </details>
             </section>
           ))}
         </article>

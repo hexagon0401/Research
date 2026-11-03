@@ -30,11 +30,13 @@ export function SceneText({
     <>
       <p className="scene-lead">{text.lead[lang]}</p>
       <ul className="scene-facts">
-        {text.facts.map((fact, i) => (
-          <li key={i}>
-            <FactText value={fact[lang]} />
-          </li>
-        ))}
+        {text.facts
+          .filter((fact) => fact[lang])
+          .map((fact, i) => (
+            <li key={i}>
+              <FactText value={fact[lang]} />
+            </li>
+          ))}
       </ul>
       {connection && (
         <p className="scene-connection">{text.connection[lang]}</p>

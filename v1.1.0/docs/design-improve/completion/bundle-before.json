@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-03T00:03:30.535Z",
+  "url": "https://research-hxgn.vercel.app",
+  "scope": "Fresh English home load through networkidle; decoded JS responses independently gzip-compressed, not transfer size or route-exclusive code",
+  "assets": [
+    {
+      "path": "/_next/static/immutable/chunks/0p3tfwnt5lmdz.js",
+      "decodedBytes": 30945,
+      "gzipBytes": 9304
+    },
+    {
+      "path": "/_next/static/immutable/chunks/turbopack-1cvbnb3nlabgn.js",
+      "decodedBytes": 10030,
+      "gzipBytes": 3940
+    },
+    {
+      "path": "/_next/static/immutable/chunks/2zo7eika1ctht.js",
+      "decodedBytes": 447,
+      "gzipBytes": 255
+    },
+    {
+      "path": "/_next/static/immutable/chunks/01wqzpbj0-3ed.js",
+      "decodedBytes": 28746,
+      "gzipBytes": 7634
+    },
+    {
+      "path": "/_next/static/immutable/chunks/2qnae_z-tvf7i.js",
+      "decodedBytes": 5584,
+      "gzipBytes": 2032
+    },
+    {
+      "path": "/_next/static/immutable/chunks/29p88ie8ycfpc.js",
+      "decodedBytes": 230055,
+      "gzipBytes": 72118
+    },
+    {
+      "path": "/_next/static/immutable/chunks/1eeuk19cqq94i.js",
+      "decodedBytes": 60795,
+      "gzipBytes": 21531
+    },
+    {
+      "path": "/_next/static/immutable/chunks/19okkkxr95yhe.js",
+      "decodedBytes": 168361,
+      "gzipBytes": 46352
+    },
+    {
+      "path": "/_next/static/immutable/chunks/34u5bsbd9dp11.js",
+      "decodedBytes": 132820,
+      "gzipBytes": 44238
+    }
+  ],
+  "decodedBytes": 667783,
+  "gzipBytes": 207404
+}

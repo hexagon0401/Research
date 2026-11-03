@@ -1,0 +1,388 @@
+/* Reading paths reuse the Swiss folio. Full arguments stay server-rendered. */
+.reading-entry {
+  padding-block: 24px 56px;
+}
+.reading-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 16px 32px;
+  padding-block: 20px;
+  border-block: 1px solid var(--line);
+}
+.reading-controls > div {
+  display: flex;
+  gap: 16px;
+}
+.reading-controls button {
+  min-height: 44px;
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
+}
+.reading-controls button[aria-pressed="true"] {
+  border-bottom-color: var(--ink);
+  font-weight: 600;
+}
+.reading-controls p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 54ch;
+}
+.quick-word-count {
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-quick,
+.print-only {
+  display: none;
+}
+.chapter-reasoning > summary {
+  display: none;
+}
+.research-essay[data-reading-mode="quick"] .chapter-quick {
+  display: block;
+}
+.research-essay[data-reading-mode="quick"] .chapter-reasoning > summary {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border-block: 1px solid var(--line);
+  cursor: pointer;
+  padding: 12px 0;
+}
+.research-essay[data-reading-mode="quick"] .chapter-reasoning > summary::after {
+  content: "+";
+  margin-left: auto;
+}
+.research-essay[data-reading-mode="quick"]
+  .chapter-reasoning[open]
+  > summary::after {
+  content: "−";
+}
+.chapter-quick > p {
+  max-width: 66ch;
+  font-size: var(--text-body);
+  line-height: 1.8;
+}
+.chapter-quick nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-block: 20px 28px;
+}
+.chapter-quick a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 1px solid var(--line);
+  max-width: 100%;
+}
+.story-chapter {
+  scroll-margin-top: 112px;
+}
+.story-chapter-rail {
+  flex-wrap: wrap;
+  min-width: 0;
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 4px;
+}
+.story-chapter-rail a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.story-chapter-rail a[aria-current] {
+  box-shadow: inset 0 -2px var(--ink);
+  font-weight: 600;
+}
+.source-guide {
+  padding-block: 40px;
+}
+.source-guide > h2,
+.reviewer-page h2 {
+  font-size: clamp(26px, 3vw, 40px);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+.source-guide > p {
+  max-width: 68ch;
+  line-height: 1.8;
+}
+.source-guide > ol {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+}
+.source-guide > ol > li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px 48px;
+  padding-block: 28px;
+  border-top: 1px solid var(--line);
+}
+.source-guide h3 {
+  margin-block: 8px;
+  font-size: 21px;
+  font-weight: 500;
+}
+.source-guide blockquote {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 68ch;
+}
+.source-guide .source-caution {
+  border-left: 2px solid var(--ink);
+  padding-left: 16px;
+  font-size: 14px;
+}
+.source-caption {
+  font-size: 13px;
+  color: var(--muted);
+}
+.source-guide nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 14px;
+}
+.source-guide nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.reading-help {
+  max-width: min(560px, calc(100vw - 40px));
+  padding: 32px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+}
+.reading-help::backdrop {
+  background: rgb(14 19 31 / 30%);
+}
+.reading-help button {
+  min-width: 64px;
+}
+.reviewer-page {
+  padding-bottom: 72px;
+}
+.reviewer-author {
+  font-size: 15px;
+}
+.reviewer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin-top: 32px;
+}
+.reviewer-actions > * {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-bottom: 1px solid var(--ink);
+}
+.reviewer-page section {
+  margin-block: 32px 56px;
+}
+.methods-at-glance table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+}
+.methods-at-glance caption {
+  text-align: left;
+  font-size: 13px;
+  margin-block: 16px;
+}
+.methods-at-glance th,
+.methods-at-glance td {
+  vertical-align: top;
+  padding: 16px 12px 16px 0;
+  border-block: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.methods-at-glance summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-top: 12px;
+}
+.methods-at-glance details p {
+  max-width: 68ch;
+}
+.reviewer-faq dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px 40px;
+  max-width: 1000px;
+  line-height: 1.8;
+}
+.reviewer-faq dt {
+  font-weight: 600;
+}
+.reviewer-faq dd {
+  margin: 0;
+}
+.reviewer-pdfs ol {
+  list-style: none;
+  padding: 0;
+}
+.reviewer-pdfs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-block: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+.reviewer-pdfs li > a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.reviewer-pdfs li > a:first-child {
+  max-width: 75%;
+}
+.citation-control {
+  margin-block: 24px;
+  font-size: 14px;
+}
+.citation-control button {
+  min-height: 44px;
+  border-bottom: 1px solid var(--ink);
+  margin-right: 16px;
+}
+.citation-control textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 12px;
+}
+.edition-list {
+  padding: 0;
+  list-style: none;
+}
+.edition-list li {
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 767px) {
+  .reading-controls {
+    grid-template-columns: 1fr auto;
+  }
+  .reading-controls p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .source-guide > ol > li,
+  .reviewer-faq dl {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .source-guide {
+    padding-block: 28px;
+  }
+  .story-chapter-rail {
+    display: none;
+  }
+  .reviewer-pdfs li {
+    display: block;
+  }
+  .reviewer-pdfs li > a:first-child {
+    max-width: 100%;
+  }
+  .methods-at-glance th,
+  .methods-at-glance td {
+    font-size: 13px;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+  .site-header,
+  .site-footer,
+  .reviewer-actions,
+  .skip-link,
+  .reading-controls,
+  .story-navigation,
+  .print-brief-button {
+    display: none !important;
+  }
+  .reviewer-page {
+    padding: 0;
+    color: #000;
+    background: #fff;
+    font-size: 10pt;
+  }
+  .reviewer-page .page-intro {
+    padding: 0;
+    margin: 0;
+  }
+  .reviewer-page h1 {
+    font-size: 27pt;
+    line-height: 1.1;
+  }
+  .reviewer-page h2,
+  .reviewer-page .source-guide > h2 {
+    font-size: 17pt;
+  }
+  .reviewer-page .source-guide,
+  .reviewer-page section {
+    margin: 0;
+    padding-block: 10pt;
+  }
+  .reviewer-page .source-guide > ol {
+    margin: 12pt 0 0;
+  }
+  .reviewer-page .source-guide > ol > li {
+    gap: 18pt;
+    padding-block: 12pt;
+    break-inside: avoid;
+  }
+  .reviewer-page .source-guide blockquote {
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+  .reviewer-page .source-guide h3 {
+    font-size: 12pt;
+  }
+  .reviewer-page .source-guide nav,
+  .reviewer-faq,
+  .reviewer-page details {
+    display: none;
+  }
+  .reviewer-page .reviewer-pdfs li {
+    padding-block: 3pt;
+    break-inside: avoid;
+    font-size: 8pt;
+  }
+  .reviewer-page .reviewer-pdfs li a {
+    min-height: 0;
+  }
+  .reviewer-page .methods-at-glance p {
+    font-size: 9pt;
+  }
+  .print-only {
+    display: block;
+  }
+}
+
+.story-navigation-inner {
+  row-gap: 0;
+}

@@ -1,4 +1,8 @@
-# Proposed next phase — for review
+# Historical phase-2 proposal
+
+**Superseded by the current authorized [completion plan](completion/PLAN.md) and [item-by-item status](completion/STATUS.md).** Earlier review-only/skill-verification statements below describe the initial phase, not current deployment authorization.
+
+## Original proposal
 
 Research text, anchors and original readers remain stable. No new gimmick has been implemented.
 

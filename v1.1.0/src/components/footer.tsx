@@ -18,6 +18,9 @@ export function Footer() {
         </p>
       </div>
       <div className="footer-links">
+        <Link prefetch={false} href="/reviewers">
+          <Localized en="For reviewers" ko="검토자 요약" />
+        </Link>
         <Link prefetch={false} href="/methods">
           <Localized en="Methods & limitations" ko="방법론과 한계" />
         </Link>
@@ -30,7 +33,9 @@ export function Footer() {
         <MotionControl />
       </div>
       <div className="footer-note">
-        <span className="mono">IIR 2.5.0 · RESEARCH IN PROGRESS · 2026</span>
+        <Link href="/changelog" className="mono">
+          IIR 2.6.0 · RESEARCH IN PROGRESS · 2026
+        </Link>
         <p>
           <Localized
             en="A working framework, open to scrutiny."

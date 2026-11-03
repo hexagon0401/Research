@@ -146,19 +146,38 @@ export function EssayExperience({
         ) ?? [],
       );
       const current =
-        link.closest<HTMLElement>("[data-reading-passage]") ??
+        link.closest<HTMLElement>(
+          "[data-reading-entry], [data-reading-passage]",
+        ) ??
         candidates
           .filter((el) => el.getBoundingClientRect().top <= innerHeight * 0.35)
           .at(-1) ??
         candidates[0];
       if (current)
         try {
+          // Exact text passages own their return position. Keep the pinned reading
+          // offset when focus/click scrolls a long passage's citation into view.
+          if (
+            link.closest("[data-reading-passage]") ||
+            !link.closest(".scroll-scene")
+          )
+            sessionStorage.removeItem("iir-motion-return");
           sessionStorage.setItem(
             "iir-essay-return",
             JSON.stringify({
+              mode:
+                new URLSearchParams(location.search).get("mode") === "quick"
+                  ? "quick"
+                  : "full",
               anchor: current.id,
-              offset: current.getBoundingClientRect().top,
-              beat: current.closest("[data-essay-beat]")?.id ?? current.id,
+              offset:
+                returnPoint.current?.id === current.id
+                  ? returnPoint.current.offset
+                  : current.getBoundingClientRect().top,
+              beat:
+                current.dataset.returnBeat ??
+                current.closest("[data-essay-beat]")?.id ??
+                current.id,
               lang,
               openDetails: Array.from(
                 root.current?.querySelectorAll<HTMLDetailsElement>(
@@ -573,6 +592,20 @@ export function StoryNavigation() {
             </Link>
           </div>
         </details>
+        <div
+          className="story-chapter-rail"
+          aria-label={lang === "ko" ? "장별 탐색" : "Chapters"}
+        >
+          {storyChapters.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.anchor}`}
+              aria-current={chapter.id === item.id ? "location" : undefined}
+            >
+              <span className="mono">{item.number}</span> {item.short[lang]}
+            </a>
+          ))}
+        </div>
         <progress
           className="story-reading-progress"
           max="1"

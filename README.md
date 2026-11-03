@@ -1,27 +1,28 @@
 # Research
 
-**최신 v2.5.0 → 코드 위치 [v1.1.0/](v1.1.0/)**
+**최신 v2.6.0 → 코드 위치 [v1.1.0/](v1.1.0/)**
 
-IIR 연구 사이트입니다. `v1.1.0/`은 Vercel의 고정 배포 경로이며, 현재 코드 버전은 **v2.5.0**입니다. 새 버전마다 폴더를 복제하지 않고 package 버전과 Git 태그로 구분합니다.
+IIR 연구 사이트입니다. `v1.1.0/`은 Vercel의 고정 배포 경로이며, 현재 코드 버전은 **v2.6.0**입니다. 새 버전마다 폴더를 복제하지 않고 package 버전과 Git 태그로 구분합니다.
 
-[사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.5.0 구현·검증](v1.1.0/docs/V2_5_0_RELEASE.md)
+[사이트](https://research-hxgn.vercel.app) · [연구 자료실](https://research-hxgn.vercel.app/archive) · [v2.6.0 구현·검증](v1.1.0/docs/design-improve/completion/RESULTS.md)
 
 ## 버전과 코드 위치
 
-| 버전별 소스                                                          | 변경·검증 기록                                                                    |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [v2.5.0 · 최신](https://github.com/hexagon0401/Research/tree/v2.5.0) | [Swiss research folio — 시각 체계와 가독성](v1.1.0/docs/V2_5_0_RELEASE.md)        |
-| [v2.4.4](https://github.com/hexagon0401/Research/tree/v2.4.4)        | [저자 소개·가독성·용어집과 검증된 디자인 개선](v1.1.0/docs/V2_4_4_RELEASE.md)     |
-| [v2.4.3](https://github.com/hexagon0401/Research/tree/v2.4.3)        | [도식 오류·비교 도구·가독성 보완과 72시간 AI 검토](v1.1.0/docs/V2_4_3_RELEASE.md) |
-| [v2.4.2](https://github.com/hexagon0401/Research/tree/v2.4.2)        | [원형·경로·화면 비율 교정과 스크롤 최적화](v1.1.0/docs/V2_4_2_RELEASE.md)         |
-| [v2.4.1](https://github.com/hexagon0401/Research/tree/v2.4.1)        | [그림 고정·지역 확대·한영 편집](v1.1.0/docs/V2_4_1_RELEASE.md)                    |
-| [v2.4.0](https://github.com/hexagon0401/Research/tree/v2.4.0)        | [GSAP 연구 메커니즘·시간순 탐색](v1.1.0/docs/V2_4_RELEASE.md)                     |
-| [v2.3.0](https://github.com/hexagon0401/Research/tree/v2.3.0)        | [읽기 흐름·그래픽 개선](v1.1.0/docs/V2_3_RELEASE.md)                              |
-| [v2.2.0](https://github.com/hexagon0401/Research/tree/v2.2.0)        | [Open Design 개편](v1.1.0/docs/V2_2_RELEASE.md)                                   |
-| [v2.1.0](https://github.com/hexagon0401/Research/tree/v2.1.0)        | [연결형 에세이·한영 전문](v1.1.0/docs/V2_1_RELEASE.md)                            |
-| [v2.0.0](https://github.com/hexagon0401/Research/tree/v2.0.0)        | [연속형 스크롤](v1.1.0/docs/V2_RELEASE.md)                                        |
-| [v1.1.2](https://github.com/hexagon0401/Research/tree/v1.1.2)        | [원문·PDF 자료실](CHANGELOG.md#112--2026-10-22)                                   |
-| [v1.1.1](https://github.com/hexagon0401/Research/tree/v1.1.1)        | [화살표 표시 오류 수정](CHANGELOG.md#111--2026-10-21)                             |
+| 버전별 소스                                                          | 변경·검증 기록                                                                                  |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [v2.6.0 · 최신](https://github.com/hexagon0401/Research/tree/v2.6.0) | [디자인 개선 문서 이행·빠른 읽기·검토자 요약](v1.1.0/docs/design-improve/completion/RESULTS.md) |
+| [v2.5.0](https://github.com/hexagon0401/Research/tree/v2.5.0)        | [Swiss research folio — 시각 체계와 가독성](v1.1.0/docs/V2_5_0_RELEASE.md)                      |
+| [v2.4.4](https://github.com/hexagon0401/Research/tree/v2.4.4)        | [저자 소개·가독성·용어집과 검증된 디자인 개선](v1.1.0/docs/V2_4_4_RELEASE.md)                   |
+| [v2.4.3](https://github.com/hexagon0401/Research/tree/v2.4.3)        | [도식 오류·비교 도구·가독성 보완과 72시간 AI 검토](v1.1.0/docs/V2_4_3_RELEASE.md)               |
+| [v2.4.2](https://github.com/hexagon0401/Research/tree/v2.4.2)        | [원형·경로·화면 비율 교정과 스크롤 최적화](v1.1.0/docs/V2_4_2_RELEASE.md)                       |
+| [v2.4.1](https://github.com/hexagon0401/Research/tree/v2.4.1)        | [그림 고정·지역 확대·한영 편집](v1.1.0/docs/V2_4_1_RELEASE.md)                                  |
+| [v2.4.0](https://github.com/hexagon0401/Research/tree/v2.4.0)        | [GSAP 연구 메커니즘·시간순 탐색](v1.1.0/docs/V2_4_RELEASE.md)                                   |
+| [v2.3.0](https://github.com/hexagon0401/Research/tree/v2.3.0)        | [읽기 흐름·그래픽 개선](v1.1.0/docs/V2_3_RELEASE.md)                                            |
+| [v2.2.0](https://github.com/hexagon0401/Research/tree/v2.2.0)        | [Open Design 개편](v1.1.0/docs/V2_2_RELEASE.md)                                                 |
+| [v2.1.0](https://github.com/hexagon0401/Research/tree/v2.1.0)        | [연결형 에세이·한영 전문](v1.1.0/docs/V2_1_RELEASE.md)                                          |
+| [v2.0.0](https://github.com/hexagon0401/Research/tree/v2.0.0)        | [연속형 스크롤](v1.1.0/docs/V2_RELEASE.md)                                                      |
+| [v1.1.2](https://github.com/hexagon0401/Research/tree/v1.1.2)        | [원문·PDF 자료실](CHANGELOG.md#112--2026-10-22)                                                 |
+| [v1.1.1](https://github.com/hexagon0401/Research/tree/v1.1.1)        | [화살표 표시 오류 수정](CHANGELOG.md#111--2026-10-21)                                           |
 
 위 버전의 앱 소스는 각 태그 안의 `v1.1.0/`에 있습니다. [v1.0.0/](v1.0.0/)은 이전 초안 보관용입니다. 전체 변경 내용은 [변경 기록](CHANGELOG.md)을 참고하세요.
 

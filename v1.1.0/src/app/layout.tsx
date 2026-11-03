@@ -4,6 +4,7 @@ import "./globals.css";
 import "./story.css";
 import "./refinements.css";
 import "./folio.css";
+import "./reading-paths.css";
 import { PreferencesProvider } from "@/components/preferences";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -32,6 +33,27 @@ const plex = localFont({
   preload: false,
 });
 export const metadata: Metadata = {
+  metadataBase: new URL("https://research-hxgn.vercel.app"),
+  openGraph: {
+    title: "IIR — The Architecture of Power",
+    description:
+      "Technology. Identity. National power. An S00 essay and thirteen connected studies.",
+    type: "website",
+    siteName: "Integrated Independent Research",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "IIR / S00 — Thirteen connected studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IIR — The Architecture of Power",
+    images: ["/opengraph-image"],
+  },
   title: { default: "IIR — The Architecture of Power", template: "%s — IIR" },
   description:
     "An integrated inquiry into technology, corporate identity and national power. Read the S00 essay and thirteen Korean–English research reports with source PDFs.",

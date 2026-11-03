@@ -10,6 +10,7 @@ import { researchConnections } from "@/content/research-connections";
 import { loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
+import { dedupeFactSteps, type BilingualFact } from "@/utils/dedupe-facts";
 import { SceneText } from "./scene-text";
 import { MapTerrain } from "./map-terrain";
 import { fitCamera, pointsBounds } from "@/visuals/camera";
@@ -29,13 +30,19 @@ const roleGroups: Record<string, string[]> = {
 export function MechanismStory({
   scene,
   detail,
+  initialFacts = [],
 }: {
   scene: SceneMeta;
   detail?: ReactNode;
+  initialFacts?: BilingualFact[];
 }) {
   const { lang, reduced } = usePreferences();
   const spec = mechanisms[scene.id],
     graph = useMemo(() => mechanismGraph(scene.id), [scene.id]);
+  const readingSteps = useMemo(
+    () => dedupeFactSteps(spec.steps, initialFacts),
+    [spec.steps, initialFacts],
+  );
   const root = useRef<HTMLElement>(null),
     diagram = useRef<HTMLDivElement>(null),
     stage = useRef<HTMLDivElement>(null),
@@ -737,7 +744,10 @@ export function MechanismStory({
             >
               <span className="mono">0{i + 1}</span>
               <strong>{step.title[lang]}</strong>
-              <SceneText text={step} connection={i === spec.steps.length - 1} />
+              <SceneText
+                text={readingSteps[i]}
+                connection={i === spec.steps.length - 1}
+              />
               <Link prefetch={false} href={sourceURL(step.source)}>
                 {step.source} ·{" "}
                 {studySpines[step.source]?.[lang] ??

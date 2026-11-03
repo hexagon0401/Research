@@ -1,6 +1,6 @@
-# Content proposals — not published
+# Content proposals and source placements
 
-Status: awaiting author review. Source research text and full translations remain unchanged.
+Research-wording edits and final claim-type labels await author review. Exact-source placements implemented in the completion pass are identified below. Source research text and full translations remain unchanged.
 
 ## D-02: proposed first-screen cards
 
@@ -14,7 +14,7 @@ These are editorial placement proposals, not external fact-check results. Do not
 
 ## D-05: Tether excerpt alignment
 
-`S00-R005-P017` explicitly discusses Tether, dollar-pegged issuance, Treasury purchases and financial influence. It supports the topic more directly than the currently selected `S05-R004-P013` on trust/inequality. Proposal: use the S00 paragraph as the primary excerpt and keep S05 as separately labeled related context. This also exposes stronger legal/causal assertions in S00, so author sign-off and evidence review are required. The live excerpt selection has not been changed.
+`S00-R005-P017` explicitly discusses Tether, dollar-pegged issuance, Treasury purchases and financial influence. It supports the topic more directly than the currently selected `S05-R004-P013` on trust/inequality. Proposal: use the S00 paragraph as the primary excerpt and keep S05 as separately labeled related context. This also exposes stronger legal/causal assertions in S00, so author sign-off and evidence review are required. Implemented in the completion pass under the author’s current instruction: the existing S00 paragraph is now primary; S05 remains separately linked context. The original paragraph wording and its research-review caveats are preserved.
 
 ## D-07/D-08: claim labels and strength
 
@@ -26,3 +26,7 @@ These are editorial placement proposals, not external fact-check results. Do not
 ## Confirmed inputs
 
 Author identity, affiliation, dates and LinkedIn: explicitly supplied in chat. Ro40 formula found in S06-R001-P004, with annual-statement basis in S06-R002-P001. These are source-backed additions; no new formula or result was inferred.
+
+## Completion pass — 3 November 2026 KST
+
+The author's latest instruction authorizes completing the unfinished design structure and exact-source placement. D-05's existing S00-R005-P017 is now the primary Tether excerpt; no wording was altered, S05 remains linked context. D-02 now has three source-first rows (S06-R006-P002, S16-R002-P003 and S17-R003-P001), resolved directly from preserved Korean/English texts, with the original S16 causal caution paired visually. These are labeled author excerpts, not newly approved Finding/Interpretation badges. The proposed research-wording edits and epistemic classifications above remain unapproved and unpublished. See completion/STATUS.md for the current audit rather than reading older phase notes as current blockers.

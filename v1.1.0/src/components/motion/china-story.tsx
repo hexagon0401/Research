@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import Link from "next/link";
 import { usePreferences } from "../preferences";
@@ -17,6 +17,7 @@ import {
 import { loadMotion, nearScene } from "./runtime";
 import { useSceneScroll } from "./use-scene-scroll";
 import { ExpandDiagram } from "./expand-diagram";
+import { dedupeFactSteps, type BilingualFact } from "@/utils/dedupe-facts";
 import { SceneText } from "./scene-text";
 import type { ReactNode } from "react";
 import type { Copy } from "@/visuals/motion-stories";
@@ -151,11 +152,17 @@ function bindMapFrame(el: HTMLElement, target: HTMLElement) {
 export function ChinaStory({
   cases,
   arcticDetail,
+  initialFacts = [],
 }: {
   cases?: Record<string, { title: Copy; detail: ReactNode }>;
   arcticDetail?: ReactNode;
+  initialFacts?: BilingualFact[];
 }) {
   const { lang, reduced } = usePreferences();
+  const readingSteps = useMemo(
+    () => dedupeFactSteps(chinaSteps, initialFacts),
+    [initialFacts],
+  );
   const root = useRef<HTMLElement>(null),
     stage = useRef<HTMLDivElement>(null),
     range = useRef<HTMLInputElement>(null),
@@ -717,14 +724,14 @@ export function ChinaStory({
                         .title[lang]
                     }
                   </h2>
-                  <SceneText text={step} />
+                  <SceneText text={readingSteps[i]} />
                   {cases![i === 2 ? "china-myanmar" : "china-cambodia"].detail}
                 </section>
               ) : (
                 <>
                   <h3>{step.title[lang]}</h3>
                   <SceneText
-                    text={step}
+                    text={readingSteps[i]}
                     connection={i === 1 || i === 3 || i === 6}
                   />
                 </>
