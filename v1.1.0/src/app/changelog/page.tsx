@@ -3,6 +3,11 @@ import { Localized as L } from "@/components/preferences";
 export const metadata: Metadata = { title: "Site editions" };
 const releases = [
   [
+    "2.7.0",
+    "원문 보존 강조·출처 수치·연구 연결 모션",
+    "Text-preserving emphasis, source figures and connected research motion",
+  ],
+  [
     "2.6.1",
     "국가 관계의 곡선 분리·지도 지연 로딩·주소 오류 복구",
     "Separated geographic arcs, lazy terrain and anchor recovery",

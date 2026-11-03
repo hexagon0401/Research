@@ -1,0 +1,15 @@
+# Tool decisions — 2026-11-03
+
+No packages installed; package-lock changes release metadata only. No runtime third-party fetches, new fonts, video, stock images, canvas globe, smooth-scroll controller or motion polyfill.
+
+| Need                                               | Implementation                                                  | License / decision                                                                                                                                   |
+| -------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Exact emphasis                                     | Render-time React spans + JSON inventory + pure splitter        | Project code; no DOM text edits after hydration                                                                                                      |
+| One-shot underline, band, inequality slash, thread | CSS keyframes; one IntersectionObserver and finite serial queue | Browser platform; default is readable final state                                                                                                    |
+| Existing sticky timelines / PCA / S00 convergence  | Existing GSAP 3.15.0 + ScrollTrigger, same lazy loader          | GSAP Standard No Charge License, **not OSI open source**; previously user-authorized, no new installation                                            |
+| Source numbers                                     | Existing server reading repository                              | Protected editions and hash-bound editorial translations; no new service                                                                             |
+| Geography                                          | Existing generated, self-hosted SVGs                            | Existing dev-only world-atlas 2.0.2 (ISC), d3-geo (ISC + bundled GeographicLib MIT notice), topojson-client (ISC); installed LICENSE files inspected |
+
+GSAP license: https://gsap.com/standard-license (existing package README reference; the installed package does not include a standalone LICENSE file). Local notices inspected: node_modules/world-atlas/LICENSE, node_modules/d3-geo/LICENSE, node_modules/topojson-client/LICENSE. No claim of a new remote license audit or current cross-browser support table: new effects rely on established CSS and IntersectionObserver, with no-JS fallback, rather than assumed 2026 browser versions. Existing timeline behavior was retained instead of introducing a second progress owner.
+
+No new map build is needed, so no package install approval or coordinate sourcing is triggered. Package-size verification measures actual script responses; CSS/SVG source payload is also recorded in RESULTS.md. Existing large terrain assets do not meet the addendum's suggested per-new-SVG size budget; they are unchanged legacy assets, not silently counted as new compliant maps.

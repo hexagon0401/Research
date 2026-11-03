@@ -1,3 +1,7 @@
+import { EditorialMotion } from "@/components/motion/editorial-motion";
+import { CoreThread } from "@/components/motion/core-thread";
+import { EmphasisText } from "@/components/emphasis-text";
+import { FigureCallout } from "@/components/figure-callout";
 import { ReadingControls } from "@/components/reading-controls";
 import { SourceGuide } from "@/components/source-guide";
 import { Arrow } from "@/components/icons";
@@ -24,6 +28,7 @@ import { MechanismStory } from "@/components/motion/mechanism-story";
 import { mechanisms } from "@/visuals/mechanisms";
 import { chinaSteps } from "@/visuals/motion-stories";
 import "./motion.css";
+import "./editorial-motion.css";
 import { ResearchShelf } from "@/components/material-shelf";
 import { reports } from "@/content/report-catalog";
 import { getReadingEdition } from "@/content/reading-repository";
@@ -256,6 +261,7 @@ export default async function Home() {
   );
   return (
     <EssayExperience scenes={scenes}>
+      <EditorialMotion />
       <noscript>
         <style>{`.essay-beat{display:block}.beat-reading{max-width:72ch}.is-emphasis .beat-reading{max-width:none}.scroll-scene .scene-stage{position:static;height:480px}.scroll-scene .scene-body{display:block}.scroll-scene .scene-steps>li{min-height:0}.diagram-expand{display:none}.scroll-scene .mechanism-diagram{flex:none;height:auto;aspect-ratio:720/520}.mechanism-node-layer,.compact-study-labels{visibility:visible}.mechanism-spatial-method .method-pca{display:block}.mechanism-spatial-method .method-pca [data-draw-mask]{stroke-dashoffset:0!important}`}</style>
       </noscript>
@@ -265,20 +271,38 @@ export default async function Home() {
           S00
         </span>
         <div className="essay-hero-composition">
-          <h1>
+          <h1 data-motion-reveal>
             <L
               ko={
                 <>
-                  기업의 역량은 어떻게
+                  <EmphasisText
+                    target="hero-question"
+                    lang="ko"
+                    text="기업의 역량은 어떻게"
+                  />
                   <br />
-                  <span>국가의 힘</span>이 되는가?
+                  <EmphasisText
+                    target="hero-power"
+                    lang="ko"
+                    text="국가의 힘"
+                  />
+                  이 되는가?
                 </>
               }
               en={
                 <>
-                  How does corporate capability
+                  <EmphasisText
+                    target="hero-question"
+                    lang="en"
+                    text="How does corporate capability"
+                  />
                   <br />
-                  become <span>national power?</span>
+                  become{" "}
+                  <EmphasisText
+                    target="hero-power"
+                    lang="en"
+                    text="national power?"
+                  />
                 </>
               }
             />
@@ -289,8 +313,20 @@ export default async function Home() {
         <div className="essay-hero-bottom">
           <p>
             <L
-              ko="기업의 생존을 묻던 질문에서 시작해, 기술의 목적과 국가의 전략을 함께 읽는 연구."
-              en="An inquiry that begins with corporate survival and brings technological purpose into conversation with national strategy."
+              ko={
+                <EmphasisText
+                  target="hero-deck"
+                  lang="ko"
+                  text="기업의 생존을 묻던 질문에서 시작해, 기술의 목적과 국가의 전략을 함께 읽는 연구."
+                />
+              }
+              en={
+                <EmphasisText
+                  target="hero-deck"
+                  lang="en"
+                  text="An inquiry that begins with corporate survival and brings technological purpose into conversation with national strategy."
+                />
+              }
             />
           </p>
           <div className="essay-reading-meta">
@@ -308,7 +344,12 @@ export default async function Home() {
             </Link>
           </div>
         </div>
-        <nav className="essay-outline" aria-label="Follow the argument">
+        <nav
+          className="essay-outline"
+          aria-label="Follow the argument"
+          data-motion-reveal
+        >
+          <CoreThread />
           <a href="#survival">
             <L ko="기업의 생존" en="Survival" />
           </a>
@@ -408,7 +449,7 @@ export default async function Home() {
                       className={`essay-beat ${emphasisScenes.has(beat.id) ? "is-emphasis" : ""} ${mechanisms[beat.id] ? "has-motion" : ""}`}
                       data-essay-beat
                     >
-                      <div className="beat-reading">
+                      <div className="beat-reading" data-motion-reveal>
                         {legacy[beat.id]?.map((id) => (
                           <span
                             key={id}
@@ -429,7 +470,22 @@ export default async function Home() {
                           <L ko={beat.title.ko} en={beat.title.en} />
                         </h2>
                         <p className="essay-intro">
-                          <L ko={beat.lead.ko} en={beat.lead.en} />
+                          <L
+                            ko={
+                              <EmphasisText
+                                text={beat.lead.ko}
+                                target={`${beat.id}-lead`}
+                                lang="ko"
+                              />
+                            }
+                            en={
+                              <EmphasisText
+                                text={beat.lead.en}
+                                target={`${beat.id}-lead`}
+                                lang="en"
+                              />
+                            }
+                          />
                         </p>
                         <ul className="case-facts">
                           {beat.facts.map((fact, i) => (
@@ -452,12 +508,25 @@ export default async function Home() {
                             </summary>
                             <p>
                               <L
-                                ko={item.definition.ko}
-                                en={item.definition.en}
+                                ko={
+                                  <EmphasisText
+                                    text={item.definition.ko}
+                                    target={`${beat.id}-term`}
+                                    lang="ko"
+                                  />
+                                }
+                                en={
+                                  <EmphasisText
+                                    text={item.definition.en}
+                                    target={`${beat.id}-term`}
+                                    lang="en"
+                                  />
+                                }
                               />
                             </p>
                           </details>
                         ))}
+                        <FigureCallout scene={beat.id} />
                       </div>
                       {beat.id === "china-arctic" ? (
                         <ChinaStory
@@ -468,7 +537,15 @@ export default async function Home() {
                               const item = composed.find((b) => b.id === id)!;
                               return [
                                 id,
-                                { title: item.title, detail: detailFor(item) },
+                                {
+                                  title: item.title,
+                                  detail: (
+                                    <>
+                                      <FigureCallout scene={item.id} />
+                                      {detailFor(item)}
+                                    </>
+                                  ),
+                                },
                               ];
                             }),
                           )}
@@ -487,19 +564,35 @@ export default async function Home() {
                           {detailFor(beat)}
                         </>
                       )}
-                      <p className="essay-bridge">
+                      <p className="essay-bridge" data-motion-reveal>
                         <L
                           ko={
-                            (beat.id === "china-arctic"
-                              ? composed.find((b) => b.id === "china-cambodia")!
-                              : beat
-                            ).connection.ko
+                            <EmphasisText
+                              text={
+                                (beat.id === "china-arctic"
+                                  ? composed.find(
+                                      (b) => b.id === "china-cambodia",
+                                    )!
+                                  : beat
+                                ).connection.ko
+                              }
+                              target={`${beat.id}-connection`}
+                              lang="ko"
+                            />
                           }
                           en={
-                            (beat.id === "china-arctic"
-                              ? composed.find((b) => b.id === "china-cambodia")!
-                              : beat
-                            ).connection.en
+                            <EmphasisText
+                              text={
+                                (beat.id === "china-arctic"
+                                  ? composed.find(
+                                      (b) => b.id === "china-cambodia",
+                                    )!
+                                  : beat
+                                ).connection.en
+                              }
+                              target={`${beat.id}-connection`}
+                              lang="en"
+                            />
                           }
                         />
                       </p>
@@ -513,20 +606,28 @@ export default async function Home() {
       <section id="integration" className="essay-integration section-shell">
         <span id="index" className="essay-legacy-anchor" />
         <span className="eyebrow">THE STUDIES / ONE CONNECTED INQUIRY</span>
-        <h2>
+        <h2 data-motion-reveal>
           <L
             ko={
               <>
                 여러 갈래의 탐구가,
                 <br />
-                하나의 줄기로.
+                <EmphasisText
+                  target="integration-title"
+                  lang="ko"
+                  text="하나의 줄기로."
+                />
               </>
             }
             en={
               <>
                 Many lines of inquiry.
                 <br />
-                One connected argument.
+                <EmphasisText
+                  target="integration-title"
+                  lang="en"
+                  text="One connected argument."
+                />
               </>
             }
           />
@@ -537,6 +638,9 @@ export default async function Home() {
             en="Studies of corporate survival, technological purpose and national strategy contribute to one argument. Follow their roles and read the sources to see how each question developed."
           />
         </p>
+        <div className="closing-thread" data-motion-reveal>
+          <CoreThread />
+        </div>
         <ComparativeReading />
         <ResearchShelf kind="archive" compact from="integration" />
         <Link id="archive-entry" className="essay-archive-link" href="/archive">

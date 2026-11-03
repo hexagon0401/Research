@@ -1,0 +1,111 @@
+[
+  {
+    "id": "EM-01",
+    "target": "hero-question",
+    "en": "corporate capability",
+    "ko": "기업의 역량",
+    "device": "underline",
+    "approved": true
+  },
+  {
+    "id": "EM-01b",
+    "target": "hero-power",
+    "en": "national power?",
+    "ko": "국가의 힘",
+    "device": "underline",
+    "approved": true
+  },
+  {
+    "id": "EM-02",
+    "target": "hero-deck",
+    "en": "technological purpose",
+    "ko": "기술의 목적",
+    "device": "band",
+    "approved": true,
+    "static": true
+  },
+  {
+    "id": "EM-05",
+    "target": "survival-lead",
+    "en": "technological monopoly",
+    "ko": "기술 독점",
+    "device": "band",
+    "approved": true
+  },
+  {
+    "id": "EM-AUTHORITY",
+    "target": "china-ownership-lead",
+    "en": "investment and equity",
+    "ko": "투자와 지분 관계",
+    "device": "underline",
+    "approved": true
+  },
+  {
+    "id": "EM-09",
+    "target": "us-mission-term",
+    "en": "contract ceiling",
+    "ko": "계약 상한",
+    "device": "underline",
+    "approved": true,
+    "static": true
+  },
+  {
+    "id": "EM-13",
+    "target": "china-ownership-term",
+    "en": "actual decision rights",
+    "ko": "실제 결정권",
+    "device": "underline",
+    "approved": true,
+    "static": true
+  },
+  {
+    "id": "EM-20",
+    "target": "korea-chips-term",
+    "en": "today's status",
+    "ko": "현재 상태",
+    "device": "underline",
+    "approved": true,
+    "static": true
+  },
+  {
+    "id": "EM-23",
+    "target": "spatial-method-term",
+    "en": "require separate evidence",
+    "ko": "별도 자료가 필요합니다",
+    "device": "underline",
+    "approved": true,
+    "static": true
+  },
+  {
+    "id": "EM-25",
+    "target": "integration-title",
+    "en": "One connected argument.",
+    "ko": "하나의 줄기로.",
+    "device": "underline",
+    "approved": true
+  },
+  {
+    "id": "EM-27",
+    "target": "synthesis-connection",
+    "en": "the conditions of support more than its scale",
+    "ko": "지원의 크기보다 그 조건",
+    "device": "underline",
+    "approved": true
+  },
+  {
+    "id": "EM-08",
+    "target": "us-mission-lead",
+    "en": "great cause",
+    "ko": "대의",
+    "device": "band",
+    "approved": false
+  },
+  {
+    "id": "EM-07",
+    "target": "source-excerpt",
+    "en": "good monopoly",
+    "ko": "좋은 독점",
+    "device": "band",
+    "approved": false
+  }
+]

@@ -13,6 +13,7 @@ import {
   studySpines,
 } from "@/visuals/story";
 import { reports, reportTitlesEn } from "@/content/report-catalog";
+import { UnequalMark } from "./motion/unequal-mark";
 import { researchConnections } from "@/content/research-connections";
 const actors: Record<string, { ko: string; en: string }[]> = {
   "us-mission": [
@@ -63,7 +64,8 @@ function RelationDiagram({
       className={`relation-diagram relation-${variant}`}
       data-diagram-kind={variant}
     >
-      <span className="relation-kind mono">
+      <span className="relation-kind mono" data-motion-reveal>
+        {variant === "ownership" && <UnequalMark />}
         {lang === "ko"
           ? {
               reserves: "준비와 상환",

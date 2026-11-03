@@ -139,6 +139,22 @@ export function MechanismStory({
     syncLens(progress.current);
   }, [lang, reduced]);
   useEffect(() => {
+    const el = root.current;
+    if (
+      !el ||
+      reduced ||
+      matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
+    const rect = stage.current?.getBoundingClientRect();
+    if (!rect || rect.bottom <= 0 || rect.top >= innerHeight) return;
+    el.querySelectorAll<HTMLElement>(
+      '[data-graph-node][data-current="true"]',
+    ).forEach((node) => {
+      if (!node.dataset.pulsed) node.dataset.pulsed = "true";
+    });
+  }, [active, reduced]);
+  useEffect(() => {
     const target = diagram.current;
     if (!target) return;
     let dispose = () => {};
@@ -230,7 +246,7 @@ export function MechanismStory({
                   ease: "none",
                   onUpdate: () => traveler(state.value),
                 },
-                edge.step + 0.1,
+                edge.step + 0.1 + (scene.id === "synthesis" ? i * 0.025 : 0),
               );
             });
             if (scene.id === "korea-chips") {
@@ -272,7 +288,10 @@ export function MechanismStory({
             }
             el.querySelectorAll<SVGPathElement>("[data-pca-edge]").forEach(
               (path, i) => {
-                const draw = bindDrawPath(path),
+                const dot = el.querySelector<SVGCircleElement>(
+                  `[data-pca-flow="${i}"]`,
+                );
+                const draw = dot ? bindTraveler(path, dot) : bindDrawPath(path),
                   state = { value: 0 };
                 draw(0);
                 tl.fromTo(
@@ -624,6 +643,13 @@ export function MechanismStory({
                             d={d}
                             fill="none"
                             vectorEffect="non-scaling-stroke"
+                          />
+                          <circle
+                            className="pca-flow"
+                            data-pca-flow={i}
+                            r="3"
+                            data-radius-px="3"
+                            style={{ visibility: "hidden" }}
                           />
                         </g>
                       );

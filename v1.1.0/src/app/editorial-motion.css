@@ -1,0 +1,253 @@
+/* Content stays visible. These finite decorations never move a reading paragraph. */
+.em-underline {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 2px
+    no-repeat;
+  padding-bottom: 0.06em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.em-band {
+  background: linear-gradient(transparent 62%, rgba(14, 251, 46, 0.14) 62%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.essay-hero h1 [data-emphasis] {
+  text-decoration: none;
+  white-space: normal;
+}
+[data-em-armed] .em-underline:not([data-em-static]) {
+  background-size: 0 2px;
+}
+[data-em-armed].em-enter .em-underline:not([data-em-static]) {
+  animation: editorial-underline 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.em-enter [data-emphasis="EM-01b"] {
+  animation-delay: 180ms !important;
+}
+@keyframes editorial-underline {
+  to {
+    background-size: 100% 2px;
+  }
+}
+.core-thread {
+  display: block;
+  width: 100%;
+  height: 18px;
+  flex-basis: 100%;
+  margin-bottom: 12px;
+  overflow: visible;
+}
+.core-thread path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.core-thread-track {
+  opacity: 0.35;
+}
+.core-thread-progress {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.core-thread circle {
+  fill: var(--paper);
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.core-thread circle:last-child {
+  fill: var(--signal);
+}
+@keyframes thread-progress {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.closing-thread {
+  max-width: 680px;
+  margin: 32px 0;
+}
+.closing-thread .core-thread-progress,
+.essay-outline .core-thread-progress {
+  animation: none !important;
+}
+[data-em-armed].closing-thread .core-thread-progress,
+.essay-outline[data-em-armed] .core-thread-progress {
+  stroke-dashoffset: 1;
+}
+[data-em-armed].em-enter.closing-thread .core-thread-progress,
+.essay-outline[data-em-armed].em-enter .core-thread-progress {
+  animation: thread-progress 800ms cubic-bezier(0.22, 1, 0.36, 1) both !important;
+}
+.unequal-mark {
+  display: inline-block;
+  vertical-align: -0.25em;
+  margin-right: 8px;
+}
+.unequal-mark path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+.unequal-slash {
+  stroke-dasharray: 1;
+}
+[data-em-armed] .unequal-slash {
+  stroke-dashoffset: 1;
+}
+[data-em-armed].em-enter .unequal-slash {
+  animation: unequal-slash 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes unequal-slash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.mechanism-node-layer button[data-pulsed]::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: 1px solid var(--ink);
+  pointer-events: none;
+  opacity: 0;
+  animation: node-arrival 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes node-arrival {
+  from {
+    transform: scale(0.9);
+    opacity: 0.65;
+  }
+  to {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+}
+.method-pca .pca-flow {
+  fill: var(--signal);
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+.source-figure {
+  margin-block: 28px;
+  padding-block: 20px;
+  border-block: 1px solid var(--ink);
+  max-width: 65ch;
+  display: grid;
+  gap: 12px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.source-figure .source-figure-value {
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  text-wrap: balance;
+}
+.source-figure-context {
+  margin: 4px 0;
+  border-left: 2px solid var(--ink);
+  padding-left: 16px;
+}
+.source-figure p {
+  margin: 0;
+}
+.source-figure .source-caption {
+  font-size: 13px;
+  color: var(--ink);
+}
+.source-figure-context p {
+  font-size: 17px;
+}
+.source-figure .essay-citation {
+  justify-self: start;
+  font-size: 14px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-motion-reveal] *,
+  .mechanism-node-layer button[data-pulsed]::after {
+    animation: none !important;
+  }
+}
+html[data-motion="reduced"] [data-motion-reveal] *,
+html[data-motion="reduced"] .mechanism-node-layer button[data-pulsed]::after {
+  animation: none !important;
+}
+@media print {
+  [data-motion-reveal] * {
+    animation: none !important;
+  }
+  .source-figure {
+    break-inside: avoid;
+  }
+}
+
+[data-em-armed] .em-band:not([data-em-static]) {
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+}
+[data-em-armed].em-enter .em-band:not([data-em-static]) {
+  animation: editorial-band 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes editorial-band {
+  to {
+    background-size: 100% 100%;
+  }
+}
+.mechanism-korea-platforms .mechanism-node-layer button::before {
+  content: "";
+  position: absolute;
+  inset: -10px -16px;
+  border: 1px solid var(--ink);
+  border-left-width: 3px;
+  pointer-events: none;
+  opacity: 0.38;
+  transition: opacity 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mechanism-korea-platforms
+  .mechanism-node-layer
+  button[data-current="true"]::before {
+  opacity: 1;
+}
+/* Keep inline emphasis out of the legacy bridge's grid-item/large-span rules. */
+.essay-bridge:has([data-emphasis]) {
+  display: block;
+}
+.essay-bridge > [data-emphasis] {
+  display: inline;
+  font: inherit;
+}
+@media (min-width: 1024px) {
+  .essay-hero h1 [data-emphasis] {
+    white-space: nowrap;
+  }
+}
+.core-thread {
+  position: relative;
+}
+.core-thread > svg {
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+.thread-node {
+  position: absolute;
+  top: 6px;
+  transform: translateX(-50%);
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+}
+.thread-node:last-child {
+  background: var(--signal);
+}

@@ -34,7 +34,7 @@ export function Footer() {
       </div>
       <div className="footer-note">
         <Link href="/changelog" className="mono">
-          IIR 2.6.1 · RESEARCH IN PROGRESS · 2026
+          IIR 2.7.0 · RESEARCH IN PROGRESS · 2026
         </Link>
         <p>
           <Localized
