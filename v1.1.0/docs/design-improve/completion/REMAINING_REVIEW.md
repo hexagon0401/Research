@@ -32,3 +32,7 @@ The twelve-scene inventory remains in DIAGRAM_AUDIT.md. For each edge: record th
 - Physical-device INP, Safari/Firefox and social-platform preview debuggers were not available. Do not call them passed from a Chromium/axe/Lighthouse result.
 - New hypothesis verdicts and “what would change my mind” text must come from the author. No empty or invented boxes were published.
 - Source drawers, command search and dark theme remain optional. Existing source passages/PDF reader, Contents/chapter shortcuts and the light Swiss palette cover the immediate needs. Implement them only if a demonstrated reader need justifies additional UI and contrast testing.
+
+## 6. Initial-load performance follow-up
+
+The final mobile lab median is 88 / accessibility 100; the 95 goal and the original relative-timing gate are not claimed complete. Next: build v2.5.0 and v2.6.0 with the same dependencies in an isolated, matched environment; collect three serial cold runs per build without concurrent test runners; inspect the actual LCP element, font/resource timing and hydration long tasks; change critical font/CSS or hydration scheduling only where that trace demonstrates a bottleneck. Keep every run, recheck the same URLs and retain no-JS/reduced-motion/source locks. Word measurement and initial control activation have already been deferred where unnecessary, and speculative report prefetch is disabled. Lab TBT must not be reported as physical-device INP.

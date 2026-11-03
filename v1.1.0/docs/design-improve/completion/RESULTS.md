@@ -42,6 +42,14 @@ For comparison, the historical v2.5.0 median was 90 / accessibility 100, FCP 154
 
 The default Full path now skips Quick-only word measurement and activates controls after the layout-critical initial phase; Quick resolves before paint to preserve bookmark positions. Report links disable speculative full-report prefetching. These remove demonstrated unnecessary work, without representing a lab target miss as completion. Remaining initial-load profiling is explicitly tracked in STATUS.md and REMAINING_REVIEW.md.
 
-Live deployment and Git verification are recorded after publication below.
+### Production deployment
+
+Application commit **b68ba11** was pushed to main and visible on https://research-hxgn.vercel.app. Direct production verification completed on **3 November 2026, 10:13 KST**.
+
+- Existing scene/PCA/airport/source behavior passed at 1440×1000, 390×844 touch, 1440×500 and 320×568. Touch moved the comparison control to 85%; all eight PCA snapshot masks resolve, labels remain separate, and language/manual state survives. Glossary source navigation, bilingual 404 recovery, noindex and no-store robots behavior also passed. [Core results](production-core.json).
+- New live routes passed: Quick source-entry return with mode/position preservation, touch Full switching, keyboard-help naming/focus restoration, 13 PDF entries/four method rows, native clipboard write/read of the known report citation, Korean reviewer page, PNG sharing image, version-history route and no-JS full text. No speculative report fetch occurred while reading/scrolling the reviewer page. No page errors were collected. [New feature results](production-new.json), [live mobile capture](production-reviewer-mobile.png).
+- The crawler expiry, source/API locks and free deployment root remain unchanged. The production app was checked directly; no external social preview debugger or physical-device result is inferred from it.
+
+The final release documentation commit/tag retains the same application code. GitHub main and the annotated v2.6.0 tag are pushed after recording these results.
 
 Measured fresh-home JS gzip sum: 207,404 → 210,222 bytes (**+2,818 bytes**). This is the independent gzip sum of decoded script responses, not network transfer bytes or a route-exclusive bundle. No runtime package was added.
